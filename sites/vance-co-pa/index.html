@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vance & Co PA | CPA Firm | Tupelo, MS</title>
+<style>
+  :root {
+    --bg: #0F172A;
+    --bg-2: #1E293B;
+    --bg-3: #162032;
+    --accent: #D4AF37;
+    --accent-dim: rgba(212, 175, 55, 0.15);
+    --accent-glow: rgba(212, 175, 55, 0.08);
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --text-dim: #CBD5E1;
+    --border: rgba(212, 175, 55, 0.18);
+    --border-subtle: rgba(148, 163, 184, 0.12);
+    --radius: 6px;
+    --max: 600px;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    overscroll-behavior: contain;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.35); }
+    70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+  }
+
+  .wrapper {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ─── TOP ACCENT LINE ─── */
+  .top-line {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    padding: 52px 0 60px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #0F172A 0%, #162032 50%, #0F1829 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 28px,
+        rgba(212, 175, 55, 0.03) 28px,
+        rgba(212, 175, 55, 0.03) 29px
+      );
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .hero-name {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    animation: fadeUp 0.6s ease 0.1s both;
+    color: var(--text);
+  }
+
+  .hero-name .accent {
+    color: var(--accent);
+    background: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 4vw, 19px);
+    font-weight: 400;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 520px;
+    animation: fadeUp 0.6s ease 0.2s both;
+  }
+
+  .hero-tagline strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .btn-primary {
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    background: var(--accent);
+    color: #0F172A;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    animation: pulse-ring 2.5s ease-in-out infinite, fadeUp 0.6s ease 0.3s both;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+    animation: none;
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .hero-subtext {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    letter-spacing: 0.01em;
+    animation: fadeUp 0.6s ease 0.4s both;
+  }
+
+  .hero-subtext .dot {
+    margin: 0 8px;
+    opacity: 0.4;
+  }
+
+  .hero-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dim);
+    animation: fadeUp 0.6s ease 0.45s both;
+  }
+
+  .stars {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  /* ─── SECTION BASE ─── */
+  .section {
+    padding: 60px 0;
+    position: relative;
+  }
+
+  .section + .section {
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 32px;
+    background: var(--accent);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  .section-headline {
+    font-size: clamp(22px, 6vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .section-headline .accent {
+    color: var(--accent);
+  }
+
+  /* ─── ABOUT ─── */
+  .about {
+    background: var(--bg-3);
+  }
+
+  .about-body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .about-body p + p {
+    margin-top: 14px;
+  }
+
+  .accent-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin: 24px 0;
+    opacity: 0.7;
+  }
+
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--accent-glow);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-top: 28px;
+  }
+
+  .stat-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+
+  .stat-value .stars {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  /* ─── HOURS & CONTACT ─── */
+  .hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 32px;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 14px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background 0.15s ease;
+  }
+
+  .hours-row:nth-child(odd) {
+    background: rgba(255,255,255,0.03);
+  }
+
+  .hours-row:hover {
+    background: var(--accent-dim);
+  }
+
+  .day-name {
+    font-weight: 600;
+    color: var(--text-dim);
+    min-width: 110px;
+  }
+
+  .day-hours {
+    font-weight: 500;
+    color: var(--text);
+    text-align: right;
+  }
+
+  .day-hours.closed {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .today-badge {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0F172A;
+    background: var(--accent);
+    border-radius: 3px;
+    padding: 2px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-2);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .contact-card:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+  }
+
+  .contact-card:hover::before {
+    opacity: 1;
+  }
+
+  .contact-card.phone-card:hover {
+    background: var(--accent-dim);
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .card-content {}
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .card-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .card-value.phone {
+    color: var(--accent);
+  }
+
+  .card-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-weight: 400;
+  }
+
+  /* ─── RATING PILL ─── */
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 7px 16px;
+    margin-bottom: 28px;
+  }
+
+  .rating-pill .stars {
+    font-size: 14px;
+  }
+
+  .rating-pill .rating-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-dim);
+  }
+
+  .rating-pill .rating-text strong {
+    color: var(--accent);
+  }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    background: linear-gradient(160deg, #162032 0%, #0F172A 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 28px,
+        rgba(212, 175, 55, 0.025) 28px,
+        rgba(212, 175, 55, 0.025) 29px
+      );
+    pointer-events: none;
+  }
+
+  .final-cta-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .final-cta .section-headline {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+  }
+
+  .final-cta-sub {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 24px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border-subtle);
+    background: #0B1120;
+  }
+
+  footer p {
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+  }
+
+  footer a:hover {
+    opacity: 1;
+  }
+
+  /* ─── UTILITIES ─── */
+  .text-center { text-align: center; }
+
+  @media (max-width: 480px) {
+    .hero { padding: 40px 0 52px; }
+    .section { padding: 48px 0; }
+    .day-name { min-width: 90px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-line"></div>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="wrapper hero-inner">
+    <div class="hero-badge">Tupelo, MS &bull; Certified Public Accountants</div>
+    <h1 class="hero-name">
+      <span class="accent">Vance &amp; Co</span><br>
+      CPA Firm.
+    </h1>
+    <p class="hero-tagline">
+      Tupelo's trusted accounting partner — <strong>cutting your tax burden, keeping your books clean,</strong> and giving you the financial clarity to actually run your business.
+    </p>
+    <a href="tel:6628422123" class="btn-primary">
+      <span class="btn-icon">📞</span>
+      Call Now — (662) 842-2123
+    </a>
+    <p class="hero-subtext">
+      Mon–Fri, 8 AM–5 PM<span class="dot">•</span>330 W Jefferson St, Tupelo
+    </p>
+    <div class="hero-rating">
+      <span class="stars">★★★★★</span>
+      <span>5.0 Stars on Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="section about">
+  <div class="wrapper">
+    <div class="section-label">About Us</div>
+    <h2 class="section-headline">
+      Tax season shouldn't feel like<br><span class="accent">a gut punch.</span>
+    </h2>
+    <div class="about-body">
+      <p>
+        Most people come to us frustrated — overpaying taxes, drowning in paperwork, or unsure if their finances are even set up right. We get it. That's exactly why Vance &amp; Co PA exists.
+      </p>
+      <p>
+        We're a Tupelo-based CPA firm that handles tax preparation, accounting, and financial planning with a straightforward approach: clear advice, no jargon, no surprises. We treat every client like a neighbor — because most of the time, you are one.
+      </p>
+      <p>
+        Whether you're a local business owner or an individual filer, you'll leave here with a plan you actually understand and money staying where it belongs — in your pocket.
+      </p>
+    </div>
+    <div class="accent-divider"></div>
+    <div class="stat-card">
+      <div class="stat-icon">⭐</div>
+      <div>
+        <div class="stat-label">Google Rating</div>
+        <div class="stat-value">5.0 Stars <span class="stars">★★★★★</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOURS & CONTACT ─── -->
+<section class="section">
+  <div class="wrapper">
+    <div class="section-label">Hours &amp; Contact</div>
+    <h2 class="section-headline">Find us in<br><span class="accent">downtown Tupelo.</span></h2>
+
+    <div class="rating-pill">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">Rated <strong>5.0</strong> on Google Maps</span>
+    </div>
+
+    <div class="hours-grid">
+      <div class="hours-row">
+        <span class="day-name">Monday</span>
+        <span class="day-hours">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Tuesday</span>
+        <span class="day-hours">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Wednesday</span>
+        <span class="day-hours">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Thursday</span>
+        <span class="day-hours">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Friday</span>
+        <span class="day-hours">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Saturday</span>
+        <span class="day-hours closed">Closed</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Sunday</span>
+        <span class="day-hours closed">Closed</span>
+      </div>
+    </div>
+
+    <div class="contact-cards">
+      <a href="tel:6628422123" class="contact-card phone-card">
+        <div class="card-icon">📞</div>
+        <div class="card-content">
+          <div class="card-label">Call Us</div>
+          <div class="card-value phone">(662) 842-2123</div>
+          <div class="card-sub">Tap to call now</div>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=330 W Jefferson St Suite A, Tupelo, MS 38804, USA" target="_blank" rel="noopener" class="contact-card">
+        <div class="card-icon">📍</div>
+        <div class="card-content">
+          <div class="card-label">Our Office</div>
+          <div class="card-value" style="font-size:15px; letter-spacing: -0.01em;">330 W Jefferson St, Suite A</div>
+          <div class="card-sub">Tupelo, MS 38804 — Get Directions</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="section final-cta">
+  <div class="wrapper final-cta-inner">
+    <div class="section-label" style="justify-content:center;">Ready to get started?</div>
+    <h2 class="section-headline">
+      Stop overpaying taxes.<br><span class="accent">Call Vance &amp; Co today.</span>
+    </h2>
+    <a href="tel:6628422123" class="btn-primary">
+      <span class="btn-icon">📞</span>
+      Call Now — (662) 842-2123
+    </a>
+    <p class="final-cta-sub">No pressure. Just a straightforward conversation about your finances.</p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2025 Vance &amp; Co PA &nbsp;•&nbsp; 330 W Jefferson St, Tupelo, MS &nbsp;•&nbsp; Site built by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a></p>
+</footer>
+
+</body>
+</html>
