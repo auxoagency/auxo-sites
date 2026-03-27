@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnolia Business Centre | Tupelo, MS</title>
+<meta name="description" content="Magnolia Business Centre in Tupelo, MS — professional business services for local businesses and entrepreneurs. Call (662) 840-0433 today.">
+<style>
+  :root {
+    --bg: #0F172A;
+    --bg-card: #1E293B;
+    --bg-card2: #162032;
+    --accent: #D4AF37;
+    --accent-dim: rgba(212,175,55,0.15);
+    --accent-glow: rgba(212,175,55,0.25);
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --text-dim: #CBD5E1;
+    --border: rgba(212,175,55,0.18);
+    --border-subtle: rgba(148,163,184,0.12);
+    --radius: 4px;
+    --radius-lg: 8px;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    overscroll-behavior: contain;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.3); }
+    50% { box-shadow: 0 0 0 8px rgba(212,175,55,0); }
+  }
+
+  .hero-badge { animation: fadeUp 0.5s ease forwards; }
+  .hero-name { animation: fadeUp 0.6s ease 0.1s both; }
+  .hero-tagline { animation: fadeUp 0.6s ease 0.2s both; }
+  .hero-cta-wrap { animation: fadeUp 0.6s ease 0.3s both; }
+  .hero-sub { animation: fadeUp 0.6s ease 0.4s both; }
+
+  /* ─── TOP BAR ─── */
+  .top-bar {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent) 40%, var(--accent) 60%, transparent 100%);
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    padding: 52px 0 56px;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(212,175,55,0.025) 40px,
+        rgba(212,175,55,0.025) 41px
+      );
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 340px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .hero-name {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .hero-name .accent {
+    color: var(--accent);
+    display: inline;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+
+  .hero-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 60px;
+    background: var(--accent);
+    color: #0F172A;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    animation: pulseGlow 2.5s ease-in-out infinite;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background: #e8c444;
+    box-shadow: 0 12px 32px rgba(212,175,55,0.35);
+    animation: none;
+  }
+
+  .btn-primary svg {
+    flex-shrink: 0;
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+
+  .hero-sub strong {
+    color: var(--text-dim);
+  }
+
+  /* ─── DIVIDER ─── */
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    padding: 56px 0;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .section-headline {
+    font-size: clamp(22px, 6vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .section-headline .accent {
+    color: var(--accent);
+  }
+
+  .section-body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 28px;
+  }
+
+  /* ─── ABOUT ─── */
+  .about-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    margin-top: 28px;
+  }
+
+  .about-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  .about-card p strong {
+    color: var(--text);
+  }
+
+  /* ─── HOURS & CONTACT ─── */
+  .hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 24px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background: var(--bg-card);
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+
+  .hours-row:hover {
+    background: var(--bg-card2);
+  }
+
+  .hours-row + .hours-row {
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .hours-day {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    min-width: 110px;
+  }
+
+  .hours-time {
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: right;
+  }
+
+  .hours-time.open {
+    color: #4ADE80;
+  }
+
+  .hours-time.closed {
+    color: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  .today-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(74,222,128,0.1);
+    border: 1px solid rgba(74,222,128,0.2);
+    border-radius: 2px;
+    padding: 2px 8px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4ADE80;
+    margin-left: 8px;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+
+  .contact-info {
+    flex: 1;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+  }
+
+  .contact-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .contact-card.address .contact-value {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+
+  .contact-arrow {
+    color: var(--accent);
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  /* ─── FINAL CTA ─── */
+  .cta-section {
+    padding: 56px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(212,175,55,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  .cta-headline {
+    font-size: clamp(22px, 6vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .cta-headline .accent {
+    color: var(--accent);
+  }
+
+  .cta-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .cta-human {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 24px 0 28px;
+    text-align: center;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  footer p {
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.55;
+    letter-spacing: 0.03em;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  footer a:hover {
+    opacity: 1;
+    color: var(--accent);
+  }
+
+  /* ─── RESPONSIVE TWEAKS ─── */
+  @media (max-width: 380px) {
+    .hero { padding: 40px 0 48px; }
+    .hero-name { font-size: 34px; }
+    .contact-value { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="container">
+
+    <div class="hero-badge">Tupelo, MS &nbsp;•&nbsp; Professional Business Services</div>
+
+    <h1 class="hero-name">
+      Magnolia<br><span class="accent">Business Centre</span>
+    </h1>
+
+    <p class="hero-tagline">
+      Tupelo's trusted destination for professional business support — the services, space, and expertise local businesses need to run smoothly and grow with confidence.
+    </p>
+
+    <div class="hero-cta-wrap">
+      <a href="tel:6628400433" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.1 11.24a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .4h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.26a16 16 0 006.29 6.29l1.25-1.25a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Call Now — (662) 840-0433
+      </a>
+    </div>
+
+    <p class="hero-sub">
+      <strong>Mon–Fri, 8:00 AM – 5:00 PM</strong> &nbsp;•&nbsp; Located in Tupelo, MS
+    </p>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── ABOUT ─── -->
+<section class="section">
+  <div class="container">
+
+    <span class="section-label">About Us</span>
+
+    <h2 class="section-headline">
+      Running a business is hard enough —<br><span class="accent">your centre shouldn't be</span>
+    </h2>
+
+    <p class="section-body">
+      Whether you're a solo entrepreneur or a growing team, finding reliable, professional business support in Tupelo shouldn't eat up your day. At <strong>Magnolia Business Centre</strong>, we make it straightforward — one location, the right people, and services built around what local businesses actually need.
+    </p>
+
+    <p class="section-body">
+      We've been part of the Tupelo business community and know what it takes to help local operations stay productive and professional. Stop patching things together — come in and let us handle it right.
+    </p>
+
+    <div class="about-card">
+      <p>
+        <strong>"We built Magnolia Business Centre for Tupelo businesses who need real support, not runaround."</strong> Our team is here Monday through Friday, ready to help you walk out with exactly what you came for.
+      </p>
+    </div>
+
+    <div class="accent-rule"></div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── HOURS & CONTACT ─── -->
+<section class="section">
+  <div class="container">
+
+    <span class="section-label">Hours &amp; Contact</span>
+
+    <h2 class="section-headline">Find Us &amp; <span class="accent">Get In Touch</span></h2>
+
+    <div class="hours-grid">
+
+      <div class="hours-row">
+        <span class="hours-day">
+          Monday
+          <span class="today-indicator">Today</span>
+        </span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+
+      <div class="hours-row">
+        <span class="hours-day">Tuesday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+
+      <div class="hours-row">
+        <span class="hours-day">Wednesday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+
+      <div class="hours-row">
+        <span class="hours-day">Thursday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+
+      <div class="hours-row">
+        <span class="hours-day">Friday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+
+      <div class="hours-row">
+        <span class="hours-day">Saturday</span>
+        <span class="hours-time closed">Closed</span>
+      </div>
+
+      <div class="hours-row">
+        <span class="hours-day">Sunday</span>
+        <span class="hours-time closed">Closed</span>
+      </div>
+
+    </div>
+
+    <div class="contact-cards">
+
+      <a href="tel:6628400433" class="contact-card">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.1 11.24a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .4h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.26a16 16 0 006.29 6.29l1.25-1.25a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">(662) 840-0433</div>
+        </div>
+        <svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <a href="https://maps.google.com/?q=2605+Old+Belden+Cir,+Tupelo,+MS+38801,+USA" target="_blank" rel="noopener" class="contact-card address">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-label">Address — Get Directions</div>
+          <div class="contact-value">2605 Old Belden Cir<br>Tupelo, MS 38801</div>
+        </div>
+        <svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+
+      <h2 class="cta-headline">
+        Ready to get your<br><span class="accent">business moving forward?</span>
+      </h2>
+
+      <p class="cta-sub">
+        Call Magnolia Business Centre today and talk to someone who can actually help — no hold music, no callbacks, just real support from your Tupelo business community.
+      </p>
+
+      <a href="tel:6628400433" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.1 11.24a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .4h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.26a16 16 0 006.29 6.29l1.25-1.25a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Call Now — (662) 840-0433
+      </a>
+
+      <p class="cta-human">No pressure — just give us a call and see how we can help.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <p>Site built by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency • auxoagency.co</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
