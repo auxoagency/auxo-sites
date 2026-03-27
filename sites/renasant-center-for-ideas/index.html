@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renasant Center for IDEAs | Small Business Development – Tupelo, MS</title>
+<meta name="description" content="Find resources to start, grow or relocate a business to Lee County. Discover unique programs and support services for women-owned and minority-owned businesses in Tupelo, MS.">
+<style>
+  :root {
+    --bg: #0F172A;
+    --bg2: #1E293B;
+    --accent: #D4AF37;
+    --accent2: #F5C842;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --border: rgba(212,175,55,0.2);
+    --card-bg: rgba(255,255,255,0.04);
+    --radius: 12px;
+    --max: 600px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    overscroll-behavior: contain;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* TOP ACCENT LINE */
+  .top-bar {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    width: 100%;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(212,175,55,0); }
+    100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+  }
+
+  .hero-badge  { animation: fadeUp 0.5s ease forwards; }
+  .hero-name   { animation: fadeUp 0.6s ease 0.1s both; }
+  .hero-tagline{ animation: fadeUp 0.6s ease 0.2s both; }
+  .hero-cta    { animation: fadeUp 0.6s ease 0.3s both; }
+  .hero-sub    { animation: fadeUp 0.6s ease 0.4s both; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 60px 0 56px;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,175,55,0.12) 0%, transparent 70%),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(212,175,55,0.025) 40px,
+        rgba(212,175,55,0.025) 41px
+      );
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.25);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .hero-name {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .hero-name .accent {
+    color: var(--accent);
+    position: relative;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 4vw, 19px);
+    font-weight: 400;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+
+  .hero-tagline strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 56px;
+    background: var(--accent);
+    color: #0F172A;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+    animation: pulse-ring 2.5s ease-out 1.5s infinite;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(212,175,55,0.35);
+  }
+
+  .btn-icon {
+    font-size: 20px;
+  }
+
+  .hero-sub {
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .hero-sub span {
+    color: var(--accent);
+  }
+
+  /* TRUST ROW */
+  .trust-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .star {
+    color: var(--accent);
+    font-size: 16px;
+  }
+
+  .star.half {
+    position: relative;
+    display: inline-block;
+  }
+
+  .rating-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .rating-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+  }
+
+  /* SECTION SHARED */
+  section {
+    padding: 64px 0;
+    position: relative;
+  }
+
+  section + section {
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+
+  .section-headline {
+    font-size: clamp(22px, 6vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .accent-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin: 24px 0;
+  }
+
+  /* ABOUT */
+  .about-body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  .about-body p + p {
+    margin-top: 14px;
+  }
+
+  .about-body strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .stat-card {
+    margin-top: 32px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .stat-num {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .stat-label strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 48px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  /* SERVICES GRID */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    padding: 20px 18px;
+    transition: all 0.2s ease;
+  }
+
+  .service-card:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+    background: rgba(212,175,55,0.05);
+  }
+
+  .service-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .service-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .service-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* HOURS */
+  .contact-section {
+    background: linear-gradient(135deg, rgba(212,175,55,0.04), transparent);
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 100px;
+    padding: 8px 16px;
+    margin-bottom: 32px;
+  }
+
+  .rating-pill-stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .rating-pill-stars .star {
+    font-size: 13px;
+  }
+
+  .rating-pill-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .rating-pill-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.15s ease;
+  }
+
+  .hours-row:last-child {
+    border-bottom: none;
+  }
+
+  .hours-row:hover {
+    background: rgba(212,175,55,0.04);
+  }
+
+  .hours-day {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .hours-time {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .hours-time.open {
+    color: #4ADE80;
+    font-weight: 600;
+  }
+
+  .hours-time.closed {
+    color: #EF4444;
+    font-weight: 600;
+  }
+
+  .hours-row.today {
+    background: rgba(212,175,55,0.07);
+  }
+
+  .today-badge {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0F172A;
+    background: var(--accent);
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-left: 8px;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s ease;
+  }
+
+  .contact-card:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  .contact-card-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(212,175,55,0.12);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .contact-card-info {
+    flex: 1;
+  }
+
+  .contact-card-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2px;
+  }
+
+  .contact-card-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .contact-card-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .contact-arrow {
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    text-align: center;
+    background: linear-gradient(160deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));
+    border-top: 1px solid var(--border) !important;
+  }
+
+  .final-cta .section-headline {
+    margin-bottom: 12px;
+  }
+
+  .final-cta-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  .final-cta-sub strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .final-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 24px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-text {
+    font-size: 11px;
+    color: #475569;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-text a {
+    color: #64748B;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .footer-text a:hover {
+    color: var(--accent);
+  }
+
+  /* OPEN STATUS */
+  .open-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4ADE80;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .open-dot {
+    width: 7px;
+    height: 7px;
+    background: #4ADE80;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-ring 2s ease-out infinite;
+  }
+
+  @media (max-width: 400px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrapper">
+
+    <div class="hero-badge">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Tupelo, MS &nbsp;•&nbsp; Small Business Development
+      </div>
+    </div>
+
+    <h1 class="hero-name">
+      Renasant<br>
+      Center for <span class="accent">IDEAs</span>
+    </h1>
+
+    <p class="hero-tagline">
+      <strong>Turn your business idea into a thriving reality</strong> — right here in Tupelo. We provide the funding resources, expert guidance, and community connections Northeast Mississippi entrepreneurs need to launch, grow, and succeed.
+    </p>
+
+    <div class="trust-row">
+      <div class="stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <span class="rating-text">4.6</span>
+      <span class="rating-sub">on Google</span>
+      <div class="trust-divider"></div>
+      <span class="open-status">
+        <span class="open-dot"></span>
+        Open Today
+      </span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="tel:6628424521" class="btn-primary">
+        <span class="btn-icon">📞</span>
+        Call (662) 842-4521
+      </a>
+    </div>
+
+    <p class="hero-sub">
+      Mon – Fri &nbsp;•&nbsp; <span>8:00 AM – 5:00 PM</span> &nbsp;•&nbsp; Free Initial Consultation
+    </p>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="wrapper">
+
+    <div class="section-label">About Us</div>
+
+    <h2 class="section-headline">
+      Starting a business is hard.<br>You shouldn't have to figure it out alone.
+    </h2>
+
+    <div class="about-body">
+      <p>
+        Most entrepreneurs in the Tupelo area have the drive — what they lack is a clear roadmap. At <strong>Renasant Center for IDEAs</strong>, we exist to close that gap. Whether you're writing your first business plan, seeking capital, or ready to scale, our team gives you the tools and connections to move forward with confidence.
+      </p>
+      <p>
+        We specialize in supporting <strong>women-owned and minority-owned businesses</strong>, startups, and established companies looking to relocate or expand in Lee County. This isn't generic advice — it's hands-on support from people who are invested in Northeast Mississippi's economic future.
+      </p>
+      <p>
+        Rooted in <strong>Tupelo</strong> and committed to the people who build it — that's what the <strong>Renasant Center for IDEAs</strong> is all about.
+      </p>
+    </div>
+
+    <div class="accent-divider"></div>
+
+    <div class="stat-card">
+      <div class="stat-num">4.6★</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">
+        <strong>Rated on Google Maps</strong>
+        Trusted by Tupelo entrepreneurs and business owners across Lee County
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🚀</span>
+        <div class="service-title">Business Launch Support</div>
+        <div class="service-desc">Step-by-step guidance for starting your business the right way</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📈</span>
+        <div class="service-title">Growth Resources</div>
+        <div class="service-desc">Strategies and programs to help established businesses scale</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🤝</span>
+        <div class="service-title">Women & Minority Programs</div>
+        <div class="service-desc">Dedicated support and funding paths for underserved founders</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📍</span>
+        <div class="service-title">Relocation Assistance</div>
+        <div class="service-desc">Helping businesses move and establish roots in Lee County</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="contact-section">
+  <div class="wrapper">
+
+    <div class="section-label">Hours &amp; Contact</div>
+
+    <h2 class="section-headline">Find Us in Tupelo</h2>
+
+    <div class="rating-pill">
+      <div class="rating-pill-stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <span class="rating-pill-text">4.6 Stars</span>
+      <span class="rating-pill-sub">— Google Maps</span>
+    </div>
+
+    <div class="hours-grid">
+      <div class="hours-row today">
+        <span class="hours-day">Monday <span class="today-badge">Today</span></span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Tuesday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Wednesday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Thursday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Friday</span>
+        <span class="hours-time open">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Saturday</span>
+        <span class="hours-time closed">Closed</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Sunday</span>
+        <span class="hours-time closed">Closed</span>
+      </div>
+    </div>
+
+    <div class="contact-cards">
+      <a href="tel:6628424521" class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-info">
+          <div class="contact-card-label">Call Us</div>
+          <div class="contact-card-value">(662) 842-4521</div>
+          <div class="contact-card-sub">Mon–Fri, 8 AM to 5 PM</div>
+        </div>
+        <div class="contact-arrow">→</div>
+      </a>
+      <a href="https://maps.google.com/?q=398 E Main St, Tupelo, MS 38804, USA" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div class="contact-card-info">
+          <div class="contact-card-label">Visit Us</div>
+          <div class="contact-card-value" style="font-size:15px;">398 E Main St</div>
+          <div class="contact-card-sub">Tupelo, MS 38804 — Get Directions</div>
+        </div>
+        <div class="contact-arrow">→</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="wrapper">
+
+    <div class="section-label" style="justify-content: center;">Ready to Start?</div>
+
+    <h2 class="section-headline">
+      Get the clarity and resources<br>your business deserves
+    </h2>
+
+    <p class="final-cta-sub">
+      One call connects you with <strong>real experts in Tupelo</strong> who understand the local landscape and are ready to help you build something lasting in Lee County.
+    </p>
+
+    <a href="tel:6628424521" class="btn-primary">
+      <span class="btn-icon">📞</span>
+      Call (662) 842-4521 Now
+    </a>
+
+    <p class="final-note">No pressure — just a real conversation about your business goals.</p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-text">
+    © 2025 Renasant Center for IDEAs &nbsp;•&nbsp; 398 E Main St, Tupelo, MS 38804
+    <br><br>
+    Site built by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a> &nbsp;•&nbsp; <a href="https://auxoagency.co" target="_blank" rel="noopener">auxoagency.co</a>
+  </p>
+</footer>
+
+</body>
+</html>
