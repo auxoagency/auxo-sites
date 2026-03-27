@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mabus Agency – Bank Marketing Experts in Tupelo, MS</title>
+<meta name="description" content="Mabus Agency helps banks in Tupelo, MS grow with full-service, in-house marketing strategies. Call (662) 823-2100 to start growing your bank today.">
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-card: #1a2130;
+    --accent: #F97316;
+    --accent-dim: rgba(249,115,22,0.15);
+    --accent-glow: rgba(249,115,22,0.35);
+    --text: #f0f6fc;
+    --text-muted: #8b949e;
+    --text-dim: #c9d1d9;
+    --border: rgba(249,115,22,0.2);
+    --border-subtle: rgba(255,255,255,0.06);
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --radius: 4px;
+    --radius-lg: 8px;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.75;
+    overscroll-behavior: contain;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ── TOP ACCENT LINE ── */
+  .top-line {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    width: 100%;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 var(--accent-glow); }
+    70% { box-shadow: 0 0 0 12px rgba(249,115,22,0); }
+    100% { box-shadow: 0 0 0 0 rgba(249,115,22,0); }
+  }
+
+  @keyframes gridScroll {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
+  }
+
+  .hero-badge { animation: fadeUp 0.5s ease forwards; }
+  .hero-name { animation: fadeUp 0.6s ease 0.1s both; }
+  .hero-tagline { animation: fadeUp 0.6s ease 0.2s both; }
+  .hero-cta-wrap { animation: fadeUp 0.6s ease 0.3s both; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0 64px;
+    background-color: var(--bg);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(249,115,22,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(249,115,22,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridScroll 8s linear infinite;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(249,115,22,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero .wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-dim);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse-ring 2s ease infinite;
+    flex-shrink: 0;
+  }
+
+  .hero-name {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .hero-name .accent {
+    color: var(--accent);
+    position: relative;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 3.5vw, 19px);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+
+  .hero-tagline strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .hero-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0 32px;
+    height: 58px;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px var(--accent-glow);
+    background: #fb923c;
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-icon {
+    font-size: 20px;
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-sub::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 12px;
+  }
+
+  .rating-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dim);
+    margin-top: 4px;
+  }
+
+  .stars {
+    color: #FBBF24;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+    width: 100%;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 60px 0;
+    background: var(--bg-secondary);
+    position: relative;
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    height: 1px;
+    width: 32px;
+    background: var(--accent);
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .section-headline {
+    font-size: clamp(22px, 6vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .section-headline .accent {
+    color: var(--accent);
+  }
+
+  .about-body {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+  }
+
+  .about-body p + p {
+    margin-top: 14px;
+  }
+
+  .accent-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  .stat-card {
+    display: inline-flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .stat-value {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .stat-stars {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #FBBF24;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* ── HOURS & CONTACT ── */
+  .contact {
+    padding: 60px 0;
+    background: var(--bg);
+    position: relative;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(251,191,36,0.1);
+    border: 1px solid rgba(251,191,36,0.3);
+    border-radius: 100px;
+    padding: 7px 16px;
+    margin-bottom: 32px;
+  }
+
+  .rating-pill .stars {
+    font-size: 15px;
+  }
+
+  .rating-pill .rating-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #FBBF24;
+  }
+
+  .rating-pill .rating-source {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .hours-grid {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background 0.15s ease;
+  }
+
+  .hours-row:last-child {
+    border-bottom: none;
+  }
+
+  .hours-row:hover {
+    background: rgba(249,115,22,0.04);
+  }
+
+  .hours-row.today {
+    background: var(--accent-dim);
+  }
+
+  .hours-row.today .day-name {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .hours-row.today .day-time {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .day-name {
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.01em;
+  }
+
+  .day-time {
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .closed-badge {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .contact-card:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .contact-card:hover::before {
+    opacity: 1;
+  }
+
+  .contact-card.phone-card {
+    border-color: var(--border);
+  }
+
+  .contact-card.phone-card::before {
+    opacity: 1;
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .card-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+  }
+
+  .card-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-value.address {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    white-space: normal;
+    line-height: 1.4;
+    color: var(--text-dim);
+  }
+
+  .card-arrow {
+    font-size: 18px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    padding: 64px 0;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(249,115,22,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .final-cta .wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .final-cta .section-label {
+    justify-content: center;
+  }
+
+  .final-cta .section-label::after {
+    display: none;
+  }
+
+  .final-cta .section-headline {
+    margin-bottom: 14px;
+  }
+
+  .final-cta-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  .final-cta .btn-primary {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 62px;
+    font-size: 18px;
+  }
+
+  .final-cta-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 18px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 24px 20px;
+    text-align: center;
+    background: var(--bg);
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  footer p {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  footer a:hover {
+    opacity: 0.8;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 400px) {
+    .btn-primary {
+      max-width: 100%;
+    }
+    .card-value {
+      font-size: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP ACCENT LINE -->
+<div class="top-line"></div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="wrapper">
+
+    <div class="hero-badge">Tupelo, MS &bull; Bank Marketing Agency</div>
+
+    <h1 class="hero-name">
+      Your bank deserves<br>
+      <span class="accent">marketing that works.</span>
+    </h1>
+
+    <p class="hero-tagline">
+      Most banks are leaving growth on the table. <strong>Mabus Agency</strong> builds full-service, in-house marketing strategies that fill seats, grow deposits, and put your Tupelo bank ahead of the competition — without the guesswork.
+    </p>
+
+    <div class="hero-cta-wrap">
+      <a href="tel:+16628232100" class="btn-primary">
+        <span class="btn-icon">📞</span>
+        Call (662) 823-2100
+      </a>
+      <p class="hero-sub">Mon–Fri, 8 AM – 5 PM &nbsp;·&nbsp; Talk to a real person</p>
+      <div class="rating-inline">
+        <span class="stars">★★★★</span>
+        <span style="color: var(--text-muted); font-size: 12px;">4.0 on Google Maps</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── ABOUT ── -->
+<section class="about">
+  <div class="wrapper">
+
+    <div class="section-label">About Us</div>
+
+    <h2 class="section-headline">
+      Generic marketing agencies<br>
+      <span class="accent">don't understand banking.</span>
+    </h2>
+
+    <div class="accent-divider"></div>
+
+    <div class="about-body">
+      <p>Most marketing agencies treat your bank like any other client — handing you cookie-cutter campaigns that don't speak to your customers or your market. That's not how we operate.</p>
+      <p>At <strong>Mabus Agency</strong>, bank marketing is all we do. Our full in-house team — designers, strategists, copywriters, and media buyers — work together to build a strategy around your specific goals, then execute every piece of it under one roof. No outsourcing. No confusion. Just results.</p>
+      <p>We're based right here in Tupelo, MS, so we understand this market, these customers, and what it takes to help a Mississippi bank grow.</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-value">4.0</div>
+      <div class="stat-stars">★★★★</div>
+      <div class="stat-label">Google Rating &nbsp;·&nbsp; Mabus Agency</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── HOURS & CONTACT ── -->
+<section class="contact">
+  <div class="wrapper">
+
+    <div class="section-label">Hours &amp; Contact</div>
+
+    <h2 class="section-headline">Find us in <span class="accent">Tupelo</span></h2>
+
+    <div class="rating-pill">
+      <span class="stars">★★★★</span>
+      <span class="rating-text">4.0 Stars</span>
+      <span class="rating-source">on Google Maps</span>
+    </div>
+
+    <div class="hours-grid">
+      <div class="hours-row today">
+        <span class="day-name">Monday</span>
+        <span class="day-time">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Tuesday</span>
+        <span class="day-time">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Wednesday</span>
+        <span class="day-time">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Thursday</span>
+        <span class="day-time">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Friday</span>
+        <span class="day-time">8:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Saturday</span>
+        <span class="closed-badge">Closed</span>
+      </div>
+      <div class="hours-row">
+        <span class="day-name">Sunday</span>
+        <span class="closed-badge">Closed</span>
+      </div>
+    </div>
+
+    <div class="contact-cards">
+
+      <a href="tel:+16628232100" class="contact-card phone-card">
+        <div class="card-icon">📞</div>
+        <div class="card-info">
+          <div class="card-label">Call Us Directly</div>
+          <div class="card-value">(662) 823-2100</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="https://maps.google.com/?q=71 S Green St, Tupelo, MS 38804, USA" target="_blank" rel="noopener" class="contact-card">
+        <div class="card-icon">📍</div>
+        <div class="card-info">
+          <div class="card-label">Our Office</div>
+          <div class="card-value address">71 S Green St, Tupelo, MS 38804</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta">
+  <div class="wrapper">
+
+    <div class="section-label">Ready to Grow?</div>
+
+    <h2 class="section-headline">
+      Let's build your bank's<br>
+      <span class="accent">next winning campaign.</span>
+    </h2>
+
+    <p class="final-cta-sub">
+      One call is all it takes. Tell us where your bank wants to be — Mabus Agency will map out exactly how to get there.
+    </p>
+
+    <a href="tel:+16628232100" class="btn-primary">
+      <span class="btn-icon">📞</span>
+      Call (662) 823-2100
+    </a>
+
+    <p class="final-cta-note">No pressure. Just a real conversation about your bank's growth.</p>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>
+    &copy; 2025 Mabus Agency &nbsp;·&nbsp; 71 S Green St, Tupelo, MS 38804 &nbsp;·&nbsp;
+    Site rebuilt by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a> &nbsp;·&nbsp; <a href="https://auxoagency.co" target="_blank" rel="noopener">auxoagency.co</a>
+  </p>
+</footer>
+
+</body>
+</html>
