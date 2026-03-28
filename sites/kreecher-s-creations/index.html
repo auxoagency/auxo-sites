@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kreecher's Creations</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #0D9488;
+    --accent-dark: #0a7a70;
+    --bg: #FDFBF7;
+    --bg-alt: #F0F4F3;
+    --dark: #0F1F1E;
+    --text: #1A1A1A;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  h1, h2, h3, .nav-brand, .section-label, .cta-btn {
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  }
+
+  h1 {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(253,251,247,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(28px, 8vw, 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a6e6d;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-phone:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.65) 70%, rgba(0,0,0,0.93) 100%),
+      url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(28px, 8vw, 140px) 48px;
+  }
+
+  .hero-content {
+    max-width: 620px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 14px;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  }
+
+  .hero h1 {
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .hero-tagline {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    max-width: 480px;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+    min-height: 54px;
+    line-height: 54px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: var(--shadow-md);
+  }
+
+  .cta-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+
+  .cta-btn:active { transform: translateY(0); }
+
+  /* INFO BAR */
+  .info-bar {
+    width: 100%;
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 0 clamp(28px, 8vw, 140px);
+  }
+
+  .info-bar-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .info-bar-item {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-bar-item:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.07);
+    padding-right: 32px;
+    margin-right: 0;
+  }
+
+  .info-bar-item:not(:first-child) {
+    padding-left: 32px;
+  }
+
+  .info-bar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  }
+
+  .info-bar-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .info-bar-value a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stars {
+    color: #F59E0B;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* ABOUT */
+  .about {
+    width: 100%;
+    background: var(--bg);
+    padding: 6rem clamp(28px, 8vw, 140px);
+  }
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .about h2 {
+    color: var(--dark);
+    margin-bottom: 12px;
+    max-width: 640px;
+  }
+
+  .about-body {
+    max-width: 640px;
+  }
+
+  .about-body p {
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .about-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.4;
+    margin: 28px 0;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  .about-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .about-meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  }
+
+  .about-meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .about-meta-value a {
+    color: var(--dark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(13,148,136,0.3);
+  }
+
+  /* HOURS & CONTACT */
+  .hours {
+    width: 100%;
+    background: var(--bg-alt);
+    padding: 5rem clamp(28px, 8vw, 140px);
+  }
+
+  .hours-eyebrow {
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .hours h2 {
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid rgba(13,148,136,0.2);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 32px;
+  }
+
+  .rating-pill .star { color: #F59E0B; }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .hours-table td:first-child {
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .hours-table td:last-child {
+    text-align: right;
+    color: #5a6e6d;
+  }
+
+  .hours-table tr.closed td:last-child {
+    color: #b0b0b0;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    min-height: 80px;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+
+  .contact-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  }
+
+  .contact-card-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    width: 100%;
+    background: var(--dark);
+    padding: 5rem clamp(28px, 8vw, 140px);
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    margin-bottom: 28px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .final-cta .cta-btn {
+    max-width: 380px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+  }
+
+  .final-cta-note {
+    color: rgba(255,255,255,0.45);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    background: var(--bg-alt);
+    padding: 20px clamp(28px, 8vw, 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .footer-brand {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6b7d7c;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: #8a9e9d;
+  }
+
+  .footer-credit a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .footer-credit a:hover { text-decoration: underline; }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hours-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .info-bar-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar-item:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding-right: 0;
+    }
+
+    .info-bar-item:not(:first-child) {
+      padding-left: 0;
+    }
+
+    .info-bar-item {
+      padding: 16px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding: 0 20px 36px;
+    }
+
+    .about {
+      padding: 3rem 20px;
+    }
+
+    .hours {
+      padding: 3rem 20px;
+    }
+
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    footer {
+      padding: 20px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cta-btn {
+      max-width: 100%;
+    }
+
+    .final-cta .cta-btn {
+      max-width: 100%;
+    }
+
+    .about-meta {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Kreecher's Creations</a>
+    <a href="tel:6623228714" class="nav-phone">(662) 322-8714</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tupelo &middot; MS &middot; Custom Creations</p>
+    <h1>Kreecher's Creations</h1>
+    <p class="hero-tagline">Handcrafted work made right here in Tupelo — built to last and made to impress.</p>
+    <a href="tel:6623228714" class="cta-btn">Call (662) 322-8714</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-bar-item">
+      <span class="info-bar-label">Phone</span>
+      <span class="info-bar-value"><a href="tel:6623228714">(662) 322-8714</a></span>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-bar-label">Location</span>
+      <span class="info-bar-value">Tupelo, MS</span>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-bar-label">Google Rating</span>
+      <div class="stars-row">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="info-bar-value">4.8 / 5</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <p class="section-label about-eyebrow">About</p>
+  <h2 class="reveal">You want something made right — not something that looks like it came off a shelf.</h2>
+  <div class="about-body">
+    <p>That's exactly why folks from all over Tupelo and northeast Mississippi keep coming back to Kreecher's Creations. We don't do cookie-cutter work. Every piece we put our name on gets our full attention, and we won't hand it over until we'd be proud to keep it ourselves.</p>
+    <p>We're a locally owned shop on McCullough Blvd, and we've built our reputation one satisfied customer at a time. Whether you've got a specific vision or you need some help figuring out what you want, we're happy to talk it through — no pressure, just honest conversation about what we can do for you.</p>
+    <div class="about-divider"></div>
+    <div class="about-meta">
+      <div class="about-meta-item">
+        <span class="about-meta-label">Address</span>
+        <span class="about-meta-value"><a href="https://maps.google.com/?q=1931+McCullough+Blvd,+Tupelo,+MS+38801" target="_blank" rel="noopener">1931 McCullough Blvd, Tupelo, MS</a></span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Rating</span>
+        <span class="about-meta-value">4.8 Stars on Google</span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Ownership</span>
+        <span class="about-meta-value">Locally Owned &amp; Operated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours">
+  <p class="section-label hours-eyebrow">Hours &amp; Contact</p>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">
+    <span class="star">&#9733;</span>
+    4.8 Rating on Google
+  </div>
+  <div class="hours-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr class="closed">
+            <td>Monday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>8:00 AM – 4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8:00 AM – 4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8:00 AM – 4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8:00 AM – 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>8:00 AM – 2:00 PM</td>
+          </tr>
+          <tr class="closed">
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="contact-cards">
+      <a href="tel:6623228714" class="contact-card">
+        <span class="contact-card-label">Call Us</span>
+        <span class="contact-card-value">(662) 322-8714</span>
+      </a>
+      <a href="https://maps.google.com/?q=1931+McCullough+Blvd,+Tupelo,+MS+38801" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-card-label">Our Location</span>
+        <span class="contact-card-value">1931 McCullough Blvd<br>Tupelo, MS 38801</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Give us a call and let's figure out exactly what you need — we'll take it from there.</h2>
+  <a href="tel:6623228714" class="cta-btn">Call (662) 322-8714</a>
+  <p class="final-cta-note">We're here Tuesday through Saturday. Just give us a ring and we'll get you taken care of.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Kreecher's Creations &mdash; Tupelo, MS</div>
+  <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></div>
+</footer>
+
+<script>
+  (function() {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
+</body>
+</html>
