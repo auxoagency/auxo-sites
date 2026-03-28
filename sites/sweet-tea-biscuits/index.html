@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sweet Tea &amp; Biscuits Cafe – The Epitome of Southern Hospitality</title>
+<title>Sweet Tea &amp; Biscuits Cafe - The Epitome of Southern Hospitality</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -29,21 +29,53 @@
     background: var(--bg);
   }
 
+  h1, h2, h3 {
+    font-family: var(--heading-font);
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
   /* REVEAL ANIMATION */
   .reveal {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.55s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
+    transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
 
   @media (prefers-reduced-motion: reduce) {
-    .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
+    .reveal {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 
-  /* NAV */
+  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
@@ -57,8 +89,9 @@
     display: flex;
     align-items: center;
   }
+
   .nav-inner {
-    max-width: 1400px;
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     padding: 0 clamp(28px, 8vw, 140px);
@@ -66,24 +99,25 @@
     align-items: center;
     justify-content: space-between;
   }
+
   .nav-name {
     font-family: var(--heading-font);
-    font-weight: 700;
     font-size: 14px;
+    font-weight: 700;
     color: var(--dark);
-    text-decoration: none;
-    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
+
   .nav-phone {
     font-size: 14px;
-    color: #8a7060;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.6;
+    transition: opacity 0.2s;
   }
-  .nav-phone:hover { color: var(--accent); }
+  .nav-phone:hover { opacity: 1; }
 
-  /* HERO */
+  /* ── HERO ── */
   .hero {
     width: 100%;
     min-height: 70vh;
@@ -97,7 +131,11 @@
     align-items: flex-end;
     padding: 0 clamp(28px, 8vw, 140px) 48px;
   }
-  .hero-content { max-width: 640px; }
+
+  .hero-content {
+    max-width: 560px;
+  }
+
   .hero-eyebrow {
     font-size: 11px;
     font-weight: 700;
@@ -105,123 +143,129 @@
     text-transform: uppercase;
     color: rgba(255,255,255,0.6);
     margin-bottom: 14px;
-    font-family: var(--body-font);
   }
+
   .hero h1 {
-    font-family: var(--heading-font);
-    font-size: clamp(36px, 9vw, 54px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 0.95;
-    color: #ffffff;
-    margin-bottom: 18px;
+    color: #fff;
+    margin-bottom: 16px;
   }
+
   .hero-tagline {
     font-size: 18px;
     color: rgba(255,255,255,0.8);
-    margin-bottom: 28px;
     line-height: 1.5;
-    font-family: var(--body-font);
+    margin-bottom: 28px;
+    font-family: var(--heading-font);
   }
-  .hero-cta {
+
+  .btn-primary {
     display: block;
     width: 100%;
-    max-width: 360px;
     min-height: 54px;
     background: var(--accent);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
+    color: #fff;
+    font-family: var(--body-font);
     font-size: 16px;
-    letter-spacing: 0.01em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    border-radius: 3px;
+    box-shadow: var(--shadow-md);
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    line-height: 1.2;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    box-shadow: var(--shadow-md);
-    transition: background 0.2s, transform 0.15s;
   }
-  .hero-cta:hover { background: #9e4a2a; transform: translateY(-1px); }
+  .btn-primary:hover { background: #9e4e2f; transform: translateY(-1px); }
 
-  /* INFO BAR */
+  /* ── INFO BAR ── */
   .info-bar {
     width: 100%;
     background: var(--dark);
     border-top: 1px solid rgba(255,255,255,0.07);
     border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 0 clamp(28px, 8vw, 140px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .info-item {
-    padding: 24px 0;
+
+  .info-cell {
+    padding: 22px clamp(14px, 4vw, 48px);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
   }
-  .info-item + .info-item {
+
+  .info-cell + .info-cell {
     border-left: 1px solid rgba(255,255,255,0.07);
-    padding-left: clamp(20px, 4vw, 60px);
   }
-  .info-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+
+  .info-cell .label {
     color: rgba(255,255,255,0.4);
-    font-family: var(--body-font);
+    font-size: 10px;
   }
-  .info-value {
-    font-size: 16px;
+
+  .info-cell .info-value {
+    color: #fff;
     font-weight: 600;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.2s;
+    font-size: 15px;
   }
-  a.info-value:hover { color: #e8a080; }
+
+  .info-cell a.info-value {
+    color: #fff;
+  }
+
   .stars {
     display: flex;
     align-items: center;
     gap: 4px;
-  }
-  .star-filled {
-    color: #F5B942;
-    font-style: normal;
+    color: #fff;
+    font-weight: 600;
     font-size: 15px;
   }
 
-  /* ABOUT */
+  .star-icon {
+    color: #F5A623;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  /* ── ABOUT ── */
   .about {
     width: 100%;
     background: var(--bg);
     padding: 6rem clamp(28px, 8vw, 140px);
   }
-  .section-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+
+  .about-eyebrow {
     color: var(--accent);
-    margin-bottom: 16px;
-    font-family: var(--body-font);
+    margin-bottom: 18px;
   }
-  .about h2 {
-    font-family: var(--heading-font);
-    font-size: clamp(26px, 7vw, 36px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    color: var(--dark);
-    margin-bottom: 20px;
-    max-width: 680px;
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 28px;
   }
-  .about-body {
-    max-width: 660px;
-  }
-  .about-body p {
-    margin-bottom: 16px;
+
+  .about-copy p {
+    font-size: 17px;
+    line-height: 1.75;
     color: var(--text);
   }
+
+  .about-copy p + p {
+    margin-top: 16px;
+  }
+
   .about-divider {
     width: 40px;
     height: 1px;
@@ -229,228 +273,254 @@
     opacity: 0.4;
     margin: 28px 0;
   }
+
   .about-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    flex-direction: column;
+    gap: 18px;
   }
+
   .meta-item {
     display: flex;
     flex-direction: column;
     gap: 3px;
   }
-  .meta-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #9a7060;
-    font-family: var(--body-font);
-  }
-  .meta-value {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--dark);
+
+  .meta-item .label {
+    color: var(--accent);
+    font-size: 10px;
   }
 
-  /* HOURS & CONTACT */
+  .meta-item .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  /* ── HOURS & CONTACT ── */
   .hours-contact {
     width: 100%;
     background: var(--bg-alt);
     padding: 5rem clamp(28px, 8vw, 140px);
   }
-  .hours-contact h2 {
-    font-family: var(--heading-font);
-    font-size: clamp(26px, 7vw, 36px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    color: var(--dark);
-    margin-bottom: 28px;
+
+  .hours-eyebrow {
+    color: var(--accent);
+    margin-bottom: 18px;
   }
+
+  .hours-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
   .rating-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    border: 1px solid rgba(184,92,56,0.2);
-    border-radius: 40px;
-    padding: 7px 16px;
-    margin-bottom: 28px;
+    gap: 7px;
+    background: var(--bg);
+    border: 1px solid rgba(184, 92, 56, 0.2);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
     box-shadow: var(--shadow-sm);
   }
-  .rating-pill .star-filled { font-size: 14px; }
-  .rating-pill-number {
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--dark);
-  }
-  .rating-pill-label {
-    font-size: 12px;
-    color: #9a7060;
-  }
-  .hours-table {
-    width: 100%;
-    max-width: 480px;
-    border-collapse: collapse;
-    margin-bottom: 40px;
-  }
-  .hours-table tr {
-    border-bottom: 1px solid rgba(44,24,16,0.08);
-  }
-  .hours-table tr:last-child { border-bottom: none; }
-  .hours-table td {
-    padding: 11px 0;
-    font-size: 15px;
-  }
-  .hours-table .day-name {
-    font-weight: 700;
-    color: var(--dark);
-    width: 48%;
-  }
-  .hours-table .day-time {
-    color: #7a5a4a;
-    text-align: right;
-  }
-  .hours-table .closed { color: #c0a090; }
-  .contact-cards {
+
+  .hours-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    max-width: 620px;
+    gap: 4rem;
+    align-items: start;
   }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(44, 24, 16, 0.08);
+  }
+
+  .hours-table tr:first-child {
+    border-top: 1px solid rgba(44, 24, 16, 0.08);
+  }
+
+  .hours-table td {
+    padding: 11px 4px;
+    font-size: 15px;
+  }
+
+  .hours-table .day-name {
+    font-weight: 700;
+    color: var(--text);
+    width: 50%;
+  }
+
+  .hours-table .day-time {
+    color: var(--text);
+    opacity: 0.6;
+    text-align: right;
+  }
+
+  .hours-table tr.closed .day-time {
+    color: var(--accent);
+    opacity: 0.7;
+    font-style: italic;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .contact-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 80px;
-    padding: 20px 24px;
-    background: #ffffff;
-    border-radius: 6px;
-    text-decoration: none;
+    padding: 18px 22px;
+    background: var(--bg);
+    border-radius: 4px;
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(44,24,16,0.06);
+    border-left: 3px solid var(--accent);
+    text-decoration: none;
     transition: box-shadow 0.2s, transform 0.15s;
   }
+
   .contact-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
   }
-  .contact-card-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+
+  .contact-card .label {
     color: var(--accent);
     margin-bottom: 5px;
-    font-family: var(--body-font);
   }
-  .contact-card-value {
-    font-size: 16px;
+
+  .contact-card .card-value {
+    font-size: 17px;
     font-weight: 700;
-    color: var(--dark);
+    color: var(--text);
     line-height: 1.3;
   }
 
-  /* FINAL CTA */
+  /* ── FINAL CTA ── */
   .final-cta {
     width: 100%;
     background: var(--dark);
     padding: 5rem clamp(28px, 8vw, 140px);
     text-align: center;
   }
+
   .final-cta h2 {
-    font-family: var(--heading-font);
-    font-size: clamp(26px, 7vw, 36px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    color: #ffffff;
-    margin-bottom: 32px;
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .final-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 54px;
-    padding: 0 48px;
-    background: var(--accent);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 17px;
-    border-radius: 4px;
-    box-shadow: var(--shadow-md);
-    transition: background 0.2s, transform 0.15s;
-    margin-bottom: 20px;
-  }
-  .final-cta-btn:hover { background: #9e4a2a; transform: translateY(-1px); }
-  .final-cta-note {
-    font-size: 15px;
-    color: rgba(255,255,255,0.5);
-    margin-top: 8px;
+    color: #fff;
+    max-width: 620px;
+    margin: 0 auto 28px;
   }
 
-  /* FOOTER */
+  .cta-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .cta-note {
+    margin-top: 18px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+  }
+
+  /* ── FOOTER ── */
   footer {
     width: 100%;
     background: var(--bg-alt);
     padding: 20px clamp(28px, 8vw, 140px);
+    border-top: 1px solid rgba(44, 24, 16, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px;
-    border-top: 1px solid rgba(44,24,16,0.08);
   }
+
   .footer-left {
     font-size: 12px;
-    color: #9a7060;
+    color: var(--text);
+    opacity: 0.5;
     font-weight: 600;
   }
+
   .footer-right {
     font-size: 12px;
-    color: #9a7060;
+    color: var(--text);
+    opacity: 0.4;
   }
-  .footer-right a {
-    color: #9a7060;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-right a:hover { color: var(--accent); }
 
-  /* MOBILE */
+  .footer-right a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hours-layout {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hours-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
   @media (max-width: 480px) {
     .hero {
       min-height: 55vh;
+      max-height: none;
       padding: 0 20px 36px;
     }
-    .about { padding: 3rem 20px; }
-    .hours-contact { padding: 3rem 20px; }
-    .final-cta { padding: 3rem 20px; }
-    .info-bar { padding: 0 20px; }
-    footer { padding: 20px; }
-    .contact-cards {
-      grid-template-columns: 1fr;
-    }
-    .info-bar {
-      grid-template-columns: 1fr;
-    }
-    .info-item + .info-item {
-      border-left: none;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-left: 0;
-    }
-    .hero-cta { max-width: 100%; }
-    .final-cta-btn { width: 100%; padding: 0 20px; }
-    .about-meta { flex-direction: column; gap: 16px; }
-  }
 
-  @media (max-width: 640px) {
-    .contact-cards { grid-template-columns: 1fr; }
+    .about {
+      padding: 3rem 20px;
+    }
+
+    .hours-contact {
+      padding: 3rem 20px;
+    }
+
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    .info-cell {
+      padding: 16px 8px;
+    }
+
+    .info-cell .info-value {
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 16px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 </style>
 </head>
@@ -459,7 +529,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-name">Sweet Tea &amp; Biscuits</a>
+    <span class="nav-name">Sweet Tea &amp; Biscuits</span>
     <a href="tel:6623227322" class="nav-phone">(662) 322-7322</a>
   </div>
 </nav>
@@ -467,52 +537,54 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">Tupelo &middot; MS &middot; Southern Comfort Food</p>
+    <p class="hero-eyebrow">Tupelo &middot; MS &middot; Southern Kitchen</p>
     <h1>Sweet Tea &amp; Biscuits</h1>
-    <p class="hero-tagline">Home-cooked lunches that taste like somebody's mama made 'em — right here in Tupelo.</p>
-    <a href="tel:6623227322" class="hero-cta">Call (662) 322-7322</a>
+    <p class="hero-tagline">Real Southern cooking, made fresh every day in the heart of Tupelo.</p>
+    <a href="tel:6623227322" class="btn-primary">Call (662) 322-7322</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-item">
-    <span class="info-label">Phone</span>
+  <div class="info-cell">
+    <span class="label">Phone</span>
     <a href="tel:6623227322" class="info-value">(662) 322-7322</a>
   </div>
-  <div class="info-item">
-    <span class="info-label">Location</span>
+  <div class="info-cell">
+    <span class="label">Location</span>
     <span class="info-value">Tupelo, MS</span>
   </div>
-  <div class="info-item">
-    <span class="info-label">Google Rating</span>
-    <div class="stars info-value">
-      <i class="star-filled">&#9733;</i>
-      <span>4.8 out of 5</span>
+  <div class="info-cell">
+    <span class="label">Google Rating</span>
+    <div class="stars">
+      <span class="star-icon">&#9733;</span>
+      <span>4.8 / 5</span>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="about">
-  <p class="section-eyebrow">About</p>
-  <h2 class="reveal">When you're tired of eating at your desk and craving something that actually fills you up.</h2>
-  <div class="about-body">
-    <p>We opened Sweet Tea &amp; Biscuits because Tupelo deserved a lunch spot that doesn't feel like fast food or another chain. Everything we put on the table — the flaky biscuits, the slow-cooked vegetables, the sweet tea that's poured right — comes from recipes we actually care about. We're open Tuesday through Friday for the lunch rush, and we'd love to see you.</p>
-    <p>It's a small operation and we like it that way. You'll get a hot plate, a full glass, and a familiar face every time you walk through the door. That's what Southern hospitality's supposed to feel like, and we're not about to change it.</p>
-    <div class="about-divider"></div>
+  <p class="label about-eyebrow">About</p>
+  <h2 class="reveal">You're tired of fast food that doesn't taste like anything  -  and we don't blame you.</h2>
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>Around here, lunch isn't just a meal  -  it's a break worth taking. We opened Sweet Tea &amp; Biscuits because Tupelo deserved a place where the biscuits are made from scratch, the sweet tea's brewed strong, and the food on your plate actually tastes like somebody's grandmother made it. We keep it simple: fresh ingredients, honest portions, and no shortcuts.</p>
+      <div class="about-divider"></div>
+      <p>We're open Tuesday through Friday from 11 to 2, which means we're not trying to be everything to everyone  -  we're trying to be exactly right for folks who want a proper Southern midday meal. Come hungry. Leave satisfied. That's the whole idea.</p>
+    </div>
     <div class="about-meta">
       <div class="meta-item">
-        <span class="meta-label">Address</span>
-        <span class="meta-value">2025 McCullough Blvd, Tupelo, MS</span>
+        <span class="label">Address</span>
+        <span class="meta-value">2025 McCullough Blvd<br>Tupelo, MS 38801</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Google Rating</span>
-        <span class="meta-value">4.8 Stars</span>
+        <span class="label">Google Rating</span>
+        <span class="meta-value">4.8 out of 5 stars</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Ownership</span>
-        <span class="meta-value">Locally Owned</span>
+        <span class="label">Ownership</span>
+        <span class="meta-value">Locally owned &amp; operated</span>
       </div>
     </div>
   </div>
@@ -520,68 +592,72 @@
 
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
-  <p class="section-eyebrow">Hours &amp; Contact</p>
-  <h2 class="reveal">Find us.</h2>
-  <div class="rating-pill">
-    <i class="star-filled">&#9733;</i>
-    <span class="rating-pill-number">4.8</span>
-    <span class="rating-pill-label">on Google</span>
+  <p class="label hours-eyebrow">Hours &amp; Contact</p>
+  <div class="hours-header">
+    <h2 class="reveal">Find us.</h2>
+    <div class="rating-pill">
+      <span class="star-icon" style="color:#F5A623;">&#9733;</span>
+      4.8 on Google
+    </div>
   </div>
-  <table class="hours-table">
-    <tbody>
-      <tr>
-        <td class="day-name">Monday</td>
-        <td class="day-time closed">Closed</td>
-      </tr>
-      <tr>
-        <td class="day-name">Tuesday</td>
-        <td class="day-time">11:00 AM – 2:00 PM</td>
-      </tr>
-      <tr>
-        <td class="day-name">Wednesday</td>
-        <td class="day-time">11:00 AM – 2:00 PM</td>
-      </tr>
-      <tr>
-        <td class="day-name">Thursday</td>
-        <td class="day-time">11:00 AM – 2:00 PM</td>
-      </tr>
-      <tr>
-        <td class="day-name">Friday</td>
-        <td class="day-time">11:00 AM – 2:00 PM</td>
-      </tr>
-      <tr>
-        <td class="day-name">Saturday</td>
-        <td class="day-time closed">Closed</td>
-      </tr>
-      <tr>
-        <td class="day-name">Sunday</td>
-        <td class="day-time closed">Closed</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="contact-cards">
-    <a href="tel:6623227322" class="contact-card">
-      <span class="contact-card-label">Call Us</span>
-      <span class="contact-card-value">(662) 322-7322</span>
-    </a>
-    <a href="https://maps.google.com/?q=2025+McCullough+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card">
-      <span class="contact-card-label">Directions</span>
-      <span class="contact-card-value">2025 McCullough Blvd Tupelo, MS 38801</span>
-    </a>
+  <div class="hours-layout">
+    <table class="hours-table">
+      <tbody>
+        <tr class="closed">
+          <td class="day-name">Monday</td>
+          <td class="day-time">Closed</td>
+        </tr>
+        <tr>
+          <td class="day-name">Tuesday</td>
+          <td class="day-time">11:00 AM - 2:00 PM</td>
+        </tr>
+        <tr>
+          <td class="day-name">Wednesday</td>
+          <td class="day-time">11:00 AM - 2:00 PM</td>
+        </tr>
+        <tr>
+          <td class="day-name">Thursday</td>
+          <td class="day-time">11:00 AM - 2:00 PM</td>
+        </tr>
+        <tr>
+          <td class="day-name">Friday</td>
+          <td class="day-time">11:00 AM - 2:00 PM</td>
+        </tr>
+        <tr class="closed">
+          <td class="day-name">Saturday</td>
+          <td class="day-time">Closed</td>
+        </tr>
+        <tr class="closed">
+          <td class="day-name">Sunday</td>
+          <td class="day-time">Closed</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="contact-cards">
+      <a href="tel:6623227322" class="contact-card">
+        <span class="label">Call Ahead</span>
+        <span class="card-value">(662) 322-7322</span>
+      </a>
+      <a href="https://maps.google.com/?q=2025+McCullough+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card">
+        <span class="label">Get Directions</span>
+        <span class="card-value">2025 McCullough Blvd<br>Tupelo, MS 38801</span>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final-cta">
   <h2 class="reveal">Give us a call and we'll tell you what's on the plate today.</h2>
-  <br>
-  <a href="tel:6623227322" class="final-cta-btn">Call (662) 322-7322</a>
-  <p class="final-cta-note">No reservations needed — just come hungry, Tuesday through Friday.</p>
+  <div class="cta-wrap">
+    <a href="tel:6623227322" class="btn-primary">Call (662) 322-7322</a>
+    <p class="cta-note">No reservations needed  -  just come as you are, Tue-Fri from 11 to 2.</p>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-left">Sweet Tea &amp; Biscuits &mdash; Tupelo, MS</span>
+  <span class="footer-left">Sweet Tea &amp; Biscuits  -  Tupelo, MS</span>
   <span class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></span>
 </footer>
 
@@ -589,6 +665,7 @@
   (function() {
     var reveals = document.querySelectorAll('.reveal');
     if (!reveals.length) return;
+
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -597,7 +674,10 @@
         }
       });
     }, { threshold: 0.15 });
-    reveals.forEach(function(el) { observer.observe(el); });
+
+    reveals.forEach(function(el) {
+      observer.observe(el);
+    });
   })();
 </script>
 </body>
