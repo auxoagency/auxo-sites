@@ -3,602 +3,608 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kreecher's Creations | Tupelo, MS</title>
+<title>Kreecher's Creations</title>
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --accent: #0D9488;
-  --accent-dark: #0a7a70;
-  --bg: #FDFBF7;
-  --bg-alt: #F0F4F3;
-  --dark: #0F1F1E;
-  --text: #1A1A1A;
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.75;
-  color: var(--text);
-  background: var(--bg);
-}
-
-h1, h2, h3, .brand-name, .nav-brand {
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-}
-
-h1 {
-  font-size: clamp(36px, 9vw, 54px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-}
-
-h2 {
-  font-size: clamp(26px, 7vw, 36px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-a { text-decoration: none; color: inherit; }
-
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background: rgba(253, 251, 247, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-}
-
-.nav-inner {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 clamp(28px, 8vw, 140px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-brand {
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dark);
-  letter-spacing: -0.01em;
-}
-
-.nav-phone {
-  font-size: 14px;
-  color: #6b7280;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav-phone:hover { color: var(--accent); }
-
-/* HERO */
-.hero {
-  width: 100%;
-  min-height: 70vh;
-  max-height: 680px;
-  background-image:
-    linear-gradient(to bottom,
-      rgba(0,0,0,0.2) 0%,
-      rgba(0,0,0,0.15) 30%,
-      rgba(0,0,0,0.65) 70%,
-      rgba(0,0,0,0.93) 100%),
-    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 clamp(28px, 8vw, 140px) 48px;
-}
-
-.hero-content {
-  max-width: 600px;
-  width: 100%;
-}
-
-.hero-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 14px;
-}
-
-.hero h1 {
-  color: #ffffff;
-  margin-bottom: 16px;
-}
-
-.hero-tagline {
-  font-size: clamp(15px, 2.5vw, 18px);
-  color: rgba(255,255,255,0.8);
-  line-height: 1.5;
-  margin-bottom: 28px;
-  font-weight: 400;
-}
-
-.btn-hero {
-  display: block;
-  width: 100%;
-  max-width: 380px;
-  min-height: 54px;
-  background: var(--accent);
-  color: #ffffff;
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
-  line-height: 54px;
-  border-radius: 4px;
-  transition: background 0.2s, transform 0.15s;
-  box-shadow: var(--shadow-md);
-}
-
-.btn-hero:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-}
-
-/* INFO BAR */
-.info-bar {
-  width: 100%;
-  background: var(--dark);
-  border-top: 1px solid rgba(255,255,255,0.07);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  padding: 0 clamp(28px, 8vw, 140px);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.info-cell {
-  padding: 22px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  border-right: 1px solid rgba(255,255,255,0.07);
-}
-
-.info-cell:last-child { border-right: none; padding-left: 32px; }
-.info-cell:not(:first-child) { padding-left: 32px; }
-
-.info-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-}
-
-.info-value {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.info-value a {
-  color: #ffffff;
-  transition: color 0.2s;
-}
-
-.info-value a:hover { color: var(--accent); }
-
-.stars {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.star-icon {
-  color: #f59e0b;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-/* ABOUT */
-.about {
-  width: 100%;
-  background: var(--bg);
-  padding: 6rem clamp(28px, 8vw, 140px);
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 5rem;
-  align-items: start;
-}
-
-.about-left {}
-
-.about-eyebrow {
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-.about h2 {
-  color: var(--dark);
-  margin-bottom: 28px;
-}
-
-.about-divider {
-  width: 40px;
-  height: 1px;
-  background: var(--accent);
-  opacity: 0.4;
-  margin: 28px 0;
-}
-
-.about p {
-  color: var(--text);
-  margin-bottom: 16px;
-}
-
-.about p:last-of-type { margin-bottom: 0; }
-
-.about-right {
-  padding-top: 0.5rem;
-}
-
-.about-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.meta-item {
-  padding: 18px 22px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  background: #ffffff;
-}
-
-.meta-item:last-child { border-bottom: none; }
-
-.meta-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #9ca3af;
-}
-
-.meta-value {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--dark);
-  line-height: 1.4;
-}
-
-.rating-display {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.rating-num {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--dark);
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-}
-
-/* HOURS & CONTACT */
-.hours-section {
-  width: 100%;
-  background: var(--bg-alt);
-  padding: 5rem clamp(28px, 8vw, 140px);
-}
-
-.hours-header {
-  margin-bottom: 3rem;
-}
-
-.hours-eyebrow {
-  color: var(--accent);
-  margin-bottom: 14px;
-}
-
-.hours-header h2 {
-  color: var(--dark);
-  margin-bottom: 16px;
-}
-
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 100px;
-  padding: 6px 14px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dark);
-  box-shadow: var(--shadow-sm);
-}
-
-.rating-pill .star { color: #f59e0b; font-size: 14px; }
-
-.hours-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.hours-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.hours-table tr {
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.hours-table tr:last-child { border-bottom: none; }
-
-.hours-table td {
-  padding: 11px 0;
-  font-size: 15px;
-}
-
-.hours-table td:first-child {
-  font-weight: 700;
-  color: var(--dark);
-  width: 50%;
-}
-
-.hours-table td:last-child {
-  color: #6b7280;
-  text-align: right;
-}
-
-.hours-table tr.today td:first-child {
-  color: var(--accent);
-}
-
-.contact-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 80px;
-  padding: 20px 22px;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm);
-  gap: 4px;
-  transition: box-shadow 0.2s, transform 0.15s;
-}
-
-.contact-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.contact-card-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #9ca3af;
-}
-
-.contact-card-value {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1.35;
-}
-
-.hours-contact-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* FINAL CTA */
-.final-cta {
-  width: 100%;
-  background: var(--dark);
-  padding: 6rem clamp(28px, 8vw, 140px);
-  text-align: center;
-}
-
-.final-cta h2 {
-  color: #ffffff;
-  margin-bottom: 28px;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn-cta {
-  display: inline-block;
-  width: 100%;
-  max-width: 380px;
-  min-height: 54px;
-  background: var(--accent);
-  color: #ffffff;
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
-  line-height: 54px;
-  border-radius: 4px;
-  transition: background 0.2s, transform 0.15s;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 18px;
-}
-
-.btn-cta:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-}
-
-.cta-note {
-  font-size: 14px;
-  color: rgba(255,255,255,0.5);
-  display: block;
-}
-
-/* FOOTER */
-footer {
-  width: 100%;
-  background: var(--bg-alt);
-  padding: 20px clamp(28px, 8vw, 140px);
-  border-top: 1px solid rgba(0,0,0,0.07);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.footer-brand {
-  font-size: 12px;
-  color: #9ca3af;
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-  font-weight: 600;
-}
-
-.footer-credit {
-  font-size: 12px;
-  color: #9ca3af;
-}
-
-.footer-credit a {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    transition: none !important;
-    opacity: 1 !important;
-    transform: none !important;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #0D9488;
+    --accent-dark: #0a7870;
+    --bg: #FDFBF7;
+    --bg-alt: #F0F4F3;
+    --dark: #0F1F1E;
+    --text: #1A1A1A;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --heading-font: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
-}
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body-font);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--heading-font);
+  }
+
+  h1 {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(253, 251, 247, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(28px, 8vw, 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-name {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-phone {
+    font-size: 14px;
+    color: #6B7A79;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-phone:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.15) 30%,
+        rgba(0,0,0,0.65) 70%,
+        rgba(0,0,0,0.93) 100%),
+      url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(28px, 8vw, 140px) 48px;
+    position: relative;
+  }
+
+  .hero-content {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .hero-tagline {
+    color: rgba(255,255,255,0.8);
+    font-size: clamp(16px, 2.5vw, 19px);
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .btn-cta {
+    display: block;
+    width: 100%;
+    min-height: 54px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: var(--shadow-md);
+    line-height: 1.3;
+  }
+
+  .btn-cta:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-cta:active { transform: translateY(0); }
+
+  /* INFO BAR */
+  .info-bar {
+    width: 100%;
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .info-bar-item {
+    padding: 22px clamp(20px, 4vw, 48px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-right: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .info-bar-item:last-child { border-right: none; }
+
+  .info-bar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-bar-value {
+    color: #fff;
+    font-weight: 600;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.3;
+  }
+
+  .info-bar-value a {
+    color: #fff;
+    transition: color 0.2s;
+  }
+
+  .info-bar-value a:hover { color: var(--accent); }
+
+  .stars {
+    color: #F5C842;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  /* ABOUT */
   .about {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 4rem clamp(28px, 8vw, 140px);
+    width: 100%;
+    background: var(--bg);
+    padding: 6rem clamp(28px, 8vw, 140px);
   }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .about-left {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  .about h2 {
+    margin-bottom: 24px;
+    color: var(--dark);
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 16px;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .about-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.4;
+    margin: 28px 0;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .about-meta-item .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8A9E9C;
+  }
+
+  .about-meta-item .meta-value {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .about-right {
+    padding-top: 12px;
+  }
+
+  .about-accent-box {
+    background: var(--bg-alt);
+    border-radius: 12px;
+    padding: 36px 32px;
+    border-left: 3px solid var(--accent);
+    box-shadow: var(--shadow-md);
+  }
+
+  .about-accent-box p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--dark);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .about-accent-box cite {
+    display: block;
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* HOURS & CONTACT */
+  .hours {
+    width: 100%;
+    background: var(--bg-alt);
+    padding: 5rem clamp(28px, 8vw, 140px);
+  }
+
+  .hours-eyebrow {
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .hours h2 {
+    margin-bottom: 20px;
+    color: var(--dark);
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--dark);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .rating-pill .star-icon { color: #F5C842; font-size: 14px; }
 
   .hours-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .info-bar {
-    grid-template-columns: 1fr;
-    padding: 0 clamp(28px, 8vw, 140px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
   }
 
-  .info-cell {
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 16px 0;
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
   }
 
-  .info-cell:not(:first-child) { padding-left: 0; }
-  .info-cell:last-child { padding-left: 0; border-bottom: none; }
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 10px 4px;
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  .hours-table .day-name {
+    font-weight: 700;
+    color: var(--dark);
+    width: 48%;
+  }
+
+  .hours-table .day-time {
+    color: #5A7573;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .hours-table .closed {
+    color: #A0B0AE;
+    font-style: italic;
+  }
 
   .contact-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 55vh;
-    max-height: none;
-    padding: 0 20px 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
-  .about {
-    padding: 3rem 20px;
-  }
-
-  .hours-section {
-    padding: 3rem 20px;
-  }
-
-  .final-cta {
-    padding: 4rem 20px;
-  }
-
-  .btn-hero,
-  .btn-cta {
-    max-width: 100%;
-  }
-
-  footer {
+  .contact-card {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px;
+    justify-content: center;
+    gap: 6px;
+    min-height: 80px;
+    padding: 20px 22px;
+    background: var(--bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
   }
-}
+
+  .contact-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .contact-card .card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .contact-card .card-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+
+  .contact-card .card-sub {
+    font-size: 12px;
+    color: #7A9492;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    width: 100%;
+    background: var(--dark);
+    padding: 6rem clamp(28px, 8vw, 140px);
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    margin-bottom: 28px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-cta-white {
+    display: inline-block;
+    min-height: 54px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding: 14px 48px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 420px;
+    line-height: 1.4;
+  }
+
+  .btn-cta-white:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+
+  .final-cta-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    background: var(--bg-alt);
+    padding: 20px clamp(28px, 8vw, 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-left {
+    font-size: 12px;
+    color: #7A9492;
+    font-weight: 500;
+  }
+
+  .footer-left strong {
+    color: var(--dark);
+    font-weight: 700;
+  }
+
+  .footer-right {
+    font-size: 12px;
+    color: #7A9492;
+  }
+
+  .footer-right a {
+    color: var(--accent);
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  .footer-right a:hover { opacity: 0.75; }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .hours-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .contact-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar-item {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .info-bar-item:last-child { border-bottom: none; }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding-bottom: 36px;
+    }
+
+    .about {
+      padding: 3rem 20px;
+    }
+
+    .hours {
+      padding: 3rem 20px;
+    }
+
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    footer {
+      padding: 20px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      min-height: 72px;
+    }
+
+    .about-accent-box {
+      padding: 24px 20px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -606,8 +612,8 @@ footer {
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <span class="nav-brand">Kreecher's Creations</span>
-    <a href="tel:6623228714" class="nav-phone">(662) 322-8714</a>
+    <span class="nav-name">Kreecher's Creations</span>
+    <a class="nav-phone" href="tel:6623228714">(662) 322-8714</a>
   </div>
 </nav>
 
@@ -616,118 +622,116 @@ footer {
   <div class="hero-content">
     <p class="hero-eyebrow">Tupelo &middot; MS &middot; Custom Creations</p>
     <h1>Kreecher's Creations</h1>
-    <p class="hero-tagline">Handcrafted work made right here in Tupelo  -  built to last, built for you.</p>
-    <a href="tel:6623228714" class="btn-hero">Call (662) 322-8714</a>
+    <p class="hero-tagline">Handcrafted work you won't find anywhere else  -  made right here in Tupelo.</p>
+    <a class="btn-cta" href="tel:6623228714">Call (662) 322-8714</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-cell">
-    <span class="info-label">Phone</span>
-    <span class="info-value"><a href="tel:6623228714">(662) 322-8714</a></span>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Phone</span>
+    <span class="info-bar-value"><a href="tel:6623228714">(662) 322-8714</a></span>
   </div>
-  <div class="info-cell">
-    <span class="info-label">Location</span>
-    <span class="info-value">Tupelo, MS</span>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Location</span>
+    <span class="info-bar-value">Tupelo, MS</span>
   </div>
-  <div class="info-cell">
-    <span class="info-label">Google Rating</span>
-    <span class="info-value">
-      <span class="stars">
-        <span class="star-icon">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        4.8
-      </span>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Google Rating</span>
+    <span class="info-bar-value">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8
     </span>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="about">
-  <div class="about-left">
-    <p class="label about-eyebrow">About</p>
-    <h2 class="reveal">You deserve something made for you  -  not pulled off a shelf.</h2>
-    <div class="about-divider"></div>
-    <p>We started Kreecher's Creations because we got tired of seeing folks in Tupelo settle for generic, mass-produced stuff that doesn't hold up and doesn't mean anything. Everything we make here is done by hand, with real care put into each piece. You're not getting a template  -  you're getting something that's actually yours.</p>
-    <p>We've been serving the Tupelo community for years, and the relationships we've built mean more to us than any single job. When you call us, you're talking to the people doing the work  -  not a call center. We keep things simple: do good work, treat people right, and stand behind every creation that leaves our shop.</p>
-  </div>
-  <div class="about-right">
-    <div class="about-meta">
-      <div class="meta-item">
-        <span class="meta-label">Address</span>
-        <span class="meta-value">1931 McCullough Blvd<br>Tupelo, MS 38801</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Google Rating</span>
-        <div class="rating-display">
-          <span class="rating-num">4.8</span>
-          <span class="star-icon" style="color:#f59e0b; font-size:16px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  <div class="about-grid">
+    <div class="about-left">
+      <p class="label about-eyebrow">About</p>
+      <h2 class="reveal">When you need something made right, not just made fast.</h2>
+      <p>There's a lot of places in Tupelo that'll slap something together and call it done. That's not how we work at Kreecher's Creations. Every project we take on gets real attention  -  the kind that shows when you hold the finished piece in your hands. We've built our reputation one satisfied customer at a time, and we're not about to change that.</p>
+      <p>We're locally owned and operated right here in Tupelo, and we treat every job like it's going in our own home. Whether it's something small and personal or a bigger project with a deadline, we're the folks you call when it actually matters. Give us a ring  -  we're happy to talk through what you've got in mind.</p>
+      <div class="about-divider"></div>
+      <div class="about-meta">
+        <div class="about-meta-item">
+          <span class="meta-label">Address</span>
+          <span class="meta-value">1931 McCullough Blvd, Tupelo, MS 38801</span>
+        </div>
+        <div class="about-meta-item">
+          <span class="meta-label">Google Rating</span>
+          <span class="meta-value">4.8 out of 5 stars</span>
+        </div>
+        <div class="about-meta-item">
+          <span class="meta-label">Ownership</span>
+          <span class="meta-value">Locally owned &amp; operated</span>
         </div>
       </div>
-      <div class="meta-item">
-        <span class="meta-label">Ownership</span>
-        <span class="meta-value">Locally Owned &amp; Operated</span>
+    </div>
+    <div class="about-right">
+      <div class="about-accent-box">
+        <p>"We don't do cookie-cutter. If you've got an idea  -  even a half-formed one  -  bring it to us. That's honestly our favorite kind of project. We'll figure it out together and make sure what you walk away with is something you're genuinely proud of."</p>
+        <cite> -  Kreecher's Creations, Tupelo, MS</cite>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
-<section class="hours-section">
-  <div class="hours-header">
-    <p class="label hours-eyebrow">Hours &amp; Contact</p>
-    <h2 class="reveal">Find us.</h2>
-    <span class="rating-pill">
-      <span class="star">&#9733;</span>
-      4.8 on Google
-    </span>
+<section class="hours">
+  <p class="label hours-eyebrow">Hours &amp; Contact</p>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">
+    <span class="star-icon">&#9733;</span>
+    4.8 on Google  -  4.8-star rated
   </div>
-
   <div class="hours-grid">
     <div>
       <table class="hours-table">
         <tbody>
           <tr>
-            <td>Monday</td>
-            <td>Closed</td>
+            <td class="day-name">Monday</td>
+            <td class="day-time closed">Closed</td>
           </tr>
           <tr>
-            <td>Tuesday</td>
-            <td>8:00 AM - 4:00 PM</td>
+            <td class="day-name">Tuesday</td>
+            <td class="day-time">8:00 AM - 4:00 PM</td>
           </tr>
           <tr>
-            <td>Wednesday</td>
-            <td>8:00 AM - 4:00 PM</td>
+            <td class="day-name">Wednesday</td>
+            <td class="day-time">8:00 AM - 4:00 PM</td>
           </tr>
           <tr>
-            <td>Thursday</td>
-            <td>8:00 AM - 4:00 PM</td>
+            <td class="day-name">Thursday</td>
+            <td class="day-time">8:00 AM - 4:00 PM</td>
           </tr>
           <tr>
-            <td>Friday</td>
-            <td>8:00 AM - 5:00 PM</td>
+            <td class="day-name">Friday</td>
+            <td class="day-time">8:00 AM - 5:00 PM</td>
           </tr>
           <tr>
-            <td>Saturday</td>
-            <td>8:00 AM - 2:00 PM</td>
+            <td class="day-name">Saturday</td>
+            <td class="day-time">8:00 AM - 2:00 PM</td>
           </tr>
           <tr>
-            <td>Sunday</td>
-            <td>Closed</td>
+            <td class="day-name">Sunday</td>
+            <td class="day-time closed">Closed</td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <div class="hours-contact-wrap">
+    <div>
       <div class="contact-cards">
-        <a href="tel:6623228714" class="contact-card">
-          <span class="contact-card-label">Call Us</span>
-          <span class="contact-card-value">(662) 322-8714</span>
+        <a class="contact-card" href="tel:6623228714">
+          <span class="card-label">Call Us</span>
+          <span class="card-value">(662) 322-8714</span>
+          <span class="card-sub">Tap to call now</span>
         </a>
-        <a href="https://maps.google.com/?q=1931+McCullough+Blvd,+Tupelo,+MS+38801" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-card-label">Get Directions</span>
-          <span class="contact-card-value">1931 McCullough Blvd, Tupelo</span>
+        <a class="contact-card" href="https://maps.google.com/?q=1931+McCullough+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener">
+          <span class="card-label">Visit Us</span>
+          <span class="card-value">1931 McCullough Blvd</span>
+          <span class="card-sub">Tupelo, MS 38801 &rarr;</span>
         </a>
       </div>
     </div>
@@ -736,35 +740,40 @@ footer {
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <h2 class="reveal">Call today and let's figure out exactly what you need.</h2>
-  <a href="tel:6623228714" class="btn-cta">Call (662) 322-8714</a>
-  <span class="cta-note">No pressure, no runaround  -  just a straight conversation about what we can make for you.</span>
+  <h2 class="reveal">Call today and tell us what you're thinking  -  we'll take it from there.</h2>
+  <a class="btn-cta-white" href="tel:6623228714">Call (662) 322-8714</a>
+  <p class="final-cta-note">No sales pitch. Just a real conversation about what you need.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-brand">Kreecher's Creations  -  Tupelo, MS</span>
-  <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></span>
+  <div class="footer-left">
+    <strong>Kreecher's Creations</strong>  -  Tupelo, MS
+  </div>
+  <div class="footer-right">
+    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a>
+  </div>
 </footer>
 
 <script>
-(function () {
-  var reveals = document.querySelectorAll('.reveal');
-  if (!reveals.length) return;
+  (function() {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(function(el) {
+      observer.observe(el);
     });
-  }, { threshold: 0.15 });
-
-  reveals.forEach(function (el) {
-    observer.observe(el);
-  });
-})();
+  })();
 </script>
+
 </body>
 </html>
