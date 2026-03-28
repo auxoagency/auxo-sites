@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flowers Foods | Bakery Outlet Stores</title>
+<title>Flowers Foods | Bakery Outlet Stores - Tupelo, MS</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -27,7 +27,7 @@
     background: var(--bg);
   }
 
-  h1, h2, h3, .nav-brand {
+  h1, h2, h3, .brand-name {
     font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   }
 
@@ -52,28 +52,9 @@
     text-transform: uppercase;
   }
 
-  /* REVEAL ANIMATION */
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
+  a { color: inherit; text-decoration: none; }
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      transition: none !important;
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  }
-
-  /* ===== NAV ===== */
+  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
@@ -89,8 +70,8 @@
   }
 
   .nav-inner {
-    max-width: 1400px;
     width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 clamp(28px, 8vw, 140px);
     display: flex;
@@ -99,38 +80,43 @@
   }
 
   .nav-brand {
-    font-size: 14px;
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
     font-weight: 700;
+    font-size: 14px;
     color: var(--dark);
-    text-decoration: none;
-    white-space: nowrap;
+    letter-spacing: -0.01em;
   }
 
   .nav-phone {
     font-size: 14px;
-    color: #8a6050;
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
+    font-weight: 600;
+    color: #6B3E2A;
+    transition: color 0.2s;
   }
 
   .nav-phone:hover { color: var(--accent); }
 
-  /* ===== HERO ===== */
+  /* ── HERO ── */
   .hero {
     width: 100%;
     min-height: 70vh;
     max-height: 680px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.65) 70%, rgba(0,0,0,0.93) 100%), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80');
+    background-image:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.15) 30%,
+        rgba(0,0,0,0.65) 70%,
+        rgba(0,0,0,0.93) 100%),
+      url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
-    padding: 0 clamp(28px, 8vw, 140px) 48px;
   }
 
   .hero-content {
-    max-width: 640px;
+    padding: 0 clamp(28px, 8vw, 140px) 48px;
+    max-width: 680px;
   }
 
   .hero-eyebrow {
@@ -139,68 +125,64 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.6);
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    color: #fff;
     margin-bottom: 14px;
   }
 
+  .hero h1 {
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
   .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 19px);
     color: rgba(255,255,255,0.8);
-    font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 28px;
+    max-width: 520px;
   }
 
   .btn-cta {
-    display: block;
-    width: 100%;
-    max-width: 380px;
-    min-height: 54px;
+    display: inline-block;
     background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-size: 17px;
+    color: #ffffff;
+    font-size: 16px;
     font-weight: 700;
-    text-align: center;
-    padding: 14px 24px;
+    padding: 0 32px;
+    min-height: 54px;
+    line-height: 54px;
     border-radius: 4px;
     letter-spacing: 0.01em;
     box-shadow: var(--shadow-md);
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
   }
 
   .btn-cta:hover {
-    background: #9e4c2e;
+    background: #9e4a2a;
     transform: translateY(-1px);
   }
 
-  /* ===== INFO BAR ===== */
+  /* ── INFO BAR ── */
   .info-bar {
     width: 100%;
     background: var(--dark);
     border-top: 1px solid rgba(255,255,255,0.07);
     border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 24px clamp(28px, 8vw, 140px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
   }
 
-  .info-bar-item {
+  .info-cell {
+    padding: 22px clamp(20px, 4vw, 60px);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
+    border-right: 1px solid rgba(255,255,255,0.07);
   }
 
-  .info-bar-item + .info-bar-item {
-    border-left: 1px solid rgba(255,255,255,0.07);
-    padding-left: 20px;
-  }
+  .info-cell:last-child { border-right: none; }
 
-  .info-bar-label {
+  .info-label {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -208,34 +190,29 @@
     color: rgba(255,255,255,0.4);
   }
 
-  .info-bar-value {
-    color: #fff;
+  .info-value {
+    font-size: clamp(14px, 2vw, 16px);
     font-weight: 600;
-    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.3;
   }
 
-  .info-bar-value a {
-    color: #fff;
-    text-decoration: none;
+  .info-value a {
+    color: #ffffff;
+    transition: color 0.2s;
   }
 
-  .info-bar-value a:hover { color: #e8c4b0; }
+  .info-value a:hover { color: #F5C49A; }
 
   .stars {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #fff;
-    font-weight: 600;
   }
 
-  .star-icons {
-    color: #f5a623;
-    font-size: 15px;
-    letter-spacing: 1px;
-  }
+  .star-icons { color: #F5A623; letter-spacing: 1px; }
 
-  /* ===== ABOUT ===== */
+  /* ── ABOUT ── */
   .about {
     width: 100%;
     background: var(--bg);
@@ -244,10 +221,12 @@
 
   .about-inner {
     display: grid;
-    grid-template-columns: 1fr 380px;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
   }
+
+  .about-left {}
 
   .about-eyebrow {
     color: var(--accent);
@@ -256,7 +235,7 @@
 
   .about h2 {
     color: var(--dark);
-    margin-bottom: 12px;
+    margin-bottom: 28px;
   }
 
   .about-divider {
@@ -272,87 +251,47 @@
     margin-bottom: 16px;
   }
 
-  .about-meta {
-    margin-top: 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  .about-right {
+    padding-top: 48px;
   }
 
-  .about-meta-item {
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .meta-item {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(44, 24, 16, 0.1);
   }
 
-  .about-meta-label {
+  .meta-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .meta-label {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
-  .about-meta-value {
+  .meta-value {
     font-size: 15px;
-    color: var(--text);
     font-weight: 500;
-  }
-
-  .about-sidebar {
-    background: var(--bg-alt);
-    border-radius: 2px;
-    padding: 36px 32px;
-    box-shadow: var(--shadow-md);
-    position: sticky;
-    top: 80px;
-  }
-
-  .about-sidebar-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    opacity: 0.7;
-    margin-bottom: 12px;
-  }
-
-  .about-sidebar h3 {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-size: 20px;
-    font-weight: 700;
     color: var(--dark);
-    margin-bottom: 16px;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
-  .about-sidebar p {
-    font-size: 15px;
-    color: var(--text);
-    line-height: 1.65;
-    margin-bottom: 24px;
-  }
-
-  .sidebar-cta {
-    display: block;
-    min-height: 52px;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    padding: 13px 20px;
-    border-radius: 4px;
-    transition: background 0.2s ease;
-  }
-
-  .sidebar-cta:hover { background: #9e4c2e; }
-
-  /* ===== HOURS & CONTACT ===== */
-  .hours-contact {
+  /* ── HOURS & CONTACT ── */
+  .hours {
     width: 100%;
     background: var(--bg-alt);
     padding: 5rem clamp(28px, 8vw, 140px);
@@ -360,19 +299,19 @@
 
   .hours-eyebrow {
     color: var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
-  .hours-contact h2 {
+  .hours h2 {
     color: var(--dark);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .rating-pill {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--bg);
+    background: #ffffff;
     border: 1px solid rgba(184, 92, 56, 0.2);
     border-radius: 100px;
     padding: 6px 16px;
@@ -380,14 +319,14 @@
     box-shadow: var(--shadow-sm);
   }
 
-  .rating-pill-star { color: #f5a623; font-size: 14px; }
-  .rating-pill-text { font-size: 14px; font-weight: 700; color: var(--dark); }
-  .rating-pill-sub { font-size: 12px; color: #8a6050; }
+  .rating-pill .star-icon { color: #F5A623; font-size: 15px; }
+  .rating-pill .rating-num { font-weight: 700; font-size: 15px; color: var(--dark); }
+  .rating-pill .rating-text { font-size: 13px; color: #7A5540; }
 
   .hours-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 60px;
     align-items: start;
   }
 
@@ -403,26 +342,26 @@
   .hours-table tr:last-child { border-bottom: none; }
 
   .hours-table td {
-    padding: 11px 0;
+    padding: 10px 0;
     font-size: 15px;
   }
 
   .hours-table .day-name {
     font-weight: 700;
     color: var(--dark);
-    width: 50%;
+    width: 120px;
   }
 
   .hours-table .day-time {
-    color: #7a5040;
+    color: #7A5540;
     text-align: right;
   }
 
-  .hours-table .closed { color: #b09080; font-style: italic; }
+  .hours-table .closed { color: #B08070; font-style: italic; }
 
   .contact-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
   }
 
@@ -431,13 +370,12 @@
     flex-direction: column;
     justify-content: center;
     min-height: 80px;
-    background: var(--bg);
-    border-radius: 4px;
-    padding: 20px 22px;
-    text-decoration: none;
+    padding: 20px 24px;
+    background: #ffffff;
+    border-radius: 6px;
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(184, 92, 56, 0.1);
-    transition: box-shadow 0.2s ease, transform 0.15s ease;
+    border-left: 3px solid var(--accent);
+    transition: box-shadow 0.2s, transform 0.15s;
   }
 
   .contact-card:hover {
@@ -451,12 +389,11 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    opacity: 0.7;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   .contact-card-value {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--dark);
     line-height: 1.3;
@@ -464,20 +401,20 @@
 
   .contact-card-sub {
     font-size: 13px;
-    color: #8a6050;
-    margin-top: 3px;
+    color: #7A5540;
+    margin-top: 2px;
   }
 
-  /* ===== FINAL CTA ===== */
+  /* ── FINAL CTA ── */
   .final-cta {
     width: 100%;
     background: var(--dark);
-    padding: 5rem clamp(28px, 8vw, 140px);
+    padding: 6rem clamp(28px, 8vw, 140px);
     text-align: center;
   }
 
   .final-cta h2 {
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 28px;
     max-width: 600px;
     margin-left: auto;
@@ -485,23 +422,25 @@
   }
 
   .final-cta .btn-cta {
-    margin: 0 auto 20px;
-    max-width: 420px;
+    font-size: 17px;
+    padding: 0 48px;
+    min-height: 56px;
+    line-height: 56px;
+    border-radius: 4px;
   }
 
   .final-cta-note {
-    font-size: 15px;
+    margin-top: 18px;
+    font-size: 14px;
     color: rgba(255,255,255,0.45);
-    max-width: 400px;
-    margin: 0 auto;
   }
 
-  /* ===== FOOTER ===== */
+  /* ── FOOTER ── */
   footer {
     width: 100%;
     background: var(--bg-alt);
-    padding: 20px clamp(28px, 8vw, 140px);
     border-top: 1px solid rgba(44, 24, 16, 0.1);
+    padding: 20px clamp(28px, 8vw, 140px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -509,86 +448,111 @@
     gap: 8px;
   }
 
-  .footer-left {
+  .footer-brand {
     font-size: 12px;
-    color: #8a6050;
-    font-weight: 500;
+    font-weight: 600;
+    color: #7A5540;
   }
 
-  .footer-right {
+  .footer-agency {
     font-size: 12px;
-    color: #a07060;
+    color: #B08070;
   }
 
-  .footer-right a {
+  .footer-agency a {
     color: var(--accent);
-    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
   }
 
-  .footer-right a:hover { text-decoration: underline; }
+  .footer-agency a:hover { opacity: 0.7; }
 
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px) {
+  /* ── REVEAL ANIMATION ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
     .about-inner {
       grid-template-columns: 1fr;
       gap: 40px;
     }
 
-    .about-sidebar {
-      position: static;
-    }
+    .about-right { padding-top: 0; }
 
     .hours-grid {
       grid-template-columns: 1fr;
       gap: 36px;
     }
-  }
-
-  @media (max-width: 600px) {
-    .contact-cards {
-      grid-template-columns: 1fr;
-    }
 
     .info-bar {
       grid-template-columns: 1fr;
-      gap: 18px;
     }
 
-    .info-bar-item + .info-bar-item {
-      border-left: none;
-      padding-left: 0;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 16px;
+    .info-cell {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 16px clamp(20px, 4vw, 60px);
     }
+
+    .info-cell:last-child { border-bottom: none; }
   }
 
   @media (max-width: 480px) {
     .hero {
       min-height: 55vh;
       max-height: none;
+    }
+
+    .hero-content {
       padding: 0 20px 36px;
     }
 
-    .about {
-      padding: 3rem 20px;
-    }
-
-    .hours-contact {
-      padding: 3rem 20px;
-    }
-
+    .about,
     .final-cta {
       padding: 3rem 20px;
     }
 
-    footer {
-      padding: 20px 20px;
-      flex-direction: column;
-      align-items: flex-start;
+    .hours {
+      padding: 3rem 20px;
     }
 
     .btn-cta {
-      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+
+    .final-cta .btn-cta {
+      display: block;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
     }
   }
 </style>
@@ -598,8 +562,8 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-brand">Tupelo Bakery Outlet Store</a>
-    <a href="tel:6628406600" class="nav-phone">(662) 840-6600</a>
+    <span class="nav-brand">Tupelo Bakery Outlet Store</span>
+    <a class="nav-phone" href="tel:6628406600">(662) 840-6600</a>
   </div>
 </nav>
 
@@ -607,28 +571,28 @@
 <section class="hero">
   <div class="hero-content">
     <p class="hero-eyebrow">Tupelo &middot; MS &middot; Bakery Outlet</p>
-    <h1>Bakery Outlet Stores</h1>
-    <p class="hero-tagline">Fresh-baked bread, snacks, and pastries at prices that actually make sense  -  straight from the source.</p>
-    <a href="tel:6628406600" class="btn-cta">Call (662) 840-6600</a>
+    <h1>Bakery Outlet&nbsp;Stores</h1>
+    <p class="hero-tagline">Freshly baked breads, cakes, and snacks at outlet prices  -  right here in Tupelo.</p>
+    <a class="btn-cta" href="tel:6628406600">Call (662) 840-6600</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-bar-item">
-    <span class="info-bar-label">Phone</span>
-    <span class="info-bar-value"><a href="tel:6628406600">(662) 840-6600</a></span>
+  <div class="info-cell">
+    <span class="info-label">Phone</span>
+    <span class="info-value"><a href="tel:6628406600">(662) 840-6600</a></span>
   </div>
-  <div class="info-bar-item">
-    <span class="info-bar-label">Location</span>
-    <span class="info-bar-value">Tupelo, MS</span>
+  <div class="info-cell">
+    <span class="info-label">Location</span>
+    <span class="info-value">Tupelo, MS</span>
   </div>
-  <div class="info-bar-item">
-    <span class="info-bar-label">Google Rating</span>
-    <span class="info-bar-value">
+  <div class="info-cell">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">
       <span class="stars">
-        <span class="star-icons">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-        4.3
+        <span class="star-icons">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        4.3 / 5
       </span>
     </span>
   </div>
@@ -637,45 +601,47 @@
 <!-- ABOUT -->
 <section class="about">
   <div class="about-inner">
-    <div class="about-main">
+    <div class="about-left">
       <p class="label about-eyebrow">About</p>
-      <h2 class="reveal">You shouldn't have to overpay for bread you're going to eat this week.</h2>
+      <h2 class="reveal">You shouldn't have to pay full price for the bread that's already on your table.</h2>
       <div class="about-divider"></div>
-      <p>We're Tupelo's go-to bakery outlet for Flowers Foods products  -  that means Nature's Own, Dave's Killer Bread, Tastykake, and a whole lot more, all sold at outlet prices because that's what an outlet's for. If you're stocking up for the week or just running in for a deal, we've got you covered right here on Cliff Gookin Blvd.</p>
-      <p>We know Tupelo folks work hard for their money, and we think that should stretch as far as possible at the grocery level. Our shelves change all the time depending on what's fresh out of the bakery, so it's always worth a stop in. Our hours are straightforward, we're easy to find, and the prices aren't something you're going to second-guess.</p>
+      <p>We're Tupelo's go-to spot for Flowers Foods bakery products at outlet prices. Whether you're stocking up on Nature's Own, Wonder, or Tastykake snacks, we've got more on the shelves than most folks expect  -  and we're swapping in fresh product all week long.</p>
+      <p>It's not a clearance bin situation. It's smart shopping. Families across northeast Mississippi have been coming through our doors on Cliff Gookin Blvd for years because they know the quality's there and the prices don't lie. Come see what we've got in today.</p>
+    </div>
+    <div class="about-right">
       <div class="about-meta">
-        <div class="about-meta-item">
-          <span class="about-meta-label">Address</span>
-          <span class="about-meta-value">1078 Cliff Gookin Blvd, Tupelo, MS 38801</span>
+        <div class="meta-item">
+          <span class="meta-label">Address</span>
+          <span class="meta-value">1078 Cliff Gookin Blvd<br>Tupelo, MS 38801</span>
         </div>
-        <div class="about-meta-item">
-          <span class="about-meta-label">Google Rating</span>
-          <span class="about-meta-value">4.3 out of 5 stars</span>
+        <div class="meta-item">
+          <span class="meta-label">Google Rating</span>
+          <span class="meta-value">4.3 out of 5 stars</span>
         </div>
-        <div class="about-meta-item">
-          <span class="about-meta-label">Ownership</span>
-          <span class="about-meta-value">Flowers Foods Authorized Outlet</span>
+        <div class="meta-item">
+          <span class="meta-label">Brand</span>
+          <span class="meta-value">Flowers Foods Bakery Outlet</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Open</span>
+          <span class="meta-value">Mon - Fri 9am to 5pm<br>Saturday 9am to 4pm</span>
         </div>
       </div>
-    </div>
-    <div class="about-sidebar">
-      <p class="about-sidebar-label">Come Visit Us</p>
-      <h3>Stop by and see what we've got on the shelf today.</h3>
-      <p>Stock changes regularly. Call ahead if you're looking for something specific  -  we're happy to help point you in the right direction.</p>
-      <a href="tel:6628406600" class="sidebar-cta">Call (662) 840-6600</a>
     </div>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
-<section class="hours-contact">
+<section class="hours">
   <p class="label hours-eyebrow">Hours &amp; Contact</p>
   <h2 class="reveal">Find us.</h2>
+
   <div class="rating-pill">
-    <span class="rating-pill-star">&#9733;</span>
-    <span class="rating-pill-text">4.3</span>
-    <span class="rating-pill-sub">Google Rating</span>
+    <span class="star-icon">&#9733;</span>
+    <span class="rating-num">4.3</span>
+    <span class="rating-text">Google Rating</span>
   </div>
+
   <div class="hours-grid">
     <div>
       <table class="hours-table">
@@ -711,16 +677,17 @@
         </tbody>
       </table>
     </div>
+
     <div class="contact-cards">
-      <a href="tel:6628406600" class="contact-card">
-        <span class="contact-card-label">Phone</span>
+      <a class="contact-card" href="tel:6628406600">
+        <span class="contact-card-label">Call Us</span>
         <span class="contact-card-value">(662) 840-6600</span>
-        <span class="contact-card-sub">Tap to call us</span>
+        <span class="contact-card-sub">Tap to call now</span>
       </a>
-      <a href="https://maps.google.com/?q=1078+Cliff+Gookin+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card">
-        <span class="contact-card-label">Address</span>
+      <a class="contact-card" href="https://maps.google.com/?q=1078+Cliff+Gookin+Blvd,+Tupelo,+MS+38801" target="_blank" rel="noopener">
+        <span class="contact-card-label">Visit Us</span>
         <span class="contact-card-value">1078 Cliff Gookin Blvd</span>
-        <span class="contact-card-sub">Tupelo, MS 38801 &rarr;</span>
+        <span class="contact-card-sub">Tupelo, MS 38801  -  Get Directions</span>
       </a>
     </div>
   </div>
@@ -728,24 +695,24 @@
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <h2 class="reveal">Call before you stop in  -  we'll tell you exactly what's stocked and ready.</h2>
-  <a href="tel:6628406600" class="btn-cta">Call (662) 840-6600</a>
-  <p class="final-cta-note">No pressure, no runaround. Just real answers about what's on the shelf today.</p>
+  <h2 class="reveal">Give us a call and we'll tell you what's fresh on the shelves today.</h2>
+  <a class="btn-cta" href="tel:6628406600">Call (662) 840-6600</a>
+  <p class="final-cta-note">No membership, no fuss  -  just good bakery products at prices that make sense.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">Tupelo Bakery Outlet Store  -  Tupelo, MS</div>
-  <div class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></div>
+  <span class="footer-brand">Tupelo Bakery Outlet Store  -  Tupelo, MS</span>
+  <span class="footer-agency">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></span>
 </footer>
 
 <script>
-  (function() {
+  (function () {
     var reveals = document.querySelectorAll('.reveal');
     if (!reveals.length) return;
 
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
@@ -753,10 +720,11 @@
       });
     }, { threshold: 0.15 });
 
-    reveals.forEach(function(el) {
+    reveals.forEach(function (el) {
       observer.observe(el);
     });
   })();
 </script>
+
 </body>
 </html>
