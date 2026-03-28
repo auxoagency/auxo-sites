@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strange Brew Coffeehouse Tupelo</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #B85C38;
+    --bg: #FFFAF5;
+    --bg-alt: #F5EDE0;
+    --dark: #1C1007;
+    --text: #2C1810;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  h1, h2, h3, .nav-brand {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  }
+
+  h1 {
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 250, 245, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(28px, 8vw, 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-phone {
+    font-size: 14px;
+    color: #7A5040;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .nav-phone:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.15) 30%,
+        rgba(0,0,0,0.65) 70%,
+        rgba(0,0,0,0.93) 100%),
+      url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(28px, 8vw, 140px) 48px;
+  }
+
+  .hero-content {
+    max-width: 620px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .hero-tagline {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 54px;
+    padding: 0 32px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    line-height: 54px;
+    letter-spacing: 0.01em;
+    box-shadow: var(--shadow-md);
+    transition: background 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #9E4A2A;
+    transform: translateY(-1px);
+  }
+
+  .hero .btn-primary {
+    width: 100%;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    width: 100%;
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 0 clamp(28px, 8vw, 140px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .info-bar-item {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-bar-item:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.07);
+    padding-right: 32px;
+    margin-right: 0;
+  }
+
+  .info-bar-item:not(:first-child) {
+    padding-left: 32px;
+  }
+
+  .info-bar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-bar-value {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .info-bar-value:hover { color: var(--accent); }
+
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .star-icon {
+    color: #F5C842;
+    font-size: 14px;
+  }
+
+  /* ABOUT */
+  .about {
+    width: 100%;
+    background: var(--bg);
+    padding: 6rem clamp(28px, 8vw, 140px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .about-left {}
+  .about-right {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  .about h2 {
+    color: var(--dark);
+    margin-bottom: 0;
+  }
+
+  .about-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.4;
+    margin: 28px 0;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 18px;
+  }
+
+  .about p:last-of-type { margin-bottom: 0; }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(44,24,16,0.1);
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.7;
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  /* HOURS & CONTACT */
+  .hours-contact {
+    width: 100%;
+    background: var(--bg-alt);
+    padding: 5rem clamp(28px, 8vw, 140px);
+  }
+
+  .hours-contact-eyebrow {
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .hours-contact h2 {
+    color: var(--dark);
+    margin-bottom: 32px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg);
+    border: 1px solid rgba(184,92,56,0.2);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .rating-pill .star-icon { font-size: 13px; }
+  .rating-pill-text { font-size: 14px; font-weight: 700; color: var(--dark); }
+  .rating-pill-sub { font-size: 12px; color: #7A5040; }
+
+  .hours-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(44,24,16,0.08);
+  }
+
+  .hours-table tr:first-child { border-top: 1px solid rgba(44,24,16,0.08); }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .hours-table .day-name {
+    font-weight: 700;
+    color: var(--dark);
+    width: 50%;
+  }
+
+  .hours-table .day-time {
+    color: #7A5040;
+    text-align: right;
+  }
+
+  .hours-table .closed { color: #aaa; font-style: italic; }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 8px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg);
+    border: 1px solid rgba(44,24,16,0.08);
+    border-radius: 6px;
+    padding: 20px 24px;
+    min-height: 80px;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .contact-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .contact-card-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(184,92,56,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-card-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7A5040;
+    margin-bottom: 3px;
+  }
+
+  .contact-card-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    width: 100%;
+    background: var(--dark);
+    padding: 5rem clamp(28px, 8vw, 140px);
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+
+  .final-cta .btn-primary {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .final-cta-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    background: var(--bg-alt);
+    border-top: 1px solid rgba(44,24,16,0.1);
+    padding: 20px clamp(28px, 8vw, 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-left {
+    font-size: 12px;
+    color: #7A5040;
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    font-weight: 700;
+  }
+
+  .footer-right {
+    font-size: 12px;
+    color: #aaa;
+  }
+
+  .footer-right a {
+    color: #aaa;
+    text-decoration: none;
+  }
+
+  .footer-right a:hover { color: var(--accent); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 4rem clamp(28px, 8vw, 140px);
+    }
+
+    .hours-contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar-item:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding-right: 0;
+    }
+
+    .info-bar-item:not(:first-child) {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding: 0 20px 36px;
+    }
+
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .about { padding-top: 3rem; padding-bottom: 3rem; }
+    .hours-contact { padding-top: 3rem; padding-bottom: 3rem; }
+    .final-cta { padding-top: 3rem; padding-bottom: 3rem; }
+
+    .info-bar { padding-left: 20px; padding-right: 20px; }
+
+    footer { padding-left: 20px; padding-right: 20px; }
+
+    .btn-primary { font-size: 15px; }
+
+    .contact-cards { gap: 12px; }
+
+    .nav-inner { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Strange Brew Coffeehouse</a>
+    <a href="tel:6623500215" class="nav-phone">(662) 350-0215</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tupelo &middot; MS &middot; Coffeehouse</p>
+    <h1>Strange Brew Coffeehouse</h1>
+    <p class="hero-tagline">Tupelo's favorite coffee shop  -  where great coffee and good company go hand in hand.</p>
+    <a href="tel:6623500215" class="btn-primary">Call (662) 350-0215</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-item">
+    <span class="info-bar-label">Phone</span>
+    <a href="tel:6623500215" class="info-bar-value">(662) 350-0215</a>
+  </div>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Location</span>
+    <span class="info-bar-value">Tupelo, MS</span>
+  </div>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Google Rating</span>
+    <span class="stars">
+      <span class="star-icon">&#9733;</span>
+      4.5 out of 5
+    </span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <p class="label about-eyebrow">About</p>
+    <h2 class="reveal">Good coffee shouldn't be hard to find in a town like Tupelo.</h2>
+    <div class="about-divider"></div>
+  </div>
+  <div class="about-right">
+    <p>We've been pouring cups on North Gloster for a good while now, and we're not planning on stopping anytime soon. Strange Brew isn't trying to be some slick national chain  -  we're a Tupelo shop through and through. We know most of our regulars by name and by order, and that's exactly how we like it.</p>
+    <p>Whether you're ducking in before work, settling in with your laptop for a few hours, or just need somewhere to catch up with a friend, we've got you covered. Our coffee's made with care, our drinks are made to order, and our staff actually means it when they say "welcome in."</p>
+    <div class="about-meta">
+      <div class="meta-item">
+        <span class="meta-label">Address</span>
+        <span class="meta-value">220 N Gloster St, Tupelo, MS 38804</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Google Rating</span>
+        <span class="meta-value">4.5 stars</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Ownership</span>
+        <span class="meta-value">Locally owned &amp; operated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <p class="label hours-contact-eyebrow">Hours &amp; Contact</p>
+  <h2 class="reveal">Find us.</h2>
+
+  <div class="rating-pill">
+    <span class="star-icon">&#9733;</span>
+    <span class="rating-pill-text">4.5</span>
+    <span class="rating-pill-sub">on Google</span>
+  </div>
+
+  <div class="hours-contact-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <td class="day-name">Monday</td>
+            <td class="day-time">7:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-name">Tuesday</td>
+            <td class="day-time">7:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-name">Wednesday</td>
+            <td class="day-time">7:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-name">Thursday</td>
+            <td class="day-time">7:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-name">Friday</td>
+            <td class="day-time">7:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-name">Saturday</td>
+            <td class="day-time">8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-name">Sunday</td>
+            <td class="day-time closed">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="contact-cards">
+      <a href="tel:6623500215" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Call Us</div>
+          <div class="contact-card-value">(662) 350-0215</div>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=220+N+Gloster+St,+Tupelo,+MS+38804" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Get Directions</div>
+          <div class="contact-card-value">220 N Gloster St<br>Tupelo, MS 38804</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Ready for a cup worth driving across town for?</h2>
+  <a href="tel:6623500215" class="btn-primary">Call (662) 350-0215</a>
+  <p class="final-cta-note">No rush  -  swing by whenever you're ready. We'll be here.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Strange Brew Coffeehouse  -  Tupelo, MS</div>
+  <div class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency &middot; auxoagency.co</a></div>
+</footer>
+
+<script>
+  (function() {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
+
+</body>
+</html>
