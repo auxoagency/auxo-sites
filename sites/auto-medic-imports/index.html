@@ -5,648 +5,718 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home - Auto Medic - auto repair shop - Tupelo</title>
 <style>
-:root {
-  --accent: #C41E1E;
-  --accent-light: rgba(196,30,30,0.08);
-  --bg: #F4F4F1;
-  --bg-alt: #E8E7E3;
-  --dark: #0C0C0C;
-  --text: #1A1A1A;
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
-  --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--body-font);
-  font-size: 17px;
-  line-height: 1.75;
-  color: var(--text);
-  background: var(--bg);
-}
-
-a { color: inherit; text-decoration: none; }
-
-img { display: block; max-width: 100%; }
-
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 60px;
-  background: rgba(244,244,241,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-}
-
-.nav-name {
-  font-family: var(--heading-font);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--dark);
-}
-
-.nav-phone {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent);
-  position: relative;
-  padding-bottom: 1px;
-}
-
-.nav-phone::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.2s ease;
-}
-
-.nav-phone:hover::after { width: 100%; }
-
-/* HERO */
-.hero {
-  width: 100%;
-  min-height: 70vh;
-  max-height: 680px;
-  background-image:
-    linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.60) 60%, rgba(0,0,0,0.92) 100%),
-    url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 56px 64px;
-  border-left: 6px solid var(--accent);
-  position: relative;
-}
-
-.hero-content {
-  max-width: 680px;
-}
-
-.hero-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 14px;
-}
-
-.hero h1 {
-  font-family: var(--heading-font);
-  font-size: clamp(38px, 9vw, 56px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 0.93;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.hero-tagline {
-  font-size: 19px;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 36px;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 36px;
-  background: var(--accent);
-  color: #ffffff;
-  font-family: var(--heading-font);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
-  box-shadow: var(--shadow-md);
-}
-
-.btn-primary:hover {
-  background: #a21818;
-  transform: scale(1.01);
-}
-
-/* INFO BAR */
-.info-bar {
-  background: var(--dark);
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr 1px 1fr;
-  align-items: center;
-  padding: 28px 56px;
-  gap: 0;
-}
-
-.info-divider {
-  background: rgba(255,255,255,0.1);
-  align-self: stretch;
-}
-
-.info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 0 20px;
-}
-
-.info-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-}
-
-.info-value {
-  font-size: 17px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* ABOUT */
-.about {
-  padding: 96px 56px 80px;
-  background: var(--bg);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.about-left {}
-
-.eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
-  display: block;
-}
-
-.accent-rule {
-  width: 40px;
-  height: 1px;
-  background: var(--accent);
-  margin: 12px 0 28px;
-}
-
-.about h2 {
-  font-family: var(--heading-font);
-  font-size: clamp(26px, 7vw, 38px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  color: var(--dark);
-  margin-bottom: 24px;
-}
-
-.about p {
-  font-size: 17px;
-  line-height: 1.75;
-  color: var(--text);
-  margin-bottom: 16px;
-}
-
-.about-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 12px;
-}
-
-.meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.meta-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.meta-value {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--dark);
-}
-
-.meta-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(0,0,0,0.08);
-}
-
-/* HOURS & CONTACT */
-.hours-contact {
-  background: var(--bg-alt);
-  padding: 80px 56px;
-}
-
-.hours-contact-header {
-  margin-bottom: 48px;
-}
-
-.hours-contact h2 {
-  font-family: var(--heading-font);
-  font-size: clamp(26px, 7vw, 38px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  color: var(--dark);
-  margin-bottom: 16px;
-}
-
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--accent-light);
-  border: 1px solid rgba(196,30,30,0.2);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.hours-contact-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: start;
-}
-
-.hours-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.hours-table tr {
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-
-.hours-table tr:last-child {
-  border-bottom: none;
-}
-
-.hours-table td {
-  padding: 10px 0;
-  font-size: 15px;
-}
-
-.hours-table td:first-child {
-  font-weight: 700;
-  color: var(--dark);
-}
-
-.hours-table td:last-child {
-  text-align: right;
-  color: rgba(26,26,26,0.55);
-}
-
-.hours-table tr.closed-row td {
-  color: rgba(26,26,26,0.35);
-}
-
-.hours-table tr.closed-row td:first-child {
-  color: rgba(26,26,26,0.35);
-  font-weight: 600;
-}
-
-.contact-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-card {
-  background: var(--bg);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 2px 2px 0;
-  padding: 20px 24px;
-  min-height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.contact-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.contact-card-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 4px;
-}
-
-.contact-card-value {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--dark);
-}
-
-.contact-card-sub {
-  font-size: 13px;
-  color: rgba(26,26,26,0.55);
-  margin-top: 2px;
-}
-
-/* FINAL CTA */
-.final-cta {
-  background: var(--dark);
-  padding: 64px 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  border-left: 6px solid var(--accent);
-}
-
-.final-cta h2 {
-  font-family: var(--heading-font);
-  font-size: clamp(26px, 7vw, 38px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  color: #ffffff;
-  max-width: 640px;
-}
-
-.final-cta p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.5);
-  max-width: 480px;
-}
-
-/* FOOTER */
-footer {
-  background: var(--bg-alt);
-  border-top: 1px solid rgba(0,0,0,0.08);
-  padding: 28px 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.footer-name {
-  font-family: var(--heading-font);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--dark);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.footer-location {
-  font-size: 12px;
-  color: rgba(26,26,26,0.45);
-}
-
-.footer-right {
-  font-size: 12px;
-  color: rgba(26,26,26,0.4);
-}
-
-.footer-right a {
-  color: var(--accent);
-  transition: color 0.2s ease;
-}
-
-.footer-right a:hover { color: #a21818; }
-
-/* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-name { font-size: 12px; }
-
+  :root {
+    --accent: #C41E1E;
+    --accent-light: rgba(196,30,30,0.08);
+    --bg: #F4F4F1;
+    --bg-alt: #E8E7E3;
+    --dark: #0C0C0C;
+    --text: #1A1A1A;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--body-font);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+  }
+
+  h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(244, 244, 241, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .nav-brand {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dark);
+  }
+
+  .nav-phone {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-phone:hover::after {
+    width: 100%;
+  }
+
+  /* ── HERO ── */
   .hero {
-    min-height: 55vh;
-    padding: 0 24px 48px;
-    border-left: 4px solid var(--accent);
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    align-items: end;
+    padding: 0 60px 72px;
+    border-left: 6px solid var(--accent);
+    position: relative;
   }
 
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  .hero-tagline {
+    font-size: 19px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 36px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 440px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 36px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-primary:hover {
+    background: #a01818;
+    transform: scale(1.01);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ── INFO BAR ── */
   .info-bar {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 32px 24px;
+    background: var(--dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .info-divider { display: none; }
+  .info-cell {
+    padding: 28px 40px;
+    border-right: 1px solid rgba(255,255,255,0.07);
+  }
 
+  .info-cell:last-child {
+    border-right: none;
+  }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+  }
+
+  .info-value {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: var(--heading-font);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── ABOUT ── */
   .about {
-    grid-template-columns: 1fr;
-    padding: 3rem 20px;
-    gap: 40px;
+    background: var(--bg);
+    padding: 96px 60px 80px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 80px;
+    align-items: start;
   }
 
+  .about-main {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 16px 0 28px;
+  }
+
+  .about h2 {
+    color: var(--dark);
+    margin-bottom: 28px;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 20px;
+    max-width: 540px;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .meta-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .meta-item:first-child {
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .meta-item-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(26,26,26,0.45);
+    margin-bottom: 5px;
+  }
+
+  .meta-item-value {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+
+  .rating-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .rating-stars {
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* ── HOURS & CONTACT ── */
   .hours-contact {
-    padding: 3rem 20px;
+    background: var(--bg-alt);
+    padding: 80px 60px;
+    border-top: 3px solid rgba(0,0,0,0.06);
   }
 
-  .hours-contact-body {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .hours-contact-eyebrow {
+    color: var(--accent);
+    margin-bottom: 12px;
   }
 
+  .hours-contact h2 {
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-light);
+    border: 1px solid rgba(196,30,30,0.15);
+    border-radius: 2px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 48px;
+  }
+
+  .hours-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .hours-table td {
+    padding: 11px 0;
+    font-size: 15px;
+  }
+
+  .hours-table td:first-child {
+    font-weight: 700;
+    color: var(--dark);
+    width: 50%;
+  }
+
+  .hours-table td:last-child {
+    color: rgba(26,26,26,0.55);
+    text-align: right;
+  }
+
+  .hours-table .closed {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    padding: 22px 24px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(26,26,26,0.4);
+    margin-bottom: 6px;
+  }
+
+  .contact-card-value {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--dark);
+    letter-spacing: 0.02em;
+  }
+
+  .contact-card-sub {
+    font-size: 13px;
+    color: rgba(26,26,26,0.5);
+    margin-top: 3px;
+  }
+
+  .contact-card a {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+    display: inline-block;
+    transition: color 0.2s ease;
+  }
+
+  .contact-card a:hover {
+    color: var(--dark);
+  }
+
+  /* ── FINAL CTA ── */
   .final-cta {
-    padding: 3rem 20px;
-    border-left: 4px solid var(--accent);
-  }
-
-  footer {
-    padding: 24px 20px;
+    background: var(--dark);
+    padding: 72px 60px;
+    border-left: 6px solid var(--accent);
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
   }
-}
 
-@media (max-width: 480px) {
-  .hero { min-height: 55vh; }
-  .btn-primary { min-height: 48px; width: 100%; }
-  .contact-card { min-height: 48px; }
-}
+  .final-cta h2 {
+    color: #fff;
+    max-width: 600px;
+    margin-bottom: 32px;
+  }
+
+  .final-cta p {
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg-alt);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 28px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    font-family: var(--heading-font);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-brand span {
+    display: block;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(26,26,26,0.45);
+    letter-spacing: 0.01em;
+    margin-top: 2px;
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: rgba(26,26,26,0.4);
+  }
+
+  .footer-credit a {
+    color: rgba(26,26,26,0.55);
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .footer-credit a:hover {
+    color: var(--accent);
+  }
+
+  /* ── REVEAL ANIMATION ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 20px;
+    }
+
+    .hero {
+      padding: 0 24px 56px;
+      border-left-width: 4px;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+    }
+
+    .info-cell {
+      padding: 18px 24px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .about {
+      grid-template-columns: 1fr;
+      padding: 64px 24px;
+      gap: 48px;
+    }
+
+    .hours-contact {
+      padding: 64px 24px;
+    }
+
+    .hours-contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .final-cta {
+      padding: 56px 24px;
+    }
+
+    footer {
+      padding: 24px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding: 0 20px 48px;
+    }
+
+    .nav-brand {
+      font-size: 12px;
+    }
+
+    .nav-phone {
+      font-size: 12px;
+    }
+
+    .about {
+      padding: 48px 20px;
+    }
+
+    .hours-contact {
+      padding: 48px 20px;
+    }
+
+    .final-cta {
+      padding: 48px 20px;
+    }
+
+    .btn-primary {
+      min-height: 48px;
+      padding: 0 28px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 320px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <span class="nav-name">Auto Medic Imports</span>
+  <div class="nav-brand">Auto Medic Imports</div>
   <a href="tel:6628449379" class="nav-phone">(662) 844-9379</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">Tupelo, MS  -  Auto Repair Shop</p>
+    <p class="hero-eyebrow">Tupelo, MS &nbsp;·&nbsp; Auto Repair Shop</p>
     <h1>Auto Medic<br>Imports</h1>
-    <p class="hero-tagline">Foreign and domestic repairs done right the first time - right here in Tupelo.</p>
+    <p class="hero-tagline">Foreign car diagnostics and repair done right the first time  -  right here in Tupelo.</p>
     <a href="tel:6628449379" class="btn-primary">Call (662) 844-9379</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-item">
-    <span class="info-label">Phone</span>
-    <span class="info-value">(662) 844-9379</span>
+  <div class="info-cell">
+    <div class="info-label">Phone</div>
+    <div class="info-value">(662) 844-9379</div>
   </div>
-  <div class="info-divider"></div>
-  <div class="info-item">
-    <span class="info-label">Location</span>
-    <span class="info-value">Tupelo, MS</span>
+  <div class="info-cell">
+    <div class="info-label">Location</div>
+    <div class="info-value">Tupelo, MS</div>
   </div>
-  <div class="info-divider"></div>
-  <div class="info-item">
-    <span class="info-label">Google Rating</span>
-    <span class="info-value">4.8 / 5.0</span>
+  <div class="info-cell">
+    <div class="info-label">Google Rating</div>
+    <div class="info-value">4.8 / 5.0 ★</div>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="about">
-  <div class="about-left">
-    <span class="eyebrow">About</span>
+  <div class="about-main">
+    <p class="label about-eyebrow">About</p>
     <div class="accent-rule"></div>
-    <h2 class="reveal">Your car shouldn't sit in a shop for a week.</h2>
-    <p>We get it - when your car's down, so is everything else. At Auto Medic Imports, we've been helping folks in Tupelo and the surrounding area get back on the road without the runaround. We work on imports and domestics, and we'll tell you straight what it needs and what it doesn't.</p>
-    <p>We're a small shop, which means you're actually talking to the people turning the wrenches. No surprises on the bill, no delays waiting for someone to return a call. Just honest work done by people who know what they're doing.</p>
+    <h2 class="reveal">Your import car needs someone who actually knows what they're doing.</h2>
+    <p>We've been fixing foreign vehicles in Tupelo for years  -  Hondas, Toyotas, BMWs, Audis, you name it. A lot of shops around here just aren't set up for it. We are. From a check-engine light that won't quit to a full engine job, we diagnose it fast and fix it right.</p>
+    <p>We keep it straightforward: we'll tell you exactly what's wrong, what it'll cost, and we won't sell you something you don't need. That's how we've earned a 4.8 rating from real Tupelo customers  -  not by being flashy, but by being straight with people.</p>
   </div>
   <div class="about-meta">
     <div class="meta-item">
-      <span class="meta-label">Address</span>
-      <span class="meta-value">3552 Jeff Holman Blvd<br>Tupelo, MS 38801</span>
+      <div class="meta-item-label">Address</div>
+      <div class="meta-item-value">3552 Jeff Holman Blvd<br>Tupelo, MS 38801</div>
     </div>
-    <div class="meta-divider"></div>
     <div class="meta-item">
-      <span class="meta-label">Google Rating</span>
-      <span class="meta-value">4.8 out of 5.0 stars</span>
+      <div class="meta-item-label">Google Rating</div>
+      <div class="meta-item-value">
+        <div class="rating-display">
+          <span class="rating-stars">★★★★★</span>
+          <span>4.8 Stars</span>
+        </div>
+      </div>
     </div>
-    <div class="meta-divider"></div>
     <div class="meta-item">
-      <span class="meta-label">Ownership</span>
-      <span class="meta-value">Locally owned &amp; operated</span>
+      <div class="meta-item-label">Ownership</div>
+      <div class="meta-item-value">Locally Owned &amp; Operated</div>
     </div>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
-  <div class="hours-contact-header">
-    <span class="eyebrow">Hours &amp; Contact</span>
-    <div class="accent-rule"></div>
-    <h2 class="reveal">Find us.</h2>
-    <span class="rating-pill">&#9733; 4.8 on Google</span>
-  </div>
-  <div class="hours-contact-body">
-    <table class="hours-table">
-      <tbody>
-        <tr>
-          <td>Monday</td>
-          <td>8:00 AM - 5:00 PM</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-          <td>8:00 AM - 5:00 PM</td>
-        </tr>
-        <tr>
-          <td>Wednesday</td>
-          <td>8:00 AM - 5:00 PM</td>
-        </tr>
-        <tr>
-          <td>Thursday</td>
-          <td>8:00 AM - 5:00 PM</td>
-        </tr>
-        <tr>
-          <td>Friday</td>
-          <td>8:00 AM - 5:00 PM</td>
-        </tr>
-        <tr class="closed-row">
-          <td>Saturday</td>
-          <td>Closed</td>
-        </tr>
-        <tr class="closed-row">
-          <td>Sunday</td>
-          <td>Closed</td>
-        </tr>
-      </tbody>
-    </table>
+  <p class="label hours-contact-eyebrow">Hours &amp; Contact</p>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">★ 4.8 Google Rating</div>
 
+  <div class="hours-contact-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td class="closed">Closed</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td class="closed">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="contact-cards">
       <a href="tel:6628449379" class="contact-card reveal">
-        <span class="contact-card-label">Call Us</span>
-        <span class="contact-card-value">(662) 844-9379</span>
-        <span class="contact-card-sub">Mon - Fri, 8 AM to 5 PM</span>
+        <div class="contact-card-label">Call Us</div>
+        <div class="contact-card-value">(662) 844-9379</div>
+        <div class="contact-card-sub">Mon - Fri, 8 AM to 5 PM</div>
       </a>
-      <a href="https://maps.google.com/?q=3552+Jeff+Holman+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card reveal">
-        <span class="contact-card-label">Get Directions</span>
-        <span class="contact-card-value">3552 Jeff Holman Blvd</span>
-        <span class="contact-card-sub">Tupelo, MS 38801 &rarr; Open in Maps</span>
+      <a href="https://maps.google.com/?q=3552+Jeff+Holman+Blvd,+Tupelo,+MS+38801" target="_blank" rel="noopener" class="contact-card reveal">
+        <div class="contact-card-label">Visit Us</div>
+        <div class="contact-card-value">3552 Jeff Holman Blvd</div>
+        <div class="contact-card-sub">Tupelo, MS 38801</div>
+        <span>Get Directions →</span>
       </a>
     </div>
   </div>
@@ -654,34 +724,39 @@ footer {
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <h2 class="reveal">Stop guessing what's wrong with your car. Let's figure it out together.</h2>
+  <h2 class="reveal">Stop guessing what's wrong with your import  -  let's figure it out today.</h2>
   <a href="tel:6628449379" class="btn-primary">Call (662) 844-9379</a>
-  <p>We're in the shop Monday through Friday. Give us a call and we'll get you squared away.</p>
+  <p>We're here Monday through Friday. Give us a call and we'll get you in.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">
-    <span class="footer-name">Auto Medic Imports</span>
-    <span class="footer-location">Tupelo, MS  -  3552 Jeff Holman Blvd</span>
+  <div class="footer-brand">
+    Auto Medic Imports
+    <span>Tupelo, MS</span>
   </div>
-  <span class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></span>
+  <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
 </footer>
 
 <script>
-(function() {
-  var elements = document.querySelectorAll('.reveal');
-  if (!elements.length) return;
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  (function() {
+    var elements = document.querySelectorAll('.reveal');
+    if (!elements.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    elements.forEach(function(el) {
+      observer.observe(el);
     });
-  }, { threshold: 0.12 });
-  elements.forEach(function(el) { observer.observe(el); });
-})();
+  })();
 </script>
+
 </body>
 </html>
