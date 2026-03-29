@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tupelo Automotive Transmission Diagnosis and Repair</title>
+<style>
+:root {
+  --accent: #C41E1E;
+  --accent-light: rgba(196,30,30,0.08);
+  --bg: #F4F4F1;
+  --bg-alt: #E8E7E3;
+  --dark: #0C0C0C;
+  --text: #1A1A1A;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+  --font-head: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { display: block; max-width: 100%; }
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 60px;
+  background: rgba(244,244,241,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.nav-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.nav-phone {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-phone::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.nav-phone:hover::after { width: 100%; }
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  max-height: 680px;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.15) 0%,
+      rgba(0,0,0,0.60) 60%,
+      rgba(0,0,0,0.92) 100%),
+    url('https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 64px 0;
+  border-left: 6px solid var(--accent);
+}
+
+.hero-inner {
+  padding: 0 44px;
+  max-width: 720px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 14px;
+  font-family: var(--font-body);
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(38px, 9vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.93;
+  color: #fff;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.hero-tagline {
+  font-size: 19px;
+  color: rgba(255,255,255,0.80);
+  margin-bottom: 32px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 32px;
+  min-height: 54px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: #a81818;
+  transform: scale(1.01);
+  box-shadow: var(--shadow-md);
+}
+
+/* INFO BAR */
+.info-bar {
+  background: var(--dark);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 3px solid var(--accent);
+}
+
+.info-bar-item {
+  padding: 24px 40px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+
+.info-bar-item:last-child { border-right: none; }
+
+.info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 6px;
+  font-family: var(--font-body);
+}
+
+.info-value {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* ABOUT */
+.about {
+  padding: 88px 40px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 80px;
+  align-items: start;
+}
+
+.about-text {}
+
+.about-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: var(--font-body);
+  margin-bottom: 12px;
+}
+
+.about-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 12px 0 28px 0;
+}
+
+.about h2 {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--dark);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.about p {
+  color: var(--text);
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 8px;
+}
+
+.about-meta-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.about-meta-item:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
+
+.about-meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+}
+
+.about-meta-value {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dark);
+  letter-spacing: 0.01em;
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  background: var(--bg-alt);
+  padding: 80px 40px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.hours-contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: var(--font-body);
+  margin-bottom: 12px;
+}
+
+.hours-contact h2 {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--dark);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.hours-table tr:first-child {
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+
+.hours-table td {
+  padding: 11px 0;
+  font-size: 16px;
+}
+
+.hours-table .day {
+  font-weight: 700;
+  font-family: var(--font-head);
+  letter-spacing: 0.02em;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.hours-table .time {
+  text-align: right;
+  color: rgba(26,26,26,0.55);
+  font-size: 14px;
+}
+
+.hours-table .time.closed {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card {
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  padding: 22px 24px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border-radius: 0 2px 2px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5px;
+  font-family: var(--font-body);
+}
+
+.contact-card-value {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--dark);
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+.contact-card-sub {
+  font-size: 13px;
+  color: rgba(26,26,26,0.5);
+  margin-top: 3px;
+}
+
+.contact-card a {
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.contact-card a:hover { color: var(--accent); }
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--dark);
+  padding: 64px 40px;
+  text-align: left;
+  border-left: 6px solid var(--accent);
+}
+
+.final-cta-inner {
+  max-width: 760px;
+  margin: 0 auto 0 0;
+  padding-left: 0;
+}
+
+.final-cta h2 {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: #fff;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 36px;
+  min-height: 54px;
+  border-radius: 2px;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.btn-cta:hover {
+  background: #a81818;
+  transform: scale(1.01);
+  box-shadow: var(--shadow-md);
+}
+
+.final-cta-note {
+  font-size: 15px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg-alt);
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-left {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.footer-left span {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(26,26,26,0.45);
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 2px;
+}
+
+.footer-right {
+  font-size: 12px;
+  color: rgba(26,26,26,0.40);
+  font-family: var(--font-body);
+}
+
+.footer-right a {
+  color: rgba(26,26,26,0.55);
+  transition: color 0.2s ease;
+}
+
+.footer-right a:hover { color: var(--accent); }
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+
+  .hero {
+    min-height: 55vh;
+    padding: 0 0 48px 0;
+    border-left: 4px solid var(--accent);
+  }
+
+  .hero-inner { padding: 0 24px; }
+
+  .info-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .info-bar-item {
+    padding: 16px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .info-bar-item:last-child { border-bottom: none; }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding: 3rem 20px;
+    gap: 40px;
+  }
+
+  .hours-contact { padding: 3rem 20px; }
+
+  .hours-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .final-cta {
+    padding: 3rem 20px;
+    border-left: 4px solid var(--accent);
+  }
+
+  footer {
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-name { font-size: 12px; }
+  .nav-phone { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .contact-cards { gap: 12px; }
+  .btn-primary, .btn-cta { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-name">Tupelo Auto &amp; Diesel</div>
+  <a href="tel:6628718986" class="nav-phone">(662) 871-8986</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Tupelo, MS  -  Auto &amp; Diesel Service</p>
+    <h1>Transmission &amp; Auto Repair Done Right</h1>
+    <p class="hero-tagline">Transmission diagnosis the same week you call  -  no runaround, no guesswork, just straight answers from a shop that knows Tupelo.</p>
+    <a href="tel:6628718986" class="btn-primary">Call (662) 871-8986</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-item">
+    <div class="info-label">Phone</div>
+    <div class="info-value">(662) 871-8986</div>
+  </div>
+  <div class="info-bar-item">
+    <div class="info-label">Location</div>
+    <div class="info-value">Tupelo, MS</div>
+  </div>
+  <div class="info-bar-item">
+    <div class="info-label">Google Rating</div>
+    <div class="info-value">3.9 / 5.0</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section style="background: var(--bg);">
+  <div class="about">
+    <div class="about-text">
+      <p class="about-eyebrow">About</p>
+      <div class="about-divider"></div>
+      <h2 class="reveal">Transmission trouble shouldn't mean weeks of waiting</h2>
+      <p>When something's wrong with your transmission or diesel engine, the last thing you want is to drop your truck off and hear nothing for two weeks. We keep it simple here  -  we'll tell you what's going on, what it'll cost, and when it'll be done. No surprises.</p>
+      <p>We've been working on cars, trucks, and diesels right here in Tupelo for years. Whether it's a slipping automatic, a hard-shifting manual, or a diesel that's losing power, we've seen it and we know how to fix it. Bring it in and let's figure it out.</p>
+    </div>
+    <div class="about-meta">
+      <div class="about-meta-item">
+        <span class="about-meta-label">Address</span>
+        <span class="about-meta-value">404 Air Park Rd<br>Tupelo, MS 38801</span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Google Rating</span>
+        <span class="about-meta-value">3.9 out of 5.0</span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Ownership</span>
+        <span class="about-meta-value">Locally Owned &amp; Operated</span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Specialties</span>
+        <span class="about-meta-value">Auto, Diesel, Transmission</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="hours-contact-inner">
+    <p class="section-eyebrow">Hours &amp; Contact</p>
+    <h2 class="reveal">Find us.</h2>
+    <div class="hours-contact-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr>
+              <td class="day">Monday</td>
+              <td class="time">8:00 AM - 4:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Tuesday</td>
+              <td class="time">8:00 AM - 4:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Wednesday</td>
+              <td class="time">8:00 AM - 4:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Thursday</td>
+              <td class="time">8:00 AM - 4:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Friday</td>
+              <td class="time">8:00 AM - 12:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Saturday</td>
+              <td class="time closed">Closed</td>
+            </tr>
+            <tr>
+              <td class="day">Sunday</td>
+              <td class="time closed">Closed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact-cards">
+        <a href="tel:6628718986" class="contact-card reveal">
+          <div class="contact-card-label">Call Us</div>
+          <div class="contact-card-value">(662) 871-8986</div>
+          <div class="contact-card-sub">Mon-Thu 8AM-4PM &middot; Fri 8AM-Noon</div>
+        </a>
+        <a href="https://maps.google.com/?q=404+Air+Park+Rd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-card-label">Visit the Shop</div>
+          <div class="contact-card-value">404 Air Park Rd<br>Tupelo, MS 38801</div>
+          <div class="contact-card-sub">Get directions &rarr;</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2 class="reveal">Get a straight answer on your transmission  -  today.</h2>
+    <a href="tel:6628718986" class="btn-cta">Call (662) 871-8986</a>
+    <p class="final-cta-note">We're open Monday through Friday. Call before noon on Friday. No voicemail maze  -  a real person picks up.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    Tupelo Auto and Diesel Service and Repair
+    <span>404 Air Park Rd, Tupelo, MS 38801</span>
+  </div>
+  <div class="footer-right">
+    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+</script>
+</body>
+</html>
