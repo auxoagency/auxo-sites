@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom's Automotive Service Inc - Tupelo, MS</title>
+<style>
+  :root {
+    --accent: #C41E1E;
+    --accent-light: rgba(196,30,30,0.08);
+    --bg: #F4F4F1;
+    --bg-alt: #E8E7E3;
+    --dark: #0C0C0C;
+    --text: #1A1A1A;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --font-head: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    font-family: var(--font-head);
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+  }
+
+  h2 {
+    font-family: var(--font-head);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 4vw, 56px);
+    background: rgba(244,244,241,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    z-index: 100;
+  }
+
+  .nav-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    text-transform: uppercase;
+  }
+
+  .nav-phone {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-phone:hover::after {
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(20px, 5vw, 72px) clamp(48px, 7vw, 80px);
+    margin-top: 60px;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--accent);
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    color: rgba(255,255,255,0.6);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .hero h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .hero-tagline {
+    color: rgba(255,255,255,0.8);
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 32px;
+    background: var(--accent);
+    color: #ffffff;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:hover {
+    background: #a01818;
+    transform: scale(1.01);
+    box-shadow: 0 4px 20px rgba(196,30,30,0.35);
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--dark);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 clamp(20px, 5vw, 72px);
+  }
+
+  .info-bar-item {
+    padding: 24px 16px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-bar-item:last-child {
+    border-right: none;
+  }
+
+  .info-bar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-bar-value {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--font-head);
+    letter-spacing: 0.02em;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 96px);
+    align-items: start;
+    background: var(--bg);
+  }
+
+  .about-left {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 14px 0 28px;
+  }
+
+  .about h2 {
+    margin-bottom: 24px;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .about p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    padding: 24px 28px;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .meta-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .meta-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .meta-item:first-child {
+    padding-top: 0;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    font-family: var(--font-head);
+  }
+
+  /* HOURS & CONTACT */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: clamp(48px, 7vw, 80px) clamp(20px, 5vw, 72px);
+  }
+
+  .hours-contact-eyebrow {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .hours-contact h2 {
+    margin-bottom: 40px;
+  }
+
+  .hours-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .hours-table .day {
+    font-weight: 700;
+    color: var(--dark);
+    font-family: var(--font-head);
+    letter-spacing: 0.02em;
+  }
+
+  .hours-table .time {
+    text-align: right;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .hours-table .closed {
+    text-align: right;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    background: var(--bg);
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: var(--shadow-sm);
+    border-radius: 0 2px 2px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .contact-card-value {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark);
+    letter-spacing: 0.01em;
+  }
+
+  .contact-card-sub {
+    font-size: 13px;
+    color: #888;
+    margin-top: 2px;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--dark);
+    padding: clamp(48px, 6vw, 72px) clamp(20px, 5vw, 72px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent);
+  }
+
+  .final-cta h2 {
+    color: #ffffff;
+    max-width: 560px;
+    text-transform: uppercase;
+  }
+
+  .final-cta-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    margin-top: -8px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg-alt);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 24px clamp(20px, 5vw, 72px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--dark);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .footer-location {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .footer-credit a {
+    color: var(--accent);
+    transition: color 0.2s ease;
+  }
+
+  .footer-credit a:hover {
+    color: #a01818;
+  }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .hours-contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+
+    .info-bar-item {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 0;
+    }
+
+    .info-bar-item:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      max-height: none;
+      padding-bottom: 3rem;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    .nav-name {
+      font-size: 12px;
+    }
+
+    .nav-phone {
+      font-size: 12px;
+    }
+
+    .contact-card {
+      min-height: 48px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Tom's Automotive</span>
+  <a href="tel:6628427931" class="nav-phone">(662) 842-7931</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Tupelo, MS &nbsp;·&nbsp; Auto Repair</span>
+    <h1>Tom's Automotive Service</h1>
+    <p class="hero-tagline">Honest diagnostics and same-day repairs  -  right here in Tupelo.</p>
+    <a href="tel:6628427931" class="btn-primary">Call (662) 842-7931</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-item">
+    <span class="info-bar-label">Phone</span>
+    <span class="info-bar-value">(662) 842-7931</span>
+  </div>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Location</span>
+    <span class="info-bar-value">Tupelo, MS</span>
+  </div>
+  <div class="info-bar-item">
+    <span class="info-bar-label">Google Rating</span>
+    <span class="info-bar-value">3.6 / 5.0</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <span class="label about-eyebrow">About</span>
+    <div class="accent-rule"></div>
+    <h2 class="reveal">Your car shouldn't keep you guessing  -  or waiting.</h2>
+    <p>We've been working on vehicles right here on Magazine Street for years, and folks in Tupelo know they can bring us their car without worrying about the runaround. Whether it's a check engine light that's been nagging you for weeks or brakes that don't feel quite right, we'll tell you what's actually going on and what it's going to cost  -  before we touch anything.</p>
+    <p>We're not a dealership. We don't upsell you on stuff you don't need. If your car just needs a fluid top-off and a tightened clamp, that's what you're going to hear from us. Come in Monday through Friday and we'll get you squared away.</p>
+  </div>
+  <div class="about-right">
+    <div class="about-meta">
+      <div class="meta-item">
+        <span class="meta-label">Address</span>
+        <span class="meta-value">317 Magazine St, Tupelo, MS 38804</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Rating</span>
+        <span class="meta-value">3.6 on Google</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Ownership</span>
+        <span class="meta-value">Locally Owned & Operated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <span class="label hours-contact-eyebrow">Hours &amp; Contact</span>
+  <h2 class="reveal">Find us.</h2>
+  <div class="hours-contact-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr><td class="day">Monday</td><td class="time">7:30 AM - 5:00 PM</td></tr>
+          <tr><td class="day">Tuesday</td><td class="time">7:30 AM - 5:00 PM</td></tr>
+          <tr><td class="day">Wednesday</td><td class="time">7:30 AM - 5:00 PM</td></tr>
+          <tr><td class="day">Thursday</td><td class="time">7:30 AM - 5:00 PM</td></tr>
+          <tr><td class="day">Friday</td><td class="time">7:30 AM - 5:00 PM</td></tr>
+          <tr><td class="day">Saturday</td><td class="closed">Closed</td></tr>
+          <tr><td class="day">Sunday</td><td class="closed">Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="contact-cards">
+      <a href="tel:6628427931" class="contact-card reveal">
+        <span class="contact-card-label">Call Us</span>
+        <span class="contact-card-value">(662) 842-7931</span>
+        <span class="contact-card-sub">Mon - Fri, 7:30 AM to 5:00 PM</span>
+      </a>
+      <a href="https://maps.google.com/?q=317+Magazine+St,+Tupelo,+MS+38804" target="_blank" rel="noopener" class="contact-card reveal">
+        <span class="contact-card-label">Our Shop</span>
+        <span class="contact-card-value">317 Magazine St</span>
+        <span class="contact-card-sub">Tupelo, MS 38804  -  Get Directions</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Get a straight answer on what your car needs.</h2>
+  <p class="final-cta-sub">No pressure. No surprises on the bill. Just give us a call.</p>
+  <a href="tel:6628427931" class="btn-primary">Call (662) 842-7931</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-name">Tom's Automotive Service Inc</div>
+    <div class="footer-location">317 Magazine St · Tupelo, MS 38804</div>
+  </div>
+  <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
+</footer>
+
+<script>
+  (function() {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
+</body>
+</html>
