@@ -14,7 +14,7 @@
     --text: #1A1A1A;
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
     --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
-    --font-heading: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --font-head: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
     --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
 
@@ -28,11 +28,10 @@
     line-height: 1.75;
     color: var(--text);
     background: var(--bg);
-    overflow-x: hidden;
   }
 
-  h1, h2, h3, nav .brand {
-    font-family: var(--font-heading);
+  h1, h2, h3, .nav-name {
+    font-family: var(--font-head);
   }
 
   h1 {
@@ -56,13 +55,9 @@
     text-transform: uppercase;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
+  a { text-decoration: none; color: inherit; }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: sticky;
     top: 0;
@@ -76,84 +71,69 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 clamp(20px, 5vw, 60px);
   }
 
-  nav .brand {
-    font-size: 14px;
+  .nav-name {
     font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     color: var(--dark);
-    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
-  nav .brand span {
-    color: var(--accent);
-  }
-
-  nav .nav-phone {
+  .nav-phone {
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--accent);
     position: relative;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
   }
 
-  nav .nav-phone::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--accent);
-    transition: width 0.2s ease;
+  .nav-phone:hover {
+    border-bottom-color: var(--accent);
   }
 
-  nav .nav-phone:hover { color: var(--accent); }
-  nav .nav-phone:hover::after { width: 100%; }
-
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     position: relative;
     min-height: 70vh;
     max-height: 680px;
-    display: flex;
-    align-items: flex-end;
     background-image:
       linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
       url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80');
     background-size: cover;
     background-position: center;
-    border-left: 8px solid var(--accent);
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(40px, 8vw, 80px) clamp(20px, 6vw, 72px);
+    padding-top: 80px;
+    border-left: 6px solid var(--accent);
   }
 
   .hero-content {
-    padding: 0 48px 64px;
-    max-width: 780px;
+    max-width: 680px;
   }
 
   .hero-eyebrow {
     color: rgba(255,255,255,0.6);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
     margin-bottom: 14px;
   }
 
   .hero h1 {
-    color: #ffffff;
-    margin-bottom: 16px;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    color: #fff;
+    margin-bottom: 18px;
   }
 
   .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 20px);
     color: rgba(255,255,255,0.8);
-    font-size: 19px;
     line-height: 1.5;
     margin-bottom: 32px;
-    max-width: 520px;
+    font-weight: 400;
+    max-width: 500px;
   }
 
   .btn-primary {
@@ -163,8 +143,8 @@
     min-height: 54px;
     padding: 0 32px;
     background: var(--accent);
-    color: #ffffff;
-    font-family: var(--font-heading);
+    color: #fff;
+    font-family: var(--font-head);
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -172,76 +152,80 @@
     border-radius: 2px;
     border: none;
     cursor: pointer;
-    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: var(--shadow-sm);
+    transition: background 0.15s ease, transform 0.15s ease;
+    box-shadow: var(--shadow-md);
   }
 
   .btn-primary:hover {
-    background: #a21919;
+    background: #a01818;
     transform: scale(1.01);
-    box-shadow: var(--shadow-md);
-    color: #ffffff;
   }
 
-  /* ── INFO BAR ── */
+  /* INFO BAR */
   .info-bar {
     background: var(--dark);
-    padding: 0;
-  }
-
-  .info-bar-inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 100%;
+    gap: 0;
   }
 
   .info-item {
-    padding: 24px 32px;
-    border-right: 1px solid rgba(255,255,255,0.06);
+    padding: 22px clamp(16px, 4vw, 40px);
+    border-right: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 
-  .info-item:last-child { border-right: none; }
+  .info-item:last-child {
+    border-right: none;
+  }
 
-  .info-item .label {
+  .info-label {
     color: rgba(255,255,255,0.4);
-    display: block;
-    margin-bottom: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
   }
 
-  .info-item .value {
-    color: #ffffff;
-    font-size: 17px;
+  .info-value {
+    color: #fff;
     font-weight: 600;
-    font-family: var(--font-heading);
+    font-size: 15px;
+    font-family: var(--font-head);
   }
 
-  .rating-stars {
-    color: #F5A623;
-    font-size: 13px;
-    margin-left: 6px;
+  .info-item a.info-value {
+    transition: color 0.2s;
   }
 
-  /* ── ABOUT ── */
+  .info-item a.info-value:hover {
+    color: #f87171;
+  }
+
+  /* ABOUT */
   .about {
-    padding: 96px 48px 80px;
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: clamp(60px, 10vw, 100px) clamp(20px, 8vw, 100px);
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
     align-items: start;
+    background: var(--bg);
   }
+
+  .about-left {}
 
   .about-eyebrow {
     color: var(--accent);
     margin-bottom: 10px;
   }
 
-  .accent-rule {
+  .about-divider {
     width: 40px;
     height: 1px;
     background: var(--accent);
-    margin: 12px 0 28px;
+    margin: 16px 0 28px;
   }
 
   .about h2 {
@@ -251,46 +235,42 @@
 
   .about p {
     color: var(--text);
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .about-meta {
+    margin-top: 36px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding-top: 12px;
+    gap: 18px;
   }
 
   .meta-item {
-    padding: 18px 20px;
-    background: var(--accent-light);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: 14px;
     border-left: 3px solid var(--accent);
-    border-radius: 0 2px 2px 0;
   }
 
-  .meta-item .label {
-    color: var(--accent);
-    display: block;
-    margin-bottom: 4px;
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(26,26,26,0.5);
   }
 
-  .meta-item .meta-value {
-    font-size: 15px;
+  .meta-value {
     font-weight: 600;
+    font-size: 15px;
     color: var(--dark);
   }
 
-  /* ── HOURS & CONTACT ── */
+  /* HOURS & CONTACT */
   .hours-contact {
     background: var(--bg-alt);
-    padding: 80px 48px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-
-  .hours-contact-inner {
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: clamp(60px, 10vw, 90px) clamp(20px, 8vw, 100px);
   }
 
   .hours-contact-eyebrow {
@@ -298,29 +278,42 @@
     margin-bottom: 10px;
   }
 
+  .hours-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 16px 0 28px;
+  }
+
   .hours-contact h2 {
-    margin-bottom: 8px;
     color: var(--dark);
+    margin-bottom: 8px;
   }
 
   .rating-pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 4px 14px;
+    gap: 7px;
     background: var(--accent-light);
     border: 1px solid rgba(196,30,30,0.2);
-    border-radius: 100px;
+    border-radius: 2px;
+    padding: 5px 14px;
     font-size: 13px;
     font-weight: 700;
     color: var(--accent);
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+    font-family: var(--font-head);
+    letter-spacing: 0.04em;
+  }
+
+  .rating-star {
+    font-style: normal;
   }
 
   .hours-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: clamp(30px, 5vw, 60px);
     align-items: start;
   }
 
@@ -330,25 +323,27 @@
   }
 
   .hours-table tr {
-    border-bottom: 1px solid rgba(0,0,0,0.07);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
   }
 
-  .hours-table tr:last-child { border-bottom: none; }
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
 
   .hours-table td {
-    padding: 10px 0;
+    padding: 9px 0;
     font-size: 15px;
   }
 
   .hours-table td:first-child {
     font-weight: 700;
     color: var(--dark);
-    width: 50%;
+    font-family: var(--font-head);
   }
 
   .hours-table td:last-child {
-    color: rgba(26,26,26,0.6);
     text-align: right;
+    color: rgba(26,26,26,0.55);
   }
 
   .hours-table .closed {
@@ -363,119 +358,113 @@
   }
 
   .contact-card {
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    padding: 20px 22px;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 80px;
-    padding: 20px 24px;
-    background: var(--bg);
-    border-left: 4px solid var(--accent);
-    border-radius: 0 2px 2px 0;
+    gap: 4px;
     box-shadow: var(--shadow-sm);
-    cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    color: inherit;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
   }
 
   .contact-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
-    color: inherit;
   }
 
-  .contact-card .label {
-    color: var(--accent);
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .contact-card .card-value {
-    font-size: 18px;
+  .contact-card-label {
+    font-size: 11px;
     font-weight: 700;
-    font-family: var(--font-heading);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(26,26,26,0.45);
+  }
+
+  .contact-card-value {
+    font-size: 16px;
+    font-weight: 700;
     color: var(--dark);
-    line-height: 1.2;
+    font-family: var(--font-head);
+    transition: color 0.2s;
   }
 
-  .contact-card .card-sub {
+  .contact-card:hover .contact-card-value {
+    color: var(--accent);
+  }
+
+  .contact-card-sub {
     font-size: 13px;
-    color: rgba(26,26,26,0.55);
-    margin-top: 2px;
+    color: rgba(26,26,26,0.5);
   }
 
-  /* ── FINAL CTA ── */
+  /* FINAL CTA */
   .final-cta {
     background: var(--dark);
-    padding: 72px 48px;
-    text-align: center;
+    padding: clamp(50px, 8vw, 72px) clamp(20px, 8vw, 100px);
+    border-left: 6px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .final-cta h2 {
-    color: #ffffff;
-    margin-bottom: 28px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #fff;
+    max-width: 600px;
   }
 
-  .final-cta h2 span {
-    color: var(--accent);
-  }
-
-  .final-cta .btn-primary {
-    margin-bottom: 20px;
-  }
-
-  .final-cta .cta-note {
-    color: rgba(255,255,255,0.45);
+  .final-cta-sub {
     font-size: 15px;
+    color: rgba(255,255,255,0.45);
+    margin-top: -4px;
   }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
     background: var(--bg-alt);
-    padding: 24px 48px;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    padding: 24px clamp(20px, 6vw, 72px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  footer .footer-brand {
-    font-family: var(--font-heading);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--dark);
+  .footer-left {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(26,26,26,0.55);
+    font-family: var(--font-head);
+    letter-spacing: 0.04em;
   }
 
-  footer .footer-brand span {
-    display: block;
-    font-size: 11px;
-    font-weight: 400;
-    color: rgba(26,26,26,0.45);
-    margin-top: 2px;
-    font-family: var(--font-body);
-  }
-
-  footer .footer-credit {
+  .footer-right {
     font-size: 12px;
     color: rgba(26,26,26,0.4);
   }
 
-  footer .footer-credit a {
-    color: var(--accent);
-    transition: opacity 0.2s;
+  .footer-right a {
+    color: rgba(26,26,26,0.55);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
   }
 
-  footer .footer-credit a:hover { opacity: 0.7; }
+  .footer-right a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
 
-  /* ── REVEAL ANIMATION ── */
+  /* REVEAL */
   .reveal {
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
   }
 
   .reveal.visible {
@@ -491,61 +480,67 @@
     }
   }
 
-  /* ── MOBILE ── */
+  /* RESPONSIVE */
   @media (max-width: 768px) {
-    nav { padding: 0 20px; }
+    .about {
+      grid-template-columns: 1fr;
+    }
 
-    .hero { border-left-width: 5px; }
-    .hero-content { padding: 0 24px 48px; }
-
-    .info-bar-inner {
+    .info-bar {
       grid-template-columns: 1fr;
     }
 
     .info-item {
-      padding: 16px 24px;
       border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
-    .info-item:last-child { border-bottom: none; }
-
-    .about {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 64px 24px;
+    .info-item:last-child {
+      border-bottom: none;
     }
-
-    .hours-contact { padding: 64px 24px; }
 
     .hours-grid {
       grid-template-columns: 1fr;
-      gap: 40px;
     }
-
-    footer {
-      flex-direction: column;
-      gap: 12px;
-      text-align: center;
-      padding: 24px;
-    }
-
-    .final-cta { padding: 64px 24px; }
   }
 
   @media (max-width: 480px) {
     .hero {
       min-height: 55vh;
+      padding: 60px 20px 36px;
     }
 
-    nav .brand { font-size: 12px; }
-    nav .nav-phone { font-size: 12px; }
+    nav {
+      padding: 0 16px;
+    }
 
-    .about { padding: 48px 20px; }
-    .hours-contact { padding: 48px 20px; }
-    .final-cta { padding: 48px 20px; }
+    .nav-name {
+      font-size: 12px;
+    }
 
-    .contact-card { min-height: 48px; }
+    .nav-phone {
+      font-size: 13px;
+    }
+
+    .about {
+      padding: 3rem 20px;
+    }
+
+    .hours-contact {
+      padding: 3rem 20px;
+    }
+
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    footer {
+      padding: 20px 16px;
+    }
+
+    .contact-card {
+      min-height: 48px;
+    }
   }
 </style>
 </head>
@@ -553,59 +548,55 @@
 
 <!-- NAV -->
 <nav>
-  <div class="brand">Auto <span>Medic</span> Imports</div>
+  <span class="nav-name">Auto Medic Imports</span>
   <a href="tel:6628449379" class="nav-phone">(662) 844-9379</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow label">Tupelo, MS &nbsp;·&nbsp; Auto Repair Shop</p>
+    <p class="label hero-eyebrow">Tupelo, MS &nbsp;·&nbsp; Import Auto Repair</p>
     <h1>Auto Medic<br>Imports</h1>
-    <p class="hero-tagline">Honest diagnostics and real repairs  -  done right the first time in Tupelo.</p>
+    <p class="hero-tagline">Honest diagnostics and same-week repairs on imports  -  right here in Tupelo.</p>
     <a href="tel:6628449379" class="btn-primary">Call (662) 844-9379</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-bar-inner">
-    <div class="info-item">
-      <span class="label">Call Us</span>
-      <span class="value">(662) 844-9379</span>
-    </div>
-    <div class="info-item">
-      <span class="label">Location</span>
-      <span class="value">Tupelo, MS</span>
-    </div>
-    <div class="info-item">
-      <span class="label">Google Rating</span>
-      <span class="value">4.8 <span class="rating-stars">★★★★★</span></span>
-    </div>
+  <div class="info-item">
+    <span class="info-label">Phone</span>
+    <a href="tel:6628449379" class="info-value">(662) 844-9379</a>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Location</span>
+    <span class="info-value">Tupelo, MS</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">4.8 / 5.0</span>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section>
-  <div class="about">
-    <div class="about-left">
-      <p class="label about-eyebrow">About</p>
-      <div class="accent-rule"></div>
-      <h2 class="reveal">Your car deserves a shop that actually explains what's wrong.</h2>
-      <p>We know how frustrating it is to drop your car off somewhere and get back a laundry list you don't understand. At Auto Medic Imports, we've been keeping Tupelo drivers on the road by doing it differently  -  you'll know exactly what we're fixing, why it needs fixing, and what it's going to cost before we touch a thing.</p>
-      <p>We specialize in imported and domestic vehicles, and we've seen just about everything that rolls through northeast Mississippi. Whether it's a check engine light that won't quit or a full repair job, we'll shoot you straight and get it done. We're not a dealership  -  we're your neighbors.</p>
-    </div>
+<section class="about">
+  <div class="about-left">
+    <p class="label about-eyebrow">About</p>
+    <div class="about-divider"></div>
+    <h2 class="reveal">When your import breaks down, you need someone who actually knows the car.</h2>
+    <p>We've been working on foreign and domestic vehicles right here in Tupelo long enough to know that most import problems get misdiagnosed somewhere else first. When you pull into Auto Medic, we're looking at the whole picture  -  not just the code that popped up.</p>
+    <p>We'll tell you exactly what's wrong, what it'll cost, and whether it's urgent. No upsells, no runaround. Just straight talk from a shop that wants you back on the road and coming back the next time something needs attention.</p>
     <div class="about-meta">
       <div class="meta-item">
-        <span class="label">Address</span>
-        <span class="meta-value">3552 Jeff Holman Blvd<br>Tupelo, MS 38801</span>
+        <span class="meta-label">Address</span>
+        <span class="meta-value">3552 Jeff Holman Blvd, Tupelo, MS 38801</span>
       </div>
       <div class="meta-item">
-        <span class="label">Google Rating</span>
-        <span class="meta-value">4.8 out of 5 Stars</span>
+        <span class="meta-label">Google Rating</span>
+        <span class="meta-value">4.8 Stars</span>
       </div>
       <div class="meta-item">
-        <span class="label">Ownership</span>
+        <span class="meta-label">Ownership</span>
         <span class="meta-value">Locally Owned &amp; Operated</span>
       </div>
     </div>
@@ -614,92 +605,89 @@
 
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
-  <div class="hours-contact-inner">
-    <p class="label hours-contact-eyebrow">Hours &amp; Contact</p>
-    <h2 class="reveal">Find us.</h2>
-    <div class="rating-pill">
-      ★ 4.8 on Google
+  <p class="label hours-contact-eyebrow">Hours &amp; Contact</p>
+  <div class="hours-divider"></div>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill"><span class="rating-star">★</span> 4.8 on Google</div>
+  <div class="hours-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td class="closed">Closed</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td class="closed">Closed</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="hours-grid">
-      <div>
-        <table class="hours-table">
-          <tbody>
-            <tr>
-              <td>Monday</td>
-              <td>8:00 AM - 5:00 PM</td>
-            </tr>
-            <tr>
-              <td>Tuesday</td>
-              <td>8:00 AM - 5:00 PM</td>
-            </tr>
-            <tr>
-              <td>Wednesday</td>
-              <td>8:00 AM - 5:00 PM</td>
-            </tr>
-            <tr>
-              <td>Thursday</td>
-              <td>8:00 AM - 5:00 PM</td>
-            </tr>
-            <tr>
-              <td>Friday</td>
-              <td>8:00 AM - 5:00 PM</td>
-            </tr>
-            <tr>
-              <td>Saturday</td>
-              <td class="closed">Closed</td>
-            </tr>
-            <tr>
-              <td>Sunday</td>
-              <td class="closed">Closed</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="contact-cards">
-        <a href="tel:6628449379" class="contact-card reveal">
-          <span class="label">Phone</span>
-          <span class="card-value">(662) 844-9379</span>
-          <span class="card-sub">Tap to call now</span>
-        </a>
-        <a href="https://maps.google.com/?q=3552+Jeff+Holman+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card reveal">
-          <span class="label">Address</span>
-          <span class="card-value">3552 Jeff Holman Blvd</span>
-          <span class="card-sub">Tupelo, MS 38801 &nbsp;· Get Directions</span>
-        </a>
-      </div>
+    <div class="contact-cards">
+      <a href="tel:6628449379" class="contact-card reveal">
+        <span class="contact-card-label">Call the Shop</span>
+        <span class="contact-card-value">(662) 844-9379</span>
+        <span class="contact-card-sub">Mon - Fri, 8 AM to 5 PM</span>
+      </a>
+      <a href="https://maps.google.com/?q=3552+Jeff+Holman+Blvd+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card reveal">
+        <span class="contact-card-label">Get Directions</span>
+        <span class="contact-card-value">3552 Jeff Holman Blvd</span>
+        <span class="contact-card-sub">Tupelo, MS 38801  -  Open in Maps</span>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <h2 class="reveal">Stop guessing what's wrong<br><span>with your vehicle.</span></h2>
-  <div>
-    <a href="tel:6628449379" class="btn-primary">Call (662) 844-9379</a>
-  </div>
-  <p class="cta-note">Mon - Fri, 8 AM to 5 PM &nbsp;·&nbsp; Tupelo, Mississippi</p>
+  <h2 class="reveal">Stop guessing what's wrong with your car. Get a straight answer today.</h2>
+  <a href="tel:6628449379" class="btn-primary">Call (662) 844-9379</a>
+  <p class="final-cta-sub">We're at 3552 Jeff Holman Blvd, Tupelo  -  Monday through Friday, 8 to 5.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    Auto Medic Imports
-    <span>Tupelo, MS</span>
-  </div>
-  <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
+  <div class="footer-left">Auto Medic Imports &nbsp;·&nbsp; Tupelo, MS</div>
+  <div class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  (function() {
+    var elements = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    elements.forEach(function(el) {
+      observer.observe(el);
     });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
+  })();
 </script>
+
 </body>
 </html>
