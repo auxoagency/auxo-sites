@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Auto Repair Shop in Belden, MS | Estes Garage</title>
-<meta name="description" content="Estes Garage  -  honest, reliable auto repair in Belden, MS. Serving Tupelo and surrounding areas. Call (662) 842-2696.">
+<meta name="description" content="Estes Garage in Belden, MS  -  honest auto repair you can count on. Call (662) 842-2696 for same-day diagnostics and repairs near Tupelo.">
 <style>
   :root {
     --accent: #C41E1E;
@@ -15,89 +15,62 @@
     --text: #1A1A1A;
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
     --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
-    --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-head: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--body-font);
+    font-family: var(--font-body);
     font-size: 17px;
     line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
-  }
-
-  h1, h2, h3, .nav-name {
-    font-family: var(--heading-font);
-  }
-
-  h1 {
-    font-size: clamp(38px, 9vw, 56px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 0.93;
-  }
-
-  h2 {
-    font-size: clamp(26px, 7vw, 38px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.08;
-  }
-
-  .label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
   }
 
   a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
   }
 
-  /* ─── NAV ─── */
+  img { display: block; max-width: 100%; }
+
+  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
     height: 60px;
-    background: rgba(244, 244, 241, 0.92);
+    background: rgba(244,244,241,0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 clamp(20px, 5vw, 60px);
   }
 
   .nav-name {
+    font-family: var(--font-head);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: var(--dark);
     text-transform: uppercase;
+    color: var(--dark);
   }
 
   .nav-phone {
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--accent);
+    letter-spacing: 0.02em;
     position: relative;
     padding-bottom: 2px;
   }
@@ -108,59 +81,60 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 1.5px;
+    height: 1px;
     background: var(--accent);
     transition: width 0.2s ease;
   }
 
-  .nav-phone:hover::after {
-    width: 100%;
-  }
+  .nav-phone:hover::after { width: 100%; }
 
-  .nav-phone:hover {
-    color: var(--accent);
-  }
-
-  /* ─── HERO ─── */
+  /* ── HERO ── */
   .hero {
     position: relative;
     min-height: 70vh;
     max-height: 680px;
-    display: flex;
-    align-items: flex-end;
     background-image:
       linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.60) 60%, rgba(0,0,0,0.92) 100%),
       url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80');
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(24px, 6vw, 80px) clamp(48px, 8vh, 72px);
     border-left: 6px solid var(--accent);
   }
 
   .hero-content {
-    padding: 0 48px 64px;
-    max-width: 720px;
+    max-width: 680px;
   }
 
-  .hero-eyebrow {
+  .eyebrow {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.6);
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+    display: block;
   }
 
   .hero h1 {
-    color: #fff;
-    margin-bottom: 20px;
+    font-family: var(--font-head);
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+    color: #ffffff;
+    margin-bottom: 18px;
+    text-transform: uppercase;
   }
 
   .hero-tagline {
     font-size: 18px;
     color: rgba(255,255,255,0.8);
-    margin-bottom: 36px;
-    font-weight: 400;
     line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 480px;
   }
 
   .btn-primary {
@@ -170,8 +144,8 @@
     min-height: 54px;
     padding: 0 36px;
     background: var(--accent);
-    color: #fff;
-    font-family: var(--heading-font);
+    color: #ffffff;
+    font-family: var(--font-head);
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -180,32 +154,32 @@
     border: none;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease;
-    text-decoration: none;
   }
 
   .btn-primary:hover {
-    background: #a51919;
+    background: #a01818;
     transform: scale(1.01);
     color: #fff;
   }
 
-  /* ─── INFO BAR ─── */
+  /* ── INFO BAR ── */
   .info-bar {
     background: var(--dark);
+    padding: 28px clamp(24px, 6vw, 80px);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
-  .info-cell {
-    padding: 28px 32px;
-    border-right: 1px solid rgba(255,255,255,0.06);
+  .info-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
 
-  .info-cell:last-child {
-    border-right: none;
+  .info-item + .info-item {
+    border-left: 1px solid rgba(255,255,255,0.08);
+    padding-left: 20px;
   }
 
   .info-label {
@@ -219,102 +193,90 @@
   .info-value {
     font-size: 16px;
     font-weight: 600;
-    color: #fff;
-    font-family: var(--heading-font);
+    color: #ffffff;
+    line-height: 1.3;
   }
 
-  .info-cell a.info-value:hover {
-    color: var(--accent);
-  }
-
-  /* ─── ABOUT ─── */
+  /* ── ABOUT ── */
   .about {
-    padding: 100px 48px 100px;
+    padding: clamp(60px, 10vh, 100px) clamp(24px, 6vw, 80px);
     max-width: 1100px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 80px;
-    align-items: start;
   }
 
-  .about-eyebrow {
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 14px;
     display: block;
+    margin-bottom: 10px;
   }
 
   .accent-rule {
     width: 40px;
     height: 1px;
     background: var(--accent);
-    margin: 16px 0 32px;
+    margin: 10px 0 28px;
   }
 
-  .about h2 {
-    margin-bottom: 28px;
+  h2 {
+    font-family: var(--font-head);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
     color: var(--dark);
+    margin-bottom: 24px;
   }
 
-  .about p {
-    color: var(--text);
-    margin-bottom: 20px;
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .about-copy p + p {
+    margin-top: 16px;
   }
 
   .about-meta {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    margin-top: 12px;
+    gap: 20px;
+    padding-top: 8px;
   }
 
   .meta-item {
-    padding: 18px 0;
-    border-top: 1px solid rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     gap: 4px;
-  }
-
-  .meta-item:last-child {
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 18px 20px;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
   }
 
   .meta-label {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(26,26,26,0.45);
+    color: var(--accent);
   }
 
   .meta-value {
     font-size: 15px;
     font-weight: 600;
     color: var(--dark);
-    font-family: var(--heading-font);
+    line-height: 1.4;
   }
 
-  .rating-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent-light);
-    border: 1px solid rgba(196,30,30,0.15);
-    border-radius: 2px;
-    padding: 4px 12px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent);
-    width: fit-content;
-  }
-
-  /* ─── HOURS & CONTACT ─── */
+  /* ── HOURS & CONTACT ── */
   .hours-contact {
     background: var(--bg-alt);
-    padding: 90px 48px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: clamp(56px, 9vh, 88px) clamp(24px, 6vw, 80px);
   }
 
   .hours-contact-inner {
@@ -322,22 +284,30 @@
     margin: 0 auto;
   }
 
-  .hours-contact-eyebrow {
-    color: var(--accent);
-    margin-bottom: 14px;
-    display: block;
-  }
-
-  .hours-contact h2 {
-    color: var(--dark);
-    margin-bottom: 48px;
-  }
-
   .hours-contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: start;
+    gap: 60px;
+    margin-top: 36px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    border: 1px solid rgba(196,30,30,0.2);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+
+  .rating-star {
+    color: var(--accent);
+    font-style: normal;
   }
 
   .hours-table {
@@ -349,51 +319,28 @@
     border-bottom: 1px solid rgba(0,0,0,0.07);
   }
 
-  .hours-table tr:first-child {
-    border-top: 1px solid rgba(0,0,0,0.07);
+  .hours-table tr:last-child {
+    border-bottom: none;
   }
 
   .hours-table td {
-    padding: 11px 0;
+    padding: 10px 0;
     font-size: 15px;
+    line-height: 1.4;
   }
 
-  .hours-table td:first-child {
+  .hours-table .day {
     font-weight: 700;
     color: var(--dark);
-    font-family: var(--heading-font);
-    letter-spacing: 0.01em;
   }
 
-  .hours-table td:last-child {
+  .hours-table .time {
     text-align: right;
-    color: rgba(26,26,26,0.6);
-    font-size: 14px;
+    color: #666;
   }
 
-  .closed-text {
-    color: var(--accent) !important;
-    font-weight: 600;
-  }
-
-  .rating-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--dark);
-    color: #fff;
-    border-radius: 2px;
-    padding: 6px 16px;
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 28px;
-    font-family: var(--heading-font);
-    letter-spacing: 0.04em;
-  }
-
-  .star-icon {
-    color: #F5C518;
-    font-size: 14px;
+  .hours-table .closed {
+    color: var(--accent);
   }
 
   .contact-cards {
@@ -403,116 +350,109 @@
   }
 
   .contact-card {
-    background: var(--bg);
-    border-left: 3px solid var(--accent);
-    padding: 20px 24px;
-    min-height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4px;
+    min-height: 80px;
+    padding: 18px 22px;
+    background: var(--bg);
+    border-left: 4px solid var(--accent);
     box-shadow: var(--shadow-sm);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    color: inherit;
-    border-radius: 0 2px 2px 0;
+    cursor: pointer;
   }
 
   .contact-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
-    color: inherit;
   }
 
-  .contact-card-label {
+  .card-label {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(26,26,26,0.45);
+    color: var(--accent);
   }
 
-  .contact-card-value {
-    font-size: 17px;
-    font-weight: 700;
+  .card-value {
+    font-size: 16px;
+    font-weight: 600;
     color: var(--dark);
-    font-family: var(--heading-font);
-    letter-spacing: 0.01em;
+    line-height: 1.3;
   }
 
-  .contact-card-sub {
+  .card-sub {
     font-size: 13px;
-    color: rgba(26,26,26,0.55);
+    color: #777;
     margin-top: 2px;
   }
 
-  /* ─── FINAL CTA ─── */
+  /* ── FINAL CTA ── */
   .final-cta {
     background: var(--dark);
-    padding: 72px 48px;
-    text-align: left;
+    padding: clamp(48px, 8vh, 72px) clamp(24px, 6vw, 80px);
     border-left: 6px solid var(--accent);
   }
 
   .final-cta-inner {
-    max-width: 800px;
-    margin: 0 auto 0 0;
-    padding-left: 32px;
+    max-width: 700px;
   }
 
   .final-cta h2 {
-    color: #fff;
-    margin-bottom: 32px;
+    color: #ffffff;
+    margin-bottom: 28px;
   }
 
-  .final-cta-sub {
-    font-size: 15px;
+  .final-cta p {
     color: rgba(255,255,255,0.5);
+    font-size: 15px;
     margin-top: 20px;
-    font-weight: 400;
   }
 
-  /* ─── FOOTER ─── */
+  /* ── FOOTER ── */
   footer {
     background: var(--bg-alt);
-    padding: 28px 48px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 24px clamp(24px, 6vw, 80px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 12px;
   }
 
-  .footer-left {
+  .footer-name {
+    font-family: var(--font-head);
     font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dark);
   }
 
-  .footer-left span {
-    font-weight: 400;
-    color: rgba(26,26,26,0.5);
-    font-family: var(--body-font);
-  }
-
-  .footer-right {
+  .footer-location {
     font-size: 12px;
-    color: rgba(26,26,26,0.45);
+    color: #888;
+    margin-top: 2px;
   }
 
-  .footer-right a {
-    color: rgba(26,26,26,0.55);
-    font-weight: 600;
+  .footer-credit {
+    font-size: 12px;
+    color: #999;
   }
 
-  .footer-right a:hover {
+  .footer-credit a {
+    color: #888;
+    transition: color 0.2s ease;
+  }
+
+  .footer-credit a:hover {
     color: var(--accent);
   }
 
-  /* ─── REVEAL ─── */
+  /* ── REVEAL ANIMATION ── */
   .reveal {
     opacity: 0;
     transform: translateY(16px);
@@ -532,85 +472,43 @@
     }
   }
 
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 768px) {
-    .about {
-      grid-template-columns: 1fr;
-      gap: 48px;
-      padding: 72px 28px;
-    }
-
-    .hours-contact {
-      padding: 72px 28px;
-    }
-
+  /* ── RESPONSIVE ── */
+  @media (max-width: 760px) {
+    .about-grid,
     .hours-contact-grid {
       grid-template-columns: 1fr;
-      gap: 48px;
+      gap: 36px;
     }
+  }
 
+  @media (max-width: 600px) {
     .info-bar {
       grid-template-columns: 1fr;
+      gap: 16px;
     }
 
-    .info-cell {
-      border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 20px 28px;
-    }
-
-    .info-cell:last-child {
-      border-bottom: none;
-    }
-
-    .hero-content {
-      padding: 0 28px 48px;
-    }
-
-    .final-cta {
-      padding: 56px 28px;
-    }
-
-    .final-cta-inner {
-      padding-left: 16px;
-    }
-
-    nav {
-      padding: 0 20px;
-    }
-
-    footer {
-      padding: 24px 28px;
+    .info-item + .info-item {
+      border-left: none;
+      padding-left: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 16px;
     }
   }
 
   @media (max-width: 480px) {
     .hero {
       min-height: 55vh;
+      border-left: 4px solid var(--accent);
     }
 
-    .hero-content {
-      padding: 0 20px 40px;
+    section, .about, .hours-contact, .final-cta {
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
-    .about {
-      padding: 3rem 20px;
-    }
-
-    .hours-contact {
-      padding: 3rem 20px;
-    }
-
-    .final-cta {
-      padding: 3rem 20px;
-    }
-
-    .final-cta-inner {
-      padding-left: 0;
-    }
-
-    .contact-card {
-      min-height: 48px;
+    .btn-primary {
+      width: 100%;
+      text-align: center;
     }
 
     nav {
@@ -624,13 +522,6 @@
     .nav-phone {
       font-size: 13px;
     }
-
-    footer {
-      padding: 20px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
   }
 </style>
 </head>
@@ -639,53 +530,49 @@
 <!-- NAV -->
 <nav>
   <span class="nav-name">Estes Garage</span>
-  <a href="tel:6628422696" class="nav-phone">(662) 842-2696</a>
+  <a class="nav-phone" href="tel:6628422696">(662) 842-2696</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">Belden, MS  -  Auto Repair Shop</p>
+    <span class="eyebrow">Belden, MS  -  Auto Repair</span>
     <h1>Estes Garage</h1>
-    <p class="hero-tagline">Straight-talk auto repair  -  no runaround, no surprises, just your car fixed right.</p>
-    <a href="tel:6628422696" class="btn-primary">Call (662) 842-2696</a>
+    <p class="hero-tagline">Honest diagnostics and same-day repairs near Tupelo  -  no runaround, no surprises on the bill.</p>
+    <a class="btn-primary" href="tel:6628422696">Call (662) 842-2696</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-cell">
+  <div class="info-item">
     <span class="info-label">Phone</span>
-    <a href="tel:6628422696" class="info-value">(662) 842-2696</a>
+    <span class="info-value">(662) 842-2696</span>
   </div>
-  <div class="info-cell">
+  <div class="info-item">
     <span class="info-label">Location</span>
     <span class="info-value">Belden, MS</span>
   </div>
-  <div class="info-cell">
+  <div class="info-item">
     <span class="info-label">Google Rating</span>
     <span class="info-value">4.4 / 5.0</span>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section>
-  <div class="about">
-    <div class="about-text">
-      <span class="label about-eyebrow">About</span>
+<section class="about">
+  <div class="about-grid">
+    <div class="about-copy">
+      <span class="section-eyebrow">About</span>
       <div class="accent-rule"></div>
-      <h2 class="reveal">Your car shouldn't sit a week waiting on someone who won't call you back.</h2>
-      <p>At Estes Garage, we've been fixing cars in the Belden and Tupelo area the way it should be done  -  you drop it off, we look at it, we call you and tell you what's wrong before we touch another bolt. No surprises on the invoice. No upsells you didn't ask for. Just honest work at a fair price.</p>
-      <p>We're a family shop. When you pull into our lot on Purnell Road, you're talking to the same people who'll be under your hood. We know folks around here work hard for their money, and we don't take that lightly. Bring it in, we'll take care of you.</p>
-      <div class="rating-badge">
-        <span class="star-icon">&#9733;</span> 4.4 on Google
-      </div>
+      <h2 class="reveal">When your car's down, you need someone you can actually trust.</h2>
+      <p>That's what we've been doing out here on Purnell Road for years. We're not a chain shop  -  we're your neighbors. When something goes wrong with your vehicle, you shouldn't have to guess whether you're getting a straight answer. At Estes Garage, you do.</p>
+      <p>Whether it's a check-engine light you've been ignoring or something that just started making a noise, bring it in. We'll tell you exactly what's going on, what it'll cost, and how soon we can get you back on the road. Folks from all over the Tupelo area come back because we keep it simple and honest.</p>
     </div>
     <div class="about-meta">
       <div class="meta-item">
         <span class="meta-label">Address</span>
-        <span class="meta-value">5315 Purnell Rd</span>
-        <span style="font-size:14px;color:rgba(26,26,26,0.55);">Belden, MS 38826</span>
+        <span class="meta-value">5315 Purnell Rd<br>Belden, MS 38826</span>
       </div>
       <div class="meta-item">
         <span class="meta-label">Google Rating</span>
@@ -702,56 +589,59 @@
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
   <div class="hours-contact-inner">
-    <span class="label hours-contact-eyebrow">Hours &amp; Contact</span>
+    <span class="section-eyebrow">Hours &amp; Contact</span>
+    <div class="accent-rule"></div>
     <h2 class="reveal">Find us.</h2>
+    <div class="rating-pill">
+      <em class="rating-star">&#9733;</em> 4.4 on Google
+    </div>
+
     <div class="hours-contact-grid">
       <div>
-        <div class="rating-pill">
-          <span class="star-icon">&#9733;</span> 4.4 Stars on Google
-        </div>
         <table class="hours-table">
           <tbody>
             <tr>
-              <td>Monday</td>
-              <td>7:30 AM - 5:00 PM</td>
+              <td class="day">Monday</td>
+              <td class="time">7:30 AM - 5:00 PM</td>
             </tr>
             <tr>
-              <td>Tuesday</td>
-              <td>7:30 AM - 5:00 PM</td>
+              <td class="day">Tuesday</td>
+              <td class="time">7:30 AM - 5:00 PM</td>
             </tr>
             <tr>
-              <td>Wednesday</td>
-              <td>7:30 AM - 5:00 PM</td>
+              <td class="day">Wednesday</td>
+              <td class="time">7:30 AM - 5:00 PM</td>
             </tr>
             <tr>
-              <td>Thursday</td>
-              <td>7:30 AM - 5:00 PM</td>
+              <td class="day">Thursday</td>
+              <td class="time">7:30 AM - 5:00 PM</td>
             </tr>
             <tr>
-              <td>Friday</td>
-              <td>7:30 AM - 5:00 PM</td>
+              <td class="day">Friday</td>
+              <td class="time">7:30 AM - 5:00 PM</td>
             </tr>
             <tr>
-              <td>Saturday</td>
-              <td class="closed-text">Closed</td>
+              <td class="day">Saturday</td>
+              <td class="time closed">Closed</td>
             </tr>
             <tr>
-              <td>Sunday</td>
-              <td class="closed-text">Closed</td>
+              <td class="day">Sunday</td>
+              <td class="time closed">Closed</td>
             </tr>
           </tbody>
         </table>
       </div>
+
       <div class="contact-cards">
-        <a href="tel:6628422696" class="contact-card reveal">
-          <span class="contact-card-label">Call Us</span>
-          <span class="contact-card-value">(662) 842-2696</span>
-          <span class="contact-card-sub">Mon - Fri, 7:30 AM to 5:00 PM</span>
+        <a class="contact-card reveal" href="tel:6628422696">
+          <span class="card-label">Call Us</span>
+          <span class="card-value">(662) 842-2696</span>
+          <span class="card-sub">Mon - Fri, 7:30 AM to 5:00 PM</span>
         </a>
-        <a href="https://maps.google.com/?q=5315+Purnell+Rd,+Belden,+MS+38826" target="_blank" rel="noopener" class="contact-card reveal">
-          <span class="contact-card-label">Find Us</span>
-          <span class="contact-card-value">5315 Purnell Rd</span>
-          <span class="contact-card-sub">Belden, MS 38826  -  Get Directions</span>
+        <a class="contact-card reveal" href="https://maps.google.com/?q=5315+Purnell+Rd,+Belden,+MS+38826" target="_blank" rel="noopener">
+          <span class="card-label">Get Directions</span>
+          <span class="card-value">5315 Purnell Rd, Belden, MS</span>
+          <span class="card-sub">Open in Google Maps &rarr;</span>
         </a>
       </div>
     </div>
@@ -761,37 +651,32 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="final-cta-inner">
-    <h2 class="reveal">Done waiting on a shop that treats you like a work order number?</h2>
-    <a href="tel:6628422696" class="btn-primary">Call (662) 842-2696</a>
-    <p class="final-cta-sub">Give us a call during business hours  -  we'll get you in and get it handled.</p>
+    <h2 class="reveal">Stop driving around with a problem you've been putting off.</h2>
+    <a class="btn-primary" href="tel:6628422696">Call (662) 842-2696</a>
+    <p>We're on Purnell Road in Belden, open Monday through Friday.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">
-    Estes Garage <span> -  Belden, MS</span>
+  <div>
+    <div class="footer-name">Estes Garage</div>
+    <div class="footer-location">Belden, MS  -  Near Tupelo</div>
   </div>
-  <div class="footer-right">
-    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a>
-  </div>
+  <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></div>
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => observer.observe(el));
-  } else {
-    reveals.forEach(el => el.classList.add('visible'));
-  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
