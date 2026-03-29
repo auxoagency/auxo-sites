@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Belden MS Tires & Auto Repair Shop | McCords Auto Service</title>
-<meta name="description" content="McCord's Auto Service LLC in Belden, MS  -  honest auto repair and tires near Tupelo. Rated 4.9 stars. Call (662) 680-5286.">
+<meta name="description" content="McCord's Auto Service in Belden, MS  -  local auto repair and tires you can count on. Serving Tupelo and surrounding areas. Call (662) 680-5286.">
 <style>
   :root {
     --accent: #C41E1E;
@@ -16,7 +16,7 @@
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
     --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
     --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,7 +34,7 @@
 
   h1, h2, h3 {
     font-family: var(--heading-font);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
 
   h1 {
@@ -51,6 +51,14 @@
     line-height: 1.08;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  img { display: block; max-width: 100%; }
+
   .label {
     font-size: 11px;
     font-weight: 700;
@@ -58,20 +66,14 @@
     text-transform: uppercase;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  /* ─── NAV ─── */
+  /* ─── STICKY NAV ─── */
   nav {
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
     height: 60px;
-    background: rgba(244, 244, 241, 0.92);
+    background: rgba(244,244,241,0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.06);
@@ -83,16 +85,16 @@
 
   .nav-name {
     font-family: var(--heading-font);
-    font-weight: 700;
     font-size: 14px;
-    letter-spacing: 0.04em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--dark);
   }
 
   .nav-phone {
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 600;
     color: var(--accent);
     position: relative;
     padding-bottom: 2px;
@@ -104,7 +106,7 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1.5px;
     background: var(--accent);
     transition: width 0.2s ease;
   }
@@ -113,20 +115,17 @@
 
   /* ─── HERO ─── */
   .hero {
+    position: relative;
     min-height: 70vh;
     max-height: 680px;
     background-image:
-      linear-gradient(to bottom,
-        rgba(0,0,0,0.15) 0%,
-        rgba(0,0,0,0.6) 60%,
-        rgba(0,0,0,0.92) 100%),
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
       url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
-    padding: 0 clamp(24px, 6vw, 80px) clamp(40px, 7vw, 72px);
-    position: relative;
+    padding: 0 clamp(20px, 6vw, 80px) clamp(48px, 7vw, 80px);
   }
 
   .hero::before {
@@ -140,24 +139,27 @@
   }
 
   .hero-content {
-    max-width: 680px;
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-eyebrow {
     color: rgba(255,255,255,0.6);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .hero h1 {
     color: #fff;
     margin-bottom: 18px;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
   }
 
   .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 20px);
     color: rgba(255,255,255,0.8);
-    font-size: 19px;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
+    font-weight: 400;
     line-height: 1.5;
   }
 
@@ -165,23 +167,50 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    min-height: 54px;
+    padding: 0 32px;
     background: var(--accent);
     color: #fff;
     font-family: var(--heading-font);
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    padding: 0 32px;
-    min-height: 54px;
     border-radius: 2px;
     border: none;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
   }
 
   .btn-primary:hover {
-    background: #a51818;
+    background: #a01818;
+    transform: scale(1.01);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 32px;
+    background: #fff;
+    color: var(--accent);
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-white:hover {
+    background: #f0f0f0;
     transform: scale(1.01);
     box-shadow: var(--shadow-md);
   }
@@ -189,45 +218,38 @@
   /* ─── INFO BAR ─── */
   .info-bar {
     background: var(--dark);
+    padding: 28px clamp(20px, 6vw, 80px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-top: 4px solid var(--accent);
+    gap: 20px;
   }
 
-  .info-cell {
-    padding: 28px clamp(20px, 4vw, 48px);
-    border-right: 1px solid rgba(255,255,255,0.06);
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 
-  .info-cell:last-child { border-right: none; }
-
-  .info-label {
+  .info-item .label {
     color: rgba(255,255,255,0.4);
-    display: block;
-    margin-bottom: 6px;
   }
 
   .info-value {
-    color: #fff;
+    font-size: 18px;
     font-weight: 600;
-    font-size: 17px;
-  }
-
-  .info-value a {
     color: #fff;
+    font-family: var(--heading-font);
   }
 
-  .info-value a:hover { color: var(--accent); }
-
-  .rating-stars {
-    color: #F4B400;
-    font-size: 14px;
-    margin-left: 6px;
+  .info-item + .info-item {
+    border-left: 1px solid rgba(255,255,255,0.08);
+    padding-left: 20px;
   }
 
   /* ─── ABOUT ─── */
   .about {
-    padding: clamp(64px, 10vw, 100px) clamp(24px, 6vw, 80px);
+    padding: clamp(60px, 9vw, 100px) clamp(20px, 6vw, 80px);
+    background: var(--bg);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(40px, 6vw, 80px);
@@ -238,95 +260,175 @@
 
   .about-eyebrow {
     color: var(--accent);
-    display: block;
-    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
   }
 
-  .accent-rule {
+  .about-divider {
+    display: block;
     width: 40px;
     height: 1px;
     background: var(--accent);
-    margin: 16px 0 28px;
+    margin-top: 4px;
   }
 
   .about h2 {
+    margin-bottom: 28px;
     color: var(--dark);
-    margin-bottom: 0;
   }
 
-  .about-right {
-    padding-top: 8px;
-  }
-
-  .about-body p {
-    margin-bottom: 20px;
+  .about p {
     color: var(--text);
+    margin-bottom: 20px;
+    max-width: 520px;
   }
-
-  .about-body p:last-child { margin-bottom: 0; }
 
   .about-meta {
     margin-top: 36px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-top: 36px;
+    gap: 0;
     border-top: 1px solid rgba(0,0,0,0.08);
   }
 
-  .meta-item {
+  .meta-row {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .meta-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .meta-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--accent);
   }
 
   .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: rgba(26,26,26,0.45);
+    line-height: 1;
+    margin-bottom: 2px;
   }
 
-  .meta-value {
-    font-weight: 600;
+  .meta-val {
     font-size: 15px;
+    font-weight: 600;
     color: var(--dark);
+    line-height: 1.3;
   }
+
+  .about-right {
+    background: var(--bg-alt);
+    padding: 36px;
+    border-left: 5px solid var(--accent);
+    position: relative;
+  }
+
+  .about-right-heading {
+    font-family: var(--heading-font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .services-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .services-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .services-list li::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  .services-list li:last-child { border-bottom: none; }
 
   /* ─── HOURS & CONTACT ─── */
   .hours-contact {
     background: var(--bg-alt);
-    padding: clamp(56px, 9vw, 88px) clamp(24px, 6vw, 80px);
-    border-top: 1px solid rgba(0,0,0,0.06);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: clamp(50px, 8vw, 88px) clamp(20px, 6vw, 80px);
   }
 
-  .hours-header {
-    margin-bottom: 48px;
+  .hours-contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
   }
 
   .hours-eyebrow {
     color: var(--accent);
-    display: block;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hours-contact h2 {
+    color: var(--dark);
+    margin-bottom: 28px;
   }
 
   .rating-pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     background: var(--accent-light);
-    border: 1px solid rgba(196,30,30,0.18);
+    border: 1px solid rgba(196,30,30,0.2);
+    padding: 6px 14px;
     border-radius: 2px;
-    padding: 5px 14px;
+    margin-bottom: 28px;
+  }
+
+  .rating-pill .stars {
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .rating-pill .rating-text {
     font-size: 13px;
     font-weight: 700;
     color: var(--accent);
-    margin-top: 14px;
-  }
-
-  .hours-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(32px, 5vw, 64px);
-    align-items: start;
   }
 
   .hours-table {
@@ -335,7 +437,7 @@
   }
 
   .hours-table tr {
-    border-bottom: 1px solid rgba(0,0,0,0.07);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
   }
 
   .hours-table tr:last-child { border-bottom: none; }
@@ -345,40 +447,41 @@
     font-size: 15px;
   }
 
-  .hours-table .day {
+  .hours-table td:first-child {
     font-weight: 700;
     color: var(--dark);
-    width: 45%;
+    width: 48%;
   }
 
-  .hours-table .time {
+  .hours-table td:last-child {
     color: rgba(26,26,26,0.55);
     text-align: right;
   }
 
-  .hours-table tr.today .day,
-  .hours-table tr.today .time {
+  .hours-table tr.closed td:last-child {
     color: var(--accent);
+    font-weight: 600;
   }
 
   .contact-cards {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 8px;
   }
 
   .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
     background: var(--bg);
     border-left: 4px solid var(--accent);
-    border-radius: 0 2px 2px 0;
-    padding: 22px 24px;
+    padding: 22px 22px;
     min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
     box-shadow: var(--shadow-sm);
+    cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
   }
 
   .contact-card:hover {
@@ -386,119 +489,107 @@
     box-shadow: var(--shadow-md);
   }
 
+  .contact-card-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+
+  .contact-card-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent);
+  }
+
   .contact-card-label {
-    color: rgba(26,26,26,0.45);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(26,26,26,0.4);
+    margin-bottom: 3px;
   }
 
   .contact-card-value {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--dark);
-    font-family: var(--heading-font);
-  }
-
-  .contact-card-value a {
-    color: var(--accent);
-    transition: color 0.2s ease;
-  }
-
-  .contact-card-value a:hover { color: #a51818; }
-
-  .map-link {
-    font-size: 13px;
-    color: var(--accent);
+    font-size: 16px;
     font-weight: 600;
-    margin-top: 4px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+    color: var(--dark);
+    line-height: 1.3;
   }
 
-  .map-link:hover { color: #a51818; }
+  .contact-card-sub {
+    font-size: 13px;
+    color: rgba(26,26,26,0.5);
+    margin-top: 1px;
+  }
 
   /* ─── FINAL CTA ─── */
   .final-cta {
     background: var(--dark);
-    padding: clamp(56px, 8vw, 80px) clamp(24px, 6vw, 80px);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .final-cta::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 6px;
-    height: 100%;
-    background: var(--accent);
-  }
-
-  .cta-inner {
-    max-width: 640px;
+    padding: clamp(50px, 7vw, 76px) clamp(20px, 6vw, 80px);
+    border-left: 6px solid var(--accent);
   }
 
   .final-cta h2 {
     color: #fff;
+    max-width: 640px;
     margin-bottom: 28px;
   }
 
-  .final-cta .btn-primary {
-    margin-bottom: 20px;
-  }
-
-  .cta-subline {
+  .cta-sub {
+    margin-top: 20px;
     font-size: 15px;
     color: rgba(255,255,255,0.45);
-    margin-top: 16px;
   }
 
   /* ─── FOOTER ─── */
   footer {
     background: var(--bg-alt);
-    padding: 28px clamp(24px, 6vw, 80px);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 24px clamp(20px, 6vw, 80px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    gap: 16px;
     flex-wrap: wrap;
-    gap: 12px;
   }
 
-  .footer-biz {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--dark);
-  }
-
-  .footer-loc {
+  .footer-left {
     font-size: 12px;
-    color: rgba(26,26,26,0.45);
-    margin-top: 2px;
+    color: rgba(26,26,26,0.5);
   }
 
-  .footer-credit {
+  .footer-left strong {
+    font-weight: 700;
+    color: var(--dark);
+    font-family: var(--heading-font);
+    font-size: 13px;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .footer-right {
     font-size: 12px;
     color: rgba(26,26,26,0.4);
   }
 
-  .footer-credit a {
-    color: rgba(26,26,26,0.55);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  .footer-right a {
+    color: var(--accent);
+    font-weight: 600;
   }
 
-  .footer-credit a:hover { color: var(--accent); }
+  .footer-right a:hover { color: #a01818; }
 
-  /* ─── REVEAL ─── */
+  /* ─── REVEAL ANIMATION ─── */
   .reveal {
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94),
-                transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
   }
 
   .reveal.visible {
@@ -507,42 +598,39 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
+    .reveal { opacity: 1; transform: none; transition: none; }
   }
 
-  /* ─── MOBILE ─── */
+  /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     .about {
       grid-template-columns: 1fr;
-      gap: 32px;
     }
 
-    .hours-grid {
+    .about-right {
+      margin-top: 0;
+    }
+
+    .hours-contact-inner {
       grid-template-columns: 1fr;
-      gap: 40px;
     }
 
     .info-bar {
       grid-template-columns: 1fr;
+      gap: 16px;
     }
 
-    .info-cell {
-      border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 20px clamp(20px, 5vw, 40px);
+    .info-item + .info-item {
+      border-left: none;
+      padding-left: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 16px;
     }
-
-    .info-cell:last-child { border-bottom: none; }
   }
 
   @media (max-width: 480px) {
     .hero {
       min-height: 55vh;
-      padding: 0 20px 40px;
     }
 
     nav {
@@ -557,15 +645,22 @@
       font-size: 13px;
     }
 
-    .about,
-    .hours-contact,
-    .final-cta {
-      padding-left: 20px;
-      padding-right: 20px;
+    .about, .hours-contact, .final-cta {
+      padding: 3rem 20px;
+    }
+
+    .contact-cards {
+      flex-direction: column;
     }
 
     .contact-card {
       min-height: 48px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
   }
 </style>
@@ -581,120 +676,137 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <span class="label hero-eyebrow">Belden, MS  -  Auto Repair &amp; Tires</span>
-    <h1>McCord's Auto<br>Service, LLC</h1>
-    <p class="hero-tagline">Straight answers, fair prices, and tires that last  -  right here in Belden.</p>
+    <p class="hero-eyebrow label">Belden, MS &nbsp;·&nbsp; Auto Repair &amp; Tires</p>
+    <h1>McCord's<br>Auto Service</h1>
+    <p class="hero-tagline">Honest repairs and tires at a fair price  -  right here in Belden, no runaround.</p>
     <a href="tel:6626805286" class="btn-primary">Call (662) 680-5286</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="info-bar">
-  <div class="info-cell">
-    <span class="label info-label">Phone</span>
-    <span class="info-value"><a href="tel:6626805286">(662) 680-5286</a></span>
+  <div class="info-item">
+    <span class="label">Phone</span>
+    <span class="info-value">(662) 680-5286</span>
   </div>
-  <div class="info-cell">
-    <span class="label info-label">Location</span>
-    <span class="info-value">Belden, MS 38826</span>
+  <div class="info-item">
+    <span class="label">Location</span>
+    <span class="info-value">Belden, MS</span>
   </div>
-  <div class="info-cell">
-    <span class="label info-label">Google Rating</span>
-    <span class="info-value">4.9 / 5.0 <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+  <div class="info-item">
+    <span class="label">Google Rating</span>
+    <span class="info-value">4.9 / 5.0</span>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="about">
   <div class="about-left">
-    <span class="label about-eyebrow">About</span>
-    <div class="accent-rule"></div>
-    <h2 class="reveal">You need a shop you can actually trust  -  not just the closest one.</h2>
+    <div class="about-eyebrow">
+      <span class="label">About</span>
+      <span class="about-divider"></span>
+    </div>
+    <h2 class="reveal">When your car's giving you trouble, you need someone you can actually trust.</h2>
+    <p>We've been taking care of folks in Belden and the greater Tupelo area for years. We're not a chain  -  you're going to talk to the same people every time you come in, and we're going to tell you straight what your vehicle needs. Nothing more, nothing less.</p>
+    <p>Whether you're coming in for tires, an oil change, or something's gone wrong and you don't know what it is yet, we'll get you sorted out and back on the road. We treat every car like it belongs to a neighbor  -  because it usually does.</p>
 
     <div class="about-meta">
-      <div class="meta-item">
-        <span class="label meta-label">Address</span>
-        <span class="meta-value">551 Endville Rd, Belden, MS 38826</span>
+      <div class="meta-row">
+        <div class="meta-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div>
+          <div class="meta-label">Address</div>
+          <div class="meta-val">551 Endville Rd, Belden, MS 38826</div>
+        </div>
       </div>
-      <div class="meta-item">
-        <span class="label meta-label">Rating</span>
-        <span class="meta-value">4.9 Stars on Google</span>
+      <div class="meta-row">
+        <div class="meta-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <div>
+          <div class="meta-label">Google Rating</div>
+          <div class="meta-val">4.9 Stars  -  Consistently top-rated</div>
+        </div>
       </div>
-      <div class="meta-item">
-        <span class="label meta-label">Ownership</span>
-        <span class="meta-value">Locally Owned &amp; Operated</span>
+      <div class="meta-row">
+        <div class="meta-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <div class="meta-label">Ownership</div>
+          <div class="meta-val">Locally owned &amp; operated  -  Belden, MS</div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="about-right">
-    <div class="about-body">
-      <p>We've been taking care of folks in and around Belden for years, and it's pretty simple: we tell you what's wrong, we tell you what it'll cost, and we fix it right the first time. No upsells on stuff you don't need, no runaround.</p>
-      <p>Whether it's a set of new tires before a long trip or a check-engine light that's been stressing you out, bring it by. We're right off Endville Rd and we're easy to find. The Tupelo area deserves a shop that treats your car like their own  -  that's what we do every single day.</p>
-    </div>
+    <p class="about-right-heading">What We Handle</p>
+    <ul class="services-list">
+      <li>Tires  -  Sales, Mounting &amp; Balancing</li>
+      <li>Oil Changes &amp; Fluid Services</li>
+      <li>Brakes  -  Pads, Rotors &amp; Lines</li>
+      <li>Engine Diagnostics &amp; Repair</li>
+      <li>Suspension &amp; Steering</li>
+      <li>Alignment</li>
+      <li>A/C Service &amp; Recharge</li>
+      <li>Belts, Hoses &amp; Filters</li>
+      <li>Exhaust System Repair</li>
+      <li>General Maintenance</li>
+    </ul>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
-  <div class="hours-header">
-    <span class="label hours-eyebrow">Hours &amp; Contact</span>
-    <h2 class="reveal">Find us.</h2>
-    <div class="rating-pill">
-      <span>&#9733;</span> 4.9 on Google
-    </div>
-  </div>
-
-  <div class="hours-grid">
+  <div class="hours-contact-inner">
     <div>
+      <div class="hours-eyebrow">
+        <span class="label">Hours &amp; Contact</span>
+        <span style="display:block;width:40px;height:1px;background:var(--accent);margin-top:4px;"></span>
+      </div>
+      <h2 class="reveal">Find us.</h2>
+      <div class="rating-pill">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rating-text">4.9 on Google</span>
+      </div>
       <table class="hours-table">
         <tbody>
-          <tr>
-            <td class="day">Monday</td>
-            <td class="time">8:00 AM - 5:00 PM</td>
-          </tr>
-          <tr>
-            <td class="day">Tuesday</td>
-            <td class="time">8:00 AM - 5:00 PM</td>
-          </tr>
-          <tr>
-            <td class="day">Wednesday</td>
-            <td class="time">8:00 AM - 5:00 PM</td>
-          </tr>
-          <tr>
-            <td class="day">Thursday</td>
-            <td class="time">8:00 AM - 5:00 PM</td>
-          </tr>
-          <tr>
-            <td class="day">Friday</td>
-            <td class="time">8:00 AM - 5:00 PM</td>
-          </tr>
-          <tr>
-            <td class="day">Saturday</td>
-            <td class="time">Closed</td>
-          </tr>
-          <tr>
-            <td class="day">Sunday</td>
-            <td class="time">Closed</td>
-          </tr>
+          <tr><td>Monday</td><td>8:00 AM - 5:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>8:00 AM - 5:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>8:00 AM - 5:00 PM</td></tr>
+          <tr><td>Thursday</td><td>8:00 AM - 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>8:00 AM - 5:00 PM</td></tr>
+          <tr class="closed"><td>Saturday</td><td>Closed</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="contact-cards">
-      <a href="tel:6626805286" class="contact-card reveal">
-        <span class="label contact-card-label">Call Us</span>
-        <span class="contact-card-value">(662) 680-5286</span>
-      </a>
-      <div class="contact-card reveal">
-        <span class="label contact-card-label">Our Location</span>
-        <span class="contact-card-value">551 Endville Rd<br>Belden, MS 38826</span>
-        <a
-          href="https://maps.google.com/?q=551+Endville+Rd+Belden+MS+38826"
-          target="_blank"
-          rel="noopener"
-          class="map-link"
-        >Get Directions &rarr;</a>
+    <div>
+      <div style="height: 52px;"></div>
+      <div class="contact-cards">
+        <a href="tel:6626805286" class="contact-card reveal">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">Call Us</div>
+            <div class="contact-card-value">(662) 680-5286</div>
+            <div class="contact-card-sub">Tap to call directly</div>
+          </div>
+        </a>
+        <a href="https://maps.google.com/?q=551+Endville+Rd,+Belden,+MS+38826" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">Our Location</div>
+            <div class="contact-card-value">551 Endville Rd</div>
+            <div class="contact-card-sub">Belden, MS 38826  -  Get Directions</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -702,38 +814,5 @@
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="cta-inner">
-    <h2 class="reveal">Tires, repairs, and honest work  -  every time you pull in.</h2>
-    <a href="tel:6626805286" class="btn-primary">Call (662) 680-5286</a>
-    <p class="cta-subline">Open Monday through Friday, 8 to 5. We'll get you taken care of.</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-biz">McCord's Auto Service, LLC</div>
-    <div class="footer-loc">Belden, MS  -  Serving the Tupelo Area</div>
-  </div>
-  <div class="footer-credit">
-    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a>
-  </div>
-</footer>
-
-<script>
-  (function() {
-    var els = document.querySelectorAll('.reveal');
-    if (!els.length) return;
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    els.forEach(function(el) { observer.observe(el); });
-  })();
-</script>
-</body>
-</html>
+  <h2 class="reveal">Car problems don't wait.<br>Neither do we.</h2>
+  <a href="tel:6626805286" class="btn-white">Call (662) 680-5
