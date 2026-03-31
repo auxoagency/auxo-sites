@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peripheral Neuropathy and Chiropractic Care in Tupelo, MS</title>
+<style>
+  :root {
+    --accent: #5F8E8A;
+    --accent-light: rgba(95, 142, 138, 0.08);
+    --bg: #F5F0EB;
+    --bg-alt: #E8F0EA;
+    --dark: #111F1E;
+    --text: #2D2A26;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --font-head: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  h1, h2, h3 { font-family: var(--font-head); }
+
+  h1 {
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(245, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+
+  .nav-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-phone {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--accent);
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.2s;
+  }
+
+  .nav-phone:hover::after { width: 100%; }
+  .nav-phone:hover { color: #4a7773; }
+
+  /* ─── HERO ─── */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.60) 60%,
+        rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 3rem 4.5rem;
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 18px;
+    color: rgba(255,255,255,0.80);
+    line-height: 1.55;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    font-weight: 400;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    padding: 0 28px;
+    min-height: 54px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-primary:hover {
+    background: #4a7773;
+    transform: scale(1.01);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ─── INFO BAR ─── */
+  .info-bar {
+    width: 100%;
+    background: var(--dark);
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-value {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  /* ─── ABOUT ─── */
+  .about {
+    padding: 6rem 3rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .about-text p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .meta-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.85;
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+
+  /* ─── HOURS & CONTACT ─── */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: 5rem 3rem;
+  }
+
+  .hours-contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hours-eyebrow {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .hours-contact h2 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--accent-light);
+    border: 1px solid rgba(95,142,138,0.25);
+    border-radius: 100px;
+    padding: 0.3rem 1rem;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 0.65rem 0;
+    font-size: 15px;
+  }
+
+  .day-cell {
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .time-cell {
+    text-align: right;
+    color: rgba(45,42,38,0.6);
+    font-size: 14px;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+    padding: 1.2rem 1.4rem;
+    background: #fff;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-card-value {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--dark);
+    line-height: 1.35;
+  }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    background: var(--dark);
+    padding: 4.5rem 3rem;
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .final-cta .btn-primary {
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 1rem;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--bg-alt);
+    padding: 1.75rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-left {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.7;
+  }
+
+  .footer-right {
+    font-size: 12px;
+    color: var(--text);
+    opacity: 0.5;
+  }
+
+  .footer-right a {
+    color: var(--accent);
+    transition: opacity 0.2s;
+  }
+
+  .footer-right a:hover { opacity: 0.75; }
+
+  /* ─── REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem 3.5rem;
+    }
+
+    .hours-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      padding: 1.75rem 1.5rem;
+      gap: 1.25rem;
+    }
+
+    .hours-contact { padding: 4rem 1.5rem; }
+    .final-cta { padding: 3.5rem 1.5rem; }
+    footer { padding: 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 0 16px; }
+    .nav-name { font-size: 12px; }
+    .nav-phone { font-size: 12px; }
+
+    .hero {
+      min-height: 55vh;
+      padding: 3rem 1.25rem 3.5rem;
+    }
+
+    .about { padding: 3rem 20px 2.5rem; }
+    .hours-contact { padding: 3rem 20px; }
+    .final-cta { padding: 3rem 20px; }
+    footer { padding: 1.25rem 20px; flex-direction: column; align-items: flex-start; }
+
+    .contact-card-value { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Chiropractic Physician Center of Tupelo</span>
+  <a class="nav-phone" href="tel:6628441414">(662) 844-1414</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tupelo, MS &nbsp;·&nbsp; Chiropractic &amp; Neuropathy Care</p>
+    <h1>Matt Mackey, DC</h1>
+    <p class="hero-tagline">Real nerve pain relief  -  without the guesswork  -  right here in Tupelo.</p>
+    <a class="btn-primary" href="tel:6628441414">Call (662) 844-1414</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="info-label">Phone</span>
+    <span class="info-value">(662) 844-1414</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Location</span>
+    <span class="info-value">Tupelo, MS</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">5.0 ★ Stars</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="about">
+    <div class="about-text">
+      <p class="label about-eyebrow">About Dr. Mackey</p>
+      <div class="accent-rule"></div>
+      <h2 class="reveal">When the pain in your hands or feet keeps you from living your life, you deserve real answers.</h2>
+      <p>I've been helping people in Tupelo get back on their feet  -  literally  -  for years now. A lot of my patients come in after they've been told to "just manage it." That's not good enough. If you're dealing with tingling, burning, or numbness from peripheral neuropathy, there's a good chance we can actually do something about it, not just mask it.</p>
+      <p>We're not a high-volume mill where you're in and out in five minutes. When you come in, I want to understand what's going on with you specifically. We'll put together a plan that makes sense for your body and your schedule. That's just how we do things here.</p>
+    </div>
+    <div class="about-meta">
+      <div class="meta-item">
+        <span class="meta-label">Address</span>
+        <span class="meta-value">398 N Eason Blvd<br>Tupelo, MS 38804</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Patient Rating</span>
+        <span class="meta-value">5.0 out of 5  -  Google</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Practice</span>
+        <span class="meta-value">Locally owned &amp; operated<br>in Tupelo, MS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="hours-contact-inner">
+    <p class="label hours-eyebrow">Hours &amp; Contact</p>
+    <h2 class="reveal">Find us.</h2>
+    <div class="rating-pill">★ 5.0 &nbsp;·&nbsp; Google Verified</div>
+
+    <div class="hours-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr>
+              <td class="day-cell">Monday</td>
+              <td class="time-cell">8:00 AM - 5:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Tuesday</td>
+              <td class="time-cell">8:00 AM - 5:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Wednesday</td>
+              <td class="time-cell">8:00 AM - 5:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Thursday</td>
+              <td class="time-cell">8:00 AM - 5:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Friday</td>
+              <td class="time-cell">Closed</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Saturday</td>
+              <td class="time-cell">Closed</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Sunday</td>
+              <td class="time-cell">Closed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="contact-cards">
+        <a class="contact-card reveal" href="tel:6628441414">
+          <span class="contact-card-label">Call Us</span>
+          <span class="contact-card-value">(662) 844-1414</span>
+        </a>
+        <a class="contact-card reveal" href="https://maps.google.com/?q=398+N+Eason+Blvd,+Tupelo,+MS+38804" target="_blank" rel="noopener">
+          <span class="contact-card-label">Get Directions</span>
+          <span class="contact-card-value">398 N Eason Blvd<br>Tupelo, MS 38804</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Stop waiting on nerve pain to fix itself  -  it won't.</h2>
+  <br>
+  <a class="btn-primary" href="tel:6628441414">Call (662) 844-1414</a>
+  <p class="cta-sub">We're open Monday - Thursday, 8 AM to 5 PM. Give us a call and let's talk.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Chiropractic Physician Center of Tupelo &nbsp;·&nbsp; Tupelo, MS</div>
+  <div class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
+</footer>
+
+<script>
+  (function() {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function(el) { observer.observe(el); });
+  })();
+</script>
+</body>
+</html>
