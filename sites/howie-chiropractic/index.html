@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Howie Chiropractic - Chiropractor in Tupelo, MS</title>
+<style>
+:root {
+  --accent: #5F8E8A;
+  --accent-light: rgba(95, 142, 138, 0.08);
+  --bg: #F5F0EB;
+  --bg-alt: #E8F0EA;
+  --dark: #111F1E;
+  --text: #2D2A26;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+  --font-head: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 60px;
+  background: rgba(245, 240, 235, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+
+.nav-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--dark);
+}
+
+.nav-phone {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+  padding-bottom: 1px;
+}
+
+.nav-phone::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.nav-phone:hover::after { width: 100%; }
+.nav-phone:hover { color: var(--dark); }
+
+/* HERO */
+.hero {
+  width: 100%;
+  min-height: 70vh;
+  max-height: 680px;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
+    url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 64px 72px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(38px, 9vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.93;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-tagline {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 32px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: #4a716d;
+  transform: scale(1.01);
+  color: #fff;
+}
+
+/* INFO BAR */
+.info-bar {
+  background: var(--dark);
+  padding: 28px 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-item + .info-item {
+  border-left: 1px solid rgba(255,255,255,0.08);
+  padding-left: 32px;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 64px 90px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-main {}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.accent-rule {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 8px 0 28px;
+}
+
+.about h2 {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.about p {
+  color: var(--text);
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 20px;
+  background: var(--accent-light);
+  border-left: 2px solid var(--accent);
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.meta-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  background: var(--bg-alt);
+  padding: 90px 64px;
+}
+
+.hours-contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hours-contact h2 {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--dark);
+  margin-bottom: 40px;
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 32px;
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 11px 0;
+  font-size: 15px;
+}
+
+.hours-table td:first-child {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.hours-table td:last-child {
+  color: rgba(45,42,38,0.6);
+  text-align: right;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 24px;
+  background: #fff;
+  border-left: 3px solid var(--accent);
+  box-shadow: var(--shadow-sm);
+  min-height: 80px;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.contact-card-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.contact-card-sub {
+  font-size: 13px;
+  color: rgba(45,42,38,0.55);
+  margin-top: 2px;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--dark);
+  padding: 72px 64px;
+  text-align: left;
+}
+
+.final-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.final-cta .btn-primary {
+  margin-bottom: 20px;
+}
+
+.final-cta-note {
+  font-size: 15px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid rgba(0,0,0,0.07);
+  padding: 28px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.footer-brand span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(45,42,38,0.45);
+  margin-top: 2px;
+}
+
+.footer-credit {
+  font-size: 12px;
+  color: rgba(45,42,38,0.4);
+}
+
+.footer-credit a {
+  color: var(--accent);
+}
+
+.footer-credit a:hover {
+  color: var(--dark);
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 24px; }
+  .hero { padding: 0 28px 56px; }
+  .info-bar { padding: 24px 28px; grid-template-columns: 1fr; gap: 20px; }
+  .info-item + .info-item { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; }
+  .about { padding: 72px 28px; grid-template-columns: 1fr; gap: 48px; }
+  .hours-contact { padding: 72px 28px; }
+  .hours-contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .final-cta { padding: 64px 28px; }
+  footer { padding: 24px 28px; flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+
+@media (max-width: 480px) {
+  nav { height: auto; padding: 12px 20px; flex-wrap: wrap; gap: 4px; }
+  .nav-name { font-size: 12px; }
+  .nav-phone { font-size: 12px; }
+  .hero { min-height: 55vh; padding: 0 20px 48px; }
+  .hero h1 { font-size: clamp(34px, 10vw, 44px); }
+  .hero-tagline { font-size: 16px; }
+  .about { padding: 56px 20px; }
+  .hours-contact { padding: 56px 20px; }
+  .final-cta { padding: 56px 20px; }
+  footer { padding: 24px 20px; }
+  .contact-card { min-height: 48px; }
+  .btn-primary { min-height: 52px; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Howie Chiropractic</span>
+  <a class="nav-phone" href="tel:6628412775">(662) 841-2775</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Tupelo, MS &nbsp;·&nbsp; Chiropractic Care</span>
+    <h1>Howie Chiropractic</h1>
+    <p class="hero-tagline">Real relief for real people  -  without the long wait or the runaround.</p>
+    <a class="btn-primary" href="tel:6628412775">Call (662) 841-2775</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="info-label">Phone</span>
+    <span class="info-value">(662) 841-2775</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Location</span>
+    <span class="info-value">Tupelo, MS</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">5.0 ★  -  Top Rated</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section style="background: var(--bg);">
+  <div class="about">
+    <div class="about-main">
+      <span class="eyebrow">About</span>
+      <span class="accent-rule"></span>
+      <h2 class="reveal">When your back's giving you trouble, you don't want to wait weeks to feel better.</h2>
+      <p>That's exactly why we've built Howie Chiropractic the way we have  -  straightforward care, real results, and a staff that actually listens. We're right here on West Main in Tupelo, and we've been helping our neighbors move, sleep, and work without the kind of pain that slows everything down.</p>
+      <p>Whether it's a stiff neck from staring at a screen all day or something that's been nagging you for years, we'll take a look at what's actually going on and put together a plan that makes sense for you  -  not a one-size-fits-all routine. Come see us and let's get you feeling like yourself again.</p>
+    </div>
+    <div class="about-meta">
+      <div class="meta-item">
+        <span class="meta-label">Address</span>
+        <span class="meta-value">1602 W Main St<br>Tupelo, MS 38801</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Google Rating</span>
+        <span class="meta-value">5.0 out of 5 Stars</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Ownership</span>
+        <span class="meta-value">Locally Owned &amp; Operated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="hours-contact-inner">
+    <span class="eyebrow">Hours &amp; Contact</span>
+    <span class="accent-rule"></span>
+    <div class="rating-pill">★ 5.0 Google Rating</div>
+    <h2 class="reveal">Find us.</h2>
+    <div class="hours-contact-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>8:00 AM - 1:00 PM, 3:00 - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>3:00 - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>8:00 AM - 1:00 PM, 3:00 - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>3:00 - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>8:00 AM - 1:00 PM, 3:00 - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>10:00 AM - 12:00 PM</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Closed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card reveal" href="tel:6628412775">
+          <span class="contact-card-label">Phone</span>
+          <span class="contact-card-value">(662) 841-2775</span>
+          <span class="contact-card-sub">Tap to call now</span>
+        </a>
+        <a class="contact-card reveal" href="https://maps.google.com/?q=1602+W+Main+St,+Tupelo,+MS+38801" target="_blank" rel="noopener">
+          <span class="contact-card-label">Address</span>
+          <span class="contact-card-value">1602 W Main St<br>Tupelo, MS 38801</span>
+          <span class="contact-card-sub">Open in Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2 class="reveal">Stop putting off the relief you've been needing.</h2>
+    <a class="btn-primary" href="tel:6628412775">Call (662) 841-2775</a>
+    <p class="final-cta-note">We're on West Main in Tupelo  -  give us a call and we'll get you in.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    Howie Chiropractic
+    <span>Tupelo, MS</span>
+  </div>
+  <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+</script>
+</body>
+</html>
