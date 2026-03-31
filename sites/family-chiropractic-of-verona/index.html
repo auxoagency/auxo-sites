@@ -7,29 +7,23 @@
 <style>
   :root {
     --accent: #5F8E8A;
-    --accent-light: rgba(95,142,138,0.08);
+    --accent-light: rgba(95, 142, 138, 0.08);
     --bg: #F5F0EB;
     --bg-alt: #E8F0EA;
     --dark: #111F1E;
     --text: #2D2A26;
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
     --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
-    --font-heading: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --heading-font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    font-family: var(--font-body);
+    font-family: var(--body-font);
     font-size: 17px;
     line-height: 1.75;
     color: var(--text);
@@ -37,8 +31,8 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3 {
-    font-family: var(--font-heading);
+  h1, h2, h3, .nav-name {
+    font-family: var(--heading-font);
   }
 
   h1 {
@@ -68,26 +62,24 @@
     transition: color 0.2s ease;
   }
 
-  /* NAV */
+  /* ── NAV ── */
   nav {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    z-index: 100;
+    width: 100%;
     height: 60px;
-    background: rgba(245,240,235,0.92);
+    background: rgba(245, 240, 235, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.06);
-    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 clamp(20px, 5vw, 60px);
+    padding: 0 clamp(20px, 5vw, 64px);
   }
 
   .nav-name {
-    font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 700;
     color: var(--dark);
@@ -113,12 +105,12 @@
     transition: width 0.2s ease;
   }
 
-  .nav-phone:hover::after {
-    width: 100%;
-  }
+  .nav-phone:hover::after { width: 100%; }
+  .nav-phone:hover { color: var(--dark); }
 
-  /* HERO */
+  /* ── HERO ── */
   .hero {
+    width: 100%;
     min-height: 70vh;
     max-height: 680px;
     background-image:
@@ -128,8 +120,7 @@
     background-position: center;
     display: flex;
     align-items: flex-end;
-    padding: 100px clamp(20px, 6vw, 80px) clamp(50px, 8vw, 90px);
-    position: relative;
+    padding: 0 clamp(20px, 5vw, 80px) clamp(40px, 6vw, 72px);
   }
 
   .hero-content {
@@ -137,8 +128,12 @@
   }
 
   .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: rgba(255,255,255,0.6);
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 
   .hero h1 {
@@ -149,94 +144,106 @@
   .hero-tagline {
     font-size: clamp(16px, 2.5vw, 19px);
     color: rgba(255,255,255,0.8);
-    margin-bottom: 36px;
     line-height: 1.5;
-    max-width: 480px;
+    margin-bottom: 32px;
+    font-weight: 400;
+    max-width: 500px;
   }
 
   .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 54px;
-    padding: 0 36px;
     background: var(--accent);
     color: #fff;
-    font-family: var(--font-heading);
-    font-size: 15px;
+    font-family: var(--body-font);
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    min-height: 54px;
+    padding: 0 32px;
     border-radius: 100px;
+    border: none;
+    cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
   }
 
   .btn-primary:hover {
-    background: #4a7370;
+    background: #4d7470;
     transform: scale(1.01);
-    box-shadow: 0 4px 16px rgba(95,142,138,0.35);
+    box-shadow: var(--shadow-md);
+    color: #fff;
   }
 
   .btn-white {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: 700;
     min-height: 54px;
     padding: 0 36px;
-    background: #fff;
-    color: var(--accent);
-    font-family: var(--font-heading);
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     border-radius: 100px;
-    transition: background 0.15s ease, transform 0.15s ease;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none;
     box-shadow: var(--shadow-md);
   }
 
   .btn-white:hover {
-    background: #f0f0f0;
+    background: #4d7470;
     transform: scale(1.01);
+    color: #fff;
   }
 
-  /* INFO BAR */
+  /* ── INFO BAR ── */
   .info-bar {
     background: var(--dark);
-    padding: 28px clamp(20px, 6vw, 80px);
+    padding: 28px clamp(20px, 5vw, 80px);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
   }
 
   .info-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
 
-  .info-item .label {
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: rgba(255,255,255,0.4);
   }
 
-  .info-item .info-value {
-    font-size: 18px;
+  .info-value {
+    font-size: 16px;
     font-weight: 600;
     color: #fff;
-    font-family: var(--font-heading);
-    letter-spacing: -0.01em;
+    line-height: 1.3;
   }
 
-  .info-item:not(:last-child) {
-    border-right: 1px solid rgba(255,255,255,0.08);
+  .info-item:nth-child(2) {
+    text-align: center;
   }
 
-  /* ABOUT */
+  .info-item:nth-child(3) {
+    text-align: right;
+  }
+
+  /* ── ABOUT ── */
   .about {
-    padding: clamp(60px, 8vw, 110px) clamp(20px, 6vw, 80px);
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 80px);
+    background: var(--bg);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(40px, 6vw, 80px);
@@ -247,96 +254,96 @@
 
   .about-eyebrow {
     color: var(--accent);
-    margin-bottom: 10px;
-    display: block;
+    margin-bottom: 6px;
   }
 
   .accent-rule {
     width: 40px;
     height: 1px;
     background: var(--accent);
-    margin: 14px 0 28px;
+    margin: 12px 0 28px;
   }
 
-  .about h2 {
+  .about-left h2 {
     color: var(--dark);
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
-  .about p {
+  .about-left p {
+    font-size: 17px;
+    line-height: 1.75;
     color: var(--text);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+  }
+
+  .about-left p:last-of-type {
+    margin-bottom: 0;
   }
 
   .about-meta {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 10px;
+    gap: 16px;
+    background: var(--accent-light);
+    border-left: 2px solid var(--accent);
+    padding: 28px 24px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 8px;
   }
 
-  .meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  .meta-item {}
 
-  .meta-item .label {
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--accent);
+    margin-bottom: 2px;
   }
 
-  .meta-item span:last-child {
+  .meta-value {
     font-size: 15px;
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  /* HOURS & CONTACT */
-  .hours-section {
-    background: var(--bg-alt);
-    padding: clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px);
-  }
-
-  .hours-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .hours-eyebrow {
-    color: var(--accent);
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .hours-inner h2 {
+    font-weight: 600;
     color: var(--dark);
-    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  /* ── HOURS & CONTACT ── */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: clamp(60px, 8vw, 90px) clamp(20px, 5vw, 80px);
+  }
+
+  .hours-contact-eyebrow {
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .hours-contact h2 {
+    color: var(--dark);
+    margin-bottom: 8px;
   }
 
   .rating-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: var(--accent-light);
-    border: 1px solid rgba(95,142,138,0.2);
-    border-radius: 100px;
-    padding: 6px 16px;
+    border: 1px solid rgba(95, 142, 138, 0.2);
+    color: var(--accent);
     font-size: 13px;
     font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-    margin-bottom: 48px;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
 
-  .rating-star {
-    color: #e9a84c;
-    font-style: normal;
-  }
-
-  .hours-grid {
+  .hours-contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 80px);
+    gap: clamp(30px, 5vw, 60px);
     align-items: start;
   }
 
@@ -354,19 +361,24 @@
   }
 
   .hours-table td {
-    padding: 11px 0;
+    padding: 10px 0;
     font-size: 15px;
+    line-height: 1.4;
   }
 
   .hours-table td:first-child {
     font-weight: 700;
     color: var(--dark);
-    width: 50%;
+    width: 45%;
   }
 
   .hours-table td:last-child {
-    color: rgba(45,42,38,0.6);
+    color: #6B6560;
     text-align: right;
+  }
+
+  .hours-table tr.today td {
+    color: var(--accent);
   }
 
   .hours-table tr.today td:first-child {
@@ -383,15 +395,13 @@
     background: var(--bg);
     border-left: 3px solid var(--accent);
     border-radius: 0 8px 8px 0;
-    padding: 22px 24px;
+    padding: 20px 22px;
     min-height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
     box-shadow: var(--shadow-sm);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
     text-decoration: none;
     color: inherit;
   }
@@ -399,84 +409,101 @@
   .contact-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
+    color: inherit;
   }
 
-  .contact-card .label {
-    color: var(--accent);
-  }
-
-  .contact-card .card-value {
-    font-size: 18px;
+  .contact-card-label {
+    font-size: 11px;
     font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .contact-card-value {
+    font-size: 16px;
+    font-weight: 600;
     color: var(--dark);
-    font-family: var(--font-heading);
-    letter-spacing: -0.01em;
+    line-height: 1.35;
   }
 
-  .contact-card .card-sub {
+  .contact-card-sub {
     font-size: 13px;
-    color: rgba(45,42,38,0.55);
+    color: #6B6560;
+    margin-top: 2px;
   }
 
-  /* FINAL CTA */
+  /* ── FINAL CTA ── */
   .final-cta {
     background: var(--dark);
-    padding: clamp(60px, 7vw, 90px) clamp(20px, 6vw, 80px);
+    padding: clamp(50px, 7vw, 80px) clamp(20px, 5vw, 80px);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .final-cta h2 {
     color: #fff;
-    margin-bottom: 20px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .cta-sub {
-    font-size: 15px;
-    color: rgba(255,255,255,0.5);
-    margin-top: 20px;
+  .final-cta-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    max-width: 420px;
+    margin-top: -4px;
   }
 
-  /* FOOTER */
+  /* ── FOOTER ── */
   footer {
     background: var(--bg-alt);
-    padding: 24px clamp(20px, 6vw, 80px);
+    padding: 24px clamp(20px, 5vw, 80px);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     border-top: 1px solid rgba(0,0,0,0.06);
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
   }
 
   .footer-left {
     font-size: 12px;
-    color: rgba(45,42,38,0.5);
-    font-family: var(--font-heading);
     font-weight: 600;
+    color: var(--text);
+    font-family: var(--heading-font);
+  }
+
+  .footer-left span {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: #8A8580;
+    margin-top: 1px;
+    font-family: var(--body-font);
   }
 
   .footer-right {
     font-size: 12px;
-    color: rgba(45,42,38,0.4);
+    color: #8A8580;
   }
 
   .footer-right a {
     color: var(--accent);
-    transition: color 0.2s ease;
+    font-weight: 600;
   }
 
   .footer-right a:hover {
     color: var(--dark);
   }
 
-  /* REVEAL ANIMATION */
+  /* ── REVEAL ── */
   .reveal {
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .reveal.visible {
@@ -492,13 +519,13 @@
     }
   }
 
-  /* MOBILE */
-  @media (max-width: 700px) {
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
     .about {
       grid-template-columns: 1fr;
     }
 
-    .hours-grid {
+    .hours-contact-grid {
       grid-template-columns: 1fr;
     }
 
@@ -507,29 +534,19 @@
       gap: 20px;
     }
 
-    .info-item:not(:last-child) {
-      border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding-bottom: 20px;
+    .info-item:nth-child(2),
+    .info-item:nth-child(3) {
+      text-align: left;
     }
   }
 
   @media (max-width: 480px) {
     .hero {
       min-height: 55vh;
-      padding-bottom: 50px;
     }
 
-    section, .about, .hours-section, .final-cta {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    .about {
-      padding-left: 20px;
-      padding-right: 20px;
+    nav {
+      padding: 0 20px;
     }
 
     .nav-name {
@@ -540,14 +557,26 @@
       font-size: 13px;
     }
 
-    .contact-card {
-      min-height: 48px;
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding: 3rem 20px;
     }
 
-    .btn-primary, .btn-white {
-      min-height: 48px;
-      padding: 0 28px;
-      font-size: 14px;
+    .btn-primary,
+    .btn-white {
+      min-height: 54px;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .contact-card {
+      min-height: 80px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 </style>
@@ -563,9 +592,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <span class="label hero-eyebrow">Verona, MS &nbsp;·&nbsp; Chiropractic Care</span>
-    <h1>Family Chiropractic of Verona</h1>
-    <p class="hero-tagline">Real relief for neck, back, and joint pain  -  without a long wait or a big bill.</p>
+    <p class="hero-eyebrow">Verona, MS &nbsp;·&nbsp; Chiropractic Care</p>
+    <h1>Family Chiropractic<br>of Verona</h1>
+    <p class="hero-tagline">Real relief for neck, back, and joint pain  -  without the long wait or the runaround.</p>
     <a href="tel:6625664440" class="btn-primary">Call (662) 566-4440</a>
   </div>
 </section>
@@ -573,131 +602,138 @@
 <!-- INFO BAR -->
 <div class="info-bar">
   <div class="info-item">
-    <span class="label">Phone</span>
+    <span class="info-label">Phone</span>
     <span class="info-value">(662) 566-4440</span>
   </div>
   <div class="info-item">
-    <span class="label">Location</span>
+    <span class="info-label">Location</span>
     <span class="info-value">Verona, MS</span>
   </div>
   <div class="info-item">
-    <span class="label">Google Rating</span>
-    <span class="info-value">5.0 ★ &nbsp;Perfect</span>
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">5.0 / 5 Stars</span>
   </div>
 </div>
 
 <!-- ABOUT -->
-<div class="about">
+<section class="about">
   <div class="about-left">
-    <span class="label about-eyebrow">About</span>
+    <p class="label about-eyebrow">About</p>
     <div class="accent-rule"></div>
-    <h2 class="reveal">You shouldn't have to live with pain just because life got busy.</h2>
-    <p>We know how it goes  -  you tweak your back lifting something, or you wake up with that neck stiffness that just won't quit, and before you know it weeks have gone by. That's exactly why we're here in Verona. We make it easy to actually get in, get adjusted, and get back to doing what you need to do.</p>
-    <p>We see families, kids, athletes, and folks who've just been putting this off too long. No judgment, no pushy treatment plans  -  just honest chiropractic care from people who live in this community and genuinely want to help their neighbors feel better.</p>
+    <h2 class="reveal">You shouldn't have to live with pain that's been slowing you down for years.</h2>
+    <p>Whether you're dealing with a stiff neck from desk work, a back that went out moving furniture, or headaches that just won't quit  -  we see a lot of that here in the Tupelo area. We're a small practice, and that means you're not just a number on a chart. We take our time, figure out what's actually going on, and put together a care plan that makes sense for your life.</p>
+    <p>We've been serving families in Verona, Pontotoc, and the surrounding communities for years, and most of our patients come back because they finally felt heard. Give us a call  -  we're easy to reach and our hours are built around working families.</p>
   </div>
-  <div class="about-meta">
-    <div class="meta-item">
-      <span class="label">Address</span>
-      <span>5047 N Raymond Ave<br>Verona, MS 38879</span>
-    </div>
-    <div class="meta-item">
-      <span class="label">Google Rating</span>
-      <span>5.0 out of 5 stars</span>
-    </div>
-    <div class="meta-item">
-      <span class="label">Practice Type</span>
-      <span>Locally Owned Family Chiropractic</span>
-    </div>
-    <div class="meta-item">
-      <span class="label">Serving</span>
-      <span>Verona, Tupelo &amp; Pontotoc, MS</span>
+  <div class="about-right">
+    <div class="about-meta">
+      <div class="meta-item">
+        <p class="meta-label">Address</p>
+        <p class="meta-value">5047 N Raymond Ave<br>Verona, MS 38879</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Google Rating</p>
+        <p class="meta-value">5.0 out of 5 Stars</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Practice Type</p>
+        <p class="meta-value">Locally Owned &amp; Family-Focused</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- HOURS & CONTACT -->
-<section class="hours-section">
-  <div class="hours-inner">
-    <span class="label hours-eyebrow">Hours &amp; Contact</span>
-    <h2 class="reveal">Find us.</h2>
-    <div class="rating-pill">
-      <i class="rating-star">★</i> 5.0 Rating on Google
+<section class="hours-contact">
+  <p class="label hours-contact-eyebrow">Hours &amp; Contact</p>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">
+    ★ 5.0 Google Rating
+  </div>
+  <div class="hours-contact-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>3:00 - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>3:00 - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>3:00 - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>12:00 - 1:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="hours-grid">
-      <div>
-        <table class="hours-table">
-          <tbody>
-            <tr>
-              <td>Monday</td>
-              <td>Closed</td>
-            </tr>
-            <tr>
-              <td>Tuesday</td>
-              <td>3:00 - 6:00 PM</td>
-            </tr>
-            <tr>
-              <td>Wednesday</td>
-              <td>Closed</td>
-            </tr>
-            <tr>
-              <td>Thursday</td>
-              <td>3:00 - 6:00 PM</td>
-            </tr>
-            <tr>
-              <td>Friday</td>
-              <td>3:00 - 6:00 PM</td>
-            </tr>
-            <tr>
-              <td>Saturday</td>
-              <td>12:00 - 1:00 PM</td>
-            </tr>
-            <tr>
-              <td>Sunday</td>
-              <td>Closed</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="contact-cards">
-        <a href="tel:6625664440" class="contact-card reveal">
-          <span class="label">Call or Text</span>
-          <span class="card-value">(662) 566-4440</span>
-          <span class="card-sub">Tap to call now</span>
-        </a>
-        <a href="https://maps.google.com/?q=5047+N+Raymond+Ave,+Verona,+MS+38879" target="_blank" rel="noopener" class="contact-card reveal">
-          <span class="label">Address</span>
-          <span class="card-value">5047 N Raymond Ave</span>
-          <span class="card-sub">Verona, MS 38879 &nbsp; -  Get Directions</span>
-        </a>
-      </div>
+    <div class="contact-cards">
+      <a href="tel:6625664440" class="contact-card reveal">
+        <p class="contact-card-label">Phone</p>
+        <p class="contact-card-value">(662) 566-4440</p>
+        <p class="contact-card-sub">Tap to call directly</p>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=5047+N+Raymond+Ave+Verona+MS+38879" target="_blank" rel="noopener" class="contact-card reveal">
+        <p class="contact-card-label">Address</p>
+        <p class="contact-card-value">5047 N Raymond Ave</p>
+        <p class="contact-card-sub">Verona, MS 38879  -  Get Directions</p>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <h2 class="reveal">Your back's been telling you something. Let's actually fix it.</h2>
+  <h2 class="reveal">Back pain, neck stiffness, headaches  -  let's actually fix it.</h2>
+  <p class="final-cta-sub">We keep our schedule manageable so we can give you the attention you deserve. Call and we'll get you set up.</p>
   <a href="tel:6625664440" class="btn-white">Call (662) 566-4440</a>
-  <p class="cta-sub">We're in Verona and we'd love to see you this week.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">Family Chiropractic of Verona &nbsp;·&nbsp; Verona, MS</div>
-  <div class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
+  <div class="footer-left">
+    Family Chiropractic of Verona
+    <span>Verona, MS &nbsp;·&nbsp; Serving Tupelo &amp; Pontotoc</span>
+  </div>
+  <div class="footer-right">
+    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a>
+  </div>
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  (function() {
+    var elements = document.querySelectorAll('.reveal');
+    if (!elements.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    elements.forEach(function(el) {
+      observer.observe(el);
     });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
+  })();
 </script>
+
 </body>
 </html>
