@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Chiropractic: Pontotoc, Tupelo, Verona</title>
+<style>
+  :root {
+    --accent: #5F8E8A;
+    --accent-light: rgba(95, 142, 138, 0.08);
+    --bg: #F5F0EB;
+    --bg-alt: #E8F0EA;
+    --dark: #111F1E;
+    --text: #2D2A26;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --heading-font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body-font);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .nav-name {
+    font-family: var(--heading-font);
+  }
+
+  h1 {
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(245, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 5vw, 60px);
+  }
+
+  .nav-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-phone:hover::after { width: 100%; }
+  .nav-phone:hover { color: var(--dark); }
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(20px, 6vw, 80px) clamp(3rem, 6vw, 5rem);
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 19px);
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 480px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0 2rem;
+    min-height: 54px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:hover {
+    background: #4a7370;
+    transform: scale(1.01);
+  }
+
+  .btn-dark {
+    background: #fff;
+    color: var(--dark);
+  }
+
+  .btn-dark:hover {
+    background: rgba(255,255,255,0.88);
+    transform: scale(1.01);
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--dark);
+    padding: 2rem clamp(20px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .info-item .label {
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-item .value {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .info-item .value a {
+    color: #fff;
+    transition: color 0.2s;
+  }
+
+  .info-item .value a:hover { color: var(--accent); }
+
+  /* ABOUT */
+  .about {
+    padding: clamp(4rem, 8vw, 7rem) clamp(20px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+    background: var(--bg);
+  }
+
+  .about-left {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .about h2 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 17px;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--accent-light);
+    border-radius: 8px;
+  }
+
+  .meta-item .label {
+    color: var(--accent);
+  }
+
+  .meta-item .meta-value {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .rating-stars {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  /* HOURS & CONTACT */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: clamp(3.5rem, 7vw, 6rem) clamp(20px, 6vw, 80px);
+  }
+
+  .hours-eyebrow {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .hours-contact h2 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--accent-light);
+    border: 1px solid rgba(95,142,138,0.2);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(95,142,138,0.12);
+  }
+
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .hours-table td {
+    padding: 0.6rem 0;
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  .hours-table .day {
+    font-weight: 700;
+    color: var(--dark);
+    width: 50%;
+  }
+
+  .hours-table .time {
+    color: rgba(45,42,38,0.6);
+    text-align: right;
+  }
+
+  .hours-table .closed {
+    color: rgba(45,42,38,0.35);
+    text-align: right;
+    font-style: italic;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    min-height: 80px;
+    box-shadow: var(--shadow-sm);
+    border-radius: 0 6px 6px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card .label {
+    color: var(--accent);
+  }
+
+  .contact-card .card-value {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .contact-card .card-sub {
+    font-size: 13px;
+    color: rgba(45,42,38,0.55);
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--dark);
+    padding: clamp(3rem, 6vw, 5rem) clamp(20px, 6vw, 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    max-width: 580px;
+  }
+
+  .final-cta-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    margin-top: -0.5rem;
+  }
+
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0 2rem;
+    min-height: 54px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+    text-decoration: none;
+  }
+
+  .btn-cta:hover {
+    background: #4a7370;
+    transform: scale(1.01);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg-alt);
+    padding: 1.75rem clamp(20px, 6vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(95,142,138,0.12);
+  }
+
+  .footer-left {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.7;
+    font-family: var(--heading-font);
+  }
+
+  .footer-right {
+    font-size: 12px;
+    color: var(--text);
+    opacity: 0.45;
+  }
+
+  .footer-right a {
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  .footer-right a:hover { opacity: 0.8; }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .hours-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding-bottom: 3rem;
+    }
+
+    nav {
+      padding: 0 16px;
+    }
+
+    .nav-name {
+      font-size: 12px;
+    }
+
+    .nav-phone {
+      font-size: 13px;
+    }
+
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .contact-card {
+      min-height: 48px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Family Chiropractic Tupelo</span>
+  <a href="tel:6624885234" class="nav-phone">(662) 488-5234</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tupelo, MS  -  Chiropractic Wellness</p>
+    <h1>Feel better.<br>Move freely.</h1>
+    <p class="hero-tagline">Real relief for real people in Tupelo - no long waits, no runaround, just care that actually works.</p>
+    <a href="tel:6624885234" class="btn-primary">Call (662) 488-5234</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="label">Phone</span>
+    <span class="value"><a href="tel:6624885234">(662) 488-5234</a></span>
+  </div>
+  <div class="info-item">
+    <span class="label">Location</span>
+    <span class="value">Tupelo, MS</span>
+  </div>
+  <div class="info-item">
+    <span class="label">Google Rating</span>
+    <span class="value">4.7 / 5.0</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <span class="label about-eyebrow">About</span>
+    <div class="accent-rule"></div>
+    <h2 class="reveal">When your back's acting up, you don't want to wait a week to be seen.</h2>
+    <p>That's why we keep things straightforward here in Tupelo. Whether you're dealing with a stiff neck, an old injury flaring back up, or just years of sitting at a desk catching up with you - we'll figure out what's going on and actually fix it.</p>
+    <p>We serve families across Pontotoc, Tupelo, and Verona, and we treat every patient like a neighbor, not a number. You'll talk to a real person, get a straight answer, and leave feeling like the visit was worth your time.</p>
+  </div>
+  <div class="about-meta">
+    <div class="meta-item">
+      <span class="label">Our Address</span>
+      <span class="meta-value">205 Magazine St<br>Tupelo, MS 38804</span>
+    </div>
+    <div class="meta-item">
+      <span class="label">Google Rating</span>
+      <span class="meta-value">
+        <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 out of 5
+      </span>
+    </div>
+    <div class="meta-item">
+      <span class="label">Ownership</span>
+      <span class="meta-value">Locally owned &amp; operated</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <span class="label hours-eyebrow">Hours &amp; Contact</span>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">&#9733; 4.7 on Google</div>
+
+  <div class="hours-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <td class="day">Monday</td>
+            <td class="closed">Closed</td>
+          </tr>
+          <tr>
+            <td class="day">Tuesday</td>
+            <td class="time">12:00 - 1:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Wednesday</td>
+            <td class="closed">Closed</td>
+          </tr>
+          <tr>
+            <td class="day">Thursday</td>
+            <td class="time">12:00 - 1:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Friday</td>
+            <td class="time">12:00 - 1:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Saturday</td>
+            <td class="closed">Closed</td>
+          </tr>
+          <tr>
+            <td class="day">Sunday</td>
+            <td class="closed">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="contact-cards">
+      <a href="tel:6624885234" class="contact-card reveal">
+        <span class="label">Call Us</span>
+        <span class="card-value">(662) 488-5234</span>
+        <span class="card-sub">Tap to call now</span>
+      </a>
+      <a href="https://maps.google.com/?q=205+Magazine+St,+Tupelo,+MS+38804" target="_blank" rel="noopener" class="contact-card reveal">
+        <span class="label">Address</span>
+        <span class="card-value">205 Magazine St<br>Tupelo, MS 38804</span>
+        <span class="card-sub">Open in Google Maps &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Your spine doesn't have to keep hurting - let's get you in.</h2>
+  <a href="tel:6624885234" class="btn-cta">Call (662) 488-5234</a>
+  <p class="final-cta-sub">We're here Tuesday, Thursday &amp; Friday. Give us a call and we'll get you set up.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Family Chiropractic  -  Tupelo, MS</div>
+  <div class="footer-right">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+</script>
+</body>
+</html>
