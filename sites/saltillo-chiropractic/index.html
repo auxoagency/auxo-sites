@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saltillo Chiropractic</title>
+<style>
+  :root {
+    --accent: #5F8E8A;
+    --accent-light: rgba(95, 142, 138, 0.08);
+    --bg: #F5F0EB;
+    --bg-alt: #E8F0EA;
+    --dark: #111F1E;
+    --text: #2D2A26;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --font-head: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(245, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 5vw, 60px);
+  }
+
+  .nav-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark);
+    letter-spacing: 0.01em;
+  }
+
+  .nav-phone {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.2s;
+  }
+
+  .nav-phone:hover { color: var(--dark); }
+  .nav-phone:hover::after { width: 100%; }
+
+  /* HERO */
+  .hero {
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(40px, 8vw, 80px) clamp(20px, 6vw, 80px) clamp(48px, 8vw, 72px);
+    position: relative;
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 19px);
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 32px;
+    line-height: 1.5;
+    max-width: 480px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0 32px;
+    min-height: 54px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:hover {
+    background: #4a7470;
+    transform: scale(1.01);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.06), 0 4px 4px rgba(0,0,0,0.06), 0 8px 12px rgba(0,0,0,0.1);
+  }
+
+  .btn-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0 36px;
+    min-height: 54px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .btn-light:hover {
+    background: #4a7470;
+    transform: scale(1.01);
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--dark);
+    padding: 28px clamp(20px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-item:nth-child(2) { text-align: center; }
+  .info-item:nth-child(3) { text-align: right; }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: clamp(64px, 10vw, 100px) clamp(20px, 6vw, 80px);
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .about-left {}
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .eyebrow-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 10px 0 24px;
+  }
+
+  .about h2 {
+    font-family: var(--font-head);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.75;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(95, 142, 138, 0.18);
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  /* HOURS */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: clamp(56px, 9vw, 88px) clamp(20px, 6vw, 80px);
+  }
+
+  .hours-contact .eyebrow { margin-bottom: 12px; }
+
+  .hours-contact h2 {
+    font-family: var(--font-head);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    border: 1px solid rgba(95, 142, 138, 0.2);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 36px;
+    margin-top: 10px;
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    margin-bottom: 40px;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(95, 142, 138, 0.12);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .hours-table td:first-child {
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .hours-table td:last-child {
+    text-align: right;
+    color: rgba(45, 42, 38, 0.6);
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .contact-card {
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card .card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .contact-card .card-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+
+  .contact-card .card-sub {
+    font-size: 13px;
+    color: rgba(45, 42, 38, 0.55);
+    margin-top: 2px;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--dark);
+    padding: clamp(52px, 8vw, 76px) clamp(20px, 6vw, 80px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .final-cta h2 {
+    font-family: var(--font-head);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: #fff;
+    max-width: 560px;
+    margin-bottom: 28px;
+  }
+
+  .final-cta .cta-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg-alt);
+    padding: 22px clamp(20px, 6vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(95, 142, 138, 0.12);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-left {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .footer-left span {
+    font-weight: 400;
+    color: rgba(45, 42, 38, 0.55);
+    margin-left: 6px;
+  }
+
+  .footer-right {
+    font-size: 12px;
+    color: rgba(45, 42, 38, 0.45);
+  }
+
+  .footer-right a {
+    color: var(--accent);
+    transition: color 0.2s;
+  }
+
+  .footer-right a:hover { color: var(--dark); }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .hours-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .info-item:nth-child(2),
+    .info-item:nth-child(3) { text-align: left; }
+  }
+
+  @media (max-width: 560px) {
+    .contact-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding: 32px 20px 44px;
+    }
+
+    nav { padding: 0 16px; }
+    .nav-name { font-size: 13px; }
+    .nav-phone { font-size: 13px; }
+
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    footer { padding: 20px; }
+
+    .contact-card { min-height: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-name">Saltillo Chiropractic</div>
+  <a href="tel:6627807236" class="nav-phone">(662) 780-7236</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Saltillo, MS &nbsp;·&nbsp; Chiropractic Care</p>
+    <h1>Saltillo Chiropractic</h1>
+    <p class="hero-tagline">Real relief from back and neck pain  -  without the long waits or guesswork.</p>
+    <a href="tel:6627807236" class="btn-primary">Call (662) 780-7236</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="info-label">Phone</span>
+    <span class="info-value">(662) 780-7236</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Location</span>
+    <span class="info-value">Saltillo, MS</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">5.0 Stars</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <p class="eyebrow">About</p>
+    <div class="eyebrow-divider"></div>
+    <h2 class="reveal">You shouldn't have to live around your pain.</h2>
+    <p>If you've been waking up stiff, sitting at your desk with that familiar ache creeping in, or putting off things you love because your back just won't cooperate  -  we get it. Right here in Saltillo, we see that every single week.</p>
+    <p>We keep our schedule tight so you're not sitting in a waiting room for 45 minutes. You'll see the same doctor every visit, get a straight answer about what's going on, and leave with a plan that actually makes sense for your life.</p>
+  </div>
+  <div class="about-right">
+    <div class="about-meta">
+      <div class="meta-item">
+        <span class="meta-label">Address</span>
+        <span class="meta-value">115a Town Creek Dr<br>Saltillo, MS 38866</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Google Rating</span>
+        <span class="meta-value">5.0 out of 5 Stars</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Practice Type</span>
+        <span class="meta-value">Locally owned &amp; operated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <p class="eyebrow">Hours &amp; Contact</p>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    5.0 Rating on Google
+  </div>
+
+  <div class="hours-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr><td>Monday</td><td>8:00-11:00 AM, 3:00-6:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>Closed</td></tr>
+          <tr><td>Wednesday</td><td>8:00-11:00 AM, 3:00-6:00 PM</td></tr>
+          <tr><td>Thursday</td><td>3:00-6:00 PM</td></tr>
+          <tr><td>Friday</td><td>8:00-11:00 AM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM-12:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p style="font-size: 15px; color: rgba(45,42,38,0.65); line-height: 1.7; margin-bottom: 0;">Morning and afternoon hours make it easy to fit a visit in before work, over lunch, or after school. Saturday mornings are open too  -  no need to take a day off.</p>
+    </div>
+  </div>
+
+  <div class="contact-cards">
+    <a href="tel:6627807236" class="contact-card reveal">
+      <span class="card-label">Phone</span>
+      <span class="card-value">(662) 780-7236</span>
+      <span class="card-sub">Tap to call now</span>
+    </a>
+    <a href="https://maps.google.com/?q=115a+Town+Creek+Dr+Saltillo+MS+38866" target="_blank" rel="noopener" class="contact-card reveal">
+      <span class="card-label">Address</span>
+      <span class="card-value">115a Town Creek Dr, Saltillo, MS 38866</span>
+      <span class="card-sub">Get directions</span>
+    </a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Stop managing the pain. Let's actually fix it.</h2>
+  <a href="tel:6627807236" class="btn-light">Call (662) 780-7236</a>
+  <p class="cta-note">Give us a call and we'll find a time that works for you.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    Saltillo Chiropractic <span>· Saltillo, MS</span>
+  </div>
+  <div class="footer-right">
+    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function(el) { observer.observe(el); });
+  })();
+</script>
+</body>
+</html>
