@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Well Oxford MS - Therapeutic Massage &amp; Spa Services</title>
+<meta name="description" content="Live Well Therapeutic Massage in Oxford, MS. Book a session and feel the difference. Call (662) 549-7010.">
+<style>
+  :root {
+    --accent: #5F8E8A;
+    --accent-light: rgba(95, 142, 138, 0.08);
+    --bg: #F5F0EB;
+    --bg-alt: #E8F0EA;
+    --dark: #111F1E;
+    --text: #2D2A26;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --font-head: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .nav-name {
+    font-family: var(--font-head);
+  }
+
+  h1 {
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(245, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 5vw, 64px);
+  }
+
+  .nav-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-phone:hover::after { width: 100%; }
+
+  /* ─── HERO ─── */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.60) 60%,
+        rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 clamp(20px, 6vw, 80px) clamp(48px, 8vw, 80px);
+    position: relative;
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    margin-bottom: 18px;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 3vw, 20px);
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+    margin-bottom: 36px;
+    font-weight: 400;
+    max-width: 480px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    min-height: 54px;
+    padding: 0 36px;
+    border-radius: 999px;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-primary:hover {
+    background: #4d7470;
+    transform: scale(1.01);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ─── INFO BAR ─── */
+  .info-bar {
+    background: var(--dark);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .info-item {
+    padding: 28px clamp(20px, 4vw, 48px);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .info-item:last-child { border-right: none; }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--font-head);
+  }
+
+  /* ─── ABOUT ─── */
+  .about {
+    padding: clamp(60px, 10vw, 120px) clamp(20px, 6vw, 80px);
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .about-left {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 12px 0 28px;
+  }
+
+  .about h2 {
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 18px;
+  }
+
+  .about-meta {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(95, 142, 138, 0.2);
+  }
+
+  .meta-item:first-child { border-top: none; padding-top: 0; }
+
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  /* ─── HOURS & CONTACT ─── */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: clamp(60px, 10vw, 100px) clamp(20px, 6vw, 80px);
+  }
+
+  .hours-contact-eyebrow {
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hours-contact h2 {
+    color: var(--dark);
+    margin-bottom: 48px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-light);
+    border: 1px solid rgba(95, 142, 138, 0.2);
+    border-radius: 999px;
+    padding: 6px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 40px;
+    font-family: var(--font-head);
+  }
+
+  .rating-star {
+    color: #d4a843;
+    font-size: 14px;
+  }
+
+  .hours-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(95, 142, 138, 0.12);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .hours-table .day {
+    font-weight: 700;
+    color: var(--dark);
+    font-family: var(--font-head);
+  }
+
+  .hours-table .time {
+    text-align: right;
+    color: rgba(45, 42, 38, 0.6);
+  }
+
+  .hours-table .closed {
+    color: rgba(45, 42, 38, 0.4);
+    font-style: italic;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .contact-card-value {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--dark);
+    font-family: var(--font-head);
+  }
+
+  .contact-card-sub {
+    font-size: 13px;
+    color: rgba(45, 42, 38, 0.6);
+  }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    background: var(--dark);
+    padding: clamp(48px, 8vw, 80px) clamp(20px, 6vw, 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    max-width: 560px;
+  }
+
+  .btn-cta-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    min-height: 54px;
+    padding: 0 40px;
+    border-radius: 999px;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .btn-cta-light:hover {
+    background: #4d7470;
+    transform: scale(1.01);
+  }
+
+  .cta-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--bg-alt);
+    padding: 28px clamp(20px, 6vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid rgba(95, 142, 138, 0.15);
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .footer-name {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .footer-location {
+    font-size: 12px;
+    color: rgba(45, 42, 38, 0.5);
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: rgba(45, 42, 38, 0.4);
+  }
+
+  .footer-credit a {
+    color: var(--accent);
+    transition: opacity 0.2s;
+  }
+
+  .footer-credit a:hover { opacity: 0.7; }
+
+  /* ─── REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .hours-contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+    }
+
+    .info-item {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 18px clamp(20px, 4vw, 48px);
+    }
+
+    .info-item:last-child { border-bottom: none; }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+    }
+
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    nav {
+      padding: 0 16px;
+    }
+
+    .nav-name {
+      font-size: 12px;
+    }
+
+    .nav-phone {
+      font-size: 12px;
+    }
+
+    .contact-card {
+      min-height: 48px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Live Well Therapeutic Massage</span>
+  <a href="tel:6625497010" class="nav-phone">(662) 549-7010</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Oxford, MS  -  Therapeutic Massage</p>
+    <h1>Live Well<br>Therapeutic<br>Massage</h1>
+    <p class="hero-tagline">Real relief from real tension - right here in Oxford, MS.</p>
+    <a href="tel:6625497010" class="btn-primary">Call (662) 549-7010</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="info-label">Phone</span>
+    <span class="info-value">(662) 549-7010</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Location</span>
+    <span class="info-value">Oxford, MS 38655</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">4.6 out of 5</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <span class="label about-eyebrow">About</span>
+    <div class="accent-rule"></div>
+    <h2 class="reveal">You shouldn't have to live with tight shoulders and a stiff back.</h2>
+    <p>If you've been putting off taking care of yourself because you're not sure where to start - we get it. At Live Well, we've helped people all over Oxford finally feel comfortable in their own bodies again. Whether it's a stubborn knot from long hours at a desk or the kind of stress that just won't quit, we know how to help.</p>
+    <p>We keep things simple here. No upsells, no pressure. Just real therapeutic work done by people who actually care how you walk out of here. Come in once and you'll understand why so many Oxford locals have made us part of their routine.</p>
+  </div>
+  <div class="about-meta">
+    <div class="meta-item">
+      <span class="meta-label">Address</span>
+      <span class="meta-value">2621 W Oxford Loop C<br>Oxford, MS 38655</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Google Rating</span>
+      <span class="meta-value">4.6 Stars</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Ownership</span>
+      <span class="meta-value">Locally Owned &amp; Operated</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <span class="label hours-contact-eyebrow">Hours &amp; Contact</span>
+  <h2 class="reveal">Find us.</h2>
+  <div class="rating-pill">
+    <span class="rating-star">&#9733;</span> 4.6 on Google
+  </div>
+  <div class="hours-contact-grid">
+    <div>
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <td class="day">Monday</td>
+            <td class="time">10:00 AM - 8:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Tuesday</td>
+            <td class="time">9:00 AM - 8:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Wednesday</td>
+            <td class="time">9:00 AM - 8:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Thursday</td>
+            <td class="time">9:00 AM - 8:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Friday</td>
+            <td class="time">9:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Saturday</td>
+            <td class="time">9:00 AM - 5:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day">Sunday</td>
+            <td class="time closed">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="contact-cards">
+      <a href="tel:6625497010" class="contact-card reveal">
+        <span class="contact-card-label">Call Us</span>
+        <span class="contact-card-value">(662) 549-7010</span>
+        <span class="contact-card-sub">Tap to call directly</span>
+      </a>
+      <a href="https://maps.google.com/?q=2621+W+Oxford+Loop+C+Oxford+MS+38655" target="_blank" rel="noopener" class="contact-card reveal">
+        <span class="contact-card-label">Address</span>
+        <span class="contact-card-value">2621 W Oxford Loop C</span>
+        <span class="contact-card-sub">Oxford, MS 38655  -  Open in Maps</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Your body's been asking for a break - let's actually give it one.</h2>
+  <a href="tel:6625497010" class="btn-cta-light">Call (662) 549-7010</a>
+  <p class="cta-sub">We're open six days a week. No pressure, just give us a call.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <span class="footer-name">Live Well Therapeutic Massage</span>
+    <span class="footer-location">Oxford, MS 38655</span>
+  </div>
+  <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></span>
+</footer>
+
+<script>
+  (function() {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function(el) { observer.observe(el); });
+  })();
+</script>
+</body>
+</html>
