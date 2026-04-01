@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blissful Balance, LLC | Health &amp; Beauty in Tupelo, MS</title>
+<meta name="description" content="Blissful Balance, LLC offers wellness services in Tupelo, MS. Call (662) 350-0257 to book your appointment today.">
+<style>
+  :root {
+    --accent: #5F8E8A;
+    --accent-light: rgba(95, 142, 138, 0.08);
+    --bg: #F5F0EB;
+    --bg-alt: #E8F0EA;
+    --dark: #111F1E;
+    --text: #2D2A26;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --font-heading: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  img { display: block; max-width: 100%; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(245, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 5vw, 60px);
+  }
+
+  .nav-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-phone:hover::after { width: 100%; }
+  .nav-phone:hover { color: var(--dark); }
+
+  /* ── HERO ── */
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    max-height: 680px;
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%),
+      url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 80px) clamp(50px, 8vw, 72px);
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 19px);
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-weight: 400;
+    max-width: 480px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0 32px;
+    min-height: 54px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #4a7370;
+    transform: scale(1.01);
+    box-shadow: var(--shadow-md);
+    color: #ffffff;
+  }
+
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0 32px;
+    min-height: 54px;
+    border-radius: 999px;
+    border: 2px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .btn-dark:hover {
+    background: #4a7370;
+    transform: scale(1.01);
+    color: #ffffff;
+  }
+
+  /* ── INFO BAR ── */
+  .info-bar {
+    background: var(--dark);
+    padding: 28px clamp(20px, 5vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-item:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.08);
+    padding-right: 24px;
+  }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: var(--font-heading);
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 80px);
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-eyebrow-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-eyebrow {
+    color: var(--accent);
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .about h2 {
+    color: var(--dark);
+  }
+
+  .about-body {
+    color: var(--text);
+  }
+
+  .about-body p + p {
+    margin-top: 16px;
+  }
+
+  .about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 8px;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 16px 20px;
+    background: var(--accent-light);
+    border-radius: 8px;
+    border-left: 2px solid var(--accent);
+  }
+
+  .meta-item .label {
+    color: var(--accent);
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+
+  /* ── HOURS & CONTACT ── */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: clamp(60px, 8vw, 90px) clamp(20px, 5vw, 80px);
+  }
+
+  .section-eyebrow-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .section-eyebrow {
+    color: var(--accent);
+  }
+
+  .hours-contact h2 {
+    color: var(--dark);
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-top: 12px;
+    width: fit-content;
+  }
+
+  .rating-star {
+    font-size: 12px;
+    color: #FFD700;
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 60px);
+    margin-top: 40px;
+    align-items: start;
+  }
+
+  .hours-table {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .hours-day {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark);
+  }
+
+  .hours-time {
+    font-size: 14px;
+    color: rgba(45, 42, 38, 0.55);
+  }
+
+  .hours-closed {
+    font-size: 14px;
+    color: rgba(45, 42, 38, 0.35);
+    font-style: italic;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 20px 24px;
+    background: #ffffff;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    min-height: 80px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card .label {
+    color: var(--accent);
+  }
+
+  .contact-card-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    font-family: var(--font-heading);
+  }
+
+  .contact-card-sub {
+    font-size: 13px;
+    color: rgba(45, 42, 38, 0.55);
+    margin-top: 2px;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--dark);
+    padding: clamp(50px, 7vw, 80px) clamp(20px, 5vw, 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .final-cta h2 {
+    color: #ffffff;
+    max-width: 560px;
+  }
+
+  .final-cta-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    margin-top: -8px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg-alt);
+    padding: 24px clamp(20px, 5vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .footer-name {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .footer-location {
+    font-size: 12px;
+    color: rgba(45, 42, 38, 0.5);
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: rgba(45, 42, 38, 0.45);
+  }
+
+  .footer-credit a {
+    color: var(--accent);
+  }
+
+  .footer-credit a:hover {
+    color: var(--dark);
+  }
+
+  /* ── REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .hours-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .info-item:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 55vh;
+      padding: 30px 20px 44px;
+    }
+
+    .about,
+    .hours-contact,
+    .final-cta {
+      padding: 3rem 20px;
+    }
+
+    .nav-name {
+      font-size: 12px;
+    }
+
+    .nav-phone {
+      font-size: 13px;
+    }
+
+    .contact-card {
+      min-height: 48px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Blissful Balance, LLC</span>
+  <a href="tel:6623500257" class="nav-phone">(662) 350-0257</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tupelo, MS &nbsp;·&nbsp; Wellness &amp; Beauty</p>
+    <h1>Blissful<br>Balance, LLC</h1>
+    <p class="hero-tagline">Feel restored  -  body, mind, and spirit  -  right here in Tupelo.</p>
+    <a href="tel:6623500257" class="btn-primary">Call (662) 350-0257</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="info-label">Phone</span>
+    <span class="info-value">(662) 350-0257</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Location</span>
+    <span class="info-value">Tupelo, MS 38801</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Google Rating</span>
+    <span class="info-value">5.0 ★ Stars</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <div class="about-eyebrow-wrap">
+      <span class="label about-eyebrow">About</span>
+      <div class="accent-rule"></div>
+    </div>
+    <h2 class="reveal">You deserve more than a quick fix  -  you deserve real relief.</h2>
+    <div class="about-body">
+      <p>We know life in Tupelo keeps you busy. Between work, family, and everything else pulling at you, it's easy to put yourself last. That's exactly why Blissful Balance exists  -  to give you a place where you can actually breathe, slow down, and let someone take care of you for a change.</p>
+      <p>We're a small, locally owned wellness studio tucked away on West Main Street. We've put a lot of thought into making sure every visit feels unhurried and personal  -  because you're not just another appointment on a calendar. Whether it's your first time or you've been coming for years, we'll make sure you leave feeling better than you walked in.</p>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="meta-item">
+      <span class="label">Address</span>
+      <span class="meta-value">500 W Main St, Suite 2<br>Tupelo, MS 38801</span>
+    </div>
+    <div class="meta-item">
+      <span class="label">Google Rating</span>
+      <span class="meta-value">5.0 out of 5 Stars</span>
+    </div>
+    <div class="meta-item">
+      <span class="label">Ownership</span>
+      <span class="meta-value">Locally owned &amp; operated in Tupelo, MS</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="section-eyebrow-wrap">
+    <span class="label section-eyebrow">Hours &amp; Contact</span>
+    <div class="accent-rule" style="width:40px;height:1px;background:var(--accent);"></div>
+    <h2 class="reveal">Find us.</h2>
+    <div class="rating-pill">
+      <span class="rating-star">★</span> 5.0 on Google
+    </div>
+  </div>
+
+  <div class="hours-grid">
+    <div>
+      <div class="hours-table">
+        <div class="hours-row">
+          <span class="hours-day">Monday</span>
+          <span class="hours-time">1:00 - 4:30 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Tuesday</span>
+          <span class="hours-time">9:00 AM - 4:30 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Wednesday</span>
+          <span class="hours-time">1:00 - 4:30 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Thursday</span>
+          <span class="hours-time">9:00 AM - 4:30 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Friday</span>
+          <span class="hours-time">1:00 - 3:30 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Saturday</span>
+          <span class="hours-time">9:00 AM - 3:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-closed">Closed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-cards">
+      <a href="tel:6623500257" class="contact-card reveal">
+        <span class="label">Call Us</span>
+        <span class="contact-card-value">(662) 350-0257</span>
+        <span class="contact-card-sub">Tap to call directly</span>
+      </a>
+      <a href="https://maps.google.com/?q=500+W+Main+St+Suite+2+Tupelo+MS+38801" target="_blank" rel="noopener" class="contact-card reveal">
+        <span class="label">Find Us</span>
+        <span class="contact-card-value">500 W Main St, Suite 2</span>
+        <span class="contact-card-sub">Tupelo, MS 38801  -  Open in Maps</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="reveal">Ready to feel like yourself again?<br>We've got time for you.</h2>
+  <p class="final-cta-sub">Give us a call  -  we're easy to talk to and happy to answer any questions.</p>
+  <a href="tel:6623500257" class="btn-dark">Call (662) 350-0257</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <span class="footer-name">Blissful Balance, LLC</span>
+    <span class="footer-location">Tupelo, MS 38801</span>
+  </div>
+  <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+</script>
+</body>
+</html>
