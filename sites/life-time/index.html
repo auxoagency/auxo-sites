@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Health Club &amp; Fitness Center Scottsdale Fashion Square, AZ | Life Time</title>
+<style>
+  :root {
+    --accent: #06A77D;
+    --accent-light: rgba(6,167,125,0.08);
+    --bg: #FAFAFA;
+    --bg-alt: #F0F0F0;
+    --dark: #0A1F15;
+    --text: #0A1F15;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.08), 0 20px 25px rgba(0,0,0,0.06);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  h1, h2, h3, .nav-brand, .hero-tagline {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
+  }
+
+  h1 {
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
+    color: #fff;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 64px;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+  }
+
+  .nav.scrolled {
+    background: rgba(250,250,250,0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: rgba(0,0,0,0.08);
+  }
+
+  .nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 48px;
+  }
+
+  .nav-brand {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .nav.scrolled .nav-brand {
+    color: var(--dark);
+    text-shadow: none;
+  }
+
+  .nav-phone {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
+    transition: color 0.2s ease, text-shadow 0.3s ease;
+  }
+
+  .nav.scrolled .nav-phone {
+    color: var(--accent);
+    text-shadow: none;
+  }
+
+  .nav-phone:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero {
+    min-height: 100svh;
+    max-height: 780px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.72) 100%), url('hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 48px 72px;
+    margin: 0;
+    animation: kenBurns 30s ease-in-out infinite alternate;
+  }
+
+  @keyframes kenBurns {
+    0% { background-size: 102% auto; background-position: 50% 50%; }
+    100% { background-size: 106% auto; background-position: 50% 48%; }
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 700px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 16px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  }
+
+  .hero h1 {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+  }
+
+  .hero-tagline {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.95);
+    max-width: 560px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 32px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 16px rgba(6,167,125,0.35);
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary:hover {
+    background: #058f6a;
+    transform: scale(1.01);
+    box-shadow: 0 6px 24px rgba(6,167,125,0.5);
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--dark);
+    padding: 40px 48px;
+  }
+
+  .info-bar .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: center;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .info-value a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .info-value a:hover { color: var(--accent); }
+
+  .stars-row {
+    display: inline-flex;
+    gap: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  /* ABOUT */
+  .about-section {
+    background: var(--bg);
+    padding: 80px 48px;
+  }
+
+  .about-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 auto 32px;
+    display: block;
+  }
+
+  .about-text-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .about-text-wrap h2 {
+    color: var(--dark);
+    text-align: center;
+    max-width: 580px;
+    margin: 8px auto 20px;
+  }
+
+  .about-text-wrap p {
+    color: var(--text);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .about-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 48px auto 0;
+    max-width: 760px;
+    width: 100%;
+  }
+
+  .info-box {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease;
+  }
+
+  .info-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .info-box:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .info-box-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .info-box-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .info-box-value a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    transition: border-color 0.2s;
+  }
+
+  .info-box-value a:hover { border-bottom-color: var(--accent); }
+
+  /* SIGNATURE VISUAL */
+  .signature-section {
+    background: var(--accent-light);
+    padding: 72px 48px;
+    text-align: center;
+  }
+
+  .signature-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .signature-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 8px;
+  }
+
+  .breathing-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    background: rgba(6,167,125,0.12);
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+
+  /* HOURS & CONTACT */
+  .hours-contact {
+    background: var(--bg);
+    padding: 72px 48px;
+  }
+
+  .hours-contact .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hours-contact .section-header {
+    margin-bottom: 40px;
+  }
+
+  .hours-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    border: 1px solid rgba(6,167,125,0.2);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 12px;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .hours-table .day {
+    font-weight: 600;
+    color: var(--dark);
+    width: 50%;
+  }
+
+  .hours-table .time {
+    color: var(--text);
+    opacity: 0.8;
+    text-align: right;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow-sm);
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .contact-card-value {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .contact-card-sub {
+    font-size: 14px;
+    color: var(--text);
+    opacity: 0.7;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--dark);
+    padding: 80px 48px;
+  }
+
+  .final-cta .container {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .final-cta .support-line {
+    font-size: 17px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg-alt);
+    padding: 24px 48px;
+  }
+
+  .footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .footer-brand span {
+    opacity: 0.55;
+    font-weight: 400;
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: var(--text);
+    opacity: 0.5;
+    text-decoration: none;
+  }
+
+  .footer-credit a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-credit a:hover { color: var(--accent); opacity: 1; }
+
+  /* REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .info-box { opacity: 1; transform: none; transition: none; }
+    .hero, .breathing-circle, .gallery-img, * { animation: none !important; transition: none !important; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 767px) {
+    .hero {
+      padding: 120px 24px 56px;
+      min-height: 100svh;
+      max-height: none;
+      background-position: center center;
+      align-items: flex-end;
+    }
+    .hero .container {
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1, .hero-tagline, .hero-eyebrow {
+      max-width: 100%;
+      text-align: center;
+    }
+    .info-bar { padding: 24px 24px; }
+    .info-bar .container {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      text-align: center;
+    }
+    .info-item { align-items: center; gap: 4px; }
+    .info-label { font-size: 10px; }
+    .info-value { font-size: 14px; }
+    .about-section { padding: 60px 24px; }
+    .about-text-wrap { text-align: center; }
+    .about-text-wrap p { text-align: center; }
+    .about-info-grid { grid-template-columns: 1fr; }
+    .info-box { text-align: center; }
+    .signature-section { padding: 56px 24px; }
+    .hours-contact { padding: 56px 24px; }
+    .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hours-contact .section-header { text-align: center; }
+    .contact-cards { align-items: stretch; }
+    .final-cta { padding: 60px 24px; }
+    .footer { padding: 24px 24px; }
+    .footer .container { flex-direction: column; text-align: center; }
+    .nav .container { padding: 0 24px; }
+  }
+
+  @media (max-width: 479px) {
+    .hero { padding: 100px 20px 48px; min-height: 100svh; }
+    .info-bar { padding: 20px 20px; }
+    .info-bar .container { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .nav-brand { font-size: 16px; }
+    .nav-phone { font-size: 13px; }
+    .about-section { padding: 48px 20px; }
+    .signature-section { padding: 48px 20px; }
+    .hours-contact { padding: 48px 20px; }
+    .final-cta { padding: 60px 20px; }
+    .footer .container { padding: 0 20px; }
+    .footer { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <a href="#" class="nav-brand">Life Time</a>
+    <a href="tel:4807910635" class="nav-phone">(480) 791-0635</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Scottsdale, AZ · Wellness</span>
+    <h1>Life Time</h1>
+    <p class="hero-tagline">Luxury health club with world-class facilities and expert trainers in Scottsdale Fashion Square.</p>
+    <a href="tel:4807910635" class="btn-primary">Call (480) 791-0635</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="container">
+    <div class="info-item">
+      <div class="info-label">Phone</div>
+      <div class="info-value"><a href="tel:4807910635">(480) 791-0635</a></div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Location</div>
+      <div class="info-value">Scottsdale, AZ</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Rating</div>
+      <div class="info-value">
+        <span class="stars-row">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        </span>
+        4.9 · 126 reviews
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Membership</div>
+      <div class="info-value">Full Club Access</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-text-wrap">
+      <span class="eyebrow">About</span>
+      <h2 class="reveal">Where Scottsdale's Wellness Community Comes to Thrive</h2>
+      <span class="accent-rule"></span>
+      <p>For those who expect more from their health club, Life Time at Scottsdale Fashion Square delivers a genuinely different standard. We bring together world-class fitness facilities, a resort-like atmosphere, and the kind of rejuvenation areas that make every visit feel like a genuine escape  -  not just a workout. Our expert trainers work alongside you to craft a path that's specific to your goals, whether you're refining performance or building sustainable health habits.</p>
+      <p>Our Scottsdale location combines luxury positioning with the everyday accessibility the community deserves. From resort-like spa amenities and premium locker rooms to group fitness classes that actually challenge you, Life Time offers an environment where the pursuit of wellness feels elevated. At Scottsdale Fashion Square, the convenience of location meets the quality of experience you won't find anywhere else in the Valley.</p>
+    </div>
+
+    <div class="about-info-grid">
+      <div class="info-box">
+        <span class="info-box-label">Address</span>
+        <span class="info-box-value"><a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener">3030 N 68th St, Scottsdale, AZ 85251, USA</a></span>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Google Rating</span>
+        <span class="info-box-value">4.9 stars · 126 reviews</span>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Specialties</span>
+        <span class="info-box-value">Luxury health club experience · Resort-like rejuvenation areas · Expert trainer guidance</span>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Services</span>
+        <span class="info-box-value">Fitness center memberships, Personal training, Group fitness classes, Spa and wellness amenities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE VISUAL -->
+<section class="signature-section">
+  <div class="container">
+    <div class="breathing-circle" aria-hidden="true"></div>
+    <span class="signature-label">Appointments Welcome · Walk-ins Encouraged</span>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Hours &amp; Contact</span>
+      <h2 class="reveal">Find us.</h2>
+      <div class="rating-pill">
+        <svg width="13" height="13" viewBox="0 0 20 20" fill="#06A77D"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        4.9 · 126 Google reviews
+      </div>
+    </div>
+    <div class="hours-contact-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr>
+              <td class="day">Monday</td>
+              <td class="time">4:00 AM - 10:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Tuesday</td>
+              <td class="time">4:00 AM - 10:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Wednesday</td>
+              <td class="time">4:00 AM - 10:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Thursday</td>
+              <td class="time">4:00 AM - 10:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Friday</td>
+              <td class="time">4:00 AM - 9:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Saturday</td>
+              <td class="time">6:00 AM - 8:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Sunday</td>
+              <td class="time">6:00 AM - 8:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact-cards">
+        <a href="tel:4807910635" class="contact-card reveal">
+          <div class="contact-card-label">Phone</div>
+          <div class="contact-card-value">(480) 791-0635</div>
+          <div class="contact-card-sub">Call to inquire or schedule a tour</div>
+        </a>
+        <a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-card-label">Address</div>
+          <div class="contact-card-value">3030 N 68th St</div>
+          <div class="contact-card-sub">Scottsdale, AZ 85251 · Scottsdale Fashion Square</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="reveal">Your best health starts here.</h2>
+    <p class="support-line">Reach out today and take the first step toward your best self.</p>
+    <a href="tel:4807910635" class="btn-primary">Call (480) 791-0635</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">Life Time <span>· Scottsdale, AZ</span></div>
+    <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.about-info-grid .info-box').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.08) + 's';
+  });
+
+  window.addEventListener('scroll', () => {
+    document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal, .info-box').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
