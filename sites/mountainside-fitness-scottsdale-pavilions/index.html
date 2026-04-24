@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym in Scottsdale Pavilions, AZ | Mountainside Fitness</title>
+<meta name="description" content="Full-service gym with group fitness classes and personal training for all fitness levels in Scottsdale Pavilions. Open 4:30 AM weekdays. 4.9 stars · 321 reviews.">
+<style>
+:root {
+  --accent: #06A77D;
+  --accent-light: rgba(6,167,125,0.08);
+  --bg: #FAFAFA;
+  --bg-alt: #F0F0F0;
+  --dark: #0A1F15;
+  --text: #0A1F15;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.08), 0 20px 25px rgba(0,0,0,0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, .nav-brand, .nav-phone, .hero-tagline {
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
+}
+
+h1 {
+  font-size: clamp(38px, 9vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.93;
+}
+
+h2 {
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: 64px;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(250,250,250,0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: rgba(0,0,0,0.08);
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 48px;
+}
+
+.nav-brand {
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav.scrolled .nav-brand {
+  color: var(--dark);
+  text-shadow: none;
+}
+
+.nav-phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav.scrolled .nav-phone {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+.nav-phone:hover {
+  color: var(--accent);
+}
+
+.nav.scrolled .nav-phone:hover {
+  color: var(--dark);
+}
+
+/* HERO */
+.hero {
+  min-height: 100svh;
+  max-height: 780px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.72) 100%), url('hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 48px 72px;
+  margin: 0;
+  animation: kenBurns 30s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% { background-size: 102% auto; background-position: 50% 50%; }
+  100% { background-size: 106% auto; background-position: 50% 48%; }
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 14px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  margin-bottom: 18px;
+}
+
+.hero-tagline {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: rgba(255,255,255,0.95);
+  max-width: 560px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  margin-bottom: 32px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 32px;
+  background: var(--accent);
+  color: #fff;
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.btn-cta:hover {
+  background: #058a67;
+  transform: scale(1.01);
+  box-shadow: 0 0 0 4px rgba(6,167,125,0.25), var(--shadow-md);
+}
+
+/* INFO BAR */
+.info-bar {
+  background: var(--dark);
+  padding: 40px 48px;
+}
+
+.info-bar .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.info-value a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-value a:hover {
+  color: var(--accent);
+}
+
+.stars-inline {
+  display: inline-flex;
+  gap: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* ABOUT */
+.about-section {
+  background: var(--bg);
+  padding: 80px 48px;
+}
+
+.about-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+.eyebrow-rule {
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 32px;
+  display: block;
+}
+
+.about-text-wrap {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-section h2 {
+  text-align: center;
+  max-width: 580px;
+  margin: 8px auto 20px;
+}
+
+.about-text-wrap p {
+  margin-bottom: 20px;
+  color: var(--text);
+  opacity: 0.88;
+}
+
+.about-text-wrap p:last-child {
+  margin-bottom: 0;
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 48px auto 0;
+  max-width: 760px;
+  width: 100%;
+}
+
+.info-box {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease;
+}
+
+.info-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.info-box-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.info-box-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.info-box-value a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  transition: border-color 0.2s;
+}
+
+.info-box-value a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* SIGNATURE VISUAL */
+.signature-section {
+  background: var(--accent-light);
+  padding: 72px 48px;
+  text-align: center;
+}
+
+.signature-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.signature-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 8px;
+}
+
+.breathing-circle-wrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breathing-circle {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* GALLERY */
+.gallery-section {
+  background: var(--bg-alt);
+  padding: 72px 48px;
+}
+
+.gallery-section .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-section h2 {
+  margin: 8px 0 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  background: var(--bg);
+  padding: 72px 48px;
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 40px;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 10px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.hours-table td:first-child {
+  font-weight: 700;
+  color: var(--text);
+  width: 50%;
+}
+
+.hours-table td:last-child {
+  color: rgba(10,31,21,0.72);
+  text-align: right;
+}
+
+.today-row td {
+  color: var(--accent) !important;
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-light);
+  border: 1px solid rgba(6,167,125,0.2);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 20px 24px;
+  min-height: 80px;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.contact-card-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--dark);
+  padding: 80px 48px;
+}
+
+.final-cta .container {
+  text-align: center;
+  max-width: 560px;
+}
+
+.final-cta h2 {
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.final-cta-support {
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--bg-alt);
+  padding: 24px 48px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.footer-credit {
+  font-size: 12px;
+  color: rgba(10,31,21,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-credit:hover {
+  color: var(--accent);
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .hero { padding: 120px 24px 56px; min-height: 100svh; max-height: none; background-position: center center; }
+  .hero .container { align-items: center; text-align: center; }
+  .hero h1, .hero-tagline, .hero-eyebrow { max-width: 100%; text-align: center; }
+  .info-bar { padding: 24px 24px; }
+  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 16px; text-align: center; }
+  .info-item { align-items: center; gap: 4px; }
+  .info-label { font-size: 10px; }
+  .info-value { font-size: 14px; }
+  .about-section { padding: 64px 24px; }
+  .about-section p, .about-section h2 { text-align: center; }
+  .about-text-wrap { text-align: center; }
+  .about-info-grid { grid-template-columns: 1fr; }
+  .info-box { text-align: center; }
+  .signature-section { padding: 56px 24px; }
+  .gallery-section { padding: 56px 24px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-img { aspect-ratio: 16/10; }
+  .hours-contact { padding: 56px 24px; }
+  .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hours-contact .eyebrow, .hours-contact h2 { text-align: center; }
+  .contact-cards { align-items: stretch; }
+  .final-cta { padding: 64px 24px; }
+  .final-cta .container { max-width: 100%; }
+  .footer .container { flex-direction: column; text-align: center; }
+  .nav .container { padding: 0 24px; }
+}
+
+@media (max-width: 479px) {
+  .hero { padding: 100px 20px 48px; min-height: 100svh; }
+  .info-bar { padding: 20px 20px; }
+  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .nav-brand { font-size: 16px; }
+  .nav-phone { font-size: 13px; }
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+  .footer .container { padding: 0 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
+  .hero, .breathing-circle, .gallery-img, * { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <a href="#" class="nav-brand">Mountainside Fitness Scottsdale Pavilions</a>
+    <a href="tel:4802144460" class="nav-phone">(480) 214-4460</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Gym &amp; Fitness</span>
+    <h1>Mountainside Fitness<br>Scottsdale Pavilions</h1>
+    <p class="hero-tagline">Full-service gym with group fitness classes and personal training for all fitness levels in Scottsdale.</p>
+    <a href="tel:4802144460" class="btn-cta">Call (480) 214-4460</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="container">
+    <div class="info-item">
+      <span class="info-label">Phone</span>
+      <span class="info-value"><a href="tel:4802144460">(480) 214-4460</a></span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Location</span>
+      <span class="info-value">Scottsdale, AZ</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Rating</span>
+      <span class="info-value">
+        <span class="stars-inline">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        </span>
+        4.9 · 321 reviews
+      </span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Hours Today</span>
+      <span class="info-value">Open from 4:30 AM</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h2 class="reveal">Your Fitness Goals Belong Here  -  Whatever Your Starting Point</h2>
+    <span class="eyebrow-rule"></span>
+    <div class="about-text-wrap">
+      <p>Whether you're stepping into a gym for the first time or you've been training for years, we built this place for you. At Mountainside Fitness Scottsdale Pavilions, fitness enthusiasts of all ages and experience levels find the equipment, the energy, and the expert support they need to show up and keep going. Our group fitness classes run throughout the day  -  designed to challenge beginners and push seasoned athletes alike  -  while our personal training programs give you a direct path to results with someone genuinely invested in your progress.</p>
+      <p>We're proud to hold a 4.9-star rating across 321 reviews  -  a number that reflects real members, real results, and a community that keeps coming back. Our doors open at 4:30 AM on weekdays so early risers never have to compromise, and our Scottsdale Pavilions location makes fitting in a workout straightforward no matter your schedule. We also offer a free gym pass so you can experience everything firsthand before committing to anything.</p>
+    </div>
+    <div class="about-info-grid">
+      <div class="info-box">
+        <span class="info-box-label">Address</span>
+        <span class="info-box-value"><a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener">3030 N 68th St, Scottsdale, AZ 85251, USA</a></span>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Google Rating</span>
+        <span class="info-box-value">4.9 stars · 321 reviews</span>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Specialties</span>
+        <span class="info-box-value">Group fitness classes · Personal training programs</span>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Services</span>
+        <span class="info-box-value">Group fitness classes, Personal training, Gym membership, Fitness classes for all ages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE VISUAL -->
+<section class="signature-section">
+  <div class="container">
+    <div class="breathing-circle-wrap">
+      <svg class="breathing-circle" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" stroke="var(--accent)" stroke-width="2.5" fill="none" opacity="0.35"/>
+        <circle cx="32" cy="32" r="18" stroke="var(--accent)" stroke-width="2" fill="none" opacity="0.6"/>
+        <circle cx="32" cy="32" r="9" fill="var(--accent)" opacity="0.85"/>
+      </svg>
+    </div>
+    <span class="signature-label">Walk-ins encouraged &nbsp;·&nbsp; Free gym pass available</span>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <span class="eyebrow">A look inside</span>
+    <h2 class="reveal">Our Space</h2>
+    <div class="gallery-grid">
+      <img src="gallery-1.jpg" alt="Mountainside Fitness Scottsdale Pavilions photo" loading="lazy" class="gallery-img">
+      <img src="gallery-2.jpg" alt="Mountainside Fitness Scottsdale Pavilions photo" loading="lazy" class="gallery-img">
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="container">
+    <span class="eyebrow">Hours &amp; Contact</span>
+    <h2 class="reveal">Find us.</h2>
+    <div class="rating-pill">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="#06A77D"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+      4.9 stars · 321 Google reviews
+    </div>
+    <div class="hours-contact-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>4:30 AM - 11:00 PM</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>4:30 AM - 11:00 PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>4:30 AM - 11:00 PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>4:30 AM - 11:00 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>4:30 AM - 9:00 PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>6:00 AM - 9:00 PM</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>6:00 AM - 9:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact-cards">
+        <a href="tel:4802144460" class="contact-card reveal">
+          <span class="contact-card-label">Phone</span>
+          <span class="contact-card-value">(480) 214-4460</span>
+        </a>
+        <a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card-label">Address</span>
+          <span class="contact-card-value">3030 N 68th St<br>Scottsdale, AZ 85251</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Group Classes &amp; Personal Training for Every Level</h2>
+    <p class="final-cta-support">Claim your free gym pass and see what Scottsdale members keep coming back for.</p>
+    <a href="tel:4802144460" class="btn-cta">Call (480) 214-4460</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">
+      Mountainside Fitness Scottsdale Pavilions<br>
+      Scottsdale, AZ
+    </div>
+    <a href="https://auxoagency.co" target="_blank" rel="noopener" class="footer-credit">Site by Auxo Agency · auxoagency.co</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.about-info-grid .info-box').forEach(function(el, i) {
+  el.style.transitionDelay = (i * 0.08) + 's';
+});
+
+window.addEventListener('scroll', function() {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal, .info-box').forEach(function(el) {
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
