@@ -3,657 +3,596 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lior The Baker - Artisanal Baked Goods & Custom Cakes in Scottsdale, AZ</title>
+<title>Lior The Baker - Fresh Artisanal Baked Goods in Scottsdale, AZ</title>
+<meta name="description" content="Fresh artisanal baked goods from Lior The Baker in Scottsdale, AZ. Custom orders, fresh bread, pastries, and desserts. Available Wednesday through Sunday.">
 <style>
-:root {
-  --accent: #B85C38;
-  --accent-light: rgba(184,92,56,0.08);
-  --bg: #FFFAF5;
-  --bg-alt: #F5EDE0;
-  --dark: #1C1007;
-  --text: #2C1810;
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.75;
-}
-
-h1, h2, h3, .brand {
-  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-}
-
-h1 {
-  font-size: clamp(38px, 9vw, 56px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 0.93;
-}
-
-h2 {
-  font-size: clamp(26px, 7vw, 38px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-}
-
-.label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-/* NAV */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 60px;
-  background: rgba(255, 250, 245, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.nav .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0 48px;
-}
-
-.nav-brand {
-  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dark);
-  text-decoration: none;
-  letter-spacing: 0.01em;
-}
-
-.nav-phone {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  border-bottom: 1px solid transparent;
-}
-
-.nav-phone:hover {
-  color: var(--dark);
-  border-bottom-color: var(--accent);
-}
-
-/* HERO */
-.hero {
-  min-height: 70vh;
-  max-height: 680px;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%), url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 48px 72px;
-  animation: kenBurns 20s ease-in-out infinite alternate;
-}
-
-@keyframes kenBurns {
-  0% { background-size: 100% auto; }
-  100% { background-size: 108% auto; }
-}
-
-.hero .container {
-  padding: 0;
-}
-
-.hero-eyebrow {
-  color: rgba(255,255,255,0.6);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.hero h1 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.hero-tagline {
-  color: rgba(255,255,255,0.85);
-  font-size: 19px;
-  line-height: 1.55;
-  max-width: 560px;
-  margin-bottom: 36px;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 32px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  border-radius: 24px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.btn-primary:hover {
-  background: #9a4a2c;
-  transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(184,92,56,0.2);
-}
-
-/* INFO BAR */
-.info-bar {
-  background: var(--dark);
-  padding: 40px 48px;
-}
-
-.info-bar .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-
-.info-item .label {
-  color: rgba(255,255,255,0.4);
-  display: block;
-  margin-bottom: 6px;
-}
-
-.info-value {
-  color: #fff;
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.info-value a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.info-value a:hover {
-  color: var(--accent);
-}
-
-.stars-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 4px;
-}
-
-.star-wrap {
-  display: flex;
-  gap: 2px;
-}
-
-.star {
-  width: 16px;
-  height: 16px;
-  fill: #ccc;
-  transition: fill 0.3s ease;
-}
-
-.star.filled {
-  fill: #F5A623;
-}
-
-.review-count {
-  color: rgba(255,255,255,0.6);
-  font-size: 14px;
-}
-
-/* SIGNATURE VISUAL */
-.sig-visual {
-  background: var(--accent-light);
-  padding: 56px 48px;
-  text-align: center;
-}
-
-.sig-visual .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.steam-wrap {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.steam-cup {
-  margin-top: 8px;
-}
-
-.steam { animation: steamRise 3s ease-in-out infinite; }
-.steam-2 { animation-delay: 0.5s; }
-.steam-3 { animation-delay: 1s; }
-
-@keyframes steamRise {
-  0% { opacity: 0; transform: translateY(0); }
-  50% { opacity: 0.8; transform: translateY(-8px); }
-  100% { opacity: 0; transform: translateY(-16px); }
-}
-
-.sig-text {
-  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  font-size: 15px;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* ABOUT */
-.about {
-  padding: 80px 48px;
-  background: var(--bg);
-}
-
-.about .container {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 80px;
-  align-items: start;
-}
-
-.about-eyebrow {
-  color: var(--accent);
-  display: block;
-  margin-bottom: 10px;
-}
-
-.accent-rule {
-  width: 40px;
-  height: 1px;
-  background: var(--accent);
-  margin: 14px 0 28px;
-}
-
-.about-body p + p {
-  margin-top: 20px;
-}
-
-.about-meta {
-  margin-top: 0;
-}
-
-.meta-card {
-  background: var(--bg-alt);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.meta-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.meta-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(44,24,16,0.5);
-  margin-bottom: 4px;
-}
-
-.meta-value {
-  font-weight: 600;
-  font-size: 15px;
-  color: var(--dark);
-  line-height: 1.4;
-}
-
-.meta-value a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.meta-value a:hover {
-  color: var(--dark);
-}
-
-/* HOURS & CONTACT */
-.hours-section {
-  background: var(--bg-alt);
-  padding: 72px 48px;
-}
-
-.hours-section .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.hours-eyebrow {
-  color: var(--accent);
-  display: block;
-  margin-bottom: 10px;
-}
-
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 4px 14px;
-  border-radius: 20px;
-  margin-bottom: 24px;
-}
-
-.rating-pill svg {
-  fill: #fff;
-  width: 13px;
-  height: 13px;
-}
-
-.hours-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
-}
-
-.hours-table tr {
-  border-bottom: 1px solid rgba(44,24,16,0.08);
-}
-
-.hours-table tr:last-child {
-  border-bottom: none;
-}
-
-.hours-table td {
-  padding: 10px 0;
-  font-size: 15px;
-}
-
-.hours-table td:first-child {
-  font-weight: 700;
-  color: var(--dark);
-  width: 50%;
-}
-
-.hours-table td:last-child {
-  color: rgba(44,24,16,0.65);
-  text-align: right;
-}
-
-.hours-table .closed {
-  color: rgba(44,24,16,0.35);
-  font-style: italic;
-}
-
-.contact-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 40px;
-}
-
-.contact-card {
-  display: flex;
-  align-items: center;
-  min-height: 80px;
-  padding: 20px 24px;
-  background: var(--bg);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  box-shadow: var(--shadow-sm);
-  text-decoration: none;
-  color: var(--text);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.contact-card-inner .label {
-  color: rgba(44,24,16,0.45);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.contact-card-inner strong {
-  font-size: 16px;
-  color: var(--dark);
-  display: block;
-  line-height: 1.4;
-}
-
-/* FINAL CTA */
-.final-cta {
-  background: var(--dark);
-  padding: 80px 48px;
-}
-
-.final-cta .container {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.final-cta h2 {
-  color: #fff;
-  margin-bottom: 16px;
-}
-
-.final-cta p {
-  color: rgba(255,255,255,0.65);
-  font-size: 17px;
-  margin-bottom: 36px;
-}
-
-@keyframes subtlePulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(184,92,56,0); }
-  50% { box-shadow: 0 0 0 8px rgba(184,92,56,0.25); }
-}
-
-.btn-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 32px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  border-radius: 24px;
-  animation: subtlePulse 3s ease-in-out infinite;
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-
-.btn-cta:hover {
-  background: #9a4a2c;
-  transform: scale(1.01);
-  animation: none;
-  box-shadow: 0 0 0 6px rgba(184,92,56,0.3);
-}
-
-/* FOOTER */
-.footer {
-  background: var(--bg-alt);
-  padding: 24px 48px;
-  border-top: 1px solid rgba(44,24,16,0.08);
-}
-
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dark);
-  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-}
-
-.footer-credit {
-  font-size: 12px;
-  color: rgba(44,24,16,0.45);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer-credit:hover {
-  color: var(--accent);
-}
-
-/* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .about .container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  :root {
+    --accent: #B85C38;
+    --accent-light: rgba(184,92,56,0.08);
+    --bg: #FFFAF5;
+    --bg-alt: #F5EDE0;
+    --dark: #1C1007;
+    --text: #2C1810;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
   }
 
-  .hours-section .container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
   }
 
-  .info-bar .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav .container {
-    padding: 0 24px;
+  h1, h2, h3, .nav-brand {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   }
 
-  .hero {
-    padding: 0 24px 56px;
+  h1 {
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
   }
 
-  .info-bar {
-    padding: 40px 24px;
+  h2 {
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
   }
 
-  .sig-visual {
-    padding: 56px 24px;
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
   }
 
-  .about {
-    padding: 80px 24px;
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
   }
 
-  .hours-section {
-    padding: 72px 24px;
-  }
-
-  .final-cta {
-    padding: 80px 24px;
-  }
-
-  .footer {
-    padding: 24px 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 55vh;
-    padding: 0 20px 48px;
-  }
-
-  .info-bar {
-    padding: 40px 20px;
-  }
-
-  .info-bar .container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about, .hours-section, .final-cta {
-    padding: 48px 20px;
-  }
-
-  .sig-visual {
-    padding: 48px 20px;
-  }
-
-  .footer {
-    padding: 20px;
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background: rgba(255,250,245,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
   }
 
   .nav .container {
-    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 48px;
   }
 
   .nav-brand {
-    font-size: 13px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: 0.01em;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .hero, .steam, * { animation: none !important; transition: none !important; }
-}
+  .nav-phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  .nav-phone::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-phone:hover::after { width: 100%; }
+  .nav-phone:hover { color: #8f4427; }
+
+  /* HERO */
+  .hero {
+    min-height: 70vh;
+    max-height: 680px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.92) 100%), url('hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 48px 72px;
+    animation: kenBurns 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes kenBurns {
+    0% { background-size: 100% auto; }
+    100% { background-size: 108% auto; }
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .hero h1 {
+    color: #fff;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 2.5vw, 19px);
+    color: rgba(255,255,255,0.88);
+    max-width: 540px;
+    line-height: 1.5;
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    font-style: italic;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 32px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-primary:hover {
+    background: #9a4a2c;
+    transform: scale(1.01);
+    box-shadow: 0 0 0 4px rgba(184,92,56,0.18), var(--shadow-md);
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--dark);
+    padding: 40px 48px;
+  }
+
+  .info-bar .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  .info-item {}
+
+  .info-item .label {
+    color: rgba(255,255,255,0.4);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .info-item .value {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .info-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .info-item a:hover { color: rgba(255,255,255,0.75); }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .star-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .star-path {
+    fill: #c8c0b8;
+    transition: fill 0.4s ease;
+  }
+
+  .star-path.filled {
+    fill: #F5C842;
+  }
+
+  .rating-val {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .review-count {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  /* SIGNATURE VISUAL */
+  .signature-visual {
+    background: var(--accent-light);
+    padding: 56px 48px;
+    text-align: center;
+  }
+
+  .signature-visual .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .steam-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steam { animation: steamRise 3s ease-in-out infinite; }
+  .steam-2 { animation-delay: 0.5s; }
+  .steam-3 { animation-delay: 1s; }
+
+  @keyframes steamRise {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 0.8; transform: translateY(-8px); }
+    100% { opacity: 0; transform: translateY(-16px); }
+  }
+
+  .sig-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ABOUT */
+  .about {
+    background: var(--bg);
+    padding: 80px 48px;
+  }
+
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .about-content {}
+
+  .about-eyebrow {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .accent-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 16px 0 28px;
+  }
+
+  .about p {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 8px;
+  }
+
+  .meta-item {}
+  .meta-item .label { color: var(--accent); display: block; margin-bottom: 4px; }
+  .meta-item .val { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.4; }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    border: 1px solid rgba(184,92,56,0.2);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* HOURS & CONTACT */
+  .hours-contact {
+    background: var(--bg-alt);
+    padding: 72px 48px;
+  }
+
+  .hours-contact .container {}
+
+  .hc-eyebrow {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .hours-contact h2 {
+    margin-bottom: 40px;
+  }
+
+  .hc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(44,24,16,0.08);
+  }
+
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .hours-table .day {
+    font-weight: 700;
+    color: var(--dark);
+    width: 120px;
+  }
+
+  .hours-table .time {
+    color: rgba(44,24,16,0.6);
+  }
+
+  .hours-table .closed {
+    color: rgba(44,24,16,0.35);
+    font-style: italic;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    min-height: 80px;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-body {}
+  .card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(44,24,16,0.45); display: block; margin-bottom: 2px; }
+  .card-value { font-size: 16px; font-weight: 600; color: var(--dark); line-height: 1.3; }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--dark);
+    padding: 80px 48px;
+  }
+
+  .final-cta .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .final-cta h2 {
+    color: #fff;
+    max-width: 560px;
+  }
+
+  .final-cta .support {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    max-width: 400px;
+    line-height: 1.5;
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    font-style: italic;
+  }
+
+  .btn-cta-pulse {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 36px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    animation: subtlePulse 3s ease-in-out infinite;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn-cta-pulse:hover {
+    background: #9a4a2c;
+    transform: scale(1.01);
+    animation: none;
+    box-shadow: 0 0 0 6px rgba(184,92,56,0.22);
+  }
+
+  @keyframes subtlePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(184,92,56,0); }
+    50% { box-shadow: 0 0 0 8px rgba(184,92,56,0.18); }
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg-alt);
+    padding: 24px 48px;
+    border-top: 1px solid rgba(44,24,16,0.1);
+  }
+
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  }
+
+  .footer-credit {
+    font-size: 12px;
+    color: rgba(44,24,16,0.45);
+  }
+
+  .footer-credit a {
+    color: rgba(44,24,16,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-credit a:hover { color: var(--accent); }
+
+  /* REVEAL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .info-bar .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .about .container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hc-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav .container { padding: 0 24px; }
+    .hero { padding: 0 24px 56px; }
+    .info-bar { padding: 40px 24px; }
+    .signature-visual { padding: 56px 24px; }
+    .about { padding: 80px 24px; }
+    .hours-contact { padding: 72px 24px; }
+    .final-cta { padding: 80px 24px; }
+    .footer { padding: 24px 24px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero { min-height: 55vh; padding: 0 20px 48px; }
+    .info-bar { padding: 40px 20px; }
+    .info-bar .container { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .signature-visual { padding: 48px 20px; }
+    .about { padding: 48px 20px; }
+    .hours-contact { padding: 48px 20px; }
+    .final-cta { padding: 48px 20px; }
+    .footer { padding: 20px; }
+    .contact-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .nav .container { padding: 0 20px; }
+    .nav-brand { font-size: 13px; }
+    .nav-phone { font-size: 13px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .hero, .steam, * { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -661,18 +600,18 @@ h2 {
 <!-- NAV -->
 <nav class="nav">
   <div class="container">
-    <a class="nav-brand" href="#">Lior The Baker</a>
-    <a class="nav-phone" href="tel:4804510011">(480) 451-0011</a>
+    <a href="#" class="nav-brand">Lior The Baker</a>
+    <a href="tel:4804510011" class="nav-phone">(480) 451-0011</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <p class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Artisan Bakery</p>
-    <h1>Lior<br>The Baker</h1>
-    <p class="hero-tagline">Artisanal baked goods and custom cakes made fresh in Scottsdale.</p>
-    <a class="btn-primary" href="tel:4804510011">Call (480) 451-0011</a>
+    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Artisan Bakery</span>
+    <h1>Lior The Baker</h1>
+    <p class="hero-tagline">Fresh artisanal baked goods from Lior The Baker, available Wednesday through Sunday.</p>
+    <a href="tel:4804510011" class="btn-primary">Call (480) 451-0011</a>
   </div>
 </section>
 
@@ -681,189 +620,137 @@ h2 {
   <div class="container">
     <div class="info-item">
       <span class="label">Phone</span>
-      <span class="info-value"><a href="tel:4804510011">(480) 451-0011</a></span>
+      <span class="value"><a href="tel:4804510011">(480) 451-0011</a></span>
     </div>
     <div class="info-item">
       <span class="label">Location</span>
-      <span class="info-value">Scottsdale, AZ</span>
+      <span class="value">Scottsdale, AZ</span>
     </div>
     <div class="info-item">
-      <span class="label">Google Rating</span>
-      <div class="stars-row">
-        <div class="star-wrap" id="stars-row">
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-        </div>
-        <span class="info-value">4.9</span>
-        <span class="review-count">(<span class="counter" data-target="221">0</span> reviews)</span>
+      <span class="label">Customer Rating</span>
+      <div class="stars-row" id="stars-row">
+        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s1" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s2" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s3" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s4" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s5" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
       </div>
+      <span class="rating-val">4.9</span>
+      <div class="review-count"><span class="counter" data-target="221">0</span> reviews</div>
     </div>
     <div class="info-item">
-      <span class="label">Small Batch</span>
-      <span class="info-value">Limited Hours,<br>Made Fresh</span>
+      <span class="label">Specialty</span>
+      <span class="value">Custom Orders Welcome</span>
     </div>
   </div>
 </section>
 
 <!-- SIGNATURE VISUAL -->
-<section class="sig-visual">
+<section class="signature-visual">
   <div class="container">
-    <div class="steam-wrap">
-      <svg class="steam-cup" width="60" height="80" viewBox="0 0 60 80" aria-hidden="true">
-        <path class="steam steam-1" d="M20 60 Q18 50 22 40 Q26 30 22 20" stroke="var(--accent)" stroke-width="2" fill="none" />
-        <path class="steam steam-2" d="M30 60 Q32 50 28 40 Q24 30 30 20" stroke="var(--accent)" stroke-width="2" fill="none" />
-        <path class="steam steam-3" d="M40 60 Q42 50 38 40 Q34 30 40 20" stroke="var(--accent)" stroke-width="2" fill="none" />
-        <rect x="15" y="55" width="30" height="20" rx="4" fill="var(--accent)" opacity="0.3" />
+    <div class="steam-wrapper">
+      <svg width="60" height="80" viewBox="0 0 60 80" aria-hidden="true">
+        <path class="steam steam-1" d="M20 60 Q18 50 22 40 Q26 30 22 20" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path class="steam steam-2" d="M30 60 Q32 50 28 40 Q24 30 30 20" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path class="steam steam-3" d="M40 60 Q42 50 38 40 Q34 30 40 20" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="15" y="55" width="30" height="20" rx="4" fill="var(--accent)" opacity="0.3"/>
       </svg>
     </div>
-    <p class="sig-text">Baked fresh &nbsp;·&nbsp; Small batches &nbsp;·&nbsp; Custom orders welcome</p>
+    <span class="sig-label">Baked fresh, every open day</span>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
   <div class="container">
-    <div class="about-body">
+    <div class="about-content">
       <span class="label about-eyebrow">About</span>
       <div class="accent-rule"></div>
-      <h2 class="reveal">For Scottsdale neighbors who want something genuinely made  -  not mass produced.</h2>
-      <br>
-      <p>We bake in small batches on purpose. Every custom cake, loaf of bread, and specialty dessert that leaves our kitchen gets our full attention  -  and you'll taste the difference. Our limited hours aren't a limitation; they're how we make sure everything is fresh, carefully crafted, and worth the trip to 68th Street.</p>
-      <p>With a 4.9-star rating across 221 reviews, Scottsdale has been generous in sharing what they love, and we don't take that lightly. Whether you're placing a custom order for a celebration or just stopping in for something sweet, we're glad you found us. Custom cakes and specialty desserts are available by order  -  just give us a call to get started.</p>
+      <h2 class="reveal">For those who know the difference a real loaf makes.</h2>
+      <p>I'm Lior, and I bake for Scottsdale residents who care about what goes into their bread, their pastries, and their desserts. Every item that leaves my kitchen  -  whether it's a fresh loaf, a custom order, or a weekend pastry  -  is made by hand, from scratch, with care. That's not a tagline. It's just how I work.</p>
+      <p>My schedule is intentionally limited. Wednesday through Sunday, a few hours at a time. That's not an accident  -  it means every batch I make gets my full attention. With a 4.9-star rating across 221 reviews from customers right here in Scottsdale, I'll let the bread speak for itself.</p>
     </div>
     <div class="about-meta">
-      <div class="meta-card reveal">
-        <div class="meta-label">Address</div>
-        <div class="meta-value">3030 N 68th St<br>Scottsdale, AZ 85251</div>
+      <div class="meta-item">
+        <span class="label">Address</span>
+        <span class="val">3030 N 68th St<br>Scottsdale, AZ 85251</span>
       </div>
-      <div class="meta-card reveal">
-        <div class="meta-label">Google Rating</div>
-        <div class="meta-value">4.9 stars  -  221 reviews</div>
+      <div class="meta-item">
+        <span class="label">Rating</span>
+        <span class="val">
+          <span class="rating-pill">★ 4.9 &nbsp;·&nbsp; 221 reviews</span>
+        </span>
       </div>
-      <div class="meta-card reveal">
-        <div class="meta-label">Custom Orders</div>
-        <div class="meta-value"><a href="tel:4804510011">Call to arrange</a></div>
+      <div class="meta-item">
+        <span class="label">Offerings</span>
+        <span class="val">Fresh bread · Pastries &amp; desserts · Custom baked goods · Made-to-order items</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Custom Orders</span>
+        <span class="val">Available  -  call to discuss your order</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
-<section class="hours-section">
+<section class="hours-contact">
   <div class="container">
-    <div>
-      <span class="label hours-eyebrow">Hours &amp; Contact</span>
-      <h2 class="reveal">Find us.</h2>
-      <div class="rating-pill">
-        <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-        4.9 on Google
+    <span class="label hc-eyebrow">Hours &amp; Contact</span>
+    <h2 class="reveal">Find us.</h2>
+    <div class="hc-grid">
+      <div>
+        <table class="hours-table" aria-label="Business hours">
+          <tbody>
+            <tr>
+              <td class="day">Monday</td>
+              <td class="time closed">Closed</td>
+            </tr>
+            <tr>
+              <td class="day">Tuesday</td>
+              <td class="time closed">Closed</td>
+            </tr>
+            <tr>
+              <td class="day">Wednesday</td>
+              <td class="time">9:00 AM - 2:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Thursday</td>
+              <td class="time">9:00 AM - 2:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Friday</td>
+              <td class="time">8:00 AM - 3:00 PM</td>
+            </tr>
+            <tr>
+              <td class="day">Saturday</td>
+              <td class="time closed">Closed</td>
+            </tr>
+            <tr>
+              <td class="day">Sunday</td>
+              <td class="time">9:00 AM - 1:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table class="hours-table">
-        <tr><td>Monday</td><td class="closed">Closed</td></tr>
-        <tr><td>Tuesday</td><td class="closed">Closed</td></tr>
-        <tr><td>Wednesday</td><td>9:00 AM - 2:00 PM</td></tr>
-        <tr><td>Thursday</td><td>9:00 AM - 2:00 PM</td></tr>
-        <tr><td>Friday</td><td>8:00 AM - 3:00 PM</td></tr>
-        <tr><td>Saturday</td><td class="closed">Closed</td></tr>
-        <tr><td>Sunday</td><td>9:00 AM - 1:00 PM</td></tr>
-      </table>
-    </div>
-    <div>
-      <div class="contact-cards" style="margin-top: 0;">
-        <a class="contact-card reveal" href="tel:4804510011">
-          <div class="contact-card-inner">
-            <span class="label">Phone</span>
-            <strong>(480) 451-0011</strong>
+      <div class="contact-cards">
+        <a href="tel:4804510011" class="contact-card reveal" aria-label="Call Lior The Baker">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-label">Phone</span>
+            <span class="card-value">(480) 451-0011</span>
           </div>
         </a>
-        <a class="contact-card reveal" href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251" target="_blank" rel="noopener">
-          <div class="contact-card-inner">
-            <span class="label">Address &amp; Directions</span>
-            <strong>3030 N 68th St<br>Scottsdale, AZ 85251</strong>
+        <a href="https://maps.google.com/?q=3030+N+68th+St+Scottsdale+AZ+85251" target="_blank" rel="noopener" class="contact-card reveal" aria-label="Get directions to Lior The Baker">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="var(--accent)"/>
+            </svg>
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="container">
-    <h2 class="reveal">Custom cakes and pastries, made for you.</h2>
-    <p>Place your order by phone  -  we'd love to hear from you.</p>
-    <a class="btn-cta" href="tel:4804510011">Call (480) 451-0011</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <span class="footer-brand">Lior The Baker &nbsp;&middot;&nbsp; Scottsdale, AZ</span>
-    <a class="footer-credit" href="https://auxoagency.co" target="_blank" rel="noopener">Site by Auxo Agency &middot; auxoagency.co</a>
-  </div>
-</footer>
-
-<script>
-(function(){
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        revealObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => revealObserver.observe(el));
-
-  // Counter animation
-  const counters = document.querySelectorAll('.counter');
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const el = e.target;
-        const target = parseInt(el.dataset.target);
-        let current = 0;
-        const step = Math.ceil(target / 40);
-        const interval = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            el.textContent = target;
-            clearInterval(interval);
-          } else {
-            el.textContent = current;
-          }
-        }, 30);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(c => counterObserver.observe(c));
-
-  // Star fill animation on scroll
-  const starsRow = document.getElementById('stars-row');
-  if (starsRow) {
-    const starObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const stars = starsRow.querySelectorAll('.star');
-          stars.forEach((star, i) => {
-            setTimeout(() => {
-              star.classList.add('filled');
-            }, i * 120);
-          });
-          starObserver.unobserve(starsRow);
-        }
-      });
-    }, { threshold: 0.5 });
-    starObserver.observe(starsRow);
-  }
-})();
-</script>
-</body>
-</html>
+          <div class="card-body">
+            <span class="card-label">Address</span>
+            <span class
