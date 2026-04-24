@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Health Club &amp; Fitness Center Scottsdale Fashion Square, AZ | Life Time</title>
+<title>Luxury Health Club &amp; Fitness Center North Scottsdale, AZ | Life Time</title>
 <style>
   :root {
     --accent: #06A77D;
@@ -27,6 +27,7 @@
     line-height: 1.75;
     color: var(--text);
     background: var(--bg);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, .nav-brand, .hero-tagline {
@@ -46,6 +47,7 @@
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.08;
+    color: var(--text);
   }
 
   .container {
@@ -110,7 +112,13 @@
     text-shadow: none;
   }
 
-  .nav-phone:hover { opacity: 0.85; }
+  .nav-phone:hover {
+    color: var(--accent);
+  }
+
+  .nav.scrolled .nav-phone:hover {
+    color: var(--dark);
+  }
 
   /* HERO */
   .hero {
@@ -157,19 +165,18 @@
   }
 
   .hero-tagline {
-    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
     font-size: clamp(16px, 2.5vw, 20px);
     color: rgba(255,255,255,0.95);
     max-width: 560px;
+    font-weight: 400;
     line-height: 1.5;
-    margin-bottom: 32px;
     text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+    margin-bottom: 32px;
   }
 
-  .btn-primary {
+  .btn-hero {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     min-height: 54px;
     padding: 0 32px;
     background: var(--accent);
@@ -178,17 +185,15 @@
     font-weight: 600;
     text-decoration: none;
     border-radius: 999px;
-    border: none;
-    cursor: pointer;
+    letter-spacing: -0.01em;
     transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: 0 4px 16px rgba(6,167,125,0.35);
-    letter-spacing: 0.01em;
+    box-shadow: 0 2px 12px rgba(6,167,125,0.35);
   }
 
-  .btn-primary:hover {
-    background: #058f6a;
+  .btn-hero:hover {
+    background: #059068;
     transform: scale(1.01);
-    box-shadow: 0 6px 24px rgba(6,167,125,0.5);
+    box-shadow: 0 4px 24px rgba(6,167,125,0.5);
   }
 
   /* INFO BAR */
@@ -201,7 +206,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    align-items: center;
   }
 
   .info-item {
@@ -222,7 +226,6 @@
     font-size: 15px;
     font-weight: 600;
     color: #fff;
-    line-height: 1.4;
   }
 
   .info-value a {
@@ -231,19 +234,14 @@
     transition: color 0.2s;
   }
 
-  .info-value a:hover { color: var(--accent); }
-
-  .stars-row {
-    display: inline-flex;
-    gap: 2px;
-    margin-right: 6px;
-    vertical-align: middle;
+  .info-value a:hover {
+    color: var(--accent);
   }
 
   /* ABOUT */
   .about-section {
-    background: var(--bg);
     padding: 80px 48px;
+    background: var(--bg);
   }
 
   .about-section .container {
@@ -258,8 +256,9 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: block;
+    text-align: center;
   }
 
   .accent-rule {
@@ -268,25 +267,30 @@
     background: var(--accent);
     margin: 0 auto 32px;
     display: block;
+    border: none;
   }
 
-  .about-text-wrap {
+  .about-text {
     max-width: 680px;
     margin: 0 auto;
     text-align: left;
   }
 
-  .about-text-wrap h2 {
-    color: var(--dark);
-    text-align: center;
+  .about-section h2 {
     max-width: 580px;
     margin: 8px auto 20px;
+    text-align: center;
   }
 
-  .about-text-wrap p {
+  .about-text p {
     color: var(--text);
     margin-bottom: 20px;
-    text-align: left;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
   }
 
   .about-info-grid {
@@ -344,7 +348,9 @@
     transition: border-color 0.2s;
   }
 
-  .info-box-value a:hover { border-bottom-color: var(--accent); }
+  .info-box-value a:hover {
+    border-bottom-color: var(--accent);
+  }
 
   /* SIGNATURE VISUAL */
   .signature-section {
@@ -370,17 +376,54 @@
   }
 
   .breathing-circle {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
-    background: rgba(6,167,125,0.12);
     animation: breathe 4s ease-in-out infinite;
   }
 
   @keyframes breathe {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.15); opacity: 1; }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* GALLERY */
+  .gallery-section {
+    background: var(--bg-alt);
+    padding: 72px 48px;
+  }
+
+  .gallery-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-section .eyebrow {
+    text-align: left;
+  }
+
+  .gallery-section h2 {
+    text-align: left;
+    margin: 8px 0 0;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
   }
 
   /* HOURS & CONTACT */
@@ -389,13 +432,13 @@
     padding: 72px 48px;
   }
 
-  .hours-contact .container {
-    display: flex;
-    flex-direction: column;
+  .hours-contact .eyebrow {
+    text-align: left;
   }
 
-  .hours-contact .section-header {
-    margin-bottom: 40px;
+  .hours-contact h2 {
+    text-align: left;
+    margin: 8px 0 32px;
   }
 
   .hours-contact-grid {
@@ -408,15 +451,15 @@
   .rating-pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     background: var(--accent-light);
     border: 1px solid rgba(6,167,125,0.2);
     border-radius: 999px;
-    padding: 4px 14px;
+    padding: 6px 16px;
     font-size: 13px;
     font-weight: 600;
     color: var(--accent);
-    margin-top: 12px;
+    margin-bottom: 24px;
   }
 
   .hours-table {
@@ -425,10 +468,12 @@
   }
 
   .hours-table tr {
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
 
-  .hours-table tr:last-child { border-bottom: none; }
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
 
   .hours-table td {
     padding: 10px 0;
@@ -436,15 +481,14 @@
     line-height: 1.4;
   }
 
-  .hours-table .day {
+  .hours-table td:first-child {
     font-weight: 600;
-    color: var(--dark);
+    color: var(--text);
     width: 50%;
   }
 
-  .hours-table .time {
-    color: var(--text);
-    opacity: 0.8;
+  .hours-table td:last-child {
+    color: rgba(10,31,21,0.7);
     text-align: right;
   }
 
@@ -460,11 +504,12 @@
     border-left: 4px solid var(--accent);
     border-radius: 10px;
     padding: 20px 24px;
-    box-shadow: var(--shadow-sm);
     min-height: 80px;
+    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 4px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
   }
@@ -480,22 +525,12 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 6px;
   }
 
   .contact-card-value {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
-    color: var(--dark);
-    text-decoration: none;
-    line-height: 1.4;
-  }
-
-  .contact-card-sub {
-    font-size: 14px;
     color: var(--text);
-    opacity: 0.7;
-    margin-top: 2px;
     line-height: 1.4;
   }
 
@@ -512,14 +547,36 @@
 
   .final-cta h2 {
     color: #fff;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
-  .final-cta .support-line {
+  .final-cta-support {
     font-size: 17px;
     color: rgba(255,255,255,0.7);
-    margin-bottom: 32px;
-    line-height: 1.5;
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 54px;
+    padding: 0 32px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    letter-spacing: -0.01em;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 2px 12px rgba(6,167,125,0.35);
+  }
+
+  .btn-cta:hover {
+    background: #059068;
+    transform: scale(1.01);
+    box-shadow: 0 4px 32px rgba(6,167,125,0.55);
   }
 
   /* FOOTER */
@@ -539,28 +596,23 @@
   .footer-brand {
     font-size: 14px;
     font-weight: 600;
-    color: var(--dark);
-  }
-
-  .footer-brand span {
-    opacity: 0.55;
-    font-weight: 400;
+    color: var(--text);
   }
 
   .footer-credit {
     font-size: 12px;
-    color: var(--text);
-    opacity: 0.5;
-    text-decoration: none;
+    color: rgba(10,31,21,0.5);
   }
 
   .footer-credit a {
-    color: inherit;
+    color: rgba(10,31,21,0.5);
     text-decoration: none;
     transition: color 0.2s;
   }
 
-  .footer-credit a:hover { color: var(--accent); opacity: 1; }
+  .footer-credit a:hover {
+    color: var(--accent);
+  }
 
   /* REVEAL */
   .reveal {
@@ -574,51 +626,36 @@
     transform: none;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal, .info-box { opacity: 1; transform: none; transition: none; }
-    .hero, .breathing-circle, .gallery-img, * { animation: none !important; transition: none !important; }
-  }
-
   /* RESPONSIVE */
   @media (max-width: 767px) {
-    .hero {
-      padding: 120px 24px 56px;
-      min-height: 100svh;
-      max-height: none;
-      background-position: center center;
-      align-items: flex-end;
-    }
-    .hero .container {
-      align-items: center;
-      text-align: center;
-    }
-    .hero h1, .hero-tagline, .hero-eyebrow {
-      max-width: 100%;
-      text-align: center;
-    }
+    .hero { padding: 120px 24px 56px; min-height: 100svh; max-height: none; background-position: center center; }
+    .hero .container { align-items: center; text-align: center; }
+    .hero h1, .hero-tagline, .hero-eyebrow { max-width: 100%; text-align: center; }
     .info-bar { padding: 24px 24px; }
-    .info-bar .container {
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      text-align: center;
-    }
+    .info-bar .container { grid-template-columns: 1fr 1fr; gap: 16px; text-align: center; }
     .info-item { align-items: center; gap: 4px; }
     .info-label { font-size: 10px; }
     .info-value { font-size: 14px; }
-    .about-section { padding: 60px 24px; }
-    .about-text-wrap { text-align: center; }
-    .about-text-wrap p { text-align: center; }
+    .about-section, .about-section p, .about-section h2 { text-align: center; }
+    .about-text { text-align: center; }
     .about-info-grid { grid-template-columns: 1fr; }
     .info-box { text-align: center; }
-    .signature-section { padding: 56px 24px; }
-    .hours-contact { padding: 56px 24px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-img { aspect-ratio: 16/10; }
+    .gallery-section .eyebrow, .gallery-section h2 { text-align: center; }
     .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
-    .hours-contact .section-header { text-align: center; }
-    .contact-cards { align-items: stretch; }
-    .final-cta { padding: 60px 24px; }
-    .footer { padding: 24px 24px; }
+    .hours-contact .eyebrow, .hours-contact h2 { text-align: center; }
+    .contact-cards { align-items: center; }
+    .contact-card { width: 100%; max-width: 400px; }
     .footer .container { flex-direction: column; text-align: center; }
     .nav .container { padding: 0 24px; }
+    .about-section { padding: 64px 24px; }
+    .signature-section { padding: 56px 24px; }
+    .gallery-section { padding: 56px 24px; }
+    .hours-contact { padding: 56px 24px; }
+    .final-cta { padding: 64px 24px; }
+    .footer { padding: 24px 24px; }
+    .rating-pill { display: flex; justify-content: center; }
   }
 
   @media (max-width: 479px) {
@@ -627,32 +664,33 @@
     .info-bar .container { grid-template-columns: 1fr 1fr; gap: 12px; }
     .nav-brand { font-size: 16px; }
     .nav-phone { font-size: 13px; }
-    .about-section { padding: 48px 20px; }
-    .signature-section { padding: 48px 20px; }
-    .hours-contact { padding: 48px 20px; }
-    .final-cta { padding: 60px 20px; }
+    section { padding-left: 20px !important; padding-right: 20px !important; }
     .footer .container { padding: 0 20px; }
-    .footer { padding: 24px 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .info-box { opacity: 1; transform: none; transition: none; }
+    .hero, .steam, .gallery-img, * { animation: none !important; transition: none !important; }
   }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="mainNav">
+<nav class="nav" id="nav">
   <div class="container">
     <a href="#" class="nav-brand">Life Time</a>
-    <a href="tel:4807910635" class="nav-phone">(480) 791-0635</a>
+    <a href="tel:4805389009" class="nav-phone">(480) 538-9009</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <span class="hero-eyebrow">Scottsdale, AZ · Wellness</span>
+    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Wellness &amp; Fitness</span>
     <h1>Life Time</h1>
-    <p class="hero-tagline">Luxury health club with world-class facilities and expert trainers in Scottsdale Fashion Square.</p>
-    <a href="tel:4807910635" class="btn-primary">Call (480) 791-0635</a>
+    <p class="hero-tagline">Luxury health club with world-class facilities and resort-style wellness in North Scottsdale.</p>
+    <a href="tel:4805389009" class="btn-hero">Call (480) 538-9009</a>
   </div>
 </section>
 
@@ -660,29 +698,29 @@
 <div class="info-bar">
   <div class="container">
     <div class="info-item">
-      <div class="info-label">Phone</div>
-      <div class="info-value"><a href="tel:4807910635">(480) 791-0635</a></div>
+      <span class="info-label">Phone</span>
+      <span class="info-value"><a href="tel:4805389009">(480) 538-9009</a></span>
     </div>
     <div class="info-item">
-      <div class="info-label">Location</div>
-      <div class="info-value">Scottsdale, AZ</div>
+      <span class="info-label">Location</span>
+      <span class="info-value">North Scottsdale, AZ</span>
     </div>
     <div class="info-item">
-      <div class="info-label">Rating</div>
-      <div class="info-value">
-        <span class="stars-row">
+      <span class="info-label">Rating</span>
+      <span class="info-value">
+        <span style="display:inline-flex;gap:2px;margin-right:8px;vertical-align:middle;">
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
         </span>
-        4.9 · 126 reviews
-      </div>
+        4.9 · 424 reviews
+      </span>
     </div>
     <div class="info-item">
-      <div class="info-label">Membership</div>
-      <div class="info-value">Full Club Access</div>
+      <span class="info-label">Hours Today</span>
+      <span class="info-value">Open from 4:00 AM</span>
     </div>
   </div>
 </div>
@@ -690,12 +728,12 @@
 <!-- ABOUT -->
 <section class="about-section">
   <div class="container">
-    <div class="about-text-wrap">
-      <span class="eyebrow">About</span>
-      <h2 class="reveal">Where Scottsdale's Wellness Community Comes to Thrive</h2>
-      <span class="accent-rule"></span>
-      <p>For those who expect more from their health club, Life Time at Scottsdale Fashion Square delivers a genuinely different standard. We bring together world-class fitness facilities, a resort-like atmosphere, and the kind of rejuvenation areas that make every visit feel like a genuine escape  -  not just a workout. Our expert trainers work alongside you to craft a path that's specific to your goals, whether you're refining performance or building sustainable health habits.</p>
-      <p>Our Scottsdale location combines luxury positioning with the everyday accessibility the community deserves. From resort-like spa amenities and premium locker rooms to group fitness classes that actually challenge you, Life Time offers an environment where the pursuit of wellness feels elevated. At Scottsdale Fashion Square, the convenience of location meets the quality of experience you won't find anywhere else in the Valley.</p>
+    <span class="eyebrow">About</span>
+    <h2 class="reveal">Built for those who take their health seriously  -  and expect more from a gym.</h2>
+    <hr class="accent-rule">
+    <div class="about-text">
+      <p>Health-conscious individuals in North Scottsdale deserve a fitness experience that goes well beyond weights and treadmills. At Life Time, we've built a comprehensive wellness ecosystem where world-class fitness facilities, expert personal training, and resort-style spa amenities come together under one roof  -  so every visit feels as restorative as it is challenging.</p>
+      <p>What sets us apart is the depth of what's available to our members: from supervised group fitness classes and health assessments to swimming pool access and rejuvenation areas that rival the finest spas in the Valley. Our doors open at 4:00 AM on weekdays, giving early risers and shift workers the flexibility they need, and we stay open until midnight Monday through Thursday so evening sessions are never rushed. Whether your goal is performance, recovery, or simply building a sustainable routine, you'll find everything here at our North Scottsdale location.</p>
     </div>
 
     <div class="about-info-grid">
@@ -705,15 +743,15 @@
       </div>
       <div class="info-box">
         <span class="info-box-label">Google Rating</span>
-        <span class="info-box-value">4.9 stars · 126 reviews</span>
+        <span class="info-box-value">4.9 stars · 424 reviews</span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Specialties</span>
-        <span class="info-box-value">Luxury health club experience · Resort-like rejuvenation areas · Expert trainer guidance</span>
+        <span class="info-box-value">World-class fitness facilities · Expert personal training · Resort-style spa amenities</span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Services</span>
-        <span class="info-box-value">Fitness center memberships, Personal training, Group fitness classes, Spa and wellness amenities</span>
+        <span class="info-box-value">Gym &amp; fitness facilities, personal training, group fitness classes, spa &amp; rejuvenation areas</span>
       </div>
     </div>
   </div>
@@ -722,67 +760,83 @@
 <!-- SIGNATURE VISUAL -->
 <section class="signature-section">
   <div class="container">
-    <div class="breathing-circle" aria-hidden="true"></div>
-    <span class="signature-label">Appointments Welcome · Walk-ins Encouraged</span>
+    <svg class="breathing-circle" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="28" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.3"/>
+      <circle cx="32" cy="32" r="20" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.6"/>
+      <circle cx="32" cy="32" r="10" fill="var(--accent)" opacity="0.85"/>
+    </svg>
+    <span class="signature-label">Walk-ins welcome · Appointments available</span>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <span class="eyebrow">A look inside</span>
+    <h2 class="reveal">Our space</h2>
+    <div class="gallery-grid">
+      <img src="gallery-1.jpg" alt="Life Time photo" loading="lazy" class="gallery-img">
+      <img src="gallery-2.png" alt="Life Time photo" loading="lazy" class="gallery-img">
+      <img src="gallery-3.jpg" alt="Life Time photo" loading="lazy" class="gallery-img">
+    </div>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
   <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Hours &amp; Contact</span>
-      <h2 class="reveal">Find us.</h2>
-      <div class="rating-pill">
-        <svg width="13" height="13" viewBox="0 0 20 20" fill="#06A77D"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
-        4.9 · 126 Google reviews
-      </div>
+    <span class="eyebrow">Hours &amp; Contact</span>
+    <h2 class="reveal">Find us.</h2>
+
+    <div class="rating-pill reveal">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+      4.9 stars · 424 Google reviews
     </div>
+
     <div class="hours-contact-grid">
       <div>
         <table class="hours-table">
           <tbody>
             <tr>
-              <td class="day">Monday</td>
-              <td class="time">4:00 AM - 10:00 PM</td>
+              <td>Monday</td>
+              <td>4:00 AM - 12:00 AM</td>
             </tr>
             <tr>
-              <td class="day">Tuesday</td>
-              <td class="time">4:00 AM - 10:00 PM</td>
+              <td>Tuesday</td>
+              <td>4:00 AM - 12:00 AM</td>
             </tr>
             <tr>
-              <td class="day">Wednesday</td>
-              <td class="time">4:00 AM - 10:00 PM</td>
+              <td>Wednesday</td>
+              <td>4:00 AM - 12:00 AM</td>
             </tr>
             <tr>
-              <td class="day">Thursday</td>
-              <td class="time">4:00 AM - 10:00 PM</td>
+              <td>Thursday</td>
+              <td>4:00 AM - 12:00 AM</td>
             </tr>
             <tr>
-              <td class="day">Friday</td>
-              <td class="time">4:00 AM - 9:00 PM</td>
+              <td>Friday</td>
+              <td>4:00 AM - 11:00 PM</td>
             </tr>
             <tr>
-              <td class="day">Saturday</td>
-              <td class="time">6:00 AM - 8:00 PM</td>
+              <td>Saturday</td>
+              <td>5:00 AM - 10:00 PM</td>
             </tr>
             <tr>
-              <td class="day">Sunday</td>
-              <td class="time">6:00 AM - 8:00 PM</td>
+              <td>Sunday</td>
+              <td>5:00 AM - 10:00 PM</td>
             </tr>
           </tbody>
         </table>
       </div>
+
       <div class="contact-cards">
-        <a href="tel:4807910635" class="contact-card reveal">
-          <div class="contact-card-label">Phone</div>
-          <div class="contact-card-value">(480) 791-0635</div>
-          <div class="contact-card-sub">Call to inquire or schedule a tour</div>
+        <a href="tel:4805389009" class="contact-card reveal">
+          <span class="contact-card-label">Phone</span>
+          <span class="contact-card-value">(480) 538-9009</span>
         </a>
         <a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-card-label">Address</div>
-          <div class="contact-card-value">3030 N 68th St</div>
-          <div class="contact-card-sub">Scottsdale, AZ 85251 · Scottsdale Fashion Square</div>
+          <span class="contact-card-label">Address</span>
+          <span class="contact-card-value">3030 N 68th St<br>Scottsdale, AZ 85251</span>
         </a>
       </div>
     </div>
@@ -792,16 +846,16 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="reveal">Your best health starts here.</h2>
-    <p class="support-line">Reach out today and take the first step toward your best self.</p>
-    <a href="tel:4807910635" class="btn-primary">Call (480) 791-0635</a>
+    <h2 class="reveal">A healthier life starts here, in North Scottsdale.</h2>
+    <p class="final-cta-support">Resort-level amenities, expert guidance, and extended hours  -  all for you.</p>
+    <a href="tel:4805389009" class="btn-cta">Call (480) 538-9009</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-brand">Life Time <span>· Scottsdale, AZ</span></div>
+    <span class="footer-brand">Life Time &nbsp;·&nbsp; Scottsdale, AZ</span>
     <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></span>
   </div>
 </footer>
