@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lior The Baker - Fresh Artisanal Baked Goods in Scottsdale, AZ</title>
-<meta name="description" content="Fresh artisanal baked goods from Lior The Baker in Scottsdale, AZ. Custom orders, fresh bread, pastries, and desserts. Available Wednesday through Sunday.">
+<title>Lior The Baker - Artisan Baked Goods in Scottsdale, AZ</title>
 <style>
   :root {
     --accent: #B85C38;
@@ -15,6 +14,8 @@
     --text: #2C1810;
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
     --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+    --heading-font: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,36 +23,12 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--body-font);
+    background: var(--bg);
+    color: var(--text);
     font-size: 17px;
     line-height: 1.75;
-    color: var(--text);
-    background: var(--bg);
-  }
-
-  h1, h2, h3, .nav-brand {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  }
-
-  h1 {
-    font-size: clamp(38px, 9vw, 56px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 0.93;
-  }
-
-  h2 {
-    font-size: clamp(26px, 7vw, 38px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.08;
-  }
-
-  .label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
   }
 
   .container {
@@ -72,7 +49,6 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.06);
   }
-
   .nav .container {
     display: flex;
     align-items: center;
@@ -80,37 +56,26 @@
     height: 100%;
     padding: 0 48px;
   }
-
   .nav-brand {
-    font-weight: 700;
+    font-family: var(--heading-font);
     font-size: 14px;
+    font-weight: 700;
     color: var(--dark);
     text-decoration: none;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
   }
-
   .nav-phone {
     font-size: 14px;
     font-weight: 600;
     color: var(--accent);
     text-decoration: none;
-    position: relative;
     transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
   }
-
-  .nav-phone::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--accent);
-    transition: width 0.2s ease;
+  .nav-phone:hover {
+    color: var(--dark);
+    border-bottom-color: var(--accent);
   }
-
-  .nav-phone:hover::after { width: 100%; }
-  .nav-phone:hover { color: #8f4427; }
 
   /* HERO */
   .hero {
@@ -127,40 +92,38 @@
     padding: 0 48px 72px;
     animation: kenBurns 20s ease-in-out infinite alternate;
   }
-
   @keyframes kenBurns {
     0% { background-size: 100% auto; }
     100% { background-size: 108% auto; }
   }
-
   .hero .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    padding: 0;
   }
-
   .hero-eyebrow {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.6);
+    margin-bottom: 12px;
+    display: block;
   }
-
   .hero h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(38px, 9vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.93;
     color: #fff;
+    margin-bottom: 18px;
   }
-
   .hero-tagline {
-    font-size: clamp(16px, 2.5vw, 19px);
-    color: rgba(255,255,255,0.88);
-    max-width: 540px;
-    line-height: 1.5;
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-style: italic;
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    max-width: 480px;
+    margin-bottom: 32px;
+    line-height: 1.55;
   }
-
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -171,19 +134,17 @@
     color: #fff;
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.03em;
     text-decoration: none;
     border-radius: 24px;
     border: none;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: var(--shadow-sm);
+    letter-spacing: 0.01em;
   }
-
   .btn-primary:hover {
-    background: #9a4a2c;
+    background: #9e4a2a;
     transform: scale(1.01);
-    box-shadow: 0 0 0 4px rgba(184,92,56,0.18), var(--shadow-md);
+    box-shadow: 0 0 0 4px rgba(184,92,56,0.18);
   }
 
   /* INFO BAR */
@@ -191,285 +152,351 @@
     background: var(--dark);
     padding: 40px 48px;
   }
-
   .info-bar .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
   }
-
-  .info-item {}
-
-  .info-item .label {
-    color: rgba(255,255,255,0.4);
-    display: block;
-    margin-bottom: 6px;
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
-
-  .info-item .value {
-    color: #fff;
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .info-value {
+    font-size: 17px;
     font-weight: 600;
-    font-size: 18px;
+    color: #fff;
     line-height: 1.3;
   }
-
-  .info-item a {
+  .info-value a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
   }
-
-  .info-item a:hover { color: rgba(255,255,255,0.75); }
-
+  .info-value a:hover {
+    border-bottom-color: var(--accent);
+  }
   .stars-row {
     display: flex;
     align-items: center;
     gap: 4px;
     margin-bottom: 4px;
   }
-
-  .star-svg {
+  .star {
     width: 16px;
     height: 16px;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    transition: fill 0.3s ease;
   }
-
-  .star-path {
-    fill: #c8c0b8;
-    transition: fill 0.4s ease;
+  .star.filled {
+    fill: var(--accent);
   }
-
-  .star-path.filled {
-    fill: #F5C842;
-  }
-
-  .rating-val {
-    color: #fff;
+  .rating-score {
+    font-size: 22px;
     font-weight: 700;
-    font-size: 20px;
+    color: #fff;
   }
-
-  .review-count {
-    color: rgba(255,255,255,0.55);
+  .rating-count {
     font-size: 13px;
+    color: rgba(255,255,255,0.55);
     margin-top: 2px;
   }
 
   /* SIGNATURE VISUAL */
-  .signature-visual {
+  .signature-section {
     background: var(--accent-light);
     padding: 56px 48px;
     text-align: center;
   }
-
-  .signature-visual .container {
+  .signature-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
-
-  .steam-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .signature-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-top: 8px;
   }
-
-  .steam { animation: steamRise 3s ease-in-out infinite; }
-  .steam-2 { animation-delay: 0.5s; }
-  .steam-3 { animation-delay: 1s; }
-
+  .steam-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80px;
+  }
   @keyframes steamRise {
     0% { opacity: 0; transform: translateY(0); }
     50% { opacity: 0.8; transform: translateY(-8px); }
     100% { opacity: 0; transform: translateY(-16px); }
   }
-
-  .sig-label {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
+  .steam { animation: steamRise 3s ease-in-out infinite; }
+  .steam-2 { animation-delay: 0.5s; }
+  .steam-3 { animation-delay: 1s; }
 
   /* ABOUT */
-  .about {
+  .about-section {
     background: var(--bg);
     padding: 80px 48px;
   }
-
-  .about .container {
+  .about-section .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 72px;
     align-items: start;
   }
-
-  .about-content {}
-
+  .about-left {}
   .about-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--accent);
     display: block;
     margin-bottom: 12px;
   }
-
   .accent-rule {
     width: 40px;
     height: 1px;
     background: var(--accent);
-    margin: 16px 0 28px;
+    margin: 12px 0 24px;
   }
-
-  .about p {
-    color: var(--text);
-    margin-bottom: 20px;
+  .about-section h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+  .about-section p {
     font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 18px;
   }
-
-  .about-meta {
+  .about-right {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-top: 8px;
   }
+  .about-meta-item {
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(44,24,16,0.45);
+  }
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+  }
 
-  .meta-item {}
-  .meta-item .label { color: var(--accent); display: block; margin-bottom: 4px; }
-  .meta-item .val { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.4; }
+  /* GALLERY */
+  .gallery-section {
+    background: var(--bg-alt);
+    padding: 72px 48px;
+  }
+  .gallery-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .gallery-section h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--dark);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+  }
+  .gallery-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+  }
 
+  /* HOURS & CONTACT */
+  .hours-section {
+    background: var(--bg);
+    padding: 72px 48px;
+  }
+  .hours-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .hours-section h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
   .rating-pill {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     background: var(--accent-light);
     border: 1px solid rgba(184,92,56,0.2);
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 4px 14px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--accent);
+    margin-bottom: 36px;
   }
-
-  /* HOURS & CONTACT */
-  .hours-contact {
-    background: var(--bg-alt);
-    padding: 72px 48px;
+  .rating-pill svg {
+    width: 13px;
+    height: 13px;
+    fill: var(--accent);
   }
-
-  .hours-contact .container {}
-
-  .hc-eyebrow {
-    color: var(--accent);
-    display: block;
-    margin-bottom: 12px;
-  }
-
-  .hours-contact h2 {
-    margin-bottom: 40px;
-  }
-
-  .hc-grid {
+  .hours-contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: start;
   }
-
   .hours-table {
     width: 100%;
     border-collapse: collapse;
   }
-
   .hours-table tr {
     border-bottom: 1px solid rgba(44,24,16,0.08);
   }
-
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
   .hours-table td {
     padding: 10px 0;
     font-size: 15px;
   }
-
-  .hours-table .day {
+  .hours-table td:first-child {
     font-weight: 700;
     color: var(--dark);
-    width: 120px;
+    width: 110px;
   }
-
-  .hours-table .time {
+  .hours-table td:last-child {
     color: rgba(44,24,16,0.6);
   }
-
   .hours-table .closed {
     color: rgba(44,24,16,0.35);
     font-style: italic;
   }
-
   .contact-cards {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
-
   .contact-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: var(--bg);
     border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    background: var(--bg-alt);
     border-radius: 0 8px 8px 0;
-    padding: 20px 24px;
     min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
     text-decoration: none;
-    box-shadow: var(--shadow-sm);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-sm);
   }
-
   .contact-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
   }
-
-  .card-icon {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(44,24,16,0.4);
+  }
+  .contact-card-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+  .contact-card-sub {
+    font-size: 13px;
+    color: var(--accent);
+    margin-top: 2px;
   }
 
-  .card-body {}
-  .card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(44,24,16,0.45); display: block; margin-bottom: 2px; }
-  .card-value { font-size: 16px; font-weight: 600; color: var(--dark); line-height: 1.3; }
-
   /* FINAL CTA */
-  .final-cta {
+  .cta-section {
     background: var(--dark);
     padding: 80px 48px;
   }
-
-  .final-cta .container {
+  .cta-section .container {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
   }
-
-  .final-cta h2 {
+  .cta-section h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(26px, 7vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
     color: #fff;
-    max-width: 560px;
+    margin-bottom: 12px;
   }
-
-  .final-cta .support {
+  .cta-support {
     font-size: 16px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 32px;
     max-width: 400px;
-    line-height: 1.5;
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
   }
-
   .btn-cta-pulse {
     display: inline-flex;
     align-items: center;
@@ -480,24 +507,22 @@
     color: #fff;
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.03em;
     text-decoration: none;
     border-radius: 24px;
     border: none;
     cursor: pointer;
-    animation: subtlePulse 3s ease-in-out infinite;
+    animation: ctaPulse 3s ease-in-out infinite;
     transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    letter-spacing: 0.01em;
   }
-
   .btn-cta-pulse:hover {
-    background: #9a4a2c;
+    background: #9e4a2a;
     transform: scale(1.01);
-    animation: none;
     box-shadow: 0 0 0 6px rgba(184,92,56,0.22);
+    animation: none;
   }
-
-  @keyframes subtlePulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(184,92,56,0); }
+  @keyframes ctaPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(184,92,56,0.0); }
     50% { box-shadow: 0 0 0 8px rgba(184,92,56,0.18); }
   }
 
@@ -505,9 +530,7 @@
   .footer {
     background: var(--bg-alt);
     padding: 24px 48px;
-    border-top: 1px solid rgba(44,24,16,0.1);
   }
-
   .footer .container {
     display: flex;
     justify-content: space-between;
@@ -515,26 +538,25 @@
     gap: 16px;
     flex-wrap: wrap;
   }
-
   .footer-brand {
     font-size: 14px;
     font-weight: 600;
     color: var(--dark);
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   }
-
   .footer-credit {
     font-size: 12px;
     color: rgba(44,24,16,0.45);
   }
-
   .footer-credit a {
-    color: rgba(44,24,16,0.55);
+    color: rgba(44,24,16,0.5);
     text-decoration: none;
-    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
   }
-
-  .footer-credit a:hover { color: var(--accent); }
+  .footer-credit a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
 
   /* REVEAL ANIMATION */
   .reveal {
@@ -542,7 +564,6 @@
     transform: translateY(16px);
     transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
   }
-
   .reveal.visible {
     opacity: 1;
     transform: none;
@@ -550,40 +571,38 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
+    .about-section .container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
     .info-bar .container {
       grid-template-columns: repeat(2, 1fr);
-    }
-    .about .container {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-    .hc-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 24px;
     }
   }
-
   @media (max-width: 768px) {
     .nav .container { padding: 0 24px; }
     .hero { padding: 0 24px 56px; }
     .info-bar { padding: 40px 24px; }
-    .signature-visual { padding: 56px 24px; }
-    .about { padding: 80px 24px; }
-    .hours-contact { padding: 72px 24px; }
-    .final-cta { padding: 80px 24px; }
+    .signature-section { padding: 56px 24px; }
+    .about-section { padding: 80px 24px; }
+    .gallery-section { padding: 72px 24px; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+    .hours-section { padding: 72px 24px; }
+    .hours-contact-grid { grid-template-columns: 1fr; gap: 36px; }
+    .cta-section { padding: 80px 24px; }
     .footer { padding: 24px 24px; }
   }
-
   @media (max-width: 480px) {
     .hero { min-height: 55vh; padding: 0 20px 48px; }
     .info-bar { padding: 40px 20px; }
-    .info-bar .container { grid-template-columns: 1fr 1fr; gap: 24px; }
-    .signature-visual { padding: 48px 20px; }
-    .about { padding: 48px 20px; }
-    .hours-contact { padding: 48px 20px; }
-    .final-cta { padding: 48px 20px; }
+    .info-bar .container { grid-template-columns: 1fr 1fr; }
+    .signature-section { padding: 48px 20px; }
+    .about-section { padding: 48px 20px; }
+    .gallery-section { padding: 48px 20px; }
+    .hours-section { padding: 48px 20px; }
+    .cta-section { padding: 48px 20px; }
     .footer { padding: 20px; }
-    .contact-card { flex-direction: column; align-items: flex-start; gap: 12px; }
     .nav .container { padding: 0 20px; }
     .nav-brand { font-size: 13px; }
     .nav-phone { font-size: 13px; }
@@ -591,7 +610,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; transition: none; }
-    .hero, .steam, * { animation: none !important; transition: none !important; }
+    .hero, .steam, .gallery-img, * { animation: none !important; transition: none !important; }
   }
 </style>
 </head>
@@ -608,9 +627,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Artisan Bakery</span>
+    <span class="hero-eyebrow">Scottsdale, AZ &middot; Artisan Bakery</span>
     <h1>Lior The Baker</h1>
-    <p class="hero-tagline">Fresh artisanal baked goods from Lior The Baker, available Wednesday through Sunday.</p>
+    <p class="hero-tagline">Premium artisan baked goods made fresh in Scottsdale.</p>
     <a href="tel:4804510011" class="btn-primary">Call (480) 451-0011</a>
   </div>
 </section>
@@ -619,36 +638,35 @@
 <section class="info-bar">
   <div class="container">
     <div class="info-item">
-      <span class="label">Phone</span>
-      <span class="value"><a href="tel:4804510011">(480) 451-0011</a></span>
+      <span class="info-label">Phone</span>
+      <span class="info-value"><a href="tel:4804510011">(480) 451-0011</a></span>
     </div>
     <div class="info-item">
-      <span class="label">Location</span>
-      <span class="value">Scottsdale, AZ</span>
+      <span class="info-label">Location</span>
+      <span class="info-value">Scottsdale, AZ</span>
     </div>
     <div class="info-item">
-      <span class="label">Customer Rating</span>
-      <div class="stars-row" id="stars-row">
-        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s1" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
-        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s2" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
-        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s3" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
-        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s4" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
-        <svg class="star-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="star-path" id="s5" d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+      <span class="info-label">Google Rating</span>
+      <div class="stars-row" id="star-row">
+        <svg class="star" viewBox="0 0 16 16"><polygon points="8,1 10.2,5.5 15,6.3 11.5,9.7 12.4,14.5 8,12.2 3.6,14.5 4.5,9.7 1,6.3 5.8,5.5"/></svg>
+        <svg class="star" viewBox="0 0 16 16"><polygon points="8,1 10.2,5.5 15,6.3 11.5,9.7 12.4,14.5 8,12.2 3.6,14.5 4.5,9.7 1,6.3 5.8,5.5"/></svg>
+        <svg class="star" viewBox="0 0 16 16"><polygon points="8,1 10.2,5.5 15,6.3 11.5,9.7 12.4,14.5 8,12.2 3.6,14.5 4.5,9.7 1,6.3 5.8,5.5"/></svg>
+        <svg class="star" viewBox="0 0 16 16"><polygon points="8,1 10.2,5.5 15,6.3 11.5,9.7 12.4,14.5 8,12.2 3.6,14.5 4.5,9.7 1,6.3 5.8,5.5"/></svg>
+        <svg class="star" viewBox="0 0 16 16"><polygon points="8,1 10.2,5.5 15,6.3 11.5,9.7 12.4,14.5 8,12.2 3.6,14.5 4.5,9.7 1,6.3 5.8,5.5"/></svg>
       </div>
-      <span class="rating-val">4.9</span>
-      <div class="review-count"><span class="counter" data-target="221">0</span> reviews</div>
+      <span class="rating-score">4.9 &nbsp;<span class="rating-count">(<span class="counter" data-target="221">0</span> reviews)</span></span>
     </div>
     <div class="info-item">
-      <span class="label">Specialty</span>
-      <span class="value">Custom Orders Welcome</span>
+      <span class="info-label">Specialty</span>
+      <span class="info-value">Custom &amp; Wholesale Orders</span>
     </div>
   </div>
 </section>
 
 <!-- SIGNATURE VISUAL -->
-<section class="signature-visual">
+<section class="signature-section">
   <div class="container">
-    <div class="steam-wrapper">
+    <div class="steam-wrap">
       <svg width="60" height="80" viewBox="0 0 60 80" aria-hidden="true">
         <path class="steam steam-1" d="M20 60 Q18 50 22 40 Q26 30 22 20" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
         <path class="steam steam-2" d="M30 60 Q32 50 28 40 Q24 30 30 20" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
@@ -656,101 +674,66 @@
         <rect x="15" y="55" width="30" height="20" rx="4" fill="var(--accent)" opacity="0.3"/>
       </svg>
     </div>
-    <span class="sig-label">Baked fresh, every open day</span>
+    <span class="signature-label">Artisan bread &middot; Pastries &middot; Custom baked goods &middot; Made fresh</span>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section class="about-section">
   <div class="container">
-    <div class="about-content">
-      <span class="label about-eyebrow">About</span>
+    <div class="about-left">
+      <span class="about-eyebrow">About</span>
       <div class="accent-rule"></div>
-      <h2 class="reveal">For those who know the difference a real loaf makes.</h2>
-      <p>I'm Lior, and I bake for Scottsdale residents who care about what goes into their bread, their pastries, and their desserts. Every item that leaves my kitchen  -  whether it's a fresh loaf, a custom order, or a weekend pastry  -  is made by hand, from scratch, with care. That's not a tagline. It's just how I work.</p>
-      <p>My schedule is intentionally limited. Wednesday through Sunday, a few hours at a time. That's not an accident  -  it means every batch I make gets my full attention. With a 4.9-star rating across 221 reviews from customers right here in Scottsdale, I'll let the bread speak for itself.</p>
+      <h2 class="reveal">For Scottsdale residents who want something genuinely made.</h2>
+      <p>If you've settled for mass-produced bread or generic pastries, we're a different kind of place. Lior The Baker crafts artisan bread, pastries, desserts, and fully custom baked goods out of Scottsdale  -  items made with care, not convenience. Our limited hours aren't an inconvenience; they're a signal that everything leaving this kitchen is made properly.</p>
+      <p>With a 4.9-star rating across 221 reviews, Scottsdale customers have made it clear: quality speaks for itself. Whether you're placing a custom order, sourcing wholesale, or simply stopping in during our open hours, you'll find baked goods worth the trip to 68th Street.</p>
     </div>
-    <div class="about-meta">
-      <div class="meta-item">
-        <span class="label">Address</span>
-        <span class="val">3030 N 68th St<br>Scottsdale, AZ 85251</span>
+    <div class="about-right">
+      <div class="about-meta-item reveal">
+        <span class="meta-label">Address</span>
+        <span class="meta-value">3030 N 68th St<br>Scottsdale, AZ 85251</span>
       </div>
-      <div class="meta-item">
-        <span class="label">Rating</span>
-        <span class="val">
-          <span class="rating-pill">★ 4.9 &nbsp;·&nbsp; 221 reviews</span>
-        </span>
+      <div class="about-meta-item reveal">
+        <span class="meta-label">Google Rating</span>
+        <span class="meta-value">4.9 Stars  -  221 Reviews</span>
       </div>
-      <div class="meta-item">
-        <span class="label">Offerings</span>
-        <span class="val">Fresh bread · Pastries &amp; desserts · Custom baked goods · Made-to-order items</span>
+      <div class="about-meta-item reveal">
+        <span class="meta-label">Services</span>
+        <span class="meta-value">Custom Orders &middot; Artisan Bread<br>Pastries &middot; Wholesale Baking</span>
       </div>
-      <div class="meta-item">
-        <span class="label">Custom Orders</span>
-        <span class="val">Available  -  call to discuss your order</span>
+      <div class="about-meta-item reveal">
+        <span class="meta-label">Location</span>
+        <span class="meta-value">Scottsdale, AZ Based</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <span class="gallery-eyebrow">A look inside</span>
+    <h2 class="reveal">From our kitchen</h2>
+    <div class="gallery-grid">
+      <img src="gallery-1.jpg" alt="Lior The Baker photo" loading="lazy" class="gallery-img">
+      <img src="gallery-2.jpg" alt="Lior The Baker photo" loading="lazy" class="gallery-img">
+      <img src="gallery-3.jpg" alt="Lior The Baker photo" loading="lazy" class="gallery-img">
     </div>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
-<section class="hours-contact">
+<section class="hours-section">
   <div class="container">
-    <span class="label hc-eyebrow">Hours &amp; Contact</span>
+    <span class="hours-eyebrow">Hours &amp; Contact</span>
     <h2 class="reveal">Find us.</h2>
-    <div class="hc-grid">
+    <div class="rating-pill">
+      <svg viewBox="0 0 16 16"><polygon points="8,1 10.2,5.5 15,6.3 11.5,9.7 12.4,14.5 8,12.2 3.6,14.5 4.5,9.7 1,6.3 5.8,5.5"/></svg>
+      4.9 on Google
+    </div>
+    <div class="hours-contact-grid">
       <div>
-        <table class="hours-table" aria-label="Business hours">
+        <table class="hours-table">
           <tbody>
-            <tr>
-              <td class="day">Monday</td>
-              <td class="time closed">Closed</td>
-            </tr>
-            <tr>
-              <td class="day">Tuesday</td>
-              <td class="time closed">Closed</td>
-            </tr>
-            <tr>
-              <td class="day">Wednesday</td>
-              <td class="time">9:00 AM - 2:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Thursday</td>
-              <td class="time">9:00 AM - 2:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Friday</td>
-              <td class="time">8:00 AM - 3:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Saturday</td>
-              <td class="time closed">Closed</td>
-            </tr>
-            <tr>
-              <td class="day">Sunday</td>
-              <td class="time">9:00 AM - 1:00 PM</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="contact-cards">
-        <a href="tel:4804510011" class="contact-card reveal" aria-label="Call Lior The Baker">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="var(--accent)"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <span class="card-label">Phone</span>
-            <span class="card-value">(480) 451-0011</span>
-          </div>
-        </a>
-        <a href="https://maps.google.com/?q=3030+N+68th+St+Scottsdale+AZ+85251" target="_blank" rel="noopener" class="contact-card reveal" aria-label="Get directions to Lior The Baker">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="var(--accent)"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <span class="card-label">Address</span>
-            <span class
+            <tr><td>Monday</td><td class="closed">Closed</td></tr>
+            <tr><td>Tuesday</td><td class="closed">Closed</td
