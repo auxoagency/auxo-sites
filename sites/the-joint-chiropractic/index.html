@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Walk-In Chiropractor in Scottsdale, AZ | Open Evenings &amp; Weekends</title>
-<meta name="description" content="Walk-in chiropractic care in Scottsdale, AZ. Open evenings until 7 PM and Saturdays. $29 new patient special. No appointment needed. Serving Hilton Village, Old Town &amp; Paradise Valley.">
+<title>Walk-In Chiropractor in Scottsdale, AZ Near Shea | Open Evenings &amp; Weekends</title>
+<meta name="description" content="Walk-in chiropractic care in Scottsdale, AZ. No appointment needed. Open evenings and weekends. $29 new patient special. Serving Gainey Ranch, McCormick Ranch, Paradise Valley.">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --accent: #06A77D;
-  --accent-light: rgba(6,167,125,0.08);
+  --accent-light: rgba(6, 167, 125, 0.08);
   --bg: #FAFAFA;
   --bg-alt: #F0F0F0;
   --dark: #0A1F15;
@@ -20,6 +18,8 @@
   --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.08), 0 20px 25px rgba(0,0,0,0.06);
 }
 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -28,7 +28,6 @@ body {
   line-height: 1.75;
   color: var(--text);
   background: var(--bg);
-  overflow-x: hidden;
 }
 
 h1, h2, h3, .nav-brand, .hero-tagline {
@@ -40,6 +39,7 @@ h1 {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 0.93;
+  color: #fff;
 }
 
 h2 {
@@ -65,14 +65,12 @@ h2 {
   border-bottom: 1px solid transparent;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
 }
-
 .nav.scrolled {
   background: rgba(250,250,250,0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom-color: rgba(0,0,0,0.08);
 }
-
 .nav .container {
   display: flex;
   align-items: center;
@@ -80,7 +78,6 @@ h2 {
   height: 100%;
   padding: 0 48px;
 }
-
 .nav-brand {
   font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
   font-weight: 700;
@@ -91,12 +88,10 @@ h2 {
   text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 .nav.scrolled .nav-brand {
   color: var(--dark);
   text-shadow: none;
 }
-
 .nav-phone {
   font-size: 15px;
   font-weight: 600;
@@ -105,14 +100,15 @@ h2 {
   text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
-
 .nav.scrolled .nav-phone {
   color: var(--accent);
   text-shadow: none;
 }
-
 .nav-phone:hover {
-  opacity: 0.85;
+  color: var(--accent);
+}
+.nav.scrolled .nav-phone:hover {
+  color: var(--dark);
 }
 
 /* HERO */
@@ -155,20 +151,18 @@ h2 {
 }
 
 .hero h1 {
-  color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
   margin-bottom: 20px;
-  max-width: 700px;
 }
 
 .hero-tagline {
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
   font-size: clamp(16px, 2.5vw, 20px);
   color: rgba(255,255,255,0.95);
   max-width: 560px;
-  font-weight: 400;
   line-height: 1.5;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
   margin-bottom: 32px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
 }
 
 .btn-primary {
@@ -179,20 +173,19 @@ h2 {
   padding: 0 32px;
   background: var(--accent);
   color: #fff;
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   border-radius: 999px;
   border: none;
   cursor: pointer;
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: var(--shadow-sm);
 }
-
 .btn-primary:hover {
-  background: #058a67;
+  background: #05926d;
   transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(6,167,125,0.25), var(--shadow-md);
+  box-shadow: 0 0 0 4px rgba(6,167,125,0.25), 0 8px 24px rgba(6,167,125,0.35);
 }
 
 /* INFO BAR */
@@ -200,19 +193,16 @@ h2 {
   background: var(--dark);
   padding: 40px 48px;
 }
-
 .info-bar .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
-
 .info-item {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
 .info-label {
   font-size: 11px;
   font-weight: 700;
@@ -220,22 +210,25 @@ h2 {
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
 }
-
 .info-value {
   font-size: 15px;
   font-weight: 600;
   color: #fff;
   line-height: 1.4;
 }
-
 .info-value a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
 }
-
 .info-value a:hover {
   color: var(--accent);
+}
+.stars-inline {
+  display: inline-flex;
+  gap: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 /* ABOUT */
@@ -243,51 +236,47 @@ h2 {
   background: var(--bg);
   padding: 80px 48px;
 }
-
 .about-section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .eyebrow {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-bottom: 12px;
   display: block;
-  margin-bottom: 8px;
+  text-align: center;
 }
-
-.accent-rule {
+.eyebrow-rule {
+  display: block;
   width: 40px;
   height: 1px;
   background: var(--accent);
   margin: 0 auto 32px;
-  display: block;
 }
-
-.about-text {
-  max-width: 680px;
-  width: 100%;
-  text-align: left;
-}
-
-.about-text h2 {
+.about-section h2 {
+  color: var(--text);
   text-align: center;
   max-width: 580px;
   margin: 8px auto 20px;
 }
-
+.about-text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+}
 .about-text p {
-  color: var(--text);
   margin-bottom: 20px;
-  font-size: 17px;
-  line-height: 1.75;
+  color: var(--text);
+}
+.about-text p:last-child {
+  margin-bottom: 0;
 }
 
-/* INFO BOXES */
 .about-info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -296,7 +285,6 @@ h2 {
   max-width: 760px;
   width: 100%;
 }
-
 .info-box {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.06);
@@ -308,17 +296,14 @@ h2 {
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease;
 }
-
 .info-box.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 .info-box:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
-
 .info-box-label {
   font-size: 11px;
   font-weight: 700;
@@ -328,21 +313,18 @@ h2 {
   margin-bottom: 8px;
   display: block;
 }
-
 .info-box-value {
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.5;
 }
-
 .info-box-value a {
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,0.15);
   transition: border-color 0.2s;
 }
-
 .info-box-value a:hover {
   border-bottom-color: var(--accent);
 }
@@ -353,14 +335,12 @@ h2 {
   padding: 72px 48px;
   text-align: center;
 }
-
 .signature-section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-
 .signature-label {
   font-size: 13px;
   font-weight: 700;
@@ -371,45 +351,49 @@ h2 {
 }
 
 /* Breathing circle */
-.breathing-circle-wrap {
+.breathing-circle {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100px;
   height: 100px;
 }
-
-.breathing-circle {
-  width: 64px;
-  height: 64px;
+.circle-outer {
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
-  background: none;
-  stroke: var(--accent);
-  animation: breathe 4s ease-in-out infinite;
+  border: 2px solid var(--accent);
+  opacity: 0.35;
+  position: absolute;
+  animation: breatheOuter 4s ease-in-out infinite;
+}
+.circle-mid {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0.55;
+  position: absolute;
+  animation: breatheOuter 4s ease-in-out infinite 0.3s;
+}
+.circle-inner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.9;
+  position: absolute;
+  animation: breatheInner 4s ease-in-out infinite;
 }
 
-@keyframes breathe {
+@keyframes breatheOuter {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.18); opacity: 0.55; }
+}
+@keyframes breatheInner {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-}
-
-.breathing-circle-ring {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 2.5;
-  opacity: 0.3;
-  animation: breathe 4s ease-in-out infinite;
-}
-
-.breathing-circle-inner {
-  fill: var(--accent);
-  opacity: 0.15;
-  animation: breathe 4s ease-in-out infinite;
-}
-
-.breathing-circle-dot {
-  fill: var(--accent);
-  animation: breathe 4s ease-in-out infinite;
+  50% { transform: scale(1.12); }
 }
 
 /* GALLERY */
@@ -417,24 +401,17 @@ h2 {
   background: var(--bg-alt);
   padding: 72px 48px;
 }
-
-.gallery-section .container {
-  display: flex;
-  flex-direction: column;
-}
-
+.gallery-section .container > .eyebrow { text-align: left; }
 .gallery-section h2 {
-  margin: 8px 0 0;
-  max-width: 400px;
+  color: var(--text);
+  margin-bottom: 0;
 }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 32px;
 }
-
 .gallery-img {
   width: 100%;
   aspect-ratio: 4/3;
@@ -444,7 +421,6 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
 }
-
 .gallery-img:hover {
   transform: scale(1.02);
   box-shadow: var(--shadow-md);
@@ -455,73 +431,54 @@ h2 {
   background: var(--bg);
   padding: 72px 48px;
 }
-
-.hours-contact .container {
-  display: flex;
-  flex-direction: column;
-}
-
 .hours-contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-top: 32px;
+  gap: 64px;
+  margin-top: 40px;
 }
-
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent-light);
-  border: 1px solid rgba(6,167,125,0.2);
-  border-radius: 999px;
-  padding: 6px 16px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--accent);
-  margin-top: 12px;
-}
-
 .hours-table {
   width: 100%;
   border-collapse: collapse;
 }
-
 .hours-table tr {
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
-
 .hours-table tr:last-child {
   border-bottom: none;
 }
-
 .hours-table td {
-  padding: 10px 0;
+  padding: 9px 0;
   font-size: 15px;
+  color: var(--text);
   line-height: 1.4;
 }
-
-.hours-table .day {
-  font-weight: 600;
-  color: var(--text);
-  width: 130px;
+.hours-table td:first-child {
+  font-weight: 700;
+  width: 44%;
 }
-
-.hours-table .time {
-  color: #4a6358;
-  text-align: right;
+.hours-table td:last-child {
+  color: rgba(10,31,21,0.7);
+  font-size: 14px;
 }
-
-.hours-table .closed {
-  color: #999;
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  border: 1px solid rgba(6,167,125,0.2);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 20px;
 }
-
 .contact-cards {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
 .contact-card {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.06);
@@ -529,19 +486,18 @@ h2 {
   border-radius: 10px;
   padding: 20px 24px;
   min-height: 80px;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
-  box-shadow: var(--shadow-sm);
+  gap: 4px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
 }
-
 .contact-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
-
 .contact-card-label {
   font-size: 11px;
   font-weight: 700;
@@ -549,7 +505,6 @@ h2 {
   text-transform: uppercase;
   color: var(--accent);
 }
-
 .contact-card-value {
   font-size: 16px;
   font-weight: 600;
@@ -557,60 +512,47 @@ h2 {
   line-height: 1.4;
 }
 
-.contact-card-value a {
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.contact-card-value a:hover {
-  color: var(--accent);
-}
-
 /* FINAL CTA */
 .final-cta {
   background: var(--dark);
   padding: 80px 48px;
 }
-
 .final-cta .container {
   text-align: center;
-  max-width: 560px;
+  max-width: 540px;
+  margin: 0 auto;
 }
-
 .final-cta h2 {
   color: #fff;
   margin-bottom: 16px;
 }
-
 .final-cta .support-line {
+  color: rgba(255,255,255,0.7);
   font-size: 17px;
-  color: rgba(255,255,255,0.72);
   margin-bottom: 32px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
-
 .btn-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 54px;
-  padding: 0 32px;
+  padding: 0 36px;
   background: var(--accent);
   color: #fff;
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   border-radius: 999px;
   border: none;
   cursor: pointer;
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-
 .btn-cta:hover {
-  background: #058a67;
+  background: #05926d;
   transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(6,167,125,0.35), 0 8px 20px rgba(6,167,125,0.3);
+  box-shadow: 0 0 0 4px rgba(6,167,125,0.3), 0 8px 28px rgba(6,167,125,0.45);
 }
 
 /* FOOTER */
@@ -618,7 +560,6 @@ h2 {
   background: var(--bg-alt);
   padding: 24px 48px;
 }
-
 .footer .container {
   display: flex;
   align-items: center;
@@ -626,33 +567,19 @@ h2 {
   gap: 16px;
   flex-wrap: wrap;
 }
-
 .footer-brand {
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
   line-height: 1.4;
 }
-
-.footer-brand span {
-  display: block;
-  font-size: 12px;
-  font-weight: 400;
-  color: #7a9186;
-}
-
 .footer-credit {
   font-size: 12px;
-  color: #7a9186;
-}
-
-.footer-credit a {
-  color: #7a9186;
+  color: rgba(10,31,21,0.45);
   text-decoration: none;
   transition: color 0.2s;
 }
-
-.footer-credit a:hover {
+.footer-credit:hover {
   color: var(--accent);
 }
 
@@ -662,27 +589,47 @@ h2 {
   transform: translateY(16px);
   transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
 }
-
 .reveal.visible {
   opacity: 1;
   transform: none;
 }
 
-/* MOBILE */
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
+  .hero, .circle-outer, .circle-mid, .circle-inner, .gallery-img, * { animation: none !important; transition: none !important; }
+}
+
+/* RESPONSIVE */
 @media (max-width: 767px) {
-  .hero { padding: 120px 24px 56px; min-height: 100svh; max-height: none; background-position: center center; }
-  .hero .container { align-items: center; text-align: center; }
-  .hero h1, .hero-tagline, .hero-eyebrow { max-width: 100%; text-align: center; }
+  .hero {
+    padding: 120px 24px 56px;
+    min-height: 100svh;
+    max-height: none;
+    background-position: center center;
+    align-items: center;
+  }
+  .hero .container {
+    align-items: center;
+    text-align: center;
+  }
+  .hero h1, .hero-tagline, .hero-eyebrow {
+    max-width: 100%;
+    text-align: center;
+  }
+  .nav .container { padding: 0 24px; }
   .info-bar { padding: 24px 24px; }
-  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 16px; text-align: center; }
+  .info-bar .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    text-align: center;
+  }
   .info-item { align-items: center; gap: 4px; }
   .info-label { font-size: 10px; }
   .info-value { font-size: 14px; }
-  .about-section { padding: 56px 24px; }
-  .about-section .container { align-items: center; }
+  .about-section { padding: 64px 24px; }
+  .about-section p, .about-section h2 { text-align: center; }
   .about-text { text-align: center; }
-  .about-text h2 { text-align: center; }
-  .about-text p { text-align: left; }
   .about-info-grid { grid-template-columns: 1fr; }
   .info-box { text-align: center; }
   .signature-section { padding: 56px 24px; }
@@ -692,13 +639,10 @@ h2 {
   .hours-contact { padding: 56px 24px; }
   .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .hours-contact .eyebrow, .hours-contact h2 { text-align: center; }
-  .contact-cards { align-items: center; }
-  .contact-card { width: 100%; max-width: 400px; }
+  .contact-cards { align-items: stretch; }
   .final-cta { padding: 64px 24px; }
-  .final-cta .container { max-width: 100%; }
   .footer { padding: 24px 24px; }
   .footer .container { flex-direction: column; text-align: center; }
-  .nav .container { padding: 0 24px; }
 }
 
 @media (max-width: 479px) {
@@ -710,20 +654,15 @@ h2 {
   section { padding-left: 20px !important; padding-right: 20px !important; }
   .footer .container { padding: 0 20px; }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
-  .hero, .breathing-circle, .breathing-circle-ring, .breathing-circle-inner, .breathing-circle-dot, .gallery-img, * { animation: none !important; transition: none !important; }
-}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="main-nav">
+<nav class="nav" id="mainNav">
   <div class="container">
     <a href="#" class="nav-brand">The Joint Chiropractic</a>
-    <a href="tel:4806816941" class="nav-phone">(480) 681-6941</a>
+    <a href="tel:4807870060" class="nav-phone">(480) 787-0060</a>
   </div>
 </nav>
 
@@ -731,9 +670,9 @@ h2 {
 <section class="hero">
   <div class="container">
     <span class="hero-eyebrow">Scottsdale, AZ · Chiropractic Wellness</span>
-    <h1>Walk-In Chiropractor<br>Scottsdale, AZ  - <br>Hilton Village</h1>
-    <p class="hero-tagline">Walk-in chiropractic care in Scottsdale, open evenings and weekends with affordable personalized treatment.</p>
-    <a href="tel:4806816941" class="btn-primary">Call (480) 681-6941</a>
+    <h1>Walk-In Chiropractor<br>Scottsdale - Shea</h1>
+    <p class="hero-tagline">Walk-in chiropractic care in Scottsdale, open evenings and weekends with a $29 new patient special.</p>
+    <a href="tel:4807870060" class="btn-primary">Call (480) 787-0060</a>
   </div>
 </section>
 
@@ -742,28 +681,28 @@ h2 {
   <div class="container">
     <div class="info-item">
       <span class="info-label">Phone</span>
-      <span class="info-value"><a href="tel:4806816941">(480) 681-6941</a></span>
+      <div class="info-value"><a href="tel:4807870060">(480) 787-0060</a></div>
     </div>
     <div class="info-item">
       <span class="info-label">Location</span>
-      <span class="info-value">Scottsdale, AZ</span>
+      <div class="info-value">Scottsdale, AZ</div>
     </div>
     <div class="info-item">
       <span class="info-label">Rating</span>
-      <span class="info-value">
-        <span style="display:inline-flex;gap:2px;margin-right:6px;vertical-align:middle;">
+      <div class="info-value">
+        <span class="stars-inline">
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
         </span>
-        4.9 · 216 reviews
-      </span>
+        4.9 · 271 reviews
+      </div>
     </div>
     <div class="info-item">
-      <span class="info-label">New Patient</span>
-      <span class="info-value">$29 Special</span>
+      <span class="info-label">New Patients</span>
+      <div class="info-value">$29 Special Offer</div>
     </div>
   </div>
 </div>
@@ -771,30 +710,30 @@ h2 {
 <!-- ABOUT -->
 <section class="about-section">
   <div class="container">
+    <span class="eyebrow">About</span>
+    <h2 class="reveal">Affordable Chiropractic Care, Right When You Need It</h2>
+    <span class="eyebrow-rule"></span>
     <div class="about-text">
-      <span class="eyebrow">About</span>
-      <h2 class="reveal">Affordable chiropractic care built around your schedule</h2>
-      <span class="accent-rule"></span>
-      <p>If you're dealing with back pain, neck discomfort, or just feel like your body needs a reset, you shouldn't have to wait days for an appointment or drive across town to get help. At The Joint Chiropractic in Scottsdale's Hilton Village  -  right near Scottsdale Road and McDonald  -  we make personalized chiropractic adjustments easy to fit into your actual life.</p>
-      <p>We're open evenings until 7 PM Monday through Thursday, until 6 PM on Fridays, and on Saturdays  -  no appointment necessary. Walk in whenever it works for you. Whether you're coming from Old Town Scottsdale, Paradise Valley, or McCormick Ranch, quality chiropractic treatment is closer and more affordable than you might think. New patients start at just $29.</p>
+      <p>If you've been putting off chiropractic care because scheduling feels like a hurdle, we're here to change that. At The Joint Chiropractic in Scottsdale, we offer walk-in chiropractic adjustments and personalized treatment plans  -  no appointment, no hassle. Whether you're dealing with back pain, neck tension, or just want to stay ahead of discomfort, you can come in on your own schedule and get quality care the same day.</p>
+      <p>We're conveniently located on North 68th Street near Shea Boulevard, making us easy to reach from Gainey Ranch, McCormick Ranch, Paradise Valley, and surrounding neighborhoods. Our extended hours  -  including evenings Monday through Friday and weekend appointments  -  mean there's almost always a time that works for you. New patients can get started for just $29, with straightforward pricing and no surprise fees along the way.</p>
     </div>
 
     <div class="about-info-grid">
-      <div class="info-box reveal">
+      <div class="info-box">
         <span class="info-box-label">Address</span>
-        <span class="info-box-value"><a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251" target="_blank" rel="noopener">3030 N 68th St, Scottsdale, AZ 85251, USA</a></span>
+        <span class="info-box-value"><a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener">3030 N 68th St, Scottsdale, AZ 85251</a></span>
       </div>
-      <div class="info-box reveal">
+      <div class="info-box">
         <span class="info-box-label">Google Rating</span>
-        <span class="info-box-value">4.9 stars · 216 reviews</span>
+        <span class="info-box-value">4.9 stars · 271 reviews</span>
       </div>
-      <div class="info-box reveal">
+      <div class="info-box">
         <span class="info-box-label">Specialties</span>
-        <span class="info-box-value">Walk-in appointments welcome · Open evenings &amp; weekends · $29 new patient special</span>
+        <span class="info-box-value">Walk-in chiropractic services · Evening &amp; weekend hours</span>
       </div>
-      <div class="info-box reveal">
+      <div class="info-box">
         <span class="info-box-label">Services</span>
-        <span class="info-box-value">Chiropractic adjustments, back pain treatment, neck pain treatment, personalized chiropractic care</span>
+        <span class="info-box-value">Chiropractic adjustments, back pain treatment, neck pain treatment, new patient evaluations</span>
       </div>
     </div>
   </div>
@@ -803,16 +742,12 @@ h2 {
 <!-- SIGNATURE VISUAL -->
 <section class="signature-section">
   <div class="container">
-    <div class="breathing-circle-wrap">
-      <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
-        <circle class="breathing-circle-ring" cx="50" cy="50" r="44" stroke-width="1.5"/>
-        <circle class="breathing-circle-ring" cx="50" cy="50" r="36" stroke-width="1" opacity="0.2" style="animation-delay:0.3s"/>
-        <circle class="breathing-circle-inner" cx="50" cy="50" r="28"/>
-        <circle class="breathing-circle-dot" cx="50" cy="50" r="14" opacity="0.6"/>
-        <circle class="breathing-circle-dot" cx="50" cy="50" r="5" opacity="1" style="animation-delay:0.15s"/>
-      </svg>
+    <div class="breathing-circle" aria-hidden="true">
+      <div class="circle-outer"></div>
+      <div class="circle-mid"></div>
+      <div class="circle-inner"></div>
     </div>
-    <span class="signature-label">Walk-ins always welcome</span>
+    <span class="signature-label">Walk-ins encouraged</span>
   </div>
 </section>
 
@@ -820,7 +755,7 @@ h2 {
 <section class="gallery-section">
   <div class="container">
     <span class="eyebrow">A look inside</span>
-    <h2 class="reveal">Our Scottsdale clinic</h2>
+    <h2 class="reveal">Our Scottsdale Clinic</h2>
     <div class="gallery-grid">
       <img src="gallery-1.jpg" alt="The Joint Chiropractic Scottsdale photo" loading="lazy" class="gallery-img">
       <img src="gallery-2.jpg" alt="The Joint Chiropractic Scottsdale photo" loading="lazy" class="gallery-img">
@@ -833,55 +768,36 @@ h2 {
 <section class="hours-contact">
   <div class="container">
     <span class="eyebrow">Hours &amp; Contact</span>
-    <h2 class="reveal">Find us.</h2>
-    <div class="rating-pill">
-      <svg width="13" height="13" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
-      4.9 · 216 Google reviews
+    <h2 class="reveal">Find Us.</h2>
+    <div style="margin-top:12px;">
+      <div class="rating-pill">
+        <svg width="13" height="13" viewBox="0 0 20 20" fill="#06A77D"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        4.9 · 271 Google Reviews
+      </div>
     </div>
     <div class="hours-contact-grid">
       <div>
         <table class="hours-table">
           <tbody>
-            <tr>
-              <td class="day">Monday</td>
-              <td class="time">10:00 AM - 7:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Tuesday</td>
-              <td class="time">10:00 AM - 7:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Wednesday</td>
-              <td class="time">10:00 AM - 7:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Thursday</td>
-              <td class="time">10:00 AM - 7:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Friday</td>
-              <td class="time">10:00 AM - 6:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Saturday</td>
-              <td class="time">10:00 AM - 2:00 PM</td>
-            </tr>
-            <tr>
-              <td class="day">Sunday</td>
-              <td class="time closed">Closed</td>
-            </tr>
+            <tr><td>Monday</td><td>9:00 AM - 1:45 PM, 2:30 - 6:00 PM</td></tr>
+            <tr><td>Tuesday</td><td>9:00 AM - 1:45 PM, 2:30 - 6:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>9:00 AM - 1:45 PM, 2:30 - 6:00 PM</td></tr>
+            <tr><td>Thursday</td><td>9:00 AM - 1:45 PM, 2:30 - 6:00 PM</td></tr>
+            <tr><td>Friday</td><td>9:00 AM - 1:45 PM, 2:30 - 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>10:00 AM - 1:30 PM, 2:00 - 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>10:00 AM - 1:30 PM, 2:00 - 5:00 PM</td></tr>
           </tbody>
         </table>
       </div>
       <div class="contact-cards">
-        <div class="contact-card reveal">
+        <a href="tel:4807870060" class="contact-card reveal">
           <span class="contact-card-label">Phone</span>
-          <span class="contact-card-value"><a href="tel:4806816941">(480) 681-6941</a></span>
-        </div>
-        <div class="contact-card reveal">
+          <span class="contact-card-value">(480) 787-0060</span>
+        </a>
+        <a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251,+USA" target="_blank" rel="noopener" class="contact-card reveal">
           <span class="contact-card-label">Address</span>
-          <span class="contact-card-value"><a href="https://maps.google.com/?q=3030+N+68th+St,+Scottsdale,+AZ+85251" target="_blank" rel="noopener">3030 N 68th St<br>Scottsdale, AZ 85251</a></span>
-        </div>
+          <span class="contact-card-value">3030 N 68th St<br>Scottsdale, AZ 85251</span>
+        </a>
       </div>
     </div>
   </div>
@@ -890,9 +806,9 @@ h2 {
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="reveal">Back pain relief, no appointment needed</h2>
-    <p class="support-line">Walk in today  -  evenings, Saturdays, $29 to start.</p>
-    <a href="tel:4806816941" class="btn-cta">Call (480) 681-6941</a>
+    <h2 class="reveal">Start for $29  -  No Appointment Needed</h2>
+    <p class="support-line">Walk in any day, evenings or weekends included.</p>
+    <a href="tel:4807870060" class="btn-cta">Call (480) 787-0060</a>
   </div>
 </section>
 
@@ -900,24 +816,23 @@ h2 {
 <footer class="footer">
   <div class="container">
     <div class="footer-brand">
-      The Joint Chiropractic
-      <span>Scottsdale, AZ</span>
+      The Joint Chiropractic<br>Scottsdale, AZ
     </div>
-    <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
+    <a href="https://auxoagency.co" target="_blank" rel="noopener" class="footer-credit">Site by Auxo Agency · auxoagency.co</a>
   </div>
 </footer>
 
 <script>
-document.querySelectorAll('.about-info-grid .info-box').forEach((el, i) => {
+document.querySelectorAll('.about-info-grid .info-box').forEach(function(el, i) {
   el.style.transitionDelay = (i * 0.08) + 's';
 });
 
-window.addEventListener('scroll', () => {
-  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 50);
+window.addEventListener('scroll', function() {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
 }, { passive: true });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
     if (e.isIntersecting) {
       e.target.classList.add('visible');
       observer.unobserve(e.target);
@@ -925,7 +840,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal, .info-box').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal, .info-box').forEach(function(el) {
+  observer.observe(el);
+});
 </script>
 </body>
 </html>
