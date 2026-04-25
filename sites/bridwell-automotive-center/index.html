@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridwell Auto Repair Scottsdale | Mechanic Shop - Automotive Center</title>
-<meta name="description" content="ASE-certified mechanics servicing any make and model of car, truck, or SUV in Scottsdale, AZ. Extended hours 6 AM-9 PM. Call (480) 948-4781.">
+<meta name="description" content="ASE certified auto repair for any car, truck, or SUV in Scottsdale, AZ. Extended hours 6 AM-9 PM weekdays. Call (480) 948-4781.">
 <style>
 :root {
   --accent: #DC2626;
@@ -28,16 +28,11 @@ body {
   line-height: 1.75;
   color: var(--text);
   background: var(--bg);
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-h1, h2, h3, .nav-brand, .eyebrow, .info-box-label, .signature-label {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+h1, h2, h3, .nav-brand, .hero-tagline {
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif;
 }
 
 h1 {
@@ -45,7 +40,6 @@ h1 {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 0.93;
-  color: #fff;
 }
 
 h2 {
@@ -53,6 +47,12 @@ h2 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.08;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* NAV */
@@ -82,6 +82,7 @@ h2 {
 }
 
 .nav-brand {
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #fff;
@@ -102,7 +103,7 @@ h2 {
   color: #fff;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.4);
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  transition: color 0.2s ease, text-shadow 0.3s ease;
 }
 
 .nav.scrolled .nav-phone {
@@ -141,6 +142,7 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   max-width: 700px;
+  gap: 0;
 }
 
 .hero-eyebrow {
@@ -154,21 +156,22 @@ h2 {
 }
 
 .hero h1 {
+  color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
   margin-bottom: 20px;
 }
 
 .hero-tagline {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif;
   font-size: clamp(16px, 2.5vw, 20px);
   color: rgba(255,255,255,0.95);
   max-width: 560px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
-  margin-bottom: 32px;
   line-height: 1.5;
+  margin-bottom: 32px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
 }
 
-.btn-primary {
+.hero-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -176,21 +179,18 @@ h2 {
   padding: 0 32px;
   background: var(--accent);
   color: #fff;
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.02em;
   text-decoration: none;
   border-radius: 4px;
-  border: none;
-  cursor: pointer;
+  letter-spacing: 0.01em;
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.btn-primary:hover {
+.hero-cta:hover {
   background: #b91c1c;
   transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(220,38,38,0.25), 0 4px 12px rgba(220,38,38,0.35);
+  box-shadow: 0 0 0 4px rgba(220,38,38,0.3), 0 8px 20px rgba(220,38,38,0.35);
 }
 
 /* INFO BAR */
@@ -217,7 +217,6 @@ h2 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
 }
 
 .info-value {
@@ -230,18 +229,11 @@ h2 {
 .info-value a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
 
 .info-value a:hover {
   color: var(--accent);
-}
-
-.stars-inline {
-  display: inline-flex;
-  gap: 2px;
-  margin-right: 6px;
-  vertical-align: middle;
 }
 
 /* ABOUT */
@@ -262,35 +254,38 @@ h2 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  display: block;
   margin-bottom: 12px;
+  display: block;
+  text-align: center;
 }
 
-.accent-rule {
+.eyebrow-rule {
+  display: block;
   width: 40px;
   height: 1px;
   background: var(--accent);
   margin: 0 auto 32px;
-  display: block;
 }
 
-.about-text-block {
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.about-text-block h2 {
-  color: var(--text);
+.about-section h2 {
   text-align: center;
   max-width: 580px;
   margin: 8px auto 20px;
 }
 
-.about-text-block p {
+.about-text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-text p {
   color: var(--text);
   margin-bottom: 20px;
-  font-size: 17px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
 }
 
 .about-info-grid {
@@ -345,7 +340,7 @@ h2 {
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,0.15);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s;
 }
 
 .info-box-value a:hover {
@@ -380,8 +375,8 @@ h2 {
 }
 
 @keyframes gearSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* HOURS & CONTACT */
@@ -390,16 +385,11 @@ h2 {
   padding: 72px 48px;
 }
 
-.hours-contact .container {
-  display: flex;
-  flex-direction: column;
-}
-
 .hours-contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-top: 32px;
+  gap: 64px;
+  margin-top: 40px;
 }
 
 .hours-table {
@@ -424,7 +414,7 @@ h2 {
 .hours-table .day {
   font-weight: 700;
   color: var(--text);
-  padding-right: 16px;
+  padding-right: 24px;
 }
 
 .hours-table .time {
@@ -435,23 +425,21 @@ h2 {
 .rating-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--accent-light);
-  border: 1px solid rgba(220,38,38,0.2);
-  border-radius: 100px;
-  padding: 6px 16px;
+  gap: 6px;
+  background: var(--dark);
+  color: #fff;
   font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 100px;
   margin-top: 12px;
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  margin-bottom: 0;
 }
 
 .contact-cards {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  justify-content: flex-start;
 }
 
 .contact-card {
@@ -466,6 +454,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   gap: 6px;
+  text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -480,23 +469,13 @@ h2 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
 }
 
 .contact-card-value {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--text);
-}
-
-.contact-card-value a {
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.contact-card-value a:hover {
-  color: var(--accent);
+  line-height: 1.35;
 }
 
 /* FINAL CTA */
@@ -508,22 +487,40 @@ h2 {
 .final-cta .container {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .final-cta h2 {
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
-.final-cta .support-line {
+.final-cta-support {
+  color: rgba(255,255,255,0.65);
   font-size: 17px;
-  color: rgba(255,255,255,0.7);
   margin-bottom: 32px;
-  line-height: 1.5;
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 32px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-button:hover {
+  background: #b91c1c;
+  transform: scale(1.01);
+  box-shadow: 0 0 0 4px rgba(220,38,38,0.3), 0 8px 20px rgba(220,38,38,0.4);
 }
 
 /* FOOTER */
@@ -534,8 +531,8 @@ h2 {
 
 .footer .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
@@ -544,25 +541,32 @@ h2 {
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  line-height: 1.4;
+}
+
+.footer-brand span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
 }
 
 .footer-credit {
   font-size: 12px;
-  color: rgba(0,0,0,0.4);
+  color: #888;
 }
 
 .footer-credit a {
-  color: rgba(0,0,0,0.4);
+  color: #888;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
 
 .footer-credit a:hover {
   color: var(--accent);
 }
 
-/* REVEAL ANIMATION */
+/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -574,153 +578,52 @@ h2 {
   transform: none;
 }
 
-/* REDUCED MOTION */
-@media (prefers-reduced-motion: reduce) {
-  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
-  .hero, .gear-svg, .gallery-img, * { animation: none !important; transition: none !important; }
-}
-
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 767px) {
-  .hero {
-    padding: 120px 24px 56px;
-    min-height: 100svh;
-    max-height: none;
-    background-position: center center;
-    align-items: center;
-  }
-
-  .hero .container {
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero h1, .hero-tagline, .hero-eyebrow {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .nav .container {
-    padding: 0 24px;
-  }
-
-  .info-bar {
-    padding: 24px 24px;
-  }
-
-  .info-bar .container {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .info-item {
-    align-items: center;
-    gap: 4px;
-  }
-
-  .info-label {
-    font-size: 10px;
-  }
-
-  .info-value {
-    font-size: 14px;
-  }
-
-  .about-section {
-    padding: 56px 24px;
-  }
-
-  .about-text-block {
-    text-align: center;
-  }
-
-  .about-text-block p {
-    text-align: left;
-  }
-
-  .about-info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-box {
-    text-align: center;
-  }
-
-  .signature-section {
-    padding: 56px 24px;
-  }
-
-  .hours-contact {
-    padding: 56px 24px;
-  }
-
-  .hours-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .hours-contact .eyebrow,
-  .hours-contact h2 {
-    text-align: center;
-  }
-
-  .contact-cards {
-    align-items: stretch;
-  }
-
-  .final-cta {
-    padding: 64px 24px;
-  }
-
-  .footer {
-    padding: 20px 24px;
-  }
-
-  .footer .container {
-    flex-direction: column;
-    text-align: center;
-  }
+  .hero { padding: 120px 24px 56px; min-height: 100svh; max-height: none; background-position: center center; }
+  .hero .container { align-items: center; text-align: center; }
+  .hero h1, .hero-tagline, .hero-eyebrow { max-width: 100%; text-align: center; }
+  .hero-tagline { margin-left: auto; margin-right: auto; }
+  .info-bar { padding: 24px 24px; }
+  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 16px; text-align: center; }
+  .info-item { align-items: center; gap: 4px; }
+  .info-label { font-size: 10px; }
+  .info-value { font-size: 14px; }
+  .about-section { padding: 64px 24px; }
+  .about-section p, .about-section h2 { text-align: center; }
+  .about-text { text-align: center; }
+  .about-info-grid { grid-template-columns: 1fr; }
+  .info-box { text-align: center; }
+  .signature-section { padding: 56px 24px; }
+  .hours-contact { padding: 56px 24px; }
+  .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hours-contact .eyebrow, .hours-contact h2 { text-align: center; }
+  .contact-cards { align-items: stretch; }
+  .final-cta { padding: 64px 24px; }
+  .footer .container { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 479px) {
-  .hero {
-    padding: 100px 20px 48px;
-    min-height: 100svh;
-  }
+  .hero { padding: 100px 20px 48px; min-height: 100svh; }
+  .info-bar { padding: 20px 20px; }
+  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .nav-brand { font-size: 16px; }
+  .nav-phone { font-size: 13px; }
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+  .footer .container { padding: 0 20px; }
+  .nav .container { padding: 0 20px; }
+}
 
-  .info-bar {
-    padding: 20px 20px;
-  }
-
-  .info-bar .container {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .nav-brand {
-    font-size: 16px;
-  }
-
-  .nav-phone {
-    font-size: 13px;
-  }
-
-  section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .footer .container {
-    padding: 0 20px;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
+  .hero, .gear-svg, .gallery-img, * { animation: none !important; transition: none !important; }
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="main-nav">
+<nav class="nav" id="nav">
   <div class="container">
     <a href="#" class="nav-brand">Bridwell Automotive Center</a>
     <a href="tel:4809484781" class="nav-phone">(480) 948-4781</a>
@@ -730,10 +633,10 @@ h2 {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Auto Repair &amp; Service</span>
+    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Automotive Center</span>
     <h1>Bridwell Automotive Center</h1>
-    <p class="hero-tagline">ASE-certified mechanics servicing any make and model of car, truck, or SUV.</p>
-    <a href="tel:4809484781" class="btn-primary">Call (480) 948-4781</a>
+    <p class="hero-tagline">ASE certified repair for any car, truck, or SUV with extended hours in Scottsdale.</p>
+    <a href="tel:4809484781" class="hero-cta">Call (480) 948-4781</a>
   </div>
 </section>
 
@@ -750,20 +653,20 @@ h2 {
     </div>
     <div class="info-item">
       <span class="info-label">Rating</span>
-      <div class="info-value">
-        <span class="stars-inline">
+      <span class="info-value">
+        <span style="display:inline-flex;gap:2px;margin-right:6px;vertical-align:middle;">
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
         </span>
-        4.7 &middot; 304 reviews
-      </div>
+        4.7 · 304 reviews
+      </span>
     </div>
     <div class="info-item">
       <span class="info-label">Certification</span>
-      <span class="info-value">ASE Certified Mechanics</span>
+      <span class="info-value">ASE Certified Technicians</span>
     </div>
   </div>
 </div>
@@ -771,30 +674,29 @@ h2 {
 <!-- ABOUT -->
 <section class="about-section">
   <div class="container">
-    <div class="about-text-block">
-      <span class="eyebrow reveal">About</span>
-      <h2 class="reveal">Built for Scottsdale drivers who need it done right.</h2>
-      <span class="accent-rule"></span>
-      <p>If you own a car, truck, or SUV in the Scottsdale area, you know how critical it is to find a shop that won't guess at a diagnosis. At Bridwell Automotive Center, our ASE-certified mechanics bring precise technical expertise to every vehicle that comes through our doors  -  whether it's a routine oil change, brake service, or a complex engine diagnostic that's had another shop stumped.</p>
-      <p>We service almost any make and model, so you never have to bounce between specialists. Our extended hours  -  6 AM to 9 PM on weekdays  -  mean you can drop off before work or pick up after, on your schedule. With a 4.7-star rating backed by over 304 verified Google reviews, Bridwell has become the shop Scottsdale drivers return to year after year.</p>
+    <span class="eyebrow">About</span>
+    <h2 class="reveal">Scottsdale drivers deserve a shop that handles any job, any make.</h2>
+    <span class="eyebrow-rule"></span>
+    <div class="about-text">
+      <p>If you own a car, truck, or SUV in Scottsdale and want repairs done right the first time, we built this shop for you. Our ASE certified technicians handle nearly every make and model on the road  -  from oil changes and brake service to engine diagnostics and transmission repair  -  with the kind of precision that comes from real credentials, not just experience alone.</p>
+      <p>We keep our doors open from 6 AM to 9 PM on weekdays and 7 AM to 7 PM on Sundays so your schedule doesn't have to bend around ours. With a 4.7-star rating across 304 reviews, Scottsdale drivers keep coming back because the work speaks for itself. Located on E Lincoln Dr, we're easy to reach whether you're coming from McCormick Ranch, Paradise Valley, or anywhere across the East Valley.</p>
     </div>
-
     <div class="about-info-grid">
       <div class="info-box">
         <span class="info-box-label">Address</span>
-        <span class="info-box-value"><a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253" target="_blank" rel="noopener">7171 E Lincoln Dr, Scottsdale, AZ 85253</a></span>
+        <span class="info-box-value"><a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253,+USA" target="_blank" rel="noopener">7171 E Lincoln Dr, Scottsdale, AZ 85253, USA</a></span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Google Rating</span>
-        <span class="info-box-value">4.7 stars &middot; 304 reviews</span>
+        <span class="info-box-value">4.7 stars · 304 reviews</span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Specialties</span>
-        <span class="info-box-value">ASE Certified Mechanics &middot; Multi-brand vehicle service</span>
+        <span class="info-box-value">ASE Certified Mechanics · Multi-make &amp; Model Expertise · Extended Hours Availability</span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Services</span>
-        <span class="info-box-value">Brake service, Engine diagnostics, Oil changes, Suspension repair</span>
+        <span class="info-box-value">Brake Service, Engine Diagnostics, Transmission Repair, Oil Changes</span>
       </div>
     </div>
   </div>
@@ -803,25 +705,26 @@ h2 {
 <!-- SIGNATURE VISUAL -->
 <section class="signature-section">
   <div class="container">
-    <svg class="gear-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <path d="M32 20a12 12 0 1 1 0 24 12 12 0 0 1 0-24z" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
-      <path d="M32 4v6M32 54v6M4 32h6M54 32h6M9.5 9.5l4.2 4.2M50.3 50.3l4.2 4.2M54.5 9.5l-4.2 4.2M13.7 50.3l-4.2 4.2" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M26 4.5h12v5.5a16 16 0 0 1 5.6 3.2l4.8-2.8 6 10.4-4.8 2.8c.3 1.3.4 2.6.4 3.9s-.1 2.6-.4 3.9l4.8 2.8-6 10.4-4.8-2.8A16 16 0 0 1 38 45.5V51H26v-5.5a16 16 0 0 1-5.6-3.2l-4.8 2.8-6-10.4 4.8-2.8A16 16 0 0 1 14 28a16 16 0 0 1 .4-3.9l-4.8-2.8 6-10.4 4.8 2.8A16 16 0 0 1 26 10.1V4.5z" stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+    <svg class="gear-svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" fill="none">
+      <circle cx="32" cy="32" r="10" stroke="#DC2626" stroke-width="3"/>
+      <path d="M32 4v8M32 52v8M4 32h8M52 32h8M11.5 11.5l5.7 5.7M46.8 46.8l5.7 5.7M52.5 11.5l-5.7 5.7M17.2 46.8l-5.7 5.7" stroke="#DC2626" stroke-width="3" stroke-linecap="round"/>
+      <path d="M28 4.5h8v5.3l3.7 1.5 3.7-3.7 5.7 5.7-3.7 3.7 1.5 3.7H52v8h-5.1l-1.5 3.7 3.7 3.7-5.7 5.7-3.7-3.7-3.7 1.5V52h-8v-5.1l-3.7-1.5-3.7 3.7-5.7-5.7 3.7-3.7-1.5-3.7H4v-8h5.1l1.5-3.7-3.7-3.7 5.7-5.7 3.7 3.7 3.7-1.5V4.5z" stroke="#DC2626" stroke-width="2.5" stroke-linejoin="round"/>
     </svg>
-    <span class="signature-label">ASE Certified &nbsp;&middot;&nbsp; Extended Hours Available</span>
+    <span class="signature-label">ASE Certified · Open 6 AM - 9 PM Weekdays</span>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
 <section class="hours-contact">
   <div class="container">
-    <span class="eyebrow reveal">Hours &amp; Contact</span>
+    <span class="eyebrow">Hours &amp; Contact</span>
     <h2 class="reveal">Find us.</h2>
-    <div class="rating-pill">
-      <svg width="13" height="13" viewBox="0 0 20 20" fill="var(--accent)"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
-      4.7 stars &nbsp;&middot;&nbsp; 304 reviews
+    <div style="display:flex;justify-content:flex-start;margin-top:12px;">
+      <span class="rating-pill">
+        <svg width="13" height="13" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        4.7 · 304 reviews on Google
+      </span>
     </div>
-
     <div class="hours-contact-grid">
       <div>
         <table class="hours-table">
@@ -857,16 +760,15 @@ h2 {
           </tbody>
         </table>
       </div>
-
       <div class="contact-cards">
-        <div class="contact-card reveal">
+        <a href="tel:4809484781" class="contact-card reveal">
           <span class="contact-card-label">Phone</span>
-          <span class="contact-card-value"><a href="tel:4809484781">(480) 948-4781</a></span>
-        </div>
-        <div class="contact-card reveal">
+          <span class="contact-card-value">(480) 948-4781</span>
+        </a>
+        <a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253,+USA" target="_blank" rel="noopener" class="contact-card reveal">
           <span class="contact-card-label">Address</span>
-          <span class="contact-card-value"><a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253" target="_blank" rel="noopener">7171 E Lincoln Dr<br>Scottsdale, AZ 85253</a></span>
-        </div>
+          <span class="contact-card-value">7171 E Lincoln Dr<br>Scottsdale, AZ 85253</span>
+        </a>
       </div>
     </div>
   </div>
@@ -875,17 +777,20 @@ h2 {
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="reveal">Same-day service from mechanics who know your vehicle.</h2>
-    <p class="support-line reveal">Open 6 AM to 9 PM weekdays. Call now and we'll get you in.</p>
-    <a href="tel:4809484781" class="btn-primary reveal">Call (480) 948-4781</a>
+    <h2 class="reveal">Your vehicle. Any make. Done right.</h2>
+    <p class="final-cta-support">ASE certified technicians ready before sunrise and after sundown.</p>
+    <a href="tel:4809484781" class="cta-button">Call (480) 948-4781</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <span class="footer-brand">Bridwell Automotive Center &nbsp;&middot;&nbsp; Scottsdale, AZ</span>
-    <span class="footer-credit"><a href="https://auxoagency.co" target="_blank" rel="noopener">Site by Auxo Agency &middot; auxoagency.co</a></span>
+    <div class="footer-brand">
+      Bridwell Automotive Center
+      <span>Scottsdale, AZ</span>
+    </div>
+    <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></div>
   </div>
 </footer>
 
@@ -895,7 +800,7 @@ document.querySelectorAll('.about-info-grid .info-box').forEach(function(el, i) 
 });
 
 window.addEventListener('scroll', function() {
-  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 50);
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
 }, { passive: true });
 
 var observer = new IntersectionObserver(function(entries) {
