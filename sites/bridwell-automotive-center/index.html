@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridwell Auto Repair Scottsdale | Mechanic Shop - Automotive Center</title>
-<meta name="description" content="ASE certified mechanics servicing any make and model of car, truck, or SUV in Scottsdale, AZ. Extended hours 6AM-9PM weekdays. 4.7 stars · 304 reviews.">
+<meta name="description" content="ASE certified mechanics serving any make and model of car, truck, or SUV in Scottsdale. Extended hours, expert diagnostics, and honest service at Bridwell Automotive Center.">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --accent: #DC2626;
   --accent-light: rgba(220,38,38,0.08);
@@ -18,7 +16,10 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
   --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
   --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.08), 0 20px 25px rgba(0,0,0,0.06);
+  --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif;
 }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
@@ -28,17 +29,12 @@ body {
   line-height: 1.75;
   color: var(--text);
   background: var(--bg);
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-}
+.container { max-width: 1100px; margin: 0 auto; width: 100%; }
 
-h1, h2, h3 {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
-}
+h1, h2, h3 { font-family: var(--heading-font); }
 
 h1 {
   font-size: clamp(38px, 9vw, 56px);
@@ -81,7 +77,7 @@ h2 {
 }
 
 .nav-brand {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  font-family: var(--heading-font);
   font-weight: 700;
   font-size: 18px;
   color: #fff;
@@ -91,10 +87,7 @@ h2 {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.nav.scrolled .nav-brand {
-  color: var(--dark);
-  text-shadow: none;
-}
+.nav.scrolled .nav-brand { color: var(--dark); text-shadow: none; }
 
 .nav-phone {
   font-size: 15px;
@@ -105,20 +98,15 @@ h2 {
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.nav.scrolled .nav-phone {
-  color: var(--accent);
-  text-shadow: none;
-}
-
-.nav-phone:hover {
-  color: var(--accent);
-}
-
-.nav.scrolled .nav-phone:hover {
-  color: #b91c1c;
-}
+.nav.scrolled .nav-phone { color: var(--accent); text-shadow: none; }
+.nav.scrolled .nav-phone:hover { color: #b91c1c; }
 
 /* HERO */
+@keyframes kenBurns {
+  0% { background-size: 102% auto; background-position: 50% 50%; }
+  100% { background-size: 106% auto; background-position: 50% 48%; }
+}
+
 .hero {
   min-height: 100svh;
   max-height: 780px;
@@ -135,17 +123,11 @@ h2 {
   animation: kenBurns 30s ease-in-out infinite alternate;
 }
 
-@keyframes kenBurns {
-  0% { background-size: 102% auto; background-position: 50% 50%; }
-  100% { background-size: 106% auto; background-position: 50% 48%; }
-}
-
 .hero .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 700px;
-  gap: 16px;
 }
 
 .hero-eyebrow {
@@ -154,46 +136,61 @@ h2 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
+  margin-bottom: 16px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
 }
 
 .hero h1 {
   color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+  max-width: 680px;
 }
 
 .hero-tagline {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  font-family: var(--heading-font);
   font-size: clamp(16px, 2.5vw, 20px);
   color: rgba(255,255,255,0.95);
   max-width: 560px;
   line-height: 1.45;
+  margin-bottom: 32px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero-accent-bar {
+  display: block;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--accent);
+  border-radius: 0;
+  display: none;
 }
 
 .hero-cta {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   min-height: 54px;
   padding: 0 32px;
   background: var(--accent);
   color: #fff;
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  font-family: var(--heading-font);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 8px;
+  border-left: 5px solid rgba(0,0,0,0.2);
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-  border-left: 4px solid rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(220,38,38,0.35);
 }
 
 .hero-cta:hover {
   background: #b91c1c;
   transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(220,38,38,0.3), 0 8px 24px rgba(220,38,38,0.35);
+  box-shadow: 0 6px 20px rgba(220,38,38,0.5);
 }
 
 /* INFO BAR */
@@ -223,9 +220,9 @@ h2 {
 }
 
 .info-value {
-  font-size: 15px;
-  font-weight: 600;
   color: #fff;
+  font-weight: 600;
+  font-size: 15px;
   line-height: 1.4;
 }
 
@@ -235,11 +232,9 @@ h2 {
   transition: color 0.2s;
 }
 
-.info-value a:hover {
-  color: var(--accent);
-}
+.info-value a:hover { color: var(--accent); }
 
-.stars-inline {
+.stars-row {
   display: inline-flex;
   gap: 2px;
   margin-right: 6px;
@@ -248,8 +243,8 @@ h2 {
 
 /* ABOUT */
 .about-section {
-  padding: 80px 48px;
   background: var(--bg);
+  padding: 80px 48px;
 }
 
 .about-section .container {
@@ -264,32 +259,34 @@ h2 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 4px;
+  margin-bottom: 12px;
+  display: block;
+  text-align: center;
 }
 
-.accent-rule {
+.eyebrow-rule {
+  display: block;
   width: 40px;
   height: 1px;
   background: var(--accent);
   margin: 0 auto 32px;
 }
 
-.about-text {
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.about-text h2 {
+.about-section h2 {
   text-align: center;
   max-width: 580px;
   margin: 8px auto 20px;
-}
-
-.about-text p {
-  margin-bottom: 20px;
   color: var(--text);
 }
+
+.about-text {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text);
+  text-align: left;
+}
+
+.about-text p + p { margin-top: 20px; }
 
 .about-info-grid {
   display: grid;
@@ -312,15 +309,8 @@ h2 {
   transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease;
 }
 
-.info-box.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.info-box:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
+.info-box.visible { opacity: 1; transform: translateY(0); }
+.info-box:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 
 .info-box-label {
   font-size: 11px;
@@ -346,9 +336,7 @@ h2 {
   transition: border-color 0.2s;
 }
 
-.info-box-value a:hover {
-  border-bottom-color: var(--accent);
-}
+.info-box-value a:hover { border-bottom-color: var(--accent); }
 
 /* SIGNATURE VISUAL */
 .signature-section {
@@ -373,13 +361,14 @@ h2 {
   margin-top: 8px;
 }
 
-.gear-svg {
-  animation: gearSpin 8s linear infinite;
-}
-
 @keyframes gearSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.gear-svg {
+  animation: gearSpin 8s linear infinite;
+  transform-origin: center center;
 }
 
 /* HOURS & CONTACT */
@@ -388,16 +377,42 @@ h2 {
   padding: 72px 48px;
 }
 
-.hours-contact .container {
-  display: flex;
-  flex-direction: column;
+.hours-contact .container {}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hours-contact h2 {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  border: 1px solid rgba(220,38,38,0.15);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 .hours-contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  margin-top: 32px;
+  gap: 48px;
+  align-items: start;
 }
 
 .hours-table {
@@ -406,12 +421,10 @@ h2 {
 }
 
 .hours-table tr {
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-.hours-table tr:last-child {
-  border-bottom: none;
-}
+.hours-table tr:last-child { border-bottom: none; }
 
 .hours-table td {
   padding: 10px 0;
@@ -422,7 +435,7 @@ h2 {
 .hours-table td:first-child {
   font-weight: 700;
   color: var(--text);
-  width: 50%;
+  width: 120px;
 }
 
 .hours-table td:last-child {
@@ -438,24 +451,20 @@ h2 {
 
 .contact-card {
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.07);
   border-left: 4px solid var(--accent);
   border-radius: 8px;
   padding: 20px 24px;
   min-height: 80px;
-  box-shadow: var(--shadow-sm);
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.contact-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
+.contact-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 
 .contact-card-label {
   font-size: 11px;
@@ -465,26 +474,20 @@ h2 {
   color: var(--accent);
 }
 
-.contact-card-value {
+.contact-card a {
   font-size: 17px;
   font-weight: 600;
   color: var(--text);
-  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent-light);
-  border: 1px solid rgba(220,38,38,0.2);
-  border-radius: 100px;
-  padding: 6px 16px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-top: 12px;
-  align-self: flex-start;
+.contact-card a:hover { color: var(--accent); }
+
+.contact-card-addr {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.5;
 }
 
 /* FINAL CTA */
@@ -495,48 +498,44 @@ h2 {
 
 .final-cta .container {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  max-width: 540px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .final-cta h2 {
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .final-cta-support {
-  font-size: 16px;
   color: rgba(255,255,255,0.65);
-  max-width: 400px;
-  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 1.5;
 }
 
 .cta-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   min-height: 54px;
   padding: 0 32px;
   background: var(--accent);
   color: #fff;
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+  font-family: var(--heading-font);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 8px;
+  border-left: 5px solid rgba(0,0,0,0.2);
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-  border-left: 4px solid rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(220,38,38,0.35);
 }
 
 .cta-btn:hover {
   background: #b91c1c;
   transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(220,38,38,0.3), 0 8px 24px rgba(220,38,38,0.4);
+  box-shadow: 0 6px 24px rgba(220,38,38,0.55);
 }
 
 /* FOOTER */
@@ -547,33 +546,31 @@ h2 {
 
 .footer .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 
 .footer-brand {
+  font-family: var(--heading-font);
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
 }
 
-.footer-agency {
+.footer-credit {
   font-size: 12px;
   color: rgba(26,26,26,0.45);
-  text-decoration: none;
 }
 
-.footer-agency a {
-  color: inherit;
+.footer-credit a {
+  color: rgba(26,26,26,0.45);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.footer-agency a:hover {
-  color: var(--accent);
-}
+.footer-credit a:hover { color: var(--accent); }
 
 /* REVEAL */
 .reveal {
@@ -582,37 +579,64 @@ h2 {
   transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: none;
+.reveal.visible { opacity: 1; transform: none; }
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
+  .hero { animation: none !important; }
+  .gear-svg { animation: none !important; }
+  * { transition: none !important; }
 }
 
 /* MOBILE */
 @media (max-width: 767px) {
-  .hero { padding: 120px 24px 56px; min-height: 100svh; max-height: none; background-position: center center; }
-  .hero .container { align-items: center; text-align: center; }
+  .hero {
+    padding: 120px 24px 56px;
+    min-height: 100svh;
+    max-height: none;
+    background-position: center center;
+    align-items: center;
+  }
+
+  .hero .container {
+    align-items: center;
+    text-align: center;
+  }
+
   .hero h1, .hero-tagline, .hero-eyebrow { max-width: 100%; text-align: center; }
-  .hero .container { max-width: 100%; }
+
   .nav .container { padding: 0 24px; }
+
   .info-bar { padding: 24px 24px; }
-  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 16px; text-align: center; }
+
+  .info-bar .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
   .info-item { align-items: center; gap: 4px; }
   .info-label { font-size: 10px; }
   .info-value { font-size: 14px; }
-  .about-section { padding: 64px 24px; }
-  .about-section p, .about-section h2 { text-align: center; }
-  .about-text { text-align: center; }
+
+  .about-section { padding: 56px 24px; }
+  .about-section .about-text { text-align: center; }
   .about-info-grid { grid-template-columns: 1fr; }
   .info-box { text-align: center; }
+
   .signature-section { padding: 56px 24px; }
+
   .hours-contact { padding: 56px 24px; }
   .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
-  .hours-contact .eyebrow, .hours-contact h2 { text-align: center; }
+  .hours-contact .section-eyebrow,
+  .hours-contact h2 { text-align: center; }
+  .rating-pill { margin-left: auto; margin-right: auto; display: flex; justify-content: center; }
   .contact-cards { align-items: stretch; }
-  .rating-pill { align-self: center; }
-  .final-cta { padding: 64px 24px; }
-  .footer .container { flex-direction: column; text-align: center; }
+
+  .final-cta { padding: 56px 24px; }
   .footer { padding: 24px 24px; }
+  .footer .container { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 479px) {
@@ -623,22 +647,13 @@ h2 {
   .nav-phone { font-size: 13px; }
   section { padding-left: 20px !important; padding-right: 20px !important; }
   .footer .container { padding: 0 20px; }
-  .about-section { padding-left: 20px !important; padding-right: 20px !important; }
-  .signature-section { padding-left: 20px !important; padding-right: 20px !important; }
-  .hours-contact { padding-left: 20px !important; padding-right: 20px !important; }
-  .final-cta { padding-left: 20px !important; padding-right: 20px !important; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal, .info-box { opacity: 1; transform: none; transition: none; }
-  .hero, .steam, .gallery-img, * { animation: none !important; transition: none !important; }
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="mainNav">
+<nav class="nav" id="mainNav" aria-label="Main navigation">
   <div class="container">
     <a href="#" class="nav-brand">Bridwell Automotive Center</a>
     <a href="tel:4809484781" class="nav-phone">(480) 948-4781</a>
@@ -646,61 +661,61 @@ h2 {
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Hero">
   <div class="container">
-    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Auto Repair &amp; Maintenance</span>
-    <h1>Bridwell Automotive Center</h1>
-    <p class="hero-tagline">ASE certified mechanics servicing any make and model of car, truck, or SUV.</p>
+    <span class="hero-eyebrow">Scottsdale, AZ &nbsp;·&nbsp; Automotive Center</span>
+    <h1>Bridwell<br>Automotive<br>Center</h1>
+    <p class="hero-tagline">ASE certified mechanics serving any make and model of car, truck, or SUV in Scottsdale.</p>
     <a href="tel:4809484781" class="hero-cta">Call (480) 948-4781</a>
   </div>
 </section>
 
 <!-- INFO BAR -->
-<div class="info-bar">
+<div class="info-bar" aria-label="Quick info">
   <div class="container">
     <div class="info-item">
-      <div class="info-label">Phone</div>
-      <div class="info-value"><a href="tel:4809484781">(480) 948-4781</a></div>
+      <span class="info-label">Phone</span>
+      <span class="info-value"><a href="tel:4809484781">(480) 948-4781</a></span>
     </div>
     <div class="info-item">
-      <div class="info-label">Location</div>
-      <div class="info-value">Scottsdale, AZ</div>
+      <span class="info-label">Location</span>
+      <span class="info-value">Scottsdale, AZ</span>
     </div>
     <div class="info-item">
-      <div class="info-label">Rating</div>
-      <div class="info-value">
-        <span class="stars-inline">
+      <span class="info-label">Rating</span>
+      <span class="info-value">
+        <span class="stars-row" aria-hidden="true">
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
           <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
         </span>
-        4.7 &nbsp;·&nbsp; 304 reviews
-      </div>
+        4.7 · 304 reviews
+      </span>
     </div>
     <div class="info-item">
-      <div class="info-label">Certification</div>
-      <div class="info-value">ASE Certified Mechanics</div>
+      <span class="info-label">Certified</span>
+      <span class="info-value">ASE Certified Mechanics</span>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section class="about-section">
+<section class="about-section" aria-label="About">
   <div class="container">
+    <span class="eyebrow">About</span>
+    <h2 class="reveal">Scottsdale drivers deserve a shop that actually knows their vehicle.</h2>
+    <span class="eyebrow-rule"></span>
     <div class="about-text">
-      <span class="eyebrow">About</span>
-      <h2 class="reveal">The Right Shop for Your Car, Truck, or SUV</h2>
-      <div class="accent-rule"></div>
-      <p>When your vehicle needs attention  -  whether it's routine maintenance or a complex diagnostic issue  -  you need mechanics who know what they're doing and stand behind their work. At Bridwell Automotive Center, our ASE certified team handles cars, trucks, and SUVs across virtually every make and model. No guesswork. No runaround. Just accurate diagnosis and quality repairs.</p>
-      <p>We've built a reputation right here in Scottsdale with a 4.7-star rating backed by over 300 customers who keep coming back. Our extended hours  -  6 AM to 9 PM Monday through Saturday and 7 AM to 7 PM on Sunday  -  mean your schedule doesn't have to revolve around your shop visit. We're here when it's convenient for you.</p>
+      <p>Whether you drive a car, truck, or SUV  -  and no matter who built it  -  we have the certifications and diagnostic equipment to handle it properly. Our team of ASE certified mechanics brings professional-grade expertise to every service, from routine maintenance to complex repairs, without the dealership overhead or the runaround.</p>
+      <p>We operate out of 7171 E Lincoln Dr in the heart of Scottsdale, with extended hours from 6 AM to 9 PM Monday through Saturday and 7 AM to 7 PM on Sundays  -  because your schedule shouldn't have to wait on ours. Our multi-make, multi-model capability means one reliable shop for every vehicle in the household.</p>
     </div>
 
     <div class="about-info-grid">
       <div class="info-box">
         <span class="info-box-label">Address</span>
-        <span class="info-box-value"><a href="https://maps.google.com/?q=8423+E+Butherus+Dr+%23110%2C+Scottsdale%2C+AZ+85260%2C+USA" target="_blank" rel="noopener">8423 E Butherus Dr #110, Scottsdale, AZ 85260</a></span>
+        <span class="info-box-value"><a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253" target="_blank" rel="noopener">7171 E Lincoln Dr, Scottsdale, AZ 85253</a></span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Google Rating</span>
@@ -708,41 +723,40 @@ h2 {
       </div>
       <div class="info-box">
         <span class="info-box-label">Specialties</span>
-        <span class="info-box-value">ASE Certified Mechanics · Multi-Make &amp; Multi-Model Service</span>
+        <span class="info-box-value">ASE Certified Mechanics · Multi-Make &amp; Model Service</span>
       </div>
       <div class="info-box">
         <span class="info-box-label">Services</span>
-        <span class="info-box-value">Car, Truck &amp; SUV Repair, Automotive Diagnostics, Preventive Maintenance, ASE Certified Mechanical Services</span>
+        <span class="info-box-value">Car, Truck &amp; SUV Repair, Automotive Diagnostics, General Maintenance</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SIGNATURE VISUAL -->
-<section class="signature-section">
+<section class="signature-section" aria-label="Certification">
   <div class="container">
-    <svg class="gear-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <path d="M32 20a12 12 0 1 1 0 24 12 12 0 0 1 0-24z" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
-      <path d="M32 8v6M32 50v6M8 32h6M50 32h6M14.1 14.1l4.2 4.2M45.7 45.7l4.2 4.2M14.1 49.9l4.2-4.2M45.7 18.3l4.2-4.2" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="32" cy="32" r="4" fill="var(--accent)" opacity="0.7"/>
-      <path d="M26 4h12l1.5 6a20 20 0 0 1 5.2 3L50 11l8.5 14.7-4.7 4a20 20 0 0 1 0 4.6l4.7 4L50 53l-5.3-2a20 20 0 0 1-5.2 3L38 60H26l-1.5-6a20 20 0 0 1-5.2-3L14 53 5.5 38.3l4.7-4a20 20 0 0 1 0-4.6l-4.7-4L14 11l5.3 2a20 20 0 0 1 5.2-3L26 4z" stroke="var(--accent)" stroke-width="2" fill="none" opacity="0.35"/>
+    <svg class="gear-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true" role="img">
+      <path d="M32 20a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm0 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16z" fill="var(--accent)" opacity="0.9"/>
+      <path d="M27.5 4h9l1.5 6.5a18.5 18.5 0 0 1 5.3 3.1L50 11.5l4.5 7.8-4.9 4.2a18.6 18.6 0 0 1 0 6.2l4.9 4.2-4.5 7.8-6.7-2.1a18.5 18.5 0 0 1-5.3 3.1L36.5 48h-9L26 41.5a18.5 18.5 0 0 1-5.3-3.1l-6.7 2.1-4.5-7.8 4.9-4.2a18.6 18.6 0 0 1 0-6.2l-4.9-4.2 4.5-7.8 6.7 2.1A18.5 18.5 0 0 1 26 10.5L27.5 4z" stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
     </svg>
-    <span class="signature-label">24/7 emergency availability &nbsp;·&nbsp; Extended hours daily</span>
+    <span class="signature-label">ASE Certified · Any Make &amp; Model</span>
   </div>
 </section>
 
 <!-- HOURS & CONTACT -->
-<section class="hours-contact">
+<section class="hours-contact" aria-label="Hours and Contact">
   <div class="container">
-    <span class="eyebrow">Hours &amp; Contact</span>
+    <span class="section-eyebrow">Hours &amp; Contact</span>
     <h2 class="reveal">Find us.</h2>
-    <div class="rating-pill">
-      <svg width="13" height="13" viewBox="0 0 20 20" fill="var(--accent)"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
-      4.7 stars · 304 Google reviews
+    <div class="rating-pill" aria-label="Google rating">
+      <svg width="13" height="13" viewBox="0 0 20 20" fill="#F5A623" aria-hidden="true"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+      4.7 Google Rating · 304 Reviews
     </div>
+
     <div class="hours-contact-grid">
       <div>
-        <table class="hours-table">
+        <table class="hours-table" aria-label="Business hours">
           <tbody>
             <tr><td>Monday</td><td>6:00 AM - 9:00 PM</td></tr>
             <tr><td>Tuesday</td><td>6:00 AM - 9:00 PM</td></tr>
@@ -754,34 +768,39 @@ h2 {
           </tbody>
         </table>
       </div>
+
       <div class="contact-cards">
-        <a href="tel:4809484781" class="contact-card reveal">
+        <div class="contact-card reveal">
           <span class="contact-card-label">Phone</span>
-          <span class="contact-card-value">(480) 948-4781</span>
-        </a>
-        <a href="https://maps.google.com/?q=8423+E+Butherus+Dr+%23110%2C+Scottsdale%2C+AZ+85260%2C+USA" target="_blank" rel="noopener" class="contact-card reveal">
+          <a href="tel:4809484781">(480) 948-4781</a>
+        </div>
+        <div class="contact-card reveal">
           <span class="contact-card-label">Address</span>
-          <span class="contact-card-value">8423 E Butherus Dr #110<br>Scottsdale, AZ 85260</span>
-        </a>
+          <span class="contact-card-addr">
+            <a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253" target="_blank" rel="noopener">
+              7171 E Lincoln Dr<br>Scottsdale, AZ 85253
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta">
+<section class="final-cta" aria-label="Call to action">
   <div class="container">
-    <h2>ASE Certified Repairs, Ready When You Are</h2>
-    <p class="final-cta-support">Open early, open late  -  six days a week from 6 AM to 9 PM.</p>
+    <h2 class="reveal">Any vehicle. Any make. Done right.</h2>
+    <p class="final-cta-support">ASE certified service with extended hours across Scottsdale.</p>
     <a href="tel:4809484781" class="cta-btn">Call (480) 948-4781</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" aria-label="Footer">
   <div class="container">
     <span class="footer-brand">Bridwell Automotive Center &nbsp;·&nbsp; Scottsdale, AZ</span>
-    <span class="footer-agency"><a href="https://auxoagency.co" target="_blank" rel="noopener">Site by Auxo Agency · auxoagency.co</a></span>
+    <span class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency · auxoagency.co</a></span>
   </div>
 </footer>
 
@@ -791,7 +810,7 @@ document.querySelectorAll('.about-info-grid .info-box').forEach(function(el, i) 
 });
 
 window.addEventListener('scroll', function() {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 50);
 }, { passive: true });
 
 var observer = new IntersectionObserver(function(entries) {
