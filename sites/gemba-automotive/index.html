@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Repair in Scottsdale, AZ | Gemba Automotive</title>
+<meta name="description" content="Expert auto repair for all makes and models in Scottsdale, AZ. 2-year/24,000-mile warranty. 4.7-star rating with 241+ reviews. Call (480) 947-4863.">
+<style>
+:root {
+  --accent: #1E40AF;
+  --accent-light: rgba(30, 64, 175, 0.08);
+  --bg: #FAFAFA;
+  --bg-alt: #F0F0F0;
+  --dark: #0F172A;
+  --text: #0F172A;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 1px 1px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.08), 0 20px 25px rgba(0,0,0,0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, .nav-brand {
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif-condensed, sans-serif;
+}
+
+h1 {
+  font-size: clamp(40px, 9vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: clamp(28px, 7vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.accent-rule {
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 32px;
+  display: block;
+}
+
+/* SCROLL PROGRESS */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 200;
+  transition: width 0.1s;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 64px;
+  background: rgba(250, 250, 250, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 48px;
+}
+
+.nav-brand {
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--dark);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-phone:hover { color: var(--dark); }
+
+/* HERO */
+.hero {
+  height: 65vh;
+  max-height: 640px;
+  min-height: 480px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.78) 100%), url('hero.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 48px 56px;
+  margin: 0;
+  animation: kenBurns 30s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% { background-size: 102% auto; background-position: 50% 35%; }
+  100% { background-size: 106% auto; background-position: 50% 32%; }
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+  gap: 16px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  border-left: 5px solid var(--accent);
+  padding-left: 18px;
+}
+
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: wordSlide 0.6s forwards cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.hero h1 .word:nth-child(1) { animation-delay: 0.1s; }
+.hero h1 .word:nth-child(2) { animation-delay: 0.2s; }
+.hero h1 .word:nth-child(3) { animation-delay: 0.3s; }
+.hero h1 .word:nth-child(4) { animation-delay: 0.4s; }
+.hero h1 .word:nth-child(5) { animation-delay: 0.5s; }
+.hero h1 .word:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes wordSlide { to { opacity: 1; transform: translateY(0); } }
+
+.hero-tagline {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: rgba(255,255,255,0.95);
+  max-width: 560px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5), 0 2px 16px rgba(0,0,0,0.4);
+  line-height: 1.5;
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 32px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  background: #1a37a0;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  left: var(--mx, 50%);
+  top: var(--my, 50%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover::before { opacity: 1; }
+
+/* INFO BAR */
+.info-bar {
+  background: var(--dark);
+  padding: 36px 48px;
+}
+
+.info-bar .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.info-value a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.info-value a:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+/* FEATURE MARQUEE */
+.feature-marquee {
+  background: var(--accent-light);
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.feature-marquee-track {
+  display: flex;
+  gap: 32px;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+  padding-left: 32px;
+}
+
+.feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  border: 1px solid var(--accent-light);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ABOUT */
+.about-section {
+  padding: 80px 48px;
+  background: var(--bg);
+}
+
+.about-section .container {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section p {
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 48px auto 0;
+  max-width: 760px;
+}
+
+.info-box {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(20px);
+  transform-style: preserve-3d;
+  transition: opacity 0.5s, transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.3s;
+  text-align: left;
+}
+
+.info-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-box:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.info-box-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.info-box-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.info-box-value a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  transition: border-color 0.2s;
+}
+
+.info-box-value a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* SIGNATURE VISUAL */
+.signature-section {
+  background: var(--accent-light);
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.signature-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.signature-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 8px;
+}
+
+.signature-svg {
+  animation: gearSpin 10s linear infinite;
+}
+
+@keyframes gearSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  background: var(--bg);
+  padding: 72px 48px;
+}
+
+.hours-contact-header {
+  margin-bottom: 48px;
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.hours-table td:first-child {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.hours-table td:last-child {
+  text-align: right;
+  color: var(--text);
+}
+
+.hours-table .closed {
+  color: #94a3b8;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 20px 24px;
+  min-height: 80px;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+  pointer-events: none;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card:hover::after { left: 100%; }
+
+.contact-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.contact-card-value {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  border: 1px solid rgba(30, 64, 175, 0.15);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--dark);
+  padding: 80px 48px;
+}
+
+.final-cta .container {
+  text-align: center;
+}
+
+.final-cta h2 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.final-cta .support-line {
+  color: rgba(255,255,255,0.75);
+  font-size: 17px;
+  margin-bottom: 32px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--bg-alt);
+  padding: 24px 48px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--dark);
+}
+
+.footer-brand span {
+  font-weight: 400;
+  color: #64748b;
+  font-size: 13px;
+  display: block;
+}
+
+.footer-credit {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.footer-credit a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-credit a:hover {
+  text-decoration: underline;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .hero {
+    padding: 80px 24px 40px;
+    min-height: 0;
+    height: 70vh;
+    max-height: 600px;
+    background-position: center 40%;
+  }
+
+  .hero .container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    border-left: none;
+    padding-left: 0;
+    border-top: 4px solid var(--accent);
+    padding-top: 12px;
+  }
+
+  .hero h1, .hero-tagline, .hero-eyebrow {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .nav .container { padding: 0 20px; }
+
+  .info-bar { padding: 24px 24px; }
+
+  .info-bar .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .info-item { align-items: center; gap: 4px; }
+  .info-label { font-size: 10px; }
+  .info-value { font-size: 14px; }
+
+  .feature-marquee { padding: 16px 0; }
+  .feature-pill { font-size: 13px; padding: 6px 16px; }
+
+  .about-section { padding: 48px 24px; }
+  .about-section .container { text-align: center; }
+  .about-section p { text-align: center; }
+  .about-info-grid { grid-template-columns: 1fr; }
+  .info-box { text-align: center; }
+  .info-box:hover { transform: translateY(-3px); }
+
+  .signature-section { padding: 48px 24px; }
+
+  .hours-contact { padding: 48px 24px; }
+  .hours-contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hours-contact-header { text-align: center; margin-bottom: 32px; }
+  .contact-cards { align-items: stretch; }
+
+  .final-cta { padding: 48px 24px; }
+
+  .footer { padding: 20px 24px; }
+  .footer .container { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 479px) {
+  .hero {
+    padding: 76px 20px 32px;
+    height: 65vh;
+    max-height: 520px;
+  }
+
+  .info-bar { padding: 20px 20px; }
+  .info-bar .container { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .nav-brand { font-size: 16px; }
+  .nav-phone { font-size: 13px; }
+
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+  .footer .container { padding: 0 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .info-box, .word, .scroll-progress, .feature-marquee-track, .steam, .gallery-img, .contact-card::after, .btn-primary::before, * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <a href="#" class="nav-brand">Gemba Automotive</a>
+    <a href="tel:4809474863" class="nav-phone">(480) 947-4863</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Scottsdale, AZ  -  Auto Repair</span>
+    <h1>
+      <span class="word">Trusted</span>&nbsp;<span class="word">Auto</span>&nbsp;<span class="word">Repair</span>&nbsp;<span class="word">Shop</span>&nbsp;<span class="word">In</span>&nbsp;<span class="word">Scottsdale,&nbsp;AZ</span>
+    </h1>
+    <p class="hero-tagline">Expert auto repair for all makes and models with a 2-year/24,000-mile warranty.</p>
+    <a href="tel:4809474863" class="btn-primary">Call (480) 947-4863</a>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="container">
+    <div class="info-item">
+      <div class="info-label">Phone</div>
+      <div class="info-value"><a href="tel:4809474863">(480) 947-4863</a></div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Location</div>
+      <div class="info-value">Scottsdale, AZ</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Rating</div>
+      <div class="info-value">
+        <div style="display:inline-flex;gap:2px;margin-right:8px;vertical-align:middle;">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        </div>
+        <span class="number-counter" data-target="4.7" data-decimals="1">0.0</span>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Reviews</div>
+      <div class="info-value"><span class="number-counter" data-target="241" data-decimals="0">0</span>+</div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE MARQUEE (no gallery) -->
+<div class="feature-marquee">
+  <div class="feature-marquee-track">
+    <span class="feature-pill">2-Year/24,000-Mile Warranty</span>
+    <span class="feature-pill">4.7 &#9733; Google</span>
+    <span class="feature-pill">8 Convenient AZ Locations</span>
+    <span class="feature-pill">241+ Reviews</span>
+    <span class="feature-pill">All Makes &amp; Models Serviced</span>
+    <span class="feature-pill">EV &amp; Hybrid Specialists</span>
+    <span class="feature-pill">Online Appointment Scheduling</span>
+    <span class="feature-pill">2-Year/24,000-Mile Warranty</span>
+    <span class="feature-pill">4.7 &#9733; Google</span>
+    <span class="feature-pill">8 Convenient AZ Locations</span>
+    <span class="feature-pill">241+ Reviews</span>
+    <span class="feature-pill">All Makes &amp; Models Serviced</span>
+    <span class="feature-pill">EV &amp; Hybrid Specialists</span>
+    <span class="feature-pill">Online Appointment Scheduling</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h2 class="reveal">Scottsdale Drivers Deserve Repair They Can Count On</h2>
+    <span class="accent-rule"></span>
+    <p>If you're a vehicle owner in Scottsdale looking for straightforward, honest auto repair - without the guesswork or surprise charges - you've found the right shop. At Gemba Automotive, we service all makes and models, including EVs, hybrids, and classic performance cars, so no matter what you drive, our team has the expertise to get it right.</p>
+    <p>We back every repair with a 2-year/24,000-mile warranty, and with 8 convenient locations across Arizona, getting quality service has never been easier. More than 241 customers have rated us 4.7 stars on Google - a track record we work hard to earn every day right here in the Scottsdale community.</p>
+
+    <div class="about-info-grid">
+      <div class="info-box">
+        <span class="info-box-label">Address</span>
+        <div class="info-box-value">
+          <a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253" target="_blank" rel="noopener">7171 E Lincoln Dr<br>Scottsdale, AZ 85253</a>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Google Rating</span>
+        <div class="info-box-value">
+          4.7 Stars  -  241+ Verified Reviews<br>
+          <span style="font-size:13px;color:#64748b;">Rated by Scottsdale drivers</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Specialties</span>
+        <div class="info-box-value">
+          All Makes &amp; Models &bull; EV &amp; Hybrid Vehicles &bull; Classic &amp; Performance Cars
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-box-label">Services</span>
+        <div class="info-box-value">
+          Oil Change &amp; Lube &bull; Brake Service &bull; A/C Service &bull; Transmission Repair &bull; Engine Repair &bull; Wheel Alignment
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE VISUAL -->
+<section class="signature-section">
+  <div class="container">
+    <svg class="signature-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="12" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
+      <circle cx="32" cy="32" r="4" fill="var(--accent)"/>
+      <path d="M32 4 L35 14 L29 14 Z" fill="var(--accent)" opacity="0.8"/>
+      <path d="M32 60 L35 50 L29 50 Z" fill="var(--accent)" opacity="0.8"/>
+      <path d="M4 32 L14 29 L14 35 Z" fill="var(--accent)" opacity="0.8"/>
+      <path d="M60 32 L50 29 L50 35 Z" fill="var(--accent)" opacity="0.8"/>
+      <path d="M9.37 9.37 L16.97 17.75 L12.55 19.83 Z" fill="var(--accent)" opacity="0.6"/>
+      <path d="M54.63 54.63 L47.03 46.25 L51.45 44.17 Z" fill="var(--accent)" opacity="0.6"/>
+      <path d="M54.63 9.37 L46.25 16.97 L44.17 12.55 Z" fill="var(--accent)" opacity="0.6"/>
+      <path d="M9.37 54.63 L17.75 47.03 L19.83 51.45 Z" fill="var(--accent)" opacity="0.6"/>
+    </svg>
+    <p class="signature-label">ASE Certified Mechanics  -  All Makes &amp; Models</p>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-contact">
+  <div class="container">
+    <div class="hours-contact-header">
+      <span class="eyebrow">Hours &amp; Contact</span>
+      <h2 class="reveal">Find Us.</h2>
+      <div class="rating-pill">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="#F5A623"><polygon points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/></svg>
+        4.7 Stars &middot; 241+ Google Reviews
+      </div>
+    </div>
+    <div class="hours-contact-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Monday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Tuesday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Wednesday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Thursday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Friday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Saturday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact-cards">
+        <a href="tel:4809474863" class="contact-card reveal">
+          <div class="contact-card-label">Phone</div>
+          <div class="contact-card-value">(480) 947-4863</div>
+        </a>
+        <a href="https://maps.google.com/?q=7171+E+Lincoln+Dr,+Scottsdale,+AZ+85253" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-card-label">Address</div>
+          <div class="contact-card-value">7171 E Lincoln Dr, Scottsdale, AZ 85253</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="reveal">All Makes. All Models. All Backed by Warranty.</h2>
+    <p class="support-line">Book your appointment today and get the repair quality Scottsdale drivers have relied on - backed by our 2-year/24,000-mile guarantee.</p>
+    <a href="tel:4809474863" class="btn-primary">Call (480) 947-4863</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">
+      Gemba Automotive
+      <span>Scottsdale, AZ</span>
+    </div>
+    <div class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency &middot; auxoagency.co</a></div>
+  </div>
+</footer>
+
+<script>
+// SCROLL PROGRESS BAR
+window.addEventListener('scroll', () => {
+  const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  const bar = document.querySelector('.scroll-progress');
+  if (bar) bar.style.width = p + '%';
+}, { passive: true });
+</script>
+
+<script>
+// PARALLAX HERO
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero');
+  if (hero && window.scrollY < window.innerHeight) {
+    hero.style.backgroundPositionY = `calc(35% + ${window.scrollY * 0.15}px)`;
+  }
+}, { passive: true });
+</script>
+
+<script>
+// NUMBER COUNT-UP
+const counters = document.querySelectorAll('.number-counter');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseFloat(el.dataset.target);
+      const decimals = parseInt(el.dataset.decimals) || 0;
+      const duration = 1000;
+      const start = performance.now();
+      const animate = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = target * (0.5 - 0.5 * Math.cos(Math.PI * progress));
+        el.textContent = current.toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
+</script>
+
+<script>
+// REVEAL + INFO BOX OBSERVER
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal, .info-box').forEach(el => observer.observe(el));
+</script>
+
+<script>
+// CURSOR GLOW ON CTA BUTTONS
+document.querySelectorAll('.btn-primary').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    btn.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+    btn.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+  });
+});
+</script>
+
+</body>
+</html>
