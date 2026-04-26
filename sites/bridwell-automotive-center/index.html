@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scottsdale Auto  -  Scottsdale, AZ</title>
-  <meta name="description" content="Scottsdale's trusted auto shop. Rated 4.7 stars by 304 customers. Expert mechanics, honest pricing, and fast turnaround on all makes and models in Scottsdale, AZ.">
+  <title>Auto Repair Scottsdale  -  Scottsdale, AZ</title>
+  <meta name="description" content="Scottsdale's straight-shooting auto shop. Rated 4.7 stars by 304 verified customers. Honest diagnostics, fast turnaround, and certified mechanics you can count on.">
   <meta name="theme-color" content="#1E40AF">
-  <meta property="og:title" content="Scottsdale Auto  -  Scottsdale, AZ">
-  <meta property="og:description" content="Scottsdale's trusted auto shop. Rated 4.7 stars by 304 verified customers. Expert mechanics, honest quotes, fast service.">
+  <meta property="og:title" content="Auto Repair Scottsdale  -  Scottsdale, AZ">
+  <meta property="og:description" content="Scottsdale's straight-shooting auto shop. Rated 4.7 stars by 304 verified customers. Honest diagnostics, fast turnaround, and certified mechanics you can count on.">
   <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites//hero.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231E40AF'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='32' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+  <meta name="twitter:title" content="Auto Repair Scottsdale  -  Scottsdale, AZ">
+  <meta name="twitter:description" content="Scottsdale's straight-shooting auto shop. Rated 4.7 stars by 304 verified customers.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites//hero.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231E40AF'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='18' fill='white'>A</text></svg>">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Scottsdale Auto",
+    "name": "Auto Repair Scottsdale",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "",
       "addressLocality": "Scottsdale",
       "addressRegion": "AZ"
     },
@@ -36,10 +37,17 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
   <style>
     :root {
       --primary: #1E40AF;
+      --primary-dark: #1a37a0;
+      --primary-alpha: rgba(30,64,175,0.18);
       --accent: #F59E0B;
+      --accent-dark: #d97706;
       --bg: #FFFFFF;
       --text: #0F172A;
       --muted: #64748B;
@@ -47,136 +55,135 @@
       --border: #E2E8F0;
       --surface: #F8FAFC;
       --soft-border: #F1F5F9;
-      --space-xs: 8px;
-      --space-sm: 16px;
-      --space-md: 24px;
-      --space-lg: 48px;
-      --space-xl: 96px;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 16px;
+      --section-pad: 96px 48px;
+      --container: 1200px;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
     }
+
+    @media (hover: none) {
+      .tilt-box { transform: none !important; }
+      .cta-glow::before { display: none; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 80px;
+      font-size: 16px;
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-feature-settings: 'ss01', 'cv11';
+      font-family: var(--font-body);
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
     img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
 
-    a { color: inherit; text-decoration: none; }
-
-    *:focus-visible {
-      outline: 2px solid var(--primary);
-      outline-offset: 2px;
-    }
-
-    /* SCROLL PROGRESS BAR */
-    .scroll-progress {
+    /* SCROLL PROGRESS */
+    #scroll-progress {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       height: 3px;
-      background: var(--primary);
       width: 0%;
-      z-index: 1000;
-      transition: width 100ms ease-out;
+      background: var(--primary);
+      z-index: 1100;
+      transition: width 0.1s linear;
     }
 
     /* NAV */
-    .nav {
+    nav {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: rgba(255,255,255,0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       padding: 18px 48px;
-    }
-
-    .nav__inner {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
 
-    .nav__logo {
-      font-family: 'Playfair Display', Georgia, serif;
+    .nav-logo {
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 1.25rem;
       color: var(--text);
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
-    .nav__links {
+    .nav-links {
       display: flex;
+      align-items: center;
       gap: 32px;
       list-style: none;
     }
 
-    .nav__links a {
-      font-family: 'Inter', sans-serif;
+    .nav-links a {
+      font-family: var(--font-body);
       font-weight: 500;
       font-size: 0.95rem;
       color: var(--text);
       position: relative;
-      transition: color 200ms;
       padding-bottom: 2px;
+      transition: color 0.2s ease;
     }
 
-    .nav__links a::after {
+    .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
+      bottom: -2px; left: 0;
+      width: 0%; height: 2px;
       background: var(--primary);
-      transition: width 250ms;
+      transition: width 0.25s ease;
     }
 
-    .nav__links a:hover {
-      color: var(--primary);
-    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
 
-    .nav__links a:hover::after {
-      width: 100%;
-    }
-
-    .nav__cta {
-      display: inline-flex;
+    .nav-phone {
+      display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       background: var(--primary);
-      color: white;
-      padding: 12px 22px;
-      border-radius: 999px;
+      color: #fff;
+      font-family: var(--font-body);
       font-weight: 600;
-      font-size: 0.92rem;
-      font-family: 'Inter', sans-serif;
-      transition: transform 200ms cubic-bezier(0.4,0,0.2,1), box-shadow 200ms;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
-    .nav__cta:hover {
+    .nav-phone:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 20px rgba(30,64,175,0.35);
     }
+
+    .nav-phone svg { flex-shrink: 0; }
 
     /* HERO */
     .hero {
@@ -196,84 +203,90 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
+    .hero-bg-zoom {
       position: absolute;
       inset: 0;
-      background-image: url('https://auxoagency.github.io/auxo-sites/sites//hero.jpg');
+      background-image: inherit;
       background-size: cover;
       background-position: center;
-      z-index: -1;
-      animation: kenburns 20s ease-in-out infinite alternate;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+      z-index: 0;
     }
 
-    @keyframes kenburns {
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
+
+    @keyframes kenBurns {
       from { transform: scale(1.0); }
       to { transform: scale(1.05); }
     }
 
-    .hero__bg-gradient {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
-      z-index: 0;
-    }
-
-    .hero__content {
+    .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 720px;
-      align-self: flex-end;
+      text-align: left;
     }
 
-    .eyebrow {
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-weight: 600;
       font-size: 0.78rem;
-      text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: var(--primary);
-    }
-
-    .hero .eyebrow {
+      text-transform: uppercase;
       color: rgba(255,255,255,0.85);
       margin-bottom: 16px;
     }
 
-    .eyebrow__dot {
-      width: 8px;
-      height: 8px;
+    .hero-eyebrow-dot {
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--accent);
       flex-shrink: 0;
     }
 
     .hero h1 {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: clamp(3rem, 6vw, 5rem);
       line-height: 1.05;
       letter-spacing: -0.02em;
-      color: white;
-      text-shadow: 0 2px 24px rgba(0,0,0,0.25);
-      margin-bottom: 18px;
+      color: #fff;
+      margin-bottom: 20px;
     }
 
-    .hero__subhead {
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-sub {
       font-size: 1.25rem;
       font-weight: 400;
       color: rgba(255,255,255,0.92);
       line-height: 1.5;
-      max-width: 560px;
       margin-bottom: 32px;
+      max-width: 560px;
     }
 
-    .hero__buttons {
+    .hero-buttons {
       display: flex;
-      gap: 16px;
+      align-items: center;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
@@ -282,22 +295,22 @@
       align-items: center;
       gap: 8px;
       background: var(--accent);
-      color: #0F172A;
-      padding: 16px 30px;
+      color: var(--text);
+      font-family: var(--font-body);
       font-weight: 700;
-      border-radius: 999px;
       font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      transition: transform 200ms cubic-bezier(0.4,0,0.2,1), box-shadow 200ms;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
       position: relative;
       overflow: hidden;
-      cursor: pointer;
-      border: none;
     }
 
     .btn-primary:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 24px rgba(245,158,11,0.4);
     }
 
     .btn-secondary {
@@ -305,128 +318,143 @@
       align-items: center;
       gap: 8px;
       background: transparent;
-      color: white;
-      padding: 16px 30px;
+      color: #fff;
+      font-family: var(--font-body);
       font-weight: 600;
-      border-radius: 999px;
       font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      border: 1.5px solid white;
-      transition: background 200ms;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.7);
       cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), background 0.2s ease, border-color 0.2s ease;
     }
 
     .btn-secondary:hover {
+      transform: scale(1.03);
       background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.95);
     }
 
-    .hero__chevron {
+    .hero-chevron {
       position: absolute;
-      bottom: 28px;
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 1;
+      z-index: 2;
+      animation: chevronBounce 1.6s ease-in-out infinite;
       color: rgba(255,255,255,0.7);
-      animation: chevron-bounce 1.6s ease-in-out infinite;
+      cursor: pointer;
     }
 
-    @keyframes chevron-bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
-      50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
     }
 
     /* INFO BAR */
     .info-bar {
       background: var(--primary);
       padding: 40px 48px;
-    }
-
-    .info-bar__inner {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
-      justify-content: space-around;
       align-items: center;
+      justify-content: center;
     }
 
-    .info-bar__stat {
-      text-align: center;
+    .info-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: var(--container);
+      gap: 0;
+    }
+
+    .info-stat {
       flex: 1;
-      padding: 0 24px;
+      text-align: center;
+      padding: 8px 40px;
     }
 
-    .info-bar__stat + .info-bar__stat {
+    .info-stat + .info-stat {
       border-left: 1px solid rgba(255,255,255,0.15);
     }
 
-    .info-bar__number {
-      font-family: 'Playfair Display', Georgia, serif;
+    .info-stat-number {
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 3rem;
+      color: #fff;
       line-height: 1;
-      color: white;
       display: block;
+      margin-bottom: 8px;
     }
 
-    .info-bar__label {
-      font-family: 'Inter', sans-serif;
+    .info-stat-label {
+      font-family: var(--font-body);
       font-weight: 500;
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.7);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-top: 6px;
-      display: block;
+      color: rgba(255,255,255,0.7);
     }
 
-    /* MARQUEE */
+    /* FEATURE MARQUEE */
     .marquee-section {
-      padding: 64px 0;
       background: var(--surface);
+      padding: 64px 0;
       overflow: hidden;
     }
 
-    .marquee {
+    .marquee-label {
+      text-align: center;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 28px;
+    }
+
+    .marquee-track-wrapper {
       overflow: hidden;
+      width: 100%;
     }
 
     .marquee-track {
       display: flex;
       gap: 16px;
       width: max-content;
-      animation: marquee 30s linear infinite;
+      animation: marqueeScroll 30s linear infinite;
     }
 
-    .marquee:hover .marquee-track {
-      animation-play-state: paused;
-    }
+    .marquee-track:hover { animation-play-state: paused; }
 
-    @keyframes marquee {
+    @keyframes marqueeScroll {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
 
     .marquee-pill {
-      display: inline-flex;
-      align-items: center;
-      background: white;
+      background: #fff;
       border: 1.5px solid var(--primary);
       color: var(--primary);
-      padding: 14px 24px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 10px 22px;
       border-radius: 999px;
-      font-weight: 500;
-      font-size: 0.95rem;
       white-space: nowrap;
-      font-family: 'Inter', sans-serif;
+      flex-shrink: 0;
     }
 
     /* ABOUT */
-    .about {
-      padding: 96px 48px;
+    #about {
+      padding: var(--section-pad);
     }
 
-    .about__inner {
-      max-width: 1200px;
+    .about-inner {
+      max-width: var(--container);
       margin: 0 auto;
       display: grid;
       grid-template-columns: 5fr 4fr;
@@ -434,12 +462,19 @@
       align-items: center;
     }
 
-    .about .eyebrow {
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--primary);
+      display: block;
       margin-bottom: 16px;
     }
 
-    .about h2 {
-      font-family: 'Playfair Display', Georgia, serif;
+    .section-h2 {
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: clamp(2rem, 4vw, 3.2rem);
       line-height: 1.1;
@@ -448,130 +483,115 @@
       margin-bottom: 24px;
     }
 
-    .about__body {
+    .body-large {
       font-size: 1.15rem;
       line-height: 1.6;
       color: var(--muted);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
-    .about__link {
+    .body-text {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .inline-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       color: var(--primary);
       font-weight: 600;
       font-size: 1.05rem;
-      margin-top: 16px;
-      transition: gap 200ms;
+      margin-top: 12px;
+      transition: gap 0.2s ease;
     }
 
-    .about__link:hover {
-      gap: 10px;
-    }
+    .inline-link:hover { gap: 10px; }
 
-    .about__link .arrow {
-      transition: transform 200ms;
-    }
-
-    .about__link:hover .arrow {
-      transform: translateX(2px);
-    }
-
-    .about__boxes {
+    .info-boxes {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
     .tilt-box {
-      background: white;
+      background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: var(--radius);
       padding: 28px;
-      transition: transform 200ms ease-out, box-shadow 200ms;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
       cursor: default;
     }
 
     .tilt-box:hover {
-      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      box-shadow: 0 12px 40px rgba(30,64,175,0.1);
     }
 
-    .tilt-box__icon {
+    .tilt-box-icon {
       color: var(--primary);
+      margin-bottom: 14px;
     }
 
     .tilt-box h4 {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-weight: 600;
       font-size: 1.05rem;
-      color: var(--text);
-      margin-top: 16px;
       line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 6px;
     }
 
     .tilt-box p {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
       font-size: 0.95rem;
+      line-height: 1.55;
       color: var(--muted);
-      margin-top: 6px;
-      line-height: 1.5;
     }
 
     /* SIGNATURE BAND */
-    .signature {
+    .signature-band {
       background: var(--primary);
       padding: 100px 48px;
       text-align: center;
     }
 
-    .signature .eyebrow {
+    .signature-band .eyebrow {
       color: var(--accent);
-      justify-content: center;
       margin-bottom: 24px;
     }
 
-    .signature__quote {
-      font-family: 'Playfair Display', Georgia, serif;
+    .pull-quote {
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: clamp(2rem, 4.5vw, 3.4rem);
-      line-height: 1.2;
-      color: white;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #fff;
       max-width: 900px;
-      margin: 0 auto 32px;
+      margin: 0 auto 28px;
     }
 
-    .signature__link {
+    .signature-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       color: var(--accent);
       font-weight: 600;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      transition: gap 200ms;
+      font-size: 1.05rem;
+      transition: gap 0.2s ease;
     }
 
-    .signature__link:hover {
-      gap: 10px;
+    .signature-link:hover { gap: 10px; }
+
+    /* HOURS & CONTACT */
+    #hours {
+      padding: var(--section-pad);
+      background: var(--surface);
     }
 
-    .signature__link .arrow {
-      transition: transform 200ms;
-    }
-
-    .signature__link:hover .arrow {
-      transform: translateX(2px);
-    }
-
-    /* HOURS */
-    .hours {
-      padding: 96px 48px;
-    }
-
-    .hours__inner {
-      max-width: 1200px;
+    .hours-inner {
+      max-width: var(--container);
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -579,97 +599,85 @@
       align-items: start;
     }
 
-    .hours .eyebrow {
-      margin-bottom: 16px;
-    }
-
-    .hours h3 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 1.5rem;
-      line-height: 1.3;
-      margin-bottom: 24px;
-      color: var(--text);
-    }
-
-    .hours__card {
-      background: white;
+    .hours-card {
+      background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: var(--radius);
       padding: 24px 28px;
     }
 
-    .hours__row {
+    .hours-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 0;
+      padding: 10px 0;
+      font-size: 1.0rem;
       border-bottom: 1px solid var(--soft-border);
-      font-family: 'Inter', sans-serif;
-      font-size: 1.05rem;
     }
 
-    .hours__row:last-child {
-      border-bottom: none;
-    }
+    .hours-row:last-child { border-bottom: none; }
 
-    .hours__row.today .hours__day {
-      font-weight: 700;
-      display: flex;
+    .hours-row.today .hours-day { font-weight: 700; color: var(--text); }
+    .hours-row.today .hours-time { font-weight: 700; color: var(--primary); }
+
+    .today-dot {
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
-    .hours__row.today .hours__day::before {
+    .today-dot::before {
       content: '';
       display: inline-block;
-      width: 8px;
-      height: 8px;
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--primary);
-      flex-shrink: 0;
     }
 
-    .hours__row.today .hours__time {
+    .hours-day { color: var(--muted); }
+    .hours-time { color: var(--muted); font-weight: 500; }
+    .hours-closed { color: var(--faint); }
+
+    .contact-biz-name {
+      font-family: var(--font-display);
       font-weight: 700;
-    }
-
-    .hours__time--closed {
-      color: var(--faint);
-    }
-
-    .hours__visit h3 {
-      font-family: 'Playfair Display', Georgia, serif;
       font-size: 1.5rem;
-    }
-
-    .hours__address {
-      font-size: 1.05rem;
       color: var(--text);
-      line-height: 1.5;
-      margin-top: 8px;
+      margin-bottom: 16px;
     }
 
-    .hours__phone {
-      display: block;
+    .contact-address {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .contact-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       color: var(--primary);
       font-weight: 600;
       font-size: 1.05rem;
-      margin-top: 12px;
-      transition: opacity 200ms;
+      margin-bottom: 24px;
+      transition: gap 0.2s ease;
     }
 
-    .hours__phone:hover {
-      opacity: 0.75;
-    }
+    .contact-phone:hover { gap: 12px; }
 
-    .hours__map {
+    .map-embed {
       width: 100%;
       height: 360px;
-      border-radius: 16px;
-      border: 0;
-      margin-top: 24px;
-      display: block;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     /* FINAL CTA */
@@ -679,105 +687,106 @@
       text-align: center;
     }
 
-    .final-cta .eyebrow {
-      color: var(--accent);
-      justify-content: center;
-      margin-bottom: 16px;
-    }
+    .final-cta .eyebrow { color: var(--accent); margin-bottom: 20px; }
 
     .final-cta h2 {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: clamp(2.4rem, 5vw, 3.6rem);
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: white;
+      color: #fff;
+      margin-bottom: 20px;
     }
 
-    .final-cta__sub {
-      color: rgba(255,255,255,0.8);
+    .final-cta-sub {
       font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
       max-width: 540px;
-      margin: 24px auto 40px;
+      margin: 0 auto 36px;
       line-height: 1.6;
-      font-family: 'Inter', sans-serif;
     }
 
-    .btn-cta {
+    .cta-glow {
+      position: relative;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       background: var(--accent);
-      color: #0F172A;
-      padding: 20px 40px;
+      color: var(--text);
+      font-family: var(--font-body);
       font-weight: 700;
-      border-radius: 999px;
       font-size: 1.15rem;
-      font-family: 'Inter', sans-serif;
-      transition: transform 200ms cubic-bezier(0.4,0,0.2,1), box-shadow 200ms;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
+      padding: 20px 40px;
+      border-radius: 999px;
       border: none;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
+      min-height: 52px;
     }
 
-    .btn-cta:hover {
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 999px;
+      background: radial-gradient(240px circle at var(--x, 50%) var(--y, 50%), rgba(245,158,11,0.35), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .cta-glow:hover::before { opacity: 1; }
+
+    .cta-glow:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 40px rgba(245,158,11,0.5);
     }
 
     /* FOOTER */
     footer {
-      background: white;
+      background: var(--bg);
       border-top: 1px solid var(--border);
       padding: 40px 48px;
-    }
-
-    .footer__inner {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .footer__brand {
-      font-family: 'Playfair Display', Georgia, serif;
+    .footer-left {}
+
+    .footer-biz {
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 1.15rem;
       color: var(--text);
+      margin-bottom: 6px;
     }
 
-    .footer__copy {
+    .footer-copy {
       font-size: 0.88rem;
       color: var(--muted);
-      margin-top: 4px;
-      font-family: 'Inter', sans-serif;
     }
 
-    .footer__credit {
-      font-size: 0.92rem;
+    .footer-credit {
+      font-size: 0.9rem;
       color: var(--muted);
-      font-family: 'Inter', sans-serif;
     }
 
-    .footer__credit a {
+    .footer-credit a {
       color: var(--primary);
       font-weight: 600;
-      text-decoration: none;
+      transition: opacity 0.2s ease;
     }
 
-    .footer__credit a:hover {
-      text-decoration: underline;
-    }
+    .footer-credit a:hover { opacity: 0.75; }
 
-    /* FADE UP */
+    /* FADE UP ANIMATION */
     .fade-up {
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 700ms cubic-bezier(0.4,0,0.2,1), transform 700ms cubic-bezier(0.4,0,0.2,1);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
 
     .fade-up.visible {
@@ -787,25 +796,27 @@
 
     /* TABLET */
     @media (max-width: 1024px) {
-      .about, .hours { padding: 80px 32px; }
-      .about__inner { gap: 64px; }
-      .hours__inner { gap: 48px; }
-      .nav { padding: 18px 32px; }
+      nav { padding: 18px 32px; }
+      #about { padding: 80px 32px; }
+      .about-inner { gap: 64px; }
+      #hours { padding: 80px 32px; }
+      .hours-inner { gap: 48px; }
+      .signature-band { padding: 80px 32px; }
+      .final-cta { padding: 100px 32px; }
+      footer { padding: 40px 32px; }
+      .info-bar { padding: 40px 32px; }
     }
 
     /* MOBILE */
     @media (max-width: 767px) {
-      .nav {
+      :root { --section-pad: 70px 20px; }
+
+      nav {
         padding: 14px 20px;
       }
 
-      .nav__links {
-        display: none;
-      }
-
-      .nav__logo {
-        font-size: 1.1rem;
-      }
+      .nav-logo { font-size: 1.1rem; }
+      .nav-links { display: none; }
 
       .hero {
         height: 75vh;
@@ -817,23 +828,18 @@
           url('https://auxoagency.github.io/auxo-sites/sites//hero.jpg');
       }
 
-      .hero::before {
-        background-image: url('https://auxoagency.github.io/auxo-sites/sites//hero.jpg');
-      }
-
       .hero h1 {
         font-size: clamp(2.2rem, 9vw, 3.4rem);
         line-height: 1.1;
       }
 
-      .hero__subhead {
+      .hero-sub {
         font-size: 1.05rem;
         max-width: 92%;
       }
 
-      .hero__buttons {
+      .hero-buttons {
         flex-direction: column;
-        gap: 14px;
         width: 100%;
       }
 
@@ -841,110 +847,77 @@
         width: 100%;
         justify-content: center;
         min-height: 52px;
-        font-size: 0.98rem;
       }
 
-      .hero__chevron { display: none; }
+      .hero-chevron { display: none; }
 
       .info-bar {
         padding: 32px 20px;
       }
 
-      .info-bar__inner {
+      .info-bar-inner {
         flex-direction: column;
         gap: 0;
       }
 
-      .info-bar__stat {
+      .info-stat {
+        padding: 20px 0;
         width: 100%;
-        padding: 18px 0;
-        border-left: none;
-        border-bottom: 1px solid rgba(255,255,255,0.15);
+        border-left: none !important;
       }
 
-      .info-bar__stat:last-child {
-        border-bottom: none;
-      }
-
-      .info-bar__stat + .info-bar__stat {
+      .info-stat + .info-stat {
+        border-top: 1px solid rgba(255,255,255,0.15);
         border-left: none;
       }
 
-      .info-bar__number {
-        font-size: 2.6rem;
-      }
+      .info-stat-number { font-size: 2.6rem; }
 
-      .about, .hours {
-        padding: 70px 20px;
-      }
-
-      .about__inner {
+      #about { padding: 70px 20px; }
+      .about-inner {
         grid-template-columns: 1fr;
         gap: 48px;
       }
 
-      .about h2 {
-        font-size: clamp(1.8rem, 6vw, 2.4rem);
-      }
-
-      .about__boxes {
+      .info-boxes {
         grid-template-columns: 1fr;
       }
 
-      .tilt-box {
-        padding: 28px;
-      }
+      .tilt-box { padding: 22px; }
 
-      .signature {
-        padding: 70px 20px;
-      }
+      .section-h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
 
-      .signature__quote {
-        font-size: clamp(1.6rem, 6vw, 2.4rem);
-      }
+      .signature-band { padding: 70px 20px; }
+      .pull-quote { font-size: clamp(1.6rem, 6vw, 2.4rem); }
 
-      .hours__inner {
+      #hours { padding: 70px 20px; }
+      .hours-inner {
         grid-template-columns: 1fr;
         gap: 32px;
       }
 
-      .hours__map {
-        height: 280px;
-      }
+      .map-embed { height: 280px; }
 
-      .final-cta {
-        padding: 80px 20px;
-      }
+      .final-cta { padding: 80px 20px; }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
 
-      .final-cta h2 {
-        font-size: clamp(1.9rem, 7vw, 2.6rem);
-      }
-
-      .final-cta__sub {
-        font-size: 1rem;
-      }
-
-      .btn-cta {
+      .cta-glow {
         width: 100%;
         justify-content: center;
+        font-size: 1.05rem;
+        padding: 18px 28px;
         min-height: 52px;
-        font-size: 0.98rem;
       }
 
       footer {
-        padding: 40px 20px;
-        text-align: center;
-      }
-
-      .footer__inner {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        padding: 32px 20px;
+        gap: 16px;
       }
 
-      .marquee-pill {
-        padding: 10px 18px;
-        font-size: 0.88rem;
-      }
+      .marquee-pill { padding: 8px 16px; font-size: 0.82rem; }
+      .marquee-track { animation-duration: 24s; }
     }
 
     @media (max-width: 479px) {
@@ -955,467 +928,365 @@
         padding: 32px 18px;
       }
 
-      .hero h1 {
-        font-size: clamp(2rem, 10vw, 2.8rem);
-      }
+      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
 
-      .hero__subhead {
-        font-size: 0.98rem;
-        margin-bottom: 24px;
-      }
-
-      .about, .hours {
-        padding: 56px 18px;
-      }
-
-      .about h2, .hours h2 {
-        font-size: clamp(1.7rem, 7vw, 2.2rem);
-      }
-
-      .tilt-box {
-        padding: 22px;
-      }
-
-      .tilt-box__icon svg {
-        width: 28px;
-        height: 28px;
-      }
-
-      .info-bar__number {
-        font-size: 2.2rem;
-      }
-
-      .info-bar {
-        padding: 28px 18px;
-      }
-
-      .signature {
-        padding: 56px 18px;
-      }
-
-      .signature__quote {
-        font-size: clamp(1.5rem, 7vw, 2rem);
-      }
-
-      .final-cta {
-        padding: 64px 18px;
-      }
-
-      .final-cta h2 {
-        font-size: clamp(1.7rem, 8vw, 2.2rem);
-      }
-
-      footer {
-        padding: 32px 18px;
-      }
-    }
-
-    /* REDUCED MOTION */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-
-    @media (hover: none) {
-      .tilt-box { transform: none !important; }
+      #about { padding: 56px 18px; }
+      #hours { padding: 56px 18px; }
+      .tilt-box { padding: 22px; }
+      .info-stat-number { font-size: 2.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="scroll-progress" role="progressbar" aria-hidden="true"></div>
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
 
   <!-- NAV -->
-  <header>
-    <nav class="nav" aria-label="Main navigation">
-      <div class="nav__inner">
-        <span class="nav__logo">Scottsdale Auto</span>
-        <ul class="nav__links" role="list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#hours">Hours</a></li>
-          <li><a href="#hours">Contact</a></li>
-        </ul>
-        <a href="tel:4809484781" class="nav__cta" aria-label="Call Scottsdale Auto at (480) 948-4781">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-          (480) 948-4781
-        </a>
-      </div>
-    </nav>
-  </header>
+  <nav role="banner">
+    <span class="nav-logo">Auto Repair Scottsdale</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#hours">Contact</a></li>
+    </ul>
+    <a href="tel:4809484781" class="nav-phone" aria-label="Call Auto Repair Scottsdale at (480) 948-4781">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      (480) 948-4781
+    </a>
+  </nav>
 
   <main>
 
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
-      <div class="hero__bg-gradient" aria-hidden="true"></div>
-      <div class="hero__content">
-        <div class="eyebrow hero-eyebrow">
-          <span class="eyebrow__dot" aria-hidden="true"></span>
+      <div class="hero-bg-zoom" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
           Scottsdale, AZ &nbsp;·&nbsp; Auto Repair
         </div>
-        <h1 id="hero-headline">Scottsdale Auto</h1>
-        <p class="hero__subhead">Honest diagnostics, fast repairs, and zero surprises on your bill.</p>
-        <div class="hero__buttons">
-          <a href="tel:4809484781" class="btn-primary cta-glow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        <h1 id="hero-h1">Scottsdale's straight-shooting auto shop.</h1>
+        <p class="hero-sub">Honest diagnostics, fast turnaround, and mechanics who tell you what your car actually needs.</p>
+        <div class="hero-buttons">
+          <a href="tel:4809484781" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
             Call Now
           </a>
           <a href="#hours" class="btn-secondary">View Hours</a>
         </div>
       </div>
-      <div class="hero__chevron" aria-hidden="true">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
+      <a href="#about" class="hero-chevron" aria-label="Scroll to about section">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
     </section>
 
     <!-- INFO BAR -->
-    <div class="info-bar" aria-label="Business highlights">
-      <div class="info-bar__inner">
-        <div class="info-bar__stat">
-          <span class="info-bar__number" data-target="4.7" data-suffix="★" data-decimal="1">4.7★</span>
-          <span class="info-bar__label">Google Rating</span>
+    <div class="info-bar fade-up" aria-label="Key statistics">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-number" data-target="4.7" data-decimals="1" id="stat-rating">4.7</span>
+          <span class="info-stat-label">Google Rating</span>
         </div>
-        <div class="info-bar__stat">
-          <span class="info-bar__number" data-target="304" data-suffix="" data-decimal="0">304</span>
-          <span class="info-bar__label">Verified Reviews</span>
+        <div class="info-stat">
+          <span class="info-stat-number" data-target="304" data-decimals="0" id="stat-reviews">304</span>
+          <span class="info-stat-label">Verified Reviews</span>
         </div>
-        <div class="info-bar__stat">
-          <span class="info-bar__number" data-target="" data-suffix="" data-special="true">ASE</span>
-          <span class="info-bar__label">Certified Mechanics</span>
+        <div class="info-stat">
+          <span class="info-stat-number" style="font-size:1.9rem; line-height:1.15; padding-top:4px;">ASE</span>
+          <span class="info-stat-label">Certified Mechanics</span>
         </div>
       </div>
     </div>
 
     <!-- FEATURE MARQUEE -->
-    <section class="marquee-section" aria-label="Services offered">
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
+    <div class="marquee-section fade-up">
+      <p class="marquee-label">Services</p>
+      <div class="marquee-track-wrapper" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
           <span class="marquee-pill">Oil Changes</span>
           <span class="marquee-pill">Brake Repair</span>
           <span class="marquee-pill">Engine Diagnostics</span>
           <span class="marquee-pill">Tire Service</span>
           <span class="marquee-pill">AC Repair</span>
           <span class="marquee-pill">State Inspections</span>
-          <span class="marquee-pill">Transmission Service</span>
-          <span class="marquee-pill">Fluid Checks</span>
-          <span class="marquee-pill">Battery Replacement</span>
-          <span class="marquee-pill">Suspension Repair</span>
           <span class="marquee-pill">Oil Changes</span>
           <span class="marquee-pill">Brake Repair</span>
           <span class="marquee-pill">Engine Diagnostics</span>
           <span class="marquee-pill">Tire Service</span>
           <span class="marquee-pill">AC Repair</span>
           <span class="marquee-pill">State Inspections</span>
-          <span class="marquee-pill">Transmission Service</span>
-          <span class="marquee-pill">Fluid Checks</span>
-          <span class="marquee-pill">Battery Replacement</span>
-          <span class="marquee-pill">Suspension Repair</span>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ABOUT -->
-    <section id="about" class="about">
-      <div class="about__inner">
-        <div class="about__text fade-up">
-          <div class="eyebrow">
-            <span class="eyebrow__dot" aria-hidden="true"></span>
-            About
-          </div>
-          <h2>Scottsdale's straight-shooting auto shop.</h2>
-          <p class="about__body">When your check engine light comes on in the Scottsdale heat, you need a shop that tells you exactly what's wrong  -  not what sounds like a big ticket. Our ASE-certified mechanics diagnose the problem first, give you a written quote before any work starts, and don't move forward without your approval.</p>
-          <p class="about__body">Rated 4.7 stars across 304 Google reviews, Scottsdale drivers keep coming back because we treat every vehicle like it belongs to someone we know. From routine oil changes to full engine work, we turn jobs around fast without cutting corners  -  and every repair is warranty backed.</p>
-          <a href="tel:4809484781" class="about__link">
-            Call (480) 948-4781 <span class="arrow">→</span>
-          </a>
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <div class="about-text fade-up">
+          <span class="eyebrow">About</span>
+          <h2 class="section-h2" id="about-heading">Scottsdale's straight-shooting auto shop.</h2>
+          <p class="body-large">When something's off with your car, you deserve a straight answer  -  not an upsell. At Auto Repair Scottsdale, every diagnosis starts with honesty and ends with work you can verify. That reputation has earned a 4.7-star rating across 304 Scottsdale customers who keep coming back.</p>
+          <p class="body-text">From routine oil changes to complex engine diagnostics, this shop handles it all under one roof with ASE-certified mechanics who know Scottsdale's heat cycles and desert roads. Fast turnaround, transparent pricing, and zero surprises on your bill.</p>
+          <a href="tel:4809484781" class="inline-link">Call (480) 948-4781 →</a>
         </div>
-        <div class="about__boxes" role="list">
-          <div class="tilt-box fade-up" role="listitem">
-            <div class="tilt-box__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h4>Fast Turnaround</h4>
-            <p>Most repairs completed same day or next morning, so you're not without a car all week.</p>
-          </div>
-          <div class="tilt-box fade-up" role="listitem">
-            <div class="tilt-box__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h4>Honest Pricing</h4>
-            <p>Written estimates before we touch your vehicle. The quote you approve is the price you pay.</p>
-          </div>
-          <div class="tilt-box fade-up" role="listitem">
-            <div class="tilt-box__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="info-boxes fade-up" style="transition-delay:0.15s;">
+          <div class="tilt-box" data-tilt>
+            <div class="tilt-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/><polyline points="16 11 17 14 20 13"/></svg>
             </div>
             <h4>Certified Mechanics</h4>
-            <p>ASE-certified technicians with hands-on experience across all major domestic and import makes.</p>
+            <p>ASE-certified technicians handle every job  -  no apprentices left unsupervised on your vehicle.</p>
           </div>
-          <div class="tilt-box fade-up" role="listitem">
-            <div class="tilt-box__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="tilt-box" data-tilt>
+            <div class="tilt-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h4>Honest Pricing</h4>
+            <p>You get a written estimate before any work begins. What you approve is what you pay.</p>
+          </div>
+          <div class="tilt-box" data-tilt>
+            <div class="tilt-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Fast Turnaround</h4>
+            <p>Most repairs are completed same-day so you're not stuck waiting longer than necessary in Scottsdale's heat.</p>
+          </div>
+          <div class="tilt-box" data-tilt>
+            <div class="tilt-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h4>Warranty Backed</h4>
-            <p>Parts and labor warranted on every repair. If something's not right, we make it right.</p>
+            <p>Parts and labor are backed by a written warranty  -  because confidence in the work should outlast the visit.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SIGNATURE BAND -->
-    <section class="signature fade-up" aria-label="Customer reviews highlight">
-      <div class="eyebrow">
-        <span class="eyebrow__dot" aria-hidden="true" style="background:var(--accent);"></span>
-        What customers say
-      </div>
-      <p class="signature__quote">"Rated 4.7 stars by 304 Scottsdale customers  -  and counting."</p>
-      <a href="https://www.google.com/search?q=Scottsdale+Auto+Scottsdale+AZ+reviews" target="_blank" rel="noopener noreferrer" class="signature__link">
-        Read our Google reviews <span class="arrow">→</span>
+    <div class="signature-band fade-up" aria-label="Customer testimonial">
+      <span class="eyebrow">What customers say</span>
+      <blockquote class="pull-quote">"Rated 4.7 stars by 304 Scottsdale customers  -  and counting."</blockquote>
+      <a href="https://www.google.com/maps/search/Auto+Repair+Scottsdale+AZ" target="_blank" rel="noopener noreferrer" class="signature-link">
+        Read our Google reviews →
       </a>
-    </section>
+    </div>
 
     <!-- HOURS & CONTACT -->
-    <section id="hours" class="hours">
-      <div class="hours__inner">
+    <section id="hours" aria-labelledby="hours-heading">
+      <div class="hours-inner">
         <div class="fade-up">
-          <div class="eyebrow">
-            <span class="eyebrow__dot" aria-hidden="true"></span>
-            Hours
-          </div>
-          <h3>Open This Week</h3>
-          <div class="hours__card">
-            <div class="hours__row" id="row-mon">
-              <span class="hours__day">Monday</span>
-              <span class="hours__time">8 AM - 5:30 PM</span>
+          <span class="eyebrow">Hours</span>
+          <h3 style="font-size:1.5rem; font-weight:600; margin-bottom:20px; color:var(--text);" id="hours-heading">Open This Week</h3>
+          <div class="hours-card">
+            <div class="hours-row" id="row-mon">
+              <span class="hours-day">Monday</span>
+              <span class="hours-time">Call for hours</span>
             </div>
-            <div class="hours__row" id="row-tue">
-              <span class="hours__day">Tuesday</span>
-              <span class="hours__time">8 AM - 5:30 PM</span>
+            <div class="hours-row" id="row-tue">
+              <span class="hours-day">Tuesday</span>
+              <span class="hours-time">Call for hours</span>
             </div>
-            <div class="hours__row" id="row-wed">
-              <span class="hours__day">Wednesday</span>
-              <span class="hours__time">8 AM - 5:30 PM</span>
+            <div class="hours-row" id="row-wed">
+              <span class="hours-day">Wednesday</span>
+              <span class="hours-time">Call for hours</span>
             </div>
-            <div class="hours__row" id="row-thu">
-              <span class="hours__day">Thursday</span>
-              <span class="hours__time">8 AM - 5:30 PM</span>
+            <div class="hours-row" id="row-thu">
+              <span class="hours-day">Thursday</span>
+              <span class="hours-time">Call for hours</span>
             </div>
-            <div class="hours__row" id="row-fri">
-              <span class="hours__day">Friday</span>
-              <span class="hours__time">8 AM - 5:30 PM</span>
+            <div class="hours-row" id="row-fri">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time">Call for hours</span>
             </div>
-            <div class="hours__row" id="row-sat">
-              <span class="hours__day">Saturday</span>
-              <span class="hours__time">8 AM - 2 PM</span>
+            <div class="hours-row" id="row-sat">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time">Call for hours</span>
             </div>
-            <div class="hours__row" id="row-sun">
-              <span class="hours__day">Sunday</span>
-              <span class="hours__time hours__time--closed">Closed</span>
+            <div class="hours-row" id="row-sun">
+              <span class="hours-day">Sunday</span>
+              <span class="hours-closed hours-time">Closed</span>
             </div>
           </div>
         </div>
-        <div class="hours__visit fade-up">
-          <div class="eyebrow">
-            <span class="eyebrow__dot" aria-hidden="true"></span>
-            Visit
+        <div class="fade-up" style="transition-delay:0.15s;">
+          <span class="eyebrow">Visit</span>
+          <p class="contact-biz-name">Auto Repair Scottsdale</p>
+          <p class="contact-address">Scottsdale, AZ<br>Serving the greater Scottsdale area</p>
+          <a href="tel:4809484781" class="contact-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            (480) 948-4781
+          </a>
+          <div class="map-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=Scottsdale%2C+AZ&output=embed"
+              title="Auto Repair Scottsdale location map"
+              loading="lazy"
+              allowfullscreen
+              aria-label="Google Maps showing Auto Repair Scottsdale location in Scottsdale, AZ"
+            ></iframe>
           </div>
-          <h3>Scottsdale Auto</h3>
-          <p class="hours__address">Scottsdale, AZ</p>
-          <a href="tel:4809484781" class="hours__phone">(480) 948-4781</a>
-          <iframe
-            class="hours__map"
-            src="https://maps.google.com/maps?q=Scottsdale+Auto+Scottsdale+AZ&output=embed"
-            loading="lazy"
-            title="Scottsdale Auto location map"
-            aria-label="Google Maps showing Scottsdale Auto location in Scottsdale, AZ">
-          </iframe>
         </div>
       </div>
     </section>
 
     <!-- FINAL CTA -->
-    <section class="final-cta" aria-label="Call to action">
-      <div class="eyebrow">
-        <span class="eyebrow__dot" aria-hidden="true" style="background:var(--accent);"></span>
-        Ready when you are
-      </div>
+    <div class="final-cta fade-up" aria-label="Call to action">
+      <span class="eyebrow">Ready when you are</span>
       <h2>Ready to get back on the road?</h2>
-      <p class="final-cta__sub">Scottsdale Auto is taking appointments now. Call us and get a straight answer about what your vehicle needs  -  no pressure, no surprises.</p>
-      <a href="tel:4809484781" class="btn-cta cta-glow">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+      <p class="final-cta-sub">Auto Repair Scottsdale is standing by. Give us a call and let's get your vehicle sorted  -  no runaround, no surprises.</p>
+      <a href="tel:4809484781" class="cta-glow" aria-label="Call Auto Repair Scottsdale now">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
         Call (480) 948-4781
       </a>
-    </section>
+    </div>
 
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer__inner">
-      <div>
-        <div class="footer__brand">Scottsdale Auto</div>
-        <div class="footer__copy">© <span id="year"></span> Scottsdale Auto. All rights reserved.</div>
-      </div>
-      <div class="footer__credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a></div>
+    <div class="footer-left">
+      <p class="footer-biz">Auto Repair Scottsdale</p>
+      <p class="footer-copy">© <span id="footer-year"></span> Auto Repair Scottsdale. All rights reserved.</p>
     </div>
+    <p class="footer-credit">Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a></p>
   </footer>
 
   <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
 
-      // Year
-      document.getElementById('year').textContent = new Date().getFullYear();
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-      // Scroll progress bar
-      const bar = document.querySelector('.scroll-progress');
-      window.addEventListener('scroll', function() {
-        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        bar.style.width = scrolled + '%';
-      }, { passive: true });
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress');
+    function updateProgress() {
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+      progressBar.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
 
-      // Hero H1 word-by-word stagger
-      const h1 = document.getElementById('hero-headline');
-      if (h1) {
-        const words = h1.textContent.trim().split(/\s+/);
-        h1.innerHTML = words.map(function(w, i) {
-          return '<span style="display:inline-block;opacity:0;transform:translateY(20px);transition:all 600ms cubic-bezier(0.4,0,0.2,1) ' + (i * 60) + 'ms">' + w + '</span>';
-        }).join(' ');
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            h1.querySelectorAll('span').forEach(function(span) {
-              span.style.opacity = '1';
-              span.style.transform = 'translateY(0)';
-            });
-          });
-        });
-      }
+    // Hero h1 word stagger
+    const h1 = document.getElementById('hero-h1');
+    if (h1) {
+      const text = h1.textContent.trim();
+      const words = text.split(' ');
+      h1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+      const spans = h1.querySelectorAll('.word');
+      spans.forEach((span, i) => {
+        setTimeout(() => { span.classList.add('visible'); }, 200 + i * 60);
+      });
+    }
 
-      // Highlight today's hours row
-      const dayMap = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-      const today = new Date().getDay();
-      const todayId = 'row-' + dayMap[today];
-      const todayRow = document.getElementById(todayId);
-      if (todayRow) {
-        todayRow.classList.add('today');
-      }
+    // Hero parallax (desktop only)
+    const heroEl = document.querySelector('.hero');
+    const heroBg = document.querySelector('.hero-bg-zoom');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
 
-      // Intersection Observer for fade-up
-      const fadeEls = document.querySelectorAll('.fade-up');
-      const fadeObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            fadeObserver.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-      fadeEls.forEach(function(el) { fadeObserver.observe(el); });
-
-      // Number count-up
-      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-      function animateNumber(el) {
-        if (el.dataset.special) return;
-        const target = parseFloat(el.dataset.target);
-        const suffix = el.dataset.suffix || '';
-        const isDecimal = el.dataset.decimal === '1';
-        const duration = 1200;
-        let start = null;
-        function step(ts) {
-          if (!start) start = ts;
-          const elapsed = ts - start;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = easeOutCubic(progress);
-          const current = target * eased;
-          if (isDecimal) {
-            el.textContent = current.toFixed(1) + suffix;
-          } else {
-            el.textContent = Math.round(current) + suffix;
-          }
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          } else {
-            if (isDecimal) {
-              el.textContent = target.toFixed(1) + suffix;
-            } else {
-              el.textContent = Math.round(target) + suffix;
-            }
-          }
+    if (!prefersReducedMotion && !isTouchDevice && heroBg) {
+      window.addEventListener('scroll', function () {
+        const rect = heroEl.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
+          const offset = window.scrollY * 0.3;
+          heroBg.style.backgroundPositionY = offset + 'px';
         }
-        requestAnimationFrame(step);
-      }
+      }, { passive: true });
+    }
 
-      const statNumbers = document.querySelectorAll('.info-bar__number[data-target]');
-      const statObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) {
-            animateNumber(e.target);
-            statObserver.unobserve(e.target);
-          }
+    // IntersectionObserver fade-up
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // Count-up animation
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function animateCount(el, target, decimals, duration) {
+      const start = performance.now();
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutCubic(progress);
+        const val = eased * target;
+        el.textContent = decimals > 0 ? val.toFixed(decimals) : Math.floor(val).toLocaleString();
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = decimals > 0 ? target.toFixed(decimals) : target.toLocaleString();
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const statEls = document.querySelectorAll('.info-stat-number[data-target]');
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseFloat(el.dataset.target);
+          const decimals = parseInt(el.dataset.decimals || '0');
+          animateCount(el, target, decimals, 1200);
+          statObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    statEls.forEach(el => statObserver.observe(el));
+
+    // 3D tilt on info boxes (desktop only)
+    if (!isTouchDevice) {
+      const tiltBoxes = document.querySelectorAll('.tilt-box[data-tilt]');
+      tiltBoxes.forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+          const rect = box.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (e.clientX - cx) / (rect.width / 2);
+          const dy = (e.clientY - cy) / (rect.height / 2);
+          const rotX = -dy * 8;
+          const rotY = dx * 8;
+          box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
         });
-      }, { threshold: 0.5 });
-      statNumbers.forEach(function(el) { statObserver.observe(el); });
-
-      // 3D Tilt on about boxes
-      var isTouchDevice = window.matchMedia('(hover: none)').matches;
-      if (!isTouchDevice) {
-        document.querySelectorAll('.tilt-box').forEach(function(box) {
-          box.addEventListener('mousemove', function(e) {
-            var rect = box.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-            var rotX = ((y / rect.height) - 0.5) * -16;
-            var rotY = ((x / rect.width) - 0.5) * 16;
-            box.style.transform = 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
-          });
-          box.addEventListener('mouseleave', function() {
-            box.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-          });
+        box.addEventListener('mouseleave', () => {
+          box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
         });
-      }
+      });
+    }
 
-      // Cursor glow on CTAs
-      if (!isTouchDevice) {
-        document.querySelectorAll('.cta-glow').forEach(function(btn) {
-          btn.addEventListener('mousemove', function(e) {
-            btn.style.setProperty('--x', e.offsetX + 'px');
-            btn.style.setProperty('--y', e.offsetY + 'px');
-          });
-        });
-      }
-
-      // Hero parallax
-      var hero = document.querySelector('.hero');
-      if (!isTouchDevice && hero) {
-        window.addEventListener('scroll', function() {
-          if (window.scrollY < window.innerHeight) {
-            hero.style.backgroundPositionY = 'calc(50% + ' + (window.scrollY * 0.3) + 'px)';
-          }
-        }, { passive: true });
-      }
-
+    // Cursor glow on CTAs
+    const glowBtns = document.querySelectorAll('.cta-glow');
+    glowBtns.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        btn.style.setProperty('--x', x + '%');
+        btn.style.setProperty('--y', y + '%');
+      });
     });
-  </script>
 
-  <style>
-    .cta-glow::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      background: radial-gradient(240px circle at var(--x, 50%) var(--y, 50%), rgba(30, 64, 175, 0.18), transparent 70%);
-      pointer-events: none;
-      transition: opacity 200ms;
-      border-radius: inherit;
+    // Today's hours highlight
+    const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const today = new Date().getDay();
+    const todayKey = dayNames[today];
+    const todayRow = document.getElementById('row-' + todayKey);
+    if (todayRow) {
+      todayRow.classList.add('today');
+      const daySpan = todayRow.querySelector('.hours-day');
+      if (daySpan) {
+        daySpan.classList.add('today-dot');
+      }
     }
-    .cta-glow:hover::before {
-      opacity: 1;
-    }
-  </style>
+
+    // Marquee duplication check (pills already duplicated in HTML)
+
+  });
+  </script>
 
 </body>
 </html>
