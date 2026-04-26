@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shea Dental of Scottsdale  -  Scottsdale, AZ</title>
+  <meta name="description" content="Shea Dental of Scottsdale delivers exceptional dental care in Scottsdale, AZ  -  rated 4.9 stars by 469 verified patients. Call (480) 998-3923 to schedule.">
+  <meta name="theme-color" content="#064E3B">
+  <meta property="og:title" content="Shea Dental of Scottsdale  -  Scottsdale, AZ">
+  <meta property="og:description" content="Rated 4.9 stars by 469 Scottsdale patients. Exceptional dental care at 9304 E Raintree Dr, Scottsdale, AZ 85260.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shea Dental of Scottsdale  -  Scottsdale, AZ">
+  <meta name="twitter:description" content="Rated 4.9 stars by 469 Scottsdale patients. Exceptional dental care in Scottsdale, AZ.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23064E3B'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='18' fill='white'>S</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Shea Dental of Scottsdale",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9304 E Raintree Dr # 100",
+      "addressLocality": "Scottsdale",
+      "addressRegion": "AZ",
+      "postalCode": "85260",
+      "addressCountry": "US"
+    },
+    "telephone": "(480) 998-3923",
+    "url": "https://sheadentalscottsdale.com",
+    "openingHours": ["Mo-Th 08:00-16:00"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "469"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <style>
+    :root {
+      --primary: #064E3B;
+      --accent: #D4A373;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --section-pad: 96px 48px;
+      --section-pad-mobile: 70px 20px;
+      --container: 1200px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .tilt-box { transform: none !important; }
+      .cta-glow::before { display: none !important; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── SCROLL PROGRESS ─── */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--primary);
+      z-index: 1001;
+      transition: width 60ms linear;
+    }
+
+    /* ─── EYEBROW ─── */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .eyebrow--white { color: rgba(255,255,255,0.85); }
+    .eyebrow--accent { color: var(--accent); }
+    .eyebrow-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text);
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 200ms ease;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      white-space: nowrap;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(6,78,59,0.28);
+    }
+    .nav-phone svg { flex-shrink: 0; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg-zoom {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: kenburns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes kenburns {
+      from { transform: scale(1.0); }
+      to   { transform: scale(1.05); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 16px 0 20px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.92);
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #0F172A;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      min-height: 52px;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(212,163,115,0.45);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease, border-color 200ms ease;
+      min-height: 52px;
+    }
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,1);
+    }
+
+    .cta-glow {
+      position: relative;
+    }
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,78,59,0.18) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      left: var(--x, 50%);
+      top: var(--y, 50%);
+      pointer-events: none;
+      transition: opacity 200ms ease;
+      opacity: 0;
+    }
+    .cta-glow:hover::before { opacity: 1; }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      color: rgba(255,255,255,0.7);
+      animation: bounce-chevron 1.6s ease-in-out infinite;
+      cursor: pointer;
+    }
+    @keyframes bounce-chevron {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ─── INFO BAR ─── */
+    .info-bar {
+      background: var(--primary);
+      padding: 40px 48px;
+    }
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .info-stat {
+      text-align: center;
+      flex: 1;
+    }
+    .info-stat-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3rem;
+      color: #fff;
+      line-height: 1;
+      display: block;
+    }
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+      display: block;
+      margin-top: 6px;
+    }
+    .info-divider {
+      width: 1px;
+      height: 56px;
+      background: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    /* ─── MARQUEE ─── */
+    .marquee-section {
+      background: var(--surface);
+      padding: 64px 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: marquee-scroll 30s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    /* ─── FADE-UP OBSERVER ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── ABOUT ─── */
+    #about {
+      padding: var(--section-pad);
+    }
+    .about-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .about-text .eyebrow { margin-bottom: 16px; }
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .about-inline-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-top: 14px;
+      transition: gap 200ms ease;
+    }
+    .about-inline-link:hover { gap: 10px; }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .tilt-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      cursor: default;
+    }
+    .tilt-box:hover {
+      box-shadow: 0 12px 40px rgba(6,78,59,0.10);
+    }
+    .tilt-box svg {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .tilt-box h4 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .tilt-box p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    /* ─── SIGNATURE BAND ─── */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+    .signature-band .eyebrow { justify-content: center; margin-bottom: 20px; }
+    .signature-band blockquote {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
+      color: #fff;
+      max-width: 860px;
+      margin: 0 auto 28px;
+    }
+    .signature-link {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 200ms ease;
+    }
+    .signature-link:hover { gap: 10px; }
+
+    /* ─── GALLERY ─── */
+    #gallery {
+      padding: var(--section-pad);
+    }
+    .gallery-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .gallery-header {
+      margin-bottom: 40px;
+    }
+    .gallery-header .eyebrow { margin-bottom: 12px; }
+    .gallery-header h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* ─── HOURS & CONTACT ─── */
+    #hours {
+      padding: var(--section-pad);
+      background: var(--surface);
+    }
+    .hours-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .hours-col .eyebrow { margin-bottom: 16px; }
+    .hours-col h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 0.97rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day {
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hours-today-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+    .hours-time { color: var(--muted); }
+    .hours-time--today { color: var(--text); font-weight: 700; }
+    .hours-time--closed { color: var(--faint); }
+    .hours-day--today { font-weight: 700; }
+
+    .contact-col .eyebrow { margin-bottom: 16px; }
+    .contact-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .contact-address {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .contact-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+      transition: gap 200ms ease;
+    }
+    .contact-phone:hover { gap: 10px; }
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: none;
+      overflow: hidden;
+    }
+
+    /* ─── FINAL CTA ─── */
+    #contact {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+    #contact .eyebrow { justify-content: center; margin-bottom: 16px; }
+    #contact h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    #contact .cta-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .btn-cta-final {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #0F172A;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 18px 40px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      min-height: 52px;
+      position: relative;
+      overflow: visible;
+    }
+    .btn-cta-final:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 32px rgba(212,163,115,0.5);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-left {}
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .footer-auxo {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .footer-auxo a {
+      color: var(--primary);
+      font-weight: 600;
+      transition: opacity 200ms;
+    }
+    .footer-auxo a:hover { opacity: 0.75; }
+
+    /* ─── TABLET ─── */
+    @media (max-width: 1024px) {
+      #about, #gallery, #hours { padding: 80px 32px; }
+      #contact { padding: 100px 32px; }
+      .signature-band { padding: 80px 32px; }
+      .info-bar { padding: 40px 32px; }
+      nav { padding: 18px 32px; }
+      .about-inner { gap: 64px; }
+      .hours-inner { gap: 48px; }
+      footer { padding: 40px 32px; }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 767px) {
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/hero.jpg');
+      }
+      .hero-bg-zoom {
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/hero.jpg');
+      }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); line-height: 1.1; }
+      .hero-sub { font-size: 1.05rem; max-width: 92%; }
+      .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .hero-chevron { display: none; }
+
+      nav { padding: 14px 20px; }
+      .nav-logo { font-size: 1.1rem; }
+      .nav-links { display: none; }
+
+      #about, #gallery, #hours { padding: 70px 20px; }
+      .signature-band { padding: 70px 20px; }
+      #contact { padding: 80px 20px; }
+
+      .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-boxes { grid-template-columns: 1fr; }
+
+      .info-bar { padding: 32px 20px; }
+      .info-bar-inner { flex-direction: column; gap: 0; }
+      .info-stat { width: 100%; padding: 18px 0; }
+      .info-divider { width: 100%; height: 1px; }
+      .info-stat-num { font-size: 2.6rem; }
+
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item { aspect-ratio: 4/3; }
+
+      .hours-inner { grid-template-columns: 1fr; gap: 32px; }
+      .map-embed { height: 280px; }
+
+      #contact h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+      .btn-cta-final { width: 100%; justify-content: center; font-size: 1rem; padding: 16px 28px; }
+
+      .signature-band blockquote { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+
+      footer { flex-direction: column; text-align: center; gap: 12px; padding: 32px 20px; }
+
+      .marquee-pill { padding: 8px 16px; font-size: 0.82rem; }
+      .marquee-track { animation-duration: 24s; }
+
+      h2 { font-size: clamp(1.8rem, 6vw, 2.4rem) !important; }
+    }
+
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+      #about, #gallery, #hours { padding: 56px 18px; }
+      .signature-band { padding: 56px 18px; }
+      #contact { padding: 72px 18px; }
+      .info-stat-num { font-size: 2.2rem; }
+      .tilt-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <span class="nav-logo">Shea Dental</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:+14809983923" class="nav-phone" aria-label="Call Shea Dental of Scottsdale at (480) 998-3923">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        (480) 998-3923
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Shea Dental of Scottsdale hero">
+      <div class="hero-bg-zoom" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow eyebrow--white">
+          <span class="eyebrow-dot"></span>
+          Scottsdale, AZ &nbsp;·&nbsp; Dental Care
+        </div>
+        <h1 id="hero-h1">Shea Dental of Scottsdale</h1>
+        <p class="hero-sub">Scottsdale's trusted dental practice  -  where every visit feels genuinely different.</p>
+        <div class="hero-buttons">
+          <a href="tel:+14809983923" class="btn-primary cta-glow" aria-label="Call Shea Dental now">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            Call to Book
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <a href="#about" class="hero-chevron" aria-label="Scroll to About section">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar" aria-label="Key stats">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-num" data-count="4.9" data-decimals="1" id="stat-rating">4.9</span>
+          <span class="info-stat-label">Google Rating</span>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-stat">
+          <span class="info-stat-num" data-count="469" data-decimals="0" id="stat-reviews">469</span>
+          <span class="info-stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-stat">
+          <span class="info-stat-num" id="stat-static">Mon-Thu</span>
+          <span class="info-stat-label">Open This Week</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section" aria-label="Services offered">
+      <div class="marquee-track" aria-hidden="true">
+        <span class="marquee-pill">General Dentistry</span>
+        <span class="marquee-pill">Cosmetic Dentistry</span>
+        <span class="marquee-pill">Teeth Whitening</span>
+        <span class="marquee-pill">Dental Implants</span>
+        <span class="marquee-pill">Emergency Care</span>
+        <span class="marquee-pill">Preventive Cleanings</span>
+        <span class="marquee-pill">Porcelain Veneers</span>
+        <span class="marquee-pill">Invisalign</span>
+        <span class="marquee-pill">Restorative Work</span>
+        <span class="marquee-pill">Family Dentistry</span>
+        <span class="marquee-pill">Digital X-Rays</span>
+        <span class="marquee-pill">New Patients Welcome</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="marquee-pill">General Dentistry</span>
+        <span class="marquee-pill">Cosmetic Dentistry</span>
+        <span class="marquee-pill">Teeth Whitening</span>
+        <span class="marquee-pill">Dental Implants</span>
+        <span class="marquee-pill">Emergency Care</span>
+        <span class="marquee-pill">Preventive Cleanings</span>
+        <span class="marquee-pill">Porcelain Veneers</span>
+        <span class="marquee-pill">Invisalign</span>
+        <span class="marquee-pill">Restorative Work</span>
+        <span class="marquee-pill">Family Dentistry</span>
+        <span class="marquee-pill">Digital X-Rays</span>
+        <span class="marquee-pill">New Patients Welcome</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <div class="about-text fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>About</div>
+          <h2 id="about-heading">Scottsdale's quiet escape  -  for your smile.</h2>
+          <p>Shea Dental of Scottsdale has built a reputation along the Raintree corridor for care that actually feels personal. With a 4.9-star rating across 469 verified reviews, the numbers are a reflection of something earned over hundreds of real appointments  -  not a marketing tagline.</p>
+          <p>Every patient who walks into suite 100 on East Raintree Drive is met with a practice that runs on precision and patience, not rushed chair time. From routine cleanings to full cosmetic transformations, Shea Dental treats Scottsdale, AZ patients the way a dental office always should  -  clearly, carefully, and without pressure.</p>
+          <a href="tel:+14809983923" class="about-inline-link">
+            Call (480) 998-3923 →
+          </a>
+        </div>
+
+        <div class="about-boxes fade-up">
+          <div class="tilt-box" role="article">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <h4>Certified Providers</h4>
+            <p>Fully licensed dental professionals delivering care up to Scottsdale's high standards.</p>
+          </div>
+          <div class="tilt-box" role="article">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>Calming Space</h4>
+            <p>Designed to put even the most hesitant patients at ease from the moment they arrive.</p>
+          </div>
+          <div class="tilt-box" role="article">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <h4>Flexible Scheduling</h4>
+            <p>Monday through Thursday appointments that fit around a real life  -  not the other way around.</p>
+          </div>
+          <div class="tilt-box" role="article">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            <h4>Personalized Care</h4>
+            <p>Treatment plans built around each patient  -  never a one-size approach to your health.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up">
+      <div class="eyebrow eyebrow--accent"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;flex-shrink:0;"></span>What patients say</div>
+      <blockquote>"Rated 4.9 stars by 469 Scottsdale patients  -  and still counting."</blockquote>
+      <a href="https://www.google.com/maps/place/Shea+Dental+of+Scottsdale" target="_blank" rel="noopener noreferrer" class="signature-link" aria-label="Read Shea Dental reviews on Google">
+        Read our Google reviews →
+      </a>
+    </div>
+
+    <!-- GALLERY -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="gallery-inner">
+        <div class="gallery-header fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Inside the Practice</div>
+          <h2 id="gallery-heading">A look at Shea Dental, Scottsdale.</h2>
+        </div>
+        <div class="gallery-grid fade-up">
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/gallery-1.jpg" alt="Shea Dental of Scottsdale treatment room" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/gallery-2.jpg" alt="Shea Dental of Scottsdale reception area" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/shea-dental-of-scottsdale/gallery-3.jpg" alt="Shea Dental of Scottsdale dental equipment" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section id="hours" aria-labelledby="hours-heading">
+      <div class="hours-inner">
+        <div class="hours-col fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Hours</div>
+          <h3 id="hours-heading">Open This Week</h3>
+          <div class="hours-card" role="table" aria-label="Office hours">
+            <div class="hours-row" role="row" id="row-monday">
+              <span class="hours-day" role="cell">Monday</span>
+              <span class="hours-time" role="cell">8 AM - 4 PM</span>
+            </div>
+            <div class="hours-row" role="row" id="row-tuesday">
+              <span class="hours-day" role="cell">Tuesday</span>
+              <span class="hours-time" role="cell">8 AM - 4 PM</span>
+            </div>
+            <div class="hours-row" role="row" id="row-wednesday">
+              <span class="hours-day" role="cell">Wednesday</span>
+              <span class="hours-time" role="cell">8 AM - 4 PM</span>
+            </div>
+            <div class="hours-row" role="row" id="row-thursday">
+              <span class="hours-day" role="cell">Thursday</span>
+              <span class="hours-time" role="cell">8 AM - 4 PM</span>
+            </div>
+            <div class="hours-row" role="row" id="row-friday">
+              <span class="hours-day" role="cell">Friday</span>
+              <span class="hours-time hours-time--closed" role="cell">Closed</span>
+            </div>
+            <div class="hours-row" role="row" id="row-saturday">
+              <span class="hours-day" role="cell">Saturday</span>
+              <span class="hours-time hours-time--closed" role="cell">Closed</span>
+            </div>
+            <div class="hours-row" role="row" id="row-sunday">
+              <span class="hours-day" role="cell">Sunday</span>
+              <span class="hours-time hours-time--closed" role="cell">Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-col fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Visit</div>
+          <div class="contact-name">Shea Dental of Scottsdale</div>
+          <p class="contact-address">9304 E Raintree Dr, Suite 100<br>Scottsdale, AZ 85260</p>
+          <a href="tel:+14809983923" class="contact-phone" aria-label="Call Shea Dental of Scottsdale">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            (480) 998-3923
+          </a>
+          <iframe
+            class="map-embed"
+            title="Shea Dental of Scottsdale location map"
+            src="https://maps.google.com/maps?q=9304+E+Raintree+Dr+%23+100+Scottsdale+AZ+85260&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google Maps showing Shea Dental of Scottsdale location">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="contact" aria-labelledby="cta-heading">
+      <div class="eyebrow eyebrow--accent"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;"></span>Ready when you are</div>
+      <h2 id="cta-heading">Ready to unwind?</h2>
+      <p class="cta-sub">Shea Dental of Scottsdale has same-week openings Monday through Thursday. Call today and let the team on East Raintree take care of the rest.</p>
+      <a href="tel:+14809983923" class="btn-cta-final cta-glow" aria-label="Call Shea Dental of Scottsdale to book an appointment">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Call (480) 998-3923
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-logo">Shea Dental of Scottsdale</span>
+      <span class="footer-copy">© <span id="footer-year"></span> Shea Dental of Scottsdale. All rights reserved.</span>
+    </div>
+    <div class="footer-auxo">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // ── FOOTER YEAR ──
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      // ── SCROLL PROGRESS ──
+      const progressBar = document.getElementById('scroll-progress');
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // ── HERO H1 WORD STAGGER ──
+      const heroH1 = document.getElementById('hero-h1');
+      if (heroH1) {
+        const text = heroH1.textContent;
+        const words = text.split(' ');
+        heroH1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+        const wordEls = heroH1.querySelectorAll('.word');
+        wordEls.forEach((el, i) => {
+          setTimeout(() => { el.classList.add('visible'); }, 200 + i * 60);
+        });
+      }
+
+      // ── HIGHLIGHT TODAY'S HOURS ──
+      const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+      const today = dayNames[new Date().getDay()];
+      const todayRow = document.getElementById('row-' + today);
+      if (todayRow) {
+        const dayEl = todayRow.querySelector('.hours-day');
+        const timeEl = todayRow.querySelector('.hours-time');
+        if (dayEl && timeEl && !timeEl.classList.contains('hours-time--closed')) {
+          dayEl.classList.add('hours-day--today');
+          const dot = document.createElement('span');
+          dot.className = 'hours-today-dot';
+          dayEl.prepend(dot);
+          timeEl.classList.add('hours-time--today');
+        }
+      }
+
+      // ── FADE-UP INTERSECTION OBSERVER ──
+      const fadeEls = document.querySelectorAll('.fade-up');
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            fadeObserver.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeEls.forEach(el => fadeObserver.observe(el));
+
+      // ── COUNT-UP ANIMATION ──
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+      function countUp(el, target, decimals, duration) {
+        const start = performance.now();
+        function frame(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const value = eased * target;
+          el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toLocaleString();
+          if (progress < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+      const statEls = [
+        { el: document.getElementById('stat-rating'), count: 4.9, dec: 1 },
+        { el: document.getElementById('stat-reviews'), count: 469, dec: 0 }
+      ];
+
+      const infoBar = document.querySelector('.info-bar');
+      let counted = false;
+      if (infoBar) {
+        const countObserver = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting && !counted) {
+              counted = true;
+              statEls.forEach(s => {
+                if (s.el) countUp(s.el, s.count, s.dec, 1200);
+              });
+              countObserver.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
+        countObserver.observe(infoBar);
+      }
+
+      // ── 3D TILT ON ABOUT BOXES ──
+      const tiltBoxes = document.querySelectorAll('.tilt-box');
+      if (window.matchMedia('(hover: hover)').matches) {
+        tiltBoxes.forEach(box => {
+          box.addEventListener('mousemove', function(e) {
+            const rect = box.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = (e.clientX - cx) / (rect.width / 2);
+            const dy = (e.clientY - cy) / (rect.height / 2);
+            const rotX = -dy * 8;
+            const rotY = dx * 8;
+            box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+          });
+          box.addEventListener('mouseleave', function() {
+            box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
+          });
+        });
+      }
+
+      // ── CURSOR GLOW ON CTAs ──
+      document.querySelectorAll('.cta-glow').forEach(btn => {
+        btn.addEventListener('mousemove', function(e) {
+          const rect = btn.getBoundingClientRect();
+          btn.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+          btn.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+        });
+      });
+
+      // ── HERO PARALLAX ──
+      if (!window.matchMedia('(hover: none)').matches) {
+        const heroBg = document.querySelector('.hero-bg-zoom');
+        function onHeroScroll() {
+          if (!heroBg) return;
+          const heroSection = document.querySelector('.hero');
+          if (!heroSection) return;
+          const rect = heroSection.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          const offset = window.scrollY * 0.3;
+          heroBg.style.backgroundPositionY = `calc(center + ${offset}px)`;
+        }
+        window.addEventListener('scroll', onHeroScroll, { passive: true });
+      }
+
+      // ── SMOOTH SCROLL FOR NAV LINKS ──
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
