@@ -5,18 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Lympha Spa &amp; Massage, West Des Moines, IA</title>
-  <meta name="description" content="Lympha Spa &amp; Massage in West Des Moines, IA, offers licensed massage therapy and wellness treatments. Rated 4.7 stars by 282 verified Google reviews.">
+  <meta name="description" content="Lympha Spa &amp; Massage in West Des Moines, IA. Licensed wellness practitioners, lymphatic massage, and custom treatments. Rated 4.7 stars by 282 verified Google reviews.">
   <meta name="theme-color" content="#064E3B">
   <meta property="og:title" content="Lympha Spa &amp; Massage, West Des Moines, IA">
-  <meta property="og:description" content="Licensed massage therapy and wellness treatments in West Des Moines, IA. Rated 4.7 stars by 282 customers.">
+  <meta property="og:description" content="Licensed wellness practitioners offering lymphatic massage and custom spa treatments in West Des Moines, IA. Rated 4.7 stars by 282 customers.">
   <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/hero.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lympha Spa &amp; Massage, West Des Moines, IA">
-  <meta name="twitter:description" content="Licensed massage therapy and wellness treatments in West Des Moines, IA. Rated 4.7 stars by 282 customers.">
+  <meta name="twitter:description" content="Licensed wellness practitioners offering lymphatic massage and custom spa treatments in West Des Moines, IA.">
   <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/hero.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23064E3B'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='white'>L</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23064E3B'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='700' fill='white'>L</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
 
   <script type="application/ld+json">
   {
@@ -36,14 +40,9 @@
       "@type": "AggregateRating",
       "ratingValue": "4.7",
       "reviewCount": "282"
-    },
-    "url": "https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/"
+    }
   }
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
 
   <style>
     :root {
@@ -56,8 +55,8 @@
       --border: #E2E8F0;
       --surface: #F8FAFC;
       --soft-border: #F1F5F9;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --banner-height: 44px;
     }
 
@@ -84,15 +83,19 @@
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 120px;
+      font-size: 16px;
     }
 
     body {
       font-family: var(--font-body);
-      color: var(--text);
       background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
       overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
     }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
 
     /* CLAIM BANNER */
     .claim-banner {
@@ -103,16 +106,16 @@
       z-index: 200;
       background: var(--accent);
       color: var(--text);
-      padding: 12px 32px;
-      text-align: center;
+      font-family: var(--font-body);
       font-size: 0.92rem;
       font-weight: 600;
-      font-family: var(--font-body);
+      text-align: center;
+      padding: 12px 32px;
       line-height: 1.4;
     }
 
     .claim-banner a {
-      color: inherit;
+      color: var(--text);
       text-decoration: underline;
       text-underline-offset: 2px;
     }
@@ -121,8 +124,8 @@
       opacity: 0.75;
     }
 
-    /* SCROLL PROGRESS BAR */
-    .scroll-progress {
+    /* PROGRESS BAR */
+    .progress-bar {
       position: fixed;
       top: var(--banner-height);
       left: 0;
@@ -130,7 +133,7 @@
       width: 0%;
       background: var(--primary);
       z-index: 1000;
-      transition: width 80ms linear;
+      transition: width 0.1s linear;
     }
 
     /* NAV */
@@ -138,7 +141,7 @@
       position: sticky;
       top: var(--banner-height);
       z-index: 100;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
@@ -153,8 +156,7 @@
       font-weight: 700;
       font-size: 1.25rem;
       color: var(--text);
-      text-decoration: none;
-      letter-spacing: -0.01em;
+      flex-shrink: 0;
     }
 
     .nav-links {
@@ -169,15 +171,14 @@
       font-weight: 500;
       font-size: 0.95rem;
       color: var(--text);
-      text-decoration: none;
       position: relative;
-      padding-bottom: 3px;
+      padding-bottom: 2px;
     }
 
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
       width: 0;
       height: 2px;
@@ -198,38 +199,28 @@
       align-items: center;
       gap: 8px;
       background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 22px;
+      color: white;
+      padding: 10px 22px;
       border-radius: 999px;
       font-family: var(--font-body);
-      font-weight: 600;
       font-size: 0.9rem;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      font-weight: 600;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      flex-shrink: 0;
     }
 
     .nav-phone:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(6, 78, 59, 0.3);
+      box-shadow: 0 8px 24px rgba(6,78,59,0.25);
     }
 
     .nav-phone svg {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       flex-shrink: 0;
     }
 
     /* HERO */
-    @keyframes kenBurns {
-      from { transform: scale(1.0); }
-      to { transform: scale(1.05); }
-    }
-
-    @keyframes bounceChevron {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
     .hero {
       position: relative;
       height: 65vh;
@@ -247,7 +238,7 @@
       overflow: hidden;
     }
 
-    .hero-bg-inner {
+    .hero-bg-layer {
       position: absolute;
       inset: 0;
       background-image: url('https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/hero.jpg');
@@ -257,11 +248,16 @@
       z-index: 0;
     }
 
-    .hero-overlay {
+    .hero-gradient {
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
       z-index: 1;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
     }
 
     .hero-content {
@@ -271,20 +267,20 @@
       text-align: left;
     }
 
-    .eyebrow {
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--primary);
-      display: inline-flex;
+    .hero-eyebrow {
+      display: flex;
       align-items: center;
       gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
       margin-bottom: 16px;
     }
 
-    .eyebrow-dot {
+    .hero-eyebrow-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -292,25 +288,21 @@
       flex-shrink: 0;
     }
 
-    .eyebrow-white {
-      color: rgba(255, 255, 255, 0.85);
-    }
-
     .hero h1 {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
       line-height: 1.05;
       letter-spacing: -0.02em;
-      color: #fff;
+      color: white;
       margin-bottom: 20px;
     }
 
     .hero h1 .word {
       display: inline-block;
       opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 500ms ease-out, transform 500ms ease-out;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
     }
 
     .hero h1 .word.visible {
@@ -319,20 +311,35 @@
     }
 
     .hero-subhead {
-      color: rgba(255, 255, 255, 0.92);
-      font-size: 1.25rem;
       font-family: var(--font-body);
+      font-size: 1.25rem;
       font-weight: 400;
+      color: rgba(255,255,255,0.92);
       line-height: 1.5;
-      margin-bottom: 32px;
       max-width: 560px;
+      margin-bottom: 36px;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 700ms ease 500ms, transform 700ms ease 500ms;
+    }
+
+    .hero-subhead.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .hero-buttons {
       display: flex;
       align-items: center;
       gap: 16px;
-      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 700ms ease 700ms, transform 700ms ease 700ms;
+    }
+
+    .hero-buttons.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .btn-primary {
@@ -341,20 +348,22 @@
       gap: 8px;
       background: var(--accent);
       color: var(--text);
-      text-decoration: none;
       padding: 16px 32px;
       border-radius: 999px;
       font-family: var(--font-body);
-      font-weight: 700;
       font-size: 1rem;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      font-weight: 700;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      cursor: pointer;
+      border: none;
+      min-height: 52px;
       position: relative;
       overflow: hidden;
     }
 
     .btn-primary:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 32px rgba(212, 163, 115, 0.45);
+      box-shadow: 0 12px 32px rgba(212,163,115,0.4);
     }
 
     .btn-secondary {
@@ -362,57 +371,43 @@
       align-items: center;
       gap: 8px;
       background: transparent;
-      color: #fff;
-      text-decoration: none;
+      color: white;
       padding: 16px 32px;
       border-radius: 999px;
-      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      border: 2px solid rgba(255,255,255,0.7);
       font-family: var(--font-body);
-      font-weight: 600;
       font-size: 1rem;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), background 200ms ease, border-color 200ms ease;
+      font-weight: 600;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease, box-shadow 200ms ease;
+      cursor: pointer;
+      min-height: 52px;
     }
 
     .btn-secondary:hover {
       transform: scale(1.03);
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.9);
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
 
     .hero-chevron {
       position: absolute;
-      bottom: 24px;
+      bottom: 28px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
-      animation: bounceChevron 1.6s ease-in-out infinite;
-      color: rgba(255, 255, 255, 0.7);
+      color: white;
+      opacity: 0.7;
+      animation: chevronBounce 1.6s ease-in-out infinite;
     }
 
-    /* CTA GLOW */
-    .cta-glow {
-      position: relative;
-    }
-
-    .cta-glow::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: radial-gradient(240px circle at var(--x, 50%) var(--y, 50%), rgba(6, 78, 59, 0.18), transparent 70%);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 300ms ease;
-    }
-
-    .cta-glow:hover::before {
-      opacity: 1;
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
     }
 
     /* INFO BAR */
     .info-bar {
       background: var(--primary);
-      color: #fff;
       padding: 40px 48px;
     }
 
@@ -420,37 +415,39 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      align-items: center;
-      justify-content: space-around;
+      align-items: stretch;
     }
 
     .info-stat {
-      text-align: center;
       flex: 1;
-      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 24px;
     }
 
     .info-stat + .info-stat {
-      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      border-left: 1px solid rgba(255,255,255,0.15);
     }
 
     .info-stat-number {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: 3rem;
+      font-weight: 700;
+      color: white;
       line-height: 1;
-      color: #fff;
-      display: block;
       margin-bottom: 8px;
     }
 
     .info-stat-label {
       font-family: var(--font-body);
-      font-weight: 500;
       font-size: 0.95rem;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
     }
 
     /* MARQUEE */
@@ -477,43 +474,47 @@
     }
 
     .marquee-pill {
-      white-space: nowrap;
-      background: #fff;
+      background: white;
       border: 1.5px solid var(--primary);
       color: var(--primary);
       padding: 14px 24px;
       border-radius: 999px;
       font-family: var(--font-body);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 600;
+      white-space: nowrap;
       flex-shrink: 0;
     }
 
     /* ABOUT */
-    .about-section {
+    .about {
       padding: 96px 48px;
     }
 
-    .container {
+    .about-inner {
       max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .about-grid {
       display: grid;
       grid-template-columns: 5fr 4fr;
       gap: 96px;
       align-items: center;
     }
 
-    .about-text .eyebrow {
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--primary);
       margin-bottom: 16px;
+      display: block;
     }
 
     .about-text h2 {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
       color: var(--text);
@@ -521,42 +522,39 @@
     }
 
     .about-text p {
+      font-family: var(--font-body);
       font-size: 1.05rem;
+      font-weight: 400;
       line-height: 1.65;
-      color: var(--text);
+      color: var(--muted);
       margin-bottom: 20px;
+      max-width: 560px;
     }
 
-    .about-text p:last-of-type {
-      margin-bottom: 32px;
-    }
-
-    .inline-link {
+    .about-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       color: var(--primary);
-      font-weight: 600;
+      font-family: var(--font-body);
       font-size: 1.05rem;
-      text-decoration: none;
-      border-bottom: 1.5px solid var(--primary);
-      padding-bottom: 2px;
-      transition: gap 200ms ease, opacity 200ms ease;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: gap 200ms ease;
     }
 
-    .inline-link:hover {
+    .about-link:hover {
       gap: 10px;
-      opacity: 0.8;
     }
 
-    .about-boxes {
+    .info-boxes {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
     .tilt-box {
-      background: var(--bg);
+      background: white;
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
@@ -565,29 +563,30 @@
     }
 
     .tilt-box:hover {
-      box-shadow: 0 16px 40px rgba(6, 78, 59, 0.1);
+      box-shadow: 0 16px 40px rgba(6,78,59,0.1);
     }
 
-    .tilt-box svg {
-      color: var(--primary);
+    .tilt-box-icon {
       width: 32px;
       height: 32px;
-      margin-bottom: 14px;
+      color: var(--primary);
+      margin-bottom: 12px;
     }
 
     .tilt-box h4 {
       font-family: var(--font-body);
-      font-weight: 600;
       font-size: 1.05rem;
-      line-height: 1.4;
+      font-weight: 600;
       color: var(--text);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .tilt-box p {
+      font-family: var(--font-body);
       font-size: 0.95rem;
-      line-height: 1.55;
+      font-weight: 400;
       color: var(--muted);
+      line-height: 1.5;
     }
 
     /* SIGNATURE BAND */
@@ -599,54 +598,55 @@
 
     .signature-band .eyebrow {
       color: var(--accent);
-      justify-content: center;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
-    .pull-quote {
+    .signature-band blockquote {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: white;
       line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: #fff;
       max-width: 900px;
       margin: 0 auto 32px;
     }
 
-    .signature-band .review-link {
+    .signature-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       color: var(--accent);
-      font-weight: 600;
+      font-family: var(--font-body);
       font-size: 1.05rem;
-      text-decoration: none;
+      font-weight: 600;
       transition: gap 200ms ease;
     }
 
-    .signature-band .review-link:hover {
-      gap: 14px;
+    .signature-link:hover {
+      gap: 12px;
     }
 
     /* GALLERY */
-    .gallery-section {
+    .gallery {
       padding: 96px 48px;
       background: var(--surface);
     }
 
-    .gallery-section .eyebrow {
-      margin-bottom: 16px;
+    .gallery-inner {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .gallery-section h2 {
+    .gallery-header {
+      margin-bottom: 48px;
+    }
+
+    .gallery-header h2 {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: var(--text);
-      margin-bottom: 48px;
     }
 
     .gallery-grid {
@@ -656,18 +656,16 @@
     }
 
     .gallery-item {
-      aspect-ratio: 1 / 1;
       border-radius: 16px;
       overflow: hidden;
-      display: block;
+      aspect-ratio: 1/1;
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      display: block;
+      transition: transform 600ms cubic-bezier(0.25,0.46,0.45,0.94);
     }
 
     .gallery-item:hover img {
@@ -675,30 +673,24 @@
     }
 
     /* HOURS */
-    .hours-section {
+    .hours-contact {
       padding: 96px 48px;
     }
 
-    .hours-grid {
+    .hours-contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
     }
 
     .hours-card {
-      background: var(--bg);
+      background: white;
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 24px 28px;
-    }
-
-    .hours-card h3 {
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 1.5rem;
-      line-height: 1.3;
-      color: var(--text);
-      margin-bottom: 20px;
+      margin-top: 24px;
     }
 
     .hours-row {
@@ -706,32 +698,31 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid var(--soft-border);
+      font-family: var(--font-body);
       font-size: 1rem;
+      border-bottom: 1px solid var(--soft-border);
     }
 
     .hours-row:last-child {
       border-bottom: none;
     }
 
-    .hours-row .day-name {
+    .hours-day {
       font-weight: 500;
       color: var(--text);
     }
 
-    .hours-row .day-time {
+    .hours-time {
       font-weight: 400;
       color: var(--muted);
     }
 
-    .hours-row.today .day-name {
+    .hours-time.today {
       font-weight: 700;
-      color: var(--primary);
+      color: var(--text);
     }
 
-    .hours-row.today .day-time {
-      font-weight: 700;
-      color: var(--primary);
+    .today-row .hours-day {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -745,42 +736,32 @@
       flex-shrink: 0;
     }
 
-    .hours-row.closed .day-time {
+    .hours-closed {
       color: var(--faint);
     }
 
-    .contact-side .eyebrow {
-      margin-bottom: 16px;
-    }
-
-    .contact-side h2 {
+    .contact-col h3 {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: 1.5rem;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .contact-side address {
-      font-style: normal;
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: var(--text);
+      font-weight: 700;
       margin-bottom: 8px;
     }
 
-    .contact-side a.phone-link {
-      display: block;
-      color: var(--primary);
-      font-weight: 600;
+    .contact-address {
+      font-family: var(--font-body);
       font-size: 1.05rem;
-      text-decoration: none;
-      margin-bottom: 24px;
-      transition: opacity 200ms;
+      color: var(--muted);
+      margin-bottom: 12px;
+      line-height: 1.6;
     }
 
-    .contact-side a.phone-link:hover {
-      opacity: 0.75;
+    .contact-phone {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 24px;
+      display: block;
     }
 
     .map-embed {
@@ -800,46 +781,62 @@
 
     .final-cta .eyebrow {
       color: var(--accent);
-      justify-content: center;
       margin-bottom: 16px;
     }
 
     .final-cta h2 {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #fff;
+      color: white;
       margin-bottom: 20px;
     }
 
-    .final-cta .cta-subhead {
-      color: rgba(255, 255, 255, 0.8);
+    .final-cta-subhead {
+      font-family: var(--font-body);
       font-size: 1.15rem;
-      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
       max-width: 540px;
       margin: 0 auto 40px;
+      line-height: 1.6;
     }
 
-    .btn-cta-large {
+    .cta-glow {
+      position: relative;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       background: var(--accent);
       color: var(--text);
-      text-decoration: none;
       padding: 20px 40px;
       border-radius: 999px;
       font-family: var(--font-body);
-      font-weight: 700;
       font-size: 1.15rem;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      font-weight: 700;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      cursor: pointer;
+      border: none;
+      min-height: 60px;
+      overflow: hidden;
     }
 
-    .btn-cta-large:hover {
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(6,78,59,0.18) 0%, transparent 70%);
+      transform: translate(calc(var(--x, 50%) - 120px), calc(var(--y, 50%) - 120px));
+      pointer-events: none;
+      border-radius: 50%;
+      transition: opacity 200ms;
+    }
+
+    .cta-glow:hover {
       transform: scale(1.03);
-      box-shadow: 0 16px 40px rgba(212, 163, 115, 0.5);
+      box-shadow: 0 16px 48px rgba(212,163,115,0.45);
     }
 
     /* FOOTER */
@@ -852,21 +849,22 @@
       justify-content: space-between;
     }
 
-    .footer-left .footer-brand {
+    .footer-left .footer-logo {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: 1.15rem;
+      font-weight: 700;
       color: var(--text);
-      display: block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .footer-left .footer-copy {
+    .footer-copy {
+      font-family: var(--font-body);
       font-size: 0.88rem;
       color: var(--muted);
     }
 
     .footer-right {
+      font-family: var(--font-body);
       font-size: 0.92rem;
       color: var(--muted);
     }
@@ -874,12 +872,10 @@
     .footer-right a {
       color: var(--primary);
       font-weight: 600;
-      text-decoration: none;
-      transition: opacity 200ms;
     }
 
     .footer-right a:hover {
-      opacity: 0.75;
+      text-decoration: underline;
     }
 
     /* FADE-UP ANIMATION */
@@ -894,29 +890,51 @@
       transform: translateY(0);
     }
 
+    /* SECTION CONTAINERS */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hours-section-header {
+      margin-bottom: 24px;
+    }
+
+    .hours-section-header h3 {
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 8px;
+    }
+
     /* TABLET */
     @media (max-width: 1024px) {
-      .about-section,
-      .gallery-section,
-      .hours-section {
-        padding: 80px 32px;
+      nav,
+      .about,
+      .hours-contact,
+      .gallery {
+        padding-left: 32px;
+        padding-right: 32px;
       }
 
-      .about-grid {
+      .about-inner {
         gap: 64px;
       }
 
-      .hours-grid {
+      .hours-contact-inner {
         gap: 48px;
       }
 
-      .signature-band,
-      .final-cta {
-        padding: 80px 32px;
+      .final-cta,
+      .signature-band {
+        padding-left: 32px;
+        padding-right: 32px;
       }
 
-      nav {
-        padding: 18px 32px;
+      footer {
+        padding-left: 32px;
+        padding-right: 32px;
       }
     }
 
@@ -973,11 +991,36 @@
       .btn-secondary {
         text-align: center;
         justify-content: center;
-        min-height: 52px;
+        width: 100%;
       }
 
       .hero-chevron {
         display: none;
+      }
+
+      .about {
+        padding: 70px 20px;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-text h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .about-text p {
+        max-width: 100%;
+      }
+
+      .info-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .tilt-box {
+        padding: 22px;
       }
 
       .info-bar {
@@ -986,42 +1029,41 @@
 
       .info-bar-inner {
         flex-direction: column;
-        gap: 0;
+        gap: 18px;
       }
 
       .info-stat {
-        width: 100%;
-        padding: 18px 0;
-        border-left: none !important;
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding: 18px 0 0;
       }
 
-      .info-stat + .info-stat {
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        border-left: none;
+      .info-stat:first-child {
+        border-top: none;
+        padding-top: 0;
       }
 
       .info-stat-number {
         font-size: 2.6rem;
       }
 
-      .about-section {
+      .marquee-pill {
+        padding: 10px 18px;
+      }
+
+      .marquee-track {
+        animation-duration: 24s;
+      }
+
+      .signature-band {
         padding: 70px 20px;
       }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
+      .signature-band blockquote {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
       }
 
-      .about-boxes {
-        grid-template-columns: 1fr;
-      }
-
-      .tilt-box {
-        padding: 28px;
-      }
-
-      .gallery-section {
+      .gallery {
         padding: 70px 20px;
       }
 
@@ -1030,22 +1072,14 @@
       }
 
       .gallery-item {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 4/3;
       }
 
-      .signature-band {
+      .hours-contact {
         padding: 70px 20px;
       }
 
-      .pull-quote {
-        font-size: clamp(1.6rem, 6vw, 2.4rem);
-      }
-
-      .hours-section {
-        padding: 70px 20px;
-      }
-
-      .hours-grid {
+      .hours-contact-inner {
         grid-template-columns: 1fr;
         gap: 32px;
       }
@@ -1062,21 +1096,21 @@
         font-size: clamp(1.9rem, 7vw, 2.6rem);
       }
 
-      .btn-cta-large {
+      .cta-glow {
         width: 100%;
         justify-content: center;
-        min-height: 52px;
+        padding: 20px 32px;
       }
 
       footer {
+        padding: 32px 20px;
         flex-direction: column;
         text-align: center;
         gap: 16px;
-        padding: 40px 20px;
       }
 
-      .marquee-pill {
-        padding: 10px 18px;
+      .info-bar-inner .info-stat + .info-stat {
+        border-left: none;
       }
     }
 
@@ -1092,9 +1126,9 @@
         font-size: clamp(2rem, 10vw, 2.8rem);
       }
 
-      .about-section,
-      .gallery-section,
-      .hours-section {
+      .about,
+      .gallery,
+      .hours-contact {
         padding: 56px 18px;
       }
 
@@ -1110,26 +1144,26 @@
 </head>
 <body>
 
-  <!-- STICKY CLAIM BANNER -->
+  <!-- CLAIM BANNER -->
   <div class="claim-banner" role="banner">
     Built free for Lympha Spa &amp; Massage by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20lympha-spa-massage%20homepage">Reply to my email.</a>
   </div>
 
-  <!-- SCROLL PROGRESS BAR -->
-  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header>
-    <nav role="navigation" aria-label="Main navigation">
-      <a href="#" class="nav-logo">Lympha Spa &amp; Massage</a>
+    <nav aria-label="Main navigation">
+      <span class="nav-logo">Lympha Spa &amp; Massage</span>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#hours">Hours</a></li>
         <li><a href="#hours">Contact</a></li>
       </ul>
-      <a href="tel:+15153954455" class="nav-phone" aria-label="Call Lympha Spa and Massage at 515-395-4455">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.0 1.21 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
+      <a href="tel:5153954455" class="nav-phone" aria-label="Call Lympha Spa and Massage at (515) 395-4455">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 8.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.61 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.16 6.16l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
         (515) 395-4455
       </a>
@@ -1139,20 +1173,20 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero" aria-label="Lympha Spa and Massage hero">
-      <div class="hero-bg-inner" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-layer" aria-hidden="true"></div>
+      <div class="hero-gradient" aria-hidden="true"></div>
       <div class="hero-content">
-        <div class="eyebrow eyebrow-white">
-          <span class="eyebrow-dot"></span>
-          West Des Moines, IA &nbsp;·&nbsp; Wellness Spa
-        </div>
-        <h1 id="heroHeadline">Lympha Spa &amp; Massage</h1>
-        <p class="hero-subhead">Board-certified massage therapy serving West Des Moines from our 73rd Street suite.</p>
-        <div class="hero-buttons">
-          <a href="tel:+15153954455" class="btn-primary cta-glow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.0 1.21 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
+        <p class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          West Des Moines, IA  -  Wellness Spa
+        </p>
+        <h1 id="heroH1">Lympha Spa &amp; Massage</h1>
+        <p class="hero-subhead" id="heroSubhead">Specialized lymphatic massage and restorative bodywork, right off 73rd Street in West Des Moines.</p>
+        <div class="hero-buttons" id="heroButtons">
+          <a href="tel:5153954455" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 8.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.61 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.16 6.16l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
             </svg>
             Call to Book
           </a>
@@ -1160,7 +1194,7 @@
         </div>
       </div>
       <div class="hero-chevron" aria-hidden="true">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 12 15 18 9"/>
         </svg>
       </div>
@@ -1169,216 +1203,196 @@
     <!-- INFO BAR -->
     <section class="info-bar" aria-label="Business highlights">
       <div class="info-bar-inner">
-        <div class="info-stat">
+        <div class="info-stat fade-up">
           <span class="info-stat-number" data-count="4.7" data-decimals="1" id="stat1">4.7</span>
           <span class="info-stat-label">Google Rating</span>
         </div>
-        <div class="info-stat">
+        <div class="info-stat fade-up">
           <span class="info-stat-number" data-count="282" data-decimals="0" id="stat2">282</span>
           <span class="info-stat-label">Verified Reviews</span>
         </div>
-        <div class="info-stat">
-          <span class="info-stat-number" id="stat3" style="font-size:1.6rem; padding-top:4px;">Board Certified</span>
+        <div class="info-stat fade-up">
+          <span class="info-stat-number" style="font-size: 1.6rem; letter-spacing: -0.01em;">Board Certified</span>
           <span class="info-stat-label">Licensed Practitioners</span>
         </div>
       </div>
     </section>
 
     <!-- MARQUEE -->
-    <div class="marquee-section" aria-hidden="true">
-      <div class="marquee-track" id="marqueeTrack">
+    <section class="marquee-section" aria-label="Services">
+      <div class="marquee-track" aria-hidden="true">
         <span class="marquee-pill">Licensed Practitioners</span>
         <span class="marquee-pill">Calming Space</span>
         <span class="marquee-pill">Custom Treatments</span>
-        <span class="marquee-pill">New Clients Welcome</span>
-        <span class="marquee-pill">Flexible Scheduling</span>
+        <span class="marquee-pill">New Patients Welcome</span>
+        <span class="marquee-pill">Lymphatic Massage</span>
         <span class="marquee-pill">Member Pricing</span>
         <span class="marquee-pill">Licensed Practitioners</span>
         <span class="marquee-pill">Calming Space</span>
         <span class="marquee-pill">Custom Treatments</span>
-        <span class="marquee-pill">New Clients Welcome</span>
-        <span class="marquee-pill">Flexible Scheduling</span>
+        <span class="marquee-pill">New Patients Welcome</span>
+        <span class="marquee-pill">Lymphatic Massage</span>
         <span class="marquee-pill">Member Pricing</span>
       </div>
-    </div>
+    </section>
 
     <!-- ABOUT -->
-    <section class="about-section fade-up" id="about" aria-label="About Lympha Spa and Massage">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
-              About
-            </div>
-            <h2>West Des Moines' dedicated space for restorative massage therapy.</h2>
-            <p>Lympha Spa &amp; Massage is a licensed wellness practice located at 1000 73rd Street in West Des Moines, offering personalized massage and bodywork designed around what your body actually needs. Every session is tailored by a certified practitioner, not a scripted menu.</p>
-            <p>With 282 verified Google reviews and a 4.7-star rating, the results speak for themselves. West Des Moines residents return not because it's convenient, but because it works.</p>
-            <a href="tel:+15153954455" class="inline-link">
-              Call (515) 395-4455
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
+    <section class="about" id="about" aria-label="About Lympha Spa and Massage">
+      <div class="about-inner">
+        <div class="about-text fade-up">
+          <span class="eyebrow">About</span>
+          <h2>West Des Moines' dedicated lymphatic massage studio.</h2>
+          <p>Lympha Spa &amp; Massage is built around one specialty: targeted, therapeutic bodywork that supports the lymphatic system and helps the body genuinely recover. The team at 73rd Street brings licensed, board-certified technique to every session in a calm, intentional space.</p>
+          <p>With 282 verified Google reviews and a 4.7-star rating, West Des Moines clients keep coming back because the results speak clearly. Whether you're new to lymphatic massage or a long-time regular, each appointment is tailored to what your body needs that day.</p>
+          <a href="tel:5153954455" class="about-link">
+            Call (515) 395-4455
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+        <div class="info-boxes fade-up" id="tiltBoxesContainer">
+          <div class="tilt-box" data-tilt>
+            <svg class="tilt-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h4>Licensed Practitioners</h4>
+            <p>Every session is delivered by board-certified massage therapists trained in lymphatic technique.</p>
           </div>
-
-          <div class="about-boxes">
-            <div class="tilt-box" role="article">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-              <h4>Licensed Practitioners</h4>
-              <p>Every therapist is licensed and board-certified in Iowa, with ongoing training in specialized modalities.</p>
-            </div>
-            <div class="tilt-box" role="article">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-              <h4>Flexible Scheduling</h4>
-              <p>Six days a week with extended Tuesday and Wednesday hours, built around working schedules in West Des Moines.</p>
-            </div>
-            <div class="tilt-box" role="article">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-              </svg>
-              <h4>Personalized Care</h4>
-              <p>Sessions start with a genuine intake, so the work targets your specific concerns, not a standard 60-minute routine.</p>
-            </div>
-            <div class="tilt-box" role="article">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-              <h4>Calming Space</h4>
-              <p>A quiet, professionally appointed suite at 73rd Street designed to help you decompress from the moment you arrive.</p>
-            </div>
+          <div class="tilt-box" data-tilt>
+            <svg class="tilt-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <h4>Calming Space</h4>
+            <p>The studio on 73rd Street is designed for quiet recovery, not a rushed spa conveyor belt.</p>
+          </div>
+          <div class="tilt-box" data-tilt>
+            <svg class="tilt-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+            <h4>Personalized Care</h4>
+            <p>Sessions are structured around your specific goals, whether that is post-surgical recovery, stress relief, or maintenance.</p>
+          </div>
+          <div class="tilt-box" data-tilt>
+            <svg class="tilt-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <h4>Flexible Scheduling</h4>
+            <p>Open six days a week, including evenings Tuesday through Wednesday, so appointments fit real life.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SIGNATURE BAND -->
-    <section class="signature-band fade-up" aria-label="Customer testimonial">
-      <div class="container">
-        <div class="eyebrow">
-          <span class="eyebrow-dot" style="background:var(--accent);"></span>
-          What customers say
-        </div>
-        <p class="pull-quote">&ldquo;Rated 4.7 stars by 282 West Des Moines customers, and counting.&rdquo;</p>
-        <a href="https://www.google.com/search?q=Lympha+Spa+Massage+West+Des+Moines+IA+reviews" target="_blank" rel="noopener" class="review-link">
-          Read our Google reviews
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
+    <section class="signature-band fade-up" aria-label="Customer reviews">
+      <span class="eyebrow">What customers say</span>
+      <blockquote>
+        &ldquo;Rated 4.7 stars by 282 West Des Moines customers, and counting.&rdquo;
+      </blockquote>
+      <a href="https://www.google.com/maps/search/Lympha+Spa+Massage+West+Des+Moines" target="_blank" rel="noopener" class="signature-link" aria-label="Read our Google reviews, opens in new tab">
+        Read our Google reviews
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
     </section>
 
     <!-- GALLERY -->
-    <section class="gallery-section fade-up" id="gallery" aria-label="Lympha Spa and Massage gallery">
-      <div class="container">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          Inside the Spa
+    <section class="gallery" id="gallery" aria-label="Photo gallery">
+      <div class="gallery-inner">
+        <div class="gallery-header fade-up">
+          <span class="eyebrow">The Space</span>
+          <h2>Inside Lympha Spa &amp; Massage</h2>
         </div>
-        <h2>A closer look at our 73rd Street space.</h2>
         <div class="gallery-grid">
-          <a href="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-1.jpg" class="gallery-item" aria-label="Lympha Spa gallery image 1" target="_blank">
-            <img src="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-1.jpg" alt="Lympha Spa and Massage treatment room in West Des Moines" loading="lazy" width="600" height="600">
-          </a>
-          <a href="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-2.png" class="gallery-item" aria-label="Lympha Spa gallery image 2" target="_blank">
-            <img src="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-2.png" alt="Lympha Spa and Massage relaxation space" loading="lazy" width="600" height="600">
-          </a>
-          <a href="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-3.jpg" class="gallery-item" aria-label="Lympha Spa gallery image 3" target="_blank">
-            <img src="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-3.jpg" alt="Lympha Spa and Massage West Des Moines interior" loading="lazy" width="600" height="600">
-          </a>
+          <div class="gallery-item fade-up">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-1.jpg" alt="Interior of Lympha Spa and Massage in West Des Moines" loading="lazy">
+          </div>
+          <div class="gallery-item fade-up">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-2.png" alt="Treatment room at Lympha Spa and Massage, West Des Moines IA" loading="lazy">
+          </div>
+          <div class="gallery-item fade-up">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/lympha-spa-massage/gallery-3.jpg" alt="Relaxing spa environment at Lympha Spa and Massage" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
 
     <!-- HOURS & CONTACT -->
-    <section class="hours-section fade-up" id="hours" aria-label="Hours and location">
-      <div class="container">
-        <div class="hours-grid">
-          <div>
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
-              Hours
+    <section class="hours-contact" id="hours" aria-label="Hours and contact">
+      <div class="hours-contact-inner">
+        <div class="fade-up">
+          <div class="hours-section-header">
+            <span class="eyebrow">Hours</span>
+            <h3>Open This Week</h3>
+          </div>
+          <div class="hours-card">
+            <div class="hours-row" id="row-mon">
+              <span class="hours-day">Monday</span>
+              <span class="hours-time">9 AM-6 PM</span>
             </div>
-            <div class="hours-card" style="margin-top: 16px;">
-              <h3>Open This Week</h3>
-              <div class="hours-row" id="row-mon">
-                <span class="day-name">Monday</span>
-                <span class="day-time">9 AM-6 PM</span>
-              </div>
-              <div class="hours-row" id="row-tue">
-                <span class="day-name">Tuesday</span>
-                <span class="day-time">9 AM-8 PM</span>
-              </div>
-              <div class="hours-row" id="row-wed">
-                <span class="day-name">Wednesday</span>
-                <span class="day-time">9 AM-8 PM</span>
-              </div>
-              <div class="hours-row" id="row-thu">
-                <span class="day-name">Thursday</span>
-                <span class="day-time">9 AM-6 PM</span>
-              </div>
-              <div class="hours-row" id="row-fri">
-                <span class="day-name">Friday</span>
-                <span class="day-time">9 AM-5 PM</span>
-              </div>
-              <div class="hours-row" id="row-sat">
-                <span class="day-name">Saturday</span>
-                <span class="day-time">9 AM-5 PM</span>
-              </div>
-              <div class="hours-row closed" id="row-sun">
-                <span class="day-name">Sunday</span>
-                <span class="day-time">Closed</span>
-              </div>
+            <div class="hours-row" id="row-tue">
+              <span class="hours-day">Tuesday</span>
+              <span class="hours-time">9 AM-8 PM</span>
+            </div>
+            <div class="hours-row" id="row-wed">
+              <span class="hours-day">Wednesday</span>
+              <span class="hours-time">9 AM-8 PM</span>
+            </div>
+            <div class="hours-row" id="row-thu">
+              <span class="hours-day">Thursday</span>
+              <span class="hours-time">9 AM-6 PM</span>
+            </div>
+            <div class="hours-row" id="row-fri">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time">9 AM-5 PM</span>
+            </div>
+            <div class="hours-row" id="row-sat">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time">9 AM-5 PM</span>
+            </div>
+            <div class="hours-row" id="row-sun">
+              <span class="hours-day">Sunday</span>
+              <span class="hours-time hours-closed">Closed</span>
             </div>
           </div>
-
-          <div class="contact-side">
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
-              Visit
-            </div>
-            <h2 style="margin-top:16px; font-family: var(--font-display); font-size:1.5rem;">Lympha Spa &amp; Massage</h2>
-            <address>
-              1000 73rd St Suite 20<br>
-              West Des Moines, IA 50265
-            </address>
-            <a href="tel:+15153954455" class="phone-link">(515) 395-4455</a>
-            <iframe
-              class="map-embed"
-              src="https://maps.google.com/maps?q=1000+73rd+St+Suite+20+West+Des+Moines+IA+50265&output=embed"
-              title="Lympha Spa and Massage location map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              aria-label="Map showing Lympha Spa and Massage at 1000 73rd St Suite 20, West Des Moines, IA">
-            </iframe>
-          </div>
+        </div>
+        <div class="contact-col fade-up">
+          <span class="eyebrow">Visit</span>
+          <h3>Lympha Spa &amp; Massage</h3>
+          <p class="contact-address">1000 73rd St, Suite 20<br>West Des Moines, IA 50265</p>
+          <a href="tel:5153954455" class="contact-phone">(515) 395-4455</a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=1000+73rd+St+Suite+20+West+Des+Moines+IA+50265&output=embed"
+            title="Lympha Spa and Massage location map"
+            loading="lazy"
+            aria-label="Google map showing location of Lympha Spa and Massage in West Des Moines, IA">
+          </iframe>
         </div>
       </div>
     </section>
 
     <!-- FINAL CTA -->
-    <section class="final-cta fade-up" aria-label="Book a session">
-      <div class="container">
-        <div class="eyebrow">
-          <span class="eyebrow-dot" style="background:var(--accent);"></span>
-          Ready when you are
-        </div>
-        <h2>Ready to unwind?</h2>
-        <p class="cta-subhead">Lympha Spa &amp; Massage is open six days a week in West Des Moines. One call is all it takes to get on the schedule.</p>
-        <a href="tel:+15153954455" class="btn-cta-large cta-glow" aria-label="Call Lympha Spa and Massage">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.0 1.21 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
-          </svg>
-          Call (515) 395-4455
-        </a>
-      </div>
+    <section class="final-cta" aria-label="Call to action">
+      <span class="eyebrow">Ready when you are</span>
+      <h2>Ready to unwind?</h2>
+      <p class="final-cta-subhead">Lympha Spa &amp; Massage is open six days a week at 1000 73rd Street in West Des Moines. Call to book your session.</p>
+      <a href="tel:5153954455" class="cta-glow" id="ctaGlow" aria-label="Call Lympha Spa and Massage to book your appointment">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 8.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.61 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.16 6.16l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Call (515) 395-4455
+      </a>
     </section>
 
   </main>
@@ -1386,8 +1400,8 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-left">
-      <span class="footer-brand">Lympha Spa &amp; Massage</span>
-      <span class="footer-copy">&copy; 2025 Lympha Spa &amp; Massage. All rights reserved.</span>
+      <div class="footer-logo">Lympha Spa &amp; Massage</div>
+      <p class="footer-copy">&copy; 2025 Lympha Spa &amp; Massage. All rights reserved.</p>
     </div>
     <div class="footer-right">
       Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
@@ -1397,41 +1411,49 @@
   <script defer>
     (function () {
 
-      // ── Scroll Progress Bar ──
-      const progressBar = document.getElementById('scrollProgress');
+      // ---- PROGRESS BAR ----
+      const progressBar = document.getElementById('progressBar');
       function updateProgress() {
-        const scrollY = window.scrollY;
         const docH = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docH > 0 ? (scrollY / docH) * 100 : 0;
+        const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
         progressBar.style.width = pct + '%';
       }
       window.addEventListener('scroll', updateProgress, { passive: true });
 
-      // ── Hero Word Stagger ──
-      const h1 = document.getElementById('heroHeadline');
+      // ---- HERO H1 WORD STAGGER ----
+      const h1 = document.getElementById('heroH1');
       if (h1) {
         const raw = h1.innerHTML;
-        // Split on spaces but preserve &amp;
-        const parts = raw.split(/(\s+)/);
-        let html = '';
-        let wordIndex = 0;
-        parts.forEach(part => {
-          if (part.trim() === '') {
-            html += part;
-          } else {
-            html += `<span class="word" style="transition-delay:${wordIndex * 60}ms">${part}</span>`;
-            wordIndex++;
-          }
+        const words = raw.split(' ');
+        h1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+        const wordSpans = h1.querySelectorAll('.word');
+        wordSpans.forEach((span, i) => {
+          setTimeout(() => {
+            span.classList.add('visible');
+          }, 120 + i * 60);
         });
-        h1.innerHTML = html;
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            h1.querySelectorAll('.word').forEach(w => w.classList.add('visible'));
-          });
-        });
+        const subhead = document.getElementById('heroSubhead');
+        const btns = document.getElementById('heroButtons');
+        setTimeout(() => { if (subhead) subhead.classList.add('visible'); }, 120 + wordSpans.length * 60 + 80);
+        setTimeout(() => { if (btns) btns.classList.add('visible'); }, 120 + wordSpans.length * 60 + 200);
       }
 
-      // ── IntersectionObserver Fade-Up ──
+      // ---- HERO PARALLAX ----
+      const isTouchOnly = window.matchMedia('(hover: none)').matches;
+      if (!isTouchOnly) {
+        const heroBg = document.querySelector('.hero-bg-layer');
+        function onHeroScroll() {
+          const heroEl = document.querySelector('.hero');
+          if (!heroEl) return;
+          const rect = heroEl.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          const offset = window.scrollY * 0.3;
+          if (heroBg) heroBg.style.backgroundPositionY = offset + 'px';
+        }
+        window.addEventListener('scroll', onHeroScroll, { passive: true });
+      }
+
+      // ---- INTERSECTION OBSERVER FADE UP ----
       const fadeEls = document.querySelectorAll('.fade-up');
       const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -1443,48 +1465,41 @@
       }, { threshold: 0.15 });
       fadeEls.forEach(el => fadeObserver.observe(el));
 
-      // ── Count-Up Animation ──
-      function easeOutCubic(t) {
-        return 1 - Math.pow(1 - t, 3);
-      }
+      // ---- COUNT-UP ----
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
 
       function countUp(el, target, decimals, duration) {
         const start = performance.now();
-        function step(now) {
+        function frame(now) {
           const elapsed = now - start;
           const progress = Math.min(elapsed / duration, 1);
           const eased = easeOutCubic(progress);
           const current = eased * target;
-          el.textContent = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toLocaleString();
-          if (progress < 1) requestAnimationFrame(step);
+          el.textContent = decimals > 0 ? current.toFixed(decimals) : Math.floor(current).toLocaleString();
+          if (progress < 1) requestAnimationFrame(frame);
+          else el.textContent = decimals > 0 ? target.toFixed(decimals) : target.toLocaleString();
         }
-        requestAnimationFrame(step);
+        requestAnimationFrame(frame);
       }
 
-      const statEls = [
-        { el: document.getElementById('stat1'), target: 4.7, decimals: 1 },
-        { el: document.getElementById('stat2'), target: 282, decimals: 0 }
-      ];
-
-      let statsAnimated = false;
       const infoBar = document.querySelector('.info-bar');
-      if (infoBar) {
-        const statsObserver = new IntersectionObserver((entries) => {
-          if (entries[0].isIntersecting && !statsAnimated) {
-            statsAnimated = true;
-            statEls.forEach(s => {
-              if (s.el) countUp(s.el, s.target, s.decimals, 1200);
-            });
+      let countedUp = false;
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countedUp) {
+            countedUp = true;
+            const stat1 = document.getElementById('stat1');
+            const stat2 = document.getElementById('stat2');
+            if (stat1) countUp(stat1, 4.7, 1, 1200);
+            if (stat2) countUp(stat2, 282, 0, 1200);
           }
-        }, { threshold: 0.4 });
-        statsObserver.observe(infoBar);
-      }
+        });
+      }, { threshold: 0.5 });
+      if (infoBar) countObserver.observe(infoBar);
 
-      // ── 3D Tilt on About Boxes ──
-      const tiltBoxes = document.querySelectorAll('.tilt-box');
-      const isTouch = window.matchMedia('(hover: none)').matches;
-
-      if (!isTouch) {
+      // ---- 3D TILT ON ABOUT BOXES ----
+      if (!isTouchOnly) {
+        const tiltBoxes = document.querySelectorAll('[data-tilt]');
         tiltBoxes.forEach(box => {
           box.addEventListener('mousemove', (e) => {
             const rect = box.getBoundingClientRect();
@@ -1502,59 +1517,69 @@
         });
       }
 
-      // ── CTA Cursor Glow ──
-      const glowBtns = document.querySelectorAll('.cta-glow');
-      if (!isTouch) {
-        glowBtns.forEach(btn => {
-          btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
+      // ---- CURSOR GLOW ON CTA ----
+      if (!isTouchOnly) {
+        const ctaGlow = document.getElementById('ctaGlow');
+        if (ctaGlow) {
+          ctaGlow.addEventListener('mousemove', (e) => {
+            const rect = ctaGlow.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            btn.style.setProperty('--x', x + 'px');
-            btn.style.setProperty('--y', y + 'px');
+            ctaGlow.style.setProperty('--x', x + 'px');
+            ctaGlow.style.setProperty('--y', y + 'px');
           });
-        });
-      }
-
-      // ── Parallax on Hero ──
-      if (!isTouch) {
-        const heroBg = document.querySelector('.hero-bg-inner');
-        const heroEl = document.querySelector('.hero');
-
-        if (heroBg && heroEl) {
-          window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
-            if (scrollY < heroBottom) {
-              heroBg.style.transform = `translateY(${scrollY * 0.18}px) scale(1.05)`;
-            }
-          }, { passive: true });
         }
       }
 
-      // ── Highlight today's hours ──
-      const dayMap = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-      const today = dayMap[new Date().getDay()];
-      const todayRow = document.getElementById('row-' + today);
-      if (todayRow) {
-        todayRow.classList.add('today');
-        const timeEl = todayRow.querySelector('.day-time');
-        if (timeEl && !todayRow.classList.contains('closed')) {
-          const origText = timeEl.textContent;
-          timeEl.innerHTML = `<span class="today-dot"></span>${origText}`;
+      // ---- TODAY'S HOURS HIGHLIGHT ----
+      const dayMap = [
+        { id: 'row-sun', day: 0 },
+        { id: 'row-mon', day: 1 },
+        { id: 'row-tue', day: 2 },
+        { id: 'row-wed', day: 3 },
+        { id: 'row-thu', day: 4 },
+        { id: 'row-fri', day: 5 },
+        { id: 'row-sat', day: 6 },
+      ];
+      const today = new Date().getDay();
+      const todayEntry = dayMap.find(d => d.day === today);
+      if (todayEntry) {
+        const row = document.getElementById(todayEntry.id);
+        if (row) {
+          row.classList.add('today-row');
+          const daySpan = row.querySelector('.hours-day');
+          const timeSpan = row.querySelector('.hours-time');
+          if (daySpan && !daySpan.querySelector('.today-dot')) {
+            const dot = document.createElement('span');
+            dot.className = 'today-dot';
+            daySpan.prepend(dot);
+          }
+          if (timeSpan) {
+            timeSpan.classList.add('today');
+          }
         }
       }
 
-      // ── Smooth Scroll ──
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', (e) => {
-          const target = document.querySelector(a.getAttribute('href'));
+      // ---- SMOOTH SCROLL OVERRIDE FOR BANNER OFFSET ----
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
           if (target) {
             e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const bannerH = document.querySelector('.claim-banner') ? document.querySelector('.claim-banner').offsetHeight : 44;
+            const navH = document.querySelector('nav') ? document.querySelector('nav').offsetHeight : 64;
+            const offset = bannerH + navH + 16;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
           }
         });
       });
+
+      // ---- FOOTER YEAR ----
+      const footerCopy = document.querySelector('.footer-copy');
+      if (footerCopy) {
+        footerCopy.innerHTML = footerCopy.innerHTML.replace('2025', new Date().getFullYear());
+      }
 
     })();
   </script>
