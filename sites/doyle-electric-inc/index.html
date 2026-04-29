@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doyle Electric, Inc., Baton Rouge, LA</title>
+<meta name="description" content="Licensed electrical contractor in Baton Rouge, LA. Doyle Electric, Inc. delivers expert residential and commercial electrical work. 5-star rated, 10 verified reviews.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F172A">
+<meta property="og:title" content="Doyle Electric, Inc. | Baton Rouge, LA">
+<meta property="og:description" content="Licensed electrical contractor in Baton Rouge, LA. 5-star rated with 10 verified reviews on Google.">
+<meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Doyle Electric, Inc. | Baton Rouge, LA">
+<meta name="twitter:description" content="Licensed electrical contractor in Baton Rouge, LA. 5-star rated with 10 verified reviews on Google.">
+<meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/hero.jpg">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' fill='%23F59E0B' font-size='18' font-family='Georgia,serif' font-weight='700'>D</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Doyle Electric, Inc.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8221 Goodwood Blvd Suite D",
+    "addressLocality": "Baton Rouge",
+    "addressRegion": "LA",
+    "postalCode": "70806",
+    "addressCountry": "US"
+  },
+  "telephone": "(225) 752-5112",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "10"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+<style>
+:root {
+  --primary: #0F172A;
+  --accent: #F59E0B;
+  --bg: #FFFFFF;
+  --text: #0F172A;
+  --muted: #64748B;
+  --faint: #94A3B8;
+  --border: #E2E8F0;
+  --surface: #F8FAFC;
+  --soft-border: #F1F5F9;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --banner-height: 44px;
+  --nav-height: 68px;
+  --offset: calc(var(--banner-height) + var(--nav-height));
+}
+
+@media (max-width: 767px) {
+  :root {
+    --banner-height: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: none) {
+  .tilt-box { transform: none !important; }
+  .cta-glow::before { display: none; }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* CLAIM BANNER */
+.claim-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background: var(--accent);
+  color: var(--primary);
+  text-align: center;
+  padding: 12px 32px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.claim-banner a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.claim-banner a:hover {
+  opacity: 0.75;
+}
+
+/* SCROLL PROGRESS */
+.scroll-progress {
+  position: fixed;
+  top: var(--banner-height);
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--accent);
+  z-index: 250;
+  transition: width 0.1s linear;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: var(--banner-height);
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 200ms ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--primary);
+  transition: width 250ms ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+  flex-shrink: 0;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15,23,42,0.2);
+}
+
+.nav-cta svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 65vh;
+  max-height: 640px;
+  min-height: 480px;
+  margin-top: calc(var(--banner-height) + var(--nav-height));
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+    url('https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 48px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  text-align: left;
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.05); }
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 16px;
+}
+
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.hero h1 .word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-subhead {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 36px;
+  max-width: 560px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 52px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(245,158,11,0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 32px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.75);
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms cubic-bezier(0.34,1.56,0.64,1);
+  min-height: 52px;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  transform: scale(1.03);
+}
+
+.hero-chevron {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.7);
+  animation: chevronBounce 1.6s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes chevronBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* INFO BAR */
+.info-bar {
+  background: var(--primary);
+  color: #fff;
+  padding: 40px 48px;
+}
+
+.info-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info-stat {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.info-stat + .info-stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.info-stat-number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.info-stat-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ABOUT */
+.section-about {
+  padding: 96px 48px;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 96px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.section-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.body-large {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.about-body-1 {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.about-body-2 {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary);
+  transition: gap 200ms ease;
+}
+
+.about-link:hover {
+  gap: 10px;
+}
+
+.about-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.about-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tilt-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  will-change: transform;
+}
+
+.tilt-box:hover {
+  box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+}
+
+.tilt-box-icon {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.tilt-box-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.tilt-box-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.tilt-box-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* SIGNATURE BAND */
+.signature-band {
+  background: var(--primary);
+  padding: 100px 48px;
+  text-align: center;
+}
+
+.signature-band-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.signature-quote {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+  max-width: 820px;
+  margin: 0 auto 32px;
+}
+
+.signature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+  transition: gap 200ms ease;
+}
+
+.signature-link:hover {
+  gap: 10px;
+}
+
+.signature-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* GALLERY */
+.section-gallery {
+  padding: 96px 48px;
+  background: var(--surface);
+}
+
+.gallery-header {
+  margin-bottom: 48px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* HOURS & CONTACT */
+.section-hours {
+  padding: 96px 48px;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.hours-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-top: 24px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--soft-border);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.hours-time {
+  color: var(--muted);
+}
+
+.hours-row.today .hours-day {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.hours-row.today .hours-time {
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.today-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.hours-time-closed {
+  color: var(--faint);
+}
+
+.contact-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.contact-address {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.contact-phone {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 24px;
+  transition: opacity 200ms ease;
+}
+
+.contact-phone:hover {
+  opacity: 0.75;
+}
+
+.map-embed {
+  width: 100%;
+  height: 360px;
+  border-radius: 16px;
+  border: none;
+  display: block;
+  margin-top: 16px;
+}
+
+/* FINAL CTA */
+.section-cta {
+  background: var(--primary);
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.cta-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.cta-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.cta-subhead {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  max-width: 540px;
+  margin: 0 auto 40px;
+}
+
+.cta-glow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 20px 40px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+  min-height: 60px;
+  overflow: hidden;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(15,23,42,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.cta-glow:hover::before {
+  opacity: 1;
+}
+
+.cta-glow:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 36px rgba(245,158,11,0.45);
+}
+
+.cta-glow svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 40px 48px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.footer-copy {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.footer-right {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-right a {
+  color: var(--primary);
+  font-weight: 600;
+  transition: opacity 200ms ease;
+}
+
+.footer-right a:hover {
+  opacity: 0.7;
+}
+
+/* FADE-UP */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .section-about,
+  .section-gallery,
+  .section-hours,
+  .section-cta {
+    padding: 80px 32px;
+  }
+  .about-grid {
+    gap: 64px;
+  }
+  .hours-grid {
+    gap: 48px;
+  }
+  nav {
+    padding: 0 32px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .claim-banner {
+    font-size: 0.82rem;
+    padding: 10px 16px;
+  }
+
+  nav {
+    padding: 0 20px;
+    height: var(--nav-height);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    height: 75vh;
+    max-height: 640px;
+    min-height: 520px;
+    padding: 40px 20px;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+      url('https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/hero.jpg');
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    line-height: 1.1;
+  }
+
+  .hero-subhead {
+    font-size: 1.05rem;
+    max-width: 92%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-chevron {
+    display: none;
+  }
+
+  .info-bar {
+    padding: 32px 20px;
+  }
+
+  .info-bar-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .info-stat {
+    width: 100%;
+    padding: 18px 0;
+  }
+
+  .info-stat + .info-stat {
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .info-stat + .info-stat::before {
+    display: none;
+  }
+
+  .info-stat-number {
+    font-size: 2.6rem;
+  }
+
+  .section-about {
+    padding: 70px 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-boxes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tilt-box {
+    padding: 22px;
+  }
+
+  .section-h2 {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .signature-band {
+    padding: 70px 20px;
+  }
+
+  .signature-quote {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .section-gallery {
+    padding: 70px 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
+
+  .section-hours {
+    padding: 70px 20px;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .map-embed {
+    height: 280px;
+  }
+
+  .section-cta {
+    padding: 80px 20px;
+  }
+
+  .cta-h2 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .cta-glow {
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+  }
+
+  footer {
+    padding: 32px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero {
+    height: 72vh;
+    max-height: 560px;
+    min-height: 480px;
+    padding: 32px 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .section-about,
+  .section-gallery,
+  .section-hours {
+    padding: 56px 18px;
+  }
+
+  .info-stat-number {
+    font-size: 2.2rem;
+  }
+
+  .tilt-box {
+    padding: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CLAIM BANNER -->
+<div class="claim-banner" role="banner">
+  Built free for Doyle Electric, Inc. by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20doyle-electric-inc%20homepage">Reply to my email.</a>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header>
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">Doyle Electric</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#hours">Contact</a></li>
+    </ul>
+    <a href="tel:+12257525112" class="nav-cta" aria-label="Call Doyle Electric at (225) 752-5112">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (225) 752-5112
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main>
+<section class="hero" aria-label="Doyle Electric hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+      Baton Rouge, LA &nbsp;&middot;&nbsp; Licensed Electrical Contractor
+    </div>
+    <h1 id="heroH1">Doyle Electric, Inc.</h1>
+    <p class="hero-subhead">Serving Goodwood and Greater Baton Rouge with licensed electrical work done right the first time.</p>
+    <div class="hero-buttons">
+      <a href="tel:+12257525112" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+      <a href="#hours" class="btn-secondary">View Hours</a>
+    </div>
+  </div>
+  <div class="hero-chevron" id="heroChevron" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<section class="info-bar" aria-label="Business highlights">
+  <div class="info-bar-inner">
+    <div class="info-stat">
+      <span class="info-stat-number" data-count="5" data-decimals="1" id="stat1">5.0</span>
+      <span class="info-stat-label">Google Rating</span>
+    </div>
+    <div class="info-stat">
+      <span class="info-stat-number" data-count="10" data-decimals="0" id="stat2">10</span>
+      <span class="info-stat-label">Verified Reviews</span>
+    </div>
+    <div class="info-stat">
+      <span class="info-stat-number" style="font-size:2rem; letter-spacing:-0.01em;" id="stat3">Licensed &amp; Insured</span>
+      <span class="info-stat-label">Fully Covered</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-about" id="about" aria-label="About Doyle Electric">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <span class="eyebrow">About</span>
+        <h2 class="section-h2">Baton Rouge's straight-shooting electrical crew on Goodwood Blvd.</h2>
+        <p class="about-body-1">Doyle Electric, Inc. operates out of 8221 Goodwood Blvd and handles residential and commercial electrical projects across Baton Rouge, LA. Every job is completed by licensed electricians who care about the work they leave behind, not just the invoice.</p>
+        <p class="about-body-2">With a perfect 5-star rating across 10 Google reviews, clients in the Goodwood corridor and throughout East Baton Rouge Parish keep calling back. The schedule runs Monday through Friday, 7 AM to 3:30 PM, with the focused hours of a crew that takes quality seriously.</p>
+        <a href="tel:+12257525112" class="about-link">
+          Call (225) 752-5112
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="about-boxes fade-up">
+        <div class="tilt-box" data-tilt>
+          <div class="tilt-box-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="tilt-box-title">Licensed &amp; Insured</div>
+          <div class="tilt-box-desc">Every technician is fully licensed in Louisiana and carries complete liability coverage on every job.</div>
+        </div>
+        <div class="tilt-box" data-tilt>
+          <div class="tilt-box-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="tilt-box-title">Emergency Service</div>
+          <div class="tilt-box-desc">Electrical problems don't wait. Reach Doyle Electric directly for time-sensitive issues across Baton Rouge.</div>
+        </div>
+        <div class="tilt-box" data-tilt>
+          <div class="tilt-box-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="tilt-box-title">Free Estimates</div>
+          <div class="tilt-box-desc">No guesswork on pricing. Get a clear, itemized estimate before any work begins.</div>
+        </div>
+        <div class="tilt-box" data-tilt>
+          <div class="tilt-box-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="tilt-box-title">Quality Guaranteed</div>
+          <div class="tilt-box-desc">Work is done to code and backed by the kind of craftsmanship that earns a 5-star reputation in Louisiana.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE BAND -->
+<section class="signature-band fade-up" aria-label="Customer rating">
+  <div class="container">
+    <span class="signature-band-eyebrow">What customers say</span>
+    <p class="signature-quote">&ldquo;Rated 5 stars by 10 Baton Rouge customers, and counting.&rdquo;</p>
+    <a href="https://www.google.com/search?q=Doyle+Electric+Inc+Baton+Rouge" target="_blank" rel="noopener" class="signature-link">
+      Read our Google reviews
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section-gallery fade-up" id="gallery" aria-label="Work gallery">
+  <div class="container">
+    <div class="gallery-header">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="section-h2">Electrical projects across Baton Rouge, LA.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/gallery-1.jpg" alt="Doyle Electric project in Baton Rouge" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/gallery-2.jpg" alt="Licensed electrical work by Doyle Electric" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://auxoagency.github.io/auxo-sites/sites/doyle-electric-inc/gallery-3.jpg" alt="Doyle Electric, Inc. completed installation" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="section-hours" id="hours" aria-label="Hours and contact">
+  <div class="container">
+    <div class="hours-grid">
+      <div class="fade-up">
+        <span class="eyebrow">Hours</span>
+        <h3 style="font-family:var(--font-body);font-weight:600;font-size:1.5rem;color:var(--text);margin-bottom:0;">Open This Week</h3>
+        <div class="hours-card" role="table" aria-label="Business hours">
+          <div class="hours-row" id="hours-mon" role="row">
+            <span class="hours-day" role="cell">Monday</span>
+            <span class="hours-time" role="cell">7 AM-3:30 PM</span>
+          </div>
+          <div class="hours-row" id="hours-tue" role="row">
+            <span class="hours-day" role="cell">Tuesday</span>
+            <span class="hours-time" role="cell">7 AM-3:30 PM</span>
+          </div>
+          <div class="hours-row" id="hours-wed" role="row">
+            <span class="hours-day" role="cell">Wednesday</span>
+            <span class="hours-time" role="cell">7 AM-3:30 PM</span>
+          </div>
+          <div class="hours-row" id="hours-thu" role="row">
+            <span class="hours-day" role="cell">Thursday</span>
+            <span class="hours-time" role="cell">7 AM-3:30 PM</span>
+          </div>
+          <div class="hours-row" id="hours-fri" role="row">
+            <span class="hours-day" role="cell">Friday</span>
+            <span class="hours-time" role="cell">7 AM-3:30 PM</span>
+          </div>
+          <div class="hours-row" id="hours-sat" role="row">
+            <span class="hours-day" role="cell">Saturday</span>
+            <span class="hours-time-closed hours-time" role="cell">Closed</span>
+          </div>
+          <div class="hours-row" id="hours-sun" role="row">
+            <span class="hours-day" role="cell">Sunday</span>
+            <span class="hours-time-closed hours-time" role="cell">Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <span class="eyebrow">Visit</span>
+        <div class="contact-name">Doyle Electric, Inc.</div>
+        <div class="contact-address">8221 Goodwood Blvd Suite D<br>Baton Rouge, LA 70806</div>
+        <a href="tel:+12257525112" class="contact-phone">(225) 752-5112</a>
+        <iframe
+          class="map-embed"
+          src="https://maps.google.com/maps?q=8221+Goodwood+Blvd+Suite+D+Baton+Rouge+LA+70806&output=embed"
+          title="Doyle Electric, Inc. location on Google Maps"
+          loading="lazy"
+          allowfullscreen
+          aria-label="Map showing Doyle Electric at 8221 Goodwood Blvd, Baton Rouge, LA"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-cta fade-up" aria-label="Call to action">
+  <span class="cta-eyebrow">Ready when you are</span>
+  <h2 class="cta-h2">Need it fixed today?</h2>
+  <p class="cta-subhead">Doyle Electric, Inc. is on Goodwood Blvd in Baton Rouge, LA. Call during business hours and speak directly with the team.</p>
+  <a href="tel:+12257525112" class="cta-glow" aria-label="Call Doyle Electric at (225) 752-5112">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call (225) 752-5112
+  </a>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-name">Doyle Electric, Inc.</span>
+      <span class="footer-copy">&copy; 2025 Doyle Electric, Inc. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
+    </div>
+  </div>
+</footer>
+
+<script defer>
+(function() {
+  'use strict';
+
+  // --- SCROLL PROGRESS ---
+  const progressBar = document.getElementById('scrollProgress');
+  function updateProgress() {
+    const scrollY = window.scrollY;
+    const docH = document.documentElement.scrollHeight;
+    const winH = window.innerHeight;
+    const pct = Math.min(100, (scrollY / (docH - winH)) * 100);
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // --- HERO H1 WORD STAGGER ---
+  const heroH1 = document.getElementById('heroH1');
+  if (heroH1) {
+    const text = heroH1.textContent;
+    const words = text.split(' ');
+    heroH1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+    const spans = heroH1.querySelectorAll('.word');
+    spans.forEach((span, i) => {
+      setTimeout(() => {
+        span.classList.add('visible');
+      }, 200 + i * 60);
+    });
+  }
+
+  // --- PARALLAX HERO ---
+  const heroBg = document.querySelector('.hero-bg');
+  const heroSection = document.querySelector('.hero');
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
+  if (heroBg && supportsHover) {
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      if (scrollY < heroBottom) {
+        heroBg.style.transform = `scale(1.05) translateY(${scrollY * 0.15}px)`;
+      }
+    }, { passive: true });
+  }
+
+  // --- CHEVRON SCROLL ---
+  const chevron = document.getElementById('heroChevron');
+  if (chevron) {
+    chevron.addEventListener('click', function() {
+      const about = document.getElementById('about');
+      if (about) about.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  // --- INTERSECTION OBSERVER FADE-UP ---
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  fadeEls.forEach(function(el) { fadeObserver.observe(el); });
+
+  // --- COUNT-UP ---
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animateCount(el, target, decimals, duration) {
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutCubic(progress);
+      const value = eased * target;
+      el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const statEls = [
+    { el: document.getElementById('stat1'), count: 5, decimals: 1 },
+    { el: document.getElementById('stat2'), count: 10, decimals: 0 }
+  ];
+
+  const infoBar = document.querySelector('.info-bar');
+  let counted = false;
+  const countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !counted) {
+        counted = true;
+        statEls.forEach(function(s) {
+          if (s.el) animateCount(s.el, s.count, s.decimals, 1200);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  if (infoBar) countObserver.observe(infoBar);
+
+  // --- 3D TILT ---
+  const tiltBoxes = document.querySelectorAll('[data-tilt]');
+  const supportsHoverTilt = window.matchMedia('(hover: hover)').matches;
+  if (supportsHoverTilt) {
+    tiltBoxes.forEach(function(box) {
+      box.addEventListener('mousemove', function(e) {
+        const rect = box.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) / (rect.width / 2);
+        const dy = (e.clientY - cy) / (rect.height / 2);
+        const rotX = -dy * 8;
+        const rotY = dx * 8;
+        box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+      });
+      box.addEventListener('mouseleave', function() {
+        box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+  }
+
+  // --- CURSOR GLOW ---
+  const glowBtns = document.querySelectorAll('.cta-glow');
+  glowBtns.forEach(function(btn) {
+    btn.addEventListener('mousemove', function(e) {
+      const rect = btn.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      btn.style.setProperty('--x', x + '%');
+      btn.style.setProperty('--y', y + '%');
+    });
+  });
+
+  // --- HIGHLIGHT TODAY'S HOURS ---
+  const dayMap = ['sun','mon','tue','wed','thu','fri','sat'];
+  const today = new Date().getDay();
+  const todayId = 'hours-' + dayMap[today];
+  const todayRow = document.getElementById(todayId);
+  if (todayRow) {
+    todayRow.classList.add('today');
+    const timeEl = todayRow.querySelector('.hours-time');
+    if (timeEl && !timeEl.classList.contains('hours-time-closed')) {
+      const dot = document.createElement('span');
+      dot.className = 'today-dot';
+      dot.setAttribute('aria-hidden', 'true');
+      timeEl.prepend(dot);
+    }
+  }
+
+  // --- SMOOTH SCROLL ANCHORS ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
