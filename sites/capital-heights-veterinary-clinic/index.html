@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Heights Veterinary Clinic, Baton Rouge, LA</title>
+  <meta name="description" content="Capital Heights Veterinary Clinic in Baton Rouge, LA. Trusted veterinary wellness care rated 5 stars by 181 verified Google reviews. Call (225) 927-7196.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#064E3B">
+  <meta property="og:title" content="Capital Heights Veterinary Clinic, Baton Rouge, LA">
+  <meta property="og:description" content="Trusted veterinary wellness care in Baton Rouge, LA. Rated 5 stars by 181 verified Google reviews. Call (225) 927-7196.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Capital Heights Veterinary Clinic, Baton Rouge, LA">
+  <meta name="twitter:description" content="Trusted veterinary wellness care in Baton Rouge, LA. Rated 5 stars by 181 verified Google reviews.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23064E3B'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='20' fill='white'>C</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Capital Heights Veterinary Clinic",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8221 Goodwood Blvd Suite D",
+      "addressLocality": "Baton Rouge",
+      "addressRegion": "LA",
+      "postalCode": "70806",
+      "addressCountry": "US"
+    },
+    "telephone": "(225) 927-7196",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "181"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #064E3B;
+      --accent: #D4A373;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --banner-height: 44px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 144px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── CLAIM BANNER ── */
+    .claim-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--accent);
+      color: var(--text);
+      padding: 12px 32px;
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.4;
+      height: var(--banner-height);
+    }
+    .claim-banner a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .claim-banner a:hover { opacity: 0.75; }
+
+    /* ── SCROLL PROGRESS ── */
+    .scroll-progress {
+      position: fixed;
+      top: var(--banner-height);
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--primary);
+      z-index: 1000;
+      transition: width 0.1s linear;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: var(--banner-height);
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.97rem;
+      color: var(--text);
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(6,78,59,0.3);
+    }
+    .nav-phone svg { flex-shrink: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+    .hero-bg-zoom {
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero .eyebrow {
+      color: rgba(255,255,255,0.85);
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-sub {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.5;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 52px;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(212,163,115,0.5);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease, border-color 200ms ease;
+      min-height: 52px;
+    }
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+    .chevron-down {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(255,255,255,0.7);
+      animation: chevronBounce 1.6s ease-in-out infinite;
+    }
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ── INFO BAR ── */
+    .info-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 48px;
+    }
+    .info-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr 1px 1fr;
+      align-items: center;
+      gap: 0;
+    }
+    .info-bar-divider {
+      background: rgba(255,255,255,0.15);
+      height: 60px;
+      width: 1px;
+    }
+    .info-stat {
+      text-align: center;
+      padding: 0 32px;
+    }
+    .info-stat-number {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: #fff;
+    }
+    .info-stat-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    /* ── GALLERY ── */
+    .gallery-section {
+      padding: 96px 48px;
+      background: var(--surface);
+    }
+    .gallery-section .section-eyebrow {
+      margin-bottom: 16px;
+    }
+    .gallery-section h2 {
+      margin-bottom: 48px;
+    }
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      padding: 96px 48px;
+      background: var(--bg);
+    }
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .body-large {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .about-text p:last-of-type { margin-bottom: 32px; }
+    .inline-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1px;
+      transition: opacity 200ms ease;
+    }
+    .inline-link:hover { opacity: 0.7; }
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      will-change: transform;
+      cursor: default;
+    }
+    .about-box:hover {
+      box-shadow: 0 12px 32px rgba(6,78,59,0.1);
+    }
+    .about-box-icon {
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+    .about-box h4 {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .about-box p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ── SIGNATURE BAND ── */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+    .signature-band .eyebrow {
+      color: var(--accent);
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .signature-band .pull-quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+      margin: 0 auto 32px;
+    }
+    .signature-band .pull-quote em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .reviews-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 2px;
+      transition: opacity 200ms ease;
+    }
+    .reviews-link:hover { opacity: 0.75; }
+
+    /* ── HOURS & CONTACT ── */
+    .hours-section {
+      padding: 96px 48px;
+      background: var(--surface);
+    }
+    .hours-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 24px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 0.97rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { font-weight: 500; color: var(--text); }
+    .hours-time { color: var(--muted); }
+    .hours-row.today .hours-day { font-weight: 700; color: var(--primary); }
+    .hours-row.today .hours-time { font-weight: 700; color: var(--primary); }
+    .hours-row.today-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .today-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: inline-block;
+    }
+    .hours-closed { color: var(--faint); }
+    .contact-col h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .contact-address {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .contact-phone {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 24px;
+      transition: opacity 200ms;
+    }
+    .contact-phone:hover { opacity: 0.75; }
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+    .final-cta .eyebrow {
+      color: var(--accent);
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .final-cta h2 {
+      color: #fff;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 20px;
+    }
+    .final-cta .sub {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .cta-glow {
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,78,59,0.18) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      left: var(--x, 50%);
+      top: var(--y, 50%);
+      pointer-events: none;
+      transition: left 0.1s, top 0.1s;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-left {}
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .footer-right {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 200ms;
+    }
+    .footer-right a:hover { opacity: 0.7; }
+
+    /* ── FADE-UP ANIMATION ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── HOURS SECTION HEADER ── */
+    .hours-col .section-eyebrow { display: block; margin-bottom: 8px; }
+    .hours-col h3.hours-heading {
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0;
+    }
+    .contact-col .section-eyebrow { display: block; margin-bottom: 8px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .about-section,
+      .hours-section,
+      .gallery-section {
+        padding: 80px 32px;
+      }
+      .about-inner { gap: 64px; }
+      .hours-inner { gap: 48px; }
+      nav { padding: 16px 32px; }
+      .info-bar { padding: 40px 32px; }
+      .signature-band { padding: 80px 32px; }
+      .final-cta { padding: 100px 32px; }
+      footer { padding: 40px 32px; }
+    }
+
+    @media (max-width: 767px) {
+      :root { --banner-height: 52px; }
+
+      html { scroll-padding-top: 128px; }
+
+      .claim-banner {
+        font-size: 0.82rem;
+        padding: 10px 16px;
+        height: auto;
+        min-height: 52px;
+      }
+
+      nav {
+        padding: 14px 20px;
+      }
+      .nav-logo { font-size: 1.1rem; }
+      .nav-links { display: none; }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/hero.jpg');
+      }
+      .hero-bg-zoom {
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/hero.jpg');
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+      .hero-sub {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      .chevron-down { display: none; }
+
+      .info-bar { padding: 32px 20px; }
+      .info-bar-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .info-bar-divider {
+        height: 1px;
+        width: 100%;
+        margin: 16px 0;
+      }
+      .info-stat { padding: 8px 0; }
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about-section { padding: 70px 20px; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .about-boxes { grid-template-columns: 1fr; }
+      .about-box { padding: 22px; }
+      h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+
+      .signature-band { padding: 70px 20px; }
+      .signature-band .pull-quote { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+
+      .gallery-section { padding: 70px 20px; }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-item { aspect-ratio: 4/3; }
+
+      .hours-section { padding: 70px 20px; }
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .map-embed { height: 280px; }
+
+      .final-cta { padding: 80px 20px; }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+      .final-cta .btn-primary { width: 100%; justify-content: center; }
+
+      footer {
+        padding: 32px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+      .about-section,
+      .gallery-section,
+      .hours-section { padding: 56px 18px; }
+      .info-stat-number { font-size: 2.2rem; }
+      .about-box { padding: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .about-box { transform: none !important; }
+      .cta-glow::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CLAIM BANNER -->
+  <div class="claim-banner" role="banner" aria-label="Site preview notice">
+    Built free for Capital Heights Veterinary Clinic by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20capital-heights-veterinary-clinic%20homepage">Reply to my email.</a>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav aria-label="Main navigation">
+      <span class="nav-logo">Capital Heights Vet</span>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Contact</a></li>
+      </ul>
+      <a href="tel:2259277196" class="nav-phone" aria-label="Call Capital Heights Veterinary Clinic at (225) 927-7196">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 011 2.22 2 2 0 013 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/>
+        </svg>
+        (225) 927-7196
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Capital Heights Veterinary Clinic hero">
+      <div class="hero-bg-zoom" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow" aria-label="Location and type">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Baton Rouge, LA  -  Veterinary Wellness
+        </p>
+        <h1 id="heroHeadline">Capital Heights Veterinary Clinic</h1>
+        <p class="hero-sub">Goodwood Boulevard's neighborhood clinic, where Baton Rouge pets receive genuine, attentive care from a team that knows them by name.</p>
+        <div class="hero-buttons">
+          <a href="tel:2259277196" class="btn-primary cta-glow" aria-label="Call Capital Heights Veterinary Clinic now">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 011 2.22 2 2 0 013 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/>
+            </svg>
+            Call Now
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <div class="chevron-down" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar fade-up" aria-label="Clinic highlights">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-number" data-count="5" data-decimals="1" id="stat1">5.0</span>
+          <span class="info-stat-label">Google Rating</span>
+        </div>
+        <div class="info-bar-divider" aria-hidden="true"></div>
+        <div class="info-stat">
+          <span class="info-stat-number" data-count="181" data-decimals="0" id="stat2">181</span>
+          <span class="info-stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-bar-divider" aria-hidden="true"></div>
+        <div class="info-stat">
+          <span class="info-stat-number" id="stat3" style="font-size:1.7rem;letter-spacing:-0.01em;">Board Certified</span>
+          <span class="info-stat-label">Veterinary Care</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="gallery-section fade-up" id="gallery" aria-label="Clinic photo gallery">
+      <div class="container">
+        <p class="section-eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Inside the Clinic
+        </p>
+        <h2>A space built for Baton Rouge's pets</h2>
+        <div class="gallery-grid" role="list">
+          <div class="gallery-item" role="listitem">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/gallery-1.jpg" alt="Capital Heights Veterinary Clinic interior, Baton Rouge, LA" loading="lazy">
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/gallery-2.jpg" alt="Veterinary exam room at Capital Heights, Goodwood Boulevard" loading="lazy">
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/capital-heights-veterinary-clinic/gallery-3.jpg" alt="Friendly staff and patient care at Capital Heights Veterinary Clinic" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section fade-up" id="about" aria-labelledby="aboutHeading">
+      <div class="about-inner">
+        <div class="about-text">
+          <p class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            About
+          </p>
+          <h2 id="aboutHeading">Baton Rouge's most trusted neighborhood vet, right on Goodwood.</h2>
+          <p>Capital Heights Veterinary Clinic has been a fixture of the Goodwood Boulevard corridor, delivering the kind of unhurried, attentive care that keeps Baton Rouge pet owners coming back year after year. Every appointment gets full attention, not a rushed handoff.</p>
+          <p>With a perfect 5-star rating across 181 verified Google reviews, the reputation here is built on consistency, not marketing. Baton Rouge families trust this clinic because the staff genuinely knows their animals and treats them accordingly.</p>
+          <a href="tel:2259277196" class="inline-link" aria-label="Call Capital Heights Veterinary Clinic">
+            Call (225) 927-7196
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="about-boxes" aria-label="Clinic features">
+          <div class="about-box" id="tilt1" aria-label="Licensed Practitioners">
+            <div class="about-box-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h4>Licensed Practitioners</h4>
+            <p>Board-certified veterinary professionals dedicated to evidence-based care.</p>
+          </div>
+          <div class="about-box" id="tilt2" aria-label="Calming Space">
+            <div class="about-box-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h4>Calming Space</h4>
+            <p>A clinic environment designed to reduce anxiety for pets and their owners.</p>
+          </div>
+          <div class="about-box" id="tilt3" aria-label="Personalized Care">
+            <div class="about-box-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </div>
+            <h4>Personalized Care</h4>
+            <p>Treatment plans tailored to each patient, not a one-size routine.</p>
+          </div>
+          <div class="about-box" id="tilt4" aria-label="Flexible Scheduling">
+            <div class="about-box-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h4>Flexible Scheduling</h4>
+            <p>Monday-Friday hours plus Saturday mornings for Baton Rouge's busy families.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <section class="signature-band fade-up" aria-label="Customer reviews highlight">
+      <p class="eyebrow" style="justify-content:center;color:var(--accent);display:flex;align-items:center;gap:8px;margin-bottom:28px;">
+        <span class="eyebrow-dot" style="background:var(--accent);" aria-hidden="true"></span>
+        What customers say
+      </p>
+      <p class="pull-quote">"Rated <em>5 stars</em> by 181 Baton Rouge customers, and counting."</p>
+      <a href="https://www.google.com/maps/search/Capital+Heights+Veterinary+Clinic+Baton+Rouge" target="_blank" rel="noopener noreferrer" class="reviews-link" aria-label="Read our Google reviews, opens in new tab">
+        Read our Google reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section class="hours-section fade-up" id="hours" aria-labelledby="hoursHeading">
+      <div class="hours-inner">
+        <div class="hours-col">
+          <p class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Hours
+          </p>
+          <h3 class="hours-heading" id="hoursHeading">Open This Week</h3>
+          <div class="hours-card" role="table" aria-label="Weekly hours">
+            <div class="hours-row" id="row-mon" role="row">
+              <span class="hours-day" role="cell">Monday</span>
+              <span class="hours-time" role="cell">8 AM-5:30 PM</span>
+            </div>
+            <div class="hours-row" id="row-tue" role="row">
+              <span class="hours-day" role="cell">Tuesday</span>
+              <span class="hours-time" role="cell">8 AM-5:30 PM</span>
+            </div>
+            <div class="hours-row" id="row-wed" role="row">
+              <span class="hours-day" role="cell">Wednesday</span>
+              <span class="hours-time" role="cell">8 AM-5:30 PM</span>
+            </div>
+            <div class="hours-row" id="row-thu" role="row">
+              <span class="hours-day" role="cell">Thursday</span>
+              <span class="hours-time" role="cell">8 AM-5:30 PM</span>
+            </div>
+            <div class="hours-row" id="row-fri" role="row">
+              <span class="hours-day" role="cell">Friday</span>
+              <span class="hours-time" role="cell">8 AM-5:30 PM</span>
+            </div>
+            <div class="hours-row" id="row-sat" role="row">
+              <span class="hours-day" role="cell">Saturday</span>
+              <span class="hours-time" role="cell">9 AM-12 PM</span>
+            </div>
+            <div class="hours-row" id="row-sun" role="row">
+              <span class="hours-day" role="cell">Sunday</span>
+              <span class="hours-time hours-closed" role="cell">Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-col">
+          <p class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Visit
+          </p>
+          <h3>Capital Heights Veterinary Clinic</h3>
+          <p class="contact-address">8221 Goodwood Blvd Suite D<br>Baton Rouge, LA 70806</p>
+          <a href="tel:2259277196" class="contact-phone" aria-label="Call Capital Heights Veterinary Clinic">(225) 927-7196</a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=8221+Goodwood+Blvd+Suite+D+Baton+Rouge+LA+70806&output=embed"
+            loading="lazy"
+            title="Capital Heights Veterinary Clinic map, 8221 Goodwood Blvd, Baton Rouge, LA"
+            aria-label="Google map showing Capital Heights Veterinary Clinic location"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta fade-up" aria-label="Call to action">
+      <p class="eyebrow" style="justify-content:center;color:var(--accent);display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+        <span class="eyebrow-dot" style="background:var(--accent);" aria-hidden="true"></span>
+        Ready when you are
+      </p>
+      <h2>Ready to unwind?</h2>
+      <p class="sub">Capital Heights Veterinary Clinic is open six days a week on Goodwood Boulevard, Baton Rouge. Your pet deserves attentive care from a team that already knows them.</p>
+      <a href="tel:2259277196" class="btn-primary cta-glow" style="font-size:1.15rem;padding:20px 40px;" aria-label="Call Capital Heights Veterinary Clinic at (225) 927-7196">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 011 2.22 2 2 0 013 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/>
+        </svg>
+        Call (225) 927-7196
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <p class="footer-logo">Capital Heights Veterinary Clinic</p>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> Capital Heights Veterinary Clinic. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer" aria-label="Visit Auxo Agency website">Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    (function() {
+      'use strict';
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+      // Footer year
+      const yearEl = document.getElementById('footerYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Today's hours highlight
+      const dayMap = ['sun','mon','tue','wed','thu','fri','sat'];
+      const todayIndex = new Date().getDay();
+      const todayKey = dayMap[todayIndex];
+      const todayRow = document.getElementById('row-' + todayKey);
+      if (todayRow) {
+        todayRow.classList.add('today');
+        const daySpan = todayRow.querySelector('.hours-day');
+        if (daySpan) {
+          const dot = document.createElement('span');
+          dot.className = 'today-dot';
+          dot.setAttribute('aria-hidden', 'true');
+          daySpan.style.display = 'inline-flex';
+          daySpan.style.alignItems = 'center';
+          daySpan.style.gap = '6px';
+          daySpan.insertBefore(dot, daySpan.firstChild);
+        }
+      }
+
+      // Scroll progress bar
+      const progressBar = document.getElementById('scrollProgress');
+      function updateProgress() {
+        if (!progressBar) return;
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // Hero word-by-word stagger
+      const heroH1 = document.getElementById('heroHeadline');
+      if (heroH1 && !prefersReducedMotion) {
+        const text = heroH1.textContent.trim();
+        const words = text.split(' ');
+        heroH1.innerHTML = words.map(w => `<span class="word" aria-hidden="false">${w}</span>`).join(' ');
+        heroH1.setAttribute('aria-label', text);
+        const wordEls = heroH1.querySelectorAll('.word');
+        wordEls.forEach((el, i) => {
+          setTimeout(() => {
+            el.classList.add('visible');
+          }, 300 + i * 60);
+        });
+      } else if (heroH1) {
+        const wordEls = heroH1.querySelectorAll('.word');
+        wordEls.forEach(el => el.classList.add('visible'));
+      }
+
+      // Parallax on hero
+      if (!isTouchDevice && !prefersReducedMotion) {
+        const hero = document.querySelector('.hero');
+        const heroBg = document.querySelector('.hero-bg-zoom');
+        function handleParallax() {
+          if (!hero) return;
+          const rect = hero.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          const offset = window.scrollY * 0.3;
+          if (heroBg) heroBg.style.backgroundPositionY = offset + 'px';
+        }
+        window.addEventListener('scroll', handleParallax, { passive: true });
+      }
+
+      // IntersectionObserver fade-up
+      const fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        fadeEls.forEach(el => observer.observe(el));
+      } else {
+        fadeEls.forEach(el => el.classList.add('visible'));
+      }
+
+      // Count-up animation
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function countUp(el, target, decimals, duration) {
+        const start = performance.now();
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const value = eased * target;
+          el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.floor(value).toString();
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const infoBar = document.querySelector('.info-bar');
+      let countUpDone = false;
+      if (infoBar && 'IntersectionObserver' in window && !prefersReducedMotion) {
+        const countObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !countUpDone) {
+              countUpDone = true;
+              const stat1El = document.getElementById('stat1');
+              const stat2El = document.getElementById('stat2');
+              if (stat1El) countUp(stat1El, 5, 1, 1200);
+              if (stat2El) countUp(stat2El, 181, 0, 1200);
+              countObserver.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
+        countObserver.observe(infoBar);
+      }
+
+      // 3D tilt on about boxes
+      if (!isTouchDevice && !prefersReducedMotion) {
+        const tiltBoxes = document.querySelectorAll('.about-box');
+        tiltBoxes.forEach(box => {
+          box.addEventListener('mousemove', (e) => {
+            const rect = box.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = e.clientX - cx;
+            const dy = e.clientY - cy;
+            const maxDeg = 8;
+            const rx = -(dy / (rect.height / 2)) * maxDeg;
+            const ry = (dx / (rect.width / 2)) * maxDeg;
+            box.style.transform = `perspective(600px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.02)`;
+            box.style.transition = 'transform 100ms ease-out';
+          });
+          box.addEventListener('mouseleave', () => {
+            box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
+            box.style.transition = 'transform 300ms ease-out';
+          });
+        });
+      }
+
+      // Cursor glow on CTA buttons
+      if (!isTouchDevice) {
+        const glowBtns = document.querySelectorAll('.cta-glow');
+        glowBtns.forEach(btn => {
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            btn.style.setProperty('--x', x + '%');
+            btn.style.setProperty('--y', y + '%');
+          });
+        });
+      }
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href').slice(1);
+          const target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
