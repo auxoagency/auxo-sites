@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>La Divina Italian Coffee Cafe, Baton Rouge, LA</title>
+  <meta name="description" content="La Divina Italian Coffee Cafe in Baton Rouge, LA. Rated 5 stars by 424 verified Google reviewers. Italian espresso, fresh pastries, and a cozy cafe on Goodwood Blvd.">
+  <meta name="theme-color" content="#7C2D12">
+  <meta property="og:title" content="La Divina Italian Coffee Cafe, Baton Rouge, LA">
+  <meta property="og:description" content="Rated 5 stars by 424 Baton Rouge customers. Italian espresso, house-made pastries, and a cozy corner cafe on Goodwood Blvd.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Divina Italian Coffee Cafe, Baton Rouge, LA">
+  <meta name="twitter:description" content="Rated 5 stars by 424 Baton Rouge customers. Italian espresso and house-made pastries on Goodwood Blvd.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C2D12'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='20' fill='white'>L</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "La Divina Italian Coffee Cafe",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8221 Goodwood Blvd Suite D",
+      "addressLocality": "Baton Rouge",
+      "addressRegion": "LA",
+      "postalCode": "70806",
+      "addressCountry": "US"
+    },
+    "telephone": "(225) 771-8488",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "424"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Sunday"],"opens":"07:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"07:00","closes":"21:00"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <style>
+    :root {
+      --primary: #7C2D12;
+      --accent: #F59E0B;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --banner-height: 44px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .tilt-box { transform: none !important; }
+      .cta-glow::before { display: none; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 144px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ===================== CLAIM BANNER ===================== */
+    .claim-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 12px 32px;
+      z-index: 300;
+      line-height: 1.4;
+    }
+
+    .claim-banner a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .claim-banner a:hover {
+      opacity: 0.75;
+    }
+
+    /* ===================== SCROLL PROGRESS ===================== */
+    .scroll-progress {
+      position: fixed;
+      top: var(--banner-height);
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--primary);
+      z-index: 250;
+      transition: width 0.1s linear;
+    }
+
+    /* ===================== NAV ===================== */
+    nav {
+      position: sticky;
+      top: var(--banner-height);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 200;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      white-space: nowrap;
+    }
+
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(124, 45, 18, 0.3);
+      color: #fff;
+    }
+
+    .nav-phone svg {
+      flex-shrink: 0;
+    }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+
+    @keyframes kenburns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: kenburns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    .hero {
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+      background-size: auto;
+      background-color: transparent;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: kenburns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+    }
+
+    .hero .eyebrow {
+      color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subhead {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 52px;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 13px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), background 200ms ease, border-color 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #fff;
+    }
+
+    .cta-glow {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at center, rgba(124, 45, 18, 0.18) 0%, transparent 70%);
+      left: calc(var(--x, 50%) - 120px);
+      top: calc(var(--y, 50%) - 120px);
+      pointer-events: none;
+      border-radius: 50%;
+      transition: left 0.1s, top 0.1s;
+    }
+
+    @keyframes chevron-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: chevron-bounce 1.6s ease-in-out infinite;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ===================== INFO BAR ===================== */
+    .info-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 48px;
+    }
+
+    .info-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .info-stat {
+      text-align: center;
+      flex: 1;
+      padding: 0 24px;
+    }
+
+    .info-stat + .info-stat {
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      display: block;
+    }
+
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* ===================== MARQUEE ===================== */
+    .marquee-section {
+      background: var(--surface);
+      padding: 64px 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .marquee-pill {
+      white-space: nowrap;
+      background: #fff;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+
+    /* ===================== SECTIONS ===================== */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Info bar and marquee don't fade (they're full-bleed) */
+    .info-bar, .marquee-section {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ===================== ABOUT ===================== */
+    .about-section {
+      padding: 96px 48px;
+    }
+
+    .about-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .about-eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .about-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .about-body p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-top: 12px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms ease;
+    }
+
+    .about-link:hover {
+      border-color: var(--primary);
+    }
+
+    .info-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .tilt-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      cursor: default;
+    }
+
+    .tilt-box:hover {
+      box-shadow: 0 12px 40px rgba(124, 45, 18, 0.1);
+    }
+
+    .tilt-box svg {
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      margin-bottom: 14px;
+    }
+
+    .tilt-box h4 {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .tilt-box p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    /* ===================== SIGNATURE BAND ===================== */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    .signature-band .eyebrow {
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .signature-band blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #fff;
+      max-width: 900px;
+      margin: 0 auto 32px;
+    }
+
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms ease;
+    }
+
+    .signature-link:hover {
+      border-color: var(--accent);
+    }
+
+    /* ===================== GALLERY ===================== */
+    .gallery-section {
+      padding: 96px 48px;
+    }
+
+    .gallery-header {
+      max-width: 1200px;
+      margin: 0 auto 48px;
+    }
+
+    .gallery-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-top: 16px;
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ===================== HOURS ===================== */
+    .hours-section {
+      padding: 96px 48px;
+      background: var(--surface);
+    }
+
+    .hours-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 24px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 1rem;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-row .day {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .hours-row .time {
+      font-weight: 400;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hours-row.today .day {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hours-row.today .time {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .today-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hours-h3 {
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text);
+      margin-top: 16px;
+    }
+
+    .visit-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+
+    .visit-address {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .visit-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .visit-phone:hover {
+      opacity: 0.8;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: none;
+      display: block;
+    }
+
+    /* ===================== FINAL CTA ===================== */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    .final-cta .eyebrow {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0 auto 40px;
+    }
+
+    .btn-cta-final {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 20px 40px;
+      border-radius: 999px;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 60px;
+    }
+
+    .btn-cta-final:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px rgba(245, 158, 11, 0.45), 0 8px 24px rgba(245, 158, 11, 0.3);
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left {}
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .footer-right {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .footer-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===================== TABLET ===================== */
+    @media (max-width: 1024px) {
+      .about-section, .gallery-section, .hours-section {
+        padding: 80px 32px;
+      }
+
+      .final-cta {
+        padding: 100px 32px;
+      }
+
+      .about-grid {
+        gap: 64px;
+      }
+
+      .hours-grid {
+        gap: 48px;
+      }
+
+      nav {
+        padding: 18px 32px;
+      }
+    }
+
+    /* ===================== MOBILE ===================== */
+    @media (max-width: 767px) {
+      :root {
+        --banner-height: 52px;
+      }
+
+      html {
+        scroll-padding-top: 156px;
+      }
+
+      .claim-banner {
+        font-size: 0.82rem;
+        padding: 10px 16px;
+      }
+
+      nav {
+        padding: 14px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-logo {
+        font-size: 1.1rem;
+      }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        align-items: flex-end;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%);
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero-subhead {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 14px;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-chevron {
+        display: none;
+      }
+
+      .info-bar {
+        padding: 32px 20px;
+      }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .info-stat {
+        width: 100%;
+        padding: 18px 0;
+        border-left: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .info-stat:last-child {
+        border-bottom: none;
+      }
+
+      .stat-number {
+        font-size: 2.6rem;
+      }
+
+      .about-section {
+        padding: 70px 20px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .info-boxes {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .tilt-box {
+        padding: 22px;
+      }
+
+      .signature-band {
+        padding: 70px 20px;
+      }
+
+      .signature-band blockquote {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      .gallery-section {
+        padding: 70px 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        aspect-ratio: 4 / 3;
+      }
+
+      .hours-section {
+        padding: 70px 20px;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-embed {
+        height: 280px;
+      }
+
+      .final-cta {
+        padding: 80px 20px;
+      }
+
+      .final-cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+
+      .btn-cta-final {
+        width: 100%;
+        justify-content: center;
+      }
+
+      footer {
+        padding: 40px 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+
+      .marquee-pill {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+      }
+
+      .marquee-track {
+        animation-duration: 24s;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
+
+      .about-section, .gallery-section, .hours-section {
+        padding: 56px 18px;
+      }
+
+      .stat-number {
+        font-size: 2.2rem;
+      }
+
+      .tilt-box {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CLAIM BANNER -->
+  <div class="claim-banner" role="banner">
+    Built free for La Divina Italian Coffee Cafe by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20la-divina-italian-coffee-cafe%20homepage">Reply to my email.</a>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav aria-label="Main navigation">
+      <span class="nav-logo">La Divina</span>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Contact</a></li>
+      </ul>
+      <a href="tel:+12257718488" class="nav-phone" aria-label="Call La Divina Italian Coffee Cafe at (225) 771-8488">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (225) 771-8488
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero visible" aria-label="Hero">
+      <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Baton Rouge, LA &nbsp;·&nbsp; Italian Coffee Cafe
+        </p>
+        <h1 id="heroH1">La Divina Italian Coffee Cafe</h1>
+        <p class="hero-subhead">Espresso, pastries, and a warm room on Goodwood Blvd, open seven days a week.</p>
+        <div class="hero-buttons">
+          <a href="tel:+12257718488" class="btn-primary cta-glow" aria-label="Call La Divina now">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call Now
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <div class="hero-chevron" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar" role="region" aria-label="At a glance">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="stat-number" data-target="5" data-decimals="1" id="stat0">5.0</span>
+          <span class="stat-label">Google Rating</span>
+        </div>
+        <div class="info-stat">
+          <span class="stat-number" data-target="424" data-decimals="0" id="stat1">424</span>
+          <span class="stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-stat">
+          <span class="stat-number" id="stat2" style="font-size:1.9rem; line-height:1.2;">Family<br>Owned</span>
+          <span class="stat-label">Local Favorite</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-pill">Fresh Daily</span>
+        <span class="marquee-pill">House-Made Pastries</span>
+        <span class="marquee-pill">Italian Espresso</span>
+        <span class="marquee-pill">Local Ingredients</span>
+        <span class="marquee-pill">Cozy Atmosphere</span>
+        <span class="marquee-pill">Catering Available</span>
+        <span class="marquee-pill">Open 7 Days</span>
+        <span class="marquee-pill">Goodwood Blvd</span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee-pill">Fresh Daily</span>
+        <span class="marquee-pill">House-Made Pastries</span>
+        <span class="marquee-pill">Italian Espresso</span>
+        <span class="marquee-pill">Local Ingredients</span>
+        <span class="marquee-pill">Cozy Atmosphere</span>
+        <span class="marquee-pill">Catering Available</span>
+        <span class="marquee-pill">Open 7 Days</span>
+        <span class="marquee-pill">Goodwood Blvd</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about" aria-label="About La Divina">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow about-eyebrow">About</p>
+          <h2 class="about-h2">Baton Rouge's corner cafe for real Italian coffee.</h2>
+          <div class="about-body">
+            <p>La Divina Italian Coffee Cafe brings authentic espresso craft to the Goodwood corridor, where a small team pulls shots, bakes fresh daily, and keeps things genuinely welcoming from the first cup to the last. This is not a chain. The recipes are real, and the room feels like it.</p>
+            <p>With a 5-star rating across 424 verified Google reviews, La Divina has quietly become one of the most trusted cafes in Baton Rouge, LA. Guests come for the cortado, stay for the pastries, and come back because the staff actually knows their name.</p>
+          </div>
+          <a href="tel:+12257718488" class="about-link">
+            Call (225) 771-8488
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+        <div class="info-boxes" role="list">
+          <div class="tilt-box" role="listitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 12h8M12 8v8"/>
+            </svg>
+            <h4>Fresh Daily</h4>
+            <p>Pastries and baked goods prepared fresh every morning before the doors open at 7 AM.</p>
+          </div>
+          <div class="tilt-box" role="listitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <h4>Locally Sourced</h4>
+            <p>Ingredients chosen to reflect Louisiana's pantry, supporting local suppliers where it counts.</p>
+          </div>
+          <div class="tilt-box" role="listitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v4l-4-4H9a1.994 1.994 0 0 1-1.414-.586m0 0L11 14h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2v4l.586-.586z"/>
+            </svg>
+            <h4>Family Recipes</h4>
+            <p>The espresso program and kitchen menu draw from Italian cafe tradition, not a corporate playbook.</p>
+          </div>
+          <div class="tilt-box" role="listitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <h4>Cozy Atmosphere</h4>
+            <p>A room designed for slow mornings and good conversations, on Goodwood Blvd in Baton Rouge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <section class="signature-band" aria-label="Customer reviews highlight">
+      <span class="eyebrow">What customers say</span>
+      <blockquote>
+        &#8220;Rated 5 stars by 424 Baton Rouge customers, and counting.&#8221;
+      </blockquote>
+      <a href="https://www.google.com/maps/search/La+Divina+Italian+Coffee+Cafe+Baton+Rouge" target="_blank" rel="noopener noreferrer" class="signature-link" aria-label="Read our Google reviews (opens in new tab)">
+        Read our Google reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery" aria-label="Gallery">
+      <div class="gallery-header">
+        <p class="eyebrow">Inside La Divina</p>
+        <h2 class="gallery-h2">See the cafe on Goodwood Blvd.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/gallery-1.jpg" alt="La Divina Italian Coffee Cafe interior, Baton Rouge" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/gallery-2.jpg" alt="Espresso and pastries at La Divina, Baton Rouge LA" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/la-divina-italian-coffee-cafe/gallery-3.jpg" alt="Coffee drinks at La Divina Italian Coffee Cafe" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section class="hours-section" id="hours" aria-label="Hours and contact">
+      <div class="hours-grid">
+        <div>
+          <p class="eyebrow">Hours</p>
+          <h3 class="hours-h3">Open This Week</h3>
+          <div class="hours-card" id="hoursCard">
+            <!-- Hours rendered by JS -->
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Visit</p>
+          <p class="visit-name">La Divina Italian Coffee Cafe</p>
+          <p class="visit-address">8221 Goodwood Blvd Suite D<br>Baton Rouge, LA 70806</p>
+          <a href="tel:+12257718488" class="visit-phone" aria-label="Call (225) 771-8488">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            (225) 771-8488
+          </a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=8221+Goodwood+Blvd+Suite+D+Baton+Rouge+LA+70806&output=embed"
+            title="La Divina Italian Coffee Cafe location map"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" aria-label="Call to action">
+      <span class="eyebrow">Ready when you are</span>
+      <h2>Hungry? Stop by today.</h2>
+      <p class="final-cta-sub">La Divina Italian Coffee Cafe is open seven days a week on Goodwood Blvd in Baton Rouge, LA. Call ahead or just come in.</p>
+      <a href="tel:+12257718488" class="btn-cta-final cta-glow" aria-label="Call La Divina at (225) 771-8488">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Call (225) 771-8488
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-logo">La Divina Italian Coffee Cafe</p>
+        <p class="footer-copy">&copy; 2025 La Divina Italian Coffee Cafe. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer>
+    (function () {
+
+      // ===================== SCROLL PROGRESS =====================
+      const progressBar = document.getElementById('scrollProgress');
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // ===================== HOURS RENDERING =====================
+      const hoursData = [
+        { day: 'Monday', open: '7:00 AM', close: '8:00 PM' },
+        { day: 'Tuesday', open: '7:00 AM', close: '8:00 PM' },
+        { day: 'Wednesday', open: '7:00 AM', close: '8:00 PM' },
+        { day: 'Thursday', open: '7:00 AM', close: '9:00 PM' },
+        { day: 'Friday', open: '7:00 AM', close: '9:00 PM' },
+        { day: 'Saturday', open: '7:00 AM', close: '9:00 PM' },
+        { day: 'Sunday', open: '7:00 AM', close: '8:00 PM' }
+      ];
+
+      const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const todayName = dayNames[new Date().getDay()];
+
+      function formatTime(t) {
+        // Convert "7:00 AM" => "7 AM", "8:00 PM" => "8 PM"
+        return t.replace(/:00/g, '').replace(/\s/g, ' ');
+      }
+
+      const hoursCard = document.getElementById('hoursCard');
+      if (hoursCard) {
+        hoursData.forEach(row => {
+          const isToday = row.day === todayName;
+          const div = document.createElement('div');
+          div.className = 'hours-row' + (isToday ? ' today' : '');
+          div.innerHTML = `
+            <span class="day">${row.day}</span>
+            <span class="time">
+              ${isToday ? '<span class="today-dot" aria-hidden="true"></span>' : ''}
+              ${formatTime(row.open)}-${formatTime(row.close)}
+            </span>
+          `;
+          hoursCard.appendChild(div);
+        });
+      }
+
+      // ===================== HERO H1 WORD STAGGER =====================
+      const heroH1 = document.getElementById('heroH1');
+      if (heroH1) {
+        const text = heroH1.textContent;
+        const words = text.split(' ');
+        heroH1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+        const wordSpans = heroH1.querySelectorAll('.word');
+        setTimeout(() => {
+          wordSpans.forEach((span, i) => {
+            setTimeout(() => {
+              span.classList.add('visible');
+            }, i * 60);
+          });
+        }, 200);
+      }
+
+      // ===================== INTERSECTION OBSERVER (FADE UP) =====================
+      const fadeTargets = document.querySelectorAll('section:not(.hero):not(.info-bar):not(.marquee-section)');
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      fadeTargets.forEach(el => fadeObserver.observe(el));
+
+      // Also observe info bar for count-up
+      const infoBar = document.querySelector('.info-bar');
+
+      // ===================== COUNT-UP ANIMATION =====================
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function countUp(el, target, decimals, duration) {
+        const start = performance.now();
+        function tick(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const value = eased * target;
+          el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toLocaleString();
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      let countUpDone = false;
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countUpDone) {
+            countUpDone = true;
+            const stat0 = document.getElementById('stat0');
+            const stat1 = document.getElementById('stat1');
+            if (stat0) countUp(stat0, 5, 1, 1200);
+            if (stat1) countUp(stat1, 424, 0, 1200);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      if (infoBar) countObserver.observe(infoBar);
+
+      // ===================== 3D TILT ON ABOUT BOXES =====================
+      const tiltBoxes = document.querySelectorAll('.tilt-box');
+      if (window.matchMedia('(hover: hover)').matches) {
+        tiltBoxes.forEach(box => {
+          box.addEventListener('mousemove', (e) => {
+            const rect = box.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = e.clientX - cx;
+            const dy = e.clientY - cy;
+            const rotY = (dx / (rect.width / 2)) * 8;
+            const rotX = -(dy / (rect.height / 2)) * 8;
+            box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(4px)`;
+          });
+          box.addEventListener('mouseleave', () => {
+            box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+          });
+        });
+      }
+
+      // ===================== CURSOR GLOW ON CTAS =====================
+      const glowButtons = document.querySelectorAll('.cta-glow');
+      glowButtons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          btn.style.setProperty('--x', x + 'px');
+          btn.style.setProperty('--y', y + 'px');
+        });
+      });
+
+      // ===================== PARALLAX ON HERO =====================
+      const heroBg = document.getElementById('heroBg');
+      const heroSection = document.querySelector('.hero');
+      let parallaxEnabled = !window.matchMedia('(hover: none)').matches;
+
+      if (parallaxEnabled && heroBg && heroSection) {
+        function updateParallax() {
+          const scrollY = window.scrollY;
+          const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+          if (scrollY < heroBottom) {
+            heroBg.style.backgroundPositionY = (scrollY * 0.3) + 'px';
+          }
+        }
+        window.addEventListener('scroll', updateParallax, { passive: true });
+      }
+
+      // ===================== SMOOTH SCROLL FOR ANCHOR LINKS =====================
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // ===================== MARQUEE PAUSE ON HOVER (CSS handles) =====================
+      // Already handled via CSS hover state
+
+      // ===================== BANNER HEIGHT ADJUSTMENT =====================
+      function updateBannerHeight() {
+        const banner = document.querySelector('.claim-banner');
+        if (banner) {
+          const h = banner.offsetHeight;
+          document.documentElement.style.setProperty('--banner-height', h + 'px');
+          const scrollProg = document.getElementById('scrollProgress');
+          if (scrollProg) scrollProg.style.top = h + 'px';
+        }
+      }
+      updateBannerHeight();
+      window.addEventListener('resize', updateBannerHeight);
+
+    })();
+  </script>
+
+</body>
+</html>
