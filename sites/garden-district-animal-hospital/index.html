@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garden District Animal Hospital, Baton Rouge, LA</title>
+<meta name="description" content="Garden District Animal Hospital in Baton Rouge, LA  -  5-star veterinary care with 263 verified Google reviews. Compassionate, thorough care for your pets.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F172A">
+<meta property="og:title" content="Garden District Animal Hospital, Baton Rouge, LA">
+<meta property="og:description" content="5-star veterinary care on Goodwood Blvd in Baton Rouge. Trusted by 263 families across the Garden District and beyond.">
+<meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Garden District Animal Hospital, Baton Rouge, LA">
+<meta name="twitter:description" content="5-star veterinary care on Goodwood Blvd in Baton Rouge. Trusted by 263 families across the Garden District and beyond.">
+<meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/hero.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-size='20' font-family='Georgia,serif' font-weight='700' fill='white'>G</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Garden District Animal Hospital",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8221 Goodwood Blvd Suite D",
+    "addressLocality": "Baton Rouge",
+    "addressRegion": "LA",
+    "postalCode": "70806",
+    "addressCountry": "US"
+  },
+  "telephone": "(225) 381-9661",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "263"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"13:00"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+<style>
+:root {
+  --primary: #0F172A;
+  --accent: #3B82F6;
+  --bg: #FFFFFF;
+  --text: #0F172A;
+  --muted: #64748B;
+  --faint: #94A3B8;
+  --border: #E2E8F0;
+  --surface: #F8FAFC;
+  --soft-border: #F1F5F9;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --banner-height: 44px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* CLAIM BANNER */
+.claim-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 12px 32px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  line-height: 1.4;
+  min-height: var(--banner-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.claim-banner a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  transition: border-color 200ms;
+}
+.claim-banner a:hover {
+  border-color: #fff;
+}
+
+/* SCROLL PROGRESS */
+.scroll-progress {
+  position: fixed;
+  top: var(--banner-height);
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--primary);
+  z-index: 1000;
+  transition: width 80ms linear;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: var(--banner-height);
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 200ms;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 250ms ease;
+}
+.nav-links a:hover { color: var(--primary); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms;
+  flex-shrink: 0;
+}
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15,23,42,0.18);
+}
+.nav-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 65vh;
+  max-height: 640px;
+  min-height: 480px;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+    url('https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 48px;
+  overflow: hidden;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  from { background-size: 100%; }
+  to { background-size: 105%; }
+}
+
+.hero-content {
+  max-width: 720px;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.eyebrow.light {
+  color: rgba(255,255,255,0.85);
+}
+
+.eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  margin-right: 0.22em;
+}
+.hero h1 .word:last-child { margin-right: 0; }
+.hero h1 .word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-subhead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 32px;
+  max-width: 540px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms;
+  position: relative;
+  overflow: hidden;
+  min-height: 52px;
+}
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 28px rgba(59,130,246,0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 30px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.75);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), background 200ms, border-color 200ms;
+  min-height: 52px;
+}
+.btn-secondary:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+}
+
+.hero-chevron {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  animation: chevronBounce 1.6s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@keyframes chevronBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* INFO BAR */
+.info-bar {
+  background: var(--primary);
+  color: #fff;
+  padding: 40px 48px;
+}
+
+.info-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+}
+
+.info-stat {
+  flex: 1;
+  text-align: center;
+  padding: 0 32px;
+  position: relative;
+}
+
+.info-stat + .info-stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.info-stat-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  display: block;
+}
+
+.info-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-top: 8px;
+  display: block;
+}
+
+/* FADE-UP ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABOUT */
+#about {
+  padding: 96px 48px;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 96px;
+  align-items: center;
+}
+
+.about-text .eyebrow {
+  margin-bottom: 16px;
+}
+
+.about-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 12px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 2px;
+  transition: border-color 200ms, gap 200ms;
+}
+.inline-link:hover {
+  border-color: var(--primary);
+  gap: 10px;
+}
+
+.about-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.info-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  cursor: default;
+  will-change: transform;
+}
+.info-box:hover {
+  box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+}
+
+.info-box-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.info-box h4 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.info-box p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* SIGNATURE BAND */
+.signature-band {
+  background: var(--primary);
+  padding: 100px 48px;
+  text-align: center;
+}
+
+.signature-band .eyebrow {
+  color: var(--accent);
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.signature-band .pull-quote {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+
+.signature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-bottom: 1px solid rgba(59,130,246,0.4);
+  padding-bottom: 2px;
+  transition: gap 200ms, border-color 200ms;
+}
+.signature-link:hover {
+  gap: 12px;
+  border-color: var(--accent);
+}
+
+/* GALLERY */
+#gallery {
+  padding: 96px 48px;
+  background: var(--surface);
+}
+
+.gallery-header {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+}
+
+.gallery-header .eyebrow { margin-bottom: 16px; }
+
+.gallery-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-item {
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* HOURS & CONTACT */
+#hours {
+  padding: 96px 48px;
+}
+
+.hours-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.hours-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 20px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--soft-border);
+  font-size: 1rem;
+}
+.hours-row:last-child { border-bottom: none; }
+
+.hours-day {
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hours-today-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.hours-time {
+  font-weight: 400;
+  color: var(--muted);
+}
+.hours-time.today {
+  font-weight: 700;
+  color: var(--primary);
+}
+.hours-time.closed {
+  color: var(--faint);
+}
+
+.contact-col .eyebrow { margin-bottom: 16px; }
+
+.contact-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.contact-detail {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 24px;
+  transition: gap 200ms;
+}
+.contact-phone:hover { gap: 12px; }
+
+.map-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.map-wrap iframe {
+  width: 100%;
+  height: 360px;
+  border: none;
+  display: block;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--primary);
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.final-cta .eyebrow {
+  color: var(--accent);
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.final-cta .subhead {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 540px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.btn-cta-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 20px 40px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms;
+  min-height: 52px;
+}
+.btn-cta-glow::before {
+  content: '';
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: 240px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(15,23,42,0.18) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  border-radius: 50%;
+}
+.btn-cta-glow:hover::before { opacity: 1; }
+.btn-cta-glow:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 36px rgba(59,130,246,0.45);
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-left {}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.footer-copy {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.footer-right {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-right a {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: border-color 200ms;
+}
+.footer-right a:hover {
+  border-color: var(--primary);
+}
+
+/* HOURS SECTION EYEBROW + H3 */
+.hours-col .eyebrow { margin-bottom: 16px; }
+.hours-col h3 {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  #about { padding: 80px 32px; }
+  .about-inner { gap: 64px; }
+  #hours { padding: 80px 32px; }
+  .hours-inner { gap: 48px; }
+  #gallery { padding: 80px 32px; }
+  .signature-band { padding: 80px 32px; }
+  .final-cta { padding: 100px 32px; }
+  nav { padding: 18px 32px; }
+  .info-bar { padding: 40px 32px; }
+}
+
+@media (max-width: 767px) {
+  :root { --banner-height: 52px; }
+
+  html { scroll-padding-top: 120px; }
+
+  .claim-banner {
+    font-size: 0.82rem;
+    padding: 10px 16px;
+    min-height: var(--banner-height);
+  }
+
+  .hero {
+    height: 75vh;
+    max-height: 640px;
+    min-height: 520px;
+    padding: 40px 20px;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+      url('https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/hero.jpg');
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    line-height: 1.1;
+  }
+
+  .hero-subhead {
+    font-size: 1.05rem;
+    max-width: 92%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-chevron { display: none; }
+
+  nav {
+    padding: 14px 20px;
+  }
+
+  .nav-logo { font-size: 1.1rem; }
+  .nav-links { display: none; }
+
+  .info-bar { padding: 32px 20px; }
+  .info-bar-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .info-stat {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+  }
+
+  .info-stat + .info-stat::before {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .info-stat-number { font-size: 2.6rem; }
+
+  #about { padding: 70px 20px; }
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-text p { max-width: 100%; }
+
+  .about-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .info-box { padding: 28px; }
+
+  .signature-band {
+    padding: 70px 20px;
+  }
+
+  .signature-band .pull-quote {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  #gallery { padding: 70px 20px; }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item { aspect-ratio: 4/3; }
+
+  #hours { padding: 70px 20px; }
+  .hours-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .map-wrap iframe { height: 280px; }
+
+  .final-cta {
+    padding: 80px 20px;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .btn-cta-glow {
+    width: 100%;
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  section h2 {
+    font-size: clamp(1.8rem, 6vw, 2.4rem) !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero {
+    height: 72vh;
+    max-height: 560px;
+    min-height: 480px;
+    padding: 32px 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  #about, #hours, #gallery { padding: 56px 18px; }
+  .signature-band { padding: 56px 18px; }
+  .final-cta { padding: 64px 18px; }
+  .info-bar { padding: 24px 18px; }
+  .info-stat-number { font-size: 2.2rem; }
+  .info-bar { padding: 20px 18px; }
+  .info-stat { padding: 16px 0; }
+
+  .info-box { padding: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: none) {
+  .info-box { transform: none !important; }
+  .btn-cta-glow::before { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- CLAIM BANNER -->
+<div class="claim-banner" role="banner">
+  Built free for Garden District Animal Hospital by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20garden-district-animal-hospital%20homepage">&nbsp;Reply to my email.</a>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header>
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">Garden District Animal Hospital</div>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#hours">Contact</a></li>
+    </ul>
+    <a href="tel:2253819661" class="nav-cta" aria-label="Call Garden District Animal Hospital at (225) 381-9661">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (225) 381-9661
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-content">
+    <div class="eyebrow light">
+      <span class="eyebrow-dot" aria-hidden="true"></span>
+      Baton Rouge, LA  -  Veterinary Care
+    </div>
+    <h1 id="heroHeadline">Garden District Animal Hospital</h1>
+    <p class="hero-subhead">Serving Goodwood neighbors and their pets with thorough, unhurried veterinary care since opening on the boulevard.</p>
+    <div class="hero-buttons">
+      <a href="tel:2253819661" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+      <a href="#hours" class="btn-secondary">View Hours</a>
+    </div>
+  </div>
+  <button class="hero-chevron" onclick="document.getElementById('infobar').scrollIntoView({behavior:'smooth'})" aria-label="Scroll down">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar" id="infobar" aria-label="Practice highlights">
+  <div class="info-bar-inner">
+    <div class="info-stat">
+      <span class="info-stat-number" data-target="5" data-decimal="1" id="stat1">5.0</span>
+      <span class="info-stat-label">Google Rating</span>
+    </div>
+    <div class="info-stat">
+      <span class="info-stat-number" data-target="263" id="stat2">0</span>
+      <span class="info-stat-label">Verified Reviews</span>
+    </div>
+    <div class="info-stat">
+      <span class="info-stat-number" style="font-size:2rem; padding-top:4px;" id="stat3">Local Favorite</span>
+      <span class="info-stat-label">Baton Rouge, LA</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-inner">
+    <div class="about-text fade-up">
+      <div class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        About
+      </div>
+      <h2 id="about-heading">Baton Rouge's straight-talking vet on Goodwood Blvd.</h2>
+      <p>Garden District Animal Hospital brings attentive, no-nonsense veterinary medicine to the heart of Baton Rouge's midcity corridor. Our team takes the time to explain every diagnosis and treatment option clearly, so you leave understanding exactly what your pet needs.</p>
+      <p>That commitment shows in the numbers: 263 Baton Rouge families have left us a 5-star review on Google, not because we asked, but because they felt it. From annual wellness exams to same-day sick visits, we fit into your schedule without cutting corners on care.</p>
+      <a href="tel:2253819661" class="inline-link">
+        Call (225) 381-9661
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="about-boxes fade-up" style="transition-delay: 120ms;">
+      <div class="info-box" role="article">
+        <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <h4>Veterinary-Led Care</h4>
+        <p>Every exam and treatment plan is guided by licensed veterinarians, not rushed protocols.</p>
+      </div>
+      <div class="info-box" role="article">
+        <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h4>Same-Week Scheduling</h4>
+        <p>Sick visits and annual exams fit into your week, not a three-week waitlist.</p>
+      </div>
+      <div class="info-box" role="article">
+        <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <h4>Gentle Handling</h4>
+        <p>Low-stress techniques keep anxious cats and nervous dogs calm from check-in to checkout.</p>
+      </div>
+      <div class="info-box" role="article">
+        <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>Transparent Pricing</h4>
+        <p>We walk through costs before we proceed, so there are no surprises on checkout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE BAND -->
+<div class="signature-band fade-up" aria-label="Customer reviews highlight">
+  <div class="eyebrow">
+    <span class="eyebrow-dot" style="background: var(--accent);" aria-hidden="true"></span>
+    What customers say
+  </div>
+  <p class="pull-quote">"Rated 5 stars by 263 Baton Rouge families, and still counting."</p>
+  <a href="https://www.google.com/search?q=Garden+District+Animal+Hospital+Baton+Rouge+reviews" target="_blank" rel="noopener" class="signature-link">
+    Read our Google reviews
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="gallery-header fade-up">
+    <div class="eyebrow">
+      <span class="eyebrow-dot" aria-hidden="true"></span>
+      Inside the Practice
+    </div>
+    <h2 id="gallery-heading">A closer look at Garden District.</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item fade-up">
+      <img src="https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/gallery-1.jpg" alt="Garden District Animal Hospital interior, Baton Rouge LA" loading="lazy">
+    </div>
+    <div class="gallery-item fade-up" style="transition-delay: 80ms;">
+      <img src="https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/gallery-2.jpg" alt="Veterinary care at Garden District Animal Hospital, Baton Rouge" loading="lazy">
+    </div>
+    <div class="gallery-item fade-up" style="transition-delay: 160ms;">
+      <img src="https://auxoagency.github.io/auxo-sites/sites/garden-district-animal-hospital/gallery-3.jpg" alt="Pets being cared for at Garden District Animal Hospital" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section id="hours" aria-labelledby="hours-heading">
+  <div class="hours-inner">
+    <div class="hours-col fade-up">
+      <div class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Hours
+      </div>
+      <h3 id="hours-heading">Open This Week</h3>
+      <div class="hours-card" role="table" aria-label="Weekly hours">
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-monday" style="display:none;" aria-hidden="true"></span>
+            Monday
+          </span>
+          <span class="hours-time" id="time-monday" role="cell">8 AM-6 PM</span>
+        </div>
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-tuesday" style="display:none;" aria-hidden="true"></span>
+            Tuesday
+          </span>
+          <span class="hours-time" id="time-tuesday" role="cell">8 AM-6 PM</span>
+        </div>
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-wednesday" style="display:none;" aria-hidden="true"></span>
+            Wednesday
+          </span>
+          <span class="hours-time" id="time-wednesday" role="cell">8 AM-6 PM</span>
+        </div>
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-thursday" style="display:none;" aria-hidden="true"></span>
+            Thursday
+          </span>
+          <span class="hours-time" id="time-thursday" role="cell">8 AM-6 PM</span>
+        </div>
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-friday" style="display:none;" aria-hidden="true"></span>
+            Friday
+          </span>
+          <span class="hours-time" id="time-friday" role="cell">8 AM-6 PM</span>
+        </div>
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-saturday" style="display:none;" aria-hidden="true"></span>
+            Saturday
+          </span>
+          <span class="hours-time" id="time-saturday" role="cell">8 AM-1 PM</span>
+        </div>
+        <div class="hours-row" role="row">
+          <span class="hours-day" role="cell">
+            <span class="hours-today-dot" id="dot-sunday" style="display:none;" aria-hidden="true"></span>
+            Sunday
+          </span>
+          <span class="hours-time closed" id="time-sunday" role="cell">Closed</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-col fade-up" style="transition-delay: 100ms;">
+      <div class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Visit
+      </div>
+      <div class="contact-name">Garden District Animal Hospital</div>
+      <p class="contact-detail">8221 Goodwood Blvd Suite D<br>Baton Rouge, LA 70806</p>
+      <a href="tel:2253819661" class="contact-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (225) 381-9661
+      </a>
+      <div class="map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=8221+Goodwood+Blvd+Suite+D%2C+Baton+Rouge%2C+LA+70806&output=embed"
+          title="Map to Garden District Animal Hospital, 8221 Goodwood Blvd, Baton Rouge, LA"
+          loading="lazy"
+          aria-label="Google Map showing Garden District Animal Hospital location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="cta-heading">
+  <div class="eyebrow">
+    <span class="eyebrow-dot" style="background: var(--accent);" aria-hidden="true"></span>
+    Ready when you are
+  </div>
+  <h2 id="cta-heading">Your pet's next visit starts with one call.</h2>
+  <p class="subhead">Garden District Animal Hospital is open six days a week on Goodwood Blvd in Baton Rouge, LA. No referral needed.</p>
+  <a href="tel:2253819661" class="btn-cta-glow" aria-label="Call Garden District Animal Hospital at (225) 381-9661">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call (225) 381-9661
+  </a>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-left">
+    <div class="footer-name">Garden District Animal Hospital</div>
+    <div class="footer-copy">&copy; <span id="footerYear"></span> Garden District Animal Hospital. All rights reserved.</div>
+  </div>
+  <div class="footer-right">
+    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
+  </div>
+</footer>
+
+<script defer>
+(function() {
+  'use strict';
+
+  // Footer year
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  // Today's hours highlight
+  const dayMap = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+  const today = dayMap[new Date().getDay()];
+  const dot = document.getElementById('dot-' + today);
+  const time = document.getElementById('time-' + today);
+  if (dot) dot.style.display = 'inline-block';
+  if (time) { time.classList.add('today'); }
+
+  // Scroll progress
+  const progressBar = document.getElementById('scrollProgress');
+  function updateProgress() {
+    const scrollY = window.scrollY;
+    const docH = document.documentElement.scrollHeight;
+    const winH = window.innerHeight;
+    const pct = Math.min((scrollY / (docH - winH)) * 100, 100);
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // Hero word-by-word stagger
+  const heroH1 = document.getElementById('heroHeadline');
+  if (heroH1) {
+    const text = heroH1.textContent.trim();
+    const words = text.split(' ');
+    heroH1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+    const wordEls = heroH1.querySelectorAll('.word');
+    wordEls.forEach((el, i) => {
+      setTimeout(() => { el.classList.add('visible'); }, 200 + i * 60);
+    });
+  }
+
+  // Hero parallax (desktop/non-touch only)
+  const hero = document.querySelector('.hero');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouch = window.matchMedia('(hover: none)').matches;
+
+  if (hero && !prefersReducedMotion && !isTouch) {
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      const heroH = hero.offsetHeight;
+      if (scrollY < heroH) {
+        const offset = scrollY * 0.3;
+        hero.style.backgroundPositionY = `calc(center + ${offset}px)`;
+      }
+    }, { passive: true });
+  }
+
+  // IntersectionObserver fade-up
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  fadeEls.forEach(function(el) { fadeObserver.observe(el); });
+
+  // Count-up animation
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function countUp(el, target, duration, isDecimal) {
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutCubic(progress);
+      const current = eased * target;
+      if (isDecimal) {
+        el.textContent = current.toFixed(1);
+      } else {
+        el.textContent = Math.floor(current).toLocaleString();
+      }
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const stat1 = document.getElementById('stat1');
+  const stat2 = document.getElementById('stat2');
+  let statsAnimated = false;
+
+  const statObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !statsAnimated) {
+        statsAnimated = true;
+        countUp(stat1, 5.0, 1200, true);
+        countUp(stat2, 263, 1200, false);
+        statObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const infoBar = document.getElementById('infobar');
+  if (infoBar) statObserver.observe(infoBar);
+
+  // 3D tilt on info boxes
+  if (!isTouch) {
+    const boxes = document.querySelectorAll('.info-box');
+    boxes.forEach(function(box) {
+      box.addEventListener('mousemove', function(e) {
+        const rect = box.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) / (rect.width / 2);
+        const dy = (e.clientY - cy) / (rect.height / 2);
+        const rx = -dy * 8;
+        const ry = dx * 8;
+        box.style.transform = `perspective(600px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(4px)`;
+      });
+      box.addEventListener('mouseleave', function() {
+        box.style.transform = '';
+      });
+    });
+  }
+
+  // Cursor glow on CTA
+  const glowBtns = document.querySelectorAll('.btn-cta-glow');
+  glowBtns.forEach(function(btn) {
+    btn.addEventListener('mousemove', function(e) {
+      const rect = btn.getBoundingClientRect();
+      btn.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+      btn.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      const id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
