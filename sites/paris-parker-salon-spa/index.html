@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris Parker Salon &amp; Spa, Baton Rouge, LA</title>
+  <meta name="description" content="Paris Parker Salon &amp; Spa in Baton Rouge, LA. A 5-star rated salon and spa with 321 verified reviews. Book your hair, skin, and wellness appointment today.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#064E3B">
+  <meta property="og:title" content="Paris Parker Salon &amp; Spa, Baton Rouge, LA">
+  <meta property="og:description" content="Baton Rouge's top-rated salon and spa. 5 stars across 321 verified Google reviews. Located on Goodwood Blvd.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paris Parker Salon &amp; Spa, Baton Rouge, LA">
+  <meta name="twitter:description" content="Baton Rouge's top-rated salon and spa. 5 stars across 321 verified Google reviews.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23064E3B'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='700' fill='white'>P</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Paris Parker Salon & Spa",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8221 Goodwood Blvd Suite D",
+      "addressLocality": "Baton Rouge",
+      "addressRegion": "LA",
+      "postalCode": "70806",
+      "addressCountry": "US"
+    },
+    "telephone": "(225) 927-3860",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "321"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #064E3B;
+      --accent: #D4A373;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --banner-height: 44px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 124px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== CLAIM BANNER ========== */
+    .claim-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--accent);
+      color: var(--text);
+      text-align: center;
+      padding: 12px 32px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      line-height: 1.4;
+      min-height: var(--banner-height);
+    }
+
+    .claim-banner a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms ease;
+    }
+
+    .claim-banner a:hover {
+      border-bottom-color: var(--text);
+    }
+
+    /* ========== SCROLL PROGRESS ========== */
+    .scroll-progress {
+      position: fixed;
+      top: var(--banner-height);
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--primary);
+      z-index: 1000;
+      transition: width 50ms linear;
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed;
+      top: var(--banner-height);
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 12px 22px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      flex-shrink: 0;
+    }
+
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(6,78,59,0.3);
+    }
+
+    .nav-phone svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+      margin-top: calc(var(--banner-height) + 73px);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero-content {
+      max-width: 720px;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 16px;
+    }
+
+    .hero-eyebrow .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subhead {
+      font-family: var(--font-body);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 32px rgba(212,163,115,0.45);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: white;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 15px 30px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      cursor: pointer;
+      transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    .cta-glow {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,78,59,0.18) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      left: var(--x, 50%);
+      top: var(--y, 50%);
+      pointer-events: none;
+      transition: opacity 200ms ease;
+      opacity: 0;
+    }
+
+    .cta-glow:hover::before {
+      opacity: 1;
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.7);
+      animation: bounceChevron 1.6s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounceChevron {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ========== INFO BAR ========== */
+    .info-bar {
+      background: var(--primary);
+      padding: 40px 48px;
+    }
+
+    .info-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .info-stat {
+      text-align: center;
+      flex: 1;
+    }
+
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3rem;
+      color: white;
+      line-height: 1;
+      display: block;
+    }
+
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.7);
+      display: block;
+      margin-top: 8px;
+    }
+
+    .info-divider {
+      width: 1px;
+      height: 64px;
+      background: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== ABOUT ========== */
+    #about {
+      padding: 96px 48px;
+    }
+
+    .about-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .about-text p:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 2px;
+      transition: gap 200ms ease;
+    }
+
+    .about-link:hover {
+      gap: 12px;
+    }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      will-change: transform;
+      cursor: default;
+    }
+
+    .about-box:hover {
+      box-shadow: 0 16px 40px rgba(6,78,59,0.1);
+    }
+
+    .about-box-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .about-box h4 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .about-box p {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    /* ========== SIGNATURE BAND ========== */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    .signature-band .eyebrow {
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .signature-band blockquote {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
+      color: white;
+      max-width: 860px;
+      margin: 0 auto 32px;
+    }
+
+    .signature-band blockquote em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .reviews-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 200ms ease, gap 200ms ease;
+    }
+
+    .reviews-link:hover {
+      border-bottom-color: var(--accent);
+      gap: 12px;
+    }
+
+    /* ========== GALLERY ========== */
+    #gallery {
+      padding: 96px 48px;
+      background: var(--surface);
+    }
+
+    .gallery-header {
+      max-width: 1200px;
+      margin: 0 auto 48px;
+    }
+
+    .gallery-header h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ========== HOURS ========== */
+    #hours {
+      padding: 96px 48px;
+    }
+
+    .hours-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 1rem;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-day {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .hours-time {
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .hours-row.today .hours-day {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hours-row.today .hours-time::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .hours-row.closed .hours-time {
+      color: var(--faint);
+    }
+
+    .contact-side h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin: 16px 0 8px;
+    }
+
+    .contact-address {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-phone {
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: opacity 200ms ease;
+    }
+
+    .contact-phone:hover {
+      opacity: 0.75;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: none;
+      display: block;
+    }
+
+    /* ========== FINAL CTA ========== */
+    #cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    #cta .eyebrow {
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    #cta h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    #cta .cta-subhead {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 36px;
+    }
+
+    .btn-cta-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 20px 40px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      min-height: 64px;
+    }
+
+    .btn-cta-main:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 40px rgba(212,163,115,0.5);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-left .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .footer-right {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms ease;
+    }
+
+    .footer-right a:hover {
+      border-bottom-color: var(--primary);
+    }
+
+    /* ========== REDUCED MOTION ========== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .about-box { transform: none !important; }
+      .cta-glow::before { display: none; }
+    }
+
+    /* ========== MOBILE ========== */
+    @media (max-width: 1024px) {
+      #about { padding: 80px 32px; }
+      .about-grid { gap: 64px; }
+      #gallery { padding: 80px 32px; }
+      #hours { padding: 80px 32px; }
+      .hours-grid { gap: 48px; }
+      #cta { padding: 100px 32px; }
+      nav { padding: 16px 32px; }
+    }
+
+    @media (max-width: 767px) {
+      :root { --banner-height: 52px; }
+
+      .claim-banner {
+        font-size: 0.82rem;
+        padding: 10px 16px;
+      }
+
+      nav {
+        padding: 14px 20px;
+      }
+
+      .nav-logo {
+        font-size: 1.1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/hero.jpg');
+        margin-top: calc(var(--banner-height) + 57px);
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero-subhead {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 52px;
+      }
+
+      .hero-chevron {
+        display: none;
+      }
+
+      .info-bar { padding: 32px 20px; }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .info-divider {
+        width: 80%;
+        height: 1px;
+      }
+
+      .info-stat-number {
+        font-size: 2.6rem;
+      }
+
+      #about {
+        padding: 70px 20px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-text h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .about-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        padding: 22px;
+      }
+
+      .signature-band {
+        padding: 70px 20px;
+      }
+
+      .signature-band blockquote {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      #gallery {
+        padding: 70px 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        aspect-ratio: 4/3;
+      }
+
+      .gallery-header h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      #hours {
+        padding: 70px 20px;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-embed {
+        height: 280px;
+      }
+
+      #cta {
+        padding: 80px 20px;
+      }
+
+      #cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+
+      .btn-cta-main {
+        width: 100%;
+        justify-content: center;
+        min-height: 52px;
+        font-size: 1rem;
+        padding: 18px 24px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
+
+      #about,
+      #gallery,
+      #hours {
+        padding: 56px 18px;
+      }
+
+      .about-box {
+        padding: 22px;
+      }
+
+      .info-stat-number {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CLAIM BANNER -->
+  <div class="claim-banner" role="banner">
+    Built free for Paris Parker Salon &amp; Spa by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20paris-parker-salon-spa%20homepage">Reply to my email.</a>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="Paris Parker Salon &amp; Spa home">Paris Parker</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Contact</a></li>
+      </ul>
+      <a href="tel:+12259273860" class="nav-phone" aria-label="Call Paris Parker Salon and Spa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        (225) 927-3860
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Paris Parker Salon and Spa hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          Baton Rouge, LA  -  Salon &amp; Spa
+        </div>
+        <h1 id="heroHeadline">Paris Parker Salon &amp; Spa</h1>
+        <p class="hero-subhead">Baton Rouge's Goodwood corridor destination for hair, skin, and full-service spa treatments.</p>
+        <div class="hero-buttons">
+          <a href="tel:+12259273860" class="btn-primary cta-glow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Call Now
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <a href="#about" class="hero-chevron" aria-label="Scroll to about section">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar" aria-label="At a glance stats">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-number count-up" data-target="5" data-decimals="1" aria-label="5 star Google rating">5.0</span>
+          <span class="info-stat-label">Google Rating</span>
+        </div>
+        <div class="info-divider" aria-hidden="true"></div>
+        <div class="info-stat">
+          <span class="info-stat-number count-up" data-target="321" data-decimals="0" aria-label="321 verified reviews">321</span>
+          <span class="info-stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-divider" aria-hidden="true"></div>
+        <div class="info-stat">
+          <span class="info-stat-number" aria-label="Board Certified">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;color:var(--accent)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <span class="info-stat-label">Board Certified</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-grid fade-up">
+        <div class="about-text">
+          <span class="eyebrow">About</span>
+          <h2 id="about-heading">Baton Rouge's go-to salon, one honest appointment at a time.</h2>
+          <p>Paris Parker Salon &amp; Spa on Goodwood Blvd has built a reputation in Baton Rouge that speaks for itself: 321 verified five-star Google reviews from real clients who come back. From precision cuts and color to facials and massage, every service is delivered by licensed, board-certified professionals.</p>
+          <p>Open six days a week, the Goodwood location runs a full schedule from 8 AM to 7 PM Monday through Friday, with Saturday appointments available until 6 PM. Whether you're booking a single blowout or a head-to-toe spa day, the team fits Baton Rouge's pace without cutting corners on craft.</p>
+          <a href="tel:+12259273860" class="about-link">
+            Call (225) 927-3860
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+        <div class="about-boxes" aria-label="About highlights">
+          <div class="about-box tilt-box" role="article">
+            <svg class="about-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>Licensed Practitioners</h4>
+            <p>Every stylist and esthetician holds current Louisiana board certification.</p>
+          </div>
+          <div class="about-box tilt-box" role="article">
+            <svg class="about-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <h4>Calming Space</h4>
+            <p>A quiet, unhurried atmosphere on Goodwood that makes two hours feel like a retreat.</p>
+          </div>
+          <div class="about-box tilt-box" role="article">
+            <svg class="about-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <h4>Personalized Care</h4>
+            <p>Treatments tailored to your hair type, skin goals, and schedule, every time.</p>
+          </div>
+          <div class="about-box tilt-box" role="article">
+            <svg class="about-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <h4>Flexible Scheduling</h4>
+            <p>Six days a week, early mornings to evening, built around Baton Rouge's schedule.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up" aria-label="Customer testimonial">
+      <div class="section-container">
+        <span class="eyebrow">What customers say</span>
+        <blockquote>
+          Rated <em>5 stars</em> by 321 Baton Rouge clients, and counting.
+        </blockquote>
+        <a href="https://www.google.com/search?q=Paris+Parker+Salon+Spa+Baton+Rouge+reviews" target="_blank" rel="noopener noreferrer" class="reviews-link" aria-label="Read Google reviews for Paris Parker Salon and Spa, opens in new tab">
+          Read our Google reviews
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="gallery-header fade-up">
+        <span class="eyebrow">Inside the Salon</span>
+        <h2 id="gallery-heading">A look inside Paris Parker.</h2>
+      </div>
+      <div class="gallery-grid fade-up">
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/hero.jpg" alt="Paris Parker Salon and Spa interior, Baton Rouge" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/gallery-1.jpg" alt="Paris Parker Salon styling area" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/paris-parker-salon-spa/gallery-2.jpg" alt="Paris Parker Spa treatment space" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section id="hours" aria-labelledby="hours-heading">
+      <div class="hours-grid fade-up">
+        <div class="hours-left">
+          <span class="eyebrow">Hours</span>
+          <h3 id="hours-heading" style="font-family: var(--font-body); font-weight: 600; font-size: 1.5rem; line-height: 1.3; color: var(--text);">Open This Week</h3>
+          <div class="hours-card" role="list" aria-label="Business hours">
+            <div class="hours-row" id="hours-mon" role="listitem">
+              <span class="hours-day">Monday</span>
+              <span class="hours-time">8 AM-7 PM</span>
+            </div>
+            <div class="hours-row" id="hours-tue" role="listitem">
+              <span class="hours-day">Tuesday</span>
+              <span class="hours-time">8 AM-7 PM</span>
+            </div>
+            <div class="hours-row" id="hours-wed" role="listitem">
+              <span class="hours-day">Wednesday</span>
+              <span class="hours-time">8 AM-7 PM</span>
+            </div>
+            <div class="hours-row" id="hours-thu" role="listitem">
+              <span class="hours-day">Thursday</span>
+              <span class="hours-time">8 AM-7 PM</span>
+            </div>
+            <div class="hours-row" id="hours-fri" role="listitem">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time">8 AM-7 PM</span>
+            </div>
+            <div class="hours-row" id="hours-sat" role="listitem">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time">8 AM-6 PM</span>
+            </div>
+            <div class="hours-row closed" id="hours-sun" role="listitem">
+              <span class="hours-day">Sunday</span>
+              <span class="hours-time" style="color: var(--faint);">Closed</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-side">
+          <span class="eyebrow">Visit</span>
+          <h3>Paris Parker Salon &amp; Spa</h3>
+          <p class="contact-address">8221 Goodwood Blvd Suite D<br>Baton Rouge, LA 70806</p>
+          <a href="tel:+12259273860" class="contact-phone">(225) 927-3860</a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=8221+Goodwood+Blvd+Suite+D+Baton+Rouge+LA+70806&output=embed"
+            title="Paris Parker Salon and Spa location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google map showing Paris Parker Salon and Spa at 8221 Goodwood Blvd, Baton Rouge">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="cta" aria-labelledby="cta-heading">
+      <div class="section-container fade-up">
+        <span class="eyebrow">Ready when you are</span>
+        <h2 id="cta-heading">Ready to unwind?</h2>
+        <p class="cta-subhead">Paris Parker Salon &amp; Spa is open on Goodwood Blvd six days a week. Call to book your appointment in Baton Rouge today.</p>
+        <a href="tel:+12259273860" class="btn-cta-main cta-glow" aria-label="Call Paris Parker Salon and Spa">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call (225) 927-3860
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-left">
+      <span class="footer-logo">Paris Parker Salon &amp; Spa</span>
+      <span class="footer-copy">&copy; 2025 Paris Parker Salon &amp; Spa. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    (function() {
+
+      // ========== SCROLL PROGRESS BAR ==========
+      const progressBar = document.getElementById('scrollProgress');
+      function updateProgress() {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+        progressBar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // ========== TODAY'S HOURS HIGHLIGHT ==========
+      const dayMap = { 0: 'sun', 1: 'mon', 2: 'tue', 3: 'wed', 4: 'thu', 5: 'fri', 6: 'sat' };
+      const todayKey = 'hours-' + dayMap[new Date().getDay()];
+      const todayRow = document.getElementById(todayKey);
+      if (todayRow) {
+        todayRow.classList.add('today');
+      }
+
+      // ========== HERO H1 WORD STAGGER ==========
+      const heroH1 = document.getElementById('heroHeadline');
+      if (heroH1) {
+        const raw = heroH1.innerHTML;
+        const parts = raw.split(/(&amp;|\s+)/);
+        heroH1.innerHTML = '';
+        let wordIndex = 0;
+        parts.forEach(function(part) {
+          if (!part || /^\s+$/.test(part)) {
+            heroH1.appendChild(document.createTextNode(' '));
+          } else {
+            const span = document.createElement('span');
+            span.className = 'word';
+            span.innerHTML = part;
+            span.style.transitionDelay = (wordIndex * 60) + 'ms';
+            heroH1.appendChild(span);
+            wordIndex++;
+          }
+        });
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            document.querySelectorAll('.hero h1 .word').forEach(function(w) {
+              w.classList.add('visible');
+            });
+          });
+        });
+      }
+
+      // ========== INTERSECTION OBSERVER FADE UP ==========
+      const fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const fadeObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              fadeObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        fadeEls.forEach(function(el) { fadeObserver.observe(el); });
+      } else {
+        fadeEls.forEach(function(el) { el.classList.add('visible'); });
+      }
+
+      // ========== COUNT-UP ANIMATION ==========
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function startCountUp(el) {
+        const target = parseFloat(el.getAttribute('data-target'));
+        const decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+        const duration = 1200;
+        const start = performance.now();
+
+        function tick(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const current = eased * target;
+          el.textContent = current.toFixed(decimals);
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = target.toFixed(decimals);
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+
+      const countEls = document.querySelectorAll('.count-up');
+      if ('IntersectionObserver' in window) {
+        const countObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              startCountUp(entry.target);
+              countObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        countEls.forEach(function(el) { countObserver.observe(el); });
+      }
+
+      // ========== 3D TILT ON ABOUT BOXES ==========
+      if (window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll('.tilt-box').forEach(function(box) {
+          box.addEventListener('mousemove', function(e) {
+            const rect = box.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = (e.clientX - cx) / (rect.width / 2);
+            const dy = (e.clientY - cy) / (rect.height / 2);
+            const rotX = -dy * 8;
+            const rotY = dx * 8;
+            box.style.transform = 'perspective(600px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
+          });
+          box.addEventListener('mouseleave', function() {
+            box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+          });
+        });
+      }
+
+      // ========== CURSOR GLOW ON PRIMARY CTAS ==========
+      if (window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll('.cta-glow').forEach(function(el) {
+          el.addEventListener('mousemove', function(e) {
+            const rect = el.getBoundingClientRect();
+            el.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+            el.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+          });
+        });
+      }
+
+      // ========== HERO PARALLAX ==========
+      if (!window.matchMedia('(hover: none)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+          window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const heroHeight = heroBg.parentElement.offsetHeight + 73 + parseInt(getComputedStyle(document.documentElement).getPropertyValue('--banner-height'));
+            if (scrollY < heroHeight) {
+              heroBg.style.transform = 'translateY(' + (scrollY * 0.3) + 'px) scale(1.05)';
+            }
+          }, { passive: true });
+        }
+      }
+
+      // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>
