@@ -3,39 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drury Accounting, Cedar Rapids, IA</title>
-  <meta name="description" content="Drury Accounting in Cedar Rapids, IA offers trusted professional accounting services. Rated 4.9 stars by local clients. Call (319) 365-8604 today.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#1E293B">
-  <meta property="og:title" content="Drury Accounting | Cedar Rapids, IA">
-  <meta property="og:description" content="Cedar Rapids accounting firm rated 4.9 stars. Professional tax, bookkeeping, and financial planning services tailored to your needs.">
-  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/drury-accounting/hero.jpg">
+  <title>Gymology 24/7, Springfield, MO</title>
+  <meta name="description" content="Gymology 24/7 is Springfield, MO's round-the-clock fitness facility, rated 5 stars by 60 verified Google reviewers. Access the gym any hour, any day.">
+  <meta name="theme-color" content="#064E3B">
+
+  <meta property="og:title" content="Gymology 24/7 | Springfield, MO">
+  <meta property="og:description" content="Springfield's 24/7 fitness facility, rated 5 stars by 60 verified Google reviewers. Open every hour of every day at 2103 E Rockhurst St.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/hero.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Drury Accounting | Cedar Rapids, IA">
-  <meta name="twitter:description" content="Cedar Rapids accounting firm rated 4.9 stars. Professional tax, bookkeeping, and financial planning services.">
-  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/drury-accounting/hero.jpg">
+  <meta name="twitter:title" content="Gymology 24/7 | Springfield, MO">
+  <meta name="twitter:description" content="Springfield's 24/7 fitness facility, rated 5 stars by 60 verified Google reviewers.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/hero.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231E293B'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='20' fill='white'>D</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23064E3B'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='20' fill='white'>G</text></svg>">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AccountingService",
-    "name": "Drury Accounting",
+    "@type": "HealthClub",
+    "name": "Gymology 24/7",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "5925 Council St NE # 130",
-      "addressLocality": "Cedar Rapids",
-      "addressRegion": "IA",
-      "postalCode": "52402",
+      "streetAddress": "2103 E Rockhurst St #108",
+      "addressLocality": "Springfield",
+      "addressRegion": "MO",
+      "postalCode": "65802",
       "addressCountry": "US"
     },
-    "telephone": "(319) 365-8604",
+    "telephone": "(417) 812-6611",
+    "openingHours": "Mo-Su 00:00-24:00",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "7"
+      "ratingValue": "5",
+      "reviewCount": "60"
     }
   }
   </script>
@@ -45,9 +47,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
 
   <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
     :root {
-      --primary: #1E293B;
-      --accent: #3B82F6;
+      --primary: #064E3B;
+      --accent: #D4A373;
       --bg: #FFFFFF;
       --text: #0F172A;
       --muted: #64748B;
@@ -55,11 +60,52 @@
       --border: #E2E8F0;
       --surface: #F8FAFC;
       --soft-border: #F1F5F9;
-      --font-display: 'Playfair Display', Georgia, serif;
+
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+
       --banner-height: 44px;
+      --nav-height: 70px;
+      --offset: calc(var(--banner-height) + var(--nav-height));
     }
 
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 120px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ============================================================
+       REDUCED MOTION
+    ============================================================ */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -71,77 +117,107 @@
 
     @media (hover: none) {
       .tilt-box { transform: none !important; }
-      .cta-glow::before { display: none; }
+      .cta-glow::before { display: none !important; }
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 144px;
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
-    body {
+    h3 {
       font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      font-size: 1rem;
-      line-height: 1.65;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
+    h4 {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
 
-    /* CLAIM BANNER */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+    }
+
+    .body-large {
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       SCROLL PROGRESS BAR
+    ============================================================ */
+    #scroll-progress {
+      position: fixed;
+      top: var(--banner-height);
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--primary);
+      z-index: 1000;
+      transition: width 0.1s linear;
+    }
+
+    /* ============================================================
+       CLAIM BANNER
+    ============================================================ */
     .claim-banner {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 200;
       background: var(--accent);
-      color: #fff;
-      text-align: center;
-      padding: 12px 32px;
+      color: var(--text);
       font-size: 0.92rem;
       font-weight: 600;
-      font-family: var(--font-body);
+      text-align: center;
+      padding: 12px 32px;
+      z-index: 200;
       line-height: 1.4;
-      height: var(--banner-height);
     }
 
     .claim-banner a {
-      color: #fff;
-      text-decoration: underline;
-      text-underline-offset: 2px;
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
     }
 
     .claim-banner a:hover {
-      opacity: 0.85;
+      border-bottom-color: var(--text);
     }
 
-    /* SCROLL PROGRESS */
-    .scroll-progress {
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
       position: fixed;
       top: var(--banner-height);
       left: 0;
-      height: 3px;
-      width: 0%;
-      background: var(--accent);
-      z-index: 1000;
-      transition: width 0.1s linear;
-    }
-
-    /* NAV */
-    nav {
-      position: sticky;
-      top: var(--banner-height);
-      z-index: 100;
+      right: 0;
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -150,6 +226,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 150;
+      height: var(--nav-height);
     }
 
     .nav-logo {
@@ -157,11 +235,12 @@
       font-weight: 700;
       font-size: 1.25rem;
       color: var(--text);
-      letter-spacing: -0.01em;
+      flex-shrink: 0;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 32px;
       list-style: none;
     }
@@ -170,21 +249,21 @@
       font-family: var(--font-body);
       font-weight: 500;
       font-size: 0.95rem;
-      color: var(--muted);
+      color: var(--text);
       position: relative;
-      padding-bottom: 2px;
-      transition: color 250ms ease;
+      padding-bottom: 3px;
+      transition: color 0.2s;
     }
 
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: 0;
       left: 0;
       width: 0;
       height: 2px;
       background: var(--primary);
-      transition: width 250ms ease;
+      transition: width 0.25s ease;
     }
 
     .nav-links a:hover {
@@ -195,32 +274,43 @@
       width: 100%;
     }
 
-    .nav-phone {
-      display: flex;
+    .nav-cta {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
       background: var(--primary);
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-size: 0.9rem;
+      color: white;
+      font-family: var(--font-body);
       font-weight: 600;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
-      white-space: nowrap;
-    }
-
-    .nav-phone:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(30, 41, 59, 0.25);
-    }
-
-    .nav-phone svg {
-      width: 15px;
-      height: 15px;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
       flex-shrink: 0;
     }
 
-    /* HERO */
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(6, 78, 59, 0.3);
+    }
+
+    .nav-cta svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero-wrapper {
+      margin-top: calc(var(--banner-height) + var(--nav-height));
+      overflow: hidden;
+    }
+
     .hero {
       position: relative;
       height: 65vh;
@@ -228,7 +318,7 @@
       min-height: 480px;
       background-image:
         linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
-        url('https://auxoagency.github.io/auxo-sites/sites/drury-accounting/hero.jpg');
+        url('https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/hero.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -238,10 +328,32 @@
       overflow: hidden;
     }
 
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    .hero {
+      background-attachment: local;
+    }
+
     .hero-bg-layer {
       position: absolute;
       inset: 0;
-      background-image: url('https://auxoagency.github.io/auxo-sites/sites/drury-accounting/hero.jpg');
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/hero.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -249,16 +361,11 @@
       z-index: 0;
     }
 
-    .hero-gradient {
+    .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
       z-index: 1;
-    }
-
-    @keyframes kenBurns {
-      from { transform: scale(1.0); }
-      to { transform: scale(1.05); }
     }
 
     .hero-content {
@@ -272,6 +379,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      font-family: var(--font-body);
       font-size: 0.78rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -289,12 +397,7 @@
     }
 
     .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(3rem, 6vw, 5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: #fff;
+      color: white;
       margin-bottom: 20px;
     }
 
@@ -302,7 +405,7 @@
       display: inline-block;
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 600ms ease, transform 600ms ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     .hero h1 .word.visible {
@@ -311,18 +414,17 @@
     }
 
     .hero-subhead {
-      font-size: 1.25rem;
-      font-weight: 400;
       color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 32px;
+      font-size: 1.25rem;
       line-height: 1.5;
+      margin-bottom: 32px;
       max-width: 560px;
     }
 
     .hero-buttons {
       display: flex;
       gap: 16px;
-      align-items: center;
+      flex-wrap: wrap;
     }
 
     .btn-primary {
@@ -330,20 +432,22 @@
       align-items: center;
       gap: 8px;
       background: var(--accent);
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 999px;
-      font-size: 1rem;
+      color: var(--text);
+      font-family: var(--font-body);
       font-weight: 700;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
       min-height: 52px;
-      position: relative;
-      overflow: hidden;
     }
 
     .btn-primary:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 8px 24px rgba(212, 163, 115, 0.45);
     }
 
     .btn-secondary {
@@ -351,19 +455,22 @@
       align-items: center;
       gap: 8px;
       background: transparent;
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 999px;
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      font-size: 1rem;
+      color: white;
+      font-family: var(--font-body);
       font-weight: 600;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), border-color 200ms ease, background 200ms ease;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s, background 0.2s;
       min-height: 52px;
     }
 
     .btn-secondary:hover {
       transform: scale(1.03);
-      border-color: #fff;
+      border-color: white;
       background: rgba(255, 255, 255, 0.1);
     }
 
@@ -383,10 +490,12 @@
       50% { transform: translateX(-50%) translateY(8px); }
     }
 
-    /* INFO BAR */
+    /* ============================================================
+       INFO BAR
+    ============================================================ */
     .info-bar {
       background: var(--primary);
-      color: #fff;
+      color: white;
       padding: 40px 48px;
     }
 
@@ -395,19 +504,25 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
     .info-stat {
-      text-align: center;
       flex: 1;
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
     }
 
-    .info-stat-divider {
+    .info-stat + .info-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 50px;
       width: 1px;
-      height: 60px;
       background: rgba(255, 255, 255, 0.15);
-      flex-shrink: 0;
     }
 
     .info-stat-number {
@@ -415,8 +530,8 @@
       font-size: 3rem;
       font-weight: 700;
       line-height: 1;
-      color: #fff;
       display: block;
+      margin-bottom: 6px;
     }
 
     .info-stat-label {
@@ -424,13 +539,13 @@
       font-size: 0.95rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       color: rgba(255, 255, 255, 0.7);
-      margin-top: 8px;
-      display: block;
     }
 
-    /* MARQUEE */
+    /* ============================================================
+       MARQUEE
+    ============================================================ */
     .marquee-section {
       background: var(--surface);
       padding: 64px 0;
@@ -444,7 +559,7 @@
       animation: marqueeScroll 30s linear infinite;
     }
 
-    .marquee-section:hover .marquee-track {
+    .marquee-track:hover {
       animation-play-state: paused;
     }
 
@@ -456,39 +571,27 @@
     .marquee-pill {
       display: inline-flex;
       align-items: center;
-      background: #fff;
+      gap: 8px;
+      background: white;
       border: 1.5px solid var(--primary);
       color: var(--primary);
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      white-space: nowrap;
       font-family: var(--font-body);
-    }
-
-    /* SECTION BASE */
-    .section-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      font-size: 0.78rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--primary);
-      display: block;
-      margin-bottom: 16px;
+      font-size: 0.9rem;
+      padding: 10px 24px;
+      border-radius: 999px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
-    /* ABOUT */
+    /* ============================================================
+       ABOUT
+    ============================================================ */
     .about-section {
       padding: 96px 48px;
     }
 
-    .about-grid {
+    .about-inner {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
@@ -497,13 +600,11 @@
       align-items: center;
     }
 
+    .about-text .eyebrow {
+      margin-bottom: 16px;
+    }
+
     .about-text h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: var(--text);
       margin-bottom: 24px;
     }
 
@@ -522,53 +623,56 @@
       font-weight: 600;
       font-size: 1.05rem;
       margin-top: 12px;
-      transition: gap 200ms ease;
+      text-decoration: none;
+      transition: gap 0.2s;
     }
 
     .about-link:hover {
       gap: 12px;
     }
 
-    .about-boxes {
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
     .tilt-box {
-      background: #fff;
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
-      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
-      cursor: default;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+      transform-style: preserve-3d;
+      will-change: transform;
     }
 
     .tilt-box:hover {
-      box-shadow: 0 12px 40px rgba(30, 41, 59, 0.1);
+      box-shadow: 0 12px 36px rgba(6, 78, 59, 0.12);
     }
 
     .tilt-box svg {
-      color: var(--primary);
       width: 32px;
       height: 32px;
-      margin-bottom: 14px;
+      color: var(--primary);
+      margin-bottom: 12px;
     }
 
     .tilt-box h4 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text);
       margin-bottom: 6px;
+      font-size: 1.05rem;
     }
 
     .tilt-box p {
       font-size: 0.95rem;
       line-height: 1.5;
       color: var(--muted);
+      margin: 0;
     }
 
-    /* SIGNATURE BAND */
+    /* ============================================================
+       SIGNATURE BAND
+    ============================================================ */
     .signature-band {
       background: var(--primary);
       padding: 100px 48px;
@@ -580,38 +684,86 @@
       margin-bottom: 24px;
     }
 
-    .signature-quote {
+    .signature-band blockquote {
       font-family: var(--font-display);
       font-size: clamp(2rem, 4.5vw, 3.4rem);
       font-weight: 700;
-      color: #fff;
+      color: white;
       line-height: 1.15;
       letter-spacing: -0.02em;
       max-width: 900px;
       margin: 0 auto 32px;
     }
 
-    .signature-link {
+    .signature-band a {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       color: var(--accent);
       font-weight: 600;
       font-size: 1.05rem;
-      transition: gap 200ms ease;
+      transition: gap 0.2s;
     }
 
-    .signature-link:hover {
+    .signature-band a:hover {
       gap: 12px;
     }
 
-    /* HOURS */
-    .hours-section {
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    .gallery-section {
       padding: 96px 48px;
       background: var(--surface);
     }
 
-    .hours-grid {
+    .gallery-section .eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .gallery-section h2 {
+      margin-bottom: 40px;
+    }
+
+    .gallery-header {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ============================================================
+       HOURS & CONTACT
+    ============================================================ */
+    .hours-section {
+      padding: 96px 48px;
+    }
+
+    .hours-inner {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
@@ -619,19 +771,20 @@
       gap: 64px;
     }
 
+    .hours-left .eyebrow,
+    .hours-right .eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .hours-left h3 {
+      margin-bottom: 24px;
+    }
+
     .hours-card {
-      background: #fff;
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 24px 28px;
-      margin-top: 20px;
-    }
-
-    .hours-card h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 20px;
     }
 
     .hours-row {
@@ -640,7 +793,7 @@
       align-items: center;
       padding: 10px 0;
       border-bottom: 1px solid var(--soft-border);
-      font-size: 0.95rem;
+      font-size: 0.98rem;
     }
 
     .hours-row:last-child {
@@ -657,66 +810,69 @@
       font-weight: 400;
     }
 
-    .hours-time.today {
-      color: var(--primary);
+    .hours-row.today .hours-day {
       font-weight: 700;
     }
 
-    .hours-time.closed {
-      color: var(--faint);
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .hours-today-dot {
-      display: inline-block;
+    .today-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--primary);
-      margin-right: 8px;
+      flex-shrink: 0;
     }
 
-    .visit-side h2 {
+    .hours-right h2 {
       font-family: var(--font-display);
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text);
       margin-bottom: 12px;
-      margin-top: 20px;
     }
 
-    .visit-address {
+    .hours-right .address {
       font-size: 1.05rem;
       color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      line-height: 1.5;
     }
 
-    .visit-phone {
-      display: block;
+    .hours-right .phone-link {
+      display: inline-block;
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--primary);
+      text-decoration: none;
       margin-bottom: 24px;
-      transition: color 200ms ease;
+      transition: opacity 0.2s;
     }
 
-    .visit-phone:hover {
-      color: var(--accent);
+    .hours-right .phone-link:hover {
+      opacity: 0.75;
     }
 
-    .map-container {
+    .map-wrap {
       border-radius: 16px;
       overflow: hidden;
-      height: 360px;
+      border: 1px solid var(--border);
     }
 
-    .map-container iframe {
+    .map-wrap iframe {
+      display: block;
       width: 100%;
-      height: 100%;
+      height: 360px;
       border: none;
     }
 
-    /* FINAL CTA */
+    /* ============================================================
+       FINAL CTA
+    ============================================================ */
     .final-cta {
       background: var(--primary);
       padding: 120px 48px;
@@ -729,36 +885,36 @@
     }
 
     .final-cta h2 {
-      font-family: var(--font-display);
+      color: white;
       font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: #fff;
       margin-bottom: 20px;
     }
 
-    .final-cta-sub {
-      font-size: 1.15rem;
+    .final-cta p {
       color: rgba(255, 255, 255, 0.8);
+      font-size: 1.15rem;
       max-width: 540px;
       margin: 0 auto 40px;
       line-height: 1.6;
     }
 
     .cta-glow {
+      position: relative;
+      overflow: hidden;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       background: var(--accent);
-      color: #fff;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.15rem;
       padding: 20px 40px;
       border-radius: 999px;
-      font-size: 1.15rem;
-      font-weight: 700;
-      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
-      position: relative;
-      overflow: hidden;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
       min-height: 52px;
     }
 
@@ -767,35 +923,36 @@
       position: absolute;
       width: 240px;
       height: 240px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
       border-radius: 50%;
-      top: calc(var(--y, 50%) - 120px);
-      left: calc(var(--x, 50%) - 120px);
+      background: radial-gradient(circle, rgba(6, 78, 59, 0.18) 0%, transparent 70%);
+      transform: translate(calc(var(--x, 50%) - 120px), calc(var(--y, 50%) - 120px));
       pointer-events: none;
-      transition: opacity 200ms ease;
-      opacity: 0;
-    }
-
-    .cta-glow:hover::before {
-      opacity: 1;
+      transition: transform 0.15s ease;
     }
 
     .cta-glow:hover {
       transform: scale(1.03);
-      box-shadow: 0 16px 48px rgba(59, 130, 246, 0.45);
+      box-shadow: 0 10px 32px rgba(212, 163, 115, 0.5);
     }
 
-    /* FOOTER */
+    /* ============================================================
+       FOOTER
+    ============================================================ */
     footer {
       background: var(--bg);
       border-top: 1px solid var(--border);
       padding: 40px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
-    .footer-left .footer-logo {
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left .footer-name {
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 1.15rem;
@@ -804,7 +961,7 @@
       margin-bottom: 4px;
     }
 
-    .footer-copy {
+    .footer-left .footer-copy {
       font-size: 0.88rem;
       color: var(--muted);
     }
@@ -817,18 +974,21 @@
     .footer-right a {
       color: var(--primary);
       font-weight: 600;
-      transition: color 200ms ease;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
 
     .footer-right a:hover {
-      color: var(--accent);
+      opacity: 0.7;
     }
 
-    /* FADE-UP ANIMATION */
+    /* ============================================================
+       FADE-UP ANIMATION
+    ============================================================ */
     .fade-up {
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 700ms ease-out, transform 700ms ease-out;
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
 
     .fade-up.visible {
@@ -836,33 +996,64 @@
       transform: translateY(0);
     }
 
-    /* RESPONSIVE */
+    .fade-up.delay-1 { transition-delay: 0.1s; }
+    .fade-up.delay-2 { transition-delay: 0.2s; }
+    .fade-up.delay-3 { transition-delay: 0.3s; }
+    .fade-up.delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================================
+       DESKTOP OVERRIDES / 1024px
+    ============================================================ */
     @media (max-width: 1024px) {
-      .about-section { padding: 80px 32px; }
-      .about-grid { gap: 64px; }
-      .hours-section { padding: 80px 32px; }
-      .hours-grid { gap: 48px; }
-      nav { padding: 18px 32px; }
-      .info-bar { padding: 40px 32px; }
+      .about-section,
+      .gallery-section,
+      .hours-section {
+        padding: 80px 32px;
+      }
+
+      .about-inner {
+        gap: 64px;
+      }
+
+      .hours-inner {
+        gap: 48px;
+      }
+
+      nav {
+        padding: 18px 32px;
+      }
     }
 
+    /* ============================================================
+       TABLET / MOBILE 767px
+    ============================================================ */
     @media (max-width: 767px) {
-      :root { --banner-height: 52px; }
+      :root {
+        --banner-height: 52px;
+      }
 
       .claim-banner {
         font-size: 0.82rem;
         padding: 10px 16px;
-        height: auto;
-        min-height: 52px;
       }
 
       nav {
         padding: 14px 20px;
-        top: var(--banner-height);
+        height: auto;
+        min-height: 60px;
       }
 
-      .nav-logo { font-size: 1.1rem; }
-      .nav-links { display: none; }
+      .nav-links {
+        display: none;
+      }
+
+      .nav-logo {
+        font-size: 1.1rem;
+      }
+
+      .hero-wrapper {
+        margin-top: calc(var(--banner-height) + 60px);
+      }
 
       .hero {
         height: 75vh;
@@ -871,7 +1062,13 @@
         padding: 40px 20px;
         background-image:
           linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
-          url('https://auxoagency.github.io/auxo-sites/sites/drury-accounting/hero.jpg');
+          url('https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/hero.jpg');
+      }
+
+      .hero-bg-layer {
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/hero.jpg');
       }
 
       .hero h1 {
@@ -887,15 +1084,17 @@
       .hero-buttons {
         flex-direction: column;
         gap: 14px;
-        width: 100%;
       }
 
-      .btn-primary, .btn-secondary {
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
         width: 100%;
         justify-content: center;
       }
 
-      .hero-chevron { display: none; }
+      .hero-chevron {
+        display: none;
+      }
 
       .info-bar {
         padding: 32px 20px;
@@ -907,49 +1106,69 @@
       }
 
       .info-stat {
+        width: 100%;
         padding: 18px 0;
-        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       }
 
-      .info-stat-divider {
-        width: 100%;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.15);
+      .info-stat:last-child {
+        border-bottom: none;
       }
 
-      .info-stat-number { font-size: 2.6rem; }
+      .info-stat + .info-stat::before {
+        display: none;
+      }
 
-      .marquee-pill { padding: 10px 18px; }
-      .marquee-track { animation-duration: 24s; }
+      .info-stat-number {
+        font-size: 2.6rem;
+      }
 
-      .about-section { padding: 70px 20px; }
-      .about-grid {
+      .about-section,
+      .hours-section {
+        padding: 70px 20px;
+      }
+
+      .about-inner {
         grid-template-columns: 1fr;
         gap: 48px;
       }
 
-      .about-boxes {
+      .about-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
       }
 
-      .tilt-box { padding: 28px; }
+      .tilt-box {
+        padding: 28px;
+      }
+
+      .gallery-section {
+        padding: 70px 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        aspect-ratio: 4/3;
+      }
+
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-wrap iframe {
+        height: 280px;
+      }
 
       .signature-band {
         padding: 70px 20px;
       }
 
-      .signature-quote {
+      .signature-band blockquote {
         font-size: clamp(1.6rem, 6vw, 2.4rem);
       }
-
-      .hours-section { padding: 70px 20px; }
-      .hours-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .map-container { height: 280px; }
 
       .final-cta {
         padding: 80px 20px;
@@ -961,20 +1180,37 @@
 
       .cta-glow {
         width: 100%;
+        max-width: 400px;
         justify-content: center;
-        padding: 18px 32px;
       }
 
       footer {
+        padding: 40px 20px;
+      }
+
+      .footer-inner {
         flex-direction: column;
         text-align: center;
         gap: 16px;
-        padding: 32px 20px;
       }
 
-      html { scroll-padding-top: 120px; }
+      h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .marquee-pill {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+      }
+
+      .marquee-track {
+        animation-duration: 24s;
+      }
     }
 
+    /* ============================================================
+       SMALL MOBILE 479px
+    ============================================================ */
     @media (max-width: 479px) {
       .hero {
         height: 72vh;
@@ -983,39 +1219,50 @@
         padding: 32px 18px;
       }
 
-      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
 
-      .about-section { padding: 56px 18px; }
-      .hours-section { padding: 56px 18px; }
-      .tilt-box { padding: 22px; }
-      .info-stat-number { font-size: 2.2rem; }
+      .about-section,
+      .gallery-section,
+      .hours-section {
+        padding: 56px 18px;
+      }
+
+      .info-stat-number {
+        font-size: 2.2rem;
+      }
+
+      .tilt-box {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- CLAIM BANNER -->
-  <div class="claim-banner">
-    Built free for Drury Accounting by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20drury-accounting%20homepage">Reply to my email.</a>
+  <div class="claim-banner" role="banner" aria-label="Site offer banner">
+    Built free for Gymology 24/7 by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@tryauxo.com?subject=Re%3A%20gymology-24-7%20homepage">Reply to my email.</a>
   </div>
 
-  <!-- SCROLL PROGRESS -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header>
-    <nav>
-      <span class="nav-logo">Drury Accounting</span>
-      <ul class="nav-links">
+    <nav aria-label="Primary navigation">
+      <span class="nav-logo">Gymology 24/7</span>
+      <ul class="nav-links" role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#hours">Hours</a></li>
         <li><a href="#hours">Contact</a></li>
       </ul>
-      <a href="tel:3193658604" class="nav-phone" aria-label="Call Drury Accounting at (319) 365-8604">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.12 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.14 6.14l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      <a href="tel:+14178126611" class="nav-cta" aria-label="Call Gymology 24/7 at (417) 812-6611">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.61 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.61a16 16 0 006.29 6.29l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
-        (319) 365-8604
+        (417) 812-6611
       </a>
     </nav>
   </header>
@@ -1023,180 +1270,151 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero" aria-label="Drury Accounting hero">
-      <div class="hero-bg-layer" aria-hidden="true"></div>
-      <div class="hero-gradient" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="hero-eyebrow">
-          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
-          Cedar Rapids, IA &nbsp;·&nbsp; Professional Accounting
+    <div class="hero-wrapper">
+      <section class="hero" aria-label="Hero section">
+        <div class="hero-bg-layer" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+            Springfield, MO &nbsp;·&nbsp; Wellness &amp; Fitness
+          </div>
+          <h1 id="hero-headline">Gymology 24/7</h1>
+          <p class="hero-subhead">Springfield's only fitness facility open every single hour, every day of the year, on Rockhurst Street.</p>
+          <div class="hero-buttons">
+            <a href="tel:+14178126611" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.61 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.61a16 16 0 006.29 6.29l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              Call Now
+            </a>
+            <a href="#hours" class="btn-secondary">View Hours</a>
+          </div>
         </div>
-        <h1 id="heroH1">Drury Accounting</h1>
-        <p class="hero-subhead">Cedar Rapids businesses and families trust Drury for straightforward accounting on Council Street.</p>
-        <div class="hero-buttons">
-          <a href="tel:3193658604" class="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.12 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.14 6.14l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-            </svg>
-            Call Now
-          </a>
-          <a href="#hours" class="btn-secondary">View Hours</a>
+        <div class="hero-chevron" aria-hidden="true" onclick="document.getElementById('info-bar').scrollIntoView({behavior:'smooth'})">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
         </div>
-      </div>
-      <div class="hero-chevron" id="heroChevron" aria-hidden="true" onclick="document.getElementById('infoBar').scrollIntoView({behavior:'smooth'})">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"/>
-        </svg>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- INFO BAR -->
-    <section class="info-bar" id="infoBar" aria-label="Drury Accounting highlights">
+    <section id="info-bar" class="info-bar" aria-label="Key stats">
       <div class="info-bar-inner">
-        <div class="info-stat">
-          <span class="info-stat-number" data-count="4.9" data-decimal="1" id="stat0">4.9</span>
+        <div class="info-stat fade-up">
+          <span class="info-stat-number" data-target="5" data-decimal="1">5.0</span>
           <span class="info-stat-label">Google Rating</span>
         </div>
-        <div class="info-stat-divider" aria-hidden="true"></div>
-        <div class="info-stat">
-          <span class="info-stat-number" data-count="7" id="stat1">7</span>
+        <div class="info-stat fade-up delay-1">
+          <span class="info-stat-number" data-target="60">60</span>
           <span class="info-stat-label">Verified Reviews</span>
         </div>
-        <div class="info-stat-divider" aria-hidden="true"></div>
-        <div class="info-stat">
-          <span class="info-stat-number" id="stat2" style="font-size:1.4rem; padding-top: 4px;">Established</span>
-          <span class="info-stat-label">Cedar Rapids, IA</span>
+        <div class="info-stat fade-up delay-2">
+          <span class="info-stat-number" style="font-size:1.8rem;line-height:1.2;">24/7</span>
+          <span class="info-stat-label">Always Open</span>
         </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <section class="marquee-section" aria-label="Drury Accounting services">
-      <div class="marquee-track" id="marqueeTrack" aria-hidden="true">
-        <span class="marquee-pill">Trusted Experts</span>
-        <span class="marquee-pill">Transparent Pricing</span>
-        <span class="marquee-pill">Tailored Plans</span>
-        <span class="marquee-pill">Free Consult</span>
-        <span class="marquee-pill">Fast Response</span>
-        <span class="marquee-pill">Years of Experience</span>
-        <span class="marquee-pill">Trusted Experts</span>
-        <span class="marquee-pill">Transparent Pricing</span>
-        <span class="marquee-pill">Tailored Plans</span>
-        <span class="marquee-pill">Free Consult</span>
-        <span class="marquee-pill">Fast Response</span>
-        <span class="marquee-pill">Years of Experience</span>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="about-section" id="about" aria-label="About Drury Accounting">
-      <div class="about-grid">
+    <section id="about" class="about-section">
+      <div class="about-inner">
         <div class="about-text fade-up">
-          <span class="eyebrow">About</span>
-          <h2>Cedar Rapids accounting, handled straight.</h2>
-          <p>Drury Accounting on Council Street NE brings honest, no-nonsense financial expertise to Cedar Rapids individuals, families, and small businesses. There are no buried fees, no upsells, and no surprises, just clear accounting advice from people who live and work in this community.</p>
-          <p>Rated 4.9 stars across 7 Google reviews, Drury has built its reputation on getting the numbers right the first time and explaining what they mean in plain language. From tax preparation to business bookkeeping, the work here is thorough, timely, and done with care.</p>
-          <a href="tel:3193658604" class="about-link">
-            Call (319) 365-8604
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
+          <p class="eyebrow">About</p>
+          <h2>Springfield's round-the-clock gym, no excuses needed.</h2>
+          <p>Gymology 24/7 is a fully equipped fitness facility at 2103 E Rockhurst St in Springfield, MO, built for people whose schedules don't fit a standard gym's hours. Whether you're training before a 5 AM shift or winding down after midnight, the doors are always open. That kind of consistent access has earned Gymology 24/7 a perfect 5-star rating from 60 Springfield members.</p>
+          <p>The gym is designed around one principle: your workout, your time. Clean equipment, a focused environment, and zero pressure make it easier to stay consistent. Springfield residents have made it one of the most reviewed wellness facilities in the area, and the feedback speaks for itself.</p>
+          <a href="tel:+14178126611" class="about-link">
+            Call (417) 812-6611
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
-        <div class="about-boxes fade-up">
-          <div class="tilt-box" tabindex="0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <div class="about-grid">
+          <div class="tilt-box fade-up delay-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
-            <h4>Trusted Experts</h4>
-            <p>Certified professionals with deep roots in Iowa tax law and financial planning.</p>
+            <h4>Always Open</h4>
+            <p>No limited hours, no holidays off. Access the facility any hour, 365 days a year.</p>
           </div>
-          <div class="tilt-box" tabindex="0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          <div class="tilt-box fade-up delay-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
             </svg>
-            <h4>Transparent Pricing</h4>
-            <p>Flat, upfront fees with no billing surprises and no billable hour gotchas.</p>
+            <h4>Personalized Care</h4>
+            <p>A gym experience tailored to your pace, goals, and schedule, not a one-size program.</p>
           </div>
-          <div class="tilt-box" tabindex="0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+          <div class="tilt-box fade-up delay-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
             </svg>
-            <h4>Tailored Solutions</h4>
-            <p>Personal returns, small business books, and payroll built around your actual situation.</p>
+            <h4>Calming Space</h4>
+            <p>A clean, well-maintained environment that helps you focus on the work, not the noise.</p>
           </div>
-          <div class="tilt-box" tabindex="0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          <div class="tilt-box fade-up delay-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
-            <h4>Dedicated Support</h4>
-            <p>Real answers from the people doing your work, not an automated phone tree.</p>
+            <h4>5-Star Reputation</h4>
+            <p>Rated perfectly by 60 Springfield members who keep coming back, and keep telling their friends.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SIGNATURE BAND -->
-    <section class="signature-band fade-up" aria-label="Customer reviews">
-      <span class="eyebrow">What customers say</span>
-      <p class="signature-quote">&#8220;Rated 4.9 stars by 7 Cedar Rapids clients, and counting.&#8221;</p>
-      <a href="https://www.google.com/search?q=Drury+Accounting+Cedar+Rapids+IA+reviews" target="_blank" rel="noopener" class="signature-link" aria-label="Read Drury Accounting Google reviews">
+    <section class="signature-band fade-up" aria-label="Customer reviews highlight">
+      <p class="eyebrow">What customers say</p>
+      <blockquote>"Rated 5 stars by 60 Springfield, MO customers, and counting."</blockquote>
+      <a href="https://www.google.com/search?q=Gymology+24/7+Springfield+MO" target="_blank" rel="noopener noreferrer">
         Read our Google reviews
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </section>
 
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery-section" aria-label="Facility gallery">
+      <div class="gallery-header fade-up">
+        <p class="eyebrow">Inside the gym</p>
+        <h2>See the space for yourself.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-up delay-1">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/gallery-1.jpg" alt="Gymology 24/7 fitness facility interior, Springfield MO" loading="lazy">
+        </div>
+        <div class="gallery-item fade-up delay-2">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/gallery-2.jpg" alt="Gymology 24/7 equipment and training area, Springfield MO" loading="lazy">
+        </div>
+        <div class="gallery-item fade-up delay-3">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/gymology-24-7/gallery-3.jpg" alt="Gymology 24/7 workout floor, Springfield MO" loading="lazy">
+        </div>
+      </div>
+    </section>
+
     <!-- HOURS & CONTACT -->
-    <section class="hours-section" id="hours" aria-label="Hours and contact information">
-      <div class="hours-grid">
-        <div class="fade-up">
-          <span class="eyebrow">Hours</span>
-          <div class="hours-card">
-            <h3>Open This Week</h3>
-            <div class="hours-row" id="row-mon">
-              <span class="hours-day">Monday</span>
-              <span class="hours-time">8:30 AM-5 PM</span>
-            </div>
-            <div class="hours-row" id="row-tue">
-              <span class="hours-day">Tuesday</span>
-              <span class="hours-time">8:30 AM-5 PM</span>
-            </div>
-            <div class="hours-row" id="row-wed">
-              <span class="hours-day">Wednesday</span>
-              <span class="hours-time">8:30 AM-5 PM</span>
-            </div>
-            <div class="hours-row" id="row-thu">
-              <span class="hours-day">Thursday</span>
-              <span class="hours-time">8:30 AM-5 PM</span>
-            </div>
-            <div class="hours-row" id="row-fri">
-              <span class="hours-day">Friday</span>
-              <span class="hours-time">8:30 AM-5 PM</span>
-            </div>
-            <div class="hours-row" id="row-sat">
-              <span class="hours-day">Saturday</span>
-              <span class="hours-time closed">Closed</span>
-            </div>
-            <div class="hours-row" id="row-sun">
-              <span class="hours-day">Sunday</span>
-              <span class="hours-time closed">Closed</span>
-            </div>
+    <section id="hours" class="hours-section" aria-label="Hours and contact information">
+      <div class="hours-inner">
+        <div class="hours-left fade-up">
+          <p class="eyebrow">Hours</p>
+          <h3>Open This Week</h3>
+          <div class="hours-card" id="hours-card">
+            <!-- Populated by JS -->
           </div>
         </div>
-
-        <div class="visit-side fade-up">
-          <span class="eyebrow">Visit</span>
-          <h2>Drury Accounting</h2>
-          <p class="visit-address">5925 Council St NE, Suite 130<br>Cedar Rapids, IA 52402</p>
-          <a href="tel:3193658604" class="visit-phone">(319) 365-8604</a>
-          <div class="map-container">
+        <div class="hours-right fade-up delay-1">
+          <p class="eyebrow">Visit</p>
+          <h2 style="font-family: var(--font-display); font-size:1.5rem; margin-bottom:12px;">Gymology 24/7</h2>
+          <p class="address">2103 E Rockhurst St #108<br>Springfield, MO 65802</p>
+          <a href="tel:+14178126611" class="phone-link">(417) 812-6611</a>
+          <div class="map-wrap">
             <iframe
-              src="https://maps.google.com/maps?q=5925+Council+St+NE+%23+130%2C+Cedar+Rapids%2C+IA+52402&output=embed"
-              title="Drury Accounting map location"
+              src="https://maps.google.com/maps?q=2103+E+Rockhurst+St+%23108%2C+Springfield%2C+MO+65802&output=embed"
+              title="Gymology 24/7 location map"
               loading="lazy"
-              aria-label="Map showing Drury Accounting at 5925 Council St NE, Cedar Rapids, IA">
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Google Maps embed showing Gymology 24/7 location">
             </iframe>
           </div>
         </div>
@@ -1204,185 +1422,231 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="final-cta fade-up" aria-label="Contact Drury Accounting">
-      <span class="eyebrow">Ready when you are</span>
-      <h2>Ready to get started?</h2>
-      <p class="final-cta-sub">Drury Accounting is open Monday through Friday in Cedar Rapids. Call to schedule a consult or ask a quick question.</p>
-      <a href="tel:3193658604" class="cta-glow" id="ctaGlow" aria-label="Call Drury Accounting">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.12 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.14 6.14l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+    <section class="final-cta fade-up" aria-label="Call to action">
+      <p class="eyebrow">Ready when you are</p>
+      <h2>Ready to unwind?</h2>
+      <p>Gymology 24/7 is open right now in Springfield, MO. No appointment, no wait, just show up.</p>
+      <a href="tel:+14178126611" class="cta-glow" id="cta-glow-btn" aria-label="Call Gymology 24/7 at (417) 812-6611">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.61 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.61a16 16 0 006.29 6.29l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
-        Call (319) 365-8604
+        Call (417) 812-6611
       </a>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-left">
-      <span class="footer-logo">Drury Accounting</span>
-      <span class="footer-copy">&copy; 2025 Drury Accounting. All rights reserved.</span>
-    </div>
-    <div class="footer-right">
-      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
+  <footer aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Gymology 24/7</span>
+        <span class="footer-copy">© 2025 Gymology 24/7. All rights reserved.</span>
+      </div>
+      <div class="footer-right">
+        Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+      </div>
     </div>
   </footer>
 
   <script defer>
-    // ─── SCROLL PROGRESS ───────────────────────────────────────────
-    const scrollProgress = document.getElementById('scrollProgress');
-    function updateProgress() {
+    // ============================================================
+    // SCROLL PROGRESS BAR
+    // ============================================================
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
-      const docH = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docH > 0 ? (scrollY / docH) * 100 : 0;
-      scrollProgress.style.width = pct + '%';
-    }
-    window.addEventListener('scroll', updateProgress, { passive: true });
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
 
-    // ─── HERO H1 WORD STAGGER ──────────────────────────────────────
+    // ============================================================
+    // HERO H1 WORD STAGGER
+    // ============================================================
     (function() {
-      const h1 = document.getElementById('heroH1');
+      const h1 = document.getElementById('hero-headline');
       if (!h1) return;
       const text = h1.textContent.trim();
       const words = text.split(' ');
-      h1.innerHTML = words.map(w => `<span class="word">${w}&nbsp;</span>`).join('');
+      h1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+      const spans = h1.querySelectorAll('.word');
       setTimeout(() => {
-        h1.querySelectorAll('.word').forEach((span, i) => {
-          setTimeout(() => span.classList.add('visible'), i * 60);
+        spans.forEach((span, i) => {
+          setTimeout(() => {
+            span.classList.add('visible');
+          }, i * 60);
         });
       }, 200);
     })();
 
-    // ─── HIGHLIGHT TODAY'S HOURS ───────────────────────────────────
+    // ============================================================
+    // HERO PARALLAX (desktop/non-touch only)
+    // ============================================================
     (function() {
-      const dayMap = { 0: 'sun', 1: 'mon', 2: 'tue', 3: 'wed', 4: 'thu', 5: 'fri', 6: 'sat' };
-      const today = new Date().getDay();
-      const rowId = 'row-' + dayMap[today];
-      const row = document.getElementById(rowId);
-      if (row) {
-        const timeEl = row.querySelector('.hours-time');
-        if (timeEl && !timeEl.classList.contains('closed')) {
-          timeEl.classList.add('today');
-          const dot = document.createElement('span');
-          dot.className = 'hours-today-dot';
-          dot.setAttribute('aria-hidden', 'true');
-          timeEl.prepend(dot);
+      if (window.matchMedia('(hover: none)').matches) return;
+      const bgLayer = document.querySelector('.hero-bg-layer');
+      if (!bgLayer) return;
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const heroWrapper = document.querySelector('.hero-wrapper');
+            if (!heroWrapper) { ticking = false; return; }
+            const rect = heroWrapper.getBoundingClientRect();
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+              const offset = window.scrollY * 0.3;
+              bgLayer.style.backgroundPositionY = `calc(center + ${offset}px)`;
+            }
+            ticking = false;
+          });
+          ticking = true;
         }
-      }
+      }, { passive: true });
     })();
 
-    // ─── INTERSECTION OBSERVER FADE-UP ────────────────────────────
-    const fadeEls = document.querySelectorAll('.fade-up');
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          fadeObserver.unobserve(entry.target);
+    // ============================================================
+    // INTERSECTION OBSERVER - FADE UP
+    // ============================================================
+    (function() {
+      const elements = document.querySelectorAll('.fade-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      elements.forEach(el => observer.observe(el));
+    })();
+
+    // ============================================================
+    // COUNT-UP ANIMATION
+    // ============================================================
+    (function() {
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function countUp(el, target, duration, isDecimal) {
+        const start = performance.now();
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const current = eased * target;
+          el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current).toString();
+          if (progress < 1) requestAnimationFrame(step);
+          else el.textContent = isDecimal ? target.toFixed(1) : target.toString();
         }
-      });
-    }, { threshold: 0.15 });
-    fadeEls.forEach(el => fadeObserver.observe(el));
-
-    // ─── COUNT-UP ANIMATION ────────────────────────────────────────
-    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-    function animateCount(el, target, decimal, duration) {
-      if (el.dataset.animated) return;
-      el.dataset.animated = 'true';
-      const start = performance.now();
-      const isDecimal = decimal > 0;
-
-      function step(now) {
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = easeOutCubic(progress);
-        const current = target * eased;
-        el.textContent = isDecimal ? current.toFixed(decimal) : Math.floor(current);
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = isDecimal ? target.toFixed(decimal) : target;
+        requestAnimationFrame(step);
       }
-      requestAnimationFrame(step);
-    }
 
-    const statEls = [
-      { el: document.getElementById('stat0'), count: 4.9, decimal: 1 },
-      { el: document.getElementById('stat1'), count: 7, decimal: 0 }
-    ];
+      const statNumbers = document.querySelectorAll('.info-stat-number[data-target]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseFloat(el.dataset.target);
+            const isDecimal = el.dataset.decimal === '1';
+            countUp(el, target, 1200, isDecimal);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
 
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          statEls.forEach(s => {
-            if (s.el) animateCount(s.el, s.count, s.decimal, 1200);
-          });
-          statsObserver.disconnect();
-        }
-      });
-    }, { threshold: 0.3 });
+      statNumbers.forEach(el => observer.observe(el));
+    })();
 
-    const infoBar = document.getElementById('infoBar');
-    if (infoBar) statsObserver.observe(infoBar);
-
-    // ─── 3D TILT ON ABOUT BOXES ────────────────────────────────────
-    if (window.matchMedia('(hover: hover)').matches) {
-      document.querySelectorAll('.tilt-box').forEach(box => {
+    // ============================================================
+    // 3D TILT ON ABOUT BOXES
+    // ============================================================
+    (function() {
+      if (window.matchMedia('(hover: none)').matches) return;
+      const boxes = document.querySelectorAll('.tilt-box');
+      boxes.forEach(box => {
         box.addEventListener('mousemove', (e) => {
           const rect = box.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const cx = rect.width / 2;
-          const cy = rect.height / 2;
-          const rotY = ((x - cx) / cx) * 8;
-          const rotX = -((y - cy) / cy) * 8;
-          box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (e.clientX - cx) / (rect.width / 2);
+          const dy = (e.clientY - cy) / (rect.height / 2);
+          const rotX = -dy * 8;
+          const rotY = dx * 8;
+          box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
         });
         box.addEventListener('mouseleave', () => {
-          box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
+          box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg)';
         });
       });
-    }
+    })();
 
-    // ─── CURSOR GLOW ON CTA ────────────────────────────────────────
-    const ctaGlow = document.getElementById('ctaGlow');
-    if (ctaGlow && window.matchMedia('(hover: hover)').matches) {
-      ctaGlow.addEventListener('mousemove', (e) => {
-        const rect = ctaGlow.getBoundingClientRect();
-        ctaGlow.style.setProperty('--x', (e.clientX - rect.left) + 'px');
-        ctaGlow.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+    // ============================================================
+    // CURSOR GLOW ON CTA
+    // ============================================================
+    (function() {
+      if (window.matchMedia('(hover: none)').matches) return;
+      const btn = document.getElementById('cta-glow-btn');
+      if (!btn) return;
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        btn.style.setProperty('--x', x + '%');
+        btn.style.setProperty('--y', y + '%');
       });
-    }
+    })();
 
-    // ─── PARALLAX ON HERO ─────────────────────────────────────────
-    if (!window.matchMedia('(hover: none)').matches) {
-      const heroBg = document.querySelector('.hero-bg-layer');
-      function applyParallax() {
-        if (!heroBg) return;
-        const heroEl = heroBg.closest('.hero');
-        if (!heroEl) return;
-        const rect = heroEl.getBoundingClientRect();
-        if (rect.bottom > 0 && rect.top < window.innerHeight) {
-          const offset = window.scrollY * 0.3;
-          heroBg.style.backgroundPositionY = `calc(center + ${offset}px)`;
+    // ============================================================
+    // HOURS GENERATION
+    // ============================================================
+    (function() {
+      const hoursData = [
+        { day: 'Monday',    time: 'Open 24 hours' },
+        { day: 'Tuesday',   time: 'Open 24 hours' },
+        { day: 'Wednesday', time: 'Open 24 hours' },
+        { day: 'Thursday',  time: 'Open 24 hours' },
+        { day: 'Friday',    time: 'Open 24 hours' },
+        { day: 'Saturday',  time: 'Open 24 hours' },
+        { day: 'Sunday',    time: 'Open 24 hours' },
+      ];
+
+      const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const todayName = dayNames[new Date().getDay()];
+
+      const card = document.getElementById('hours-card');
+      if (!card) return;
+
+      let html = '';
+      hoursData.forEach(row => {
+        const isToday = row.day === todayName;
+        const timeDisplay = row.time === 'Open 24 hours' ? 'Open 24 hours' : row.time;
+        if (isToday) {
+          html += `<div class="hours-row today">
+            <span class="hours-day">${row.day}</span>
+            <span class="hours-time"><span class="today-dot" aria-hidden="true"></span>${timeDisplay}</span>
+          </div>`;
+        } else {
+          html += `<div class="hours-row">
+            <span class="hours-day">${row.day}</span>
+            <span class="hours-time">${timeDisplay}</span>
+          </div>`;
         }
-      }
-      window.addEventListener('scroll', applyParallax, { passive: true });
-    }
+      });
+      card.innerHTML = html;
+    })();
 
-    // ─── SMOOTH SCROLL ─────────────────────────────────────────────
+    // ============================================================
+    // SMOOTH SCROLL FOR NAV + HERO BUTTONS
+    // ============================================================
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href').slice(1);
-        const target = document.getElementById(targetId);
+        const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
-
-    // ─── MARQUEE DUPLICATE CHECK ───────────────────────────────────
-    // Content already duplicated in HTML for seamless loop.
   </script>
 
 </body>
