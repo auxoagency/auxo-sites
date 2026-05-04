@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Flowerlina, Greenville, SC</title>
+  <meta name="description" content="Flowerlina is Greenville, SC's beloved floral studio on Beverly Rd, rated 4.8 stars by 35 verified customers. Fresh arrangements, daily.">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="Flowerlina | Greenville, SC">
+  <meta property="og:description" content="Greenville's neighborhood floral studio, rated 4.8 stars by 35 customers. Fresh daily arrangements on Beverly Rd.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/flowerlina/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flowerlina | Greenville, SC">
+  <meta name="twitter:description" content="Greenville's neighborhood floral studio, rated 4.8 stars by 35 customers.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/flowerlina/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%233B82F6'>F</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Flowerlina",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11 Beverly Rd",
+      "addressLocality": "Greenville",
+      "addressRegion": "SC",
+      "postalCode": "29609",
+      "addressCountry": "US"
+    },
+    "telephone": "(864) 558-0021",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "35"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #3B82F6;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* SCROLL PROGRESS BAR */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--accent);
+      z-index: 1000;
+      transition: width 80ms linear;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 250ms ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      flex-shrink: 0;
+    }
+
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(15,23,42,0.18);
+    }
+
+    .nav-phone svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/flowerlina/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg-scale {
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .hero-eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hero-eyebrow-text {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subhead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.92);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 52px;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(59,130,246,0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 13px 26px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), background 200ms ease, border-color 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: chevronBounce 1.6s ease-in-out infinite;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* INFO BAR */
+    .info-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 48px;
+    }
+
+    .info-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .info-stat {
+      text-align: center;
+      flex: 1;
+      padding: 0 24px;
+    }
+
+    .info-stat + .info-stat {
+      border-left: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1;
+      color: #fff;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 96px 48px;
+      background: var(--bg);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .about h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .about-body {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-body + .about-body {
+      margin-bottom: 32px;
+    }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--primary);
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+      transition: gap 200ms ease;
+    }
+
+    .about-link:hover {
+      gap: 12px;
+    }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .about-box:hover {
+      box-shadow: 0 12px 32px rgba(15,23,42,0.1);
+    }
+
+    .about-box-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .about-box h4 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .about-box p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    /* SIGNATURE BAND */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    .signature-band .eyebrow {
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .signature-band blockquote {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
+      color: #fff;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+      transition: gap 200ms ease;
+    }
+
+    .signature-link:hover {
+      gap: 12px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      padding: 96px 48px;
+      background: var(--surface);
+    }
+
+    .gallery-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-header {
+      margin-bottom: 48px;
+    }
+
+    .gallery h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* HOURS & CONTACT */
+    .hours-contact {
+      padding: 96px 48px;
+      background: var(--bg);
+    }
+
+    .hours-contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 1.05rem;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-day {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .hours-time {
+      color: var(--muted);
+    }
+
+    .hours-time.today {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hours-time.closed {
+      color: var(--faint);
+    }
+
+    .hours-today-row .hours-day {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .today-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .contact-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+
+    .contact-address {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .contact-phone {
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: none;
+      margin-top: 4px;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    .final-cta .eyebrow {
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 40px;
+    }
+
+    .btn-cta-final {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 20px 40px;
+      border-radius: 999px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-cta-final:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(59,130,246,0.45);
+    }
+
+    .cta-glow {
+      position: relative;
+    }
+
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
+      top: calc(var(--y, 50%) - 120px);
+      left: calc(var(--x, 50%) - 120px);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+
+    .cta-glow:hover::before {
+      opacity: 1;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+
+    .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .footer-right {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-right a:hover {
+      color: var(--accent);
+    }
+
+    /* CLAIM CARD */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      opacity: 0;
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: var(--bg);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(15,23,42,0.18), 0 2px 8px rgba(15,23,42,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+
+    .claim-card.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .claim-text {
+      flex: 1;
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--primary);
+    }
+
+    .claim-text a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+      text-underline-offset: 2px;
+    }
+
+    .claim-text a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    /* FADE UP ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* H2 SECTION HEADER */
+    .section-h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+
+    /* HOURS SECTION H3 */
+    .hours-h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      color: var(--primary);
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .about-box { transform: none !important; }
+      .cta-glow::before { display: none; }
+    }
+
+    /* ======================== TABLET 1024px ======================== */
+    @media (max-width: 1024px) {
+      nav { padding: 18px 32px; }
+      .hero { padding: 50px 32px; }
+      .about { padding: 80px 32px; }
+      .about-inner { gap: 64px; }
+      .signature-band { padding: 80px 32px; }
+      .gallery { padding: 80px 32px; }
+      .hours-contact { padding: 80px 32px; }
+      .hours-contact-inner { gap: 48px; }
+      .final-cta { padding: 96px 32px; }
+      footer { padding: 40px 32px 100px; }
+      .info-bar { padding: 40px 32px; }
+    }
+
+    /* ======================== MOBILE 767px ======================== */
+    @media (max-width: 767px) {
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/flowerlina/hero.jpg');
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero-subhead {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-chevron { display: none; }
+
+      nav {
+        padding: 14px 20px;
+      }
+
+      .nav-links { display: none; }
+
+      .nav-logo { font-size: 1.1rem; }
+
+      .info-bar { padding: 32px 20px; }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .info-stat {
+        width: 100%;
+        padding: 18px 0;
+        border-left: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+      }
+
+      .info-stat:last-child { border-bottom: none; }
+
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about { padding: 70px 20px; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box { padding: 28px; }
+
+      .signature-band { padding: 70px 20px; }
+      .signature-band blockquote {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      .gallery { padding: 70px 20px; }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item { aspect-ratio: 4/3; }
+
+      .hours-contact { padding: 70px 20px; }
+      .hours-contact-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-embed { height: 280px; }
+
+      .final-cta { padding: 80px 20px; }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+
+      .btn-cta-final {
+        width: 100%;
+        justify-content: center;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px 80px;
+        gap: 12px;
+      }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+
+      .claim-text { font-size: 0.85rem; }
+
+      .section-h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+    }
+
+    /* ======================== SMALL MOBILE 479px ======================== */
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+
+      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+
+      .about { padding: 56px 18px; }
+      .signature-band { padding: 56px 18px; }
+      .gallery { padding: 56px 18px; }
+      .hours-contact { padding: 56px 18px; }
+      .final-cta { padding: 64px 18px; }
+      footer { padding: 28px 18px 80px; }
+
+      .info-stat-number { font-size: 2.2rem; }
+
+      .about-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+  <!-- CLAIM CARD -->
+  <div class="claim-card" id="claimCard" role="complementary" aria-label="Site credit">
+    <div class="claim-dot" aria-hidden="true"></div>
+    <p class="claim-text">Built free for Flowerlina by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20flowerlina%20homepage">Reply to my email</a></p>
+  </div>
+
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="Flowerlina home">Flowerlina</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Contact</a></li>
+      </ul>
+      <a href="tel:8645580021" class="nav-phone" aria-label="Call Flowerlina at (864) 558-0021">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        (864) 558-0021
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Flowerlina hero">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-dot" aria-hidden="true"></div>
+          <span class="hero-eyebrow-text">Greenville, SC &nbsp;·&nbsp; Floral Studio</span>
+        </div>
+        <h1 id="hero-h1">Greenville's neighborhood flower studio.</h1>
+        <p class="hero-subhead">Hand-arranged bouquets, cut fresh daily on Beverly Rd in Greenville's North Main corridor.</p>
+        <div class="hero-buttons">
+          <a href="tel:8645580021" class="btn-primary" aria-label="Call Flowerlina now">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            Call Now
+          </a>
+          <a href="#hours" class="btn-secondary">
+            View Hours
+          </a>
+        </div>
+      </div>
+      <div class="hero-chevron" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar" aria-label="Key stats">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-number" data-count="4.8" data-decimals="1" id="stat-1">4.8</span>
+          <span class="info-stat-label">Google Rating</span>
+        </div>
+        <div class="info-stat">
+          <span class="info-stat-number" data-count="35" data-decimals="0" id="stat-2">35</span>
+          <span class="info-stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-stat">
+          <span class="info-stat-number" style="font-size:1.6rem; padding-top:0.4rem;" id="stat-3">Local Favorite</span>
+          <span class="info-stat-label">Greenville, SC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about fade-up" id="about" aria-label="About Flowerlina">
+      <div class="about-inner">
+        <div class="about-text">
+          <span class="eyebrow">About</span>
+          <h2 class="section-h2">Fresh blooms, made by hand, in Greenville's North Main neighborhood.</h2>
+          <p class="about-body">Flowerlina is a small-batch floral studio tucked on Beverly Rd, where every arrangement is cut and assembled the same morning it leaves the shop. There are no imported bulk stems sitting in cold storage here, just seasonal, intentional flowers chosen for how they look and how long they last.</p>
+          <p class="about-body">Greenville customers have given Flowerlina a 4.8-star rating across 35 verified Google reviews, which reflects what regulars already know: this is the kind of flower shop where the person wrapping your bouquet knows exactly what the occasion calls for.</p>
+          <a href="tel:8645580021" class="about-link">
+            Call (864) 558-0021
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="about-boxes">
+          <!-- Box 1 -->
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 4C12 4 8 8 8 12c0 5 8 16 8 16s8-11 8-16c0-4-4-8-8-8z"/>
+              <circle cx="16" cy="12" r="3"/>
+            </svg>
+            <h4>Curated Selection</h4>
+            <p>Seasonal stems chosen for freshness and longevity, not volume.</p>
+          </div>
+          <!-- Box 2 -->
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 12c0-5.5 4.5-8 10-8s10 2.5 10 8c0 7-10 16-10 16S6 19 6 12z"/>
+              <path d="M16 4v24M6 12h20"/>
+            </svg>
+            <h4>Fresh Daily</h4>
+            <p>Cut and arranged every morning. Every arrangement leaves the same day it's made.</p>
+          </div>
+          <!-- Box 3 -->
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="8" width="24" height="20" rx="3"/>
+              <path d="M4 14h24M10 4v8M22 4v8"/>
+            </svg>
+            <h4>Weekday Hours</h4>
+            <p>Open Monday through Friday, 8 AM to 3 PM. Right on Beverly Rd.</p>
+          </div>
+          <!-- Box 4 -->
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M28 12c0 10-12 18-12 18S4 22 4 12a12 12 0 0124 0z"/>
+              <path d="M16 8v5l3 3"/>
+            </svg>
+            <h4>Friendly Service</h4>
+            <p>A shop that knows its regulars by name and treats every order like it matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up" aria-label="Customer testimonial">
+      <div style="max-width:1200px;margin:0 auto;">
+        <span class="eyebrow">What customers say</span>
+        <blockquote>"Rated 4.8 stars by 35 Greenville customers, and counting."</blockquote>
+        <a href="https://www.google.com/search?q=Flowerlina+Greenville+SC" target="_blank" rel="noopener" class="signature-link" aria-label="Read Flowerlina Google reviews">
+          Read our Google reviews
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="gallery fade-up" id="gallery" aria-label="Flowerlina gallery">
+      <div class="gallery-inner">
+        <div class="gallery-header">
+          <span class="eyebrow">Gallery</span>
+          <h2 class="section-h2">The work, in Greenville.</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/flowerlina/gallery-1.jpg" alt="Flowerlina floral arrangement, Greenville SC" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/flowerlina/gallery-2.jpg" alt="Fresh cut flowers at Flowerlina on Beverly Rd" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/flowerlina/gallery-3.jpg" alt="Seasonal bouquet by Flowerlina, Greenville SC" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section class="hours-contact fade-up" id="hours" aria-label="Hours and location">
+      <div class="hours-contact-inner">
+
+        <div>
+          <span class="eyebrow">Hours</span>
+          <h3 class="hours-h3">Open This Week</h3>
+          <div class="hours-card" id="hours-card">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">Visit</span>
+          <p class="contact-name">Flowerlina</p>
+          <p class="contact-address">11 Beverly Rd<br>Greenville, SC 29609</p>
+          <a href="tel:8645580021" class="contact-phone">(864) 558-0021</a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=11+Beverly+Rd%2C+Greenville%2C+SC+29609&output=embed"
+            title="Flowerlina location map"
+            loading="lazy"
+            allowfullscreen
+            aria-label="Google map showing Flowerlina at 11 Beverly Rd, Greenville SC"
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta fade-up" aria-label="Call to action">
+      <span class="eyebrow">Ready when you are</span>
+      <h2>Come see what's in bloom.</h2>
+      <p class="final-cta-sub">Flowerlina is open weekdays on Beverly Rd in Greenville, SC. Stop by before 3 PM and leave with something beautiful.</p>
+      <a href="tel:8645580021" class="btn-cta-final cta-glow" aria-label="Call Flowerlina at (864) 558-0021">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        Call (864) 558-0021
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <span class="footer-logo">Flowerlina</span>
+      <span class="footer-copy">© 2025 Flowerlina. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    // =========================================================
+    // SCROLL PROGRESS BAR
+    // =========================================================
+    const progressBar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    // =========================================================
+    // HERO H1 WORD-BY-WORD STAGGER
+    // =========================================================
+    (function() {
+      const h1 = document.getElementById('hero-h1');
+      if (!h1) return;
+      const text = h1.textContent.trim();
+      const words = text.split(' ');
+      h1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+      const spans = h1.querySelectorAll('.word');
+      // Trigger after short delay for render
+      setTimeout(() => {
+        spans.forEach((s, i) => {
+          setTimeout(() => s.classList.add('visible'), i * 60);
+        });
+      }, 200);
+    })();
+
+    // =========================================================
+    // HERO PARALLAX (desktop/non-touch only)
+    // =========================================================
+    (function() {
+      if (window.matchMedia('(hover: none)').matches) return;
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+      function parallax() {
+        if (window.scrollY < hero.offsetHeight + hero.offsetTop) {
+          hero.style.backgroundPositionY = (window.scrollY * 0.3) + 'px';
+        }
+      }
+      window.addEventListener('scroll', parallax, { passive: true });
+    })();
+
+    // =========================================================
+    // HOURS PARSING & RENDER
+    // =========================================================
+    (function() {
+      const hoursText = "Monday: 8:00 AM - 3:00 PM, Tuesday: 8:00 AM - 3:00 PM, Wednesday: 8:00 AM - 3:00 PM, Thursday: 8:00 AM - 3:00 PM, Friday: 8:00 AM - 3:00 PM, Saturday: Closed, Sunday: Closed";
+      const card = document.getElementById('hours-card');
+      if (!card) return;
+
+      const dayOrder = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+      const today = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date().getDay()];
+
+      // Parse
+      const entries = {};
+      hoursText.split(',').forEach(chunk => {
+        const parts = chunk.trim().split(':');
+        if (parts.length < 2) return;
+        const day = parts[0].trim();
+        const rest = parts.slice(1).join(':').trim();
+        entries[day] = rest;
+      });
+
+      function formatTime(raw) {
+        if (!raw || raw.toLowerCase().includes('closed')) return null;
+        // raw like "8:00 AM - 3:00 PM" or "8:00 AM - 3:00 PM"
+        return raw.replace('-', '-').replace(/\s*-\s*/, '-').replace(/:00/g, '').trim();
+      }
+
+      let html = '';
+      dayOrder.forEach(day => {
+        const raw = entries[day] || 'Closed';
+        const formatted = formatTime(raw);
+        const isToday = day === today;
+        const isClosed = !formatted;
+
+        html += `<div class="hours-row${isToday ? ' hours-today-row' : ''}">`;
+        html += `<span class="hours-day">${isToday ? `<span class="today-dot" aria-hidden="true"></span>` : ''}${day}</span>`;
+        if (isClosed) {
+          html += `<span class="hours-time closed">Closed</span>`;
+        } else {
+          html += `<span class="hours-time${isToday ? ' today' : ''}">${formatted}</span>`;
+        }
+        html += `</div>`;
+      });
+
+      card.innerHTML = html;
+    })();
+
+    // =========================================================
+    // INTERSECTION OBSERVER FADE-UP
+    // =========================================================
+    (function() {
+      const targets = document.querySelectorAll('.fade-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      targets.forEach(t => observer.observe(t));
+    })();
+
+    // =========================================================
+    // COUNT-UP ON INFO BAR
+    // =========================================================
+    (function() {
+      const stats = [
+        { el: document.getElementById('stat-1'), target: 4.8, decimals: 1 },
+        { el: document.getElementById('stat-2'), target: 35, decimals: 0 },
+      ];
+
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function countUp(el, target, decimals) {
+        const start = performance.now();
+        const duration = 1200;
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const val = target * easeOutCubic(progress);
+          el.textContent = val.toFixed(decimals);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const infoBar = document.querySelector('.info-bar');
+      if (!infoBar) return;
+
+      let fired = false;
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !fired) {
+          fired = true;
+          stats.forEach(s => { if (s.el) countUp(s.el, s.target, s.decimals); });
+          observer.disconnect();
+        }
+      }, { threshold: 0.3 });
+      observer.observe(infoBar);
+    })();
+
+    // =========================================================
+    // 3D TILT ON ABOUT BOXES
+    // =========================================================
+    (function() {
+      if (window.matchMedia('(hover: none)').matches) return;
+      const boxes = document.querySelectorAll('[data-tilt]');
+      boxes.forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+          const rect = box.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          box.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+        });
+        box.addEventListener('mouseleave', () => {
+          box.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg)';
+        });
+      });
+    })();
+
+    // =========================================================
+    // CURSOR GLOW ON FINAL CTA
+    // =========================================================
+    (function() {
+      if (window.matchMedia('(hover: none)').matches) return;
+      const btn = document.querySelector('.cta-glow');
+      if (!btn) return;
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+        btn.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+      });
+    })();
+
+    // =========================================================
+    // CLAIM CARD SLIDE-IN
+    // =========================================================
+    (function() {
+      const card = document.getElementById('claimCard');
+      if (!card) return;
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, 1200);
+    })();
+
+    // =========================================================
+    // SMOOTH SCROLL ON NAV LINKS
+    // =========================================================
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id === '#') return;
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
