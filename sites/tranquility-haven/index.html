@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Tranquility-Haven, Greenville, SC</title>
+<meta name="description" content="Tranquility-Haven is Greenville, SC's top-rated wellness studio, rated 4.8 stars by 26 verified customers. Licensed practitioners, personalized care, and flexible scheduling.">
+<meta name="theme-color" content="#0F172A">
+<meta property="og:title" content="Tranquility-Haven, Greenville, SC">
+<meta property="og:description" content="Greenville's top-rated wellness studio. Rated 4.8 stars by 26 verified customers.">
+<meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tranquility-Haven, Greenville, SC">
+<meta name="twitter:description" content="Greenville's top-rated wellness studio. Rated 4.8 stars by 26 verified customers.">
+<meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/hero.jpg">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='white'>T</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tranquility-Haven",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11 Beverly Rd",
+    "addressLocality": "Greenville",
+    "addressRegion": "SC",
+    "postalCode": "29609",
+    "addressCountry": "US"
+  },
+  "telephone": "(810) 434-8508",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "26"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+<style>
+:root {
+  --primary: #0F172A;
+  --accent: #0EA5E9;
+  --bg: #FFFFFF;
+  --text: #0F172A;
+  --muted: #64748B;
+  --faint: #94A3B8;
+  --border: #E2E8F0;
+  --surface: #F8FAFC;
+  --soft-border: #F1F5F9;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: none) {
+  .tilt-box { transform: none !important; }
+  .cta-glow::before { display: none; }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+/* SCROLL PROGRESS BAR */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--primary);
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 48px;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--muted);
+  position: relative;
+  transition: color 200ms ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--primary);
+  transition: width 250ms ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+  flex-shrink: 0;
+}
+
+.nav-phone:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(15,23,42,0.18);
+}
+
+.nav-phone svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* HERO */
+@keyframes kenBurns {
+  from { transform: scale(1.0); }
+  to { transform: scale(1.05); }
+}
+
+@keyframes chevronBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+.hero {
+  position: relative;
+  height: 65vh;
+  max-height: 640px;
+  min-height: 480px;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+    url('https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 48px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  text-align: left;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 16px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.hero h1 .word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-subhead {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+  white-space: nowrap;
+  min-height: 50px;
+  padding: 14px 30px;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.2);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.7);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: none;
+}
+
+.btn-dark {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-dark:hover {
+  box-shadow: 0 10px 30px rgba(15,23,42,0.3);
+}
+
+/* CTA GLOW */
+.cta-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,165,233,0.18) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  opacity: 0;
+}
+
+.cta-glow:hover::before {
+  opacity: 1;
+}
+
+/* HERO CHEVRON */
+.hero-chevron {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: chevronBounce 1.6s ease-in-out infinite;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.hero-chevron svg {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+
+/* INFO BAR */
+.info-bar {
+  background: var(--primary);
+  color: #fff;
+  padding: 40px 48px;
+}
+
+.info-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-stat {
+  flex: 1;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.info-stat + .info-stat {
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+.info-stat-number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  color: #fff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.info-stat-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.7);
+}
+
+/* SECTIONS FADE UP */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABOUT */
+.about {
+  padding: 96px 48px;
+  background: var(--bg);
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 96px;
+  align-items: center;
+}
+
+.about-text .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.about-text h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.about-text p:last-of-type {
+  margin-bottom: 28px;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 2px;
+  transition: border-color 200ms ease, gap 200ms ease;
+}
+
+.inline-link:hover {
+  border-color: var(--primary);
+  gap: 10px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tilt-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 200ms ease-out, box-shadow 200ms ease;
+  cursor: default;
+  will-change: transform;
+}
+
+.tilt-box:hover {
+  box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+}
+
+.tilt-box-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.tilt-box h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.tilt-box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* SIGNATURE BAND */
+.signature-band {
+  background: var(--primary);
+  padding: 100px 48px;
+  text-align: center;
+}
+
+.signature-band-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.signature-band .eyebrow {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.signature-band blockquote {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.review-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(14,165,233,0.4);
+  padding-bottom: 2px;
+  transition: border-color 200ms ease, gap 200ms ease;
+}
+
+.review-link:hover {
+  border-color: var(--accent);
+  gap: 12px;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 96px 48px;
+  background: var(--surface);
+}
+
+.gallery-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-header .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  background: var(--soft-border);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* HOURS */
+.hours-section {
+  padding: 96px 48px;
+  background: var(--bg);
+}
+
+.hours-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.hours-col .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.hours-col h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.hours-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.hours-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--soft-border);
+  font-size: 0.97rem;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.hours-time {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.hours-row.today .hours-day {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hours-row.today .hours-time {
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hours-row.today .hours-time::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.hours-row.closed .hours-time {
+  color: var(--faint);
+}
+
+.contact-col .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.contact-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.contact-address {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.contact-phone {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 24px;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 2px;
+  transition: border-color 200ms ease;
+}
+
+.contact-phone:hover {
+  border-color: var(--primary);
+}
+
+.map-embed {
+  width: 100%;
+  height: 360px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--primary);
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.final-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.final-cta .eyebrow {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.final-cta p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 20px 40px;
+}
+
+.btn-accent:hover {
+  box-shadow: 0 12px 36px rgba(14,165,233,0.35);
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 40px 48px;
+  padding-bottom: 100px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.footer-copy {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.footer-right a {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 200ms ease;
+}
+
+.footer-right a:hover {
+  color: var(--accent);
+}
+
+.footer-right span {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* CLAIM CARD */
+.claim-card {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 200;
+  max-width: 640px;
+  width: calc(100% - 48px);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 22px;
+  box-shadow: 0 12px 40px rgba(15,23,42,0.18), 0 2px 8px rgba(15,23,42,0.08);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  transition: transform 600ms ease-out, opacity 600ms ease-out;
+}
+
+.claim-card.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.claim-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.claim-text {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--primary);
+}
+
+.claim-text a {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 600;
+  text-underline-offset: 2px;
+  transition: text-decoration-thickness 150ms ease;
+}
+
+.claim-text a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* MARQUEE */
+.marquee-section {
+  background: var(--surface);
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.marquee-label {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 48px;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-pill {
+  background: #fff;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 10px 24px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .nav { padding: 18px 32px; }
+  .about, .hours-section, .gallery { padding: 80px 32px; }
+  .about-inner { gap: 64px; }
+  .hours-inner { gap: 48px; }
+  .final-cta { padding: 100px 32px; }
+  footer { padding: 40px 32px; padding-bottom: 100px; }
+  .info-bar { padding: 40px 32px; }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: 75vh;
+    max-height: 640px;
+    min-height: 520px;
+    padding: 40px 20px;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+      url('https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/hero.jpg');
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    line-height: 1.1;
+  }
+
+  .hero-subhead {
+    font-size: 1.05rem;
+    max-width: 92%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .hero-chevron { display: none; }
+
+  .nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+
+  .about, .hours-section { padding: 70px 20px; }
+  .gallery { padding: 70px 20px; }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-bar { padding: 32px 20px; }
+
+  .info-bar-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .info-stat {
+    width: 100%;
+    padding: 18px 0;
+    border-left: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .info-stat:last-child { border-bottom: none; }
+
+  .info-stat-number { font-size: 2.6rem; }
+
+  .section-header h2,
+  .about-text h2,
+  .hours-col h3 {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .signature-band { padding: 70px 20px; }
+  .signature-band blockquote { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item { aspect-ratio: 4/3; }
+
+  .hours-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .map-embed { height: 280px; }
+
+  .final-cta { padding: 80px 20px; }
+
+  .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+
+  .final-cta .btn { width: 100%; min-height: 52px; }
+
+  footer { padding: 40px 20px; padding-bottom: 80px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+
+  .claim-card {
+    bottom: 16px;
+    width: calc(100% - 24px);
+    padding: 12px 16px;
+  }
+
+  .claim-text { font-size: 0.85rem; }
+
+  .marquee-label { padding: 0 20px; }
+  .marquee-pill { padding: 10px 18px; }
+  .marquee-track { animation-duration: 24s; }
+}
+
+@media (max-width: 479px) {
+  .hero {
+    height: 72vh;
+    max-height: 560px;
+    min-height: 480px;
+    padding: 32px 18px;
+  }
+
+  .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+
+  .about, .hours-section, .gallery { padding: 56px 18px; }
+
+  .info-stat-number { font-size: 2.2rem; }
+
+  .tilt-box { padding: 22px; }
+
+  .final-cta { padding: 70px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="progress-bar" aria-hidden="true"></div>
+
+<!-- CLAIM CARD -->
+<div class="claim-card" id="claimCard" role="complementary">
+  <div class="claim-dot" aria-hidden="true"></div>
+  <p class="claim-text">Built free for Tranquility-Haven by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20tranquility-haven%20homepage">Reply to my email</a></p>
+</div>
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Tranquility-Haven</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Contact</a></li>
+      </ul>
+      <a href="tel:8104348508" class="nav-phone" aria-label="Call Tranquility-Haven at (810) 434-8508">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6A16 16 0 0 0 15.4 16.1l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (810) 434-8508
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-label="Tranquility-Haven hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="eyebrow hero-eyebrow">Greenville, SC &nbsp;·&nbsp; Wellness Studio</p>
+    <h1 id="hero-h1">Tranquility-Haven</h1>
+    <p class="hero-subhead">Greenville's calm in a busy city, rooted in Beverly Road since day one.</p>
+    <div class="hero-buttons">
+      <a href="tel:8104348508" class="btn btn-primary cta-glow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6A16 16 0 0 0 15.4 16.1l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call to Book
+      </a>
+      <a href="#hours" class="btn btn-secondary">View Hours</a>
+    </div>
+  </div>
+  <a href="#about" class="hero-chevron" aria-label="Scroll to about section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </a>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar fade-up" aria-label="Business highlights">
+  <div class="info-bar-inner">
+    <div class="info-stat">
+      <span class="info-stat-number" data-target="4.8" data-decimals="1">4.8</span>
+      <span class="info-stat-label">Google Rating</span>
+    </div>
+    <div class="info-stat">
+      <span class="info-stat-number" data-target="26" data-decimals="0">26</span>
+      <span class="info-stat-label">Verified Reviews</span>
+    </div>
+    <div class="info-stat">
+      <span class="info-stat-number" data-text="Board Certified" data-static="true">Board Certified</span>
+      <span class="info-stat-label">Practitioners</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about fade-up" id="about" aria-labelledby="about-heading">
+  <div class="about-inner">
+    <div class="about-text">
+      <span class="eyebrow">About</span>
+      <h2 id="about-heading">Greenville deserves a place to actually rest.</h2>
+      <p>Tranquility-Haven was built for the people of Greenville, SC who need more than a quick fix. Located at 11 Beverly Rd, this studio offers licensed practitioners, personalized treatment plans, and a space designed from the floor up to help you decompress.</p>
+      <p>Rated 4.8 stars across 26 verified Google reviews, clients come back not because they have to, but because it works. The studio runs Monday through Saturday, with evening availability most weekdays so appointments fit around your actual schedule.</p>
+      <a href="tel:8104348508" class="inline-link">
+        Call (810) 434-8508
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="about-grid">
+      <div class="tilt-box" aria-label="Licensed Practitioners">
+        <svg class="tilt-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>Licensed Practitioners</h4>
+        <p>Every session is led by a credentialed professional trained in evidence-based wellness methods.</p>
+      </div>
+      <div class="tilt-box" aria-label="Calming Space">
+        <svg class="tilt-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        <h4>Calming Space</h4>
+        <p>The studio on Beverly Rd is designed to reduce stimulation from the moment you walk through the door.</p>
+      </div>
+      <div class="tilt-box" aria-label="Personalized Care">
+        <svg class="tilt-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <h4>Personalized Care</h4>
+        <p>No two clients are the same. Treatments are tailored to your body, your goals, and your timeline.</p>
+      </div>
+      <div class="tilt-box" aria-label="Flexible Scheduling">
+        <svg class="tilt-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <h4>Flexible Scheduling</h4>
+        <p>Open until 7 PM four nights a week so Greenville clients can book before or after work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE BAND -->
+<div class="signature-band fade-up" aria-label="Customer testimonial">
+  <div class="signature-band-inner">
+    <span class="eyebrow">What customers say</span>
+    <blockquote>&#8220;Rated 4.8 stars by 26 Greenville customers, and counting.&#8221;</blockquote>
+    <a href="https://www.google.com/search?q=Tranquility-Haven+Greenville+SC" target="_blank" rel="noopener" class="review-link">
+      Read our Google reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery fade-up" id="gallery" aria-labelledby="gallery-heading">
+  <div class="gallery-inner">
+    <div class="section-header">
+      <span class="eyebrow">Inside the Studio</span>
+      <h2 id="gallery-heading">A space built for stillness.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/gallery-1.jpg" alt="Tranquility-Haven wellness studio interior, Greenville SC" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/gallery-2.jpg" alt="Tranquility-Haven treatment room at 11 Beverly Rd, Greenville" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://auxoagency.github.io/auxo-sites/sites/tranquility-haven/hero.jpg" alt="Tranquility-Haven wellness space, Greenville SC" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-section fade-up" id="hours" aria-labelledby="hours-heading">
+  <div class="hours-inner">
+    <div class="hours-col">
+      <span class="eyebrow">Hours</span>
+      <h3 id="hours-heading">Open This Week</h3>
+      <div class="hours-card" id="hours-card">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+    <div class="contact-col">
+      <span class="eyebrow">Visit</span>
+      <p class="contact-name">Tranquility-Haven</p>
+      <p class="contact-address">11 Beverly Rd<br>Greenville, SC 29609</p>
+      <a href="tel:8104348508" class="contact-phone">(810) 434-8508</a>
+      <div class="map-embed">
+        <iframe
+          src="https://maps.google.com/maps?q=11+Beverly+Rd%2C+Greenville%2C+SC+29609&output=embed"
+          title="Tranquility-Haven location map"
+          loading="lazy"
+          aria-label="Google Maps showing Tranquility-Haven at 11 Beverly Rd, Greenville, SC">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta fade-up" aria-labelledby="cta-heading">
+  <div class="final-cta-inner">
+    <span class="eyebrow">Ready when you are</span>
+    <h2 id="cta-heading">Ready to unwind?</h2>
+    <p>Tranquility-Haven is open six days a week at 11 Beverly Rd in Greenville, SC. Call ahead, pick your time, and let the rest take care of itself.</p>
+    <a href="tel:8104348508" class="btn btn-accent cta-glow" aria-label="Call Tranquility-Haven to book an appointment">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6A16 16 0 0 0 15.4 16.1l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (810) 434-8508
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo">Tranquility-Haven</span>
+      <span class="footer-copy">© 2025 Tranquility-Haven. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      <span>Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<script defer>
+(function () {
+  'use strict';
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+  /* ─── SCROLL PROGRESS BAR ─── */
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  /* ─── HOURS RENDERING ─── */
+  const hoursData = [
+    { day: 'Monday',    time: '9 AM-7 PM' },
+    { day: 'Tuesday',   time: '9 AM-7 PM' },
+    { day: 'Wednesday', time: '9 AM-7 PM' },
+    { day: 'Thursday',  time: '9 AM-7 PM' },
+    { day: 'Friday',    time: '9 AM-4 PM' },
+    { day: 'Saturday',  time: '9 AM-1 PM' },
+    { day: 'Sunday',    time: 'Closed'    }
+  ];
+
+  const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const todayIdx = new Date().getDay();
+  const todayName = dayNames[todayIdx];
+
+  const hoursCard = document.getElementById('hours-card');
+  if (hoursCard) {
+    hoursData.forEach(function (row) {
+      const isClosed = row.time === 'Closed';
+      const isToday = row.day === todayName;
+      const el = document.createElement('div');
+      el.className = 'hours-row' + (isToday ? ' today' : '') + (isClosed ? ' closed' : '');
+      el.innerHTML = '<span class="hours-day">' + row.day + '</span><span class="hours-time">' + row.time + '</span>';
+      hoursCard.appendChild(el);
+    });
+  }
+
+  /* ─── HERO H1 WORD STAGGER ─── */
+  function initHeroWords() {
+    const h1 = document.getElementById('hero-h1');
+    if (!h1) return;
+    const text = h1.textContent.trim();
+    const words = text.split(' ');
+    h1.innerHTML = words.map(function (w) {
+      return '<span class="word">' + w + '</span>';
+    }).join(' ');
+
+    if (prefersReducedMotion) {
+      h1.querySelectorAll('.word').forEach(function (w) { w.classList.add('visible'); });
+      return;
+    }
+
+    words.forEach(function (_, i) {
+      const span = h1.querySelectorAll('.word')[i];
+      setTimeout(function () {
+        span.classList.add('visible');
+      }, 200 + i * 60);
+    });
+  }
+  initHeroWords();
+
+  /* ─── HERO PARALLAX ─── */
+  if (!prefersReducedMotion && !isTouchDevice) {
+    const heroBg = document.querySelector('.hero-bg');
+    function heroParallax() {
+      if (!heroBg) return;
+      const heroH = document.querySelector('.hero').offsetHeight;
+      if (window.scrollY < heroH + 200) {
+        heroBg.style.transform = 'scale(1.05) translateY(' + (window.scrollY * 0.15) + 'px)';
+      }
+    }
+    window.addEventListener('scroll', heroParallax, { passive: true });
+  }
+
+  /* ─── INTERSECTION OBSERVER FADE UP ─── */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if (!prefersReducedMotion) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  /* ─── COUNT UP ANIMATION ─── */
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function countUp(el) {
+    const target = parseFloat(el.dataset.target);
+    const decimals = parseInt(el.dataset.decimals) || 0;
+    const isStatic = el.dataset.static;
+    if (isStatic) return;
+    const duration = 1200;
+    const start = performance.now();
+
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutCubic(progress);
+      const value = (target * eased).toFixed(decimals);
+      el.textContent = value;
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toFixed(decimals);
+    }
+    el.textContent = (0).toFixed(decimals);
+    requestAnimationFrame(tick);
+  }
+
+  const statNumbers = document.querySelectorAll('.info-stat-number[data-target]');
+  if (!prefersReducedMotion && statNumbers.length) {
+    const statObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          countUp(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statNumbers.forEach(function (el) { statObserver.observe(el); });
+  }
+
+  /* ─── 3D TILT ON ABOUT BOXES ─── */
+  if (!prefersReducedMotion && !isTouchDevice) {
+    const tiltBoxes = document.querySelectorAll('.tilt-box');
+    tiltBoxes.forEach(function (box) {
+      box.addEventListener('mousemove', function (e) {
+        const rect = box.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const rotY = x * 8;
+        const rotX = -y * 8;
+        box.style.transform = 'perspective(600px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
+      });
+      box.addEventListener('mouseleave', function () {
+        box.style.transform = '';
+      });
+    });
+  }
+
+  /* ─── CURSOR GLOW ON CTA BUTTONS ─── */
+  if (!isTouchDevice) {
+    const glowBtns = document.querySelectorAll('.cta-glow');
+    glowBtns.forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+        btn.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  /* ─── CLAIM CARD SLIDE IN ─── */
+  setTimeout(function () {
+    const card = document.getElementById('claimCard');
+    if (card) card.classList.add('visible');
+  }, 1200);
+
+  /* ─── SMOOTH SCROLL FOR ANCHOR LINKS ─── */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      const id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
