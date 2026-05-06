@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Rae Rae's Gluten Free Bakery, Billings, MT</title>
+  <meta name="description" content="Rae Rae's Gluten Free Bakery in Billings, MT  -  100% gluten-free baked goods, rated 4.9 stars by 191 verified Google reviews. Open Tuesday through Saturday.">
+  <meta name="theme-color" content="#1C1917">
+  <meta property="og:title" content="Rae Rae's Gluten Free Bakery  -  Billings, MT">
+  <meta property="og:description" content="Billings' most-loved gluten-free bakery. Rated 4.9 stars by 191 customers. Fresh daily on N 35th St.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rae Rae's Gluten Free Bakery  -  Billings, MT">
+  <meta name="twitter:description" content="Billings' most-loved gluten-free bakery. Rated 4.9 stars by 191 customers.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/hero.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231C1917'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23F59E0B'>R</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Rae Rae's Gluten Free Bakery",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 N 35th St",
+      "addressLocality": "Billings",
+      "addressRegion": "MT",
+      "postalCode": "59101",
+      "addressCountry": "US"
+    },
+    "telephone": "(406) 200-7948",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "191"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"07:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"07:00","closes":"17:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"07:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"07:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1C1917;
+      --accent: #F59E0B;
+      --bg: #FFFFFF;
+      --text-primary: #0F172A;
+      --text-muted: #64748B;
+      --text-faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --section-pad-v: 96px;
+      --section-pad-h: 48px;
+      --container-max: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .tilt-box { transform: none !important; }
+      .cta-glow::before { display: none; }
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* SCROLL PROGRESS BAR */
+    #scroll-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--accent);
+      z-index: 1000;
+      transition: width 0.05s linear;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(28,25,23,0.22);
+    }
+
+    .nav-cta svg { flex-shrink: 0; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg-animated {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: kenburns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes kenburns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+    }
+
+    .eyebrow--white {
+      color: rgba(255,255,255,0.85);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow--white .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subhead {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.92);
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 28px rgba(245,158,11,0.38);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 13px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      cursor: pointer;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease, border-color 200ms ease;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,1);
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      animation: chevron-bounce 1.6s ease-in-out infinite;
+      cursor: pointer;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @keyframes chevron-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* INFO BAR */
+    .info-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 48px;
+    }
+
+    .info-bar-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-stat {
+      text-align: center;
+      padding: 0 56px;
+      flex: 1;
+    }
+
+    .info-stat + .info-stat {
+      border-left: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1;
+      color: #fff;
+      display: block;
+    }
+
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* MARQUEE */
+    .marquee-section {
+      background: var(--surface);
+      padding: 64px 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: marquee-scroll 30s linear infinite;
+    }
+
+    .marquee-track:hover { animation-play-state: paused; }
+
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .marquee-pill {
+      background: #fff;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 24px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    /* ABOUT */
+    #about {
+      padding: var(--section-pad-v) var(--section-pad-h);
+    }
+
+    .about-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .about-text .eyebrow { margin-bottom: 16px; }
+
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .about-text p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: 18px;
+    }
+
+    .about-text p:last-of-type { margin-bottom: 32px; }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 1px;
+      transition: gap 200ms ease;
+    }
+
+    .about-link:hover { gap: 10px; }
+
+    .info-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .tilt-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      cursor: default;
+    }
+
+    .tilt-box:hover {
+      box-shadow: 0 12px 32px rgba(28,25,23,0.1);
+    }
+
+    .tilt-box svg {
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .tilt-box h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .tilt-box p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    /* SIGNATURE BAND */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    .signature-band .eyebrow {
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .signature-band blockquote {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
+      color: #fff;
+      max-width: 900px;
+      margin: 0 auto 32px;
+      letter-spacing: -0.02em;
+    }
+
+    .signature-band a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: gap 200ms ease;
+    }
+
+    .signature-band a:hover { gap: 10px; }
+
+    /* GALLERY */
+    #gallery {
+      padding: var(--section-pad-v) var(--section-pad-h);
+    }
+
+    .gallery-header {
+      max-width: var(--container-max);
+      margin: 0 auto 48px;
+    }
+
+    .gallery-header .eyebrow { margin-bottom: 16px; }
+
+    .gallery-header h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .gallery-grid {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* HOURS & CONTACT */
+    #hours {
+      padding: var(--section-pad-v) var(--section-pad-h);
+      background: var(--surface);
+    }
+
+    .hours-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .hours-col .eyebrow { margin-bottom: 16px; }
+
+    .hours-col h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .hours-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 0.98rem;
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .hours-row:last-child { border-bottom: none; }
+
+    .hours-day { font-weight: 500; }
+
+    .hours-time { color: var(--text-muted); }
+
+    .hours-row.today .hours-day {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hours-row.today .hours-time::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .hours-row .closed { color: var(--text-faint); }
+
+    .contact-col .eyebrow { margin-bottom: 16px; }
+
+    .contact-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-address {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .contact-phone {
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin-bottom: 24px;
+      border-bottom: 1.5px solid var(--primary);
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: none;
+      display: block;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    .final-cta .eyebrow {
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .cta-glow {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 20px 40px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      overflow: hidden;
+    }
+
+    .cta-glow::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(28,25,23,0.18) 0%, transparent 70%);
+      pointer-events: none;
+      transform: translate(calc(var(--x, 0px) - 120px), calc(var(--y, 0px) - 120px));
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+
+    .cta-glow:hover::before { opacity: 1; }
+
+    .cta-glow:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 40px rgba(245,158,11,0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 40px 48px 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left .footer-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer-left .footer-copy {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .footer-right {
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* CLAIM CARD */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      opacity: 0;
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #fff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(15,23,42,0.18), 0 2px 8px rgba(15,23,42,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+
+    .claim-card.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .claim-text {
+      flex: 1;
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--primary);
+    }
+
+    .claim-text a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+      text-underline-offset: 2px;
+    }
+
+    .claim-text a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    /* FADE-UP ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+    }
+
+    /* SECTION COMMON */
+    section { position: relative; }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      :root {
+        --section-pad-v: 80px;
+        --section-pad-h: 32px;
+      }
+
+      .about-inner { gap: 64px; }
+      .hours-inner { gap: 48px; }
+      nav { padding: 18px 32px; }
+      footer { padding: 40px 32px 100px; }
+      .info-bar { padding: 40px 32px; }
+      .signature-band { padding: 80px 32px; }
+      .final-cta { padding: 100px 32px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 767px) {
+      :root {
+        --section-pad-v: 70px;
+        --section-pad-h: 20px;
+      }
+
+      nav { padding: 14px 20px; }
+
+      .nav-links { display: none; }
+
+      .nav-logo { font-size: 1.1rem; }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+      }
+
+      .hero-bg-animated {
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/hero.jpg');
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero-subhead {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        min-height: 52px;
+      }
+
+      .hero-chevron { display: none; }
+
+      .info-bar {
+        padding: 32px 20px;
+      }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .info-stat {
+        width: 100%;
+        padding: 18px 0;
+        border-left: none !important;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
+
+      .info-stat:first-child { border-top: none; }
+
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .info-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .tilt-box { padding: 22px; }
+
+      #about { padding: 70px 20px; }
+
+      .signature-band {
+        padding: 70px 20px;
+      }
+
+      .signature-band blockquote {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        aspect-ratio: 4/3;
+      }
+
+      #hours { padding: 70px 20px; }
+
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-embed { height: 280px; }
+
+      .final-cta {
+        padding: 80px 20px;
+      }
+
+      .final-cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+
+      .cta-glow {
+        width: 100%;
+        justify-content: center;
+        min-height: 52px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        padding: 32px 20px 80px;
+      }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+
+      .claim-text { font-size: 0.85rem; }
+
+      #gallery { padding: 70px 20px; }
+    }
+
+    /* SMALL MOBILE */
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
+
+      #about, #gallery, #hours { padding: 56px 18px; }
+
+      .info-stat-number { font-size: 2.2rem; }
+
+      .tilt-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-bar" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#" class="nav-logo">Rae Rae's Gluten Free</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Visit</a></li>
+      </ul>
+      <a href="tel:+14062007948" class="nav-cta" aria-label="Call Rae Rae's Gluten Free Bakery">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.75a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (406) 200-7948
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-animated" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow eyebrow--white">
+          <span class="dot" aria-hidden="true"></span>
+          Billings, MT  -  Gluten-Free Bakery
+        </p>
+        <h1 id="hero-h1">Rae Rae's Gluten Free Bakery</h1>
+        <p class="hero-subhead">Billings' only dedicated gluten-free kitchen, baking fresh every morning on N 35th St.</p>
+        <div class="hero-buttons">
+          <a href="tel:+14062007948" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.75a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Ahead
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <a href="#about" class="hero-chevron" aria-label="Scroll down">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar" aria-label="At a glance">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-number" data-count="4.9" data-decimals="1" id="stat-rating">4.9</span>
+          <span class="info-stat-label">Google Rating</span>
+        </div>
+        <div class="info-stat">
+          <span class="info-stat-number" data-count="191" data-decimals="0" id="stat-reviews">191</span>
+          <span class="info-stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-stat">
+          <span class="info-stat-number" id="stat-family" style="font-size:1.8rem; padding-top:4px;">Family Owned</span>
+          <span class="info-stat-label">Local Favorite</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <div class="about-text fade-up">
+          <p class="eyebrow">About</p>
+          <h2 id="about-heading">Billings' go-to kitchen for people who actually need gluten-free.</h2>
+          <p>Rae Rae's isn't a bakery that happens to offer a gluten-free option. Everything coming out of the kitchen on N 35th St is made without gluten, full stop. That commitment has earned a 4.9-star rating from 191 Billings customers who know exactly what they're getting every time they walk through the door.</p>
+          <p>From buttery morning pastries to celebration cakes, the menu changes with what's fresh and what's in season. Whether you're newly diagnosed with celiac disease or you've been living gluten-free for years, this is the Billings bakery that finally has you covered without the cross-contamination worry.</p>
+          <a href="tel:+14062007948" class="about-link">
+            Call (406) 200-7948
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="info-boxes fade-up" style="transition-delay: 150ms;">
+          <div class="tilt-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+            <h4>Fresh Daily</h4>
+            <p>Baked every morning before the doors open. Nothing sits from yesterday.</p>
+          </div>
+          <div class="tilt-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <h4>Family Recipes</h4>
+            <p>Recipes developed in-house, refined over time, and made with genuine care.</p>
+          </div>
+          <div class="tilt-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <h4>Locally Sourced</h4>
+            <p>Montana-grown ingredients where possible. Supporting local matters here.</p>
+          </div>
+          <div class="tilt-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <h4>Cozy Atmosphere</h4>
+            <p>A neighborhood spot where regulars are recognized and newcomers feel welcome.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up" aria-label="Customer rating">
+      <p class="eyebrow">What customers say</p>
+      <blockquote>&#8220;Rated 4.9 stars by 191 Billings customers, and counting.&#8221;</blockquote>
+      <a href="https://www.google.com/maps/place/Rae+Rae's+Gluten+Free+Bakery" target="_blank" rel="noopener noreferrer">
+        Read our Google reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- GALLERY -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="gallery-header fade-up">
+        <p class="eyebrow">From the kitchen</p>
+        <h2 id="gallery-heading">Made here. Every day.</h2>
+      </div>
+      <div class="gallery-grid fade-up" style="transition-delay: 100ms;">
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/gallery-1.jpg" alt="Fresh gluten-free baked goods from Rae Rae's in Billings, MT" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/gallery-2.jpg" alt="Pastries and breads at Rae Rae's Gluten Free Bakery" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/rae-rae-s-gluten-free-bakery/gallery-3.jpg" alt="Rae Rae's Gluten Free Bakery in Billings, Montana" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section id="hours" aria-labelledby="hours-heading">
+      <div class="hours-inner">
+        <div class="hours-col fade-up">
+          <p class="eyebrow">Hours</p>
+          <h3 id="hours-heading">Open This Week</h3>
+          <div class="hours-card">
+            <div class="hours-row" data-day="Monday">
+              <span class="hours-day">Monday</span>
+              <span class="closed">Closed</span>
+            </div>
+            <div class="hours-row" data-day="Tuesday">
+              <span class="hours-day">Tuesday</span>
+              <span class="hours-time">7 AM-4 PM</span>
+            </div>
+            <div class="hours-row" data-day="Wednesday">
+              <span class="hours-day">Wednesday</span>
+              <span class="hours-time">7 AM-5:30 PM</span>
+            </div>
+            <div class="hours-row" data-day="Thursday">
+              <span class="hours-day">Thursday</span>
+              <span class="hours-time">7 AM-4 PM</span>
+            </div>
+            <div class="hours-row" data-day="Friday">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time">7 AM-4 PM</span>
+            </div>
+            <div class="hours-row" data-day="Saturday">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time">8 AM-12 PM</span>
+            </div>
+            <div class="hours-row" data-day="Sunday">
+              <span class="hours-day">Sunday</span>
+              <span class="closed">Closed</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-col fade-up" style="transition-delay: 120ms;">
+          <p class="eyebrow">Visit</p>
+          <p class="contact-name">Rae Rae's Gluten Free Bakery</p>
+          <p class="contact-address">12 N 35th St<br>Billings, MT 59101</p>
+          <a href="tel:+14062007948" class="contact-phone">(406) 200-7948</a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=12+N+35th+St%2C+Billings%2C+MT+59101&output=embed"
+            title="Rae Rae's Gluten Free Bakery location on Google Maps"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Map showing Rae Rae's Gluten Free Bakery at 12 N 35th St, Billings MT">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta fade-up" aria-labelledby="cta-heading">
+      <p class="eyebrow">Ready when you are</p>
+      <h2 id="cta-heading">Hungry? Stop by today.</h2>
+      <p>Rae Rae's is open Tuesday through Saturday in Billings. Come for the pastries, stay for the coffee, leave without the stomach ache.</p>
+      <a href="tel:+14062007948" class="cta-glow" aria-label="Call Rae Rae's Gluten Free Bakery">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.75a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (406) 200-7948
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <span class="footer-name">Rae Rae's Gluten Free Bakery</span>
+      <span class="footer-copy">&copy; 2025 Rae Rae's Gluten Free Bakery. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+    </div>
+  </footer>
+
+  <!-- CLAIM CARD -->
+  <div class="claim-card" id="claim-card" role="complementary" aria-label="Site credit and upgrade offer">
+    <div class="claim-dot" aria-hidden="true"></div>
+    <p class="claim-text">
+      Built free for Rae Rae's Gluten Free Bakery by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20rae-rae-s-gluten-free-bakery%20homepage">Reply to my email</a>
+    </p>
+  </div>
+
+  <script defer>
+    // ── SCROLL PROGRESS BAR ──
+    const scrollBar = document.getElementById('scroll-bar');
+    function updateScrollBar() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateScrollBar, { passive: true });
+
+    // ── HERO H1 WORD STAGGER ──
+    function initHeroStagger() {
+      const h1 = document.getElementById('hero-h1');
+      if (!h1) return;
+      const text = h1.textContent.trim();
+      const words = text.split(' ');
+      h1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+      const spans = h1.querySelectorAll('.word');
+      spans.forEach((span, i) => {
+        setTimeout(() => {
+          span.classList.add('visible');
+        }, 200 + i * 60);
+      });
+    }
+    initHeroStagger();
+
+    // ── HERO PARALLAX ──
+    const heroBg = document.querySelector('.hero-bg-animated');
+    const heroSection = document.querySelector('.hero');
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+    if (!isTouchDevice && heroBg && heroSection) {
+      function updateParallax() {
+        const rect = heroSection.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const scrolled = window.scrollY;
+        heroBg.style.backgroundPositionY = `calc(50% + ${scrolled * 0.3}px)`;
+      }
+      window.addEventListener('scroll', updateParallax, { passive: true });
+    }
+
+    // ── INTERSECTION OBSERVER FADE-UP ──
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // ── COUNT-UP ANIMATION ──
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+    function countUp(el, target, decimals, duration) {
+      const start = performance.now();
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutCubic(progress);
+        const value = eased * target;
+        el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const statEls = document.querySelectorAll('[data-count]');
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseFloat(el.getAttribute('data-count'));
+          const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          countUp(el, target, decimals, 1200);
+          statObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    statEls.forEach(el => statObserver.observe(el));
+
+    // ── 3D TILT ON ABOUT BOXES ──
+    if (!isTouchDevice) {
+      const tiltBoxes = document.querySelectorAll('.tilt-box');
+      tiltBoxes.forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+          const rect = box.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const cx = rect.width / 2;
+          const cy = rect.height / 2;
+          const rotX = ((y - cy) / cy) * -8;
+          const rotY = ((x - cx) / cx) * 8;
+          box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(4px)`;
+        });
+        box.addEventListener('mouseleave', () => {
+          box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+        });
+      });
+    }
+
+    // ── CURSOR GLOW ON CTA ──
+    if (!isTouchDevice) {
+      const ctaGlow = document.querySelector('.cta-glow');
+      if (ctaGlow) {
+        ctaGlow.addEventListener('mousemove', (e) => {
+          const rect = ctaGlow.getBoundingClientRect();
+          ctaGlow.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+          ctaGlow.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+        });
+      }
+    }
+
+    // ── TODAY'S HOURS HIGHLIGHT ──
+    function highlightToday() {
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const today = days[new Date().getDay()];
+      const rows = document.querySelectorAll('.hours-row');
+      rows.forEach(row => {
+        if (row.getAttribute('data-day') === today) {
+          row.classList.add('today');
+        }
+      });
+    }
+    highlightToday();
+
+    // ── SMOOTH SCROLL ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ── CLAIM CARD SLIDE IN ──
+    const claimCard = document.getElementById('claim-card');
+    if (claimCard) {
+      setTimeout(() => {
+        claimCard.classList.add('visible');
+      }, 1200);
+    }
+  </script>
+
+</body>
+</html>
