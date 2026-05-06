@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Granite Health and Fitness, Billings, MT</title>
+  <meta name="description" content="Granite Health and Fitness in Billings, MT  -  a 4.9-star rated wellness facility with 248 verified reviews. Open 7 days a week starting at 4:30 AM.">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="Granite Health and Fitness, Billings, MT">
+  <meta property="og:description" content="Billings' highest-rated fitness and wellness facility. 4.9 stars across 248 Google reviews. Open early, open late, open for you.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Granite Health and Fitness, Billings, MT">
+  <meta name="twitter:description" content="Billings' highest-rated fitness and wellness facility. 4.9 stars across 248 Google reviews.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' fill='%230EA5E9' font-family='Georgia,serif' font-weight='700' font-size='18'>G</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Granite Health and Fitness",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 N 35th St",
+      "addressLocality": "Billings",
+      "addressRegion": "MT",
+      "postalCode": "59101",
+      "addressCountry": "US"
+    },
+    "telephone": "(406) 294-5040",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "248"
+    },
+    "openingHours": [
+      "Mo-Fr 04:30-22:00",
+      "Sa-Su 07:00-20:00"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #0EA5E9;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --section-pad: 96px 48px;
+      --section-pad-mobile: 70px 20px;
+      --max-width: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* SCROLL PROGRESS */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--accent);
+      z-index: 1000;
+      transition: width 0.1s linear;
+    }
+
+    /* EYEBROW */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .eyebrow.light { color: rgba(255,255,255,0.7); }
+    .eyebrow.accent-color { color: var(--accent); }
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--primary);
+      transition: width 0.25s ease;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(15,23,42,0.18);
+    }
+    .nav-phone svg { flex-shrink: 0; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+    .hero-bg-inner {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: kenburns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.60) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-sub {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 32px;
+      max-width: 560px;
+      line-height: 1.5;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03) translateY(-1px);
+      box-shadow: 0 8px 28px rgba(14,165,233,0.35);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), background 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+    .btn-secondary:hover {
+      transform: scale(1.03) translateY(-1px);
+      background: rgba(255,255,255,0.12);
+      border-color: #fff;
+    }
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: chevron-bounce 1.6s ease-in-out infinite;
+      opacity: 0.75;
+      color: #fff;
+    }
+
+    @keyframes kenburns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+    @keyframes chevron-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* INFO BAR */
+    .info-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 48px;
+    }
+    .info-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .info-stat {
+      flex: 1;
+      text-align: center;
+      padding: 0 40px;
+      position: relative;
+    }
+    .info-stat + .info-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 60px;
+      background: rgba(255,255,255,0.15);
+    }
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      display: block;
+    }
+    .info-stat-label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* MARQUEE */
+    .marquee-section {
+      background: var(--surface);
+      padding: 64px 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-wrap {
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    }
+    .marquee-pill {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1.5px solid var(--primary);
+      background: #fff;
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ABOUT */
+    #about {
+      padding: var(--section-pad);
+    }
+    .about-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .about-text p:last-of-type { margin-bottom: 32px; }
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      transition: gap 0.2s ease;
+      text-decoration: none;
+    }
+    .about-link:hover { gap: 12px; }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease;
+      transform-style: preserve-3d;
+      cursor: default;
+    }
+    .about-box:hover {
+      box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+    }
+    .about-box-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+    .about-box h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .about-box p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* SIGNATURE BAND */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+    .signature-band-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .signature-band blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 16px 0 28px;
+    }
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    .signature-link:hover { gap: 12px; }
+
+    /* GALLERY */
+    #gallery {
+      padding: var(--section-pad);
+      background: var(--surface);
+    }
+    .gallery-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .gallery-header {
+      margin-bottom: 40px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* HOURS */
+    #hours {
+      padding: var(--section-pad);
+    }
+    .hours-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .hours-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 16px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 0.98rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { font-weight: 500; color: var(--text); }
+    .hours-time { color: var(--muted); }
+    .hours-row.today .hours-day { font-weight: 700; color: var(--primary); }
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .today-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+    .hours-closed { color: var(--faint); font-weight: 400; }
+
+    .contact-side h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      margin-top: 16px;
+    }
+    .contact-address {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      line-height: 1.55;
+    }
+    .contact-phone {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+      transition: color 0.2s;
+    }
+    .contact-phone:hover { color: var(--accent); }
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: 0;
+      overflow: hidden;
+      display: block;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+    .final-cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .final-cta-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 20px 40px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
+    }
+    .btn-cta::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(15,23,42,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(calc(var(--x, 50%) - 50%), calc(var(--y, 50%) - 50%));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-cta:hover::before { opacity: 1; }
+    .btn-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 36px rgba(14,165,233,0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px 100px;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-left .footer-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .footer-left p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .footer-right {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-right a:hover { color: var(--accent); }
+
+    /* CLAIM CARD */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #fff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(15,23,42,0.18), 0 2px 8px rgba(15,23,42,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      opacity: 0;
+      transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+    .claim-card.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .claim-text {
+      flex: 1;
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--primary);
+    }
+    .claim-text a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: text-decoration-thickness 0.2s;
+    }
+    .claim-text a:hover { text-decoration-thickness: 2px; }
+
+    /* FADE-UP ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .about-box { transform: none !important; }
+      .btn-cta::before { display: none; }
+    }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      nav { padding: 18px 32px; }
+      .hero { padding: 60px 32px; }
+      #about { padding: 80px 32px; }
+      .about-inner { gap: 64px; }
+      #hours { padding: 80px 32px; }
+      .hours-inner { gap: 48px; }
+      #gallery { padding: 80px 32px; }
+      .signature-band { padding: 80px 32px; }
+      .final-cta { padding: 100px 32px; }
+      footer { padding: 40px 32px 100px; }
+      .info-bar { padding: 40px 32px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 767px) {
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.20) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/hero.jpg');
+      }
+      .hero-bg-inner {
+        background-image: url('https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/hero.jpg');
+      }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); line-height: 1.1; }
+      .hero-sub { font-size: 1.05rem; max-width: 92%; }
+      .hero-buttons { flex-direction: column; gap: 14px; }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary { width: 100%; justify-content: center; min-height: 52px; }
+      .hero-chevron { display: none; }
+
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+
+      .info-bar { padding: 32px 20px; }
+      .info-bar-inner { flex-direction: column; gap: 0; }
+      .info-stat {
+        width: 100%;
+        padding: 18px 0;
+        border-right: none;
+        position: relative;
+      }
+      .info-stat + .info-stat::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background: rgba(255,255,255,0.15);
+      }
+      .info-stat-number { font-size: 2.6rem; }
+
+      #about { padding: 70px 20px; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .about-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .signature-band { padding: 70px 20px; }
+      .signature-band blockquote { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+
+      #gallery { padding: 70px 20px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item { aspect-ratio: 4/3; }
+
+      #hours { padding: 70px 20px; }
+      .hours-inner { grid-template-columns: 1fr; gap: 32px; }
+      .map-embed { height: 280px; }
+
+      .final-cta { padding: 80px 20px; }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+      .btn-cta { width: 100%; justify-content: center; min-height: 52px; }
+
+      footer { padding: 40px 20px 80px; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
+
+      .claim-card { bottom: 16px; width: calc(100% - 24px); padding: 12px 16px; font-size: 0.85rem; }
+      .claim-text { font-size: 0.85rem; }
+
+      .marquee-pill { padding: 10px 18px; font-size: 0.88rem; }
+      .marquee-track { animation-duration: 24s; }
+
+      section h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+    }
+
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+      #about { padding: 56px 18px; }
+      .about-box { padding: 22px; }
+      #gallery { padding: 56px 18px; }
+      #hours { padding: 56px 18px; }
+      .info-stat-number { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="Granite Health and Fitness home">Granite Health</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#hours">Hours</a></li>
+          <li><a href="#hours">Contact</a></li>
+        </ul>
+        <a href="tel:4062945040" class="nav-phone" aria-label="Call Granite Health and Fitness">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.91z"/></svg>
+          (406) 294-5040
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-inner" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow light">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Billings, MT &middot; Fitness &amp; Wellness
+        </div>
+        <h1 id="hero-h1">Granite Health and Fitness</h1>
+        <p class="hero-sub">Billings' early-morning gym, open at 4:30 AM every weekday for the people who show up before the rest of the city wakes up.</p>
+        <div class="hero-buttons">
+          <a href="tel:4062945040" class="btn-primary" aria-label="Call Granite Health and Fitness">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.91z"/></svg>
+            Call to Book
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <div class="hero-chevron" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar fade-up" aria-label="Key stats">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <span class="info-stat-number" data-target="4.9" data-decimal="1">4.9</span>
+          <span class="info-stat-label">Google Rating</span>
+        </div>
+        <div class="info-stat">
+          <span class="info-stat-number" data-target="248" data-decimal="0">248</span>
+          <span class="info-stat-label">Verified Reviews</span>
+        </div>
+        <div class="info-stat">
+          <span class="info-stat-number" style="font-size:1.5rem;letter-spacing:-0.01em;">Board Certified</span>
+          <span class="info-stat-label">Licensed Practitioners</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section fade-up" aria-hidden="true">
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span class="marquee-pill">Licensed Practitioners</span>
+          <span class="marquee-pill">Calming Space</span>
+          <span class="marquee-pill">Custom Treatments</span>
+          <span class="marquee-pill">New Members Welcome</span>
+          <span class="marquee-pill">Member Pricing</span>
+          <span class="marquee-pill">Open 7 Days</span>
+          <span class="marquee-pill">Early Morning Hours</span>
+          <span class="marquee-pill">Personalized Programs</span>
+          <span class="marquee-pill">Licensed Practitioners</span>
+          <span class="marquee-pill">Calming Space</span>
+          <span class="marquee-pill">Custom Treatments</span>
+          <span class="marquee-pill">New Members Welcome</span>
+          <span class="marquee-pill">Member Pricing</span>
+          <span class="marquee-pill">Open 7 Days</span>
+          <span class="marquee-pill">Early Morning Hours</span>
+          <span class="marquee-pill">Personalized Programs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <div class="about-text fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>About</div>
+          <h2 id="about-heading">Billings' most-reviewed fitness facility, built around showing up every single day.</h2>
+          <p>Granite Health and Fitness has earned 4.9 stars across 248 Google reviews by doing one thing exceptionally well: creating a space at 12 N 35th St where Billings residents actually want to train. Doors open at 4:30 AM Monday through Friday, long before most gyms in Montana have turned the lights on.</p>
+          <p>Whether you're a first-timer finding your footing or a longtime member with a set routine, the staff here treats every visit with the same focused attention. That consistency is why the reviews keep coming, and why members keep returning.</p>
+          <a href="tel:4062945040" class="about-link" aria-label="Call Granite Health and Fitness">
+            Call (406) 294-5040
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="about-boxes fade-up" id="tilt-boxes">
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>Licensed Practitioners</h4>
+            <p>Certified fitness and wellness professionals guiding every program on the floor.</p>
+          </div>
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <h4>Calming Space</h4>
+            <p>A well-maintained facility designed to help you focus, recover, and come back refreshed.</p>
+          </div>
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <h4>Personalized Care</h4>
+            <p>Programs tailored to your goals, not a one-size-fits-all template someone else followed.</p>
+          </div>
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <h4>Flexible Scheduling</h4>
+            <p>Open 4:30 AM to 10 PM on weekdays, and 7 AM to 8 PM on weekends, in Billings, MT.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up" aria-label="Customer testimonial">
+      <div class="signature-band-inner">
+        <div class="eyebrow accent-color" style="justify-content:center;"><span class="eyebrow-dot" aria-hidden="true"></span>What customers say</div>
+        <blockquote>&#8220;Rated 4.9 stars by 248 Billings customers, and counting.&#8221;</blockquote>
+        <a href="https://www.google.com/maps/search/Granite+Health+and+Fitness+Billings+MT" class="signature-link" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for Granite Health and Fitness">
+          Read our Google reviews
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="gallery-inner">
+        <div class="gallery-header fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Inside the Gym</div>
+          <h2 id="gallery-heading" style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:var(--primary);">A look inside 12 N 35th St.</h2>
+        </div>
+        <div class="gallery-grid fade-up">
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/gallery-1.jpg" alt="Granite Health and Fitness gym floor in Billings, MT" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/gallery-2.jpg" alt="Training area at Granite Health and Fitness, Billings" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://auxoagency.github.io/auxo-sites/sites/granite-health-and-fitness-granite-sport/gallery-3.jpg" alt="Wellness facilities at Granite Sport, Billings, MT" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section id="hours" aria-labelledby="hours-heading">
+      <div class="hours-inner container">
+        <div class="fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Hours</div>
+          <h2 id="hours-heading" style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:var(--primary);">Open This Week</h2>
+          <div class="hours-card" role="table" aria-label="Weekly hours">
+            <div class="hours-row" id="hours-mon" role="row">
+              <span class="hours-day" role="cell">Monday</span>
+              <span class="hours-time" role="cell">4:30 AM-10 PM</span>
+            </div>
+            <div class="hours-row" id="hours-tue" role="row">
+              <span class="hours-day" role="cell">Tuesday</span>
+              <span class="hours-time" role="cell">4:30 AM-10 PM</span>
+            </div>
+            <div class="hours-row" id="hours-wed" role="row">
+              <span class="hours-day" role="cell">Wednesday</span>
+              <span class="hours-time" role="cell">4:30 AM-10 PM</span>
+            </div>
+            <div class="hours-row" id="hours-thu" role="row">
+              <span class="hours-day" role="cell">Thursday</span>
+              <span class="hours-time" role="cell">4:30 AM-10 PM</span>
+            </div>
+            <div class="hours-row" id="hours-fri" role="row">
+              <span class="hours-day" role="cell">Friday</span>
+              <span class="hours-time" role="cell">4:30 AM-10 PM</span>
+            </div>
+            <div class="hours-row" id="hours-sat" role="row">
+              <span class="hours-day" role="cell">Saturday</span>
+              <span class="hours-time" role="cell">7 AM-8 PM</span>
+            </div>
+            <div class="hours-row" id="hours-sun" role="row">
+              <span class="hours-day" role="cell">Sunday</span>
+              <span class="hours-time" role="cell">7 AM-8 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-side fade-up">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Visit</div>
+          <h3>Granite Health and Fitness</h3>
+          <p class="contact-address">12 N 35th St<br>Billings, MT 59101</p>
+          <a href="tel:4062945040" class="contact-phone" aria-label="Call Granite Health and Fitness">(406) 294-5040</a>
+          <iframe
+            class="map-embed"
+            title="Granite Health and Fitness location map"
+            src="https://maps.google.com/maps?q=12+N+35th+St%2C+Billings%2C+MT+59101&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google Maps embed showing Granite Health and Fitness at 12 N 35th St Billings MT"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta fade-up" aria-labelledby="cta-heading">
+      <div class="final-cta-inner">
+        <div class="eyebrow accent-color" style="justify-content:center;"><span class="eyebrow-dot" aria-hidden="true"></span>Ready when you are</div>
+        <h2 id="cta-heading">Ready to unwind?</h2>
+        <p class="final-cta-sub">Granite Health and Fitness is open early, open late, and waiting for you at 12 N 35th St in Billings, MT.</p>
+        <a href="tel:4062945040" class="btn-cta cta-glow" aria-label="Call Granite Health and Fitness to book">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.91z"/></svg>
+          Call (406) 294-5040
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-name">Granite Health and Fitness</div>
+        <p>&copy; 2025 Granite Health and Fitness. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLAIM CARD -->
+  <div class="claim-card" id="claim-card" role="complementary" aria-label="Free site notice">
+    <div class="claim-dot" aria-hidden="true"></div>
+    <p class="claim-text">Built free for Granite Health and Fitness by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20granite-health-and-fitness-granite-sport%20homepage">Reply to my email</a></p>
+  </div>
+
+  <script defer>
+    // SCROLL PROGRESS BAR
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+    }, { passive: true });
+
+    // HERO H1 WORD STAGGER
+    const h1 = document.getElementById('hero-h1');
+    if (h1) {
+      const text = h1.textContent.trim();
+      const words = text.split(' ');
+      h1.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
+      const wordEls = h1.querySelectorAll('.word');
+      wordEls.forEach((el, i) => {
+        setTimeout(() => { el.classList.add('visible'); }, 200 + i * 60);
+      });
+    }
+
+    // HIGHLIGHT TODAY'S HOURS
+    const dayMap = [
+      { id: 'hours-sun', name: 'Sunday' },
+      { id: 'hours-mon', name: 'Monday' },
+      { id: 'hours-tue', name: 'Tuesday' },
+      { id: 'hours-wed', name: 'Wednesday' },
+      { id: 'hours-thu', name: 'Thursday' },
+      { id: 'hours-fri', name: 'Friday' },
+      { id: 'hours-sat', name: 'Saturday' }
+    ];
+    const todayIdx = new Date().getDay();
+    const todayId = dayMap[todayIdx].id;
+    const todayRow = document.getElementById(todayId);
+    if (todayRow) {
+      todayRow.classList.add('today');
+      const timeEl = todayRow.querySelector('.hours-time');
+      if (timeEl) {
+        const dot = document.createElement('span');
+        dot.classList.add('today-dot');
+        dot.setAttribute('aria-hidden', 'true');
+        timeEl.prepend(dot);
+      }
+    }
+
+    // INTERSECTION OBSERVER  -  FADE-UP
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // COUNT-UP ANIMATION
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+    function countUp(el) {
+      const target = parseFloat(el.dataset.target);
+      const decimals = parseInt(el.dataset.decimal) || 0;
+      const duration = 1200;
+      const start = performance.now();
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const val = easeOutCubic(progress) * target;
+        el.textContent = val.toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toFixed(decimals);
+      }
+      requestAnimationFrame(update);
+    }
+    const statNumbers = document.querySelectorAll('.info-stat-number[data-target]');
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          countUp(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statNumbers.forEach(el => statObserver.observe(el));
+
+    // 3D TILT ON ABOUT BOXES
+    if (!window.matchMedia('(hover: none)').matches) {
+      const tiltBoxes = document.querySelectorAll('.tilt-box');
+      tiltBoxes.forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+          const rect = box.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const cx = rect.width / 2;
+          const cy = rect.height / 2;
+          const rotateX = ((y - cy) / cy) * -8;
+          const rotateY = ((x - cx) / cx) * 8;
+          box.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        box.addEventListener('mouseleave', () => {
+          box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+      });
+    }
+
+    // CURSOR GLOW ON CTA
+    const ctaBtn = document.querySelector('.btn-cta');
+    if (ctaBtn && !window.matchMedia('(hover: none)').matches) {
+      ctaBtn.addEventListener('mousemove', (e) => {
+        const rect = ctaBtn.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        ctaBtn.style.setProperty('--x', x + '%');
+        ctaBtn.style.setProperty('--y', y + '%');
+      });
+    }
+
+    // PARALLAX ON HERO
+    if (!window.matchMedia('(hover: none)').matches) {
+      const heroBg = document.querySelector('.hero-bg-inner');
+      function handleParallax() {
+        if (!heroBg) return;
+        const scrollY = window.scrollY;
+        const heroEl = document.querySelector('.hero');
+        const heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom + scrollY : 0;
+        if (scrollY < heroBottom) {
+          heroBg.style.transform = `scale(1.05) translateY(${scrollY * 0.18}px)`;
+        }
+      }
+      window.addEventListener('scroll', handleParallax, { passive: true });
+    }
+
+    // CLAIM CARD SLIDE-IN
+    const claimCard = document.getElementById('claim-card');
+    if (claimCard) {
+      setTimeout(() => {
+        claimCard.classList.add('visible');
+      }, 1200);
+    }
+
+    // SMOOTH SCROLL for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
