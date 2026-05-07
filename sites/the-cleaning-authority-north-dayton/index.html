@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>The Cleaning Authority - North Dayton, Kettering, OH</title>
+  <meta name="description" content="The Cleaning Authority North Dayton delivers professional home cleaning in Kettering, OH. Rated 4.9 stars by 38 verified Google reviews.">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="The Cleaning Authority - North Dayton | Kettering, OH">
+  <meta property="og:description" content="Professional home cleaning in Kettering, OH. Rated 4.9 stars by 38 verified Google reviews.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Cleaning Authority - North Dayton | Kettering, OH">
+  <meta name="twitter:description" content="Professional home cleaning in Kettering, OH. Rated 4.9 stars by 38 verified Google reviews.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' fill='white' font-family='Georgia,serif' font-size='20' font-weight='700'>C</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Cleaning Authority - North Dayton",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4750 Hempstead Station Dr",
+      "addressLocality": "Kettering",
+      "addressRegion": "OH",
+      "postalCode": "45429",
+      "addressCountry": "US"
+    },
+    "telephone": "(937) 249-6822",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "38"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #3B82F6;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --section-pad-v: 96px;
+      --section-pad-h: 48px;
+      --container: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--section-pad-h);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    /* ─── SCROLL PROGRESS ─── */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--primary);
+      z-index: 1000;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px var(--section-pad-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 200ms ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+    }
+
+    .nav-phone:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg-scale {
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero-content {
+      max-width: 720px;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 16px;
+    }
+
+    .hero-eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subhead {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      min-height: 52px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.45);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      text-decoration: none;
+      min-height: 52px;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), background 200ms ease, border-color 200ms ease;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.7);
+      animation: chevronBounce 1.6s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ─── INFO BAR ─── */
+    .info-bar {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px var(--section-pad-h);
+    }
+
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .info-stat {
+      flex: 1;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .info-stat + .info-stat {
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ─── ABOUT ─── */
+    .about-section {
+      padding: var(--section-pad-v) var(--section-pad-h);
+    }
+
+    .about-grid {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      margin-bottom: 24px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-inline-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-top: 12px;
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 2px;
+      transition: gap 200ms ease;
+    }
+
+    .about-inline-link:hover { gap: 10px; }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      cursor: default;
+    }
+
+    .about-box:hover {
+      box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+    }
+
+    .about-box-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .about-box h4 {
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .about-box p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ─── SIGNATURE BAND ─── */
+    .signature-band {
+      background: var(--primary);
+      color: #fff;
+      padding: 100px var(--section-pad-h);
+      text-align: center;
+    }
+
+    .signature-band .eyebrow {
+      color: var(--accent);
+      justify-content: center;
+    }
+
+    .signature-band .eyebrow-dot {
+      background: var(--accent);
+    }
+
+    .signature-pull {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+      max-width: 900px;
+      margin: 0 auto 32px;
+    }
+
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 2px;
+      transition: gap 200ms ease;
+    }
+
+    .signature-link:hover { gap: 12px; }
+
+    /* ─── GALLERY ─── */
+    .gallery-section {
+      padding: var(--section-pad-v) var(--section-pad-h);
+      background: var(--surface);
+    }
+
+    .gallery-header {
+      max-width: var(--container);
+      margin: 0 auto 48px;
+    }
+
+    .gallery-grid {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: var(--soft-border);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ─── HOURS ─── */
+    .hours-section {
+      padding: var(--section-pad-v) var(--section-pad-h);
+    }
+
+    .hours-grid {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft-border);
+      font-size: 1rem;
+    }
+
+    .hours-row:last-child { border-bottom: none; }
+
+    .hours-day { font-weight: 500; color: var(--text); }
+    .hours-time { color: var(--muted); font-size: 0.95rem; }
+    .hours-time.closed { color: var(--faint); }
+    .hours-time.today {
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .today-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .visit-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .visit-address {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .visit-phone {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      border: none;
+      display: block;
+    }
+
+    /* ─── FINAL CTA ─── */
+    .final-cta {
+      background: var(--primary);
+      color: #fff;
+      padding: 120px var(--section-pad-h);
+      text-align: center;
+    }
+
+    .final-cta .eyebrow {
+      color: var(--accent);
+      justify-content: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .btn-cta-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 20px 40px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      min-height: 60px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 200ms ease;
+    }
+
+    .btn-cta-main::before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
+      transform: translate(calc(var(--x, 50%) - 120px), calc(var(--y, 50%) - 120px));
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+
+    .btn-cta-main:hover::before { opacity: 1; }
+
+    .btn-cta-main:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 48px rgba(59, 130, 246, 0.5);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px var(--section-pad-h) 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left .footer-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .footer-left .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .footer-right {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .footer-right a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-right a:hover { text-decoration-thickness: 2px; }
+
+    /* ─── CLAIM CARD ─── */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #fff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.18), 0 2px 8px rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.4;
+      opacity: 0;
+      transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+
+    .claim-card.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .claim-card a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+      text-underline-offset: 2px;
+    }
+
+    .claim-card a:hover { text-decoration-thickness: 2px; }
+
+    /* ─── FADE-UP ANIMATION ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── REDUCED MOTION ─── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .about-box { transform: none !important; }
+      .btn-cta-main::before { display: none; }
+    }
+
+    /* ─── TABLET (1024px) ─── */
+    @media (max-width: 1024px) {
+      :root {
+        --section-pad-h: 32px;
+      }
+      .about-grid { gap: 64px; }
+      .hours-grid { gap: 48px; }
+    }
+
+    /* ─── MOBILE (767px) ─── */
+    @media (max-width: 767px) {
+      :root {
+        --section-pad-h: 20px;
+        --section-pad-v: 70px;
+      }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/hero.jpg');
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero-subhead {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+      }
+
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-chevron { display: none; }
+
+      nav {
+        padding: 14px 20px;
+      }
+
+      .nav-links { display: none; }
+
+      .nav-logo { font-size: 1.1rem; }
+
+      h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+
+      .info-bar {
+        padding: 32px 20px;
+      }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .info-stat {
+        width: 100%;
+        padding: 18px 0;
+        border-left: none !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .info-stat:first-child { border-top: none; padding-top: 0; }
+      .info-stat:last-child { padding-bottom: 0; }
+
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .signature-band {
+        padding: 70px 20px;
+      }
+
+      .signature-pull {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        aspect-ratio: 4 / 3;
+      }
+
+      .hours-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-embed {
+        height: 280px;
+      }
+
+      .final-cta {
+        padding: 80px 20px;
+      }
+
+      .final-cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+
+      .btn-cta-main {
+        width: 100%;
+        justify-content: center;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        padding-bottom: 80px;
+      }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* ─── SMALL MOBILE (479px) ─── */
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+
+      .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+
+      section, .about-section, .hours-section, .gallery-section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .info-bar { padding-left: 18px; padding-right: 18px; }
+      .info-stat-number { font-size: 2.2rem; }
+
+      .about-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Claim Card -->
+  <div class="claim-card" id="claim-card" role="complementary" aria-label="Auxo Agency offer">
+    <span class="claim-dot" aria-hidden="true"></span>
+    <span>Built free for The Cleaning Authority - North Dayton by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20the-cleaning-authority-north-dayton%20homepage">Reply to my email</a></span>
+  </div>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <span class="nav-logo">The Cleaning Authority</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+      <a href="tel:+19372496822" class="nav-phone" aria-label="Call The Cleaning Authority North Dayton">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (937) 249-6822
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-scale" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          Kettering, OH  -  Home Cleaning
+        </p>
+        <h1 id="hero-h1">The Cleaning Authority North Dayton</h1>
+        <p class="hero-subhead">Kettering's Detail-Clean system, delivering a deeper clean than standard maid services.</p>
+        <div class="hero-buttons">
+          <a href="tel:+19372496822" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <a href="#about" class="hero-chevron" aria-label="Scroll down">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar" aria-label="At a glance">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <div class="info-stat-number count-up" data-target="4.9" data-decimals="1">4.9</div>
+          <div class="info-stat-label">Google Rating</div>
+        </div>
+        <div class="info-stat">
+          <div class="info-stat-number count-up" data-target="38" data-decimals="0">38</div>
+          <div class="info-stat-label">Verified Reviews</div>
+        </div>
+        <div class="info-stat">
+          <div class="info-stat-number" style="font-size:1.5rem; padding-top:8px;">Detail-Clean</div>
+          <div class="info-stat-label">Certified System</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about-section fade-up" id="about" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>About</p>
+          <h2 id="about-heading">Kettering's most consistent home cleaning crew, by the numbers.</h2>
+          <p>The Cleaning Authority North Dayton runs a proprietary Detail-Clean Rotation system that cycles through your home's priority areas on a scheduled basis, so no corner is ever overlooked two visits in a row. That approach, combined with background-checked, uniformed teams, has earned them a 4.9-star rating across 38 Kettering homeowners who didn't write those reviews lightly.</p>
+          <p>Operating Monday through Friday out of Hempstead Station Drive in Kettering, OH 45429, the team keeps hours structured and communication clear. No day-of cancellations, no mystery pricing, and no strangers showing up unannounced. That consistency is the product.</p>
+          <a href="tel:+19372496822" class="about-inline-link">
+            Call (937) 249-6822
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="about-boxes">
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>Licensed &amp; Insured</h4>
+            <p>Every technician is background-checked, bonded, and covered, so your Kettering home is protected.</p>
+          </div>
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <h4>Detail-Clean System</h4>
+            <p>A proprietary rotation that ensures every area of your home gets deep attention on a scheduled cycle.</p>
+          </div>
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <h4>Reliable Scheduling</h4>
+            <p>Monday through Friday availability with consistent team assignments, so you always know who's coming.</p>
+          </div>
+          <div class="about-box tilt-box">
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <h4>Satisfaction Backed</h4>
+            <p>If something isn't right, they return within 24 hours to make it right, no questions, no hassle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up" aria-label="Customer ratings">
+      <p class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        What customers say
+      </p>
+      <p class="signature-pull">&ldquo;Rated 4.9 stars by 38 Kettering customers, and counting.&rdquo;</p>
+      <a href="https://www.google.com/search?q=The+Cleaning+Authority+North+Dayton+Kettering+OH" target="_blank" rel="noopener noreferrer" class="signature-link">
+        Read our Google reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="gallery-section fade-up" id="gallery" aria-labelledby="gallery-heading">
+      <div class="gallery-header">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Gallery</p>
+        <h2 id="gallery-heading">The standard we hold in every Kettering home.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/gallery-1.jpg" alt="Professional home cleaning by The Cleaning Authority North Dayton" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/gallery-2.jpg" alt="Kettering home cleaned by The Cleaning Authority" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://auxoagency.github.io/auxo-sites/sites/the-cleaning-authority-north-dayton/gallery-3.jpg" alt="Detail-Clean system results in a Kettering residence" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & CONTACT -->
+    <section class="hours-section fade-up" id="hours" aria-labelledby="hours-heading">
+      <div class="hours-grid">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Hours</p>
+          <h3 id="hours-heading">Open This Week</h3>
+          <div class="hours-card">
+            <div class="hours-row">
+              <span class="hours-day">Monday</span>
+              <span class="hours-time today"><span class="today-dot" aria-hidden="true"></span>8 AM-5 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Tuesday</span>
+              <span class="hours-time">8 AM-5 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Wednesday</span>
+              <span class="hours-time">8 AM-5 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Thursday</span>
+              <span class="hours-time">8 AM-5 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time">8 AM-5 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time closed">Closed</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sunday</span>
+              <span class="hours-time closed">Closed</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Visit</p>
+          <p class="visit-name">The Cleaning Authority<br>North Dayton</p>
+          <p class="visit-address">4750 Hempstead Station Dr<br>Kettering, OH 45429</p>
+          <a href="tel:+19372496822" class="visit-phone">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (937) 249-6822
+          </a>
+          <iframe
+            class="map-embed"
+            src="https://maps.google.com/maps?q=4750%20Hempstead%20Station%20Dr%2C%20Kettering%2C%20OH%2045429&output=embed"
+            title="The Cleaning Authority North Dayton location map"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta fade-up" aria-labelledby="cta-heading">
+      <p class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Ready when you are
+      </p>
+      <h2 id="cta-heading">Ready to get started?</h2>
+      <p class="final-cta-sub">Schedule your first Detail-Clean visit with Kettering's top-rated home cleaning team at (937) 249-6822.</p>
+      <a href="tel:+19372496822" class="btn-cta-main cta-glow" id="main-cta" aria-label="Call The Cleaning Authority North Dayton at (937) 249-6822">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (937) 249-6822
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <div class="footer-name">The Cleaning Authority - North Dayton</div>
+      <div class="footer-copy">&copy; 2025 The Cleaning Authority - North Dayton. All rights reserved.</div>
+    </div>
+    <div class="footer-right">
+      Site by <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    // ─── SCROLL PROGRESS BAR ───
+    const progressBar = document.getElementById('scroll-progress');
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    // ─── HERO PARALLAX ───
+    const heroEl = document.querySelector('.hero');
+    const heroScale = document.querySelector('.hero-bg-scale');
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+    if (!isTouchDevice && heroEl) {
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
+        if (scrollY < heroBottom) {
+          const offset = scrollY * 0.3;
+          heroEl.style.backgroundPositionY = `calc(50% + ${offset}px)`;
+        }
+      }, { passive: true });
+    }
+
+    // ─── HERO WORD STAGGER ───
+    const heroH1 = document.getElementById('hero-h1');
+    if (heroH1) {
+      const text = heroH1.textContent.trim();
+      const words = text.split(' ');
+      heroH1.innerHTML = words.map(w => `<span class="word">${w}&nbsp;</span>`).join('');
+      const wordEls = heroH1.querySelectorAll('.word');
+      wordEls.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, 200 + i * 60);
+      });
+    }
+
+    // ─── CLAIM CARD SLIDE-IN ───
+    const claimCard = document.getElementById('claim-card');
+    if (claimCard) {
+      setTimeout(() => {
+        claimCard.classList.add('visible');
+      }, 1200);
+    }
+
+    // ─── INTERSECTION OBSERVER: FADE-UP ───
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // ─── COUNT-UP ON INFO BAR ───
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function animateCountUp(el) {
+      const target = parseFloat(el.dataset.target);
+      const decimals = parseInt(el.dataset.decimals) || 0;
+      const duration = 1200;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const val = easeOutCubic(progress) * target;
+        el.textContent = val.toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toFixed(decimals);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const countEls = document.querySelectorAll('.count-up');
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCountUp(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    countEls.forEach(el => countObserver.observe(el));
+
+    // ─── 3D TILT ON ABOUT BOXES ───
+    if (!isTouchDevice) {
+      const tiltBoxes = document.querySelectorAll('.tilt-box');
+      tiltBoxes.forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+          const rect = box.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const cx = rect.width / 2;
+          const cy = rect.height / 2;
+          const rotX = ((y - cy) / cy) * -8;
+          const rotY = ((x - cx) / cx) * 8;
+          box.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+        });
+        box.addEventListener('mouseleave', () => {
+          box.style.transform = '';
+        });
+      });
+    }
+
+    // ─── CURSOR GLOW ON CTA ───
+    if (!isTouchDevice) {
+      const ctaGlow = document.getElementById('main-cta');
+      if (ctaGlow) {
+        ctaGlow.addEventListener('mousemove', (e) => {
+          const rect = ctaGlow.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          ctaGlow.style.setProperty('--x', x + 'px');
+          ctaGlow.style.setProperty('--y', y + 'px');
+        });
+      }
+    }
+
+    // ─── TODAY HIGHLIGHT ───
+    function highlightToday() {
+      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const today = days[new Date().getDay()];
+      const rows = document.querySelectorAll('.hours-row');
+      rows.forEach(row => {
+        const dayEl = row.querySelector('.hours-day');
+        const timeEl = row.querySelector('.hours-time');
+        if (dayEl && dayEl.textContent.trim() === today) {
+          timeEl.classList.add('today');
+          if (!timeEl.querySelector('.today-dot')) {
+            const dot = document.createElement('span');
+            dot.className = 'today-dot';
+            dot.setAttribute('aria-hidden', 'true');
+            timeEl.prepend(dot);
+          }
+        } else {
+          timeEl.classList.remove('today');
+          const existingDot = timeEl.querySelector('.today-dot');
+          if (existingDot) existingDot.remove();
+        }
+      });
+    }
+    highlightToday();
+  </script>
+
+</body>
+</html>
