@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bonham Electric, Inc., Kettering, OH</title>
+  <meta name="description" content="Licensed electrical contractor in Kettering, OH. Bonham Electric, Inc. serves the Dayton area with 4.9 stars across 282 verified Google reviews.">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="Bonham Electric, Inc.  -  Kettering, OH">
+  <meta property="og:description" content="Licensed electrical contractor in Kettering, OH. Rated 4.9 stars by 282 verified customers.">
+  <meta property="og:image" content="https://auxoagency.github.io/auxo-sites/sites/bonham-electric-inc/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bonham Electric, Inc.  -  Kettering, OH">
+  <meta name="twitter:description" content="Licensed electrical contractor in Kettering, OH. Rated 4.9 stars by 282 verified customers.">
+  <meta name="twitter:image" content="https://auxoagency.github.io/auxo-sites/sites/bonham-electric-inc/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='18' fill='%23F59E0B'>B</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ElectricalContractor",
+    "name": "Bonham Electric, Inc.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4750 Hempstead Station Dr",
+      "addressLocality": "Kettering",
+      "addressRegion": "OH",
+      "postalCode": "45429",
+      "addressCountry": "US"
+    },
+    "telephone": "(937) 233-7662",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "282"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #F59E0B;
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --faint: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --soft-border: #F1F5F9;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.06);
+      --shadow-md: 0 4px 16px rgba(15,23,42,0.1), 0 2px 6px rgba(15,23,42,0.06);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.18), 0 2px 8px rgba(15,23,42,0.08);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* SCROLL PROGRESS */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--accent);
+      z-index: 1000;
+      transition: width 0.1s linear;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 200ms ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--primary);
+      transition: width 250ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      flex-shrink: 0;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(15,23,42,0.2);
+    }
+
+    .nav-cta svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 65vh;
+      max-height: 640px;
+      min-height: 480px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%),
+        url('https://auxoagency.github.io/auxo-sites/sites/bonham-electric-inc/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.05); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 16px;
+    }
+
+    .hero-eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .hero h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subhead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.5;
+      margin-bottom: 32px;
+      max-width: 540px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(245,158,11,0.35);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease, border-color 200ms ease;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: chevronBounce 1.6s ease-in-out infinite;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* INFO BAR */
+    .info-bar {
+      background: var(--primary);
+      padding: 40px 48px;
+    }
+
+    .info-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-around;
+      gap: 0;
+    }
+
+    .info-stat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px 24px;
+      position: relative;
+    }
+
+    .info-stat + .info-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3rem;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* MARQUEE */
+    .marquee-section {
+      background: var(--surface);
+      padding: 64px 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: marqueeScroll 30s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .marquee-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: 1.5px solid var(--primary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .marquee-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ABOUT */
+    .about-section {
+      padding: 96px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .about-body p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .about-body p:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 2px;
+      transition: gap 200ms ease;
+    }
+
+    .about-link:hover {
+      gap: 10px;
+    }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      transform-style: preserve-3d;
+      will-change: transform;
+      cursor: default;
+    }
+
+    .about-box:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-box-icon {
+      color: var(--primary);
+      margin-bottom: 12px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .about-box h4 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .about-box p {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    /* SIGNATURE BAND */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    .signature-band .section-eyebrow {
+      color: var(--accent);
+    }
+
+    .signature-band .pull-quote {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
+      color: #fff;
+      max-width: 900px;
+      margin: 0 auto 32px;
+      letter-spacing: -0.02em;
+    }
+
+    .signature-band .pull-quote em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--accent);
+      border-bottom: 1.5px solid rgba(245,158,11,0.4);
+      padding-bottom: 2px;
+      transition: gap 200ms ease, border-color 200ms ease;
+    }
+
+    .signature-link:hover {
+      gap: 12px;
+      border-color: var(--accent);
+    }
+
+    /* HOURS */
+    .hours-section {
+      padding: 96px 48px;
+    }
+
+    .hours-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .hours-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+    }
+
+    .hours-card-title {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-row-day {
+      font-weight: 500;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hours-today-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .hours-row-time {
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .hours-row.today .hours-row-time {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hours-row-closed {
+      color: var(--faint);
+    }
+
+    .contact-side h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-address {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .contact-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+      transition: gap 200ms ease;
+    }
+
+    .contact-phone:hover {
+      gap: 12px;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 360px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    .final-cta .section-eyebrow {
+      color: var(--accent);
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .btn-cta-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 20px 40px;
+      border-radius: 999px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 200ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 200ms ease;
+    }
+
+    .btn-cta-glow::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(240px circle at var(--x, 50%) var(--y, 50%), rgba(15,23,42,0.18), transparent 60%);
+      opacity: 0;
+      transition: opacity 200ms ease;
+      pointer-events: none;
+    }
+
+    .btn-cta-glow:hover::before {
+      opacity: 1;
+    }
+
+    .btn-cta-glow:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 40px rgba(245,158,11,0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 40px 48px 100px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+
+    .footer-copy {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .footer-credit {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .footer-credit a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 200ms ease;
+    }
+
+    .footer-credit a:hover {
+      opacity: 0.7;
+    }
+
+    /* CLAIM CARD */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      opacity: 0;
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #fff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.4;
+      transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+
+    .claim-card.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .claim-text {
+      flex: 1;
+      color: var(--primary);
+    }
+
+    .claim-text a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+      text-underline-offset: 2px;
+      transition: text-decoration-thickness 200ms ease;
+    }
+
+    .claim-text a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    /* SECTION FADE-UP */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+      .about-box { transform: none !important; }
+      .btn-cta-glow::before { display: none; }
+    }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      .nav { padding: 16px 32px; }
+      .about-section { padding: 80px 32px; }
+      .about-grid { gap: 64px; }
+      .hours-section { padding: 80px 32px; }
+      .hours-inner { gap: 48px; }
+      .info-bar { padding: 40px 32px; }
+      .signature-band { padding: 80px 32px; }
+      .final-cta { padding: 100px 32px; }
+      footer { padding: 40px 32px 100px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 767px) {
+      html { scroll-padding-top: 70px; }
+
+      .nav {
+        padding: 14px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-logo { font-size: 1.1rem; }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        min-height: 520px;
+        padding: 40px 20px;
+        background-image:
+          linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.65) 100%),
+          url('https://auxoagency.github.io/auxo-sites/sites/bonham-electric-inc/hero.jpg');
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero-subhead {
+        font-size: 1.05rem;
+        max-width: 92%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 14px;
+      }
+
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        min-height: 52px;
+      }
+
+      .hero-chevron { display: none; }
+
+      .info-bar { padding: 32px 20px; }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .info-stat {
+        padding: 18px 20px;
+        width: 100%;
+      }
+
+      .info-stat + .info-stat::before {
+        left: 10%;
+        right: 10%;
+        top: 0;
+        width: 80%;
+        height: 1px;
+        background: rgba(255,255,255,0.15);
+      }
+
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about-section {
+        padding: 70px 20px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .about-text h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .signature-band {
+        padding: 70px 20px;
+      }
+
+      .signature-band .pull-quote {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      .hours-section {
+        padding: 70px 20px;
+      }
+
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .map-embed { height: 280px; }
+
+      .final-cta {
+        padding: 80px 20px;
+      }
+
+      .final-cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+
+      .btn-cta-glow {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        min-height: 52px;
+      }
+
+      footer {
+        padding: 40px 20px 80px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .marquee-pill { padding: 10px 18px; font-size: 0.85rem; }
+      .marquee-track { animation-duration: 24s; }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+        gap: 10px;
+      }
+
+      .marquee-section { padding: 48px 0; }
+    }
+
+    /* SMALL MOBILE */
+    @media (max-width: 479px) {
+      .hero {
+        height: 72vh;
+        max-height: 560px;
+        min-height: 480px;
+        padding: 32px 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
+
+      .about-section { padding: 56px 18px; }
+      .hours-section { padding: 56px 18px; }
+      .info-stat-number { font-size: 2.2rem; }
+
+      .about-box { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+  <!-- CLAIM CARD -->
+  <div class="claim-card" id="claim-card" role="complementary" aria-label="Site gift notice">
+    <div class="claim-dot" aria-hidden="true"></div>
+    <p class="claim-text">Built free for Bonham Electric, Inc. by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20bonham-electric-inc%20homepage">Reply to my email</a></p>
+  </div>
+
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="#" class="nav-logo">Bonham Electric</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#hours">Contact</a></li>
+      </ul>
+      <a href="tel:9372337662" class="nav-cta" aria-label="Call Bonham Electric at (937) 233-7662">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        (937) 233-7662
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-bg" aria-hidden="true" style="background-image: url('https://auxoagency.github.io/auxo-sites/sites/bonham-electric-inc/hero.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: absolute; inset: 0;"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          Kettering, OH  -  Electrical Contractor
+        </div>
+        <h1 id="hero-h1">Bonham Electric, Inc.</h1>
+        <p class="hero-subhead">Kettering's licensed electricians, trusted by homeowners and businesses across the Dayton area since before the competition caught up.</p>
+        <div class="hero-buttons">
+          <a href="tel:9372337662" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Call Now
+          </a>
+          <a href="#hours" class="btn-secondary">View Hours</a>
+        </div>
+      </div>
+      <div class="hero-chevron" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="info-bar fade-up" aria-label="Business highlights">
+      <div class="info-bar-inner">
+        <div class="info-stat">
+          <div class="info-stat-number" data-count="4.9" data-decimals="1" aria-label="4.9">4.9</div>
+          <div class="info-stat-label">Google Rating</div>
+        </div>
+        <div class="info-stat">
+          <div class="info-stat-number" data-count="282" data-decimals="0" aria-label="282">282</div>
+          <div class="info-stat-label">Verified Reviews</div>
+        </div>
+        <div class="info-stat">
+          <div class="info-stat-number" style="font-size:1.9rem; line-height:1.15; padding-top:4px; letter-spacing:-0.01em;" aria-label="Licensed and Insured">Licensed &amp;<br>Insured</div>
+          <div class="info-stat-label">Ohio Electrical Contractor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section fade-up" aria-label="Services">
+      <div class="marquee-track" aria-hidden="true">
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Licensed &amp; Insured</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Emergency Service</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Free Estimates</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Same-Day Quotes</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Quality Guaranteed</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>24/7 Availability</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Licensed &amp; Insured</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Emergency Service</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Free Estimates</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Same-Day Quotes</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>Quality Guaranteed</span>
+        <span class="marquee-pill"><span class="marquee-pill-dot"></span>24/7 Availability</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <span class="section-eyebrow">About</span>
+          <h2 id="about-heading">Kettering's electrical contractor with a track record you can check.</h2>
+          <div class="about-body">
+            <p>Bonham Electric, Inc. operates out of 4750 Hempstead Station Dr in Kettering, Ohio, handling residential and commercial electrical work throughout the greater Dayton area. The team is fully licensed, insured, and answers the phone during business hours, not three days later.</p>
+            <p>With 282 verified Google reviews and a 4.9-star rating, the work speaks for itself. Kettering homeowners and local businesses have trusted Bonham Electric to get the job done right, on time, and without the runaround.</p>
+            <a href="tel:9372337662" class="about-link">
+              Call (937) 233-7662
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-boxes fade-up" id="tilt-container" aria-label="Key services and attributes">
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <h4>Licensed &amp; Insured</h4>
+            <p>Ohio-licensed electrical contractor. Full liability coverage on every job, residential or commercial.</p>
+          </div>
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <h4>Emergency Service</h4>
+            <p>Electrical problems don't wait for a convenient time. Bonham Electric is ready when urgent situations arise.</p>
+          </div>
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+            <h4>Free Estimates</h4>
+            <p>Know the cost before any work begins. Clear, itemized quotes with no hidden fees added at invoice time.</p>
+          </div>
+          <div class="about-box" data-tilt>
+            <svg class="about-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <h4>Quality Guaranteed</h4>
+            <p>Every installation, repair, and upgrade meets Ohio code. The work is done right or Bonham comes back to fix it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE BAND -->
+    <div class="signature-band fade-up" aria-label="Customer reviews highlight">
+      <span class="section-eyebrow">What customers say</span>
+      <p class="pull-quote">&ldquo;Rated <em>4.9 stars</em> by 282 Kettering-area customers, and counting.&rdquo;</p>
+      <a href="https://www.google.com/maps/search/Bonham+Electric+Inc+Kettering+OH" target="_blank" rel="noopener" class="signature-link" aria-label="Read Bonham Electric Google reviews, opens in new tab">
+        Read our Google reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- HOURS & CONTACT -->
+    <section id="hours" class="hours-section" aria-labelledby="hours-heading">
+      <div class="hours-inner">
+        <div class="fade-up">
+          <span class="section-eyebrow">Hours</span>
+          <div class="hours-card">
+            <div class="hours-card-title" id="hours-heading">Open This Week</div>
+            <div class="hours-rows" id="hours-rows">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-side fade-up">
+          <span class="section-eyebrow">Visit</span>
+          <h3>Bonham Electric, Inc.</h3>
+          <p class="contact-address">4750 Hempstead Station Dr<br>Kettering, OH 45429</p>
+          <a href="tel:9372337662" class="contact-phone" aria-label="Call Bonham Electric">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            (937) 233-7662
+          </a>
+          <div class="map-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=4750+Hempstead+Station+Dr%2C+Kettering%2C+OH+45429&output=embed"
+              title="Bonham Electric, Inc. location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Map showing Bonham Electric Inc at 4750 Hempstead Station Dr, Kettering OH">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta fade-up" aria-labelledby="cta-heading">
+      <span class="section-eyebrow">Ready when you are</span>
+      <h2 id="cta-heading">Need it fixed today?</h2>
+      <p class="final-cta-sub">Bonham Electric, Inc. serves Kettering, OH and the entire Dayton metro. Call during business hours for same-day quotes and fast scheduling.</p>
+      <a href="tel:9372337662" class="btn-cta-glow" id="cta-glow-btn" aria-label="Call Bonham Electric now at (937) 233-7662">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Call (937) 233-7662
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Bonham Electric, Inc.</span>
+        <span class="footer-copy">&copy; 2025 Bonham Electric, Inc. All rights reserved.</span>
+      </div>
+      <div class="footer-credit">
+        Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer>
+    (function() {
+      'use strict';
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+      // SCROLL PROGRESS
+      const progressBar = document.getElementById('scroll-progress');
+      function updateProgress() {
+        const scrolled = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = total > 0 ? (scrolled / total) * 100 : 0;
+        progressBar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // CLAIM CARD SLIDE-IN
+      const claimCard = document.getElementById('claim-card');
+      setTimeout(function() {
+        claimCard.classList.add('visible');
+      }, 1200);
+
+      // HERO H1 WORD STAGGER
+      function initHeroStagger() {
+        const h1 = document.getElementById('hero-h1');
+        if (!h1) return;
+        const text = h1.textContent.trim();
+        const words = text.split(' ');
+        h1.innerHTML = words.map(function(w) {
+          return '<span class="word">' + w + '</span>';
+        }).join(' ');
+        const spans = h1.querySelectorAll('.word');
+        spans.forEach(function(span, i) {
+          setTimeout(function() {
+            span.classList.add('visible');
+          }, prefersReducedMotion ? 0 : 100 + i * 60);
+        });
+      }
+      initHeroStagger();
+
+      // HERO PARALLAX
+      if (!prefersReducedMotion && !isTouchDevice) {
+        const heroBg = document.querySelector('.hero-bg');
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', function() {
+          const rect = hero.getBoundingClientRect();
+          if (rect.bottom > 0 && rect.top < window.innerHeight) {
+            const offset = window.scrollY * 0.3;
+            if (heroBg) heroBg.style.transform = 'translateY(' + offset + 'px) scale(1.05)';
+          }
+        }, { passive: true });
+      }
+
+      // INTERSECTION OBSERVER FADE-UP
+      const fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        fadeEls.forEach(function(el) { observer.observe(el); });
+      } else {
+        fadeEls.forEach(function(el) { el.classList.add('visible'); });
+      }
+
+      // COUNT-UP ANIMATION
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function countUp(el) {
+        const target = parseFloat(el.getAttribute('data-count'));
+        const decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+        if (isNaN(target)) return;
+        const duration = 1200;
+        const start = performance.now();
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const value = target * easeOutCubic(progress);
+          el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const countEls = document.querySelectorAll('[data-count]');
+      if ('IntersectionObserver' in window && !prefersReducedMotion) {
+        const countObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              countUp(entry.target);
+              countObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        countEls.forEach(function(el) { countObserver.observe(el); });
+      }
+
+      // 3D TILT ON ABOUT BOXES
+      if (!isTouchDevice && !prefersReducedMotion) {
+        const tiltBoxes = document.querySelectorAll('[data-tilt]');
+        tiltBoxes.forEach(function(box) {
+          box.addEventListener('mousemove', function(e) {
+            const rect = box.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = (e.clientX - cx) / (rect.width / 2);
+            const dy = (e.clientY - cy) / (rect.height / 2);
+            const rotX = -dy * 8;
+            const rotY = dx * 8;
+            box.style.transform = 'perspective(600px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
+          });
+          box.addEventListener('mouseleave', function() {
+            box.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+          });
+        });
+      }
+
+      // CURSOR GLOW ON CTA BUTTON
+      if (!isTouchDevice && !prefersReducedMotion) {
+        const glowBtn = document.getElementById('cta-glow-btn');
+        if (glowBtn) {
+          glowBtn.addEventListener('mousemove', function(e) {
+            const rect = glowBtn.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            glowBtn.style.setProperty('--x', x + '%');
+            glowBtn.style.setProperty('--y', y + '%');
+          });
+        }
+      }
+
+      // HOURS PARSER
+      function parseHours() {
+        const hoursText = "Monday: 8:00 AM \u2013 5:00 PM, Tuesday: 8:00 AM \u2013 5:00 PM, Wednesday: 8:00 AM \u2013 5:00 PM, Thursday: 8:00 AM \u2013 5:00 PM, Friday: 8:00 AM \u2013 5:00 PM, Saturday: Closed, Sunday: Closed";
+        const dayOrder = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+        const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+
+        function formatTime(timeStr) {
+          timeStr = timeStr.trim();
+          timeStr = timeStr.replace(/\u2013/g, '-').replace(/\u2014/g, '-');
+          if (!timeStr || timeStr.toLowerCase() === 'closed') return null;
+          return timeStr
+            .replace(/(\d+):00\s*(AM|PM)/gi, function(m, h, ap) { return h + ' ' + ap.toUpperCase(); })
+            .replace(/\s*-\s*/g, '-');
+        }
+
+        const entries = {};
+        hoursText.split(',').forEach(function(chunk) {
+          const colon = chunk.indexOf(':');
+          if (colon === -1) return;
+          const day = chunk.substring(0, colon).trim();
+          const rest = chunk.substring(colon + 1).trim();
+          entries[day] = rest;
+        });
+
+        const container = document.getElementById('hours-rows');
+        if (!container) return;
+
+        dayOrder.forEach(function(day) {
+          const raw = entries[day] || '';
+          const isToday = day === today;
+          const isClosed = !raw || raw.trim().toLowerCase() === 'closed';
+          const formatted = isClosed ? null : formatTime(raw);
+
+          const row = document.createElement('div');
+          row.className = 'hours-row' + (isToday ? ' today' : '');
+
+          const dayEl = document.createElement('span');
+          dayEl.className = 'hours-row-day';
+          if (isToday) {
+            const dot = document.createElement('span');
+            dot.className = 'hours-today-dot';
+            dot.setAttribute('aria-hidden', 'true');
+            dayEl.appendChild(dot);
+          }
+          dayEl.appendChild(document.createTextNode(day));
+
+          const timeEl = document.createElement('span');
+          if (isClosed) {
+            timeEl.className = 'hours-row-time hours-row-closed';
+            timeEl.textContent = 'Closed';
+          } else {
+            timeEl.className = 'hours-row-time';
+            timeEl.textContent = formatted || raw;
+          }
+
+          row.appendChild(dayEl);
+          row.appendChild(timeEl);
+          container.appendChild(row);
+        });
+      }
+      parseHours();
+
+      // SMOOTH SCROLL
+      document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
