@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Source Heating, Cooling, Plumbing & Electrical, Chattanooga, TN</title>
+  <meta name="description" content="One Source Heating, Cooling, Plumbing & Electrical in Chattanooga, TN. Licensed & insured trades services, 5-star rated by 108 verified customers. Available 24/7.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1C1917">
+  <meta property="og:title" content="One Source Heating, Cooling, Plumbing & Electrical | Chattanooga, TN">
+  <meta property="og:description" content="Chattanooga's 5-star rated HVAC, plumbing, and electrical experts. Licensed, insured, and available 24 hours a day.">
+  <meta property="og:image" content="https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Source Heating, Cooling, Plumbing & Electrical | Chattanooga, TN">
+  <meta name="twitter:description" content="Chattanooga's 5-star rated HVAC, plumbing, and electrical experts. Licensed, insured, and available 24 hours a day.">
+  <meta name="twitter:image" content="https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231C1917'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='18' fill='%23F59E0B'>O</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "One Source Heating, Cooling, Plumbing & Electrical",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6925 Shallowford Rd #315",
+      "addressLocality": "Chattanooga",
+      "addressRegion": "TN",
+      "postalCode": "37421",
+      "addressCountry": "US"
+    },
+    "telephone": "(423) 225-3132",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "108"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <style>
+    :root {
+      --primary: #1C1917;
+      --accent: #F59E0B;
+      --accent-dark: #D97706;
+      --surface: #FAFAF7;
+      --white: #FFFFFF;
+      --border: #E5E3DE;
+      --muted: #6B6560;
+      --muted-light: #9C9590;
+      --display-font: 'Space Grotesk', sans-serif;
+      --body-font: 'Inter', sans-serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --section-pad-v: 96px;
+      --section-pad-h: 48px;
+      --container: 1200px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --surface: #0F0D0C;
+        --white: #1C1917;
+        --border: #2D2926;
+        --muted: #9C9590;
+        --muted-light: #6B6560;
+        --accent: #FBBF24;
+      }
+      body { background: var(--surface); color: #FAFAF7; }
+      .nav { background: rgba(28, 25, 23, 0.95); border-bottom-color: var(--border); }
+      .nav-name { color: #FAFAF7; }
+      .nav-link { color: #FAFAF7; }
+      .hours-card, .bento-card { background: #1C1917; border-color: var(--border); }
+      .hours-card h3, .bento-card-title { color: #FAFAF7; }
+      .footer { background: #0F0D0C; border-top-color: var(--border); color: #FAFAF7; }
+      .about-section { background: #0F0D0C; }
+      .gallery-section { background: #0F0D0C; }
+      .hours-section { background: #0F0D0C; }
+      .claim-card { background: #1C1917; color: #FAFAF7; border-color: var(--border); }
+      .claim-card a { color: var(--accent); }
+      .claim-dismiss { color: var(--muted-light); }
+      .visit-name { color: #FAFAF7; }
+      .visit-address { color: var(--muted); }
+      .visit-phone { color: var(--accent); }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body-font);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--primary);
+      background: var(--surface);
+      overflow-x: hidden;
+    }
+
+    /* SCROLL PROGRESS */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: color-mix(in srgb, var(--accent) 30%, transparent);
+      z-index: 9999;
+    }
+    .scroll-progress::after {
+      content: '';
+      display: block;
+      height: 100%;
+      background: var(--accent);
+      transform-origin: left;
+      animation: fillProgress linear forwards;
+      animation-timeline: scroll();
+    }
+    @keyframes fillProgress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px var(--section-pad-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-name {
+      font-family: var(--display-font);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-link {
+      font-family: var(--body-font);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--primary);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.25s ease-out;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: var(--surface);
+      font-family: var(--body-font);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .nav-phone:hover { background: color-mix(in srgb, var(--primary) 80%, transparent); transform: scale(1.02); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 75vh;
+      max-height: 720px;
+      min-height: 520px;
+      background-image:
+        linear-gradient(135deg, var(--primary) 0%, transparent 50%, rgba(0,0,0,0.55) 100%),
+        url('https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/hero.jpg');
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+      overflow: hidden;
+    }
+    .hero-bg-zoom {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+      z-index: 0;
+      mix-blend-mode: multiply;
+      opacity: 0;
+    }
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.06); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-family: var(--display-font);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: wordReveal 0.5s ease-out forwards;
+    }
+    @keyframes wordReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-subhead {
+      font-family: var(--body-font);
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: var(--body-font);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 4px;
+      min-height: 52px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFFFFF;
+      font-family: var(--body-font);
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 1.5px solid rgba(255,255,255,0.55);
+      min-height: 52px;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.08); }
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: chevronBounce 1.6s ease-in-out infinite;
+      color: rgba(255,255,255,0.6);
+    }
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* INFO BAR */
+    .info-bar {
+      background: var(--primary);
+      padding: 56px var(--section-pad-h);
+    }
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+    }
+    .info-stat {
+      flex: 1;
+      text-align: center;
+      padding: 0 40px;
+    }
+    .info-stat:not(:last-child) {
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .info-stat-number {
+      font-family: var(--display-font);
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .info-stat-label {
+      font-family: var(--body-font);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ABOUT */
+    .about-section {
+      padding: var(--section-pad-v) var(--section-pad-h);
+      background: var(--surface);
+    }
+    .about-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .eyebrow {
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .about-h2 {
+      font-family: var(--display-font);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 28px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .about-h2 { color: #FAFAF7; }
+    }
+    .about-body {
+      font-family: var(--body-font);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body-font);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin-top: 16px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid var(--accent);
+      transition: gap 0.2s ease;
+    }
+    .about-link:hover { gap: 14px; }
+    @media (prefers-color-scheme: dark) {
+      .about-link { color: #FAFAF7; }
+    }
+
+    /* BENTO */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+    .bento-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    }
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+    }
+    .bento-card.bento-large {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: var(--primary);
+      padding: 32px;
+    }
+    .bento-large .bento-card-icon { color: var(--accent); }
+    .bento-large .bento-card-title { color: #FFFFFF; }
+    .bento-large .bento-card-desc { color: rgba(255,255,255,0.6); }
+    .bento-card-icon {
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .bento-card-icon { color: var(--accent); }
+    }
+    .bento-card-title {
+      font-family: var(--display-font);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .bento-card-desc {
+      font-family: var(--body-font);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: revealUp 0.7s ease-out forwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+    @keyframes revealUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SIGNATURE BAND */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px var(--section-pad-h);
+      text-align: center;
+    }
+    .sig-eyebrow {
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .sig-quote {
+      font-family: var(--display-font);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      max-width: 860px;
+      margin: 0 auto 32px;
+    }
+    .sig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body-font);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.4);
+      padding-bottom: 2px;
+      transition: gap 0.2s ease, border-color 0.2s ease;
+    }
+    .sig-link:hover { gap: 14px; border-color: var(--accent); }
+
+    /* GALLERY */
+    .gallery-section {
+      padding: var(--section-pad-v) var(--section-pad-h);
+      background: var(--surface);
+    }
+    .gallery-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .gallery-header {
+      margin-bottom: 48px;
+    }
+    .gallery-h2 {
+      font-family: var(--display-font);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-top: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .gallery-h2 { color: #FAFAF7; }
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* HOURS */
+    .hours-section {
+      padding: var(--section-pad-v) var(--section-pad-h);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .hours-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .hours-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-top: 24px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-family: var(--body-font);
+      font-size: 0.92rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row.today {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    @media (prefers-color-scheme: dark) {
+      .hours-row.today { color: #FAFAF7; }
+    }
+    .hours-day { color: var(--muted); font-weight: 500; }
+    .hours-row.today .hours-day { color: var(--primary); font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .hours-row.today .hours-day { color: #FAFAF7; }
+    }
+    .hours-time-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .today-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hours-time { color: var(--primary); }
+    @media (prefers-color-scheme: dark) {
+      .hours-time { color: #FAFAF7; }
+    }
+    .hours-closed { color: var(--muted-light); }
+    .hours-h3 {
+      font-family: var(--display-font);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .hours-h3 { color: #FAFAF7; }
+    }
+    .visit-name {
+      font-family: var(--display-font);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+    .visit-address {
+      font-family: var(--body-font);
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .visit-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body-font);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: color 0.2s ease;
+    }
+    .visit-phone:hover { color: var(--accent); }
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 4px;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 240px;
+      display: block;
+      border: none;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px var(--section-pad-h);
+      text-align: center;
+    }
+    .final-cta-eyebrow {
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .final-cta h2 {
+      font-family: var(--display-font);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+    .final-cta-sub {
+      font-family: var(--body-font);
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 540px;
+      margin: 0 auto 44px;
+      line-height: 1.6;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: var(--body-font);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 20px 40px;
+      border-radius: 4px;
+      min-height: 60px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 40px var(--section-pad-h) 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .footer-left {
+      font-family: var(--body-font);
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .footer-brand {
+      font-family: var(--display-font);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 4px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .footer-brand { color: #FAFAF7; }
+    }
+    .footer-right a {
+      font-family: var(--body-font);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 1px;
+      transition: color 0.2s ease;
+    }
+    .footer-right a:hover { color: var(--accent-dark); }
+    @media (prefers-color-scheme: dark) {
+      .footer-right a { color: var(--accent); }
+    }
+
+    /* CLAIM CARD */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: var(--white);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--body-font);
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.45;
+      animation: claimSlideIn 0.6s ease-out 1.2s forwards;
+    }
+    @keyframes claimSlideIn {
+      to { transform: translateX(-50%) translateY(0); }
+    }
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .claim-text { flex: 1; }
+    .claim-text a {
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+    }
+    .claim-text a:hover { color: var(--accent); }
+    .claim-dismiss {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted-light);
+      font-size: 1.2rem;
+      line-height: 1;
+      padding: 4px;
+      flex-shrink: 0;
+      transition: color 0.2s ease;
+    }
+    .claim-dismiss:hover { color: var(--primary); }
+
+    /* SECTION HEADERS */
+    .section-header {
+      max-width: var(--container);
+      margin: 0 auto 48px;
+    }
+
+    /* CONTAINER UTILITY */
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* TOUCH: no hover effects */
+    @media (hover: none) {
+      .bento-card:hover { transform: none; box-shadow: none; }
+      .gallery-item:hover img { transform: none; }
+      .btn-primary:hover, .btn-cta:hover { transform: none; box-shadow: none; }
+    }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      :root {
+        --section-pad-v: 80px;
+        --section-pad-h: 32px;
+      }
+      .about-inner { gap: 64px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 767px) {
+      :root {
+        --section-pad-v: 70px;
+        --section-pad-h: 20px;
+      }
+      .nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .nav-phone { font-size: 0.88rem; padding: 10px 18px; }
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        padding: 40px 20px;
+      }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); }
+      .hero-buttons { flex-direction: column; gap: 12px; }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary { width: 100%; justify-content: center; }
+      .hero-chevron { display: none; }
+      .info-bar { padding: 40px 20px; }
+      .info-bar-inner { flex-direction: column; gap: 32px; }
+      .info-stat { border-right: none; padding: 0; }
+      .info-stat:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        padding-bottom: 32px;
+      }
+      .info-stat-number { font-size: 2.6rem; }
+      .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .bento-grid { grid-template-columns: 1fr 1fr; }
+      .bento-card.bento-large { grid-column: 1 / 3; grid-row: auto; }
+      .about-h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+      .sig-quote { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+      .signature-band { padding: 64px 20px; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+      .gallery-item { aspect-ratio: 4 / 3; }
+      .hours-inner { grid-template-columns: 1fr; gap: 40px; }
+      .map-wrap iframe { height: 280px; }
+      .final-cta { padding: 80px 20px; }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+      .btn-cta { width: 100%; justify-content: center; font-size: 1.05rem; padding: 18px 28px; }
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 80px;
+      }
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+      .gallery-section { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" role="presentation"></div>
+
+  <!-- CLAIM CARD -->
+  <div class="claim-card" id="claimCard" role="complementary" aria-label="Site notice">
+    <div class="claim-dot" aria-hidden="true"></div>
+    <p class="claim-text">Built free for One Source Heating, Cooling, Plumbing &amp; Electrical by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20one-source-heating-cooling-plumbing-electrical%20homepage">Reply to my email</a></p>
+    <button class="claim-dismiss" id="claimDismiss" aria-label="Dismiss notice">&#x2715;</button>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-name">One Source</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#hours" class="nav-link">Hours</a></li>
+      <li><a href="#hours" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="tel:+14232253132" class="nav-phone" aria-label="Call us at (423) 225-3132">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.17a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"></path></svg>
+      (423) 225-3132
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+        Chattanooga, TN  -  Heating, Cooling, Plumbing &amp; Electrical
+      </div>
+      <h1 id="heroTitle" aria-label="One Source Heating, Cooling, Plumbing & Electrical"></h1>
+      <p class="hero-subhead">Chattanooga's 5-star rated home trades team, available every hour of every day.</p>
+      <div class="hero-buttons">
+        <a href="tel:+14232253132" class="btn-primary" aria-label="Call One Source at (423) 225-3132">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.17a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"></path></svg>
+          Call (423) 225-3132
+        </a>
+        <a href="#hours" class="btn-secondary">View Hours</a>
+      </div>
+    </div>
+    <div class="hero-chevron" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </section>
+
+  <!-- INFO BAR -->
+  <div class="info-bar" aria-label="Key stats">
+    <div class="info-bar-inner">
+      <div class="info-stat">
+        <span class="info-stat-number" data-count-target="5" data-count-decimals="1" aria-label="5 star rating">5.0</span>
+        <span class="info-stat-label">Google Rating</span>
+      </div>
+      <div class="info-stat">
+        <span class="info-stat-number" data-count-target="108" data-count-decimals="0" aria-label="108 verified reviews">108</span>
+        <span class="info-stat-label">Verified Reviews</span>
+      </div>
+      <div class="info-stat">
+        <span class="info-stat-number" aria-label="Licensed and Insured">&#10003;</span>
+        <span class="info-stat-label">Licensed &amp; Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section reveal" id="about" aria-labelledby="about-heading">
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="eyebrow">About</div>
+        <h2 class="about-h2" id="about-heading">Chattanooga's full-service trades team, under one roof.</h2>
+        <p class="about-body">One Source Heating, Cooling, Plumbing &amp; Electrical handles the jobs that other companies send you to four different contractors to complete. Whether your HVAC goes out on a Saturday night or a pipe bursts at 3 AM, our Chattanooga crew picks up the phone and shows up.</p>
+        <p class="about-body">108 Chattanooga customers have left us a 5-star rating on Google, not because we promise to be the cheapest, but because we solve the problem right the first time. That track record speaks louder than any ad.</p>
+        <a href="tel:+14232253132" class="about-link" aria-label="Call One Source at (423) 225-3132">
+          Call (423) 225-3132
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="about-visual">
+        <div class="bento-grid">
+          <!-- Large card: 2 cols x 2 rows -->
+          <div class="bento-card bento-large">
+            <div class="bento-card-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="bento-card-title">24-Hour Service, Every Day</div>
+            <div class="bento-card-desc">Open Monday through Sunday, around the clock. No extra charge to pick up when it counts.</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bento-card">
+            <div class="bento-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="bento-card-title">Licensed &amp; Insured</div>
+            <div class="bento-card-desc">Fully licensed across all four trades in Tennessee.</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bento-card">
+            <div class="bento-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="bento-card-title">One Call, Four Trades</div>
+            <div class="bento-card-desc">HVAC, plumbing, and electrical handled by a single crew.</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="bento-card">
+            <div class="bento-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg>
+            </div>
+            <div class="bento-card-title">Local Chattanooga Crew</div>
+            <div class="bento-card-desc">Based at Shallowford Rd, serving the greater Chattanooga area.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE BAND -->
+  <section class="signature-band reveal" aria-labelledby="sig-quote">
+    <div class="sig-eyebrow">What customers say</div>
+    <p class="sig-quote" id="sig-quote">"Rated 5 stars by 108 Chattanooga customers, and counting."</p>
+    <a href="https://www.google.com/maps/place/One+Source+Heating,+Cooling,+Plumbing+%26+Electrical" target="_blank" rel="noopener noreferrer" class="sig-link" aria-label="Read our Google reviews (opens in new tab)">
+      Read our Google reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section reveal" id="gallery" aria-labelledby="gallery-heading">
+    <div class="gallery-inner">
+      <div class="gallery-header">
+        <div class="eyebrow">Our Work</div>
+        <h2 class="gallery-h2" id="gallery-heading">See One Source in action.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/gallery-1.jpg" alt="One Source technician completing HVAC service in Chattanooga" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/gallery-2.jpg" alt="One Source plumbing work completed at a Chattanooga residence" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/one-source-heating-cooling-plumbing-electrical/gallery-3.jpg" alt="One Source electrical panel work in Chattanooga, TN" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & CONTACT -->
+  <section class="hours-section reveal" id="hours" aria-labelledby="hours-heading">
+    <div class="hours-inner">
+      <!-- Hours -->
+      <div>
+        <div class="eyebrow">Hours</div>
+        <h3 class="hours-h3" id="hours-heading">We're open when you need us.</h3>
+        <div class="hours-card" role="table" aria-label="Business hours">
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Monday</span>
+            <div class="hours-time-wrap" role="cell">
+              <span class="today-dot" aria-hidden="true"></span>
+              <span class="hours-time">Open 24 Hours</span>
+            </div>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Tuesday</span>
+            <span class="hours-time" role="cell">Open 24 Hours</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Wednesday</span>
+            <span class="hours-time" role="cell">Open 24 Hours</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Thursday</span>
+            <span class="hours-time" role="cell">Open 24 Hours</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Friday</span>
+            <span class="hours-time" role="cell">Open 24 Hours</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Saturday</span>
+            <span class="hours-time" role="cell">Open 24 Hours</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Sunday</span>
+            <span class="hours-time" role="cell">Open 24 Hours</span>
+          </div>
+        </div>
+      </div>
+      <!-- Visit -->
+      <div>
+        <div class="eyebrow">Visit</div>
+        <p class="visit-name">One Source Heating, Cooling, Plumbing &amp; Electrical</p>
+        <p class="visit-address">6925 Shallowford Rd #315<br>Chattanooga, TN 37421</p>
+        <a href="tel:+14232253132" class="visit-phone" aria-label="Call One Source at (423) 225-3132">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.17a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"></path></svg>
+          (423) 225-3132
+        </a>
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=6925+Shallowford+Rd+%23315%2C+Chattanooga%2C+TN+37421&output=embed"
+            loading="lazy"
+            title="One Source Heating, Cooling, Plumbing & Electrical location on Google Maps"
+            aria-label="Map showing One Source location at 6925 Shallowford Rd, Chattanooga, TN"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta reveal" aria-labelledby="cta-heading">
+    <div class="final-cta-eyebrow">Ready when you are</div>
+    <h2 id="cta-heading">Need it fixed today?</h2>
+    <p class="final-cta-sub">One Source covers heating, cooling, plumbing, and electrical across Chattanooga, TN. One call handles it all, 24 hours a day.</p>
+    <a href="tel:+14232253132" class="btn-cta" aria-label="Call One Source Heating, Cooling, Plumbing & Electrical at (423) 225-3132">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.17a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"></path></svg>
+      Call (423) 225-3132
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-left">
+      <span class="footer-brand">One Source Heating, Cooling, Plumbing &amp; Electrical</span>
+      &copy; <span id="footerYear"></span> All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Site by Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    // FOOTER YEAR
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // CLAIM CARD DISMISS
+    const claimCard = document.getElementById('claimCard');
+    const claimDismiss = document.getElementById('claimDismiss');
+    if (claimDismiss && claimCard) {
+      claimDismiss.addEventListener('click', () => {
+        claimCard.style.transition = 'transform 0.3s ease-in, opacity 0.3s ease-in';
+        claimCard.style.transform = 'translateX(-50%) translateY(120%)';
+        claimCard.style.opacity = '0';
+        setTimeout(() => { claimCard.style.display = 'none'; }, 350);
+      });
+    }
+
+    // HERO WORD STAGGER
+    (function() {
+      const h1 = document.getElementById('heroTitle');
+      if (!h1) return;
+      const text = 'One Source Heating, Cooling, Plumbing & Electrical';
+      const words = text.split(' ');
+      h1.innerHTML = words.map((word, i) => {
+        const delay = 300 + (i * 60);
+        return `<span class="word" style="animation-delay: ${delay}ms" aria-hidden="true">${word}</span>`;
+      }).join(' ');
+      // Accessible text
+      const srText = document.createElement('span');
+      srText.className = 'sr-only';
+      srText.style.cssText = 'position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);';
+      srText.textContent = text;
+      h1.prepend(srText);
+    })();
+
+    // COUNT-UP ANIMATION
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+    function countUp(el, target, decimals, duration) {
+      const start = performance.now();
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutCubic(progress);
+        const current = eased * target;
+        el.textContent = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toString();
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseFloat(el.dataset.countTarget);
+          const decimals = parseInt(el.dataset.countDecimals, 10) || 0;
+          if (!isNaN(target)) {
+            countUp(el, target, decimals, 1200);
+          }
+          countObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count-target]').forEach(el => countObserver.observe(el));
+
+    // HIGHLIGHT TODAY'S HOURS ROW
+    (function() {
+      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const today = days[new Date().getDay()];
+      const rows = document.querySelectorAll('.hours-row');
+      rows.forEach(row => {
+        const dayEl = row.querySelector('.hours-day');
+        if (dayEl && dayEl.textContent.trim() === today) {
+          rows.forEach(r => r.classList.remove('today'));
+          row.classList.add('today');
+          const timeWrap = row.querySelector('.hours-time');
+          if (timeWrap && !row.querySelector('.hours-time-wrap')) {
+            const wrap = document.createElement('div');
+            wrap.className = 'hours-time-wrap';
+            const dot = document.createElement('span');
+            dot.className = 'today-dot';
+            dot.setAttribute('aria-hidden', 'true');
+            const timeText = timeWrap.textContent;
+            timeWrap.textContent = '';
+            wrap.appendChild(dot);
+            const newTime = document.createElement('span');
+            newTime.className = 'hours-time';
+            newTime.textContent = timeText;
+            wrap.appendChild(newTime);
+            timeWrap.replaceWith(wrap);
+          }
+        }
+      });
+    })();
+
+    // REDUCED MOTION CHECK
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.word').forEach(w => {
+        w.style.opacity = '1';
+        w.style.transform = 'none';
+        w.style.animation = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
