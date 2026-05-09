@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoofQuotes.com, Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's top-rated roofing company. RoofQuotes.com holds a 5-star rating across 30 verified Google reviews. Licensed, insured, and available 7 days a week.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1C1917">
+  <meta property="og:title" content="RoofQuotes.com | Roofing Chattanooga, TN">
+  <meta property="og:description" content="Chattanooga's top-rated roofing company. 5-star rating, 30 verified reviews, licensed and insured.">
+  <meta property="og:image" content="https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RoofQuotes.com | Roofing Chattanooga, TN">
+  <meta name="twitter:image" content="https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231C1917'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='18' fill='%23F59E0B'>R</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "RoofQuotes.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6925 Shallowford Rd #315",
+      "addressLocality": "Chattanooga",
+      "addressRegion": "TN",
+      "postalCode": "37421",
+      "addressCountry": "US"
+    },
+    "telephone": "(423) 888-3886",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "30"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1C1917;
+      --accent: #F59E0B;
+      --surface: #FAFAF7;
+      --border: #E5E4E0;
+      --muted: #78716C;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --space-section: clamp(70px, 8vw, 96px);
+      --space-section-x: clamp(20px, 4vw, 48px);
+      --container: 1200px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #FAFAF7;
+        --surface: #1C1917;
+        --border: #292524;
+        --muted: #A8A29E;
+        --accent: #F59E0B;
+      }
+      body { background: #1C1917; color: #FAFAF7; }
+      .nav { background: rgba(28,25,23,0.95); border-bottom-color: #292524; }
+      .nav-logo { color: #FAFAF7; }
+      .nav-link { color: #D6D3D1; }
+      .bento-card { background: #292524; border-color: #3C3835; }
+      .hours-card { background: #292524; border-color: #3C3835; }
+      .footer { background: #292524; border-top-color: #3C3835; }
+      .claim-card { background: #292524; border-color: #3C3835; color: #FAFAF7; }
+      .claim-card a { color: var(--accent); }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      background: var(--surface);
+      color: var(--primary);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--space-section-x);
+    }
+
+    /* SCROLL PROGRESS */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: color-mix(in srgb, var(--accent) 30%, transparent);
+      z-index: 1000;
+    }
+    .scroll-progress-bar {
+      height: 100%;
+      background: var(--accent);
+      transform-origin: left;
+      animation: fillProgress linear forwards;
+      animation-timeline: scroll();
+    }
+    @keyframes fillProgress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      background: rgba(250, 250, 247, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px var(--space-section-x);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 200ms ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 200ms ease;
+    }
+    .nav-link:hover { color: var(--primary); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: var(--surface);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(28,25,23,0.25);
+    }
+    @media (prefers-color-scheme: dark) {
+      .nav-cta { background: var(--accent); color: #1C1917; }
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 75vh;
+      max-height: 720px;
+      min-height: 520px;
+      background-image:
+        linear-gradient(155deg, #1C1917 0%, transparent 55%, rgba(0,0,0,0.62) 100%),
+        url('https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/hero.jpg');
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+      overflow: hidden;
+    }
+    .hero-bg-zoom {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+      z-index: 0;
+      opacity: 0;
+    }
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.06); }
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 18px;
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: #FAFAF7;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: wordFadeIn 500ms ease forwards;
+    }
+    @keyframes wordFadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 520px;
+      margin-bottom: 32px;
+      line-height: 1.55;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #1C1917;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 30px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      min-height: 52px;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 28px rgba(245,158,11,0.45);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FAFAF7;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 16px 28px;
+      border: 1.5px solid rgba(255,255,255,0.55);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      min-height: 52px;
+      transition: border-color 200ms, background 200ms;
+    }
+    .btn-secondary:hover {
+      border-color: #FAFAF7;
+      background: rgba(255,255,255,0.08);
+    }
+    .hero-chevron {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: bounceChevron 1.6s ease-in-out infinite;
+      color: rgba(255,255,255,0.55);
+    }
+    @keyframes bounceChevron {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* INFO BAR */
+    .info-bar {
+      background: #1C1917;
+      padding: 56px var(--space-section-x);
+    }
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .info-stat {
+      padding: 0 40px;
+      text-align: left;
+    }
+    .info-stat + .info-stat {
+      border-left: 1px solid rgba(255,255,255,0.14);
+    }
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #FAFAF7;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .info-stat-label {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.58);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .info-stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.3);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-top: 8px;
+    }
+
+    /* ABOUT */
+    .about {
+      padding: var(--space-section) var(--space-section-x);
+    }
+    .about-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .about h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+    .about p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .about p:last-of-type { margin-bottom: 0; }
+    .inline-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 28px;
+      transition: gap 200ms ease;
+    }
+    .inline-cta:hover { gap: 10px; }
+
+    /* BENTO */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 14px;
+    }
+    .bento-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(28,25,23,0.1);
+    }
+    .bento-card.bento-large {
+      grid-column: span 2;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .bento-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bento-icon svg { width: 22px; height: 22px; }
+    .bento-title {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .bento-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .bento-text { flex: 1; }
+
+    /* SIGNATURE BAND */
+    .sig-band {
+      background: #1C1917;
+      padding: 100px var(--space-section-x);
+      text-align: center;
+    }
+    .sig-band .section-eyebrow {
+      color: rgba(255,255,255,0.5);
+      justify-content: center;
+    }
+    .sig-quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #FAFAF7;
+      letter-spacing: -0.025em;
+      line-height: 1.12;
+      max-width: 820px;
+      margin: 0 auto 28px;
+    }
+    .sig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: gap 200ms ease;
+    }
+    .sig-link:hover { gap: 12px; }
+
+    /* GALLERY */
+    .gallery {
+      padding: var(--space-section) var(--space-section-x);
+    }
+    .gallery-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .gallery-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      gap: 24px;
+    }
+    .gallery h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: block;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* HOURS & CONTACT */
+    .hours {
+      padding: var(--space-section) var(--space-section-x);
+    }
+    .hours-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .hours h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .hours-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-top: 8px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { font-weight: 500; color: var(--primary); }
+    .hours-time { color: var(--muted); font-weight: 400; }
+    .hours-row.today .hours-day { font-weight: 700; color: var(--primary); }
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hours-row.today .hours-time::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .contact-info { padding-top: 4px; }
+    .contact-biz {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .contact-address {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .contact-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: opacity 200ms;
+    }
+    .contact-phone:hover { opacity: 0.8; }
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 320px;
+      margin-top: 8px;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: #1C1917;
+      padding: 120px var(--space-section-x);
+      text-align: center;
+    }
+    .final-cta .section-eyebrow {
+      color: var(--accent);
+      justify-content: center;
+    }
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: #FAFAF7;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+    .final-cta-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .btn-accent-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #1C1917;
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 20px 40px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      min-height: 60px;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+    .btn-accent-lg:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 36px rgba(245,158,11,0.5);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 40px var(--space-section-x);
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-left {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-left strong {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .footer-right a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: opacity 200ms;
+    }
+    .footer-right a:hover { opacity: 0.65; }
+
+    /* CLAIM CARD */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #FAFAF7;
+      color: #1C1917;
+      border: 1px solid #E5E4E0;
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      animation: claimSlideIn 600ms ease-out 1200ms forwards;
+    }
+    @keyframes claimSlideIn {
+      to { transform: translateX(-50%) translateY(0); }
+    }
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .claim-text { flex: 1; line-height: 1.45; }
+    .claim-text a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .claim-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      color: #78716C;
+      flex-shrink: 0;
+      line-height: 1;
+      font-size: 1.1rem;
+      transition: color 200ms;
+    }
+    .claim-close:hover { color: #1C1917; }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      animation: revealUp 700ms ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+    @keyframes revealUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* HOVER DISABLE ON TOUCH */
+    @media (hover: none) {
+      .bento-card:hover { transform: none; box-shadow: none; }
+      .gallery-item:hover img { transform: none; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 767px) {
+      .nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .nav-cta { font-size: 0.85rem; padding: 9px 16px; }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        padding: 40px 20px;
+      }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); }
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-primary, .btn-secondary {
+        justify-content: center;
+        width: 100%;
+      }
+      .hero-chevron { display: none; }
+
+      .info-bar { padding: 32px 20px; }
+      .info-bar-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .info-stat { padding: 0; border-left: none !important; }
+      .info-stat + .info-stat { border-top: 1px solid rgba(255,255,255,0.14); padding-top: 18px; }
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about { padding: 70px 20px; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .about h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+      .bento-grid { grid-template-columns: 1fr 1fr; }
+      .bento-card.bento-large { grid-column: span 2; }
+
+      .gallery { padding: 70px 20px; }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-item { aspect-ratio: 4 / 3; }
+      .gallery-header { flex-direction: column; align-items: flex-start; }
+
+      .hours { padding: 70px 20px; }
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .map-wrap { height: 280px; }
+
+      .sig-band { padding: 64px 20px; }
+
+      .final-cta { padding: 80px 20px; }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+      .btn-accent-lg { width: 100%; justify-content: center; }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px 80px;
+      }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .about { padding: 80px 32px; }
+      .about-inner { gap: 64px; }
+      .gallery { padding: 80px 32px; }
+      .hours { padding: 80px 32px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">RoofQuotes.com</a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#hours" class="nav-link">Hours</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    </ul>
+    <a href="tel:+14238883886" class="nav-cta">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.43 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.34 2.8h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.46a16 16 0 0 0 5.63 5.63l1.02-.78a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+      (423) 888-3886
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Chattanooga, TN  -  Roofing Company
+      </div>
+      <h1 id="hero-h1">RoofQuotes.com</h1>
+      <p class="hero-sub">Chattanooga's 5-star rated roofing crew, available every day of the week.</p>
+      <div class="hero-buttons">
+        <a href="tel:+14238883886" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.43 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.34 2.8h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.46a16 16 0 0 0 5.63 5.63l1.02-.78a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          Call (423) 888-3886
+        </a>
+        <a href="#hours" class="btn-secondary">View Hours</a>
+      </div>
+    </div>
+    <div class="hero-chevron" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- INFO BAR -->
+  <div class="info-bar">
+    <div class="info-bar-inner">
+      <div class="info-stat">
+        <div class="info-stat-number" data-count="5" data-suffix="&#9733;">5&#9733;</div>
+        <div class="info-stat-label">Google Rating</div>
+      </div>
+      <div class="info-stat">
+        <div class="info-stat-number" data-count="30">30</div>
+        <div class="info-stat-label">Verified Reviews</div>
+      </div>
+      <div class="info-stat">
+        <div class="info-stat-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div style="margin-top:6px;" class="info-stat-number" style="font-size:2rem;">7 Days</div>
+        <div class="info-stat-label">Available Weekly</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot" style="background:var(--accent)"></span>
+          About
+        </div>
+        <h2>Chattanooga roofing, done straight and done right.</h2>
+        <p>RoofQuotes.com has built a reputation in Chattanooga, TN that most contractors spend a decade chasing: a perfect 5-star rating across 30 verified Google reviews. That number reflects real results on real homes, not marketing spin.</p>
+        <p>Every project starts with an honest assessment and a clear quote, no pressure, no hidden costs. Whether it is storm damage on the Northshore, a reroof in East Ridge, or a repair in Hixson, our crew shows up on time and finishes the job the way your home deserves.</p>
+        <a href="tel:+14238883886" class="inline-cta">
+          Call (423) 888-3886
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="bento-grid reveal">
+        <div class="bento-card bento-large">
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="bento-text">
+            <div class="bento-title">Free Roof Inspections</div>
+            <div class="bento-desc">Know what you are dealing with before committing to anything. We assess your roof at no cost and deliver a clear, itemized quote.</div>
+          </div>
+        </div>
+        <div class="bento-card">
+          <div class="bento-icon" style="margin-bottom:12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          </div>
+          <div class="bento-title">Transparent Quotes</div>
+          <div class="bento-desc">Line-by-line pricing, no surprises on invoice day.</div>
+        </div>
+        <div class="bento-card">
+          <div class="bento-icon" style="margin-bottom:12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="bento-title">7-Day Availability</div>
+          <div class="bento-desc">Reachable 8 AM to 8 PM every day, including weekends.</div>
+        </div>
+        <div class="bento-card">
+          <div class="bento-icon" style="margin-bottom:12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="bento-title">Licensed &amp; Insured</div>
+          <div class="bento-desc">Your home and your investment are fully protected on every job.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE BAND -->
+  <section class="sig-band">
+    <div class="section-eyebrow">What customers say</div>
+    <p class="sig-quote reveal">"Rated 5 stars by 30 Chattanooga customers, and counting."</p>
+    <a href="https://www.google.com/search?q=RoofQuotes.com+Chattanooga+TN" target="_blank" rel="noopener" class="sig-link">
+      Read our Google reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-inner">
+      <div class="gallery-header reveal">
+        <div>
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot" style="background:var(--accent)"></span>
+            Our Work
+          </div>
+          <h2>Roofs we have replaced across Chattanooga, TN.</h2>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        <a href="#" class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/gallery-1.jpg" alt="RoofQuotes.com completed roofing project in Chattanooga" loading="lazy">
+        </a>
+        <a href="#" class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/gallery-2.jpg" alt="RoofQuotes.com roof installation project" loading="lazy">
+        </a>
+        <a href="#" class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/roofquotes-com-roofing-company/gallery-3.jpg" alt="RoofQuotes.com roofing work in Chattanooga TN" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & CONTACT -->
+  <section class="hours" id="hours">
+    <div class="hours-inner">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot" style="background:var(--accent)"></span>
+          Hours
+        </div>
+        <h2>When we are open</h2>
+        <div class="hours-card" id="hours-card"></div>
+      </div>
+      <div class="contact-info reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot" style="background:var(--accent)"></span>
+          Visit
+        </div>
+        <div class="contact-biz">RoofQuotes.com</div>
+        <div class="contact-address">
+          6925 Shallowford Rd #315<br>
+          Chattanooga, TN 37421
+        </div>
+        <a href="tel:+14238883886" class="contact-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.43 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.34 2.8h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.46a16 16 0 0 0 5.63 5.63l1.02-.78a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          (423) 888-3886
+        </a>
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=6925+Shallowford+Rd+%23315%2C+Chattanooga%2C+TN+37421&output=embed"
+            title="RoofQuotes.com location in Chattanooga TN"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="section-eyebrow" style="justify-content:center; color:var(--accent);">Ready when you are</div>
+    <h2 class="reveal">Need it fixed today?</h2>
+    <p class="final-cta-sub">RoofQuotes.com serves Chattanooga and the surrounding communities, seven days a week. Call now and get a straight answer and a real quote.</p>
+    <a href="tel:+14238883886" class="btn-accent-lg">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.43 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.34 2.8h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.46a16 16 0 0 0 5.63 5.63l1.02-.78a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+      Call (423) 888-3886
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <strong>RoofQuotes.com</strong> &copy; <span id="footer-year"></span>. All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="https://auxoagency.co" target="_blank" rel="noopener">Site by Auxo Agency</a>
+    </div>
+  </footer>
+
+  <!-- CLAIM CARD -->
+  <div class="claim-card" id="claim-card" role="status">
+    <span class="claim-dot" aria-hidden="true"></span>
+    <span class="claim-text">
+      Built free for RoofQuotes.com by Auxo, yours to keep. Want the full multi-page version?
+      <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20roofquotes-com-roofing-company%20homepage">Reply to my email</a>
+    </span>
+    <button class="claim-close" id="claim-close" aria-label="Dismiss">&#x2715;</button>
+  </div>
+
+  <script defer>
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Claim card close
+    document.getElementById('claim-close').addEventListener('click', function() {
+      var card = document.getElementById('claim-card');
+      card.style.transition = 'transform 300ms ease, opacity 300ms ease';
+      card.style.opacity = '0';
+      card.style.transform = 'translateX(-50%) translateY(30px)';
+      setTimeout(function() { card.style.display = 'none'; }, 300);
+    });
+
+    // Hero word stagger
+    (function() {
+      var h1 = document.getElementById('hero-h1');
+      if (!h1) return;
+      var text = h1.textContent;
+      var words = text.split(/\s+/).filter(Boolean);
+      h1.innerHTML = words.map(function(w, i) {
+        return '<span class="word" style="animation-delay:' + (300 + i * 60) + 'ms">' + w + '</span>';
+      }).join(' ');
+    })();
+
+    // Hours
+    (function() {
+      var hoursData = [
+        { day: 'Monday', time: '8:00 AM - 8:00 PM' },
+        { day: 'Tuesday', time: '8:00 AM - 8:00 PM' },
+        { day: 'Wednesday', time: '8:00 AM - 8:00 PM' },
+        { day: 'Thursday', time: '8:00 AM - 8:00 PM' },
+        { day: 'Friday', time: '8:00 AM - 8:00 PM' },
+        { day: 'Saturday', time: '8:00 AM - 8:00 PM' },
+        { day: 'Sunday', time: '8:00 AM - 8:00 PM' }
+      ];
+
+      var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      var today = dayNames[new Date().getDay()];
+
+      var card = document.getElementById('hours-card');
+      if (!card) return;
+
+      hoursData.forEach(function(row) {
+        var el = document.createElement('div');
+        el.className = 'hours-row' + (row.day === today ? ' today' : '');
+        var formatted = row.time.replace(':00', '').replace(':00', '');
+        el.innerHTML =
+          '<span class="hours-day">' + row.day + '</span>' +
+          '<span class="hours-time">' + formatted + '</span>';
+        card.appendChild(el);
+      });
+    })();
+
+    // Count-up animation for info bar
+    (function() {
+      var nums = document.querySelectorAll('.info-stat-number[data-count]');
+      if (!nums.length) return;
+
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function animateCount(el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 1200;
+        var start = null;
+        var isDecimal = target !== Math.floor(target);
+
+        function step(ts) {
+          if (!start) start = ts;
+          var progress = Math.min((ts - start) / duration, 1);
+          var val = easeOutCubic(progress) * target;
+          el.textContent = isDecimal ? val.toFixed(1) + suffix : Math.floor(val) + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+          else el.textContent = target + suffix;
+        }
+        requestAnimationFrame(step);
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      nums.forEach(function(n) { observer.observe(n); });
+    })();
+  </script>
+</body>
+</html>
