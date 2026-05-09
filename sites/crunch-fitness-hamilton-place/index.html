@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crunch Fitness - Hamilton Place, Chattanooga, TN</title>
+  <meta name="description" content="Crunch Fitness Hamilton Place in Chattanooga, TN  -  5-star rated gym with 244 verified reviews. Open 7 days a week. Call (423) 260-5203 to get started today.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0F172A">
+
+  <meta property="og:title" content="Crunch Fitness - Hamilton Place | Chattanooga, TN">
+  <meta property="og:description" content="Chattanooga's top-rated fitness center with 244 verified 5-star reviews. Located at Hamilton Place. Open 7 days a week.">
+  <meta property="og:image" content="https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crunch Fitness - Hamilton Place | Chattanooga, TN">
+  <meta name="twitter:description" content="Chattanooga's top-rated fitness center with 244 verified 5-star reviews. Open 7 days a week.">
+  <meta name="twitter:image" content="https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='20' fill='%2300D4FF'>C</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Crunch Fitness - Hamilton Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6925 Shallowford Rd #315",
+      "addressLocality": "Chattanooga",
+      "addressRegion": "TN",
+      "postalCode": "37421",
+      "addressCountry": "US"
+    },
+    "telephone": "(423) 260-5203",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "244"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #00D4FF;
+      --surface: #FAFAF7;
+      --border: #E2E8F0;
+      --muted: #64748B;
+      --white: #ffffff;
+      --display-font: 'Plus Jakarta Sans', sans-serif;
+      --body-font: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --section-pad: 96px 48px;
+      --container: 1200px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --surface: #0F172A;
+        --primary: #F8FAFC;
+        --border: #1E293B;
+        --muted: #94A3B8;
+        --white: #0F172A;
+        --accent: #00D4FF;
+      }
+      body { background: #0A1020; color: #F8FAFC; }
+      .nav { background: rgba(10, 16, 32, 0.92); border-color: #1E293B; }
+      .nav-logo { color: #F8FAFC; }
+      .nav-links a { color: #CBD5E1; }
+      .about-section { background: #0A1020; }
+      .hours-section { background: #0A1020; }
+      .bento-card { background: #111827; border-color: #1E293B; }
+      .hours-card { background: #111827; border-color: #1E293B; }
+      .claim-card { background: #111827; color: #F8FAFC; border-color: #1E293B; }
+      .claim-card a { color: var(--accent); }
+      .footer { background: #0A1020; border-color: #1E293B; }
+      .footer-brand { color: #94A3B8; }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--body-font);
+      background: var(--surface);
+      color: var(--primary);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ========================
+       SCROLL PROGRESS
+    ======================== */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: color-mix(in srgb, var(--accent) 20%, transparent);
+      z-index: 9999;
+    }
+
+    .scroll-progress::after {
+      content: '';
+      display: block;
+      height: 100%;
+      background: var(--accent);
+      transform-origin: left;
+      animation: fillProgress linear forwards;
+      animation-timeline: scroll();
+    }
+
+    @keyframes fillProgress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* ========================
+       NAV
+    ======================== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--body-font);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 200ms ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent);
+      transition: width 200ms ease;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: var(--surface) !important;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-family: var(--body-font);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      flex-shrink: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .nav-cta { background: var(--accent); color: #0F172A !important; }
+    }
+
+    .nav-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+    }
+
+    /* ========================
+       HERO
+    ======================== */
+    .hero {
+      position: relative;
+      height: 75vh;
+      max-height: 720px;
+      min-height: 520px;
+      background-image:
+        linear-gradient(135deg, #0F172A 0%, transparent 50%, rgba(0,0,0,0.55) 100%),
+        url('https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/hero.jpg');
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg-zoom {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0F172A 0%, transparent 52%, rgba(0,0,0,0.55) 100%);
+      z-index: 1;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.06); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 20px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hero h1 { color: #ffffff; }
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: wordIn 500ms ease forwards;
+    }
+
+    @keyframes wordIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-subhead {
+      font-family: var(--body-font);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 36px;
+      max-width: 540px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #0F172A;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-family: var(--body-font);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.92);
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      font-family: var(--body-font);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color 200ms ease, background 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(255,255,255,0.6);
+      animation: chevronBounce 1.6s ease-in-out infinite;
+    }
+
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ========================
+       INFO BAR
+    ======================== */
+    .info-bar {
+      background: var(--primary);
+      padding: 56px 48px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .info-bar { background: #0A1020; border-top: 1px solid #1E293B; border-bottom: 1px solid #1E293B; }
+    }
+
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 32px;
+    }
+
+    .info-stat {
+      text-align: center;
+      flex: 1;
+    }
+
+    .info-stat-number {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: 3.2rem;
+      line-height: 1;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      display: block;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .info-stat-number { color: #ffffff; }
+    }
+
+    .info-stat-label {
+      font-family: var(--body-font);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 6px;
+      display: block;
+    }
+
+    .info-divider {
+      width: 1px;
+      height: 56px;
+      background: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    /* ========================
+       ABOUT
+    ======================== */
+    .about-section {
+      padding: var(--section-pad);
+      background: var(--surface);
+    }
+
+    .about-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .section-eyebrow .eyebrow-dot {
+      background: var(--accent);
+    }
+
+    .about-text h2 {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--primary);
+      margin-bottom: 28px;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 200ms ease;
+      margin-top: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .about-link { color: var(--accent); }
+    }
+
+    .about-link:hover { border-color: var(--accent); }
+
+    /* Bento Grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 14px;
+    }
+
+    .bento-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .bento-card { background: #111827; border-color: #1E293B; }
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+
+    .bento-card.bento-large {
+      grid-column: 1 / 3;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .bento-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .bento-card-title {
+      font-family: var(--display-font);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .bento-card-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ========================
+       SIGNATURE BAND
+    ======================== */
+    .signature-band {
+      background: var(--primary);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .signature-band { background: #060D1A; }
+    }
+
+    .signature-band .section-eyebrow {
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .signature-band .section-eyebrow .eyebrow-dot {
+      background: var(--accent);
+    }
+
+    .signature-quote {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      max-width: 800px;
+      margin: 0 auto 32px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .signature-quote { color: #ffffff; }
+    }
+
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 200ms ease;
+    }
+
+    .signature-link:hover { border-color: var(--accent); }
+
+    /* ========================
+       GALLERY
+    ======================== */
+    .gallery-section {
+      padding: var(--section-pad);
+      background: var(--surface);
+    }
+
+    .gallery-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    .gallery-header {
+      margin-bottom: 40px;
+    }
+
+    .gallery-header h2 {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.03em;
+      color: var(--primary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* ========================
+       HOURS & CONTACT
+    ======================== */
+    .hours-section {
+      padding: var(--section-pad);
+      background: color-mix(in srgb, var(--surface) 97%, var(--primary) 3%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hours-section { background: #0A1020; }
+    }
+
+    .hours-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .hours-col h3 {
+      font-family: var(--display-font);
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .hours-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hours-card { background: #111827; border-color: #1E293B; }
+    }
+
+    .hours-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .hours-row:last-child { border-bottom: none; }
+
+    .hours-day {
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .hours-time {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .hours-row.today .hours-day,
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hours-row.today .hours-time {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .today-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hours-closed {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .contact-col h3 {
+      font-family: var(--display-font);
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .contact-business-name {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .contact-address {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .contact-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: opacity 200ms ease;
+    }
+
+    .contact-phone:hover { opacity: 0.8; }
+
+    .map-frame {
+      width: 100%;
+      height: 240px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ========================
+       FINAL CTA
+    ======================== */
+    .final-cta {
+      background: var(--primary);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .final-cta { background: #060D1A; }
+    }
+
+    .final-cta .section-eyebrow {
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .final-cta .section-eyebrow .eyebrow-dot { background: var(--accent); }
+
+    .final-cta h2 {
+      font-family: var(--display-font);
+      font-weight: 800;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .final-cta h2 { color: #ffffff; }
+    }
+
+    .final-cta-subhead {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      max-width: 540px;
+      margin: 0 auto 44px;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #0F172A;
+      padding: 20px 40px;
+      border-radius: 999px;
+      font-family: var(--display-font);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 40px rgba(0, 212, 255, 0.45);
+    }
+
+    /* ========================
+       FOOTER
+    ======================== */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .footer { background: #0A1020; border-color: #1E293B; }
+    }
+
+    .footer-brand {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .footer-brand strong {
+      font-weight: 700;
+      color: var(--primary);
+      font-family: var(--display-font);
+    }
+
+    .footer-auxo {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 200ms ease;
+    }
+
+    .footer-auxo:hover { color: var(--accent); }
+
+    /* ========================
+       CLAIM CARD
+    ======================== */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: var(--white);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--body-font);
+      font-size: 0.92rem;
+      font-weight: 500;
+      animation: claimSlideIn 600ms ease-out 1200ms forwards;
+    }
+
+    @keyframes claimSlideIn {
+      to { transform: translateX(-50%) translateY(0); }
+    }
+
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .claim-text {
+      flex: 1;
+      line-height: 1.5;
+    }
+
+    .claim-text a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms ease;
+    }
+
+    .claim-text a:hover { border-color: var(--accent); }
+
+    .claim-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 1.2rem;
+      line-height: 1;
+      padding: 4px;
+      flex-shrink: 0;
+      transition: color 200ms ease;
+    }
+
+    .claim-close:hover { color: var(--primary); }
+
+    /* ========================
+       SCROLL REVEAL
+    ======================== */
+    .reveal {
+      animation: revealUp 700ms ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+
+    @keyframes revealUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========================
+       REDUCED MOTION
+    ======================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .hero h1 .word { opacity: 1; transform: none; }
+    }
+
+    /* ========================
+       TOUCH DEVICES
+    ======================== */
+    @media (hover: none) {
+      .bento-card:hover { transform: none; }
+      .gallery-item:hover img { transform: none; }
+    }
+
+    /* ========================
+       TABLET (1024px)
+    ======================== */
+    @media (max-width: 1024px) {
+      .about-section, .gallery-section, .hours-section { padding: 80px 32px; }
+      .about-inner { gap: 64px; }
+      .signature-band, .final-cta { padding: 80px 32px; }
+    }
+
+    /* ========================
+       MOBILE (767px)
+    ======================== */
+    @media (max-width: 767px) {
+      .nav {
+        padding: 14px 20px;
+      }
+
+      .nav-links { display: none; }
+
+      .nav-logo { font-size: 1rem; }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        padding: 40px 20px;
+        align-items: flex-end;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+      }
+
+      .hero-subhead { font-size: 1rem; }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-chevron { display: none; }
+
+      .info-bar { padding: 40px 20px; }
+
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .info-divider {
+        width: 80px;
+        height: 1px;
+      }
+
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about-section, .gallery-section, .hours-section { padding: 70px 20px; }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-text h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .bento-grid { grid-template-columns: 1fr 1fr; }
+
+      .bento-card.bento-large {
+        grid-column: 1 / 3;
+        flex-direction: column;
+      }
+
+      .signature-band { padding: 70px 20px; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .gallery-item { aspect-ratio: 4/3; }
+
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .map-frame { height: 280px; }
+
+      .final-cta {
+        padding: 80px 20px;
+      }
+
+      .final-cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+
+      .btn-cta {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px 80px;
+        gap: 12px;
+      }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo">Crunch Fitness<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#hours">Contact</a></li>
+    </ul>
+    <a href="tel:+14232605203" class="nav-cta">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+      (423) 260-5203
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg-zoom" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Chattanooga, TN  -  Wellness &amp; Fitness
+      </p>
+      <h1 aria-label="Crunch Fitness Hamilton Place">
+        <!-- Words animated in JS -->
+      </h1>
+      <p class="hero-subhead">Chattanooga's highest-rated gym, backed by 244 five-star reviews from real Hamilton Place members.</p>
+      <div class="hero-buttons">
+        <a href="tel:+14232605203" class="btn-primary">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          Call (423) 260-5203
+        </a>
+        <a href="#hours" class="btn-secondary">View Hours</a>
+      </div>
+    </div>
+    <div class="hero-chevron" aria-hidden="true">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- Info Bar -->
+  <section class="info-bar" aria-label="Key statistics">
+    <div class="info-bar-inner">
+      <div class="info-stat">
+        <span class="info-stat-number" data-count="5" data-suffix=" Stars">5 Stars</span>
+        <span class="info-stat-label">Google Rating</span>
+      </div>
+      <div class="info-divider" aria-hidden="true"></div>
+      <div class="info-stat">
+        <span class="info-stat-number" data-count="244" data-suffix="">244</span>
+        <span class="info-stat-label">Verified Reviews</span>
+      </div>
+      <div class="info-divider" aria-hidden="true"></div>
+      <div class="info-stat">
+        <span class="info-stat-number" data-count="7" data-suffix=" Days">7 Days</span>
+        <span class="info-stat-label">Open Every Week</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section" id="about" aria-label="About Crunch Fitness">
+    <div class="about-inner container">
+      <div class="about-text reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>About</p>
+        <h2>Chattanooga's go-to gym, right at Hamilton Place.</h2>
+        <p>Crunch Fitness Hamilton Place has built a reputation that speaks for itself: 244 five-star reviews from real Chattanooga members who show up, put in the work, and come back. The equipment is dialed in, the staff knows your name, and the doors open at 5 AM Monday through Thursday so you never have an excuse.</p>
+        <p>Located at 6925 Shallowford Rd in the Hamilton Place area of Chattanooga, TN, this location offers everything a serious gym-goer needs without the attitude. Whether you're starting out or training hard, this is the spot Chattanooga keeps coming back to.</p>
+        <a href="tel:+14232605203" class="about-link">
+          Call (423) 260-5203
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="bento-grid reveal">
+        <div class="bento-card bento-large">
+          <svg class="bento-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 2l3.09 6.26L26 9.27l-5 4.87 1.18 6.88L16 17.77l-6.18 3.25L11 14.14 6 9.27l6.91-1.01L16 2z"/>
+          </svg>
+          <div>
+            <div class="bento-card-title">5-Star Rated in Chattanooga</div>
+            <div class="bento-card-desc">244 verified Google reviews from real Hamilton Place members. The rating isn't luck, it's consistency across every visit, every day.</div>
+          </div>
+        </div>
+        <div class="bento-card">
+          <svg class="bento-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="16" cy="16" r="12"/>
+            <path stroke-linecap="round" d="M16 9v7l4 4"/>
+          </svg>
+          <div class="bento-card-title">Early Access</div>
+          <div class="bento-card-desc">Open at 5 AM Mon-Thu. No waiting around to start your day.</div>
+        </div>
+        <div class="bento-card">
+          <svg class="bento-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="4" y="10" width="24" height="12" rx="2"/>
+            <path stroke-linecap="round" d="M2 16h4M26 16h4"/>
+          </svg>
+          <div class="bento-card-title">Full Equipment</div>
+          <div class="bento-card-desc">Cardio, free weights, machines, and group classes. Everything in one location.</div>
+        </div>
+        <div class="bento-card">
+          <svg class="bento-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16s3-8 12-8 12 8 12 8-3 8-12 8-12-8-12-8z"/>
+            <circle cx="16" cy="16" r="3"/>
+          </svg>
+          <div class="bento-card-title">Board Certified Staff</div>
+          <div class="bento-card-desc">Trained professionals on-site. Real guidance when you need it.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Band -->
+  <section class="signature-band" aria-label="Customer reviews highlight">
+    <div class="container">
+      <p class="section-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        What customers say
+      </p>
+      <p class="signature-quote reveal">
+        "Rated 5 stars by 244 Chattanooga customers, and counting."
+      </p>
+      <a href="https://www.google.com/maps/search/Crunch+Fitness+Hamilton+Place+Chattanooga+TN" target="_blank" rel="noopener noreferrer" class="signature-link">
+        Read our Google reviews
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section" id="gallery" aria-label="Gym photo gallery">
+    <div class="gallery-inner">
+      <div class="gallery-header reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Inside the Gym</p>
+        <h2>See what members train in.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/gallery-1.jpg" alt="Crunch Fitness Hamilton Place gym floor" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/gallery-2.jpg" alt="Crunch Fitness Hamilton Place equipment" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://preview.meetauxo.com/sites/crunch-fitness-hamilton-place/gallery-3.jpg" alt="Crunch Fitness Hamilton Place interior" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  <section class="hours-section" id="hours" aria-label="Hours and contact information">
+    <div class="hours-inner container">
+      <div class="hours-col reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Hours</p>
+        <h3>We're open 7 days a week.</h3>
+        <div class="hours-card" id="hours-card">
+          <!-- Hours rendered by JS -->
+        </div>
+      </div>
+      <div class="contact-col reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Visit</p>
+        <div class="contact-business-name">Crunch Fitness - Hamilton Place</div>
+        <p class="contact-address">
+          6925 Shallowford Rd #315<br>
+          Chattanooga, TN 37421
+        </p>
+        <a href="tel:+14232605203" class="contact-phone">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          (423) 260-5203
+        </a>
+        <div class="map-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=6925+Shallowford+Rd+%23315%2C+Chattanooga%2C+TN+37421&output=embed"
+            loading="lazy"
+            title="Map to Crunch Fitness Hamilton Place"
+            aria-label="Google map showing location of Crunch Fitness Hamilton Place">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta" aria-label="Call to action">
+    <div class="container">
+      <p class="section-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Ready when you are
+      </p>
+      <h2>Ready to feel better?</h2>
+      <p class="final-cta-subhead">Crunch Fitness Hamilton Place is open 7 days a week in Chattanooga, TN. Your first call takes 30 seconds.</p>
+      <a href="tel:+14232605203" class="btn-cta">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+        Call (423) 260-5203
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-brand">
+      <strong>Crunch Fitness - Hamilton Place</strong><br>
+      <span>&copy; <span id="footer-year"></span> All rights reserved.</span>
+    </div>
+    <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer" class="footer-auxo">Site by Auxo Agency</a>
+  </footer>
+
+  <!-- Claim Card -->
+  <div class="claim-card" role="complementary" aria-label="Free site notice" id="claim-card">
+    <span class="claim-dot" aria-hidden="true"></span>
+    <span class="claim-text">
+      Built free for Crunch Fitness - Hamilton Place by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20crunch-fitness-hamilton-place%20homepage">Reply to my email</a>
+    </span>
+    <button class="claim-close" aria-label="Dismiss notice" id="claim-close">&times;</button>
+  </div>
+
+  <script defer>
+    // ========================
+    // HERO H1 WORD STAGGER
+    // ========================
+    (function() {
+      const h1 = document.querySelector('.hero h1');
+      if (!h1) return;
+      const text = 'Crunch Fitness Hamilton Place';
+      const words = text.split(' ');
+      h1.innerHTML = words.map((word, i) => {
+        const delay = 200 + i * 60;
+        return `<span class="word" style="animation-delay: ${delay}ms">${word}</span>`;
+      }).join(' ');
+    })();
+
+    // ========================
+    // FOOTER YEAR
+    // ========================
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // ========================
+    // CLAIM CARD CLOSE
+    // ========================
+    document.getElementById('claim-close').addEventListener('click', function() {
+      const card = document.getElementById('claim-card');
+      card.style.transition = 'transform 300ms ease, opacity 300ms ease';
+      card.style.transform = 'translateX(-50%) translateY(130%)';
+      card.style.opacity = '0';
+      setTimeout(() => card.remove(), 350);
+    });
+
+    // ========================
+    // HOURS RENDERING
+    // ========================
+    (function() {
+      const hoursData = [
+        { day: 'Monday', open: '5:00 AM', close: '11:00 PM' },
+        { day: 'Tuesday', open: '5:00 AM', close: '11:00 PM' },
+        { day: 'Wednesday', open: '5:00 AM', close: '11:00 PM' },
+        { day: 'Thursday', open: '5:00 AM', close: '11:00 PM' },
+        { day: 'Friday', open: '5:00 AM', close: '9:00 PM' },
+        { day: 'Saturday', open: '7:00 AM', close: '5:00 PM' },
+        { day: 'Sunday', open: '7:00 AM', close: '5:00 PM' },
+      ];
+
+      function formatTime(timeStr) {
+        return timeStr.replace(':00', '').replace(' AM', ' AM').replace(' PM', ' PM').trim();
+      }
+
+      const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const todayName = dayNames[new Date().getDay()];
+
+      const card = document.getElementById('hours-card');
+      if (!card) return;
+
+      card.innerHTML = hoursData.map(row => {
+        const isToday = row.day === todayName;
+        const timeStr = `${formatTime(row.open)}-${formatTime(row.close)}`;
+        return `
+          <div class="hours-row${isToday ? ' today' : ''}">
+            <span class="hours-day">${row.day}</span>
+            <span class="hours-time">
+              ${isToday ? '<span class="today-dot" aria-hidden="true"></span>' : ''}
+              ${timeStr}
+            </span>
+          </div>
+        `;
+      }).join('');
+    })();
+
+    // ========================
+    // COUNT-UP ANIMATION
+    // ========================
+    (function() {
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function animateCount(el, target, duration, suffix) {
+        const isDecimal = !Number.isInteger(target);
+        const start = performance.now();
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const value = isDecimal ? (eased * target).toFixed(1) : Math.round(eased * target);
+          el.textContent = value + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const stats = document.querySelectorAll('.info-stat-number[data-count]');
+      if (!stats.length) return;
+
+      // Reduced motion check
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseFloat(el.dataset.count);
+            const suffix = el.dataset.suffix || '';
+            animateCount(el, target, 1200, suffix);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      stats.forEach(stat => observer.observe(stat));
+    })();
+  </script>
+</body>
+</html>
