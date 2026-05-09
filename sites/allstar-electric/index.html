@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allstar Electric, Chattanooga, TN</title>
+  <meta name="description" content="Allstar Electric  -  Chattanooga's 5-star licensed electricians. Available 24/7, 169 verified reviews. Call (423) 599-0421 for same-day electrical service in Chattanooga, TN.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1C1917">
+
+  <meta property="og:title" content="Allstar Electric  -  Chattanooga, TN">
+  <meta property="og:description" content="Chattanooga's top-rated electricians. 5 stars across 169 verified reviews. Licensed, insured, available 24/7.">
+  <meta property="og:image" content="https://preview.meetauxo.com/sites/allstar-electric/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Allstar Electric  -  Chattanooga, TN">
+  <meta name="twitter:description" content="Chattanooga's top-rated electricians. 5 stars across 169 verified reviews. Licensed, insured, available 24/7.">
+  <meta name="twitter:image" content="https://preview.meetauxo.com/sites/allstar-electric/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231C1917'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='18' fill='%23F59E0B'>A</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "Allstar Electric",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6925 Shallowford Rd #315",
+      "addressLocality": "Chattanooga",
+      "addressRegion": "TN",
+      "postalCode": "37421",
+      "addressCountry": "US"
+    },
+    "telephone": "(423) 599-0421",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "169"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <style>
+    :root {
+      --primary: #1C1917;
+      --primary-rgb: 28, 25, 23;
+      --accent: #F59E0B;
+      --accent-dark: #D97706;
+      --surface: #FAFAF7;
+      --white: #FFFFFF;
+      --border: #E5E3DF;
+      --muted: #6B6560;
+      --muted-light: #9C9590;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --section-v: 96px;
+      --section-h: 48px;
+      --container: 1200px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #FAFAF7;
+        --primary-rgb: 250, 250, 247;
+        --surface: #0F0E0D;
+        --white: #1A1917;
+        --border: #2A2825;
+        --muted: #9C9590;
+        --muted-light: #6B6560;
+      }
+      body { background: #0F0E0D; color: #FAFAF7; }
+      .nav { background: rgba(15, 14, 13, 0.92); border-bottom-color: #2A2825; }
+      .nav-brand { color: #FAFAF7; }
+      .nav-links a { color: #9C9590; }
+      .bento-card { background: #1A1917; border-color: #2A2825; }
+      .hours-card { background: #1A1917; border-color: #2A2825; }
+      .hours-row { border-bottom-color: #2A2825; }
+      .claim-card { background: #1A1917; border-color: #2A2825; color: #FAFAF7; }
+      .claim-card a { color: var(--accent); }
+      .footer { background: #0F0E0D; border-top-color: #2A2825; }
+      .gallery-item img { opacity: 0.9; }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--primary);
+      background: var(--surface);
+      overflow-x: hidden;
+    }
+
+    /* Scroll Progress */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: color-mix(in srgb, var(--accent) 25%, transparent);
+      z-index: 1000;
+    }
+    .scroll-progress-bar {
+      height: 100%;
+      background: var(--accent);
+      transform-origin: left;
+      animation: fillProgress linear forwards;
+      animation-timeline: scroll();
+    }
+    @keyframes fillProgress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* Nav */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px var(--section-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      white-space: nowrap;
+      letter-spacing: -0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 200ms ease;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 250ms ease;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1C1917;
+      color: #FAFAF7;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      white-space: nowrap;
+      min-height: 44px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .nav-cta { background: var(--accent); color: #1C1917; }
+    }
+    .nav-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 75vh;
+      max-height: 720px;
+      min-height: 520px;
+      background-image:
+        linear-gradient(135deg, rgba(28,25,23,0.92) 0%, rgba(28,25,23,0.3) 50%, rgba(0,0,0,0.65) 100%),
+        url('https://preview.meetauxo.com/sites/allstar-electric/hero.jpg');
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px var(--section-h);
+      overflow: hidden;
+    }
+    .hero-bg-animate {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://preview.meetauxo.com/sites/allstar-electric/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+    }
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.06); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      text-align: left;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero .eyebrow {
+      color: rgba(255,255,255,0.8);
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: wordReveal 500ms ease forwards;
+    }
+    @keyframes wordReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-subhead {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 36px;
+      max-width: 480px;
+      line-height: 1.5;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #1C1917;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      min-height: 52px;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 24px rgba(245, 158, 11, 0.4);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: border-color 200ms ease, background 200ms ease;
+      min-height: 52px;
+    }
+    .btn-secondary:hover {
+      border-color: #FFFFFF;
+      background: rgba(255,255,255,0.08);
+    }
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.5);
+      animation: chevronBounce 1.6s ease-in-out infinite;
+    }
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* Info Bar */
+    .info-bar {
+      background: #1C1917;
+      padding: 56px var(--section-h);
+    }
+    @media (prefers-color-scheme: dark) {
+      .info-bar { background: #111010; }
+    }
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 0;
+    }
+    .info-stat {
+      text-align: center;
+      flex: 1;
+    }
+    .info-stat + .info-stat {
+      border-left: 1px solid rgba(255,255,255,0.15);
+    }
+    .info-stat-number {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .info-stat-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Section base */
+    .section {
+      padding: var(--section-v) var(--section-h);
+    }
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .about-eyebrow {
+      color: var(--muted);
+    }
+    .about h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 16px 0 28px;
+    }
+    .about p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: gap 200ms ease;
+    }
+    .about-link:hover { gap: 10px; }
+
+    /* Bento Grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+    .bento-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    }
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(var(--primary-rgb), 0.08);
+    }
+    .bento-card.featured {
+      grid-column: span 2;
+    }
+    .bento-card-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .bento-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+    .bento-card p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Signature Band */
+    .signature-band {
+      background: #1C1917;
+      padding: 100px var(--section-h);
+      text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+      .signature-band { background: #111010; }
+    }
+    .signature-band .eyebrow {
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .pull-quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.1;
+      max-width: 800px;
+      margin: 0 auto 32px;
+      letter-spacing: -0.02em;
+    }
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: gap 200ms ease;
+    }
+    .signature-link:hover { gap: 12px; }
+
+    /* Gallery */
+    .gallery-section {
+      padding: var(--section-v) var(--section-h);
+    }
+    .gallery-header {
+      margin-bottom: 40px;
+    }
+    .gallery-header .eyebrow { color: var(--muted); }
+    .gallery-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-top: 12px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Hours & Contact */
+    .hours-contact {
+      padding: var(--section-v) var(--section-h);
+      background: var(--surface);
+    }
+    .hours-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .hours-col h3, .contact-col h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 14px 0 24px;
+      letter-spacing: -0.01em;
+    }
+    .hours-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day {
+      font-weight: 500;
+      color: var(--primary);
+    }
+    .hours-time {
+      color: var(--muted);
+    }
+    .hours-row.today .hours-day {
+      font-weight: 700;
+    }
+    .hours-row.today .hours-time {
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hours-row.today .hours-time::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+    .contact-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .contact-address {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .contact-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: opacity 200ms ease;
+    }
+    .contact-phone:hover { opacity: 0.8; }
+    .map-wrapper {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 4px;
+    }
+    .map-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 280px;
+      border: none;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background: #1C1917;
+      padding: 120px var(--section-h);
+      text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+      .final-cta { background: #111010; }
+    }
+    .final-cta .eyebrow {
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .final-cta-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin: 0 auto 44px;
+      line-height: 1.6;
+    }
+    .btn-accent {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #1C1917;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 20px 40px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      min-height: 60px;
+    }
+    .btn-accent:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(245, 158, 11, 0.45);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 40px var(--section-h) 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .footer-left {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-left strong {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .footer-right a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 200ms ease;
+    }
+    .footer-right a:hover { opacity: 0.75; }
+
+    /* Claim Card */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #FFFFFF;
+      color: #1C1917;
+      border: 1px solid #E5E3DF;
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      animation: claimSlideIn 600ms ease-out 1200ms forwards;
+    }
+    @keyframes claimSlideIn {
+      to { transform: translateX(-50%) translateY(0); }
+    }
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .claim-text {
+      flex: 1;
+      line-height: 1.5;
+    }
+    .claim-text a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .claim-text a:hover { text-decoration: underline; }
+    .claim-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #9C9590;
+      padding: 4px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: color 150ms ease;
+      min-width: 24px;
+      min-height: 24px;
+    }
+    .claim-close:hover { color: #1C1917; }
+
+    /* Scroll animations */
+    @supports (animation-timeline: view()) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        animation: revealUp 700ms ease forwards;
+        animation-timeline: view();
+        animation-range: entry 0% entry 30%;
+      }
+      @keyframes revealUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .hero h1 .word {
+        opacity: 1;
+        transform: none;
+      }
+      .claim-card {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    /* No hover on touch */
+    @media (hover: none) {
+      .gallery-item:hover img { transform: none; }
+      .bento-card:hover { transform: none; box-shadow: none; }
+      .btn-primary:hover, .btn-accent:hover { transform: none; box-shadow: none; }
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      :root {
+        --section-v: 80px;
+        --section-h: 32px;
+      }
+      .about-grid { gap: 64px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      :root {
+        --section-v: 70px;
+        --section-h: 20px;
+      }
+
+      .nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+
+      .hero {
+        height: 75vh;
+        max-height: 640px;
+        padding: 40px 20px;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+      }
+      .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hero-buttons a {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-chevron { display: none; }
+
+      .info-bar { padding: 32px 20px; }
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .info-stat { width: 100%; }
+      .info-stat + .info-stat {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding-top: 18px;
+      }
+      .info-stat-number { font-size: 2.6rem; }
+
+      .about .container { padding: 0; }
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .about h2 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+      .bento-grid { grid-template-columns: 1fr 1fr; }
+      .bento-card.featured { grid-column: span 2; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-item { aspect-ratio: 4 / 3; }
+
+      .hours-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .map-wrapper iframe { height: 280px; }
+
+      .final-cta {
+        padding: 80px 20px;
+      }
+      .final-cta h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+      .btn-accent { width: 100%; justify-content: center; }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 80px;
+      }
+
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-brand">Allstar Electric</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#hours">Contact</a></li>
+    </ul>
+    <a href="tel:+14235990421" class="nav-cta" aria-label="Call Allstar Electric">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+      (423) 599-0421
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Allstar Electric hero">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Chattanooga, TN &nbsp;·&nbsp; Electrical Contractor
+      </div>
+      <h1 id="hero-heading" aria-label="Allstar Electric">
+        <!-- Words injected by JS -->
+      </h1>
+      <p class="hero-subhead">Chattanooga's highest-rated electricians, trusted by 169 customers and available around the clock.</p>
+      <div class="hero-buttons">
+        <a href="tel:+14235990421" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          Call (423) 599-0421
+        </a>
+        <a href="#hours" class="btn-secondary">View Hours</a>
+      </div>
+    </div>
+    <div class="hero-chevron" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- Info Bar -->
+  <div class="info-bar" aria-label="Key stats">
+    <div class="info-bar-inner container">
+      <div class="info-stat">
+        <span class="info-stat-number" data-count-to="5" data-count-decimal="1">5.0</span>
+        <span class="info-stat-label">Google Rating</span>
+      </div>
+      <div class="info-stat">
+        <span class="info-stat-number" data-count-to="169" data-count-decimal="0">169</span>
+        <span class="info-stat-label">Verified Reviews</span>
+      </div>
+      <div class="info-stat">
+        <span class="info-stat-number" style="font-size: 2rem; letter-spacing: -0.01em;">Licensed &amp; Insured</span>
+        <span class="info-stat-label">Fully Certified</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about reveal" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="eyebrow about-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            About
+          </div>
+          <h2 id="about-heading">Chattanooga's electricians who show up, fix it, and do it right.</h2>
+          <p>Allstar Electric has built its reputation one job at a time in Chattanooga, TN, earning a perfect 5-star rating across 169 verified Google reviews. That score doesn't come from luck; it comes from licensed professionals who treat every service call with the same accountability, whether it's a breaker replacement or a full panel upgrade.</p>
+          <p>Available 24 hours a day, seven days a week, Allstar Electric is the crew Chattanooga homeowners and businesses call when the job matters. No runarounds, no upsells, no surprises on the invoice.</p>
+          <a href="tel:+14235990421" class="about-link">
+            Call (423) 599-0421
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="about-visual">
+          <div class="bento-grid">
+            <div class="bento-card featured">
+              <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <h4>Available 24/7</h4>
+              <p>Electrical emergencies don't wait for business hours. Allstar Electric is on call every day of the year in Chattanooga, TN, with no after-hours surcharge for emergency service.</p>
+            </div>
+            <div class="bento-card">
+              <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              <h4>Licensed Technicians</h4>
+              <p>Every technician is state-licensed and fully insured in Tennessee.</p>
+            </div>
+            <div class="bento-card">
+              <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <h4>Fast Response</h4>
+              <p>Same-day service across the Chattanooga metro area, on your schedule.</p>
+            </div>
+            <div class="bento-card">
+              <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <h4>Upfront Pricing</h4>
+              <p>You see the number before we touch anything. No hidden fees, ever.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Band -->
+  <div class="signature-band reveal" aria-label="Customer satisfaction highlight">
+    <div class="container">
+      <div class="eyebrow" style="justify-content: center; color: var(--accent);">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        What customers say
+      </div>
+      <p class="pull-quote">"Rated 5 stars by 169 Chattanooga customers, and counting."</p>
+      <a href="https://www.google.com/search?q=Allstar+Electric+Chattanooga+reviews" target="_blank" rel="noopener noreferrer" class="signature-link">
+        Read our Google reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section class="gallery-section reveal" id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="eyebrow" style="color: var(--muted);">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Our Work
+        </div>
+        <h2 id="gallery-heading">Work that holds up to inspection.</h2>
+      </div>
+      <div class="gallery-grid" role="list">
+        <div class="gallery-item" role="listitem">
+          <img src="https://preview.meetauxo.com/sites/allstar-electric/gallery-1.jpg" alt="Allstar Electric project in Chattanooga, TN" loading="lazy" width="600" height="600">
+        </div>
+        <div class="gallery-item" role="listitem">
+          <img src="https://preview.meetauxo.com/sites/allstar-electric/gallery-2.jpg" alt="Allstar Electric electrical work in Chattanooga" loading="lazy" width="600" height="600">
+        </div>
+        <div class="gallery-item" role="listitem">
+          <img src="https://preview.meetauxo.com/sites/allstar-electric/gallery-3.jpg" alt="Allstar Electric licensed technician at work" loading="lazy" width="600" height="600">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  <section class="hours-contact reveal" id="hours" aria-labelledby="hours-heading">
+    <div class="hours-contact-grid">
+      <div class="hours-col">
+        <div class="eyebrow" style="color: var(--muted);">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Hours
+        </div>
+        <h3 id="hours-heading">Always open in Chattanooga.</h3>
+        <div class="hours-card" role="table" aria-label="Business hours">
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Monday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Tuesday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Wednesday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Thursday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Friday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Saturday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+          <div class="hours-row today" role="row">
+            <span class="hours-day" role="cell">Sunday</span>
+            <span class="hours-time" role="cell">Open 24 hours</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-col">
+        <div class="eyebrow" style="color: var(--muted);">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Visit
+        </div>
+        <h3 style="margin-bottom: 14px;">Find us.</h3>
+        <p class="contact-name">Allstar Electric</p>
+        <address class="contact-address" style="font-style: normal;">
+          6925 Shallowford Rd #315<br>
+          Chattanooga, TN 37421
+        </address>
+        <a href="tel:+14235990421" class="contact-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          (423) 599-0421
+        </a>
+        <div class="map-wrapper">
+          <iframe
+            src="https://maps.google.com/maps?q=6925+Shallowford+Rd+%23315%2C+Chattanooga%2C+TN+37421&output=embed"
+            title="Allstar Electric location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google Map showing Allstar Electric at 6925 Shallowford Rd, Chattanooga TN"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta reveal" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="eyebrow" style="justify-content: center; color: var(--accent);">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Ready when you are
+      </div>
+      <h2 id="cta-heading">Need it fixed today?</h2>
+      <p class="final-cta-sub">Allstar Electric serves all of Chattanooga, TN around the clock. One call gets a licensed technician to your door.</p>
+      <a href="tel:+14235990421" class="btn-accent">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        Call (423) 599-0421
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-left">
+      <strong>Allstar Electric</strong>
+      &copy; <span id="footer-year">2025</span> All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Site by Auxo Agency</a>
+    </div>
+  </footer>
+
+  <!-- Claim Card -->
+  <div class="claim-card" role="complementary" aria-label="Site offer">
+    <span class="claim-dot" aria-hidden="true"></span>
+    <span class="claim-text">
+      Built free for Allstar Electric by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20allstar-electric%20homepage">Reply to my email</a>
+    </span>
+    <button class="claim-close" aria-label="Dismiss">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <script defer>
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Hero word stagger
+    const heroHeading = document.getElementById('hero-heading');
+    const words = ['Allstar', 'Electric'];
+    words.forEach((word, i) => {
+      const span = document.createElement('span');
+      span.className = 'word';
+      span.textContent = word + (i < words.length - 1 ? '\u00A0' : '');
+      span.style.animationDelay = `${300 + i * 60}ms`;
+      heroHeading.appendChild(span);
+    });
+
+    // Today's hours highlight
+    (function highlightToday() {
+      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const today = days[new Date().getDay()];
+      const rows = document.querySelectorAll('.hours-row');
+      rows.forEach(row => {
+        const dayEl = row.querySelector('.hours-day');
+        if (dayEl && dayEl.textContent.trim() === today) {
+          row.classList.add('today');
+        } else {
+          row.classList.remove('today');
+        }
+      });
+    })();
+
+    // Count-up animation
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function animateCount(el) {
+      const target = parseFloat(el.dataset.countTo);
+      const isDecimal = el.dataset.countDecimal === '1';
+      const duration = 1200;
+      const start = performance.now();
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutCubic(progress);
+        const current = eased * target;
+        el.textContent = isDecimal ? current.toFixed(1) : Math.round(current).toString();
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    // Intersection observer for count-up
+    const counters = document.querySelectorAll('[data-count-to]');
+    if (counters.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(counter => observer.observe(counter));
+    }
+
+    // Claim card dismiss
+    const claimClose = document.querySelector('.claim-close');
+    const claimCard = document.querySelector('.claim-card');
+    if (claimClose && claimCard) {
+      claimClose.addEventListener('click', () => {
+        claimCard.style.transition = 'transform 300ms ease-in, opacity 300ms ease-in';
+        claimCard.style.transform = 'translateX(-50%) translateY(140%)';
+        claimCard.style.opacity = '0';
+        setTimeout(() => { claimCard.style.display = 'none'; }, 350);
+      });
+    }
+
+    // Fallback reveal for browsers without animation-timeline: view()
+    if (!CSS.supports('animation-timeline', 'view()')) {
+      const reveals = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.transition = 'opacity 700ms ease, transform 700ms ease';
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        revealObserver.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>
