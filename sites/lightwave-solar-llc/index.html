@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightWave Solar, LLC | Chattanooga, TN</title>
+  <meta name="description" content="LightWave Solar, LLC in Chattanooga, TN  -  5-star rated solar installation with 73 verified Google reviews. Clean energy solutions for Chattanooga homeowners.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="LightWave Solar, LLC | Chattanooga, TN">
+  <meta property="og:description" content="5-star rated solar installation in Chattanooga, TN. 73 verified reviews. Local solar experts serving the Chattanooga area.">
+  <meta property="og:image" content="https://preview.meetauxo.com/sites/lightwave-solar-llc/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LightWave Solar, LLC | Chattanooga, TN">
+  <meta name="twitter:image" content="https://preview.meetauxo.com/sites/lightwave-solar-llc/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' fill='%230EA5E9' font-family='sans-serif' font-weight='700' font-size='18'>L</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LightWave Solar, LLC",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6925 Shallowford Rd #315",
+      "addressLocality": "Chattanooga",
+      "addressRegion": "TN",
+      "postalCode": "37421",
+      "addressCountry": "US"
+    },
+    "telephone": "(615) 641-4050",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "73"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <style>
+    /* ─── Custom Properties ─── */
+    :root {
+      --primary: #0F172A;
+      --accent: #0EA5E9;
+      --bg: #FAFAF7;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --muted: #64748B;
+      --text: #0F172A;
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #0EA5E9;
+        --accent: #38BDF8;
+        --bg: #0A0F1A;
+        --surface: #111827;
+        --border: #1E293B;
+        --muted: #94A3B8;
+        --text: #F1F5F9;
+      }
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--body);
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ─── Scroll Progress ─── */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: color-mix(in srgb, var(--accent) 20%, transparent);
+      z-index: 300;
+    }
+
+    .scroll-progress::after {
+      content: '';
+      display: block;
+      height: 100%;
+      background: var(--accent);
+      transform-origin: left;
+      animation: fillProgress linear forwards;
+      animation-timeline: scroll();
+    }
+
+    @keyframes fillProgress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* ─── Eyebrow ─── */
+    .eyebrow {
+      font-family: var(--body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ─── Nav ─── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .nav {
+        background: rgba(10, 15, 26, 0.92);
+      }
+    }
+
+    .nav-brand {
+      font-family: var(--display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 200ms ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 240ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #FAFAF7;
+      font-family: var(--body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      flex-shrink: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .nav-cta {
+        background: var(--accent);
+        color: #0F172A;
+      }
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(14, 165, 233, 0.35);
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      height: 75vh;
+      max-height: 720px;
+      min-height: 520px;
+      background-image:
+        linear-gradient(160deg, rgba(15, 23, 42, 0.5) 0%, transparent 45%, rgba(0, 0, 0, 0.72) 100%),
+        url('https://preview.meetauxo.com/sites/lightwave-solar-llc/hero.jpg');
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+      overflow: hidden;
+    }
+
+    .hero-bg-zoom {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://preview.meetauxo.com/sites/lightwave-solar-llc/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+    }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.0); }
+      to { transform: scale(1.06); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.0;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(28px);
+      animation: wordReveal 600ms ease forwards;
+    }
+
+    @keyframes wordReveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-subhead {
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 480px;
+      line-height: 1.55;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #0F172A;
+      font-family: var(--body);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 999px;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03) translateY(-2px);
+      box-shadow: 0 8px 28px rgba(14, 165, 233, 0.45);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFFFFF;
+      font-family: var(--body);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      transition: background 200ms ease, border-color 200ms ease;
+      min-height: 52px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-chevron {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.55);
+      animation: chevronBounce 1.6s ease-in-out infinite;
+    }
+
+    @keyframes chevronBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ─── Info Bar ─── */
+    .info-bar {
+      background: #0F172A;
+      padding: 56px 48px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .info-bar {
+        background: #020817;
+      }
+    }
+
+    .info-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 0;
+    }
+
+    .info-stat {
+      text-align: center;
+      flex: 1;
+    }
+
+    .info-stat-number {
+      font-family: var(--display);
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    .info-stat-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .info-divider {
+      width: 1px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+
+    /* ─── About ─── */
+    .about {
+      padding: 96px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .about p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 8px;
+      transition: gap 200ms ease;
+    }
+
+    .about-link:hover {
+      gap: 10px;
+    }
+
+    /* ─── Bento Grid ─── */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 14px;
+    }
+
+    .bento-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .bento-card--large {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--surface));
+    }
+
+    .bento-card-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .bento-card h4 {
+      font-family: var(--display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .bento-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ─── Signature Band ─── */
+    .signature-band {
+      background: #0F172A;
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .signature-band {
+        background: #020817;
+      }
+    }
+
+    .signature-band .eyebrow {
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .signature-band .eyebrow-dot {
+      background: var(--accent);
+    }
+
+    .signature-quote {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.1;
+      max-width: 860px;
+      margin: 0 auto 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .signature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: gap 200ms ease;
+    }
+
+    .signature-link:hover {
+      gap: 10px;
+    }
+
+    /* ─── Gallery ─── */
+    .gallery-section {
+      padding: 96px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--border);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ─── Hours & Contact ─── */
+    .hours-contact {
+      padding: 96px 48px;
+      background: var(--bg);
+    }
+
+    .hours-contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .hours-contact h3 {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .hours-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-day {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .hours-time {
+      color: var(--muted);
+    }
+
+    .hours-row--today .hours-day,
+    .hours-row--today .hours-time {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .hours-row--today .hours-time {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hours-row--today .hours-time::after {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hours-closed {
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    .visit-address {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .visit-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      transition: gap 200ms ease;
+    }
+
+    .visit-phone:hover {
+      gap: 10px;
+    }
+
+    .visit-name {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .map-wrap {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    .map-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    /* ─── Final CTA ─── */
+    .final-cta {
+      background: #0F172A;
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .final-cta {
+        background: #020817;
+      }
+    }
+
+    .final-cta .eyebrow {
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .final-cta .eyebrow-dot {
+      background: var(--accent);
+    }
+
+    .final-cta h2 {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .btn-cta-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #0F172A;
+      font-family: var(--body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 20px 40px;
+      border-radius: 999px;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      min-height: 60px;
+    }
+
+    .btn-cta-large:hover {
+      transform: scale(1.03) translateY(-2px);
+      box-shadow: 0 12px 36px rgba(14, 165, 233, 0.5);
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-left {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .footer-left strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .footer-right a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      transition: opacity 200ms;
+    }
+
+    .footer-right a:hover {
+      opacity: 0.75;
+    }
+
+    /* ─── Claim Card ─── */
+    .claim-card {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 200;
+      max-width: 640px;
+      width: calc(100% - 48px);
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 14px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      font-family: var(--body);
+      animation: claimSlideIn 600ms ease-out 1200ms forwards;
+    }
+
+    @keyframes claimSlideIn {
+      to { transform: translateX(-50%) translateY(0); }
+    }
+
+    .claim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0EA5E9;
+      flex-shrink: 0;
+    }
+
+    .claim-text {
+      flex: 1;
+      line-height: 1.4;
+      color: #0F172A;
+    }
+
+    .claim-text a {
+      color: #0EA5E9;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 200ms;
+    }
+
+    .claim-text a:hover {
+      text-decoration-color: #0EA5E9;
+    }
+
+    .claim-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #64748B;
+      font-size: 1.2rem;
+      line-height: 1;
+      padding: 4px;
+      flex-shrink: 0;
+      transition: color 200ms;
+      display: flex;
+      align-items: center;
+    }
+
+    .claim-close:hover {
+      color: #0F172A;
+    }
+
+    /* ─── Scroll Reveal ─── */
+    .reveal {
+      animation: revealUp 700ms ease forwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    @keyframes revealUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ─── Reduced Motion ─── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        animation-delay: 0.01ms !important;
+      }
+      .claim-card {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    /* ─── Hover: no touch ─── */
+    @media (hover: none) {
+      .bento-card:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      .gallery-item:hover img {
+        transform: none;
+      }
+    }
+
+    /* ─── Mobile ─── */
+    @media (max-width: 767px) {
+      .nav {
+        padding: 14px 20px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding: 40px 20px;
+        height: 75vh;
+        max-height: 640px;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.4rem);
+      }
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-chevron {
+        display: none;
+      }
+      .info-bar {
+        padding: 32px 20px;
+      }
+      .info-bar-inner {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .info-divider {
+        width: 100%;
+        height: 1px;
+      }
+      .info-stat-number {
+        font-size: 2.6rem;
+        justify-content: center;
+      }
+      .about {
+        padding: 70px 20px;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .about h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .bento-card--large {
+        grid-column: 1 / 3;
+        grid-row: auto;
+      }
+      .signature-band {
+        padding: 70px 20px;
+      }
+      .gallery-section {
+        padding: 70px 20px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-item {
+        aspect-ratio: 4 / 3;
+      }
+      .hours-contact {
+        padding: 70px 20px;
+      }
+      .hours-contact-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .map-wrap iframe {
+        height: 280px;
+      }
+      .final-cta {
+        padding: 80px 20px;
+      }
+      .final-cta h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+      }
+      .btn-cta-large {
+        width: 100%;
+        justify-content: center;
+      }
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px 80px;
+      }
+      .claim-card {
+        bottom: 16px;
+        width: calc(100% - 24px);
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* ─── Tablet ─── */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .about, .gallery-section, .hours-contact {
+        padding: 80px 32px;
+      }
+      .about-grid {
+        gap: 64px;
+      }
+      .hours-contact-inner {
+        gap: 40px;
+      }
+      .signature-band, .final-cta {
+        padding: 80px 32px;
+      }
+      .info-bar {
+        padding: 48px 32px;
+      }
+    }
+
+    /* ─── Stars SVG ─── */
+    .stars {
+      display: flex;
+      gap: 3px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .star {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Claim Card -->
+  <div class="claim-card" id="claimCard" role="complementary" aria-label="Site offer">
+    <div class="claim-dot" aria-hidden="true"></div>
+    <div class="claim-text">
+      Built free for <strong style="display:inline;font-weight:700;">LightWave Solar, LLC</strong> by Auxo, yours to keep. Want the full multi-page version? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20lightwave-solar-llc%20homepage">Reply to my email</a>
+    </div>
+    <button class="claim-close" id="claimClose" aria-label="Dismiss">&#x2715;</button>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">Light<span>Wave</span> Solar</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#hours">Contact</a></li>
+    </ul>
+    <a href="tel:+16156414050" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 7.29 7.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (615) 641-4050
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg-zoom" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Chattanooga, TN &nbsp;&bull;&nbsp; Solar Installation
+      </div>
+      <h1 id="heroHeading" aria-label="LightWave Solar, LLC">
+        <!-- Words injected by JS -->
+      </h1>
+      <p class="hero-subhead">
+        Chattanooga's top-rated solar installer, 5 stars across 73 verified reviews.
+      </p>
+      <div class="hero-buttons">
+        <a href="tel:+16156414050" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 7.29 7.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (615) 641-4050
+        </a>
+        <a href="#hours" class="btn-secondary">View Hours</a>
+      </div>
+    </div>
+    <div class="hero-chevron" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- Info Bar -->
+  <div class="info-bar" aria-label="Key statistics">
+    <div class="info-bar-inner">
+      <div class="info-stat">
+        <div class="stars" aria-hidden="true">
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="info-stat-number" data-count="5" data-suffix=" Stars" aria-label="5 Stars">
+          <span class="count-number">5</span><span style="font-size:2rem;color:rgba(255,255,255,0.7);"> Stars</span>
+        </div>
+        <div class="info-stat-label">Google Rating</div>
+      </div>
+      <div class="info-divider" aria-hidden="true"></div>
+      <div class="info-stat">
+        <div class="info-stat-number" aria-label="73 Verified Reviews">
+          <span class="count-number" data-target="73">73</span>
+        </div>
+        <div class="info-stat-label">Verified Reviews</div>
+      </div>
+      <div class="info-divider" aria-hidden="true"></div>
+      <div class="info-stat">
+        <div class="info-stat-number" aria-label="Licensed and Insured">
+          <span style="font-size:2.2rem;letter-spacing:-0.02em;">Licensed</span>
+        </div>
+        <div class="info-stat-label">Licensed &amp; Insured</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about reveal" id="about" aria-labelledby="aboutHeading">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>About</div>
+        <h2 id="aboutHeading">Chattanooga's solar company that delivers on its promises.</h2>
+        <p>LightWave Solar, LLC brings clean, local expertise to every Chattanooga rooftop. Our team handles every step of the process, from site assessment to final inspection, so you never deal with a middleman.</p>
+        <p>With a perfect 5-star rating earned across 73 independent Google reviews, Chattanooga homeowners consistently call out one thing: we show up on time, do the work right, and stand behind it.</p>
+        <a href="tel:+16156414050" class="about-link">
+          Call (615) 641-4050
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="about-visual" aria-label="Why choose LightWave Solar">
+        <div class="bento-grid">
+          <!-- Large card -->
+          <div class="bento-card bento-card--large">
+            <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <h4>End-to-End Solar Installation</h4>
+            <p>From the first site visit to utility interconnection, LightWave Solar manages everything in-house. No subcontractors, no surprises.</p>
+          </div>
+          <!-- Small cards -->
+          <div class="bento-card">
+            <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <h4>Permit-Ready Process</h4>
+            <p>We file all city and state permits, so your install is code-compliant from day one.</p>
+          </div>
+          <div class="bento-card">
+            <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>Workmanship Warranty</h4>
+            <p>Every LightWave Solar installation is backed by a workmanship warranty covering the full system.</p>
+          </div>
+          <div class="bento-card">
+            <svg class="bento-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <h4>Utility Incentive Help</h4>
+            <p>We walk Chattanooga homeowners through available federal tax credits and TVA programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Band -->
+  <div class="signature-band reveal" aria-label="Customer rating highlight">
+    <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>What customers say</div>
+    <p class="signature-quote">"Rated 5 stars by 73 Chattanooga customers, and counting."</p>
+    <a href="https://www.google.com/maps/place/LightWave+Solar,+LLC" target="_blank" rel="noopener noreferrer" class="signature-link">
+      Read our Google reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+  <!-- Gallery -->
+  <section class="gallery-section reveal" id="gallery" aria-labelledby="galleryHeading">
+    <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Our Work</div>
+    <h2 id="galleryHeading" style="font-family:var(--display);font-size:clamp(2rem,4vw,3.4rem);font-weight:700;line-height:1.05;letter-spacing:-0.02em;color:var(--text);max-width:560px;">Solar installs across Chattanooga, TN.</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://preview.meetauxo.com/sites/lightwave-solar-llc/gallery-1.jpg" alt="LightWave Solar installation in Chattanooga, TN" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://preview.meetauxo.com/sites/lightwave-solar-llc/gallery-2.jpg" alt="Residential solar panel install by LightWave Solar" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://preview.meetauxo.com/sites/lightwave-solar-llc/gallery-3.jpg" alt="Completed solar system by LightWave Solar, Chattanooga" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  <section class="hours-contact reveal" id="hours" aria-labelledby="hoursHeading">
+    <div class="hours-contact-inner">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Hours</div>
+        <h3 id="hoursHeading">When we're open</h3>
+        <div class="hours-card" role="table" aria-label="Business hours">
+          <div class="hours-row hours-row--today" role="row">
+            <span class="hours-day" role="cell">Monday</span>
+            <span class="hours-time" role="cell">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row hours-row--today" role="row">
+            <span class="hours-day" role="cell">Tuesday</span>
+            <span class="hours-time" role="cell">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row hours-row--today" role="row">
+            <span class="hours-day" role="cell">Wednesday</span>
+            <span class="hours-time" role="cell">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row hours-row--today" role="row">
+            <span class="hours-day" role="cell">Thursday</span>
+            <span class="hours-time" role="cell">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row hours-row--today" role="row">
+            <span class="hours-day" role="cell">Friday</span>
+            <span class="hours-time" role="cell">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Saturday</span>
+            <span class="hours-time hours-closed" role="cell">Closed</span>
+          </div>
+          <div class="hours-row" role="row">
+            <span class="hours-day" role="cell">Sunday</span>
+            <span class="hours-time hours-closed" role="cell">Closed</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Visit</div>
+        <div class="visit-name">LightWave Solar, LLC</div>
+        <p class="visit-address">6925 Shallowford Rd #315<br>Chattanooga, TN 37421</p>
+        <a href="tel:+16156414050" class="visit-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 7.29 7.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (615) 641-4050
+        </a>
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=6925+Shallowford+Rd+%23315%2C+Chattanooga%2C+TN+37421&output=embed"
+            loading="lazy"
+            title="LightWave Solar, LLC location map"
+            aria-label="Google Maps location for LightWave Solar"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta reveal" aria-labelledby="ctaHeading">
+    <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Ready when you are</div>
+    <h2 id="ctaHeading">Ready to go solar in Chattanooga?</h2>
+    <p class="final-cta-sub">LightWave Solar, LLC serves Chattanooga, TN homeowners ready to cut their energy bills and make the switch to clean power.</p>
+    <a href="tel:+16156414050" class="btn-cta-large">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 7.29 7.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (615) 641-4050
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-left">
+      <strong>LightWave Solar, LLC</strong>
+      &copy; <span id="footerYear"></span> LightWave Solar, LLC. All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="https://auxoagency.co" target="_blank" rel="noopener noreferrer">Site by Auxo Agency</a>
+    </div>
+  </footer>
+
+  <script defer>
+    /* ─── Footer Year ─── */
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    /* ─── Hero Word Stagger ─── */
+    (function() {
+      const heading = document.getElementById('heroHeading');
+      const text = 'LightWave Solar, LLC';
+      const words = text.split(' ');
+      heading.innerHTML = words.map((word, i) => {
+        return `<span class="word" style="animation-delay:${i * 60 + 300}ms">${word}</span>`;
+      }).join(' ');
+    })();
+
+    /* ─── Today's Hours Highlight ─── */
+    (function() {
+      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const today = days[new Date().getDay()];
+      const rows = document.querySelectorAll('.hours-row');
+      rows.forEach(row => {
+        const dayCell = row.querySelector('.hours-day');
+        if (dayCell && dayCell.textContent.trim() === today) {
+          row.classList.add('hours-row--today');
+        } else {
+          row.classList.remove('hours-row--today');
+        }
+      });
+    })();
+
+    /* ─── Info Bar Count-Up ─── */
+    (function() {
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function animateCount(el, target, duration) {
+        const start = performance.now();
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          el.textContent = Math.round(eased * target);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const countEl = document.querySelector('.count-number[data-target]');
+      if (!countEl) return;
+      const target = parseInt(countEl.getAttribute('data-target'), 10);
+
+      // Only animate if motion is OK
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      let animated = false;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            animateCount(countEl, target, 1200);
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+
+      observer.observe(document.querySelector('.info-bar'));
+    })();
+
+    /* ─── Claim Card Dismiss ─── */
+    (function() {
+      const card = document.getElementById('claimCard');
+      const btn = document.getElementById('claimClose');
+      if (!btn || !card) return;
+      btn.addEventListener('click', () => {
+        card.style.transition = 'transform 300ms ease-in, opacity 300ms ease-in';
+        card.style.transform = 'translateX(-50%) translateY(140%)';
+        card.style.opacity = '0';
+        setTimeout(() => card.remove(), 350);
+      });
+    })();
+  </script>
+</body>
+</html>
