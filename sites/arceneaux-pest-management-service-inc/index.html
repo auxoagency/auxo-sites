@@ -1,426 +1,1157 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><meta name='color-scheme' content='light'><title>Arceneaux Pest Control - Baton Rouge, LA</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap' rel='stylesheet'><style>:root{--primary:#0F0F0F;--accent:#C85A28;--accent-light:color-mix(in oklab,var(--accent) 15%,white);--accent-mid:color-mix(in oklab,var(--accent) 55%,white);--primary-soft:color-mix(in oklab,var(--primary) 8%,white);--primary-mid:color-mix(in oklab,var(--primary) 60%,white);--off-white:#F7F5F2;--white:#FFFFFF;--font-display:'Fraunces',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:7rem;}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}body{font-family:var(--font-body);font-size:clamp(0.95rem,1.05vw,1.1rem);line-height:1.65;color:var(--primary);background:var(--off-white);-webkit-font-smoothing:antialiased;}img{display:block;max-width:100%;height:auto;}a{color:inherit;text-decoration:none;}button{cursor:pointer;font-family:var(--font-body);}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
-/* ── HERO ─────────────────────────────────────── */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100svh;}
-.hero__photo{position:relative;overflow:hidden;}
-.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:center;}
-.hero__photo::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,color-mix(in oklab,var(--primary) 70%,transparent) 0%,color-mix(in oklab,var(--accent) 40%,transparent) 100%);mix-blend-mode:multiply;}
-.hero__content{background:var(--primary);display:flex;flex-direction:column;justify-content:center;padding:clamp(2.5rem,6vw,5rem) clamp(2rem,5vw,4.5rem);position:relative;overflow:hidden;}
-.hero__content::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;border:2px solid color-mix(in oklab,var(--accent) 30%,transparent);pointer-events:none;}
-.hero__content::after{content:'';position:absolute;bottom:40px;left:40px;width:60px;height:2px;background:var(--accent);}
-.hero__eyebrow{font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;}
-.hero__headline{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:700;line-height:1.05;letter-spacing:-0.02em;color:var(--white);margin-bottom:1.5rem;}
-.hero__headline em{font-style:italic;font-weight:300;color:var(--accent);}
-.hero__sub{font-family:var(--font-body);font-size:clamp(0.95rem,1.2vw,1.1rem);color:color-mix(in oklab,var(--white) 65%,transparent);line-height:1.7;max-width:38ch;margin-bottom:2.5rem;}
-.hero__cta{display:inline-flex;align-items:center;gap:0.6rem;background:var(--accent);color:var(--white);font-family:var(--font-body);font-weight:600;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.9rem 2rem;border:none;transition:background 0.2s,transform 0.2s;}
-.hero__cta:hover{background:color-mix(in oklab,var(--accent) 80%,black);transform:translateY(-2px);}
-.hero__cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;}
-@media(max-width:768px){.hero{grid-template-columns:1fr;}.hero__photo{aspect-ratio:4/3;min-height:0;}.hero__content{padding:2.5rem 1.5rem 3rem;}.hero__content::before{width:120px;height:120px;top:-30px;right:-30px;}}
-/* ── TRUST STRIP ──────────────────────────────── */
-.trust{background:var(--white);border-bottom:1px solid color-mix(in oklab,var(--primary) 10%,transparent);padding:1.2rem var(--space-md);}
-.trust__inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:center;}
-.trust__item{display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;font-weight:500;color:var(--primary-mid);}
-.trust__item strong{color:var(--primary);font-size:1rem;}
-.trust__stars{color:var(--accent);letter-spacing:0.05em;}
-.trust__divider{width:1px;height:24px;background:color-mix(in oklab,var(--primary) 15%,transparent);}
-.trust__phone a{color:var(--accent);font-weight:600;font-size:1rem;}
-.trust__phone a:hover{text-decoration:underline;}
-@media(max-width:600px){.trust__divider{display:none;}.trust__inner{gap:0.7rem 1.2rem;}}
-/* ── SECTION BASE ─────────────────────────────── */
-.section{padding:var(--space-lg) var(--space-md);}
-.section__inner{max-width:1100px;margin:0 auto;}
-.section__label{font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:block;}
-.section__headline{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.5rem;}
-/* ── ABOUT ────────────────────────────────────── */
-.about{background:var(--off-white);}
-.about__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);align-items:start;}
-.about__text p{color:color-mix(in oklab,var(--primary) 75%,transparent);margin-bottom:1.2rem;font-size:1.05rem;}
-.about__text p:last-child{margin-bottom:0;}
-.about__aside{padding-top:2rem;}
-.about__stat{border-left:3px solid var(--accent);padding:1rem 1.5rem;margin-bottom:1.5rem;background:var(--white);}
-.about__stat strong{display:block;font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--primary);line-height:1;}
-.about__stat span{font-size:0.85rem;color:var(--primary-mid);font-weight:500;}
-@media(max-width:768px){.about__grid{grid-template-columns:1fr;gap:var(--space-md);}.about__aside{padding-top:0;}}
-/* ── SERVICES ─────────────────────────────────── */
-.services{background:var(--primary);}
-.services .section__headline{color:var(--white);}
-.services .section__label{color:var(--accent);}
-.services__intro{color:color-mix(in oklab,var(--white) 60%,transparent);max-width:52ch;margin-bottom:var(--space-md);font-size:1.05rem;}
-.services__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5px;background:color-mix(in oklab,var(--white) 8%,transparent);}
-.service-card{background:var(--primary);padding:2rem 1.8rem;transition:background 0.2s;}
-.service-card:hover{background:color-mix(in oklab,var(--primary) 85%,var(--accent));}
-.service-card__num{font-family:var(--font-display);font-size:0.8rem;font-weight:600;color:var(--accent);letter-spacing:0.1em;margin-bottom:1rem;}
-.service-card__name{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:0.7rem;line-height:1.2;}
-.service-card__desc{font-size:0.9rem;color:color-mix(in oklab,var(--white) 55%,transparent);line-height:1.6;}
-/* ── HOW IT WORKS ─────────────────────────────── */
-.how{background:var(--white);}
-.how__steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2rem;margin-top:var(--space-md);}
-.how__step{position:relative;padding-top:1rem;}
-.how__step::before{content:'';position:absolute;top:2.2rem;left:3rem;right:0;height:1px;background:color-mix(in oklab,var(--primary) 10%,transparent);}
-.how__step:last-child::before{display:none;}
-.how__num{font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:var(--accent-light);line-height:1;margin-bottom:0.8rem;}
-.how__title{font-family:var(--font-display);font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;}
-.how__desc{font-size:0.9rem;color:color-mix(in oklab,var(--primary) 65%,transparent);}
-/* ── FAQ ──────────────────────────────────────── */
-.faq{background:var(--off-white);}
-.faq__list{margin-top:var(--space-md);display:grid;gap:1px;background:color-mix(in oklab,var(--primary) 12%,transparent);}
-details.faq__item{background:var(--white);overflow:hidden;}
-details.faq__item summary{padding:1.3rem 1.8rem;cursor:pointer;font-family:var(--font-display);font-size:1.05rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
-details.faq__item summary::-webkit-details-marker{display:none;}
-details.faq__item summary::after{content:'+';font-family:var(--font-body);font-size:1.4rem;font-weight:300;color:var(--accent);flex-shrink:0;transition:transform 0.2s;}
-details[open].faq__item summary::after{transform:rotate(45deg);}
-.faq__answer{padding:0 1.8rem 1.3rem;color:color-mix(in oklab,var(--primary) 70%,transparent);font-size:0.95rem;line-height:1.7;}
-/* ── AREA ─────────────────────────────────────── */
-.area{background:var(--primary);}
-.area .section__headline{color:var(--white);}
-.area .section__label{color:var(--accent);}
-.area__intro{color:color-mix(in oklab,var(--white) 60%,transparent);max-width:52ch;margin-bottom:var(--space-md);}
-.area__grid{display:flex;flex-wrap:wrap;gap:0.8rem;}
-.area__city{font-family:var(--font-display);font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:var(--white);padding:0.5rem 1.2rem;border:1px solid color-mix(in oklab,var(--white) 15%,transparent);transition:border-color 0.2s,color 0.2s;}
-.area__city:hover{border-color:var(--accent);color:var(--accent);}
-/* ── REVIEWS ──────────────────────────────────── */
-.reviews{background:var(--white);}
-.reviews__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:var(--space-md);}
-.review-card{background:var(--off-white);padding:2rem;position:relative;}
-.review-card::before{content:'\201C';font-family:var(--font-display);font-size:4rem;line-height:1;color:var(--accent);position:absolute;top:0.8rem;left:1.5rem;opacity:0.4;}
-.review-card__text{font-size:0.95rem;line-height:1.7;color:color-mix(in oklab,var(--primary) 80%,transparent);padding-top:1.5rem;margin-bottom:1.5rem;}
-.review-card__stars{color:var(--accent);font-size:0.85rem;margin-bottom:0.4rem;}
-.review-card__attr{font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in oklab,var(--primary) 45%,transparent);}
-/* ── CONTACT ──────────────────────────────────── */
-.contact{background:var(--off-white);}
-.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);align-items:start;}
-.contact__info h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600;margin-bottom:0.8rem;}
-.contact__detail{margin-bottom:1.5rem;}
-.contact__detail a{color:var(--accent);font-weight:600;}
-.contact__detail a:hover{text-decoration:underline;}
-.contact__label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary-mid);margin-bottom:0.3rem;display:block;}
-.contact__form{background:var(--white);padding:2rem;}
-.contact__form h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600;margin-bottom:1.5rem;}
-.form-group{margin-bottom:1.2rem;}
-.form-group label{display:block;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--primary-mid);margin-bottom:0.4rem;}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.8rem 1rem;border:1px solid color-mix(in oklab,var(--primary) 15%,transparent);font-family:var(--font-body);font-size:0.95rem;background:var(--off-white);color:var(--primary);transition:border-color 0.2s;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--accent);}
-.form-group textarea{resize:vertical;min-height:100px;}
-.form__submit{width:100%;background:var(--accent);color:var(--white);border:none;padding:1rem;font-family:var(--font-body);font-weight:600;font-size:0.9rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s;}
-.form__submit:hover{background:color-mix(in oklab,var(--accent) 80%,black);}
-@media(max-width:768px){.contact__grid{grid-template-columns:1fr;gap:var(--space-md);}}
-/* ── CLAIM CARD ───────────────────────────────── */
-.claim{background:var(--white);padding:var(--space-md) var(--space-md);}
-.claim__inner{max-width:640px;margin:0 auto;}
-.claim__card{border:2px solid var(--accent);padding:2rem 2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
-.claim__icon{font-size:2rem;flex-shrink:0;}
-.claim__text strong{font-family:var(--font-display);font-size:1.1rem;display:block;margin-bottom:0.3rem;}
-.claim__text p{font-size:0.9rem;color:color-mix(in oklab,var(--primary) 65%,transparent);line-height:1.5;}
-.claim__text p a{color:var(--accent);font-weight:600;}
-/* ── FOOTER ───────────────────────────────────── */
-.footer{background:var(--primary);padding:2rem var(--space-md);}
-.footer__inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;}
-.footer__name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white);}
-.footer__details{font-size:0.8rem;color:color-mix(in oklab,var(--white) 45%,transparent);line-height:1.7;}
-.footer__details a{color:color-mix(in oklab,var(--white) 45%,transparent);}
-.footer__details a:hover{color:var(--accent);}
-.footer__credit{font-size:0.75rem;color:color-mix(in oklab,var(--white) 30%,transparent);}
-.footer__credit a{color:color-mix(in oklab,var(--white) 30%,transparent);}
-.footer__credit a:hover{color:var(--accent);}
-/* ── SCROLL REVEAL ────────────────────────────── */
-@media(prefers-reduced-motion:no-preference){.reveal{opacity:0;transform:translateY(24px);animation:reveal-up 0.6s ease forwards;animation-timeline:view();animation-range:entry 0% entry 30%;}@keyframes reveal-up{to{opacity:1;transform:translateY(0);}}}
-</style></head><body>
-<!-- HERO -->
-<section class='hero' aria-label='Hero'>
-  <div class='hero__photo'>
-    <img src='hero.jpg' alt='Arceneaux Pest Control technician at work in Baton Rouge'>
-  </div>
-  <div class='hero__content'>
-    <span class='hero__eyebrow'>Baton Rouge, LA</span>
-    <h1 class='hero__headline'>Pests out.<br><em>Stays out.</em></h1>
-    <p class='hero__sub'>Arceneaux Pest Control treats homes and businesses across Baton Rouge  -  same day, no surprises.</p>
-    <a href='#contact' class='hero__cta'>
-      Get a Free Quote
-      <svg viewBox='0 0 24 24'><line x1='5' y1='12' x2='19' y2='12'/><polyline points='12 5 19 12 12 19'/></svg>
-    </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Arceneaux Pest Control, Baton Rouge, LA</title>
+<meta name="description" content="Arceneaux Pest Control serves Baton Rouge, LA with 4.8-star rated pest elimination. 142 verified reviews. Call (225) 791-9911 for fast, reliable service.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="Arceneaux Pest Control | Baton Rouge, LA">
+<meta property="og:description" content="Baton Rouge's trusted pest control. 4.8 stars, 142 reviews. Call (225) 791-9911.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arceneaux Pest Control | Baton Rouge, LA">
+<meta name="twitter:description" content="Baton Rouge's trusted pest control. 4.8 stars, 142 reviews.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23111111'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23f59e0b'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Arceneaux Pest Control",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4545 Sherwood Common Blvd #4B",
+    "addressLocality": "Baton Rouge",
+    "addressRegion": "LA",
+    "postalCode": "70816",
+    "addressCountry": "US"
+  },
+  "telephone": "(225) 791-9911",
+  "url": "https://arceneauxpest.com/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "142"
+  }
+}
+</script>
+<style>
+  :root {
+    --primary: #111111;
+    --accent: #f59e0b;
+    --bg: #fafaf7;
+    --text: #111111;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --card-bg: #ffffff;
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'Crimson Text', serif;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-pill: 999px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+    --spacing-section: 96px;
+    --spacing-section-mobile: 72px;
+    --container: 1200px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scroll Progress */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: transparent;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  .scroll-progress::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: var(--accent);
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: scroll-track linear both;
+    animation-timeline: scroll();
+  }
+  @keyframes scroll-track { to { transform: scaleX(1); } }
+
+  /* Nav */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,250,247,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--primary);
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: var(--radius-pill);
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-cta:hover { background: #2a2a2a; transform: scale(1.03); }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 75vh;
+    max-height: 720px;
+    min-height: 520px;
+    background-image:
+      linear-gradient(135deg, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.3) 50%, rgba(0,0,0,0.62) 100%),
+      url('https://preview.meetauxo.com/sites/arceneaux-pest-control/hero.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 64px 48px;
+    overflow: hidden;
+    animation: kenBurns 24s ease-in-out infinite alternate;
+  }
+  @keyframes kenBurns {
+    from { background-size: 100%; }
+    to { background-size: 106%; }
+  }
+  .hero-content {
+    max-width: 720px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.82);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  .hero h1 .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: wordFadeIn 0.6s ease forwards;
+  }
+  @keyframes wordFadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 36px;
+    max-width: 520px;
+    font-style: italic;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--accent);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: var(--radius-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { transform: scale(1.03); box-shadow: 0 8px 24px rgba(245,158,11,0.38); }
+  .btn-secondary {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: transparent;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: var(--radius-sm);
+    border: 2px solid rgba(255,255,255,0.7);
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+  /* Info Bar */
+  .info-bar {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 56px 48px;
+  }
+  .info-bar-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    align-items: center;
+    gap: 0;
+  }
+  .info-divider {
+    background: rgba(255,255,255,0.15);
+    height: 60px;
+    width: 1px;
+    justify-self: center;
+  }
+  .info-stat {
+    text-align: center;
+    padding: 0 40px;
+  }
+  .info-stat-num {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    display: block;
+  }
+  .info-stat-label {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* Container */
+  .container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  /* About */
+  .about-section {
+    padding: var(--spacing-section) 48px;
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 96px;
+    align-items: center;
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .section-h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+    color: var(--primary);
+  }
+  .about-text p {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-bottom: 18px;
+    line-height: 1.7;
+  }
+  .about-text a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  /* About visual: hero reuse bento */
+  .about-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .about-photo-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background-image: url('https://preview.meetauxo.com/sites/arceneaux-pest-control/hero.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+  }
+  .about-photo-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(17,17,17,0.55) 100%);
+    border-radius: var(--radius-lg);
+  }
+  .about-mini-bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .mini-stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+  }
+  .mini-stat-card .num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.03em;
+    display: block;
+    line-height: 1.0;
+  }
+  .mini-stat-card .lbl {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    margin-top: 4px;
+    display: block;
+  }
+  .mini-stat-card.accent-card {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .mini-stat-card.accent-card .num,
+  .mini-stat-card.accent-card .lbl { color: var(--primary); }
+
+  /* Signature Band */
+  .signature-band {
+    background: var(--primary);
+    padding: 100px 48px;
+    text-align: center;
+  }
+  .signature-band .eyebrow { justify-content: center; color: var(--accent); }
+  .signature-band .eyebrow::before { background: var(--accent); }
+  .signature-pull {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    max-width: 800px;
+    margin: 0 auto 32px;
+  }
+  .signature-pull em {
+    color: var(--accent);
+    font-style: normal;
+  }
+  .review-link {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .review-link:hover { color: var(--accent); }
+  .review-link svg { transition: transform 0.2s; }
+  .review-link:hover svg { transform: translateX(4px); }
+
+  /* Services */
+  .services-section {
+    padding: var(--spacing-section) 48px;
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+  .services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-num {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .service-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .service-desc {
+    font-family: var(--font-body);
+    font-size: 1.0rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  /* Hours and Contact */
+  .hours-section {
+    padding: var(--spacing-section) 48px;
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .hours-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-top: 24px;
+  }
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .hours-row:last-child { border-bottom: none; }
+  .hours-row.today {
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .hours-row.today .hours-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .today-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .hours-day { color: var(--text-muted); font-weight: 500; }
+  .hours-row.today .hours-day { color: var(--primary); font-weight: 700; }
+  .closed-text { color: #9ca3af; font-style: italic; }
+  .contact-side h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .contact-side .address-line {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .contact-phone {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    transition: opacity 0.2s;
+  }
+  .contact-phone:hover { opacity: 0.8; }
+  .map-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    background: var(--primary);
+    padding: 120px 48px;
+    text-align: center;
+  }
+  .final-cta .eyebrow { justify-content: center; color: var(--accent); }
+  .final-cta .eyebrow::before { background: var(--accent); }
+  .final-cta h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    max-width: 700px;
+    margin: 0 auto 18px;
+  }
+  .final-cta-sub {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 44px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta .btn-primary { font-size: 1.05rem; padding: 17px 36px; }
+
+  /* Footer */
+  footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 40px 48px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    max-width: 100%;
+  }
+  .footer-left {
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .footer-left strong {
+    display: block;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+  .footer-right {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .footer-right a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Claim Card / Floating Pill */
+  .claim-pill {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    z-index: 200;
+    max-width: 640px;
+    width: calc(100% - 48px);
+    background: #ffffff;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 22px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    animation: pillSlideIn 600ms ease-out 1200ms forwards;
+  }
+  @keyframes pillSlideIn {
+    to { transform: translateX(-50%) translateY(0); }
+  }
+  .claim-dot {
+    color: var(--accent);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .claim-text {
+    flex: 1;
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--primary);
+    line-height: 1.45;
+  }
+  .claim-text a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .claim-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    padding: 4px;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .claim-close:hover { color: var(--primary); }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    animation: revealUp 700ms ease forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+  @keyframes revealUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .hero h1 .word { opacity: 1; transform: none; }
+    .claim-pill { transform: translateX(-50%) translateY(0); }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .nav {
+      padding: 14px 20px;
+    }
+    .nav-links { display: none; }
+    .nav-logo { font-size: 1.05rem; }
+
+    .hero {
+      height: 75vh;
+      max-height: 640px;
+      min-height: 460px;
+      padding: 40px 20px;
+      background-position: center top;
+      align-items: flex-end;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 9vw, 3.4rem);
+    }
+    .hero-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-primary, .btn-secondary {
+      min-height: 52px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .info-bar { padding: 48px 20px; }
+    .info-bar-inner {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .info-divider { display: none; }
+    .info-stat { padding: 0; }
+
+    .about-section {
+      padding: var(--spacing-section-mobile) 20px;
+    }
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .about-mini-bento { grid-template-columns: 1fr 1fr; }
+
+    .signature-band { padding: 72px 20px; }
+    .signature-pull { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+
+    .services-section { padding: var(--spacing-section-mobile) 20px; }
+    .services-header { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    .hours-section { padding: var(--spacing-section-mobile) 20px; }
+    .hours-grid { grid-template-columns: 1fr; gap: 32px; }
+    .map-wrap iframe { height: 280px !important; }
+
+    .final-cta { padding: 80px 20px; }
+    .final-cta h2 { font-size: clamp(2rem, 8vw, 2.8rem); }
+    .final-cta .btn-primary { width: 100%; min-height: 52px; justify-content: center; }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 32px 20px 80px;
+      gap: 12px;
+    }
+
+    .claim-pill {
+      bottom: 16px;
+      width: calc(100% - 24px);
+      padding: 12px 16px;
+      font-size: 0.85rem;
+    }
+    .claim-text { font-size: 0.85rem; }
+
+    .container { padding-left: 20px; padding-right: 20px; }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { gap: 48px; }
+    .nav { padding: 18px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- Nav -->
+<nav class="nav" role="navigation">
+  <a href="#" class="nav-logo">Arceneaux<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#hours">Hours</a></li>
+    <li><a href="#hours">Contact</a></li>
+  </ul>
+  <a href="tel:2257919911" class="nav-cta">Call (225) 791-9911</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      <span>Baton Rouge, LA &nbsp;&middot;&nbsp; Pest Control</span>
+    </div>
+    <h1 id="hero-heading" aria-label="Arceneaux Pest Control"></h1>
+    <p class="hero-sub">Baton Rouge's most-trusted name in pest elimination, rated 4.8 stars by 142 local customers.</p>
+    <div class="hero-buttons">
+      <a href="tel:2257919911" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (225) 791-9911
+      </a>
+      <a href="#hours" class="btn-secondary">View Hours</a>
+    </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
-<div class='trust' aria-label='Trust signals'>
-  <div class='trust__inner'>
-    <div class='trust__item'>
-      <span class='trust__stars'>★★★★★</span>
-      <strong>4.8</strong>
-      <span>rating</span>
+<!-- Info Bar -->
+<div class="info-bar" aria-label="Key statistics">
+  <div class="info-bar-inner">
+    <div class="info-stat">
+      <span class="info-stat-num" data-countup="4.8" data-decimals="1">4.8</span>
+      <span class="info-stat-label">Google Rating</span>
     </div>
-    <div class='trust__divider'></div>
-    <div class='trust__item'>
-      <strong>142</strong>
-      <span>Google reviews</span>
+    <div class="info-divider" aria-hidden="true"></div>
+    <div class="info-stat">
+      <span class="info-stat-num" data-countup="142" data-decimals="0">142</span>
+      <span class="info-stat-label">Verified Reviews</span>
     </div>
-    <div class='trust__divider'></div>
-    <div class='trust__item trust__phone'>
-      <a href='tel:+12257919911'>(225) 791-9911</a>
-    </div>
-    <div class='trust__divider'></div>
-    <div class='trust__item'>
-      <span>📍 Baton Rouge, LA</span>
+    <div class="info-divider" aria-hidden="true"></div>
+    <div class="info-stat">
+      <span class="info-stat-num" style="font-size: clamp(1.5rem,2.5vw,2rem); letter-spacing: -0.01em;">Licensed</span>
+      <span class="info-stat-label">and Insured in Louisiana</span>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class='section about' id='about'>
-  <div class='section__inner'>
-    <div class='about__grid'>
-      <div class='about__text reveal'>
-        <span class='section__label'>Who We Are</span>
-        <h2 class='section__headline'>Straight talk. Real results.</h2>
-        <p>We know pest problems don't wait for a convenient time  -  and neither do we. Arceneaux Pest Control shows up on time, treats your home like our own, and doesn't oversell you on services you don't need.</p>
-        <p>Our technicians know the Louisiana climate, the bugs it breeds, and the treatments that actually hold. From single-family homes to commercial properties, we've seen every infestation this region throws at people.</p>
-        <p>Call us, describe the problem, and we'll give you a straight answer on what it takes to fix it  -  no vague estimates, no hidden fees.</p>
-      </div>
-      <div class='about__aside reveal'>
-        <div class='about__stat'>
-          <strong>4.8 ★</strong>
-          <span>Average Google rating across 142 reviews</span>
+<!-- About -->
+<section id="about" class="about-section">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="eyebrow">About</div>
+      <h2 class="section-h2">Protecting Baton Rouge homes since day one.</h2>
+      <p>Arceneaux Pest Control has been on the front lines against Louisiana's toughest pests, from formosan termites to fire ants and everything the bayou brings. We operate out of Sherwood Common in Baton Rouge, LA, and we know exactly what local homeowners and businesses are up against.</p>
+      <p>Our 4.8-star rating across 142 Google reviews isn't a marketing claim. It's the result of showing up on time, treating the problem completely, and standing behind every single job we do in Baton Rouge and the surrounding parishes.</p>
+      <p>Questions before you schedule? Call us directly at <a href="tel:2257919911">(225) 791-9911</a> and we'll walk you through the right plan for your property.</p>
+    </div>
+    <div class="about-visual reveal">
+      <div class="about-photo-card" role="img" aria-label="Arceneaux Pest Control team at work"></div>
+      <div class="about-mini-bento">
+        <div class="mini-stat-card accent-card">
+          <span class="num">4.8</span>
+          <span class="lbl">Star Rating</span>
         </div>
-        <div class='about__stat'>
-          <strong>Same Day</strong>
-          <span>Service available  -  call to confirm availability</span>
-        </div>
-        <div class='about__stat'>
-          <strong>Baton Rouge</strong>
-          <span>Locally based, locally focused</span>
+        <div class="mini-stat-card">
+          <span class="num">142</span>
+          <span class="lbl">Reviews</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class='section services' id='services'>
-  <div class='section__inner'>
-    <span class='section__label'>What We Treat</span>
-    <h2 class='section__headline'>Every pest. Every structure.</h2>
-    <p class='services__intro'>Residential or commercial  -  we handle the full range of pest threats common to south Louisiana.</p>
-    <div class='services__grid'>
-      <div class='service-card reveal'>
-        <div class='service-card__num'>01</div>
-        <div class='service-card__name'>General Pest Control</div>
-        <div class='service-card__desc'>Comprehensive interior and exterior treatment for common household invaders.</div>
-      </div>
-      <div class='service-card reveal'>
-        <div class='service-card__num'>02</div>
-        <div class='service-card__name'>Termite Treatment</div>
-        <div class='service-card__desc'>Targeted termite control before structural damage has a chance to escalate.</div>
-      </div>
-      <div class='service-card reveal'>
-        <div class='service-card__num'>03</div>
-        <div class='service-card__name'>Mosquito Control</div>
-        <div class='service-card__desc'>Yard treatments that knock down mosquito populations through the season.</div>
-      </div>
-      <div class='service-card reveal'>
-        <div class='service-card__num'>04</div>
-        <div class='service-card__name'>Rodent Exclusion</div>
-        <div class='service-card__desc'>We locate entry points, seal them off, and eliminate what's already inside.</div>
-      </div>
-      <div class='service-card reveal'>
-        <div class='service-card__num'>05</div>
-        <div class='service-card__name'>Cockroach Programs</div>
-        <div class='service-card__desc'>Targeted gel and perimeter treatments that break the roach cycle fast.</div>
-      </div>
-      <div class='service-card reveal'>
-        <div class='service-card__num'>06</div>
-        <div class='service-card__name'>Commercial Pest Management</div>
-        <div class='service-card__desc'>Scheduled service programs built around your business hours and compliance needs.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class='section how' id='process'>
-  <div class='section__inner'>
-    <span class='section__label'>The Process</span>
-    <h2 class='section__headline'>Simple from the first call.</h2>
-    <div class='how__steps'>
-      <div class='how__step reveal'>
-        <div class='how__num'>01</div>
-        <div class='how__title'>Call or Request a Quote</div>
-        <div class='how__desc'>Describe the problem  -  we ask the right questions and give you a straight estimate.</div>
-      </div>
-      <div class='how__step reveal'>
-        <div class='how__num'>02</div>
-        <div class='how__title'>Schedule Your Visit</div>
-        <div class='how__desc'>Pick a time that works. Same-day slots are often available  -  just ask.</div>
-      </div>
-      <div class='how__step reveal'>
-        <div class='how__num'>03</div>
-        <div class='how__title'>We Treat &amp; Explain</div>
-        <div class='how__desc'>The technician walks you through exactly what was done and what to expect next.</div>
-      </div>
-      <div class='how__step reveal'>
-        <div class='how__num'>04</div>
-        <div class='how__title'>Follow-Up If Needed</div>
-        <div class='how__desc'>If activity persists, we come back  -  that's part of the job, not an upsell.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class='section faq' id='faq'>
-  <div class='section__inner'>
-    <span class='section__label'>Common Questions</span>
-    <h2 class='section__headline'>Answers up front.</h2>
-    <div class='faq__list'>
-      <details class='faq__item'>
-        <summary>How soon can you come out?</summary>
-        <div class='faq__answer'>We often have same-day or next-day availability. Call (225) 791-9911 and we'll find the earliest slot that works for you.</div>
-      </details>
-      <details class='faq__item'>
-        <summary>Do I need to leave my home during treatment?</summary>
-        <div class='faq__answer'>For most general pest treatments, you can stay home. If the scope of service requires you to vacate temporarily, we'll tell you before we start  -  not after.</div>
-      </details>
-      <details class='faq__item'>
-        <summary>Are your treatments safe for kids and pets?</summary>
-        <div class='faq__answer'>Yes. We use EPA-registered products and follow label instructions carefully. We'll advise you on any short re-entry windows specific to the treatment applied.</div>
-      </details>
-      <details class='faq__item'>
-        <summary>What if the pests come back after treatment?</summary>
-        <div class='faq__answer'>Call us. Return visits are part of what you're paying for  -  we don't charge extra to follow up on a treatment that needs reinforcement.</div>
-      </details>
-      <details class='faq__item'>
-        <summary>Do you offer ongoing maintenance plans?</summary>
-        <div class='faq__answer'>Yes. Quarterly and monthly service programs are available for both residential and commercial customers. Ask us about scheduling options when you call.</div>
-      </details>
-      <details class='faq__item'>
-        <summary>Do you serve areas outside Baton Rouge?</summary>
-        <div class='faq__answer'>We serve communities throughout the greater Baton Rouge area. See our service area section or call to confirm your location is covered.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE AREA -->
-<section class='section area' id='area'>
-  <div class='section__inner'>
-    <span class='section__label'>Where We Work</span>
-    <h2 class='section__headline'>Serving Greater Baton Rouge</h2>
-    <p class='area__intro'>Based in Baton Rouge  -  covering the surrounding parishes and communities.</p>
-    <div class='area__grid'>
-      <span class='area__city'>Baton Rouge</span>
-      <span class='area__city'>Zachary</span>
-      <span class='area__city'>Central</span>
-      <span class='area__city'>Baker</span>
-      <span class='area__city'>Prairieville</span>
-      <span class='area__city'>Denham Springs</span>
-      <span class='area__city'>Gonzales</span>
-      <span class='area__city'>Walker</span>
-      <span class='area__city'>Port Allen</span>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class='section reviews' id='reviews'>
-  <div class='section__inner'>
-    <span class='section__label'>What Customers Say</span>
-    <h2 class='section__headline'>4.8 stars. 142 reviews.</h2>
-    <div class='reviews__grid'>
-      <div class='review-card reveal'>
-        <p class='review-card__text'>Very professional and thorough. They explained everything they were doing and why. Haven't seen a bug since.</p>
-        <div class='review-card__stars'>★★★★★</div>
-        <div class='review-card__attr'>Verified Google Review</div>
-      </div>
-      <div class='review-card reveal'>
-        <p class='review-card__text'>Called in the morning, had a technician at my house by early afternoon. Problem was handled quickly and the pricing was fair.</p>
-        <div class='review-card__stars'>★★★★★</div>
-        <div class='review-card__attr'>Verified Google Review</div>
-      </div>
-      <div class='review-card reveal'>
-        <p class='review-card__text'>I've used other pest companies before and this is a different experience. They actually followed up and checked back in. Really appreciated that.</p>
-        <div class='review-card__stars'>★★★★★</div>
-        <div class='review-card__attr'>Verified Google Review</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class='section contact' id='contact'>
-  <div class='section__inner'>
-    <div class='contact__grid'>
-      <div class='contact__info'>
-        <span class='section__label'>Get in Touch</span>
-        <h2 class='section__headline'>Let's fix it fast.</h2>
-        <div class='contact__detail'>
-          <span class='contact__label'>Phone</span>
-          <a href='tel:+12257919911'>(225) 791-9911</a>
-        </div>
-        <div class='contact__detail'>
-          <span class='contact__label'>Address</span>
-          <a href='https://maps.google.com/?q=4545+Sherwood+Common+Blvd+%234B+Baton+Rouge+LA+70816' target='_blank' rel='noopener'>4545 Sherwood Common Blvd #4B<br>Baton Rouge, LA 70816</a>
-        </div>
-        <div class='contact__detail'>
-          <span class='contact__label'>Hours</span>
-          <span>Mon-Fri: 8am - 6pm<br>Sat: 9am - 3pm<br>Sun: Closed</span>
-        </div>
-      </div>
-      <div class='contact__form'>
-        <h3>Request a Quote</h3>
-        <form>
-          <div class='form-group'>
-            <label for='name'>Your Name</label>
-            <input type='text' id='name' name='name' placeholder='Jane Smith'>
-          </div>
-          <div class='form-group'>
-            <label for='phone'>Phone Number</label>
-            <input type='tel' id='phone' name='phone' placeholder='(225) 555-0100'>
-          </div>
-          <div class='form-group'>
-            <label for='service'>Service Needed</label>
-            <select id='service' name='service'>
-              <option value=''>Select a service</option>
-              <option>General Pest Control</option>
-              <option>Termite Treatment</option>
-              <option>Mosquito Control</option>
-              <option>Rodent Exclusion</option>
-              <option>Cockroach Programs</option>
-              <option>Commercial Pest Management</option>
-            </select>
-          </div>
-          <div class='form-group'>
-            <label for='message'>Brief Description</label>
-            <textarea id='message' name='message' placeholder='Tell us what you're dealing with...'></textarea>
-          </div>
-          <button type='submit' class='form__submit'>Send Request</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CLAIM CARD -->
-<div class='claim'>
-  <div class='claim__inner'>
-    <div class='claim__card'>
-      <div class='claim__icon'>✦</div>
-      <div class='claim__text'>
-        <strong>This is a free preview.</strong>
-        <p>Built by <a href='https://auxoagency.co' target='_blank' rel='noopener'>Auxo Agency</a>. Like what you see? Reply <strong>YES</strong> and we'll build the full multi-page version for $297 flat  -  no retainer, no surprises.</p>
-      </div>
-    </div>
-  </div>
+<!-- Signature Band -->
+<div class="signature-band">
+  <div class="eyebrow">What customers say</div>
+  <p class="signature-pull">
+    Rated <em>4.8 stars</em> by <em>142</em> Baton Rouge customers, and counting.
+  </p>
+  <a href="https://g.co/kgs/arceneauxpest" target="_blank" rel="noopener" class="review-link">
+    Read our Google reviews
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
 </div>
 
-<!-- FOOTER -->
-<footer class='footer'>
-  <div class='footer__inner'>
-    <div>
-      <div class='footer__name'>Arceneaux Pest Control</div>
-      <div class='footer__details'>
-        <a href='tel:+12257919911'>(225) 791-9911</a><br>
-        4545 Sherwood Common Blvd #4B, Baton Rouge, LA 70816
+<!-- Services -->
+<section id="services" class="services-section">
+  <div class="services-header">
+    <div class="reveal">
+      <div class="eyebrow">Services</div>
+      <h2 class="section-h2">What we handle so you don't have to.</h2>
+    </div>
+    <p class="reveal" style="font-family: var(--font-body); font-size: 1.1rem; color: #4b5563; line-height: 1.7; align-self: end;">From first inspection to final treatment, Arceneaux Pest Control covers every common pest threat facing Baton Rouge, LA properties.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <div class="service-name">Termite Control</div>
+      <p class="service-desc">Formosan and subterranean termite treatments using proven liquid barriers and baiting systems built for Louisiana's climate.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">02</span>
+      <div class="service-name">General Pest Control</div>
+      <p class="service-desc">Roaches, ants, spiders, and silverfish handled with targeted interior and exterior treatments that keep your home pest-free month after month.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">03</span>
+      <div class="service-name">Rodent Exclusion</div>
+      <p class="service-desc">We identify entry points, set bait stations, and seal gaps so mice and rats can't return once we've cleared them out.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">04</span>
+      <div class="service-name">Mosquito Reduction</div>
+      <p class="service-desc">Seasonal barrier spray programs that cut mosquito populations around your yard so outdoor living in Baton Rouge is actually enjoyable.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">05</span>
+      <div class="service-name">Bed Bug Treatment</div>
+      <p class="service-desc">Heat and chemical treatment options for full bed bug elimination, backed by a follow-up inspection to confirm complete eradication.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">06</span>
+      <div class="service-name">Commercial Pest Management</div>
+      <p class="service-desc">Scheduled service plans for Baton Rouge businesses, restaurants, and property managers who need consistent, documented pest control compliance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Hours and Contact -->
+<section id="hours" class="hours-section">
+  <div class="hours-grid">
+    <div class="reveal">
+      <div class="eyebrow">Hours</div>
+      <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; margin-bottom: 4px;">When we're available</h3>
+      <div class="hours-card">
+        <div class="hours-row today">
+          <span class="hours-day">Monday</span>
+          <span class="hours-time"><span class="today-dot"></span>8 AM-5 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Tuesday</span>
+          <span>8 AM-5 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Wednesday</span>
+          <span>8 AM-5 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Thursday</span>
+          <span>8 AM-5 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Friday</span>
+          <span>8 AM-5 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Saturday</span>
+          <span class="closed-text">Closed</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Sunday</span>
+          <span class="closed-text">Closed</span>
+        </div>
       </div>
     </div>
-    <div class='footer__credit'>Demo by <a href='https://auxoagency.co' target='_blank' rel='noopener'>Auxo Agency · auxoagency.co</a></div>
+    <div class="contact-side reveal">
+      <div class="eyebrow">Visit</div>
+      <h3>Arceneaux Pest Control</h3>
+      <p class="address-line">4545 Sherwood Common Blvd #4B<br>Baton Rouge, LA 70816</p>
+      <a href="tel:2257919911" class="contact-phone">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (225) 791-9911
+      </a>
+      <div class="map-wrap">
+        <iframe src="https://maps.google.com/maps?q=4545+Sherwood+Common+Blvd+%234B%2C+Baton+Rouge%2C+LA+70816&output=embed" width="100%" height="320" style="border:0; border-radius:16px; display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Arceneaux Pest Control location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="eyebrow">Ready when you are</div>
+  <h2>Need it handled today?</h2>
+  <p class="final-cta-sub">Arceneaux Pest Control serves Baton Rouge, LA and surrounding parishes. One call and we'll take care of the rest.</p>
+  <a href="tel:2257919911" class="btn-primary">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call (225) 791-9911
+  </a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-left">
+    <strong>Arceneaux Pest Control</strong>
+    &copy; 2025 Arceneaux Pest Control. All rights reserved.
+  </div>
+  <div class="footer-right">
+    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
   </div>
 </footer>
-</body></html>
+
+<!-- Floating Claim Pill -->
+<div class="claim-pill" id="claimPill" role="status">
+  <span class="claim-dot" aria-hidden="true">&#10022;</span>
+  <span class="claim-text">This is a free preview. Built by Auxo Agency. Like what you see? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20arceneaux-pest-control%20homepage&body=YES">Reply YES</a> and we'll build the full multi-page version for $297 flat  -  no retainer, no surprises.</span>
+  <button class="claim-close" id="claimClose" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script defer>
+(function() {
+  // Hero word stagger
+  var heading = document.getElementById('hero-heading');
+  var words = ['Arceneaux', 'Pest', 'Control'];
+  if (heading) {
+    words.forEach(function(word, i) {
+      var span = document.createElement('span');
+      span.className = 'word';
+      span.textContent = word + (i < words.length - 1 ? '\u00a0' : '');
+      span.style.animationDelay = (i * 60 + 200) + 'ms';
+      heading.appendChild(span);
+    });
+  }
+
+  // Count-up
+  function countUp(el) {
+    var target = parseFloat(el.getAttribute('data-countup'));
+    var decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+    var duration = 1600;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var val = eased * target;
+      el.textContent = decimals > 0 ? val.toFixed(decimals) : Math.round(val).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counters = document.querySelectorAll('[data-countup]');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          countUp(e.target);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function(c) { obs.observe(c); });
+  } else {
+    counters.forEach(function(c) { countUp(c); });
+  }
+
+  // Today highlight
+  var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var today = dayNames[new Date().getDay()];
+  var rows = document.querySelectorAll('.hours-row');
+  rows.forEach(function(row) {
+    var dayEl = row.querySelector('.hours-day');
+    if (dayEl && dayEl.textContent.trim() === today) {
+      row.classList.add('today');
+      var timeEl = row.querySelector('span:last-child');
+      if (timeEl && !timeEl.classList.contains('hours-time')) {
+        var timeText = timeEl.textContent;
+        timeEl.innerHTML = '<span class="today-dot"></span>' + timeText;
+        timeEl.classList.add('hours-time');
+      }
+    } else if (dayEl && dayEl.textContent.trim() !== today) {
+      row.classList.remove('today');
+    }
+  });
+
+  // Claim pill close
+  var pill = document.getElementById('claimPill');
+  var closeBtn = document.getElementById('claimClose');
+  if (closeBtn && pill) {
+    closeBtn.addEventListener('click', function() {
+      pill.style.transition = 'transform 300ms ease, opacity 300ms ease';
+      pill.style.opacity = '0';
+      pill.style.transform = 'translateX(-50%) translateY(120%)';
+      setTimeout(function() { pill.style.display = 'none'; }, 320);
+    });
+  }
+})();
+</script>
+</body>
+</html>
