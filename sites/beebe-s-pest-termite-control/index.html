@@ -1,1 +1,430 @@
-I need the JSON input blob with the business details to build this. Please provide the JSON with fields like businessName, niche, city, state, chosenDirection, topReviews, etc., and I'll generate the complete HTML + email output.
+<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Desert Shield Pest Control  -  Phoenix, AZ</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap\" rel=\"stylesheet\"><style>:root{--primary:#1a3a2a;--accent:#c8a04a;--primary-light:color-mix(in oklab,var(--primary) 70%,white);--primary-dark:color-mix(in oklab,var(--primary) 85%,black);--accent-light:color-mix(in oklab,var(--accent) 60%,white);--accent-dark:color-mix(in oklab,var(--accent) 80%,black);--off-white:#f8f5ef;--text-dark:#111810;--text-mid:#3d4a3f;--text-light:#6b7a6d;--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:7rem;--radius:4px;--radius-lg:10px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-body);font-size:clamp(1rem,1.1vw,1.1rem);line-height:1.65;color:var(--text-dark);background:var(--off-white);-webkit-font-smoothing:antialiased}img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none}button{cursor:pointer;font-family:var(--font-body)}@media(prefers-reduced-motion:no-preference){[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}[data-reveal].visible{opacity:1;transform:none}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:color-mix(in oklab,var(--primary) 96%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid color-mix(in oklab,var(--accent) 30%,transparent)}.nav-logo{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--off-white);letter-spacing:0.02em}.nav-phone{font-size:0.875rem;font-weight:600;color:var(--accent);letter-spacing:0.05em}.nav-phone:hover{color:var(--accent-light)}
+
+/* ── HERO (typography_only) ── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--primary);overflow:hidden;padding:7rem 2rem 4rem}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,color-mix(in oklab,var(--primary-light) 18%,transparent) 0%,transparent 65%),radial-gradient(ellipse at 10% 90%,color-mix(in oklab,var(--accent) 8%,transparent) 0%,transparent 50%)}.hero-geo-circle{position:absolute;top:-120px;right:-80px;width:480px;height:480px;border-radius:50%;border:2px solid color-mix(in oklab,var(--accent) 22%,transparent);pointer-events:none}.hero-geo-circle-inner{position:absolute;top:-60px;right:-30px;width:300px;height:300px;border-radius:50%;background:color-mix(in oklab,var(--accent) 6%,transparent);pointer-events:none}.hero-geo-line{position:absolute;bottom:80px;left:0;width:220px;height:2px;background:linear-gradient(to right,var(--accent),transparent)}.hero-content{position:relative;z-index:2;max-width:860px;margin:0 auto}.hero-eyebrow{display:inline-block;font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}.hero-headline{font-family:var(--font-display);font-size:clamp(3.2rem,10vw,8rem);font-weight:900;line-height:1.0;letter-spacing:-0.03em;color:var(--off-white);margin-bottom:0.15em}.hero-headline em{font-style:italic;color:var(--accent);font-weight:700}.hero-headline .hl-light{font-weight:700;opacity:0.75}.hero-tagline{font-family:var(--font-body);font-size:clamp(1rem,2vw,1.2rem);color:color-mix(in oklab,var(--off-white) 70%,transparent);max-width:480px;margin:1.5rem 0 2.5rem;line-height:1.7}.hero-cta{display:inline-flex;align-items:center;gap:0.6rem;background:var(--accent);color:var(--primary-dark);font-family:var(--font-body);font-size:0.9rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:1rem 2rem;border-radius:var(--radius);border:none;transition:background 0.2s,transform 0.15s}.hero-cta:hover{background:var(--accent-light);transform:translateY(-2px)}.hero-cta svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── TRUST STRIP ── */
+.trust{background:var(--off-white);border-bottom:1px solid color-mix(in oklab,var(--primary) 12%,transparent);padding:1.25rem 2rem}.trust-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.5rem 3rem}.trust-item{display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--text-mid)}.trust-item strong{color:var(--text-dark);font-weight:600}.trust-stars{color:var(--accent);letter-spacing:0.05em;font-size:1rem}.trust-divider{width:1px;height:28px;background:color-mix(in oklab,var(--primary) 15%,transparent);flex-shrink:0}@media(max-width:600px){.trust-divider{display:none}}
+
+/* ── SECTION SHARED ── */
+section{padding:var(--space-lg) var(--space-md)}.section-inner{max-width:1100px;margin:0 auto}.section-label{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem}.section-headline{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--text-dark);margin-bottom:1.5rem}.section-headline em{font-style:italic;color:var(--primary)}
+
+/* ── ABOUT ── */
+.about{background:var(--primary)}.about .section-label{color:var(--accent)}.about .section-headline{color:var(--off-white)}.about .section-headline em{color:var(--accent)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2rem}}.about-text p{color:color-mix(in oklab,var(--off-white) 80%,transparent);margin-bottom:1.25rem;font-size:1.05rem;line-height:1.7}.about-text p:last-child{margin-bottom:0}.about-aside{display:flex;flex-direction:column;gap:1.5rem}.about-stat{border-left:3px solid var(--accent);padding-left:1.25rem}.about-stat-number{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:var(--accent);line-height:1}.about-stat-label{font-size:0.85rem;color:color-mix(in oklab,var(--off-white) 60%,transparent);margin-top:0.25rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:500}
+
+/* ── SERVICES ── */
+.services{background:var(--off-white)}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem}.service-card{background:#fff;border:1px solid color-mix(in oklab,var(--primary) 10%,transparent);border-radius:var(--radius-lg);padding:2rem;position:relative;overflow:hidden;transition:border-color 0.2s,box-shadow 0.2s}.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--primary),var(--accent))}.service-card:hover{border-color:var(--accent);box-shadow:0 8px 32px color-mix(in oklab,var(--primary) 10%,transparent)}.service-num{font-family:var(--font-display);font-size:3rem;font-weight:900;color:color-mix(in oklab,var(--primary) 10%,transparent);line-height:1;margin-bottom:0.5rem}.service-name{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--text-dark);margin-bottom:0.5rem}.service-desc{font-size:0.9rem;color:var(--text-mid);line-height:1.6}
+
+/* ── SERVICES DETAIL ── */
+.services-detail{background:color-mix(in oklab,var(--primary) 5%,white)}.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:2.5rem}.detail-card{background:#fff;border-radius:var(--radius-lg);padding:2.25rem;border:1px solid color-mix(in oklab,var(--primary) 8%,transparent)}.detail-icon{font-size:2rem;margin-bottom:1rem;display:block}.detail-card h3{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--text-dark);margin-bottom:1rem}.detail-card p{color:var(--text-mid);font-size:0.95rem;margin-bottom:0.75rem;line-height:1.7}.detail-list{list-style:none;margin:1rem 0;display:flex;flex-direction:column;gap:0.4rem}.detail-list li{font-size:0.875rem;color:var(--text-mid);padding-left:1.25rem;position:relative}.detail-list li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}.detail-price{display:inline-block;margin-top:1rem;font-size:0.8rem;font-weight:600;color:var(--primary);background:color-mix(in oklab,var(--accent) 15%,white);padding:0.3rem 0.75rem;border-radius:100px;letter-spacing:0.05em}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--primary)}.how .section-label{color:var(--accent)}.how .section-headline{color:var(--off-white)}.how .section-headline em{color:var(--accent)}.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:3rem;position:relative}.steps-grid::before{content:'';position:absolute;top:2.5rem;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,color-mix(in oklab,var(--accent) 30%,transparent),transparent)}@media(max-width:600px){.steps-grid::before{display:none}}.step{position:relative;text-align:center;padding-top:1rem}.step-num{font-family:var(--font-display);font-size:clamp(3rem,8vw,5rem);font-weight:900;color:color-mix(in oklab,var(--accent) 20%,transparent);line-height:1;margin-bottom:0.75rem}.step-title{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--off-white);margin-bottom:0.5rem}.step-desc{font-size:0.875rem;color:color-mix(in oklab,var(--off-white) 60%,transparent);line-height:1.6}
+
+/* ── FAQ ── */
+.faq{background:var(--off-white)}.faq-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:0.75rem;max-width:760px}.faq-list details{border:1px solid color-mix(in oklab,var(--primary) 12%,transparent);border-radius:var(--radius-lg);overflow:hidden;background:#fff}.faq-list summary{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--text-dark);padding:1.25rem 1.5rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary::after{content:'+';font-size:1.4rem;color:var(--accent);font-weight:400;flex-shrink:0;transition:transform 0.2s}.faq-list details[open] summary::after{transform:rotate(45deg)}.faq-list details[open]{border-color:var(--accent)}.faq-answer{padding:0 1.5rem 1.25rem;font-size:0.95rem;color:var(--text-mid);line-height:1.7}
+
+/* ── SERVICE AREA ── */
+.service-area{background:var(--primary)}.service-area .section-label{color:var(--accent)}.service-area .section-headline{color:var(--off-white)}.service-area .section-headline em{color:var(--accent)}.area-intro{color:color-mix(in oklab,var(--off-white) 70%,transparent);max-width:520px;margin-bottom:2.5rem;font-size:1rem;line-height:1.7}.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0.75rem}.city-chip{background:color-mix(in oklab,var(--off-white) 7%,transparent);border:1px solid color-mix(in oklab,var(--accent) 25%,transparent);border-radius:var(--radius);padding:0.6rem 1rem;text-align:center;font-size:0.875rem;font-weight:500;color:color-mix(in oklab,var(--off-white) 80%,transparent);letter-spacing:0.05em;transition:border-color 0.2s,color 0.2s}.city-chip:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── REVIEWS ── */
+.reviews{background:var(--off-white)}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem}.review-card{background:#fff;border-radius:var(--radius-lg);padding:2rem;border:1px solid color-mix(in oklab,var(--primary) 8%,transparent);position:relative}.review-card::before{content:'\201C';position:absolute;top:1rem;right:1.5rem;font-family:var(--font-display);font-size:5rem;line-height:1;color:color-mix(in oklab,var(--accent) 20%,transparent)}.review-stars{color:var(--accent);font-size:0.9rem;margin-bottom:1rem;letter-spacing:0.1em}.review-text{font-size:0.95rem;color:var(--text-mid);line-height:1.7;margin-bottom:1.25rem;position:relative;z-index:1}.review-author{font-size:0.8rem;font-weight:600;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.08em}.review-source{font-size:0.75rem;color:var(--text-light);margin-top:0.25rem}
+
+/* ── CONTACT ── */
+.contact{background:var(--primary)}.contact .section-label{color:var(--accent)}.contact .section-headline{color:var(--off-white)}.contact .section-headline em{color:var(--accent)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:2.5rem;align-items:start}@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}}.contact-info{display:flex;flex-direction:column;gap:1.75rem}.contact-block dt{font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem}.contact-block dd{font-size:1rem;color:color-mix(in oklab,var(--off-white) 80%,transparent);line-height:1.6}.contact-block a{color:var(--off-white);font-weight:600;border-bottom:1px solid color-mix(in oklab,var(--accent) 40%,transparent);transition:border-color 0.2s}.contact-block a:hover{border-color:var(--accent)}.contact-form{display:flex;flex-direction:column;gap:1rem}.form-group{display:flex;flex-direction:column;gap:0.35rem}.form-group label{font-size:0.8rem;font-weight:500;letter-spacing:0.08em;color:color-mix(in oklab,var(--off-white) 55%,transparent)}.form-group input,.form-group textarea,.form-group select{background:color-mix(in oklab,var(--off-white) 8%,transparent);border:1px solid color-mix(in oklab,var(--off-white) 18%,transparent);border-radius:var(--radius);padding:0.75rem 1rem;font-family:var(--font-body);font-size:0.95rem;color:var(--off-white);outline:none;transition:border-color 0.2s;resize:vertical}.form-group input::placeholder,.form-group textarea::placeholder{color:color-mix(in oklab,var(--off-white) 30%,transparent)}.form-group input:focus,.form-group textarea:focus{border-color:var(--accent)}.form-submit{background:var(--accent);color:var(--primary-dark);font-family:var(--font-body);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:1rem 2rem;border:none;border-radius:var(--radius);margin-top:0.5rem;transition:background 0.2s,transform 0.15s;cursor:pointer}.form-submit:hover{background:var(--accent-light);transform:translateY(-2px)}
+
+/* ── CLAIM CARD ── */
+.claim-section{background:var(--off-white);padding:3rem 2rem}.claim-card{max-width:600px;margin:0 auto;border:2px solid var(--accent);border-radius:var(--radius-lg);padding:2rem 2.25rem;background:#fff;text-align:center}.claim-card p{font-size:0.95rem;color:var(--text-mid);line-height:1.7}.claim-card strong{color:var(--text-dark)}.claim-card .claim-label{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:block}
+
+/* ── FOOTER ── */
+footer{background:var(--primary-dark);padding:2rem;text-align:center}.footer-name{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--off-white);margin-bottom:0.25rem}.footer-info{font-size:0.8rem;color:color-mix(in oklab,var(--off-white) 45%,transparent);line-height:1.8}.footer-credit{margin-top:1rem;font-size:0.72rem;color:color-mix(in oklab,var(--off-white) 28%,transparent)}.footer-credit a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color 0.2s}.footer-credit a:hover{border-color:var(--accent)}
+
+@media(max-width:768px){section{padding:3.5rem 1.25rem}nav{padding:0.875rem 1.25rem}.hero{padding:6rem 1.25rem 3.5rem}.hero-geo-circle{width:280px;height:280px;top:-80px;right:-60px}}
+@media(prefers-color-scheme:dark){body{background:color-mix(in oklab,var(--primary-dark) 95%,black)}.service-card,.detail-card,.review-card{background:color-mix(in oklab,var(--primary) 20%,black);border-color:color-mix(in oklab,var(--primary) 30%,transparent)}.service-card .service-name,.detail-card h3,.review-card .review-author{color:var(--off-white)}.service-card .service-desc,.detail-card p,.detail-list li,.review-card .review-text{color:color-mix(in oklab,var(--off-white) 65%,transparent)}.trust{background:color-mix(in oklab,var(--primary-dark) 90%,black)}.faq-list details{background:color-mix(in oklab,var(--primary) 20%,black);border-color:color-mix(in oklab,var(--primary) 35%,transparent)}.faq-list summary{color:var(--off-white)}.faq-answer{color:color-mix(in oklab,var(--off-white) 65%,transparent)}.claim-card{background:color-mix(in oklab,var(--primary) 15%,black)}.claim-card p{color:color-mix(in oklab,var(--off-white) 65%,transparent)}.claim-card strong{color:var(--off-white)}.services-detail{background:color-mix(in oklab,var(--primary-dark) 92%,black)}.section-headline{color:var(--off-white)}}
+</style></head><body>
+
+<nav aria-label=\"Main navigation\">
+  <span class=\"nav-logo\">Desert Shield Pest Control</span>
+  <a class=\"nav-phone\" href=\"tel:+16025550182\">602-555-0182</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class=\"hero\" aria-label=\"Hero\">
+  <div class=\"hero-geo-circle\" aria-hidden=\"true\"></div>
+  <div class=\"hero-geo-circle-inner\" aria-hidden=\"true\"></div>
+  <div class=\"hero-geo-line\" aria-hidden=\"true\"></div>
+  <div class=\"hero-content\">
+    <span class=\"hero-eyebrow\">Phoenix, AZ · Family-Owned Since 2004</span>
+    <h1 class=\"hero-headline\">
+      Bugs stop<br>
+      <span class=\"hl-light\">here.</span><br>
+      <em>Guaranteed.</em>
+    </h1>
+    <p class=\"hero-tagline\">We clear scorpions, termites, and roaches from Phoenix homes  -  fast treatment, no surprises on the bill.</p>
+    <a class=\"hero-cta\" href=\"#contact\">
+      Get a Free Inspection
+      <svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ── -->
+<div class=\"trust\" aria-label=\"Trust indicators\">
+  <div class=\"trust-inner\">
+    <div class=\"trust-item\">
+      <span class=\"trust-stars\" aria-hidden=\"true\">★★★★★</span>
+      <span><strong>4.9</strong> rating</span>
+    </div>
+    <div class=\"trust-divider\" aria-hidden=\"true\"></div>
+    <div class=\"trust-item\"><strong>312+</strong>&nbsp;Google reviews</div>
+    <div class=\"trust-divider\" aria-hidden=\"true\"></div>
+    <div class=\"trust-item\"><strong>20 years</strong>&nbsp;in Phoenix</div>
+    <div class=\"trust-divider\" aria-hidden=\"true\"></div>
+    <div class=\"trust-item\">Licensed &amp; Insured</div>
+    <div class=\"trust-divider\" aria-hidden=\"true\"></div>
+    <div class=\"trust-item\"><a href=\"tel:+16025550182\" style=\"color:var(--primary);font-weight:600;\">602-555-0182</a></div>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class=\"about\" id=\"about\">
+  <div class=\"section-inner\">
+    <div class=\"about-grid\">
+      <div class=\"about-text\" data-reveal>
+        <p class=\"section-label\">Our Story</p>
+        <h2 class=\"section-headline\">We know what <em>lives</em> in Arizona walls.</h2>
+        <p>We've been treating Phoenix-area homes since 2004  -  back when this zip code still had empty lots on every other block. Scorpions, termites, roof rats, black widows: we've handled every species that calls the desert home.</p>
+        <p>You don't get a franchise playbook from us. You get a technician who's treated three of your neighbors' houses and knows exactly which entry points bark scorpions use in a slab-built 1990s ranch. That local knowledge is what makes the difference between one treatment and a permanent fix.</p>
+        <p>Every job comes with a written guarantee. If the pest comes back within 30 days, so do we  -  at no charge.</p>
+      </div>
+      <div class=\"about-aside\" data-reveal>
+        <div class=\"about-stat\">
+          <div class=\"about-stat-number\">20+</div>
+          <div class=\"about-stat-label\">Years serving Maricopa County</div>
+        </div>
+        <div class=\"about-stat\">
+          <div class=\"about-stat-number\">5K+</div>
+          <div class=\"about-stat-label\">Homes treated &amp; re-treated</div>
+        </div>
+        <div class=\"about-stat\">
+          <div class=\"about-stat-number\">30-day</div>
+          <div class=\"about-stat-label\">Free re-treatment guarantee</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class=\"services\" id=\"services\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">What We Treat</p>
+    <h2 class=\"section-headline\">Six pests. <em>One call.</em></h2>
+    <div class=\"services-grid\">
+      <div class=\"service-card\" data-reveal>
+        <div class=\"service-num\" aria-hidden=\"true\">01</div>
+        <h3 class=\"service-name\">Scorpion Control</h3>
+        <p class=\"service-desc\">Bark scorpion sealing, black light inspections, and monthly barrier sprays.</p>
+      </div>
+      <div class=\"service-card\" data-reveal>
+        <div class=\"service-num\" aria-hidden=\"true\">02</div>
+        <h3 class=\"service-name\">Termite Treatment</h3>
+        <p class=\"service-desc\">Liquid barrier and bait station programs for subterranean termite colonies.</p>
+      </div>
+      <div class=\"service-card\" data-reveal>
+        <div class=\"service-num\" aria-hidden=\"true\">03</div>
+        <h3 class=\"service-name\">Cockroach Elimination</h3>
+        <p class=\"service-desc\">Gel bait, crack-and-crevice treatment  -  gone in one visit, typically.</p>
+      </div>
+      <div class=\"service-card\" data-reveal>
+        <div class=\"service-num\" aria-hidden=\"true\">04</div>
+        <h3 class=\"service-name\">Rodent Removal</h3>
+        <p class=\"service-desc\">Roof rat trapping, exclusion sealing, and attic decontamination.</p>
+      </div>
+      <div class=\"service-card\" data-reveal>
+        <div class=\"service-num\" aria-hidden=\"true\">05</div>
+        <h3 class=\"service-name\">Bee &amp; Wasp Control</h3>
+        <p class=\"service-desc\">Hive removal and same-day service for Africanized bee situations.</p>
+      </div>
+      <div class=\"service-card\" data-reveal>
+        <div class=\"service-num\" aria-hidden=\"true\">06</div>
+        <h3 class=\"service-name\">General Pest Plan</h3>
+        <p class=\"service-desc\">Quarterly exterior sprays covering ants, spiders, earwigs, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES DETAIL ── -->
+<section class=\"services-detail\" id=\"services-detail\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">A Closer Look</p>
+    <h2 class=\"section-headline\">What's actually <em>included</em></h2>
+    <div class=\"detail-grid\">
+      <div class=\"detail-card\" data-reveal>
+        <span class=\"detail-icon\" aria-hidden=\"true\">🦂</span>
+        <h3>Scorpion Control Program</h3>
+        <p>Bark scorpions are the only scorpion in North America capable of a medically significant sting  -  and they love Phoenix block walls and attic insulation. We don't just spray; we seal.</p>
+        <p>Our technicians use UV black lights during every inspection to find harborage areas your eyes miss at noon.</p>
+        <ul class=\"detail-list\">
+          <li>Full exterior perimeter barrier spray</li>
+          <li>Black light inspection of entry points</li>
+          <li>Door sweep and gap caulking</li>
+          <li>Weep-hole screening</li>
+          <li>Monthly or bi-monthly service options</li>
+        </ul>
+        <span class=\"detail-price\">Starting at $89/visit</span>
+      </div>
+      <div class=\"detail-card\" data-reveal>
+        <span class=\"detail-icon\" aria-hidden=\"true\">🪵</span>
+        <h3>Termite Treatment</h3>
+        <p>Desert subterranean termites can collapse wall framing in 18 months if left alone. We offer both liquid Termidor barrier treatments and the Sentricon bait station system  -  whichever fits your home's construction.</p>
+        <p>All termite work comes with a renewable warranty backed by a re-treat guarantee  -  not just a piece of paper.</p>
+        <ul class=\"detail-list\">
+          <li>Full-structure termite inspection</li>
+          <li>Written report with photos</li>
+          <li>Liquid OR bait station treatment</li>
+          <li>1-year renewable warranty</li>
+          <li>Annual monitoring inspections</li>
+        </ul>
+        <span class=\"detail-price\">Starting at $395 (avg. 1,500 sq ft home)</span>
+      </div>
+      <div class=\"detail-card\" data-reveal>
+        <span class=\"detail-icon\" aria-hidden=\"true\">🐀</span>
+        <h3>Rodent Removal &amp; Exclusion</h3>
+        <p>Roof rats entered the Valley from the citrus groves decades ago and never left. They nest in attics, chew wiring, and contaminate insulation. Trapping alone doesn't solve it  -  you have to seal the entry first.</p>
+        <p>We find every gap above the roofline, stuff and seal it, then remove the population already inside.</p>
+        <ul class=\"detail-list\">
+          <li>Exterior inspection for entry points</li>
+          <li>Steel mesh and foam exclusion sealing</li>
+          <li>Interior snap-trap program</li>
+          <li>Attic sanitize and deodorize (optional)</li>
+          <li>Follow-up check at 2 weeks</li>
+        </ul>
+        <span class=\"detail-price\">Starting at $250 for exclusion + trapping</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class=\"how\" id=\"how\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">The Process</p>
+    <h2 class=\"section-headline\">From call to <em>clear</em> in 48 hours.</h2>
+    <div class=\"steps-grid\">
+      <div class=\"step\" data-reveal>
+        <div class=\"step-num\" aria-hidden=\"true\">01</div>
+        <h3 class=\"step-title\">Call or Request Online</h3>
+        <p class=\"step-desc\">Tell us the pest and your address. We'll schedule within 24 hours  -  same-day for emergencies.</p>
+      </div>
+      <div class=\"step\" data-reveal>
+        <div class=\"step-num\" aria-hidden=\"true\">02</div>
+        <h3 class=\"step-title\">Free On-Site Inspection</h3>
+        <p class=\"step-desc\">A licensed technician walks the full property and shows you exactly what they find before any treatment starts.</p>
+      </div>
+      <div class=\"step\" data-reveal>
+        <div class=\"step-num\" aria-hidden=\"true\">03</div>
+        <h3 class=\"step-title\">Targeted Treatment</h3>
+        <p class=\"step-desc\">We treat the infestation, seal entry points, and apply prevention barriers  -  not just a surface spray.</p>
+      </div>
+      <div class=\"step\" data-reveal>
+        <div class=\"step-num\" aria-hidden=\"true\">04</div>
+        <h3 class=\"step-title\">30-Day Guarantee</h3>
+        <p class=\"step-desc\">If the pest returns within 30 days, we come back at zero cost. No argument, no asterisks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class=\"faq\" id=\"faq\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">Common Questions</p>
+    <h2 class=\"section-headline\">Things people <em>always</em> ask us.</h2>
+    <div class=\"faq-list\">
+      <details>
+        <summary>Are your treatments safe for kids and pets?</summary>
+        <div class=\"faq-answer\">Yes. We use EPA-registered products applied at label rates. We ask that pets and children stay off treated surfaces until dry  -  typically 30-45 minutes. We'll give you specific guidance for each product we use before we leave.</div>
+      </details>
+      <details>
+        <summary>How quickly can you get to my house?</summary>
+        <div class=\"faq-answer\">Most jobs are scheduled within 24 hours. For bee swarms, scorpion-in-the-bedroom situations, or other urgent calls, we offer same-day slots Monday through Saturday. Call us directly for same-day requests.</div>
+      </details>
+      <details>
+        <summary>Why do scorpions keep coming back even after treatment?</summary>
+        <div class=\"faq-answer\">Sprays alone don't stop scorpions long-term because they don't groom themselves the way insects do, so contact pesticides have limited effect. Lasting control requires physical exclusion  -  sealing gaps  -  combined with regular barrier treatment. One-time sprays feel good but rarely solve it.</div>
+      </details>
+      <details>
+        <summary>Do I need to be home during the treatment?</summary>
+        <div class=\"faq-answer\">For exterior-only treatments, no  -  we can handle it with gate access. Interior work requires someone 18+ to be present to let us in and get sign-off before we start.</div>
+      </details>
+      <details>
+        <summary>What's covered under your 30-day guarantee?</summary>
+        <div class=\"faq-answer\">If the same pest we treated returns within 30 days, we re-treat the affected area at no charge. The guarantee applies to the specific infestation treated  -  not new pest species that appear after the original visit.</div>
+      </details>
+      <details>
+        <summary>Do you offer monthly plans or one-time treatments?</summary>
+        <div class=\"faq-answer\">Both. One-time treatments work well for isolated problems like a single cockroach infestation. For ongoing pests like scorpions, ants, and spiders, monthly or quarterly maintenance plans keep numbers down consistently and cost less per visit than repeated one-times.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE AREA ── -->
+<section class=\"service-area\" id=\"area\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">Coverage</p>
+    <h2 class=\"section-headline\">Serving the <em>whole Valley.</em></h2>
+    <p class=\"area-intro\">Based in Phoenix, we run routes across Maricopa County six days a week. If you're in one of these cities, we can reach you today.</p>
+    <div class=\"cities-grid\" role=\"list\" aria-label=\"Cities we serve\">
+      <div class=\"city-chip\" role=\"listitem\">Phoenix</div>
+      <div class=\"city-chip\" role=\"listitem\">Scottsdale</div>
+      <div class=\"city-chip\" role=\"listitem\">Tempe</div>
+      <div class=\"city-chip\" role=\"listitem\">Mesa</div>
+      <div class=\"city-chip\" role=\"listitem\">Chandler</div>
+      <div class=\"city-chip\" role=\"listitem\">Gilbert</div>
+      <div class=\"city-chip\" role=\"listitem\">Peoria</div>
+      <div class=\"city-chip\" role=\"listitem\">Glendale</div>
+      <div class=\"city-chip\" role=\"listitem\">Surprise</div>
+      <div class=\"city-chip\" role=\"listitem\">Goodyear</div>
+      <div class=\"city-chip\" role=\"listitem\">Avondale</div>
+      <div class=\"city-chip\" role=\"listitem\">Paradise Valley</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REVIEWS ── -->
+<section class=\"reviews\" id=\"reviews\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">What Customers Say</p>
+    <h2 class=\"section-headline\">Straight from <em>Google.</em></h2>
+    <div class=\"reviews-grid\">
+      <div class=\"review-card\" data-reveal>
+        <div class=\"review-stars\" aria-label=\"5 out of 5 stars\">★★★★★</div>
+        <p class=\"review-text\">\"Called at 8am about scorpions in our master bath. They were at our house by noon, found three harborage points we never would've noticed, and sealed everything. Haven't seen one since.\"</p>
+        <div class=\"review-author\"> -  M. Hartley</div>
+        <div class=\"review-source\">Verified Google Review</div>
+      </div>
+      <div class=\"review-card\" data-reveal>
+        <div class=\"review-stars\" aria-label=\"5 out of 5 stars\">★★★★★</div>
+        <p class=\"review-text\">\"Termite inspection was thorough and the technician took the time to explain the report instead of just handing me paperwork. Chose the liquid treatment and the warranty is what sold me.\"</p>
+        <div class=\"review-author\"> -  D. Okonkwo</div>
+        <div class=\"review-source\">Verified Google Review</div>
+      </div>
+      <div class=\"review-card\" data-reveal>
+        <div class=\"review-stars\" aria-label=\"5 out of 5 stars\">★★★★★</div>
+        <p class=\"review-text\">\"We've been on their quarterly plan for two years. Roof rats are gone, no more scorpions, no more wolf spiders in the garage. Worth every penny. Easy to schedule, techs always on time.\"</p>
+        <div class=\"review-author\"> -  R. Sandoval</div>
+        <div class=\"review-source\">Verified Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class=\"contact\" id=\"contact\">
+  <div class=\"section-inner\">
+    <p class=\"section-label\">Get in Touch</p>
+    <h2 class=\"section-headline\">Book your free <em>inspection.</em></h2>
+    <div class=\"contact-grid\">
+      <div class=\"contact-info\" data-reveal>
+        <dl class=\"contact-block\">
+          <dt>Phone</dt>
+          <dd><a href=\"tel:+16025550182\">602-555-0182</a></dd>
+        </dl>
+        <dl class=\"contact-block\">
+          <dt>Address</dt>
+          <dd><a href=\"https://maps.google.com/?q=4821+N+32nd+St,+Phoenix,+AZ+85018\" target=\"_blank\" rel=\"noopener\">4821 N 32nd St<br>Phoenix, AZ 85018</a></dd>
+        </dl>
+        <dl class=\"contact-block\">
+          <dt>Hours</dt>
+          <dd>Mon - Fri: 7:00 am - 6:00 pm<br>Saturday: 8:00 am - 3:00 pm<br>Sunday: Emergency calls only</dd>
+        </dl>
+        <dl class=\"contact-block\">
+          <dt>Response Time</dt>
+          <dd>Same-day scheduling available<br>Monday through Saturday</dd>
+        </dl>
+      </div>
+      <form class=\"contact-form\" action=\"#\" method=\"post\" data-reveal aria-label=\"Contact form\">
+        <div class=\"form-group\">
+          <label for=\"name\">Your Name</label>
+          <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Jane Smith\" autocomplete=\"name\" required>
+        </div>
+        <div class=\"form-group\">
+          <label for=\"phone\">Phone Number</label>
+          <input type=\"tel\" id=\"phone\" name=\"phone\" placeholder=\"(602) 000-0000\" autocomplete=\"tel\" required>
+        </div>
+        <div class=\"form-group\">
+          <label for=\"email\">Email</label>
+          <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"jane@email.com\" autocomplete=\"email\">
+        </div>
+        <div class=\"form-group\">
+          <label for=\"service\">What can we help with?</label>
+          <select id=\"service\" name=\"service\">
+            <option value=\"\">Select a service…</option>
+            <option>Scorpion Control</option>
+            <option>Termite Treatment</option>
+            <option>Cockroach Elimination</option>
+            <option>Rodent Removal</option>
+            <option>Bee &amp; Wasp Control</option>
+            <option>General Pest Plan</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class=\"form-group\">
+          <label for=\"message\">Anything else to know?</label>
+          <textarea id=\"message\" name=\"message\" rows=\"3\" placeholder=\"e.g. Found scorpion in bathroom, older block construction…\"></textarea>
+        </div>
+        <button type=\"submit\" class=\"form-submit\">Request Free Inspection</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLAIM CARD ── -->
+<section class=\"claim-section\" aria-label=\"Preview notice\">
+  <div class=\"claim-card\" role=\"note\">
+    <span class=\"claim-label\">Free Preview</span>
+    <p>This is a demo site built by <strong>Auxo</strong> to show what Desert Shield Pest Control could look like online. If you like it, reply <strong>YES</strong> and we'll build out the full multi-page version  -  including service pages, a blog, and lead forms  -  for <strong>$297 flat.</strong></p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── */
+<footer>
+  <div class=\"footer-name\">Desert Shield Pest Control</div>
+  <div class=\"footer-info\">
+    <a href=\"tel:+16025550182\" style=\"color:var(--accent);\">602-555-0182</a><br>
+    4821 N 32nd St · Phoenix, AZ 85018
+  </div>
+  <div class=\"footer-credit\">Demo by <a href=\"https://auxoagency.co\" target=\"_blank\" rel=\"noopener\">Auxo Agency · auxoagency.co</a></div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var els=document.querySelectorAll('[data-reveal]');
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:0.12});
+  els.forEach(function(el){obs.observe(el);});
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var m = window.location.pathname.match(/\/sites\/([^\/]+)\/?/);
+    if (!m) return;
+    fetch('https://auxoagency.co/api/maps-click?slug=' + encodeURIComponent(m[1]), {
+      method: 'POST',
+      mode: 'no-cors',
+      keepalive: true
+    }).catch(function(){});
+  } catch(e) {}
+})();
+</script>
+</body></html>
