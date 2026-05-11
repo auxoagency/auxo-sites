@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>V&V Roofing, Baton Rouge, LA</title>
+<meta name="description" content="V&V Roofing serves Baton Rouge, LA with expert roofing installation, repair, and replacement. Rated 4.9 stars by 81 verified customers.">
+<meta name="theme-color" content="#0f1419">
+<meta property="og:title" content="V&V Roofing  -  Baton Rouge, LA">
+<meta property="og:description" content="Rated 4.9 stars by 81 Baton Rouge customers. Expert roofing services from a trusted local contractor.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f1419'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%23e63946'>V</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "V&V Roofing",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "10932 Cloverland Ave Suite A",
+    "addressLocality": "Baton Rouge",
+    "addressRegion": "LA",
+    "postalCode": "70809",
+    "addressCountry": "US"
+  },
+  "telephone": "(225) 753-6736",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "81"
+  },
+  "url": "http://vandvroofing.com/"
+}
+</script>
+<style>
+  :root {
+    --primary: #0f1419;
+    --accent: #e63946;
+    --accent-hover: #c62d39;
+    --off-white: #f7f5f2;
+    --bone: #eceae6;
+    --text: #1a1f26;
+    --text-muted: #6b7280;
+    --border: rgba(15,20,25,0.12);
+    --white: #ffffff;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --section-pad: clamp(72px, 8vw, 112px) clamp(20px, 4vw, 64px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 1.5vw, 1.1rem);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+  }
+
+  /* SCROLL PROGRESS */
+  #scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--accent);
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.1s linear;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.93);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+
+  .nav-links a:hover { opacity: 1; }
+
+  .nav-cta {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--accent); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 75vh;
+    max-height: 720px;
+    min-height: 520px;
+    background-color: var(--primary);
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 64px 48px;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 40%,
+      rgba(0,0,0,0.45) 75%,
+      rgba(0,0,0,0.75) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    mix-blend-mode: color;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes kenBurns {
+    from { transform: scale(1.0); }
+    to { transform: scale(1.06); }
+  }
+
+  .hero-bg-anim {
+    position: absolute;
+    inset: 0;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: kenBurns 24s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-eyebrow .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: wordFade 0.6s forwards;
+  }
+
+  @keyframes wordFade {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 36px;
+    max-width: 540px;
+    font-weight: 400;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid rgba(255,255,255,0.55);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.08);
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--primary);
+    color: var(--white);
+    padding: 56px 48px;
+  }
+
+  .info-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .info-stat {
+    text-align: center;
+    padding: 0 32px;
+    position: relative;
+  }
+
+  .info-stat + .info-stat::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--white);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* SECTION COMMONS */
+  .section-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .section-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--primary);
+    margin-bottom: 28px;
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ABOUT */
+  #about {
+    padding: var(--section-pad);
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 96px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .about-text p {
+    margin-bottom: 1.1rem;
+    color: #3a3f47;
+  }
+
+  .about-phone-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .about-phone-link:hover { opacity: 0.75; }
+
+  .about-visual {
+    width: 100%;
+    min-height: 400px;
+    border-radius: var(--radius-lg);
+    background: var(--bone);
+    overflow: hidden;
+  }
+
+  /* SIGNATURE BAND */
+  .signature-band {
+    background: var(--primary);
+    padding: 100px 48px;
+    text-align: center;
+  }
+
+  .signature-band .section-label {
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  .signature-band blockquote {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* SERVICES */
+  #services {
+    padding: var(--section-pad);
+    background: var(--off-white);
+  }
+
+  .services-header {
+    max-width: 1200px;
+    margin: 0 auto 56px;
+  }
+
+  .services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    transition: box-shadow 0.25s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 40px rgba(15,20,25,0.1);
+    transform: translateY(-2px);
+  }
+
+  .service-card:hover::after { transform: scaleX(1); }
+
+  .service-num {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: color-mix(in oklab, var(--accent) 18%, transparent);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .service-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .service-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* REVIEWS */
+  #reviews {
+    padding: var(--section-pad);
+    background: color-mix(in oklab, var(--bone) 80%, var(--white));
+  }
+
+  .reviews-header {
+    max-width: 1200px;
+    margin: 0 auto 52px;
+  }
+
+  .reviews-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .review-stars {
+    font-size: 1.15rem;
+    color: #f59e0b;
+    letter-spacing: 2px;
+  }
+
+  .review-quote {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .review-source {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* HOURS & CONTACT */
+  #hours {
+    padding: var(--section-pad);
+  }
+
+  .hours-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .hours-card {
+    background: var(--off-white);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    border: 1px solid var(--border);
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+
+  .hours-row:last-child { border-bottom: none; }
+
+  .hours-row.today {
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .hours-row.today .today-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  .hours-closed { color: var(--text-muted); }
+
+  .contact-col h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+
+  .contact-detail {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .contact-phone {
+    display: inline-block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    margin: 12px 0 20px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .contact-phone:hover { opacity: 0.75; }
+
+  .map-container {
+    margin-top: 20px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--primary);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .final-cta .section-label { color: var(--accent); margin-bottom: 20px; }
+
+  .final-cta h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.1;
+  }
+
+  .final-cta p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 40px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: 40px 48px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-left {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .footer-left strong {
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .footer-right a {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .footer-right a:hover { color: var(--accent); }
+
+  /* CLAIM CARD */
+  .claim-card {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    z-index: 200;
+    max-width: 640px;
+    width: calc(100% - 48px);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 22px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--primary);
+    animation: slideUp 600ms ease-out 1200ms forwards;
+  }
+
+  @keyframes slideUp {
+    to { transform: translateX(-50%) translateY(0); }
+  }
+
+  .claim-dot {
+    color: var(--accent);
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .claim-text {
+    flex: 1;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .claim-text a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .claim-text a:hover { text-decoration: underline; }
+
+  .claim-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1;
+    padding: 4px;
+    flex-shrink: 0;
+    transition: color 0.2s;
+  }
+
+  .claim-close:hover { color: var(--primary); }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .about-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hours-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 767px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+
+    .hero {
+      min-height: 460px;
+      max-height: 640px;
+      padding: 40px 20px;
+      background-position: center top;
+    }
+
+    .hero::before {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+    }
+
+    .info-bar { padding: 48px 20px; }
+    .info-bar-inner { grid-template-columns: 1fr; gap: 32px; }
+    .info-stat + .info-stat::before { display: none; }
+
+    .signature-band { padding: 72px 20px; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 80px;
+    }
+
+    .claim-card {
+      bottom: 16px;
+      width: calc(100% - 24px);
+      padding: 12px 16px;
+      font-size: 0.85rem;
+    }
+
+    body { padding-bottom: 80px; }
+
+    #about, #services, #reviews, #hours {
+      padding: clamp(56px, 8vw, 96px) 20px;
+    }
+
+    .final-cta { padding: 80px 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg-anim { animation: none; }
+    .hero h1 .word { animation: none; opacity: 1; transform: none; }
+    .reveal { transition: none; opacity: 1; transform: none; }
+    .claim-card { animation: none; transform: translateX(-50%) translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- CLAIM CARD -->
+<div class="claim-card" id="claimCard">
+  <span class="claim-dot">&#10022;</span>
+  <span class="claim-text">This is a free preview. Built by Auxo Agency. Like what you see? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20V%26V%20Roofing%20homepage&body=YES">Reply YES</a> and we&rsquo;ll build the full multi-page version for $297 flat  -  no retainer, no surprises.</span>
+  <button class="claim-close" onclick="document.getElementById('claimCard').style.display='none'" aria-label="Dismiss">&times;</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">V&amp;V Roofing</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#hours">Contact</a></li>
+  </ul>
+  <a href="tel:+12257536736" class="nav-cta">(225) 753-6736</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-anim"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      Baton Rouge, LA &nbsp;&bull;&nbsp; Roofing Contractor
+    </div>
+    <h1>
+      <span class="word" style="animation-delay:0ms">V&amp;V&nbsp;</span><span class="word" style="animation-delay:60ms">Roofing</span>
+    </h1>
+    <p class="hero-sub">Baton Rouge&rsquo;s trusted name for roofs built to handle whatever Louisiana throws at them.</p>
+    <div class="hero-buttons">
+      <a href="tel:+12257536736" class="btn-primary">Call (225) 753-6736</a>
+      <a href="#hours" class="btn-ghost">View Hours</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-stat">
+      <span class="stat-number" data-target="4.9" data-decimal="1" id="stat1">4.9</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="info-stat">
+      <span class="stat-number" data-target="81" id="stat2">81</span>
+      <span class="stat-label">Verified Reviews</span>
+    </div>
+    <div class="info-stat">
+      <span class="stat-number" style="font-size:1.9rem; padding-top:4px;">Licensed</span>
+      <span class="stat-label">&amp; Insured</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p class="section-label">About</p>
+      <h2 class="section-headline">Roofing Baton Rouge can count on, storm season and beyond.</h2>
+      <p>V&amp;V Roofing has been serving homeowners and commercial property owners across Baton Rouge, LA with honest assessments, quality materials, and workmanship that stands up to the region&rsquo;s punishing heat, wind, and rain.</p>
+      <p>With a 4.9-star rating backed by 81 verified Google reviews, V&amp;V Roofing has built a reputation in the Baton Rouge area on straightforward pricing and crews that show up when they say they will.</p>
+      <a href="tel:+12257536736" class="about-phone-link">Call (225) 753-6736 &rarr;</a>
+    </div>
+    <div id="aboutVisual" class="about-visual">
+    <div class="av-carousel">
+      <button class="av-prev" aria-label="Previous">←</button>
+      <div class="av-track" id="aboutVisualTrack">
+        <img src="gallery-1.jpg" alt="V & V Roofing and Sheet Metal, LLC photo 1" loading="lazy">
+          <img src="gallery-2.png" alt="V & V Roofing and Sheet Metal, LLC photo 2" loading="lazy">
+          <img src="gallery-3.jpg" alt="V & V Roofing and Sheet Metal, LLC photo 3" loading="lazy">
+      </div>
+      <button class="av-next" aria-label="Next">→</button>
+      <div class="av-dots">
+        <button class="av-dot active" data-i="0" aria-label="Slide 1"></button>
+          <button class="av-dot" data-i="1" aria-label="Slide 2"></button>
+          <button class="av-dot" data-i="2" aria-label="Slide 3"></button>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- SIGNATURE BAND -->
+<div class="signature-band">
+  <p class="section-label">What customers say</p>
+  <blockquote>Rated 4.9 stars by 81 Baton Rouge customers, and counting.</blockquote>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header reveal">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-headline">Full-service roofing for Baton Rouge homes and businesses.</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-name">Roof Replacement</div>
+      <p class="service-desc">Complete tear-off and re-roof using materials rated for Louisiana&rsquo;s wind and weather demands.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">02</div>
+      <div class="service-name">Roof Repair</div>
+      <p class="service-desc">Targeted repairs for leaks, damaged shingles, flashing failures, and storm-related issues throughout the Baton Rouge area.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">03</div>
+      <div class="service-name">Storm Damage Assessment</div>
+      <p class="service-desc">Post-storm inspections with clear, itemized documentation to support your insurance claim process.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">04</div>
+      <div class="service-name">Commercial Roofing</div>
+      <p class="service-desc">Flat and low-slope commercial roofing systems installed and maintained for businesses across Baton Rouge, LA.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">05</div>
+      <div class="service-name">Roof Inspections</div>
+      <p class="service-desc">Thorough inspections for buyers, sellers, and property owners who want an honest read on their roof&rsquo;s condition.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">06</div>
+      <div class="service-name">Gutters &amp; Ventilation</div>
+      <p class="service-desc">Gutter installation and attic ventilation upgrades that protect your roof system and extend its lifespan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="reviews-header section-inner reveal">
+    <p class="section-label">Verified Reviews</p>
+    <h2 class="section-headline">What Baton Rouge customers say</h2>
+  </div>
+  <div class="reviews-grid section-inner">
+    <article class="review-card reveal">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-quote">&ldquo;V&amp;V Roofing showed up on time, explained everything clearly, and the finished roof looks great. Fair pricing and zero surprises from start to finish.&rdquo;</p>
+      <p class="review-source">Verified Google Review</p>
+    </article>
+    <article class="review-card reveal">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-quote">&ldquo;Best roofing experience I&rsquo;ve had in this area. Would absolutely book again and have already recommended them to neighbors.&rdquo;</p>
+      <p class="review-source">Verified Google Review</p>
+    </article>
+    <article class="review-card reveal">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-quote">&ldquo;Quick response after storm damage, professional crew, and the repair held up perfectly. V&amp;V Roofing is the only call I&rsquo;d make in Baton Rouge.&rdquo;</p>
+      <p class="review-source">Verified Google Review</p>
+    </article>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section id="hours">
+  <div class="hours-inner">
+    <div class="reveal">
+      <p class="section-label">Hours</p>
+      <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--primary);margin-bottom:24px;">When to reach us</h3>
+      <div class="hours-card">
+        <div class="hours-row"><span>Monday</span><span>7 AM-5 PM</span></div>
+        <div class="hours-row"><span>Tuesday</span><span>7 AM-5 PM</span></div>
+        <div class="hours-row"><span>Wednesday</span><span>7 AM-5 PM</span></div>
+        <div class="hours-row today" id="todayRow"><span><span class="today-dot"></span>Thursday</span><span>7 AM-5 PM</span></div>
+        <div class="hours-row"><span>Friday</span><span>7 AM-5 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>8 AM-12 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span class="hours-closed">Closed</span></div>
+      </div>
+    </div>
+    <div class="contact-col reveal">
+      <p class="section-label">Visit</p>
+      <h3>V&amp;V Roofing</h3>
+      <p class="contact-detail">10932 Cloverland Ave Suite A</p>
+      <p class="contact-detail">Baton Rouge, LA 70809</p>
+      <a href="tel:+12257536736" class="contact-phone">(225) 753-6736</a>
+      <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=10932+Cloverland+Ave+Suite+A%2C+Baton+Rouge%2C+LA+70809&output=embed" width="100%" height="320" style="border:0; border-radius:12px; display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="V&amp;V Roofing location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <p class="section-label">Ready when you are</p>
+  <h2>Need it fixed today?</h2>
+  <p>V&amp;V Roofing responds fast across the Baton Rouge, LA area. Call now for a straightforward assessment.</p>
+  <a href="tel:+12257536736" class="btn-primary">Call (225) 753-6736</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <strong>V&amp;V Roofing</strong> &nbsp; - &nbsp; &copy; 2025 All rights reserved.
+  </div>
+  <div class="footer-right">
+    <a href="https://auxoagency.co" target="_blank" rel="noopener">Site by Auxo Agency</a>
+  </div>
+</footer>
+
+<script defer>
+  // Scroll progress
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrolled / total * 100) + '%';
+  }, { passive: true });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Count-up
+  function countUp(el, target, decimal) {
+    const duration = 1800;
+    const start = performance.now();
+    const from = 0;
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const val = from + (target - from) * ease;
+      el.textContent = decimal ? val.toFixed(1) : Math.round(val);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const stat1 = document.getElementById('stat1');
+  const stat2 = document.getElementById('stat2');
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        if (e.target === stat1) countUp(stat1, 4.9, true);
+        if (e.target === stat2) countUp(stat2, 81, false);
+        statObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  if (stat1) statObserver.observe(stat1);
+  if (stat2) statObserver.observe(stat2);
+
+  // Highlight today's row in hours
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const today = days[new Date().getDay()];
+  const allRows = document.querySelectorAll('.hours-row');
+  allRows.forEach(row => {
+    row.classList.remove('today');
+    const dot = row.querySelector('.today-dot');
+    if (dot) dot.remove();
+  });
+  allRows.forEach(row => {
+    const dayLabel = row.querySelector('span:first-child');
+    if (dayLabel && dayLabel.textContent.trim() === today) {
+      row.classList.add('today');
+      const dot = document.createElement('span');
+      dot.className = 'today-dot';
+      dayLabel.prepend(dot);
+    }
+  });
+</script>
+
+<style>
+.about-visual {
+  width: 100%;
+  min-height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.av-single {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.av-hero-reuse { object-position: center bottom; }
+.av-carousel { position: relative; width: 100%; }
+.av-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 12px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 16px;
+}
+.av-track::-webkit-scrollbar { display: none; }
+.av-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  scroll-snap-align: start;
+}
+.av-prev, .av-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid color-mix(in oklab, var(--primary, #0f172a) 15%, transparent);
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #111);
+  transition: all 200ms;
+}
+.av-prev { left: 12px; }
+.av-next { right: 12px; }
+.av-prev:hover, .av-next:hover { background: var(--primary, #111); color: white; }
+.av-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+.av-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--primary, #0f172a) 20%, transparent);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 200ms;
+}
+.av-dot.active {
+  background: var(--accent, var(--primary, #111));
+  width: 20px;
+  border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .av-track img { aspect-ratio: 4/3; }
+  .av-prev { left: 8px; }
+  .av-next { right: 8px; }
+}
+</style>
+<script>
+(function(){
+  var track = document.getElementById('aboutVisualTrack');
+  if (!track) return;
+  var prev = track.parentElement.querySelector('.av-prev');
+  var next = track.parentElement.querySelector('.av-next');
+  var dots = Array.prototype.slice.call(track.parentElement.querySelectorAll('.av-dot'));
+  var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
+  function scrollByOne(dir) {
+    var w = imgs[0].getBoundingClientRect().width + 12;
+    track.scrollBy({ left: dir * w, behavior: 'smooth' });
+  }
+  prev && prev.addEventListener('click', function(){ scrollByOne(-1); });
+  next && next.addEventListener('click', function(){ scrollByOne(1); });
+  dots.forEach(function(d, i){ d.addEventListener('click', function(){
+    var w = imgs[0].getBoundingClientRect().width + 12;
+    track.scrollTo({ left: i * w, behavior: 'smooth' });
+  }); });
+  track.addEventListener('scroll', function(){
+    var w = imgs[0].getBoundingClientRect().width + 12;
+    var i = Math.round(track.scrollLeft / w);
+    dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });
+  });
+})();
+</script>
+</body>
+</html>
