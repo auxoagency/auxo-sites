@@ -6,18 +6,18 @@
 <meta name="color-scheme" content="light">
 <meta name="robots" content="noindex, nofollow">
 <title>Arceneaux Pest Control, Baton Rouge, LA</title>
-<meta name="description" content="Arceneaux Pest Control serves Baton Rouge, LA with 4.8-star rated pest elimination. 142 verified reviews. Call (225) 791-9911 for fast, reliable service.">
-<meta name="theme-color" content="#111111">
+<meta name="description" content="Arceneaux Pest Control serves Baton Rouge, LA with 4.8-star rated pest services. 142 verified Google reviews. Call (225) 791-9911 for same-day service.">
+<meta name="theme-color" content="#0d0d0d">
 <meta property="og:title" content="Arceneaux Pest Control | Baton Rouge, LA">
 <meta property="og:description" content="Baton Rouge's trusted pest control. 4.8 stars, 142 reviews. Call (225) 791-9911.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Arceneaux Pest Control | Baton Rouge, LA">
-<meta name="twitter:description" content="Baton Rouge's trusted pest control. 4.8 stars, 142 reviews.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23111111'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23f59e0b'>A</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d0d0d'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%23c7511f'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,7 +32,6 @@
     "addressCountry": "US"
   },
   "telephone": "(225) 791-9911",
-  "url": "https://arceneauxpest.com/",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
@@ -40,27 +39,19 @@
   }
 }
 </script>
+
 <style>
   :root {
-    --primary: #111111;
-    --accent: #f59e0b;
-    --bg: #fafaf7;
-    --text: #111111;
-    --text-muted: #6b7280;
-    --border: #e5e7eb;
-    --card-bg: #ffffff;
-    --font-display: 'Bricolage Grotesque', sans-serif;
-    --font-body: 'Crimson Text', serif;
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 16px;
-    --radius-pill: 999px;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
-    --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
-    --spacing-section: 96px;
-    --spacing-section-mobile: 72px;
-    --container: 1200px;
+    --primary: #0d0d0d;
+    --accent: #c7511f;
+    --off-white: #f7f6f3;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e2e0dc;
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+    --accent-soft: color-mix(in oklab, var(--accent) 12%, transparent);
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -69,43 +60,39 @@
 
   body {
     font-family: var(--font-body);
-    font-size: 1.1rem;
     color: var(--text);
-    background: var(--bg);
+    background: var(--white);
+    font-size: 1.05rem;
     line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
-  /* Scroll Progress */
+  /* SCROLL PROGRESS */
   .scroll-progress {
     position: fixed;
     top: 0;
     left: 0;
     height: 3px;
     width: 100%;
-    background: transparent;
-    z-index: 9999;
-    pointer-events: none;
+    background: var(--border);
+    z-index: 999;
   }
-  .scroll-progress::after {
-    content: '';
-    display: block;
+  .scroll-progress-bar {
     height: 100%;
-    width: 100%;
     background: var(--accent);
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: scroll-track linear both;
+    width: 0%;
+    animation: progressGrow linear;
     animation-timeline: scroll();
+    transform-origin: left;
   }
-  @keyframes scroll-track { to { transform: scaleX(1); } }
+  @keyframes progressGrow { to { width: 100%; } }
 
-  /* Nav */
-  .nav {
+  /* NAV */
+  nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(250,250,247,0.92);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -117,64 +104,63 @@
   }
   .nav-logo {
     font-family: var(--font-display);
+    font-weight: 700;
     font-size: 1.2rem;
-    font-weight: 800;
     color: var(--primary);
     text-decoration: none;
-    letter-spacing: -0.02em;
-    flex-shrink: 0;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
-  .nav-logo span { color: var(--accent); }
   .nav-links {
     display: flex;
-    align-items: center;
-    gap: 32px;
+    gap: 36px;
     list-style: none;
   }
   .nav-links a {
-    font-family: var(--font-display);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--primary);
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text);
     text-decoration: none;
     position: relative;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
   }
   .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1.5px;
     background: var(--accent);
-    transition: width 0.3s ease;
+    transition: width 260ms ease;
   }
   .nav-links a:hover::after { width: 100%; }
   .nav-cta {
-    font-family: var(--font-display);
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--bg);
     background: var(--primary);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 10px 22px;
+    border-radius: 999px;
     text-decoration: none;
-    padding: 11px 22px;
-    border-radius: var(--radius-pill);
-    transition: background 0.2s, transform 0.2s;
     white-space: nowrap;
-    flex-shrink: 0;
+    transition: background 220ms, transform 200ms;
+    border: none;
+    cursor: pointer;
   }
-  .nav-cta:hover { background: #2a2a2a; transform: scale(1.03); }
+  .nav-cta:hover { background: var(--accent); transform: scale(1.03); }
 
-  /* Hero */
+  /* HERO */
   .hero {
     position: relative;
     height: 75vh;
     max-height: 720px;
     min-height: 520px;
+    background-color: var(--primary);
     background-image:
-      linear-gradient(135deg, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.3) 50%, rgba(0,0,0,0.62) 100%),
-      url('https://preview.meetauxo.com/sites/arceneaux-pest-control/hero.jpg');
+      linear-gradient(135deg, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.55) 50%, rgba(0,0,0,0.62) 100%),
+      url('hero.jpg');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -182,31 +168,42 @@
     align-items: flex-end;
     padding: 64px 48px;
     overflow: hidden;
-    animation: kenBurns 24s ease-in-out infinite alternate;
   }
-  @keyframes kenBurns {
-    from { background-size: 100%; }
-    to { background-size: 106%; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: kenBurns 24s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  @keyframes kenBurns { from { transform: scale(1.0); } to { transform: scale(1.06); } }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,0.5) 55%, rgba(0,0,0,0.58) 100%);
+    z-index: 1;
   }
   .hero-content {
-    max-width: 720px;
-    text-align: left;
     position: relative;
     z-index: 2;
+    max-width: 720px;
+    text-align: left;
   }
   .hero-eyebrow {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: var(--font-display);
     font-size: 0.82rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.82);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
     margin-bottom: 20px;
   }
-  .hero-eyebrow-dot {
+  .hero-eyebrow .dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -215,282 +212,234 @@
   }
   .hero h1 {
     font-family: var(--font-display);
+    font-weight: 900;
     font-size: clamp(3rem, 6vw, 5.2rem);
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
   }
   .hero h1 .word {
     display: inline-block;
     opacity: 0;
-    transform: translateY(24px);
-    animation: wordFadeIn 0.6s ease forwards;
+    transform: translateY(18px);
+    animation: wordIn 500ms forwards;
   }
-  @keyframes wordFadeIn {
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .hero-sub {
-    font-family: var(--font-body);
-    font-size: 1.2rem;
-    color: rgba(255,255,255,0.85);
+  @keyframes wordIn { to { opacity: 1; transform: translateY(0); } }
+  .hero-subhead {
+    font-size: 1.12rem;
+    color: rgba(255,255,255,0.78);
+    max-width: 480px;
     margin-bottom: 36px;
-    max-width: 520px;
-    font-style: italic;
+    line-height: 1.6;
   }
-  .hero-buttons {
+  .hero-actions {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
   }
   .btn-primary {
-    font-family: var(--font-display);
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--primary);
     background: var(--accent);
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: var(--radius-sm);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .btn-primary:hover { transform: scale(1.03); box-shadow: 0 8px 24px rgba(245,158,11,0.38); }
-  .btn-secondary {
-    font-family: var(--font-display);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
     font-size: 0.95rem;
-    font-weight: 700;
-    color: #ffffff;
-    background: transparent;
+    padding: 14px 28px;
+    border-radius: 6px;
     text-decoration: none;
-    padding: 15px 30px;
-    border-radius: var(--radius-sm);
-    border: 2px solid rgba(255,255,255,0.7);
-    transition: border-color 0.2s, background 0.2s;
+    transition: transform 200ms, box-shadow 200ms;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    min-height: 52px;
   }
-  .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+  .btn-primary:hover { transform: scale(1.03); box-shadow: 0 8px 24px rgba(199,81,31,0.35); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: 1.5px solid rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: border-color 220ms, background 220ms;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.08); }
 
-  /* Info Bar */
+  /* INFO BAR */
   .info-bar {
     background: var(--primary);
-    color: #ffffff;
+    color: var(--white);
     padding: 56px 48px;
   }
   .info-bar-inner {
-    max-width: var(--container);
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1px 1fr 1px 1fr;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
   }
-  .info-divider {
-    background: rgba(255,255,255,0.15);
-    height: 60px;
-    width: 1px;
-    justify-self: center;
-  }
   .info-stat {
-    text-align: center;
     padding: 0 40px;
+    border-right: 1px solid rgba(255,255,255,0.12);
   }
-  .info-stat-num {
+  .info-stat:first-child { padding-left: 0; }
+  .info-stat:last-child { border-right: none; }
+  .stat-num {
     font-family: var(--font-display);
-    font-size: clamp(2.4rem, 4vw, 3.2rem);
-    font-weight: 800;
-    color: var(--accent);
-    letter-spacing: -0.03em;
-    line-height: 1.0;
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
     display: block;
   }
-  .info-stat-label {
-    font-family: var(--font-display);
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.65);
+  .stat-num .accent { color: var(--accent); }
+  .stat-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    letter-spacing: 0.07em;
-    margin-top: 6px;
-    display: block;
   }
 
-  /* Container */
-  .container {
-    max-width: var(--container);
+  /* SECTIONS SHARED */
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .section-headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--primary);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+  .section-inner {
+    max-width: 1200px;
     margin: 0 auto;
-    padding-left: 48px;
-    padding-right: 48px;
   }
 
-  /* About */
-  .about-section {
-    padding: var(--spacing-section) 48px;
-    max-width: var(--container);
-    margin: 0 auto;
+  /* ABOUT */
+  .about {
+    padding: 96px 48px;
   }
   .about-grid {
     display: grid;
     grid-template-columns: 5fr 4fr;
     gap: 96px;
-    align-items: center;
+    align-items: start;
   }
-  .eyebrow {
-    font-family: var(--font-display);
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .eyebrow::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
-  .section-h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+  .about-text .section-headline {
     margin-bottom: 28px;
-    color: var(--primary);
+    margin-top: 8px;
   }
   .about-text p {
-    font-size: 1.1rem;
-    color: #374151;
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.72;
     margin-bottom: 18px;
-    line-height: 1.7;
+    max-width: 560px;
   }
-  .about-text a {
-    color: var(--primary);
+  .about-text p:last-of-type { margin-bottom: 0; }
+  .about-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
     font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1.05rem;
+    transition: gap 200ms;
   }
-  /* About visual: hero reuse bento */
+  .about-phone:hover { gap: 12px; }
   .about-visual {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
-  .about-photo-card {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    background-image: url('https://preview.meetauxo.com/sites/arceneaux-pest-control/hero.jpg');
-    background-size: cover;
-    background-position: center bottom;
-    position: relative;
+  .about-hero-img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    display: block;
   }
-  .about-photo-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(17,17,17,0.55) 100%);
-    border-radius: var(--radius-lg);
-  }
-  .about-mini-bento {
+  .about-bento {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 12px;
   }
-  .mini-stat-card {
-    background: var(--card-bg);
+  .bento-card {
+    background: var(--off-white);
+    border-radius: 8px;
+    padding: 20px 18px;
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 20px 22px;
   }
-  .mini-stat-card .num {
+  .bento-card .bento-num {
     font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
+    font-size: 1.8rem;
     color: var(--primary);
-    letter-spacing: -0.03em;
-    display: block;
-    line-height: 1.0;
+    line-height: 1;
+    margin-bottom: 6px;
   }
-  .mini-stat-card .lbl {
-    font-family: var(--font-display);
-    font-size: 0.78rem;
+  .bento-card .bento-num span { color: var(--accent); }
+  .bento-card .bento-label {
+    font-size: 0.82rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--text-muted);
-    margin-top: 4px;
-    display: block;
+    color: var(--muted);
+    letter-spacing: 0.04em;
   }
-  .mini-stat-card.accent-card {
-    background: var(--accent);
-    border-color: var(--accent);
-  }
-  .mini-stat-card.accent-card .num,
-  .mini-stat-card.accent-card .lbl { color: var(--primary); }
 
-  /* Signature Band */
+  /* SIGNATURE BAND */
   .signature-band {
     background: var(--primary);
     padding: 100px 48px;
     text-align: center;
   }
-  .signature-band .eyebrow { justify-content: center; color: var(--accent); }
-  .signature-band .eyebrow::before { background: var(--accent); }
-  .signature-pull {
+  .signature-band .section-label { color: var(--accent); }
+  .signature-band .pull-quote {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 4.5vw, 3.4rem);
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.12;
-    letter-spacing: -0.03em;
-    max-width: 800px;
-    margin: 0 auto 32px;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+    color: var(--white);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    max-width: 780px;
+    margin: 0 auto 28px;
   }
-  .signature-pull em {
-    color: var(--accent);
-    font-style: normal;
-  }
-  .review-link {
-    font-family: var(--font-display);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.65);
-    text-decoration: none;
+  .signature-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    transition: color 0.2s;
+    gap: 8px;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 220ms, gap 200ms;
   }
-  .review-link:hover { color: var(--accent); }
-  .review-link svg { transition: transform 0.2s; }
-  .review-link:hover svg { transform: translateX(4px); }
+  .signature-link:hover { color: var(--white); gap: 12px; }
 
-  /* Services */
-  .services-section {
-    padding: var(--spacing-section) 48px;
-    max-width: var(--container);
-    margin: 0 auto;
+  /* SERVICES */
+  .services {
+    padding: 96px 48px;
+    background: var(--off-white);
   }
   .services-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: end;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
   .services-grid {
     display: grid;
@@ -498,57 +447,100 @@
     gap: 24px;
   }
   .service-card {
-    background: var(--card-bg);
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 32px 28px;
-    transition: transform 0.25s, box-shadow 0.25s;
+    border-radius: 4px;
+    padding: 32px 28px 28px;
     position: relative;
-    overflow: hidden;
+    transition: border-color 250ms, transform 200ms;
+    animation: revealUp 500ms both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
   }
-  .service-card::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { border-color: var(--accent); transform: translateY(-3px); }
   .service-num {
     font-family: var(--font-display);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     font-weight: 700;
     color: var(--accent);
     letter-spacing: 0.08em;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     display: block;
   }
-  .service-name {
+  .service-title {
     font-family: var(--font-display);
-    font-size: 1.15rem;
     font-weight: 700;
+    font-size: 1.25rem;
     color: var(--primary);
     margin-bottom: 12px;
     line-height: 1.2;
   }
   .service-desc {
-    font-family: var(--font-body);
-    font-size: 1.0rem;
-    color: #4b5563;
+    font-size: 0.95rem;
+    color: #555;
     line-height: 1.6;
   }
 
-  /* Hours and Contact */
-  .hours-section {
-    padding: var(--spacing-section) 48px;
-    max-width: var(--container);
-    margin: 0 auto;
+  /* REVIEWS */
+  .reviews {
+    padding: 96px 48px;
+    background: var(--white);
+  }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .review-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: revealUp 500ms both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+  .review-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 8px;
+    right: 24px;
+    font-family: var(--font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: color-mix(in oklab, var(--accent) 22%, transparent);
+  }
+  .review-stars {
+    color: var(--accent);
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  .review-quote {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text);
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .review-source {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+
+  /* HOURS */
+  #hours {
+    padding: 96px 48px;
+    background: var(--off-white);
   }
   .hours-grid {
     display: grid;
@@ -557,142 +549,122 @@
     align-items: start;
   }
   .hours-card {
-    background: var(--card-bg);
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px 32px;
+    border-radius: 8px;
+    overflow: hidden;
     margin-top: 24px;
   }
   .hours-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0;
+    padding: 13px 22px;
     border-bottom: 1px solid var(--border);
-    font-family: var(--font-display);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.92rem;
   }
   .hours-row:last-child { border-bottom: none; }
   .hours-row.today {
-    font-weight: 700;
-    color: var(--primary);
+    background: color-mix(in oklab, var(--accent) 8%, transparent);
   }
-  .hours-row.today .hours-time {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+  .hours-row.today .day { font-weight: 700; color: var(--primary); }
+  .hours-row.today .time { font-weight: 700; color: var(--accent); }
   .today-dot {
-    width: 8px;
-    height: 8px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--accent);
-    flex-shrink: 0;
+    margin-right: 7px;
+    vertical-align: middle;
   }
-  .hours-day { color: var(--text-muted); font-weight: 500; }
-  .hours-row.today .hours-day { color: var(--primary); font-weight: 700; }
-  .closed-text { color: #9ca3af; font-style: italic; }
-  .contact-side h3 {
+  .hours-row .day { color: var(--text); }
+  .hours-row .time { color: var(--muted); }
+  .hours-row .time.closed { color: #bbb; font-style: italic; }
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .contact-block h3 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary);
-    margin-bottom: 12px;
-    letter-spacing: -0.02em;
-  }
-  .contact-side .address-line {
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-    color: #4b5563;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-  .contact-phone {
-    font-family: var(--font-display);
-    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--accent);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 24px;
-    transition: opacity 0.2s;
+    font-size: 1.45rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+    margin-top: 14px;
   }
-  .contact-phone:hover { opacity: 0.8; }
+  .contact-block p, .contact-block a {
+    font-size: 0.96rem;
+    color: #555;
+    text-decoration: none;
+  }
+  .contact-block a.phone-link {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .contact-block a.phone-link:hover { text-decoration: underline; }
   .map-wrap {
-    border-radius: var(--radius-lg);
+    margin-top: 22px;
+    border-radius: 12px;
     overflow: hidden;
-    margin-top: 4px;
+    border: 1px solid var(--border);
   }
 
-  /* Final CTA */
+  /* FINAL CTA */
   .final-cta {
     background: var(--primary);
     padding: 120px 48px;
     text-align: center;
   }
-  .final-cta .eyebrow { justify-content: center; color: var(--accent); }
-  .final-cta .eyebrow::before { background: var(--accent); }
+  .final-cta .section-label { color: var(--accent); }
   .final-cta h2 {
     font-family: var(--font-display);
+    font-weight: 900;
     font-size: clamp(2.4rem, 5vw, 3.6rem);
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    max-width: 700px;
-    margin: 0 auto 18px;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin: 14px 0 18px;
+    line-height: 1.1;
   }
-  .final-cta-sub {
-    font-family: var(--font-body);
-    font-size: 1.15rem;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 44px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  .final-cta p {
+    font-size: 1.12rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 480px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
   }
-  .final-cta .btn-primary { font-size: 1.05rem; padding: 17px 36px; }
 
-  /* Footer */
+  /* FOOTER */
   footer {
-    background: var(--bg);
+    background: var(--white);
     border-top: 1px solid var(--border);
     padding: 40px 48px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     max-width: 100%;
   }
   .footer-left {
-    font-family: var(--font-display);
     font-size: 0.88rem;
-    color: var(--text-muted);
-    font-weight: 500;
+    color: var(--muted);
   }
   .footer-left strong {
-    display: block;
-    font-weight: 700;
     color: var(--primary);
-    font-size: 0.95rem;
-    margin-bottom: 2px;
-  }
-  .footer-right {
     font-family: var(--font-display);
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    font-weight: 700;
   }
   .footer-right a {
-    color: var(--primary);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
   }
+  .footer-right a:hover { color: var(--accent); }
 
-  /* Claim Card / Floating Pill */
+  /* CLAIM CARD */
   .claim-pill {
     position: fixed;
     bottom: 24px;
@@ -701,8 +673,7 @@
     z-index: 200;
     max-width: 640px;
     width: calc(100% - 48px);
-    background: #ffffff;
-    color: var(--primary);
+    background: var(--white);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 14px 22px;
@@ -710,133 +681,88 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    animation: pillSlideIn 600ms ease-out 1200ms forwards;
-  }
-  @keyframes pillSlideIn {
-    to { transform: translateX(-50%) translateY(0); }
-  }
-  .claim-dot {
-    color: var(--accent);
-    font-size: 1.1rem;
-    flex-shrink: 0;
-  }
-  .claim-text {
-    flex: 1;
-    font-family: var(--font-display);
     font-size: 0.92rem;
     font-weight: 500;
     color: var(--primary);
-    line-height: 1.45;
+    animation: pillSlideIn 600ms ease-out 1200ms forwards;
   }
-  .claim-text a {
-    color: var(--primary);
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+  @keyframes pillSlideIn { to { transform: translateX(-50%) translateY(0); } }
+  .claim-dot {
+    color: var(--accent);
+    font-size: 1rem;
+    flex-shrink: 0;
   }
+  .claim-text { flex: 1; line-height: 1.5; font-size: 0.88rem; }
+  .claim-text a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  .claim-text a:hover { text-decoration: underline; }
   .claim-close {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--text-muted);
-    font-size: 1.2rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+    padding: 2px;
     flex-shrink: 0;
-    padding: 4px;
     line-height: 1;
-    transition: color 0.2s;
+    transition: color 200ms;
   }
   .claim-close:hover { color: var(--primary); }
 
-  /* Scroll reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    animation: revealUp 700ms ease forwards;
-    animation-timeline: view();
-    animation-range: entry 0% entry 35%;
-  }
+  /* ANIMATIONS */
   @keyframes revealUp {
+    from { opacity: 0; transform: translateY(28px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
-  /* Reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-    .hero h1 .word { opacity: 1; transform: none; }
-    .claim-pill { transform: translateX(-50%) translateY(0); }
-    .reveal { opacity: 1; transform: none; }
+  .reveal {
+    animation: revealUp 560ms both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
   }
 
-  /* Mobile */
+  /* MOBILE */
   @media (max-width: 767px) {
-    .nav {
-      padding: 14px 20px;
-    }
+    nav { padding: 14px 20px; }
     .nav-links { display: none; }
-    .nav-logo { font-size: 1.05rem; }
 
     .hero {
       height: 75vh;
-      max-height: 640px;
       min-height: 460px;
+      max-height: 640px;
       padding: 40px 20px;
       background-position: center top;
-      align-items: flex-end;
     }
-    .hero h1 {
-      font-size: clamp(2.2rem, 9vw, 3.4rem);
-    }
-    .hero-buttons {
-      flex-direction: column;
-      gap: 12px;
-    }
-    .btn-primary, .btn-secondary {
-      min-height: 52px;
-      width: 100%;
-      justify-content: center;
-    }
+    .hero::before { background-position: center top; }
+    .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); }
+    .hero-actions { flex-direction: column; gap: 14px; }
+    .hero-actions a { width: 100%; text-align: center; justify-content: center; }
 
-    .info-bar { padding: 48px 20px; }
-    .info-bar-inner {
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-    .info-divider { display: none; }
-    .info-stat { padding: 0; }
+    .info-bar { padding: 40px 20px; }
+    .info-bar-inner { grid-template-columns: 1fr; gap: 28px; }
+    .info-stat { padding: 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 24px; }
+    .info-stat:last-child { border-bottom: none; padding-bottom: 0; }
 
-    .about-section {
-      padding: var(--spacing-section-mobile) 20px;
-    }
-    .about-grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-    .about-mini-bento { grid-template-columns: 1fr 1fr; }
+    .about { padding: 70px 20px; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-bento { grid-template-columns: 1fr 1fr; }
 
-    .signature-band { padding: 72px 20px; }
-    .signature-pull { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+    .signature-band { padding: 70px 20px; }
 
-    .services-section { padding: var(--spacing-section-mobile) 20px; }
-    .services-header { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
-    .services-grid { grid-template-columns: 1fr; gap: 16px; }
+    .services { padding: 70px 20px; }
+    .services-grid { grid-template-columns: 1fr; }
 
-    .hours-section { padding: var(--spacing-section-mobile) 20px; }
+    .reviews { padding: 70px 20px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+
+    #hours { padding: 70px 20px; }
     .hours-grid { grid-template-columns: 1fr; gap: 32px; }
-    .map-wrap iframe { height: 280px !important; }
 
     .final-cta { padding: 80px 20px; }
-    .final-cta h2 { font-size: clamp(2rem, 8vw, 2.8rem); }
-    .final-cta .btn-primary { width: 100%; min-height: 52px; justify-content: center; }
+    .final-cta .btn-primary { width: 100%; justify-content: center; }
 
     footer {
       flex-direction: column;
       text-align: center;
       padding: 32px 20px 80px;
-      gap: 12px;
     }
 
     .claim-pill {
@@ -845,312 +771,321 @@
       padding: 12px 16px;
       font-size: 0.85rem;
     }
-    .claim-text { font-size: 0.85rem; }
-
-    .container { padding-left: 20px; padding-right: 20px; }
+    .claim-text { font-size: 0.82rem; }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
     .about-grid { gap: 48px; }
-    .nav { padding: 18px 32px; }
+    nav { padding: 18px 28px; }
+    .about, .services, .reviews { padding: 80px 28px; }
+    #hours { padding: 80px 28px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .scroll-progress-bar { animation: none; }
   }
 </style>
 </head>
 <body>
 
-<!-- Scroll Progress -->
-<div class="scroll-progress" aria-hidden="true"></div>
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
 
-<!-- Nav -->
-<nav class="nav" role="navigation">
-  <a href="#" class="nav-logo">Arceneaux<span>.</span></a>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Arceneaux Pest Control</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#hours">Hours</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#hours">Contact</a></li>
   </ul>
-  <a href="tel:2257919911" class="nav-cta">Call (225) 791-9911</a>
+  <a class="nav-cta" href="tel:+12257919911">(225) 791-9911</a>
 </nav>
 
-<!-- Hero -->
-<section class="hero" aria-label="Hero">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-dot"></span>
-      <span>Baton Rouge, LA &nbsp;&middot;&nbsp; Pest Control</span>
-    </div>
-    <h1 id="hero-heading" aria-label="Arceneaux Pest Control"></h1>
-    <p class="hero-sub">Baton Rouge's most-trusted name in pest elimination, rated 4.8 stars by 142 local customers.</p>
-    <div class="hero-buttons">
-      <a href="tel:2257919911" class="btn-primary">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Call (225) 791-9911
-      </a>
-      <a href="#hours" class="btn-secondary">View Hours</a>
+    <p class="hero-eyebrow"><span class="dot"></span> Baton Rouge, LA &nbsp;&#183;&nbsp; Pest Control</p>
+    <h1 id="heroTitle"></h1>
+    <p class="hero-subhead">Serving Baton Rouge homes and businesses with fast, reliable pest elimination.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:+12257919911">Call (225) 791-9911</a>
+      <a class="btn-ghost" href="#hours">View Hours</a>
     </div>
   </div>
 </section>
 
-<!-- Info Bar -->
-<div class="info-bar" aria-label="Key statistics">
+<!-- INFO BAR -->
+<section class="info-bar">
   <div class="info-bar-inner">
     <div class="info-stat">
-      <span class="info-stat-num" data-countup="4.8" data-decimals="1">4.8</span>
-      <span class="info-stat-label">Google Rating</span>
+      <span class="stat-num" data-target="4.8" data-decimal="1" id="statRating">0</span>
+      <span class="stat-label">Google Rating</span>
     </div>
-    <div class="info-divider" aria-hidden="true"></div>
     <div class="info-stat">
-      <span class="info-stat-num" data-countup="142" data-decimals="0">142</span>
-      <span class="info-stat-label">Verified Reviews</span>
+      <span class="stat-num" data-target="142" id="statReviews">0</span>
+      <span class="stat-label">Verified Reviews</span>
     </div>
-    <div class="info-divider" aria-hidden="true"></div>
     <div class="info-stat">
-      <span class="info-stat-num" style="font-size: clamp(1.5rem,2.5vw,2rem); letter-spacing: -0.01em;">Licensed</span>
-      <span class="info-stat-label">and Insured in Louisiana</span>
+      <span class="stat-num" style="font-size:1.9rem; padding-top:6px;">Licensed<span class="accent"> &amp;</span> Insured</span>
+      <span class="stat-label">State of Louisiana</span>
     </div>
   </div>
-</div>
+</section>
 
-<!-- About -->
-<section id="about" class="about-section">
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <div class="eyebrow">About</div>
-      <h2 class="section-h2">Protecting Baton Rouge homes since day one.</h2>
-      <p>Arceneaux Pest Control has been on the front lines against Louisiana's toughest pests, from formosan termites to fire ants and everything the bayou brings. We operate out of Sherwood Common in Baton Rouge, LA, and we know exactly what local homeowners and businesses are up against.</p>
-      <p>Our 4.8-star rating across 142 Google reviews isn't a marketing claim. It's the result of showing up on time, treating the problem completely, and standing behind every single job we do in Baton Rouge and the surrounding parishes.</p>
-      <p>Questions before you schedule? Call us directly at <a href="tel:2257919911">(225) 791-9911</a> and we'll walk you through the right plan for your property.</p>
-    </div>
-    <div class="about-visual reveal">
-      <div class="about-photo-card" role="img" aria-label="Arceneaux Pest Control team at work"></div>
-      <div class="about-mini-bento">
-        <div class="mini-stat-card accent-card">
-          <span class="num">4.8</span>
-          <span class="lbl">Star Rating</span>
-        </div>
-        <div class="mini-stat-card">
-          <span class="num">142</span>
-          <span class="lbl">Reviews</span>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">About</p>
+        <h2 class="section-headline">Baton Rouge's go-to pest control since day one.</h2>
+        <p>Arceneaux Pest Control has built its reputation across Baton Rouge on one principle: show up, do the work right, and leave the property better than you found it. With 142 verified Google reviews averaging 4.8 stars, the numbers back up the promise.</p>
+        <p>From termite inspections to mosquito treatments and everything in between, the team handles the full range of pest problems that Louisiana homeowners actually face. No upsells, no confusion, no callbacks wondering where the tech is.</p>
+        <a class="about-phone" href="tel:+12257919911">Call (225) 791-9911 &rarr;</a>
+      </div>
+      <div class="about-visual">
+        <img class="about-hero-img" src="hero.jpg" alt="Arceneaux Pest Control technician at work in Baton Rouge">
+        <div class="about-bento">
+          <div class="bento-card">
+            <div class="bento-num">4.8<span>&#9733;</span></div>
+            <div class="bento-label">Google Rating</div>
+          </div>
+          <div class="bento-card">
+            <div class="bento-num">142+</div>
+            <div class="bento-label">Happy Customers</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Signature Band -->
-<div class="signature-band">
-  <div class="eyebrow">What customers say</div>
-  <p class="signature-pull">
-    Rated <em>4.8 stars</em> by <em>142</em> Baton Rouge customers, and counting.
-  </p>
-  <a href="https://g.co/kgs/arceneauxpest" target="_blank" rel="noopener" class="review-link">
-    Read our Google reviews
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-</div>
-
-<!-- Services -->
-<section id="services" class="services-section">
-  <div class="services-header">
-    <div class="reveal">
-      <div class="eyebrow">Services</div>
-      <h2 class="section-h2">What we handle so you don't have to.</h2>
-    </div>
-    <p class="reveal" style="font-family: var(--font-body); font-size: 1.1rem; color: #4b5563; line-height: 1.7; align-self: end;">From first inspection to final treatment, Arceneaux Pest Control covers every common pest threat facing Baton Rouge, LA properties.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card reveal">
-      <span class="service-num">01</span>
-      <div class="service-name">Termite Control</div>
-      <p class="service-desc">Formosan and subterranean termite treatments using proven liquid barriers and baiting systems built for Louisiana's climate.</p>
-    </div>
-    <div class="service-card reveal">
-      <span class="service-num">02</span>
-      <div class="service-name">General Pest Control</div>
-      <p class="service-desc">Roaches, ants, spiders, and silverfish handled with targeted interior and exterior treatments that keep your home pest-free month after month.</p>
-    </div>
-    <div class="service-card reveal">
-      <span class="service-num">03</span>
-      <div class="service-name">Rodent Exclusion</div>
-      <p class="service-desc">We identify entry points, set bait stations, and seal gaps so mice and rats can't return once we've cleared them out.</p>
-    </div>
-    <div class="service-card reveal">
-      <span class="service-num">04</span>
-      <div class="service-name">Mosquito Reduction</div>
-      <p class="service-desc">Seasonal barrier spray programs that cut mosquito populations around your yard so outdoor living in Baton Rouge is actually enjoyable.</p>
-    </div>
-    <div class="service-card reveal">
-      <span class="service-num">05</span>
-      <div class="service-name">Bed Bug Treatment</div>
-      <p class="service-desc">Heat and chemical treatment options for full bed bug elimination, backed by a follow-up inspection to confirm complete eradication.</p>
-    </div>
-    <div class="service-card reveal">
-      <span class="service-num">06</span>
-      <div class="service-name">Commercial Pest Management</div>
-      <p class="service-desc">Scheduled service plans for Baton Rouge businesses, restaurants, and property managers who need consistent, documented pest control compliance.</p>
-    </div>
+<!-- SIGNATURE BAND -->
+<section class="signature-band">
+  <div class="section-inner">
+    <p class="section-label">What customers say</p>
+    <p class="pull-quote">Rated 4.8 stars by 142 Baton Rouge customers, and counting.</p>
+    <a class="signature-link" href="#reviews">Read our Google reviews &rarr;</a>
   </div>
 </section>
 
-<!-- Hours and Contact -->
-<section id="hours" class="hours-section">
-  <div class="hours-grid">
-    <div class="reveal">
-      <div class="eyebrow">Hours</div>
-      <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; margin-bottom: 4px;">When we're available</h3>
-      <div class="hours-card">
-        <div class="hours-row today">
-          <span class="hours-day">Monday</span>
-          <span class="hours-time"><span class="today-dot"></span>8 AM-5 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Tuesday</span>
-          <span>8 AM-5 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Wednesday</span>
-          <span>8 AM-5 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Thursday</span>
-          <span>8 AM-5 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Friday</span>
-          <span>8 AM-5 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Saturday</span>
-          <span class="closed-text">Closed</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Sunday</span>
-          <span class="closed-text">Closed</span>
-        </div>
-      </div>
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <p class="section-label">What We Handle</p>
+      <h2 class="section-headline">Pest services for Baton Rouge properties.</h2>
     </div>
-    <div class="contact-side reveal">
-      <div class="eyebrow">Visit</div>
-      <h3>Arceneaux Pest Control</h3>
-      <p class="address-line">4545 Sherwood Common Blvd #4B<br>Baton Rouge, LA 70816</p>
-      <a href="tel:2257919911" class="contact-phone">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        (225) 791-9911
-      </a>
-      <div class="map-wrap">
-        <iframe src="https://maps.google.com/maps?q=4545+Sherwood+Common+Blvd+%234B%2C+Baton+Rouge%2C+LA+70816&output=embed" width="100%" height="320" style="border:0; border-radius:16px; display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Arceneaux Pest Control location map"></iframe>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <h3 class="service-title">General Pest Control</h3>
+        <p class="service-desc">Targeted treatment for ants, cockroaches, spiders, and common household invaders with lasting barrier protection.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <h3 class="service-title">Termite Control</h3>
+        <p class="service-desc">Inspection, treatment, and prevention for subterranean and Formosan termites, the most destructive pests in Louisiana.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <h3 class="service-title">Mosquito Treatments</h3>
+        <p class="service-desc">Yard barrier sprays and larvicide applications to reduce mosquito populations throughout the outdoor season.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <h3 class="service-title">Rodent Exclusion</h3>
+        <p class="service-desc">Entry-point sealing and baiting programs that stop rodent problems at the source rather than treating symptoms.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <h3 class="service-title">Bed Bug Treatment</h3>
+        <p class="service-desc">Thorough heat and chemical protocols designed to eliminate bed bug infestations in residential and commercial settings.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">06</span>
+        <h3 class="service-title">Commercial Pest Management</h3>
+        <p class="service-desc">Scheduled service plans for restaurants, offices, and retail spaces across Baton Rouge with full documentation.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Final CTA -->
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="section-inner">
+    <p class="section-label">Verified Reviews</p>
+    <h2 class="section-headline">What Baton Rouge customers say</h2>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-quote">&#8220;Showed up exactly when they said they would and knocked out the problem in one visit. Explained everything clearly and the pricing was completely fair. Would book again without hesitation.&#8221;</p>
+        <p class="review-source">Verified Google Review</p>
+      </article>
+      <article class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-quote">&#8220;Best pest control call I&#8217;ve made in this area. No surprise fees, got the job done right the first time.&#8221;</p>
+        <p class="review-source">Verified Google Review</p>
+      </article>
+      <article class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-quote">&#8220;Reliable, professional, and they actually follow up. Hard to find that kind of service in Baton Rouge anymore.&#8221;</p>
+        <p class="review-source">Verified Google Review</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section id="hours">
+  <div class="section-inner">
+    <div class="hours-grid">
+      <div>
+        <p class="section-label">Hours</p>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.6rem;color:var(--primary);margin-bottom:4px;">When We&#8217;re Available</h3>
+        <div class="hours-card">
+          <div class="hours-row">
+            <span class="day">Monday</span><span class="time">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Tuesday</span><span class="time">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Wednesday</span><span class="time">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row today">
+            <span class="day"><span class="today-dot"></span>Thursday</span><span class="time">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Friday</span><span class="time">8 AM-5 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Saturday</span><span class="time">8 AM-12 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Sunday</span><span class="time closed">Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-block">
+        <p class="section-label">Visit</p>
+        <h3>Arceneaux Pest Control</h3>
+        <p>4545 Sherwood Common Blvd #4B<br>Baton Rouge, LA 70816</p>
+        <a class="phone-link" href="tel:+12257919911">(225) 791-9911</a>
+        <div class="map-wrap">
+          <iframe src="https://maps.google.com/maps?q=4545+Sherwood+Common+Blvd+%234B+Baton+Rouge+LA+70816&output=embed" width="100%" height="320" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Arceneaux Pest Control location map"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="eyebrow">Ready when you are</div>
-  <h2>Need it handled today?</h2>
-  <p class="final-cta-sub">Arceneaux Pest Control serves Baton Rouge, LA and surrounding parishes. One call and we'll take care of the rest.</p>
-  <a href="tel:2257919911" class="btn-primary">
-    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    Call (225) 791-9911
-  </a>
+  <div class="section-inner">
+    <p class="section-label">Ready when you are</p>
+    <h2>Need it fixed today?</h2>
+    <p>Arceneaux Pest Control is serving Baton Rouge now. One call gets a real person on the line.</p>
+    <a class="btn-primary" href="tel:+12257919911">Call (225) 791-9911</a>
+  </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-left">
-    <strong>Arceneaux Pest Control</strong>
-    &copy; 2025 Arceneaux Pest Control. All rights reserved.
+    <strong>Arceneaux Pest Control</strong> &nbsp;|&nbsp; &copy; <span id="footerYear"></span> All rights reserved. &nbsp;&#183;&nbsp; Baton Rouge, LA
   </div>
   <div class="footer-right">
-    Site by <a href="https://auxoagency.co" target="_blank" rel="noopener">Auxo Agency</a>
+    <a href="https://auxoagency.co" target="_blank" rel="noopener">Site by Auxo Agency</a>
   </div>
 </footer>
 
-<!-- Floating Claim Pill -->
-<div class="claim-pill" id="claimPill" role="status">
-  <span class="claim-dot" aria-hidden="true">&#10022;</span>
-  <span class="claim-text">This is a free preview. Built by Auxo Agency. Like what you see? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20arceneaux-pest-control%20homepage&body=YES">Reply YES</a> and we'll build the full multi-page version for $297 flat  -  no retainer, no surprises.</span>
-  <button class="claim-close" id="claimClose" aria-label="Dismiss">&#x2715;</button>
+<!-- CLAIM PILL -->
+<div class="claim-pill" id="claimPill">
+  <span class="claim-dot">&#10022;</span>
+  <span class="claim-text">This is a free preview. Built by Auxo Agency. Like what you see? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20Arceneaux%20Pest%20Control%20homepage&body=YES">Reply YES</a> and we&#8217;ll build the full multi-page version for $297 flat  -  no retainer, no surprises.</span>
+  <button class="claim-close" id="claimClose" aria-label="Dismiss">&#10005;</button>
 </div>
 
 <script defer>
-(function() {
-  // Hero word stagger
-  var heading = document.getElementById('hero-heading');
-  var words = ['Arceneaux', 'Pest', 'Control'];
-  if (heading) {
-    words.forEach(function(word, i) {
-      var span = document.createElement('span');
-      span.className = 'word';
-      span.textContent = word + (i < words.length - 1 ? '\u00a0' : '');
-      span.style.animationDelay = (i * 60 + 200) + 'ms';
-      heading.appendChild(span);
-    });
-  }
+document.getElementById('footerYear').textContent = new Date().getFullYear();
 
-  // Count-up
-  function countUp(el) {
-    var target = parseFloat(el.getAttribute('data-countup'));
-    var decimals = parseInt(el.getAttribute('data-decimals')) || 0;
-    var duration = 1600;
-    var start = null;
-    function step(ts) {
-      if (!start) start = ts;
-      var progress = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      var val = eased * target;
-      el.textContent = decimals > 0 ? val.toFixed(decimals) : Math.round(val).toLocaleString();
-      if (progress < 1) requestAnimationFrame(step);
+// Hero word stagger
+(function(){
+  const el = document.getElementById('heroTitle');
+  const words = ['Arceneaux', 'Pest', 'Control'];
+  words.forEach((w, i) => {
+    const span = document.createElement('span');
+    span.className = 'word';
+    span.textContent = w;
+    span.style.animationDelay = (i * 60 + 300) + 'ms';
+    el.appendChild(span);
+    if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+  });
+})();
+
+// Count-up
+(function(){
+  function countUp(el, target, decimals, duration) {
+    const start = performance.now();
+    function step(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      const val = ease * target;
+      el.textContent = decimals ? val.toFixed(decimals) : Math.round(val);
+      if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const dec = el.dataset.decimal ? parseInt(el.dataset.decimal) : 0;
+        countUp(el, target, dec, 1600);
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => obs.observe(el));
+})();
 
-  var counters = document.querySelectorAll('[data-countup]');
-  if ('IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          countUp(e.target);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function(c) { obs.observe(c); });
-  } else {
-    counters.forEach(function(c) { countUp(c); });
+// Claim pill close
+(function(){
+  const pill = document.getElementById('claimPill');
+  const btn = document.getElementById('claimClose');
+  if (btn && pill) {
+    btn.addEventListener('click', () => {
+      pill.style.transition = 'transform 300ms ease-in, opacity 300ms ease-in';
+      pill.style.transform = 'translateX(-50%) translateY(140%)';
+      pill.style.opacity = '0';
+      setTimeout(() => pill.remove(), 350);
+    });
   }
+})();
 
-  // Today highlight
-  var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  var today = dayNames[new Date().getDay()];
-  var rows = document.querySelectorAll('.hours-row');
-  rows.forEach(function(row) {
-    var dayEl = row.querySelector('.hours-day');
+// Today highlight
+(function(){
+  const dayMap = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const today = dayMap[new Date().getDay()];
+  document.querySelectorAll('.hours-row').forEach(row => {
+    const dayEl = row.querySelector('.day');
     if (dayEl && dayEl.textContent.trim() === today) {
       row.classList.add('today');
-      var timeEl = row.querySelector('span:last-child');
-      if (timeEl && !timeEl.classList.contains('hours-time')) {
-        var timeText = timeEl.textContent;
-        timeEl.innerHTML = '<span class="today-dot"></span>' + timeText;
-        timeEl.classList.add('hours-time');
-      }
-    } else if (dayEl && dayEl.textContent.trim() !== today) {
+    } else {
       row.classList.remove('today');
     }
   });
-
-  // Claim pill close
-  var pill = document.getElementById('claimPill');
-  var closeBtn = document.getElementById('claimClose');
-  if (closeBtn && pill) {
-    closeBtn.addEventListener('click', function() {
-      pill.style.transition = 'transform 300ms ease, opacity 300ms ease';
-      pill.style.opacity = '0';
-      pill.style.transform = 'translateX(-50%) translateY(120%)';
-      setTimeout(function() { pill.style.display = 'none'; }, 320);
-    });
-  }
 })();
 </script>
 </body>
