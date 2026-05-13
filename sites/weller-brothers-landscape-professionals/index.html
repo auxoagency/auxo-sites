@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Weller Brothers, Sioux Falls, SD</title>
+<meta name="description" content="Weller Brothers in Sioux Falls, SD  -  rated 5 stars by 249 verified customers. Professional landscaping services done right the first time.">
+<meta name="theme-color" content="#0f0f0f">
+<meta property="og:title" content="Weller Brothers | Sioux Falls, SD">
+<meta property="og:description" content="Rated 5 stars by 249 customers in Sioux Falls, SD.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f0f0f'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%23e63946' font-family='sans-serif' font-weight='700'>W</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Weller Brothers",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2001 W Trevi Pl",
+    "addressLocality": "Sioux Falls",
+    "addressRegion": "SD",
+    "postalCode": "57108",
+    "addressCountry": "US"
+  },
+  "telephone": "(605) 453-5578",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "249"
+  }
+}
+</script>
+<style>
+:root {
+  --primary: #0f0f0f;
+  --accent: #e63946;
+  --off-white: #f7f7f5;
+  --cream: #fafaf8;
+  --white: #ffffff;
+  --border: rgba(15,15,15,0.12);
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Crimson Pro', serif;
+  --radius: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* SCROLL PROGRESS */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 9999;
+  animation: scroll-track linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-track { to { width: 100%; } }
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.nav-brand span { color: var(--accent); }
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--primary);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 75vh;
+  max-height: 720px;
+  min-height: 520px;
+  background-color: var(--primary);
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 64px 48px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,0.45) 75%,
+    rgba(0,0,0,0.75) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  mix-blend-mode: color;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-bg-anim {
+  position: absolute;
+  inset: 0;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: kenburns 24s ease-in-out infinite alternate;
+  z-index: -1;
+}
+@keyframes kenburns {
+  from { transform: scale(1.0); }
+  to { transform: scale(1.06); }
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 20px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: word-in 0.6s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+@keyframes word-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-sub {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-accent {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 16px 28px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn-accent:hover { opacity: 0.88; transform: translateY(-2px); }
+.btn-ghost {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: var(--radius);
+  padding: 14px 26px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+/* INFO BAR */
+.info-bar {
+  background: var(--primary);
+  color: var(--white);
+  padding: 56px 48px;
+}
+.info-bar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  gap: 0;
+  align-items: center;
+}
+.info-stat {
+  text-align: center;
+  padding: 0 40px;
+}
+.info-stat-num {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.info-stat-num .accent { color: var(--accent); }
+.info-stat-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.info-divider {
+  background: rgba(255,255,255,0.15);
+  align-self: stretch;
+  min-height: 80px;
+}
+
+/* ABOUT */
+.about {
+  padding: 96px 48px;
+  background: var(--white);
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 96px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-text { font-size: 1.05rem; line-height: 1.7; }
+.about-text p { margin-bottom: 1rem; }
+.about-visual {
+  width: 100%;
+  min-height: 400px;
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.section-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+}
+.about-phone-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: 16px;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s;
+}
+.about-phone-link:hover { opacity: 0.75; }
+
+/* SIGNATURE BAND */
+.sig-band {
+  background: var(--primary);
+  padding: 100px 48px;
+  text-align: center;
+}
+.sig-band .section-label { text-align: center; justify-content: center; }
+.sig-quote {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--white);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.sig-quote em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+/* SERVICES */
+.services {
+  padding: 96px 48px;
+  background: var(--white);
+}
+.services .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 64px;
+  border: 2px solid var(--primary);
+}
+.service-card {
+  padding: 40px 32px;
+  border-right: 2px solid var(--primary);
+  position: relative;
+  background: var(--white);
+  transition: background 0.2s;
+}
+.service-card:nth-child(3n) { border-right: none; }
+.service-card:hover { background: var(--off-white); }
+.service-num {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+.service-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.service-desc {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* REVIEWS */
+.reviews {
+  padding: 96px 48px;
+  background: var(--off-white);
+}
+.reviews .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.review-stars {
+  color: var(--accent);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.review-quote {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text);
+  flex: 1;
+}
+.review-source {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* HOURS & CONTACT */
+.hours-contact {
+  padding: 96px 48px;
+  background: var(--white);
+}
+.hours-contact .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.hours-col {}
+.contact-col {}
+.hours-card {
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.98rem;
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-row.today {
+  background: color-mix(in oklab, var(--accent) 8%, var(--white));
+  font-weight: 700;
+}
+.hours-day { font-family: var(--font-display); font-size: 0.88rem; font-weight: 600; }
+.hours-time { font-family: var(--font-body); font-size: 1rem; }
+.today-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.hours-closed { color: var(--text-muted); }
+.contact-info { margin-top: 28px; }
+.contact-biz-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+.contact-addr, .contact-phone {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.contact-phone a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-phone a:hover { text-decoration: underline; }
+.map-wrap {
+  margin-top: 24px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--primary);
+  padding: 120px 48px;
+  text-align: center;
+}
+.final-cta .section-label { justify-content: center; }
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.final-cta-sub {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 40px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 40px 48px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.footer-brand strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+.footer-auxo {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.footer-auxo:hover { color: var(--accent); }
+
+/* CLAIM CARD */
+.claim-card {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 200;
+  max-width: 640px;
+  width: calc(100% - 48px);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 22px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: claim-slide 600ms ease-out 1200ms forwards;
+}
+@keyframes claim-slide {
+  to { transform: translateX(-50%) translateY(0); }
+}
+.claim-dot {
+  color: var(--accent);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.claim-text {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1.4;
+}
+.claim-text a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.claim-text a:hover { text-decoration: underline; }
+.claim-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  padding: 4px;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.claim-close:hover { color: var(--primary); }
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-inner { grid-template-columns: 1fr; gap: 48px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .service-card:nth-child(3n) { border-right: 2px solid var(--primary); }
+  .service-card:nth-child(2n) { border-right: none; }
+  .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+  .hours-contact .section-inner { grid-template-columns: 1fr; gap: 56px; }
+  .info-bar-inner { grid-template-columns: 1fr; gap: 40px; }
+  .info-divider { display: none; }
+}
+@media (max-width: 767px) {
+  .nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .hero {
+    min-height: 460px;
+    max-height: 640px;
+    background-position: center top;
+    padding: 40px 20px;
+  }
+  .hero::before {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+  }
+  .info-bar { padding: 48px 20px; }
+  .about { padding: 72px 20px; }
+  .sig-band { padding: 72px 20px; }
+  .services { padding: 72px 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { border-right: none; border-bottom: 2px solid var(--primary); }
+  .service-card:last-child { border-bottom: none; }
+  .reviews { padding: 72px 20px; }
+  .hours-contact { padding: 72px 20px; }
+  .final-cta { padding: 80px 20px; }
+  .footer { padding: 32px 20px 80px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .claim-card { bottom: 16px; width: calc(100% - 24px); padding: 12px 16px; font-size: 0.85rem; }
+  .claim-text { font-size: 0.85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .hero-bg-anim { animation: none; }
+  .hero h1 .word { opacity: 1; transform: none; }
+  .claim-card { transform: translateX(-50%) translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- CLAIM CARD -->
+<div class="claim-card" id="claimCard">
+  <span class="claim-dot">✦</span>
+  <p class="claim-text">This is a free preview. Built by Auxo Agency. Like what you see? <a href="mailto:outreach@meetauxo.com?subject=Re%3A%20Weller%20Brothers%20homepage&body=YES">Reply YES</a> and we'll build the full multi-page version for $297 flat  -  no retainer, no surprises.</p>
+  <button class="claim-close" id="claimClose" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-brand">Weller <span>Brothers</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#hours">Contact</a></li>
+  </ul>
+  <a href="tel:6054535578" class="nav-cta">(605) 453-5578</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-anim"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Sioux Falls, SD &nbsp;·&nbsp; Landscaping</p>
+    <h1>
+      <span class="word" style="animation-delay:0ms">Weller</span>&nbsp;<span class="word" style="animation-delay:60ms">Brothers</span>
+    </h1>
+    <p class="hero-sub">Sioux Falls' most trusted name in landscape design and care.</p>
+    <div class="hero-actions">
+      <a href="tel:6054535578" class="btn-accent">Call (605) 453-5578</a>
+      <a href="#hours" class="btn-ghost">View Hours</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<section class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-stat">
+      <span class="info-stat-num" data-count="5" data-suffix=""><span class="accent">5.0</span></span>
+      <span class="info-stat-label">Google Rating</span>
+    </div>
+    <div class="info-divider"></div>
+    <div class="info-stat">
+      <span class="info-stat-num" data-count="249" data-suffix="+">0</span>
+      <span class="info-stat-label">Verified Reviews</span>
+    </div>
+    <div class="info-divider"></div>
+    <div class="info-stat">
+      <span class="info-stat-num" style="font-size:1.9rem; line-height:1.2;">Locally<br>Owned</span>
+      <span class="info-stat-label">Sioux Falls, SD</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p class="section-label">About</p>
+      <h2 class="section-headline">Sioux Falls' landscape team that shows up and delivers.</h2>
+      <p>Weller Brothers has built a reputation across Sioux Falls, SD for transforming ordinary outdoor spaces into something genuinely worth coming home to. From initial design through ongoing maintenance, the work is handled with care and precision.</p>
+      <p>With a perfect 5-star rating backed by 249 verified customers, Weller Brothers has earned the trust of Sioux Falls homeowners and commercial clients alike  -  one project at a time.</p>
+      <a href="tel:6054535578" class="about-phone-link">Call (605) 453-5578 →</a>
+    </div>
+    <div id="aboutVisual" class="about-visual">
+    <div class="av-carousel">
+      <button class="av-prev" aria-label="Previous">←</button>
+      <div class="av-track" id="aboutVisualTrack">
+        <img src="gallery-1.jpg" alt="Weller Brothers Landscape Professionals photo 1" loading="lazy">
+          <img src="gallery-2.jpg" alt="Weller Brothers Landscape Professionals photo 2" loading="lazy">
+          <img src="gallery-3.jpg" alt="Weller Brothers Landscape Professionals photo 3" loading="lazy">
+      </div>
+      <button class="av-next" aria-label="Next">→</button>
+      <div class="av-dots">
+        <button class="av-dot active" data-i="0" aria-label="Slide 1"></button>
+          <button class="av-dot" data-i="1" aria-label="Slide 2"></button>
+          <button class="av-dot" data-i="2" aria-label="Slide 3"></button>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- SIGNATURE BAND -->
+<section class="sig-band">
+  <p class="section-label">What customers say</p>
+  <p class="sig-quote">Rated <em>5 stars</em> by <em>249</em> Sioux Falls customers, and counting.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="section-inner">
+    <p class="section-label reveal">What we do</p>
+    <h2 class="section-headline reveal">Full-service landscaping in Sioux Falls, SD.</h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <p class="service-name">Landscape Design</p>
+        <p class="service-desc">Custom outdoor plans built around your property's layout and your personal vision.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">02</span>
+        <p class="service-name">Lawn Maintenance</p>
+        <p class="service-desc">Regular mowing, edging, and seasonal upkeep that keeps your lawn sharp all year.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">03</span>
+        <p class="service-name">Hardscape Installation</p>
+        <p class="service-desc">Patios, walkways, retaining walls, and outdoor structures built to last.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">04</span>
+        <p class="service-name">Planting and Bed Design</p>
+        <p class="service-desc">Thoughtfully selected trees, shrubs, and perennials suited to the South Dakota climate.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">05</span>
+        <p class="service-name">Irrigation Systems</p>
+        <p class="service-desc">Efficient sprinkler and drip system installation and seasonal start-up and winterization.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">06</span>
+        <p class="service-name">Snow Removal</p>
+        <p class="service-desc">Reliable commercial and residential snow clearing so Sioux Falls winters don't slow you down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="section-inner">
+    <p class="section-label reveal">Verified Reviews</p>
+    <h2 class="section-headline reveal">What Sioux Falls customers say</h2>
+    <div class="reviews-grid">
+      <article class="review-card reveal">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="review-quote">"Weller Brothers showed up exactly when they said they would and the finished work exceeded what we pictured. Fair pricing, no surprises on the bill."</p>
+        <p class="review-source">Verified Google Review</p>
+      </article>
+      <article class="review-card reveal">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="review-quote">"Best landscaping crew in this area  -  they explained every step and the lawn has never looked better."</p>
+        <p class="review-source">Verified Google Review</p>
+      </article>
+      <article class="review-card reveal">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="review-quote">"Would book again without hesitation. Professional, thorough, and they genuinely care about the quality of their work."</p>
+        <p class="review-source">Verified Google Review</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section id="hours" class="hours-contact">
+  <div class="section-inner">
+    <div class="hours-col reveal">
+      <p class="section-label">Hours</p>
+      <h3 class="section-headline" style="font-size:clamp(1.6rem,3vw,2.2rem);">When to reach us</h3>
+      <div class="hours-card">
+        <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">8 AM-5 PM</span></div>
+        <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">8 AM-5 PM</span></div>
+        <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">8 AM-5 PM</span></div>
+        <div class="hours-row today"><span class="hours-day">Thursday <span class="today-dot"></span></span><span class="hours-time">8 AM-5 PM</span></div>
+        <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">8 AM-5 PM</span></div>
+        <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time hours-closed">Closed</span></div>
+        <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time hours-closed">Closed</span></div>
+      </div>
+    </div>
+    <div class="contact-col reveal">
+      <p class="section-label">Visit</p>
+      <h3 class="section-headline" style="font-size:clamp(1.6rem,3vw,2.2rem);">Find Weller Brothers</h3>
+      <div class="contact-info">
+        <p class="contact-biz-name">Weller Brothers</p>
+        <p class="contact-addr">2001 W Trevi Pl, Sioux Falls, SD 57108</p>
+        <p class="contact-phone"><a href="tel:6054535578">(605) 453-5578</a></p>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://maps.google.com/maps?q=2001+W+Trevi+Pl%2C+Sioux+Falls%2C+SD+57108&output=embed" width="100%" height="320" style="border:0; border-radius:16px; display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Weller Brothers map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <p class="section-label">Ready when you are</p>
+  <h2>Need it done right? Call today.</h2>
+  <p class="final-cta-sub">Serving Sioux Falls, SD and the surrounding area. One call gets the conversation started.</p>
+  <a href="tel:6054535578" class="btn-accent">Call (605) 453-5578</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-brand"><strong>Weller Brothers</strong> &nbsp;·&nbsp; &copy; 2025 All rights reserved.</p>
+  <a href="https://auxoagency.co" target="_blank" rel="noopener" class="footer-auxo">Site by Auxo Agency</a>
+</footer>
+
+<script defer>
+// Claim card close
+document.getElementById('claimClose').addEventListener('click', function() {
+  var card = document.getElementById('claimCard');
+  card.style.transition = 'transform 0.35s ease-in, opacity 0.35s ease-in';
+  card.style.transform = 'translateX(-50%) translateY(140%)';
+  card.style.opacity = '0';
+  setTimeout(function(){ card.style.display = 'none'; }, 380);
+});
+
+// Count-up animation
+function countUp(el, target, suffix, duration) {
+  var start = 0;
+  var startTime = null;
+  var isDecimal = target !== Math.floor(target);
+  function step(ts) {
+    if (!startTime) startTime = ts;
+    var progress = Math.min((ts - startTime) / duration, 1);
+    var eased = 1 - Math.pow(1 - progress, 3);
+    var current = eased * target;
+    el.textContent = isDecimal ? current.toFixed(1) + suffix : Math.floor(current) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;
+  }
+  requestAnimationFrame(step);
+}
+
+var countEls = document.querySelectorAll('[data-count]');
+var counted = false;
+function tryCount() {
+  if (counted) return;
+  var bar = document.querySelector('.info-bar');
+  if (!bar) return;
+  var rect = bar.getBoundingClientRect();
+  if (rect.top < window.innerHeight * 0.85) {
+    counted = true;
+    countEls.forEach(function(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      countUp(el, target, suffix, 1400);
+    });
+  }
+}
+window.addEventListener('scroll', tryCount, { passive: true });
+tryCount();
+
+// Scroll reveal
+var reveals = document.querySelectorAll('.reveal');
+var revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(function(el) { revealObs.observe(el); });
+
+// Today highlight
+var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var today = dayNames[new Date().getDay()];
+var rows = document.querySelectorAll('.hours-row');
+rows.forEach(function(row) {
+  var dayEl = row.querySelector('.hours-day');
+  if (dayEl && dayEl.textContent.trim().startsWith(today)) {
+    row.classList.add('today');
+  } else {
+    row.classList.remove('today');
+  }
+});
+</script>
+
+<style>
+.about-visual {
+  width: 100%;
+  min-height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.av-single {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.av-hero-reuse { object-position: center bottom; }
+.av-carousel { position: relative; width: 100%; }
+.av-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 12px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 16px;
+}
+.av-track::-webkit-scrollbar { display: none; }
+.av-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  scroll-snap-align: start;
+}
+.av-prev, .av-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid color-mix(in oklab, var(--primary, #0f172a) 15%, transparent);
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #111);
+  transition: all 200ms;
+}
+.av-prev { left: 12px; }
+.av-next { right: 12px; }
+.av-prev:hover, .av-next:hover { background: var(--primary, #111); color: white; }
+.av-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+.av-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--primary, #0f172a) 20%, transparent);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 200ms;
+}
+.av-dot.active {
+  background: var(--accent, var(--primary, #111));
+  width: 20px;
+  border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .av-track img { aspect-ratio: 4/3; }
+  .av-prev { left: 8px; }
+  .av-next { right: 8px; }
+}
+</style>
+<script>
+(function(){
+  var track = document.getElementById('aboutVisualTrack');
+  if (!track) return;
+  var prev = track.parentElement.querySelector('.av-prev');
+  var next = track.parentElement.querySelector('.av-next');
+  var dots = Array.prototype.slice.call(track.parentElement.querySelectorAll('.av-dot'));
+  var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
+  function scrollByOne(dir) {
+    var w = imgs[0].getBoundingClientRect().width + 12;
+    track.scrollBy({ left: dir * w, behavior: 'smooth' });
+  }
+  prev && prev.addEventListener('click', function(){ scrollByOne(-1); });
+  next && next.addEventListener('click', function(){ scrollByOne(1); });
+  dots.forEach(function(d, i){ d.addEventListener('click', function(){
+    var w = imgs[0].getBoundingClientRect().width + 12;
+    track.scrollTo({ left: i * w, behavior: 'smooth' });
+  }); });
+  track.addEventListener('scroll', function(){
+    var w = imgs[0].getBoundingClientRect().width + 12;
+    var i = Math.round(track.scrollLeft / w);
+    dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });
+  });
+})();
+</script>
+</body>
+</html>
